@@ -14,3 +14,7 @@ compile_*.py
 *.script
 *.designcraft
 *.figcraft
+
+# Plantillas y reportes intermedios de impresión
+informe_imprimible.html
+*imprimible*.html
