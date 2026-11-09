@@ -1,0 +1,11 @@
+# Exclusión de guiones, scripts de video y artefactos audiovisuales
+*speech*
+*guion*
+*presentador*
+video_*.txt
+*.sh
+*.bat
+reporte_*.html
+generate_*.py
+compile_*.py
+00_presentador_overview.png
