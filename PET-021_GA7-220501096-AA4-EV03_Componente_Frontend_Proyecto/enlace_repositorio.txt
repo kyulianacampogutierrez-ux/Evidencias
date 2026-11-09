@@ -1,36 +1,23 @@
-INFORMACIÓN DE ENTREGA Y ENLACE DE REPOSITORIO DE CONTROL DE VERSIONES
-SERVICIO NACIONAL DE APRENDIZAJE - SENA
-REGIONAL CAUCA - POPAYÁN
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA4-EV03
+TITULO: Componente Front-End del Proyecto Formativo (React 18 SPA)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
+================================================================================
 
-========================================================================
-EVIDENCIA: GA7-220501096-AA4-EV03
-Componente front-end del proyecto formativo y proyectos de clase
-========================================================================
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
 
-Aprendiz: Karen Yuliana Campo
-Ficha de Caracterización: 228118
-Programa: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad 100% Virtual
-Fase del Proyecto: Fase III - Ejecución (AP7: Codificar los Módulos del Software)
-Centro de Formación: Centro de Teleinformática y Producción Industrial (CTPI)
-
-ENLACE AL REPOSITORIO GIT DE CONTROL DE VERSIONES:
-https://github.com/karen-campo/sena-pizzeria-frontend-react.git
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-021_GA7-220501096-AA4-EV03_Componente_Frontend_Proyecto
 
 RAMA PRINCIPAL:
 main
 
-DESCRIPCIÓN DEL MÓDULO FRONT-END:
-Aplicación de Página Única (SPA) construida en React 18, modularizada según la metodología
-Atomic Design en 11 componentes desacoplados, con gestión de estado global reactivo mediante
-Context API (CartContext y AuthContext), validación estricta de checkout con expresiones
-regulares, comanda interactiva de cocina y consumo asíncrono de la REST API de Spring Boot
-desplegada en Docker en el puerto 8082.
-
-INSTRUCCIONES DE DESPLIEGUE EN DOCKER:
-1. Iniciar los contenedores backend:
-   cd /home/danilo/Escritorio/Karen/SENA/CDE
-   docker-compose up -d
-
-2. Ejecutar la aplicación front-end React:
-   cd Evidencias/PET-021_GA7-220501096-AA4-EV03_Componente_Frontend_Proyecto/pizzeria-frontend-react
-   npm install && npm run dev
+DESCRIPCIÓN DEL REPOSITORIO:
+Repositorio centralizado oficial que contiene el código fuente, artefactos técnicos,
+pruebas automatizadas, reportes en PDF y paquetes de entrega de las evidencias de
+formación del programa ADSO.
+================================================================================

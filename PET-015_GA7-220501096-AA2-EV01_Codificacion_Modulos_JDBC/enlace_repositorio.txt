@@ -1,28 +1,23 @@
-====================================================================
-SERVICIO NACIONAL DE APRENDIZAJE (SENA)
-TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA 228118
-EVIDENCIA: GA7-220501096-AA2-EV01: Codificación de módulos del software
-====================================================================
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA2-EV01
+TITULO: Codificación de Módulos del Software (Java JDBC + DAO + CRUD)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
+================================================================================
 
-DATOS DE LA APRENDIZ:
-- Nombre: Karen Yuliana Campo
-- Correo Electrónico: karen.campo@sena.edu.co
-- Centro: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
-- Modalidad: 100% Virtual
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
 
-ENLACES DEL PROYECTO:
-- Repositorio GitHub: https://github.com/karen-campo/PizzeriaBackend-JDBC.git
-- Rama Principal: main / master
-- Módulo: PizzeriaBackend (Java 17, Maven, JDBC, MariaDB/MySQL)
-- Orquestación: Docker & Docker Compose (sena-pizzeria-db, sena-backend-java)
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-015_GA7-220501096-AA2-EV01_Codificacion_Modulos_JDBC
 
-INSTRUCCIONES DE EJECUCIÓN CON DOCKER:
-1. Levantar la base de datos MariaDB:
-   $ docker compose up -d db
+RAMA PRINCIPAL:
+main
 
-2. Compilar y ejecutar pruebas unitarias con Maven:
-   $ docker compose run --rm backend-java mvn clean test
-
-3. Ejecutar la aplicación de demostración CRUD:
-   $ docker compose run --rm backend-java mvn exec:java -Dexec.mainClass="com.sena.pizzeria.app.Main"
-====================================================================
+DESCRIPCIÓN DEL REPOSITORIO:
+Repositorio centralizado oficial que contiene el código fuente, artefactos técnicos,
+pruebas automatizadas, reportes en PDF y paquetes de entrega de las evidencias de
+formación del programa ADSO.
+================================================================================

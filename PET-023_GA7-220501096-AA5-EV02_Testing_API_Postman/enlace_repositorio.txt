@@ -1,30 +1,23 @@
 ================================================================================
-EVIDENCIA: GA7-220501096-AA5-EV02 - API (TESTING CON POSTMAN)
+EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA5-EV02
+TITULO: API (Testing de Servicios Web con Postman)
 APRENDIZ: Karen Yuliana Campo
 PROGRAMA: Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
 FICHA: 228118
 CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
 ================================================================================
 
-ENLACE DEL REPOSITORIO DE CONTROL DE VERSIONES (GIT / GITHUB):
-https://github.com/KarenCampo-ADSO/auth-service-testing-postman.git
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-023_GA7-220501096-AA5-EV02_Testing_API_Postman
 
 RAMA PRINCIPAL:
 main
 
 DESCRIPCIÓN DEL REPOSITORIO:
-Este repositorio contiene la suite completa de pruebas automatizadas en Postman (versión 2.1), variables de entorno, documentación formal de endpoints, capturas de pantalla de aserciones HTTP y el microservicio REST en Node.js para autenticación y registro de usuarios con tokens Bearer JWT y hashing con sal.
-
-ARCHIVOS PRINCIPALES EN EL REPOSITORIO:
-- Postman_Collection_Auth_Caso.json (Colección de 8 pruebas de endpoints REST)
-- Postman_Environment_Auth_Caso.json (Entorno de variables locales)
-- ENDPOINT.txt (Catálogo normativo de endpoints según Guía 7)
-- ENDPOINTS.md (Especificación arquitectónica detallada)
-- presentador_testing_postman.html (Presentador interactivo para video de sustentación)
-- speech_guion_testing_postman.md (Guion de locución paso a paso)
-- video_enlace.txt (Enlace al video explicativo de testing)
-- GA7-220501096-AA5-EV02_Testing_API_Postman.pdf (Informe técnico institucional)
-- capturas/ (Carpeta con evidencias gráficas de las pruebas de Postman)
-- auth-service-caso/ (Código fuente del microservicio REST)
-
+Repositorio centralizado oficial que contiene el código fuente, artefactos técnicos,
+pruebas automatizadas, reportes en PDF y paquetes de entrega de las evidencias de
+formación del programa ADSO.
 ================================================================================
