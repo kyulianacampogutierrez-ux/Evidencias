@@ -18,3 +18,11 @@ compile_*.py
 # Plantillas y reportes intermedios de impresión
 informe_imprimible.html
 *imprimible*.html
+
+# Plantillas y capturas intermedias de diapositivas y pruebas
+card_slide*
+temp_slides_render/
+generador_capturas_pruebas.html
+page_hu*.html
+**/assets/*.html
+assets/*.html
