@@ -9,3 +9,8 @@ reporte_*.html
 generate_*.py
 compile_*.py
 00_presentador_overview.png
+
+# Archivos de diseño y scripts generadores de maquetas
+*.script
+*.designcraft
+*.figcraft
