@@ -1,0 +1,279 @@
+<!-- ==========================================================================
+     PLANTILLAS MODULARES DE COMPONENTES FRONTEND - PIZZERÍA BELLA ITALIA
+     Evidencia: GA6-220501096-AA4-EV02
+     Aprendiz: Karen Yuliana Campo | Ficha: 228118 | SENA ADSO
+     ========================================================================== -->
+
+<!-- 1. COMPONENTE: BARRA DE NAVEGACIÓN (NAVBAR) -->
+<header class="navbar-header" role="banner">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <span class="brand-icon">🍕</span>
+      <h1 class="brand-title">Pizzería Bella Italia</h1>
+    </div>
+    <nav class="navbar-nav" aria-label="Navegación principal">
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#menu" class="nav-link active" role="menuitem">🍕 Nuestro Menú</a></li>
+        <li role="none"><a href="#pedidos" class="nav-link" id="navOrdersLink" role="menuitem">🛍️ Mis Pedidos</a></li>
+        <li role="none">
+          <button class="nav-cart-btn" id="openCartBtn" aria-label="Abrir carrito de compras">
+            🛒 Carrito <span class="cart-badge" id="cartCountBadge" aria-live="polite">0</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="navbar-auth-status" id="userAuthBadge">
+      <span class="user-role-pill">Invitado</span>
+      <button class="btn-auth" id="loginTriggerBtn">Ingresar</button>
+    </div>
+  </div>
+</header>
+
+<!-- 2. COMPONENTE: MODAL DE AUTENTICACIÓN (AUTH MODAL) -->
+<div class="auth-modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" hidden>
+  <div class="auth-card">
+    <header class="auth-header">
+      <h2 id="authTitle">Iniciar Sesión</h2>
+      <button class="btn-close-modal" id="closeAuthBtn" aria-label="Cerrar modal de autenticación">&times;</button>
+    </header>
+    <form class="auth-form" id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="authUsername">Usuario o Correo:</label>
+        <input type="text" id="authUsername" class="form-input" required autocomplete="username" placeholder="carlos@gmail.com o karen@pizzeria.com">
+      </div>
+      <div class="form-group">
+        <label for="authPassword">Contraseña:</label>
+        <input type="password" id="authPassword" class="form-input" required autocomplete="current-password" placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn-primary btn-submit-auth">Ingresar al Sistema</button>
+    </form>
+    <footer class="auth-footer-help">
+      <small>Usuarios demo: <strong>carlos</strong> (Cliente) / <strong>karen</strong> (Admin)</small>
+    </footer>
+  </div>
+</div>
+
+<!-- 3. COMPONENTE: CATÁLOGO Y TARJETA DE PRODUCTO (PIZZA CARD) -->
+<section class="menu-catalog-section" id="menu" aria-labelledby="catalogTitle">
+  <div class="catalog-header">
+    <h2 id="catalogTitle">Nuestras Pizzas Artesanales</h2>
+    <p>Elaboradas en horno de leña con masa madre e ingredientes 100% frescos.</p>
+  </div>
+  <div class="catalog-grid" id="pizzaGrid">
+    <!-- Plantilla individual de PizzaCard -->
+    <article class="pizza-card" data-pizza-id="piz-01">
+      <figure class="pizza-figure">
+        <div class="pizza-badge-promo">Popular</div>
+        <img src="assets/pizza_margarita.jpg" alt="Pizza Margarita tradicional italiana" class="pizza-img" loading="lazy">
+        <figcaption class="sr-only">Pizza Margarita con salsa pomodoro, mozzarella fresca y albahaca.</figcaption>
+      </figure>
+      <div class="pizza-body">
+        <h3 class="pizza-title">Pizza Margherita Clásica</h3>
+        <p class="pizza-desc">Salsa de tomates San Marzano, queso mozzarella di bufala y hojas de albahaca fresca con aceite de oliva extra virgen.</p>
+        <div class="pizza-size-selector">
+          <label for="size-piz-01" class="sr-only">Seleccionar tamaño</label>
+          <select id="size-piz-01" class="size-select">
+            <option value="Personal">Personal (4 porciones) - $28.000</option>
+            <option value="Mediana" selected>Mediana (8 porciones) - $38.000</option>
+            <option value="Familiar">Familiar (12 porciones) - $48.000</option>
+          </select>
+        </div>
+        <footer class="pizza-footer">
+          <span class="pizza-price" aria-label="Precio: 38 mil pesos">$38.000</span>
+          <button class="btn-add-cart" aria-label="Agregar Pizza Margherita al carrito">
+            <span>+ Agregar</span>
+          </button>
+        </footer>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 4. COMPONENTE: GAVETA LATERAL DEL CARRITO (CART DRAWER) -->
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-labelledby="cartHeading" aria-modal="true" hidden>
+  <div class="cart-drawer-content">
+    <header class="cart-drawer-header">
+      <h2 id="cartHeading">🛒 Tu Carrito de Compras</h2>
+      <button class="btn-close-cart" id="closeCartBtn" aria-label="Cerrar carrito">&times;</button>
+    </header>
+    <div class="cart-items-container" id="cartItemsList" role="region" aria-live="polite">
+      <!-- Item en el carrito -->
+      <article class="cart-item" data-item-id="piz-01-Mediana">
+        <div class="cart-item-info">
+          <h4 class="cart-item-name">Margherita Clásica</h4>
+          <span class="cart-item-size">Tamaño: Mediana</span>
+          <span class="cart-item-unit-price">$38.000 c/u</span>
+        </div>
+        <div class="cart-item-controls">
+          <button class="btn-qty btn-minus" aria-label="Disminuir cantidad">-</button>
+          <span class="qty-label" aria-label="Cantidad">1</span>
+          <button class="btn-qty btn-plus" aria-label="Aumentar cantidad">+</button>
+        </div>
+        <div class="cart-item-total">
+          <span>$38.000</span>
+          <button class="btn-remove-item" aria-label="Eliminar Margherita del carrito">🗑️</button>
+        </div>
+      </article>
+    </div>
+    <footer class="cart-drawer-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotalText">$38.000</strong>
+      </div>
+      <div class="cart-summary-line">
+        <span>Costo de Envío:</span>
+        <span id="cartShippingText">$4.000</span>
+      </div>
+      <small class="free-shipping-note">¡Envío GRATIS en pedidos superiores a $80.000!</small>
+      <div class="cart-total-line">
+        <span>Total a Pagar:</span>
+        <strong id="cartTotalText">$42.000</strong>
+      </div>
+      <button class="btn-primary btn-checkout" id="goToCheckoutBtn">Finalizar Compra ➔</button>
+    </footer>
+  </div>
+</aside>
+
+<!-- 5. COMPONENTE: FORMULARIO DE CHECKOUT Y DESPACHO -->
+<section class="checkout-section" id="checkoutSection" aria-labelledby="checkoutHeading" hidden>
+  <div class="checkout-container">
+    <h2 id="checkoutHeading">📦 Datos de Entrega y Facturación</h2>
+    <form class="checkout-form" id="checkoutForm" novalidate>
+      <fieldset class="form-fieldset">
+        <legend>Información del Cliente</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="custName">Nombre Completo:</label>
+            <input type="text" id="custName" class="form-input" required placeholder="Carlos Mendoza">
+          </div>
+          <div class="form-group">
+            <label for="custPhone">Teléfono Celular (10 dígitos):</label>
+            <input type="tel" id="custPhone" class="form-input" pattern="[0-9]{10}" required placeholder="3101234567">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend>Dirección de Entrega</legend>
+        <div class="form-group">
+          <label for="custAddress">Dirección exacta (Barrio / Calle / Apto):</label>
+          <input type="text" id="custAddress" class="form-input" required placeholder="Calle 5 # 14-25, Barrio Centro">
+        </div>
+        <div class="form-group">
+          <label for="custNotes">Notas de entrega (Opcional):</label>
+          <textarea id="custNotes" class="form-input textarea" rows="2" placeholder="Tocar el timbre 201 o dejar con portería"></textarea>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend>Forma de Pago</legend>
+        <div class="payment-options">
+          <label class="radio-label">
+            <input type="radio" name="paymentMethod" value="Contraentrega" checked>
+            <span>💵 Efectivo contraentrega</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="paymentMethod" value="Transferencia">
+            <span>📱 Nequi / Daviplata</span>
+          </label>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn-primary btn-confirm-order">Confirmar y Enviar Pedido</button>
+    </form>
+  </div>
+</section>
+
+<!-- 6. COMPONENTE: PANEL DE GESTIÓN DE ÓRDENES (ADMINISTRADOR Y CLIENTE) -->
+<section class="orders-dashboard" id="ordersSection" aria-labelledby="ordersTitle">
+  <div class="dashboard-header">
+    <div class="dashboard-title-box">
+      <span class="role-view-badge" id="ordersRoleBadge">Vista de Administrador</span>
+      <h2 id="ordersTitle">📊 Gestión de Órdenes y Despacho</h2>
+    </div>
+    <!-- KPIs solo visibles para Administrador -->
+    <div class="kpi-panel" id="adminKpis" role="region" aria-label="Indicadores en vivo">
+      <div class="kpi-card">
+        <span class="kpi-num" id="kpiTotalOrders">0</span>
+        <span class="kpi-label">Total Órdenes</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-num" id="kpiPrepOrders">0</span>
+        <span class="kpi-label">En Cocina</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-num" id="kpiOnWayOrders">0</span>
+        <span class="kpi-label">En Camino</span>
+      </div>
+      <div class="kpi-card highlight">
+        <span class="kpi-num" id="kpiRevenue">$0</span>
+        <span class="kpi-label">Facturado Hoy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filtros rápidos para el administrador -->
+  <div class="orders-filter-bar" id="adminFilterBar" role="toolbar" aria-label="Filtrar por estado">
+    <button class="btn-filter active" data-filter="TODOS">Todos</button>
+    <button class="btn-filter" data-filter="Preparación">👨‍🍳 En Preparación</button>
+    <button class="btn-filter" data-filter="Camino">🛵 En Camino</button>
+    <button class="btn-filter" data-filter="Entregado">✔ Entregados</button>
+  </div>
+
+  <!-- Lista dinámica de órdenes -->
+  <div class="orders-list-container" id="ordersList" role="feed" aria-busy="false">
+    <!-- Tarjeta de orden individual -->
+    <article class="order-card" data-order-id="ORD-1001">
+      <header class="order-card-header">
+        <div>
+          <span class="order-id">#ORD-1001</span>
+          <span class="order-date">07 Nov 2026, 04:30 PM</span>
+        </div>
+        <span class="order-status-badge status-prep">👨‍🍳 En Preparación</span>
+      </header>
+      <div class="order-card-body">
+        <div class="order-cust-info">
+          <strong>Cliente:</strong> Carlos Mendoza (3101234567)
+          <p><strong>Dirección:</strong> Carrera 9 # 12-40, Barrio Caldas</p>
+        </div>
+        <ul class="order-items-summary">
+          <li>1x Pizza Margherita Clásica (Mediana) - $38.000</li>
+        </ul>
+      </div>
+      <footer class="order-card-footer">
+        <div class="order-total-price">Total: <strong>$42.000</strong></div>
+        <div class="order-admin-actions">
+          <button class="btn-action-status btn-status-next" aria-label="Avanzar orden a En Camino">Despachar 🛵</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+</section>
+
+<!-- 7. COMPONENTE: NOTIFICACIONES TOAST ACCESIBLES -->
+<div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true">
+  <!-- Toast dinámico generado por JavaScript -->
+  <div class="toast toast-success" role="alert">
+    <span class="toast-icon">✔</span>
+    <span class="toast-msg">¡Pizza agregada con éxito al carrito!</span>
+  </div>
+</div>
+
+<!-- 8. COMPONENTE: PIE DE PÁGINA INSTITUCIONAL (FOOTER) -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Pizzería Bella Italia</h3>
+      <p>Proyecto formativo SENA ADSO - Ficha 228118</p>
+      <p>Aprendiz: Karen Yuliana Campo</p>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a href="#menu">Catálogo</a></li>
+        <li><a href="#pedidos">Órdenes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-legal">
+      <p>© 2026 Bella Italia Software. Desarrollado con HTML5 semántico y CSS3 accesible.</p>
+    </div>
+  </div>
+</footer>

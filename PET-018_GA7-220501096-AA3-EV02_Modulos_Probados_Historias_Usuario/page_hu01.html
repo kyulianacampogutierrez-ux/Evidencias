@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: #0f172a; color: #f8fafc; padding: 24px; }
+    .card { background: #1e293b; border-radius: 10px; padding: 20px; border: 1px solid #334155; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 12px; margin-bottom: 16px; }
+    .title { font-size: 16pt; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 8px; }
+    .badge { padding: 4px 10px; border-radius: 20px; font-size: 9pt; font-weight: 700; }
+    .badge-success { background: #065f46; color: #6ee7b7; border: 1px solid #059669; }
+    .badge-error { background: #7f1d1d; color: #fca5a5; border: 1px solid #dc2626; }
+    .badge-req { background: #1e3a8a; color: #93c5fd; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .box { background: #090d16; border-radius: 6px; padding: 14px; border: 1px solid #1e293b; font-family: 'Courier New', monospace; font-size: 9.5pt; }
+    .box-title { color: #94a3b8; font-size: 8.5pt; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; border-bottom: 1px solid #1e293b; padding-bottom: 4px; }
+    .json-key { color: #7dd3fc; }
+    .json-str { color: #86efac; }
+    .json-num { color: #fde047; }
+    .json-bool { color: #f472b6; }
+    .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 8pt; margin-right: 6px; }
+    .tag-post { background: #15803d; color: #fff; }
+    .tag-get { background: #2563eb; color: #fff; }
+    .tag-patch { background: #9333ea; color: #fff; }
+    .status-line { font-size: 10pt; font-weight: 600; margin-bottom: 6px; }
+    .status-200 { color: #4ade80; }
+    .status-201 { color: #4ade80; }
+    .status-400 { color: #f87171; }
+  </style></head><body style="background:#0f172a;padding:20px;"><div id="hu01" class="card">
+    <div class="header">
+      <div class="title">
+        <span>👤 HU-01: Registro y Validación Declarativa de Clientes (Bean Validation)</span>
+      </div>
+      <span class="badge badge-success">✓ CASO DE PRUEBA APROBADO</span>
+    </div>
+    <p style="color: #cbd5e1; font-size: 10pt; margin-bottom: 14px;">
+      <strong>Requisito:</strong> El sistema debe validar que los nombres no estén vacíos (mínimo 3 caracteres), los teléfonos contengan únicamente entre 7 y 15 dígitos numéricos (Regex) y las direcciones sean detalladas. De lo contrario, debe rechazar la solicitud con <code>HTTP 400 Bad Request</code>.
+    </p>
+    <div class="grid">
+      <div class="box">
+        <div class="box-title">Petición HTTP Inválida (Intento con Errores)</div>
+        <div class="status-line"><span class="tag tag-post">POST</span> /api/clientes</div>
+        <pre>{
+  <span class="json-key">"nombre"</span>: <span class="json-str">""</span>, <span style="color:#f87171;">// Error: Nombre vacío</span>
+  <span class="json-key">"telefono"</span>: <span class="json-str">"310-XYZ-00"</span>, <span style="color:#f87171;">// Error: Caracteres inválidos</span>
+  <span class="json-key">"direccion"</span>: <span class="json-str">"Cra 1"</span> <span style="color:#f87171;">// Error: Longitud insuficiente</span>
+}</pre>
+      </div>
+      <div class="box">
+        <div class="box-title">Respuesta Centralizada (GlobalExceptionHandler)</div>
+        <div class="status-line status-400">HTTP/1.1 400 Bad Request</div>
+        <pre>{
+  <span class="json-key">"timestamp"</span>: <span class="json-str">"2026-11-08 18:27:00"</span>,
+  <span class="json-key">"status"</span>: <span class="json-num">400</span>,
+  <span class="json-key">"error"</span>: <span class="json-str">"Error de Validación de Datos"</span>,
+  <span class="json-key">"detalles"</span>: {
+    <span class="json-key">"nombre"</span>: <span class="json-str">"El nombre no puede estar vacío"</span>,
+    <span class="json-key">"telefono"</span>: <span class="json-str">"Debe contener entre 7 y 15 dígitos"</span>,
+    <span class="json-key">"direccion"</span>: <span class="json-str">"Debe tener entre 5 y 200 caracteres"</span>
+  }
+}</pre>
+      </div>
+    </div></body></html>

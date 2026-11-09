@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe Técnico - GA6-220501096-AA4-EV03</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .cover {
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90vh;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .cover-header {
+      border-bottom: 4px solid #39a900;
+      padding-bottom: 20px;
+    }
+    .cover-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: bold;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 10pt;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .cover-title {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
+    .cover-subtitle {
+      font-size: 13pt;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .cover-evidence {
+      font-size: 11pt;
+      color: #64748b;
+      font-family: monospace;
+      margin-top: 10px;
+    }
+    .cover-body {
+      margin: 30px 0;
+    }
+    .cover-meta-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 10pt;
+    }
+    .cover-meta-table td {
+      padding: 7px 14px;
+    }
+    .cover-meta-table td.label {
+      font-weight: bold;
+      color: #334155;
+      width: 190px;
+      border-right: 2px solid #cbd5e1;
+    }
+    .cover-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 16px;
+      font-size: 9.5pt;
+      color: #64748b;
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 16pt;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 5px;
+      margin-top: 24px;
+    }
+    h2 {
+      font-size: 13pt;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .badge-success {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 8pt;
+      display: inline-block;
+    }
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0;
+      font-size: 9.5pt;
+    }
+    .callout-title {
+      font-weight: bold;
+      color: #15803d;
+      margin-bottom: 4px;
+    }
+    .code-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 8.5pt;
+      overflow-x: auto;
+      margin: 10px 0;
+      line-height: 1.4;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA FORMAL SENA -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="cover-badge">Servicio Nacional de Aprendizaje • SENA</div>
+      <div class="cover-title">INFORME TÉCNICO DE IMPLEMENTACIÓN FRONT-END</div>
+      <div class="cover-subtitle">Diseño y Construcción de la Interfaz del Proyecto Formativo (Pizzería Bella Italia)</div>
+      <div class="cover-evidence">EVIDENCIA: GA6-220501096-AA4-EV03</div>
+    </div>
+
+    <div class="cover-body">
+      <table class="cover-meta-table">
+        <tr>
+          <td class="label">Programa de Formación:</td>
+          <td>Análisis y Desarrollo de Software (ADSO)</td>
+        </tr>
+        <tr>
+          <td class="label">Código de Ficha:</td>
+          <td><strong>228118</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Aprendiz:</td>
+          <td><strong>Karen Yuliana Campo</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Competencia Técnica:</td>
+          <td>220501096 - Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo.</td>
+        </tr>
+        <tr>
+          <td class="label">Resultado de Aprendizaje:</td>
+          <td>220501096-03 - Crear componentes front-end del software de acuerdo con el diseño.</td>
+        </tr>
+        <tr>
+          <td class="label">Actividad de Aprendizaje:</td>
+          <td>GA6-220501096-AA4 - Generar plantillas y estilos, de acuerdo con el diseño.</td>
+        </tr>
+        <tr>
+          <td class="label">Proyecto Formativo:</td>
+          <td>Construcción de software para gestión y venta de pizzas (Pizzería Bella Italia)</td>
+        </tr>
+        <tr>
+          <td class="label">Centro de Formación:</td>
+          <td>Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</td>
+        </tr>
+        <tr>
+          <td class="label">Fecha:</td>
+          <td>Noviembre de 2026</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cover-footer">
+      Metodología: <strong>TDD (Test-Driven Development)</strong> • 37/37 Pruebas Unitarias Aprobadas • Retícula 8dp (CF16 SENA)
+    </div>
+  </div>
+
+  <!-- PÁGINA 1: INTRODUCCIÓN Y REQUERIMIENTOS -->
+  <h1>1. Introducción y Contexto de la Evidencia</h1>
+  <p>
+    La presente entrega consolida el desarrollo front-end completo del proyecto formativo de la **Pizzería Bella Italia**, 
+    dando cierre formal a la actividad de aprendizaje **GA6-220501096-AA4: Generar plantillas y estilos, de acuerdo con el diseño**. 
+    Esta evidencia, catalogada bajo el código **GA6-220501096-AA4-EV03**, integra de forma armónica los lenguajes fundamentales de la 
+    web (**HTML5 semántico, CSS3 moderno y JavaScript reactivo**) respetando los principios de accesibilidad universal (WCAG 2.1 AA) y las 
+    directrices del componente formativo institucional **CF16: Herramientas para el diseño y desarrollo móvil híbrido**.
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">📌 Requerimiento Textual de la Guía 6 (Páginas 13 y 14):</div>
+    <em>"Teniendo en cuenta las características del software a desarrollar, realice el diseño front-end cumpliendo con los requisitos del proyecto, aplicando lo visto en el componente formativo. El diseño front-end debe aplicar los conceptos de usabilidad y diseño propuesto en las anteriores evidencias. Se debe aplicar HTML, CSS y JS para el diseño front-end. Producto a entregar: archivo ZIP con todos los archivos del diseño front-end."</em>
+  </div>
+
+  <h1>2. Arquitectura de la Solución Frontend Implementada</h1>
+  <p>
+    La aplicación se diseñó como una Single Page Application (SPA) modular y ligera, garantizando una carga instantánea y 
+    eliminando dependencias de frameworks externos pesados:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Archivo</th>
+        <th>Rol Técnico</th>
+        <th>Características Principales</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>index.html</strong></td>
+        <td>Estructura Semántica</td>
+        <td>Maquetación con header, nav, section, form, button. Incluye estilos embebidos de respaldo para apertura desde cualquier entorno.</td>
+      </tr>
+      <tr>
+        <td><strong>styles.css</strong></td>
+        <td>Diseño Visual & Retícula</td>
+        <td>Variables en :root, sistema modular de 8dp, márgenes de 16dp, elevaciones con sombra suave y diseño responsive (@media).</td>
+      </tr>
+      <tr>
+        <td><strong>app.js</strong></td>
+        <td>Lógica de Negocio & RBAC</td>
+        <td>Gestión del carrito, validación de checkout (celular 10 dígitos), umbral de envío gratis ($80.000 COP) y adaptación por roles.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>3. Análisis Ergonómico y UX/UI (SENA CF16)</h1>
+  <ul>
+    <li><strong>Retícula Espacial de 8dp y Margen de 16dp:</strong> Todo elemento de la pantalla sigue múltiplos exactos de 8 píxeles (8px, 16px, 24px, 32px), creando un ritmo visual uniforme y balanceado.</li>
+    <li><strong>Ley de Fitts en Botones Táctiles:</strong> Los botones de interacción clave (`.btn-primary`, `.btn-checkout`, botones de estado) tienen un área de contacto mínima de **48px**, optimizando la interacción táctil en pantallas móviles.</li>
+    <li><strong>Código Cromático Semiótico:</strong>
+      <ul>
+        <li><strong style="color:#ef4444;">Rojo (#ef4444):</strong> Color reservado para errores, rechazo y cancelaciones.</li>
+        <li><strong style="color:#f59e0b;">Amarillo (#f59e0b):</strong> Color reservado para el estado de pizzas en preparación.</li>
+        <li><strong style="color:#10b981;">Verde (#10b981):</strong> Color reservado para confirmaciones, órdenes entregadas y envío gratis.</li>
+        <li><strong style="color:#0284c7;">Azul (#0284c7):</strong> Color señalético para interacción y navegación.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 2: ROLES Y FLUJOS DE USUARIO -->
+  <h1>4. Módulos y Adaptación por Roles (RBAC)</h1>
+
+  <h2>4.1 Flujo del Cliente Final (Carlos Mendoza)</h2>
+  <ol>
+    <li><strong>Exploración del Menú:</strong> Consulta el catálogo de 6 pizzas artesanales con filtros por categorías (Tradicionales, Especiales, Gourmet) y búsqueda en tiempo real.</li>
+    <li><strong>Configuración del Producto:</strong> Selecciona el tamaño (Personal, Mediana, Familiar) con actualización automática de precios y porciones.</li>
+    <li><strong>Carrito de Compras y Envío Gratis:</strong> Modifica cantidades dinámicamente. Al superar los **$80.000 COP**, el sistema bonifica el valor del envío ($4.000 COP) a **$0 COP** con alerta visual verde.</li>
+    <li><strong>Checkout Validado:</strong> Diligencia nombre, dirección física y teléfono celular validando estrictamente que contenga 10 dígitos numéricos.</li>
+    <li><strong>Seguimiento de Órdenes:</strong> En su menú superior visualiza **`🛍️ Mis Pedidos`**, con acceso exclusivo al historial de sus pedidos personales.</li>
+  </ol>
+
+  <h2>4.2 Flujo de la Administradora (Karen Campo)</h2>
+  <ol>
+    <li><strong>Barra Superior Adaptativa:</strong> El menú superior se transforma dinámicamente a **`📊 Gestión de Órdenes`**.</li>
+    <li><strong>Tablero de Control y KPIs en Vivo:</strong> Visualiza en tarjetas numéricas:
+      <ul>
+        <li>Total de Órdenes Recibidas.</li>
+        <li>Pizzas Actualmente en Cocina.</li>
+        <li>Pizzas Despachadas en Ruta (En Camino).</li>
+        <li>Pizzas Entregadas Exitosamente.</li>
+        <li>Total de Ingresos Facturados en Vivo ($ COP).</li>
+      </ul>
+    </li>
+    <li><strong>Transiciones Operativas en Cocina:</strong> Cuenta con botones de acción inmediata para avanzar el ciclo de suministro: *👨‍🍳 A Cocina* ➔ *🛵 Despachar* ➔ *✔ Entregar*.</li>
+    <li><strong>Filtros de Estado:</strong> Puede filtrar el histórico para visualizar órdenes según su fase logística.</li>
+  </ol>
+
+  <h1>5. Validación con Metodología TDD (Test-Driven Development)</h1>
+  <p>
+    El desarrollo del software fue auditado bajo pruebas unitarias automatizadas con Node.js Test Runner:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Caso</th>
+        <th>Descripción de la Prueba</th>
+        <th>Criterio Evaluado</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>TC01</strong></td>
+        <td>Existencia física de index.html, styles.css y app.js</td>
+        <td>Completitud de Archivos</td>
+        <td><span class="badge-success">✔ PASS (6.4 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC02</strong></td>
+        <td>Estructura semántica HTML5 accesible (header, nav, section, form, button)</td>
+        <td>Estándar W3C Semántico</td>
+        <td><span class="badge-success">✔ PASS (3.7 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC03</strong></td>
+        <td>Estilos CSS3 con retícula 8dp, margen 16dp y Ley de Fitts (&ge;48px)</td>
+        <td>Diseño Ergonómico CF16</td>
+        <td><span class="badge-success">✔ PASS (26.7 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC04</strong></td>
+        <td>Lógica de catálogo, carrito y umbral de envío gratis ($80.000 COP)</td>
+        <td>Reglas de Negocio</td>
+        <td><span class="badge-success">✔ PASS (3.3 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC05</strong></td>
+        <td>Validación de checkout con teléfono (10 dígitos) y dirección</td>
+        <td>Integridad de Datos</td>
+        <td><span class="badge-success">✔ PASS (11.0 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC06</strong></td>
+        <td>Diferenciación de vistas por roles (Cliente vs Admin con KPIs)</td>
+        <td>Control de Acceso RBAC</td>
+        <td><span class="badge-success">✔ PASS (3.6 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC07</strong></td>
+        <td>Flujo de transición de estados operativos en cocina</td>
+        <td>Ciclo Logístico</td>
+        <td><span class="badge-success">✔ PASS (20.3 ms)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 3: LISTA DE CHEQUEO Y CONCLUSIONES -->
+  <h1>6. Lista de Chequeo de Evaluación (IE-GA6-220501096-AA4-EV03)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Criterio de Evaluación SENA</th>
+        <th>Cumplimiento en la Evidencia</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>¿El diseño front-end cumple con los requerimientos del proyecto formativo?</td>
+        <td>Sí. Implementa el sistema integral de pedidos, ventas y despacho para Pizzería Bella Italia.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>¿Aplica los conceptos de usabilidad y diseño propuestos en evidencias previas?</td>
+        <td>Sí. Retícula modular de 8dp, márgenes de 16dp, botones táctiles Fitts y código cromático.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>¿Aplica HTML5, CSS3 y JavaScript para el desarrollo front-end?</td>
+        <td>Sí. Código modular nativo sin frameworks pesados, con persistencia en localStorage.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>¿Diferencia interfaces y funciones según los roles de usuario?</td>
+        <td>Sí. Vista de Cliente (`Mis Pedidos`) y vista de Administradora (`Gestión de Órdenes` con KPIs).</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>¿La evidencia se entrega en una carpeta comprimida en formato ZIP?</td>
+        <td>Sí. Paquete `GA6-220501096-AA4-EV03.zip` preparado y verificado para Zajuna.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>7. Conclusiones</h1>
+  <p>
+    1. La integración sinérgica de HTML5, CSS3 y JavaScript permitió materializar una solución front-end robusta, intuitiva y ergonómica, alineada con las expectativas reales de una microempresa del sector gastronómico.<br>
+    2. La diferenciación de interfaces mediante RBAC aporta alto valor formativo, demostrando cómo una sola base de código puede adaptarse de forma segura y personalizada para el cliente final y para la gerencia operativa.<br>
+    3. La validación automatizada mediante TDD garantiza que el software cumple con cero errores todos los criterios técnicos exigidos por el SENA en la Guía de Aprendizaje 6.
+  </p>
+
+  <h1>8. Referencias Bibliográficas</h1>
+  <ul>
+    <li>Servicio Nacional de Aprendizaje (SENA). (2024). <em>Componente Formativo CF16: Herramientas para el diseño y desarrollo móvil híbrido</em>. Dirección General, Bogotá.</li>
+    <li>Fitts, P. M. (1954). <em>The information capacity of the human motor system in controlling the amplitude of movement</em>. Journal of Experimental Psychology.</li>
+    <li>Nielsen, J. (1994). <em>Usability engineering</em>. Morgan Kaufmann.</li>
+    <li>World Wide Web Consortium (W3C). (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>.</li>
+  </ul>
+
+</body>
+</html>

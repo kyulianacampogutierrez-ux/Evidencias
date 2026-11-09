@@ -1,0 +1,27 @@
+INFORMACIÓN DE ENTREGA Y ENLACE DE REPOSITORIO DE CONTROL DE VERSIONES
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+REGIONAL CAUCA - POPAYÁN
+
+========================================================================
+EVIDENCIA: GA7-220501096-AA5-EV01
+Diseño y desarrollo de servicios web - caso (Autenticación y Registro)
+========================================================================
+
+Aprendiz: Karen Yuliana Campo
+Ficha de Caracterización: 228118
+Programa: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad 100% Virtual
+Fase del Proyecto: Fase III - Ejecución (AP7: Codificar los Módulos del Software)
+Centro de Formación: Centro de Teleinformática y Producción Industrial (CTPI)
+
+ENLACE AL REPOSITORIO GIT DE CONTROL DE VERSIONES:
+https://github.com/karen-campo/sena-auth-service-caso.git
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DEL SERVICIO WEB:
+Servicio web REST desarrollado para el caso de estudio de registro y autenticación de usuarios.
+Incorpora endpoints de Registro (/api/auth/register) y Login (/api/auth/login), encriptación
+criptográfica con sal y derivación Scrypt/BCrypt, generación de tokens de sesión JWT (JSON Web Tokens),
+mensajes normalizados de éxito ("Autenticación satisfactoria") y error ("Error en la autenticación"),
+y ruta protegida (/api/auth/profile).

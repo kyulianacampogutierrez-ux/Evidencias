@@ -1,0 +1,55 @@
+﻿file.new {"preset": "Web 1366 × 768"}
+swatch.create {"name": "BgCanvas", "color": "#0F172A"}
+swatch.create {"name": "HeaderBg", "color": "#1E293B"}
+swatch.create {"name": "CardBg", "color": "#FFFFFF"}
+swatch.create {"name": "PizzaRed", "color": "#E11D48"}
+swatch.create {"name": "PizzaGold", "color": "#F59E0B"}
+swatch.create {"name": "GreenBadge", "color": "#10B981"}
+swatch.create {"name": "InputGray", "color": "#F1F5F9"}
+
+frame.create {"rect": [0, 0, 1366, 768], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "BgCanvas"}
+
+frame.create {"rect": [0, 0, 1366, 64], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "HeaderBg"}
+
+frame.create {"rect": [40, 18, 600, 50], "content": "text", "text": "PIZZERIA BELLA ITALIA  |  MOCKUP 02: CATALOGO Y MENU INTERACTIVO"}
+frame.create {"rect": [950, 18, 1320, 50], "content": "text", "text": "Carrito: 1 Pizza ($45.000)  |  Usuario: Karen Campo"}
+
+frame.create {"rect": [100, 100, 1266, 145], "content": "text", "text": "NUESTRAS PIZZAS ARTESANALES - SELECCIONA TU FAVORITA"}
+
+frame.create {"rect": [100, 160, 450, 660], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "CardBg"}
+frame.create {"rect": [100, 160, 450, 240], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaGold"}
+frame.create {"rect": [120, 180, 430, 220], "content": "text", "text": "PIZZA HAWAIANA"}
+frame.create {"rect": [120, 260, 430, 290], "content": "text", "text": "Tamaño: Familiar (8 porciones)"}
+frame.create {"rect": [120, 310, 430, 420], "content": "text", "text": "Ingredientes:\n• Jamon ahumado premium\n• Piña caramelizada en miel\n• Doble queso mozzarella\n• Salsa napolitana de la casa"}
+frame.create {"rect": [120, 470, 430, 510], "content": "text", "text": "PRECIO: $45.000 COP"}
+frame.create {"rect": [120, 550, 430, 610], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+frame.create {"rect": [120, 568, 430, 600], "content": "text", "text": "+ AGREGAR AL PEDIDO"}
+
+frame.create {"rect": [508, 160, 858, 660], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "CardBg"}
+frame.create {"rect": [508, 160, 858, 240], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+frame.create {"rect": [528, 180, 838, 220], "content": "text", "text": "PIZZA PEPPERONI"}
+frame.create {"rect": [528, 260, 838, 290], "content": "text", "text": "Tamaño: Mediana (6 porciones)"}
+frame.create {"rect": [528, 310, 838, 420], "content": "text", "text": "Ingredientes:\n• Pepperoni americano crocante\n• Queso mozzarella fundido\n• Toque de oregano silvestre\n• Base fina artesanal italiana"}
+frame.create {"rect": [528, 470, 838, 510], "content": "text", "text": "PRECIO: $32.000 COP"}
+frame.create {"rect": [528, 550, 838, 610], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+frame.create {"rect": [528, 568, 838, 600], "content": "text", "text": "+ AGREGAR AL PEDIDO"}
+
+frame.create {"rect": [916, 160, 1266, 660], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "CardBg"}
+frame.create {"rect": [916, 160, 1266, 240], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "GreenBadge"}
+frame.create {"rect": [936, 180, 1246, 220], "content": "text", "text": "POLLO Y CHAMPIÑON"}
+frame.create {"rect": [936, 260, 1246, 290], "content": "text", "text": "Tamaño: Familiar (8 porciones)"}
+frame.create {"rect": [936, 310, 1246, 420], "content": "text", "text": "Ingredientes:\n• Pechuga desmechada tierna\n• Champiñones frescos al ajillo\n• Queso parmesano gratinado\n• Delicada salsa bechamel"}
+frame.create {"rect": [936, 470, 1246, 510], "content": "text", "text": "PRECIO: $38.000 COP"}
+frame.create {"rect": [916, 550, 1246, 610], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+frame.create {"rect": [936, 568, 1246, 600], "content": "text", "text": "+ AGREGAR AL PEDIDO"}

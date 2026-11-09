@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      width: 900px;
+      height: 550px;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<svg width="900" height="550" viewBox="0 0 900 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" rx="20" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title -->
+  <rect x="30" y="24" width="840" height="60" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="65" cy="54" r="18" fill="#EA580C"/>
+  <text x="65" y="60" font-family="'Segoe UI', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">📊</text>
+  <text x="98" y="49" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold" fill="#0F172A">Matriz Técnica de Selección de Herramientas de Versionamiento</text>
+  <text x="98" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748B">Criterios de evaluación tecnológica para el proyecto Pizzería Bella Italia</text>
+
+  <!-- Table Header -->
+  <g transform="translate(35, 105)">
+    <rect width="830" height="42" rx="10" fill="#0F172A"/>
+    <text x="25" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">CRITERIO / TECNOLOGÍA</text>
+    <text x="250" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#38BDF8">GIT (SELECCIONADO)</text>
+    <text x="460" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#94A3B8">SVN (SUBVERSION)</text>
+    <text x="660" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#94A3B8">MERCURIAL (HG)</text>
+  </g>
+
+  <!-- Row 1: Arquitectura -->
+  <g transform="translate(35, 155)">
+    <rect width="830" height="60" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Arquitectura de Control</text>
+    <text x="20" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Distribución y topología</text>
+
+    <!-- Git -->
+    <rect x="240" y="12" width="180" height="36" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="250" y="34" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#065F46">✔ Distribuido (Local/Remoto)</text>
+
+    <!-- SVN -->
+    <text x="460" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">Centralizado (Servidor único)</text>
+
+    <!-- Mercurial -->
+    <text x="660" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">Distribuido</text>
+  </g>
+
+  <!-- Row 2: Rendimiento -->
+  <g transform="translate(35, 222)">
+    <rect width="830" height="60" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Rendimiento en Ramas</text>
+    <text x="20" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Branching y Merging</text>
+
+    <!-- Git -->
+    <rect x="240" y="12" width="180" height="36" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="250" y="34" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#065F46">✔ Instantáneo (< 1 seg)</text>
+
+    <!-- SVN -->
+    <text x="460" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#DC2626">Lento (Copia completa de dir)</text>
+
+    <!-- Mercurial -->
+    <text x="660" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">Rápido</text>
+  </g>
+
+  <!-- Row 3: Trabajo Offline -->
+  <g transform="translate(35, 289)">
+    <rect width="830" height="60" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Trabajo sin Conexión</text>
+    <text x="20" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Historial y commits locales</text>
+
+    <!-- Git -->
+    <rect x="240" y="12" width="180" height="36" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="250" y="34" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#065F46">✔ 100% Funcional Offline</text>
+
+    <!-- SVN -->
+    <text x="460" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#DC2626">Imposible (Requiere red)</text>
+
+    <!-- Mercurial -->
+    <text x="660" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">100% Funcional Offline</text>
+  </g>
+
+  <!-- Row 4: Ecosistema e Integración -->
+  <g transform="translate(35, 356)">
+    <rect width="830" height="60" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Ecosistema &amp; Soporte</text>
+    <text x="20" y="46" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Herramientas CI/CD y Cloud</text>
+
+    <!-- Git -->
+    <rect x="240" y="12" width="180" height="36" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="250" y="34" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#065F46">✔ Estándar Global (94% IT)</text>
+
+    <!-- SVN -->
+    <text x="460" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">Legado en descenso (< 3%)</text>
+
+    <!-- Mercurial -->
+    <text x="660" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#475569">Nicho específico (< 2%)</text>
+  </g>
+
+  <!-- Bottom Recommendation Card -->
+  <g transform="translate(35, 430)">
+    <rect width="830" height="95" rx="14" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="25" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#1E40AF">🎯 CONCLUSIÓN TÉCNICA DE LA SELECCIÓN:</text>
+    <text x="25" y="52" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#1E3A8A">
+      Se selecciona <strong>Git</strong> en combinación con la plataforma remota <strong>GitHub</strong> como estándar del proyecto formativo por su alta velocidad de branching, capacidad de trabajo autónomo offline en Popayán, integración nativa con GitHub Actions para pruebas TDD y amplia adopción en la industria de desarrollo de software.
+    </text>
+    <text x="25" y="78" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#00A86B">
+      ✔ Respalda el plan de trabajo de la Pizzería Bella Italia con trazabilidad, seguridad y trabajo colaborativo ágil.
+    </text>
+  </g>
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+====================================================================
+SERVICIO NACIONAL DE APRENDIZAJE (SENA)
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA 228118
+EVIDENCIA: GA7-220501096-AA2-EV02: Módulos de software codificados y probados
+====================================================================
+
+DATOS DE LA APRENDIZ:
+- Nombre: Karen Yuliana Campo
+- Correo Electrónico: karen.campo@sena.edu.co
+- Centro: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
+- Modalidad: 100% Virtual
+
+ENLACES DEL PROYECTO WEB:
+- Repositorio GitHub: https://github.com/karen-campo/PizzeriaWeb-Servlets-JSP.git
+- Rama Principal: main / master
+- Módulo: PizzeriaWeb (Java 17, Servlets, JSP, JSTL, JDBC, MariaDB/MySQL)
+- Arquitectura: Modelo-Vista-Controlador (MVC)
+- Orquestación: Docker Compose (sena-pizzeria-db, sena-backend-java)
+
+INSTRUCCIONES DE DESPLIEGUE Y PRUEBA:
+1. Iniciar la infraestructura contenerizada:
+   $ docker compose up -d db
+
+2. Compilar y empaquetar el artefacto WAR:
+   $ docker run --rm -v $(pwd)/PizzeriaWeb:/app -v sena_maven_m2_cache:/root/.m2 -w /app maven:3.9.6-eclipse-temurin-17-alpine mvn clean package -DskipTests
+
+3. El archivo WAR compilado se encuentra en:
+   PizzeriaWeb/target/pizzeria-web.war
+
+4. URLs de Acceso a Módulos:
+   - Panel Principal: http://localhost:8080/pizzeria-web/index.jsp
+   - Directorio de Clientes: http://localhost:8080/pizzeria-web/clientes
+   - Catálogo de Pizzas: http://localhost:8080/pizzeria-web/pizzas
+   - Gestión de Pedidos: http://localhost:8080/pizzeria-web/pedidos
+====================================================================

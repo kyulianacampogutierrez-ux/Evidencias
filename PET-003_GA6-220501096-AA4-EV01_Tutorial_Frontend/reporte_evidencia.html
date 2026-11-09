@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe Técnico - GA6-220501096-AA4-EV01</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .cover {
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90vh;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .cover-header {
+      border-bottom: 4px solid #39a900;
+      padding-bottom: 20px;
+    }
+    .cover-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: bold;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 10pt;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .cover-title {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
+    .cover-subtitle {
+      font-size: 14pt;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .cover-evidence {
+      font-size: 12pt;
+      color: #64748b;
+      font-family: monospace;
+      margin-top: 10px;
+    }
+    .cover-body {
+      margin: 40px 0;
+    }
+    .cover-meta-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 10.5pt;
+    }
+    .cover-meta-table td {
+      padding: 8px 14px;
+    }
+    .cover-meta-table td.label {
+      font-weight: bold;
+      color: #334155;
+      width: 180px;
+      border-right: 2px solid #cbd5e1;
+    }
+    .cover-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 20px;
+      font-size: 10pt;
+      color: #64748b;
+    }
+
+    /* CONTENIDO DEL REPORTE */
+    h1, h2, h3 {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 18pt;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 6px;
+      margin-top: 30px;
+    }
+    h2 {
+      font-size: 14pt;
+      color: #0369a1;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 9.5pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .badge-success {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      display: inline-block;
+    }
+    .code-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 12px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 9pt;
+      overflow-x: auto;
+      margin: 14px 0;
+      line-height: 1.4;
+    }
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      margin: 16px 0;
+    }
+    .callout-title {
+      font-weight: bold;
+      color: #15803d;
+      margin-bottom: 4px;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA FORMAL SENA -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="cover-badge">Servicio Nacional de Aprendizaje • SENA</div>
+      <div class="cover-title">INFORME TÉCNICO DE IMPLEMENTACIÓN</div>
+      <div class="cover-subtitle">Fundamentos de Componentes Front-End (HTML, CSS y JS)</div>
+      <div class="cover-evidence">EVIDENCIA: GA6-220501096-AA4-EV01</div>
+    </div>
+
+    <div class="cover-body">
+      <table class="cover-meta-table">
+        <tr>
+          <td class="label">Programa de Formación:</td>
+          <td>Análisis y Desarrollo de Software (ADSO)</td>
+        </tr>
+        <tr>
+          <td class="label">Código de Ficha:</td>
+          <td><strong>228118</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Aprendiz:</td>
+          <td><strong>Karen Yuliana Campo</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Competencia Técnica:</td>
+          <td>220501096 - Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo.</td>
+        </tr>
+        <tr>
+          <td class="label">Actividad de Aprendizaje:</td>
+          <td>GA6-220501096-AA4 - Generar plantillas y estilos, de acuerdo con el diseño.</td>
+        </tr>
+        <tr>
+          <td class="label">Proyecto Formativo:</td>
+          <td>Construcción de software para gestión y venta de pizzas (Pizzería Bella Italia)</td>
+        </tr>
+        <tr>
+          <td class="label">Centro de Formación:</td>
+          <td>Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</td>
+        </tr>
+        <tr>
+          <td class="label">Fecha de Presentación:</td>
+          <td>Noviembre de 2026</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cover-footer">
+      Metodología de Desarrollo: <strong>TDD (Test-Driven Development)</strong> • 100% Pruebas Aprobadas en Verde
+    </div>
+  </div>
+
+  <!-- PÁGINA 1: INTRODUCCIÓN Y REQUERIMIENTOS -->
+  <h1>1. Introducción y Contexto de la Evidencia</h1>
+  <p>
+    El desarrollo de interfaces gráficas modernas para aplicaciones web y móviles exige no sólo habilidades de codificación, 
+    sino una profunda comprensión de la interacción humano-computador, la arquitectura de la información y la semiótica visual. 
+    En el marco de la <strong>Guía de Aprendizaje 6</strong> del programa ADSO, la evidencia <strong>GA6-220501096-AA4-EV01</strong> 
+    tiene como finalidad evaluar la apropiación de los fundamentos técnicos de HTML5, hojas de estilo en cascada (CSS3) y 
+    comportamientos interactivos con JavaScript.
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">📌 Requerimiento Textual de la Guía 6 (Pág. 12-13):</div>
+    <em>"Con base en el siguiente contexto, aplique los principales componentes de HTML y CSS: elabore una página que enseñe un pequeño tutorial seleccionando un tema de su gusto. Establezca un título y emplee una lista ordenada para indicar los distintos conceptos que contiene el tutorial con enlaces a los temas propiamente dichos. Cada tema debe tener su título, imagen y la descripción del tema. Debe incluir los elementos vistos en el componente y utilizar estilos CSS."</em>
+  </div>
+
+  <h2>1.1 Tema Seleccionado y Justificación</h2>
+  <p>
+    Para garantizar máxima cohesión con el proyecto formativo de la <strong>Pizzería Bella Italia</strong>, se diseñó el 
+    <strong>"Tutorial Didáctico: Fundamentos de Componentes Frontend para Aplicaciones Web y Móviles"</strong>, el cual toma 
+    como base teórica directa el componente formativo institucional <strong>CF16: Herramientas para el diseño y desarrollo móvil híbrido</strong>.
+  </p>
+
+  <h1>2. Arquitectura de la Solución y Temario Pedagógico</h1>
+  <p>
+    Cumpliendo estrictamente la instrucción de utilizar una <strong>lista ordenada (<code>&lt;ol&gt;</code>)</strong> como índice interactivo 
+    con enlaces internos (<code>href="#tema-X"</code>), el tutorial se estructuró en 6 bloques temáticos integrales:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Tema Desarrollado</th>
+        <th>Conceptos Clave del Componente Formativo</th>
+        <th>Recurso Visual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>01</strong></td>
+        <td>Anatomía Semántica con HTML5</td>
+        <td>header, nav, main, section, article, figure, footer. Accesibilidad web.</td>
+        <td>Diagrama vectorial SVG de layout semántico.</td>
+      </tr>
+      <tr>
+        <td><strong>02</strong></td>
+        <td>Tipografía y Jerarquía Visual</td>
+        <td>Fuentes Sans-serif legibles, escala escalada (sp / rem), line-height de 1.6.</td>
+        <td>Escala comparativa de encabezados H1-H3 y cuerpo.</td>
+      </tr>
+      <tr>
+        <td><strong>03</strong></td>
+        <td>Retícula de 8dp y Margen de 16dp</td>
+        <td>Sistema modular de múltiplos de 8px, padding de 16dp, consistencia matemática.</td>
+        <td>Matriz de espaciado modular con cotas visuales.</td>
+      </tr>
+      <tr>
+        <td><strong>04</strong></td>
+        <td>Teoría del Color y Semiótica</td>
+        <td>Colores reservados (Rojo, Amarillo, Verde) y señaléticos (Azul, Blanco, Negro).</td>
+        <td>Paleta semiótica con contraste accesible WCAG AA.</td>
+      </tr>
+      <tr>
+        <td><strong>05</strong></td>
+        <td>Iconografía y Ley de Fitts</td>
+        <td>Botones táctiles &ge; 48px, dimensiones semiótica, semántica y funcional.</td>
+        <td>Diagrama de zonas de alcance ergonómico.</td>
+      </tr>
+      <tr>
+        <td><strong>06</strong></td>
+        <td>Estructura de Navegación y DCU</td>
+        <td>Navegación lineal, jerárquica y aleatoria. Ciclo de 4 fases norma ISO 13407.</td>
+        <td>Infografía del ciclo de Diseño Centrado en el Usuario.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 2: COMPONENTES TÉCNICOS E IMPLEMENTACIÓN -->
+  <h1>3. Componentes Técnicos e Implementación</h1>
+
+  <h2>3.1 Código HTML5 Semántico (Estructura Limpia)</h2>
+  <p>
+    La página web evita etiquetas no descriptivas y estructura el contenido jerárquicamente utilizando elementos que definen 
+    claramente el rol de cada bloque:
+  </p>
+  <div class="code-box">
+&lt;!-- Índice Interactivo Requerido por la Guía 6 --&gt;
+&lt;nav class="tutorial-nav" aria-label="Temario"&gt;
+  &lt;ol class="toc-list"&gt;
+    &lt;li&gt;&lt;a href="#tema-1" class="toc-link"&gt;01. Estructura Semántica con HTML5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-2" class="toc-link"&gt;02. Tipografía, Escala y Jerarquía Visual&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-3" class="toc-link"&gt;03. Retícula Espacial de 8dp y Margen de 16dp&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-4" class="toc-link"&gt;04. Teoría del Color, Contraste y Significado&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-5" class="toc-link"&gt;05. Iconografía, Semiótica y Ley de Fitts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-6" class="toc-link"&gt;06. Estructura de Navegación y DCU (ISO 13407)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+  </div>
+
+  <h2>3.2 Estilos CSS3 (Retícula Modular y Modo Oscuro)</h2>
+  <p>
+    Se implementó un sistema de diseño con variables nativas en <code>:root</code>, asegurando el cumplimiento de la regla de 
+    los <strong>8dp</strong> y compatibilidad con <strong>Modo Oscuro (Dark Theme)</strong>:
+  </p>
+  <div class="code-box">
+:root {
+  --space-sm: 8px;   /* Módulo base 1x */
+  --space-md: 16px;  /* Margen lateral 2x */
+  --space-lg: 24px;  /* Espaciado de secciones 3x */
+  --space-2xl: 48px; /* Altura mínima táctil (Ley de Fitts) */
+
+  /* Paleta cromática semiótica */
+  --color-danger: #ef4444;   /* Error / Peligro */
+  --color-warning: #f59e0b;  /* Precaución */
+  --color-success: #10b981;  /* Éxito */
+  --color-primary: #0284c7;  /* Azul señalético */
+}
+  </div>
+
+  <h2>3.3 Interactividad con JavaScript Modular</h2>
+  <ul>
+    <li><strong>Buscador en tiempo real:</strong> Filtra instantáneamente las tarjetas temáticas a medida que el usuario escribe.</li>
+    <li><strong>Modo Claro / Oscuro:</strong> Permite alternar la interfaz con persistencia en <code>localStorage</code>.</li>
+    <li><strong>Barra de lectura:</strong> Mide el desplazamiento vertical del documento y anima la barra de progreso superior.</li>
+    <li><strong>Copiador de código:</strong> Facilita copiar los fragmentos de código con retroalimentación visual al usuario.</li>
+  </ul>
+
+  <h1>4. Verificación y Metodología TDD (Test-Driven Development)</h1>
+  <p>
+    En apego a la metodología de aseguramiento de calidad, se programó una suite de pruebas unitarias automatizada en 
+    <code>test/tutorial_frontend.test.js</code>. Los 7 casos de prueba fueron ejecutados con éxito:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID Caso</th>
+        <th>Descripción de la Prueba Unitaria</th>
+        <th>Criterio Evaluado</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>TC01</strong></td>
+        <td>Existencia física de index.html, styles.css y tutorial.js</td>
+        <td>Completitud de archivos</td>
+        <td><span class="badge-success">✔ PASS (3.7 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC02</strong></td>
+        <td>Estructura semántica HTML5 (header, nav, main, section, article, figure, footer)</td>
+        <td>Estándar W3C / Semántica</td>
+        <td><span class="badge-success">✔ PASS (2.2 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC03</strong></td>
+        <td>Lista ordenada &lt;ol&gt; con enlaces internos a cada tema (#tema-X)</td>
+        <td>Requisito Guía 6</td>
+        <td><span class="badge-success">✔ PASS (1.8 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC04</strong></td>
+        <td>Cada tema contiene título h2/h3, imagen/svg y párrafo descriptivo</td>
+        <td>Requisito Guía 6</td>
+        <td><span class="badge-success">✔ PASS (14.3 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC05</strong></td>
+        <td>Contenido teórico alineado a CF16 (Fitts, 8dp, cromatismo, ISO 13407)</td>
+        <td>Apropiación Conceptual</td>
+        <td><span class="badge-success">✔ PASS (2.6 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC06</strong></td>
+        <td>Estilos CSS3 con variables :root, retícula de 8dp y media queries</td>
+        <td>Estilos CSS Modernos</td>
+        <td><span class="badge-success">✔ PASS (1.2 ms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>TC07</strong></td>
+        <td>Interactividad JS (filtro de búsqueda, tema oscuro, scroll progress)</td>
+        <td>Comportamiento Dinámico</td>
+        <td><span class="badge-success">✔ PASS (1.1 ms)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 3: LISTA DE CHEQUEO Y CONCLUSIONES -->
+  <h1>5. Lista de Chequeo de Evaluación (IE-GA6-220501096-AA4-EV01)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ítem</th>
+        <th>Criterio de Evaluación del SENA</th>
+        <th>Cumplimiento en la Evidencia</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>¿El tutorial cuenta con un título claro y representativo?</td>
+        <td>Sí. Título semántico <code>&lt;h1&gt;</code> con autoría institucional en el encabezado.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>¿Emplea una lista ordenada (&lt;ol&gt;) para indicar los conceptos?</td>
+        <td>Sí. Implementada en la barra de navegación con numeración y estilos personalizados.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>¿La lista contiene enlaces que dirigen a los temas respectivos?</td>
+        <td>Sí. Cada enlace <code>&lt;a href="#tema-X"&gt;</code> ejecuta scroll suave al tema.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>¿Cada tema cuenta con título, imagen descriptiva y contenido?</td>
+        <td>Sí. 6 temas con etiquetas <code>&lt;article&gt;</code>, títulos, figuras SVG y explicaciones.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>¿Aplica estilos CSS para la presentación visual de la página?</td>
+        <td>Sí. Hoja <code>styles.css</code> completa con Flexbox, Grid, Modo Oscuro y sombras.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>¿Aplica los conceptos vistos en el componente formativo (CF16)?</td>
+        <td>Sí. Retícula 8dp, Ley de Fitts, colores reservados/señaléticos y norma ISO 13407.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>¿La evidencia se entrega en archivo comprimido formato ZIP?</td>
+        <td>Sí. Paquete <code>GA6-220501096-AA4-EV01.zip</code> generado y verificado.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>6. Conclusiones</h1>
+  <p>
+    1. La implementación de una estructura semántica en HTML5 no solo optimiza la accesibilidad y el posicionamiento web, 
+    sino que establece una base limpia para la aplicación de estilos y mantenimiento del código a largo plazo.
+  </p>
+  <p>
+    2. La adopción de la retícula de 8dp y el respeto a la Ley de Fitts garantizan que las interfaces móviles sean ergonómicas, 
+    reduciendo errores de digitación por parte de los usuarios al interactuar con botones y campos de entrada.
+  </p>
+  <p>
+    3. La metodología TDD (Desarrollo Guiado por Pruebas) demostró ser una práctica altamente eficaz para verificar de manera 
+    objetiva e inmediata que cada requerimiento pedagógico y técnico exigido por el SENA se cumpla en su totalidad.
+  </p>
+
+  <h1>7. Referencias Bibliográficas</h1>
+  <ul>
+    <li>Servicio Nacional de Aprendizaje (SENA). (2024). <em>Componente Formativo CF16: Herramientas para el diseño y desarrollo móvil híbrido</em>. Dirección General, Bogotá.</li>
+    <li>MDN Web Docs. (2026). <em>HTML: Lenguaje de marcado de hipertexto y elementos semánticos</em>. Mozilla Corporation.</li>
+    <li>International Organization for Standardization. (1999). <em>ISO 13407: Human-centred design processes for interactive systems</em>. Geneva: ISO.</li>
+    <li>Fitts, P. M. (1954). <em>The information capacity of the human motor system in controlling the amplitude of movement</em>. Journal of Experimental Psychology.</li>
+  </ul>
+
+</body>
+</html>

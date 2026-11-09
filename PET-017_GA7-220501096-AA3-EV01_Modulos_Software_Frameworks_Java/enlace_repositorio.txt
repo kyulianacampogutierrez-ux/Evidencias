@@ -1,0 +1,42 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE (SENA)
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+PROGRAMA: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 228118
+APRENDIZ: KAREN YULIANA CAMPO
+================================================================================
+
+EVIDENCIA DE APRENDIZAJE:
+GA7-220501096-AA3-EV01: Codificación de módulos del software stand-alone, web y móvil.
+
+MÓDULO DESARROLLADO:
+API REST y Persistencia Relacional con Spring Boot, Spring Data JPA, Hibernate
+y base de datos MariaDB para la Pizzería Bella Italia.
+
+ENLACES DEL REPOSITORIO:
+- Repositorio Oficial GitHub: https://github.com/karen-campo-adso/pizzeria-bella-italia-backend
+- Rama Principal: main
+- Subdirectorio del Proyecto: /PizzeriaSpringBoot
+- Archivo Comprimido Normativo: KARENCAMPO_AA3_EV01.zip
+
+TECNOLOGÍAS IMPLEMENTADAS:
+- Java 17 (Eclipse Temurin JDK)
+- Framework Spring Boot 3.2.5
+- Spring Data JPA + Hibernate ORM
+- Jakarta Bean Validation (@NotBlank, @Min, @Pattern, @Size)
+- Base de Datos Relacional: MariaDB 10.5 contenerizada en Docker
+- Pruebas Unitarias: JUnit 5 + Mockito + Spring Boot Test
+- Arquitectura en Capas: Controller (REST) -> Service -> Repository -> Entity
+
+COMANDOS DE EJECUCIÓN CON DOCKER:
+1. Iniciar la base de datos MariaDB:
+   docker-compose up -d db
+
+2. Compilar y empaquetar el JAR:
+   mvn clean package
+
+3. Ejecutar la aplicación Spring Boot en Docker:
+   docker run --rm -p 8082:8082 --network sena_network \
+     -e DB_HOST=db -e DB_PORT=3306 -e DB_NAME=pizzeria -e DB_USER=karen -e DB_PASS=choco \
+     -v $(pwd)/PizzeriaSpringBoot/target:/app \
+     eclipse-temurin:17-jre-alpine java -jar /app/pizzeria-spring-boot-1.0.0.jar
+================================================================================

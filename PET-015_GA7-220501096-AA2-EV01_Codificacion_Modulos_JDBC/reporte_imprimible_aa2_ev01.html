@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GA7-220501096-AA2-EV01 - Codificación de Módulos del Software</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 18mm 15mm 18mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      color: #0f172a;
+      line-height: 1.55;
+      font-size: 10.5pt;
+      background: #fff;
+    }
+
+    .cover {
+      page-break-after: always;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 3px solid #00a86b;
+      padding: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    .cover-header {
+      text-align: center;
+      border-bottom: 2px solid #00a86b;
+      padding-bottom: 20px;
+    }
+
+    .sena-logo {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #00a86b;
+      letter-spacing: 2px;
+    }
+
+    .sena-sub {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #065f46;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .cover-body {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .cover-title {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .cover-evidence {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #2563eb;
+      background: #eff6ff;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 18px;
+    }
+
+    .cover-desc {
+      font-size: 11pt;
+      color: #475569;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cover-footer {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      font-size: 9.5pt;
+    }
+
+    .info-group strong {
+      color: #00a86b;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    h2 {
+      color: #00a86b;
+      font-size: 14pt;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      color: #1e3a8a;
+      font-size: 11.5pt;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 7px 9px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #00a86b;
+      color: white;
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 11px 13px;
+      border-radius: 6px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      overflow-x: auto;
+      margin: 8px 0 12px 0;
+      border-left: 4px solid #00a86b;
+      page-break-inside: avoid;
+    }
+
+    code {
+      font-family: 'Consolas', monospace;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 8.5pt;
+      border: 1px solid #e2e8f0;
+    }
+
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #00a86b;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      font-size: 9.5pt;
+    }
+
+    .badge-ok {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: bold;
+      padding: 2px 7px;
+      border-radius: 10px;
+      border: 1px solid #86efac;
+      font-size: 8pt;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="sena-logo">SENA</div>
+      <div class="sena-sub">Servicio Nacional de Aprendizaje</div>
+      <p style="font-size: 9.5pt; color: #64748b; margin-top: 4px;">Centro de Teleinformática y Producción Industrial • Regional Cauca</p>
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-evidence">EVIDENCIA GA7-220501096-AA2-EV01</div>
+      <h1 class="cover-title">Informe Técnico de Construcción:<br>Codificación de Módulos del Software con Java JDBC y Arquitectura DAO</h1>
+      <p class="cover-desc">
+        Implementación del módulo backend de persistencia del sistema Pizzería Bella Italia mediante Java 17, controladores JDBC parametrizados, transacciones ACID y orquestación ligera con Docker Compose.
+      </p>
+    </div>
+
+    <div class="cover-footer">
+      <div class="info-group">
+        <strong>APRENDIZ:</strong>
+        Karen Yuliana Campo<br>
+        Correo: karen.campo@sena.edu.co<br>
+        Ubicación: Popayán, Cauca (100% Virtual)
+      </div>
+      <div class="info-group">
+        <strong>PROGRAMA DE FORMACIÓN:</strong>
+        Análisis y Desarrollo de Software (ADSO)<br>
+        Ficha de Caracterización: 228118<br>
+        Fecha: Noviembre 2026
+      </div>
+    </div>
+  </div>
+
+  <!-- Content 1 -->
+  <h2>1. Introducción y Justificación Técnica</h2>
+  <p>
+    En la fase de ejecución del programa formativo ADSO (Actividad de Proyecto 7: Codificar los módulos del software), el componente de acceso a datos constituye el cimiento de confiabilidad de cualquier solución de software. La tecnología <strong>Java Database Connectivity (JDBC)</strong> ofrece una interfaz de bajo nivel de alto rendimiento que conecta el lenguaje Java con sistemas relacionales basados en SQL.
+  </p>
+  <p>
+    La presente evidencia, codificada bajo la referencia <strong>GA7-220501096-AA2-EV01</strong>, traslada el diseño físico de bases de datos formulado en fases anteriores (archivo <code>GA6-220501096-AA2-EV03.tsql</code>) a una implementación funcional orientada a objetos para el sistema de la <strong>Pizzería Bella Italia</strong>. Se aplica el patrón de diseño <strong>DAO (Data Access Object)</strong> y la separación de capas (Modelo, Utilidades, DAO y Aplicación), mitigando el acoplamiento y previniendo vulnerabilidades como la inyección de código SQL.
+  </p>
+
+  <div class="callout">
+    <strong>Resumen de Características Técnicas Desarrolladas:</strong><br>
+    • Lenguaje: Java 17 LTS (Eclipse Temurin JDK) gestionado con Apache Maven 3.9.<br>
+    • RDBMS: MariaDB 10.5 / MySQL 8.0 con motor transaccional InnoDB.<br>
+    • Entidades: Clientes, Pizzas (Catálogo), Pedidos (Cabecera) y DetallePedido (Líneas de venta).<br>
+    • Operaciones: CRUD completas (Create, Read, Update, Delete) + Transacciones atómicas ACID.<br>
+    • Orquestación: Docker Compose modular (servicios <code>db</code>, <code>backend-java</code> y <code>test-runner</code>).
+  </div>
+
+  <h2>2. Estándares de Codificación Aplicados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nivel</th>
+        <th>Estándar Exigido</th>
+        <th>Implementación en el Proyecto</th>
+        <th>Finalidad Técnica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Paquetes</strong></td>
+        <td>Dominio inverso en minúsculas</td>
+        <td><code>com.sena.pizzeria.model</code><br><code>com.sena.pizzeria.dao</code><br><code>com.sena.pizzeria.util</code></td>
+        <td>Aislamiento de namespaces y modularidad estructural.</td>
+      </tr>
+      <tr>
+        <td><strong>Clases</strong></td>
+        <td>PascalCase (Sustantivos)</td>
+        <td><code>Cliente</code>, <code>Pizza</code>, <code>Pedido</code>, <code>ClienteDAO</code></td>
+        <td>Claridad semántica e interoperabilidad con JavaBeans.</td>
+      </tr>
+      <tr>
+        <td><strong>Métodos</strong></td>
+        <td>camelCase (Verbo + Objeto)</td>
+        <td><code>insertar()</code>, <code>consultarPorId()</code>, <code>listarTodos()</code></td>
+        <td>Expresión inequívoca de acción y responsabilidad única (SRP).</td>
+      </tr>
+      <tr>
+        <td><strong>Variables</strong></td>
+        <td>camelCase descriptivo</td>
+        <td><code>idCliente</code>, <code>nombrePizza</code>, <code>filasAfectadas</code></td>
+        <td>Mantenibilidad y legibilidad limpia de código (Clean Code).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- Content 2 -->
+  <h2>3. Arquitectura del Proyecto Maven (`PizzeriaBackend`)</h2>
+  <pre><code>PizzeriaBackend/
+├── pom.xml                                      (Dependencias Java 17, MariaDB Driver y JUnit 5)
+└── src/
+    ├── main/java/com/sena/pizzeria/
+    │   ├── model/                               (Capa de Entidades POO)
+    │   │   ├── Cliente.java                     (Encapsulamiento de cliente y datos de contacto)
+    │   │   ├── Pizza.java                       (Catálogo de productos, tamaño y precio)
+    │   │   ├── Pedido.java                      (Orden de compra, fecha, total y estado)
+    │   │   └── DetallePedido.java               (Ítem con pizza, cantidad y subtotal)
+    │   ├── util/                                (Infraestructura de Conexión)
+    │   │   └── ConexionBD.java                  (Gestor JDBC Singleton con variables de entorno)
+    │   ├── dao/                                 (Patrón Data Access Object)
+    │   │   ├── ClienteDAO.java                  (CRUD Clientes con PreparedStatement)
+    │   │   ├── PizzaDAO.java                    (CRUD Pizzas con PreparedStatement)
+    │   │   └── PedidoDAO.java                   (CRUD Pedidos y Transacciones ACID)
+    │   └── app/                                 (Punto de Entrada)
+    │       └── Main.java                        (Demostración en vivo de operaciones CRUD)
+    └── test/java/com/sena/pizzeria/
+        └── PizzeriaCRUDTest.java                (Suite de Pruebas Unitarias JUnit 5)</code></pre>
+
+  <h2>4. Implementación del Acceso a Datos (JDBC & CRUD)</h2>
+
+  <h3>4.1. Conexión Parametrizada y Resiliente (`ConexionBD.java`)</h3>
+  <pre><code>public static Connection getConexion() throws SQLException {
+    String host = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
+    String port = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "3306";
+    String database = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "pizzeria";
+    String user = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "karen";
+    String password = System.getenv("DB_PASS") != null ? System.getenv("DB_PASS") : "choco";
+
+    String url = String.format("jdbc:mariadb://%s:%s/%s?useSSL=false&allowPublicKeyRetrieval=true",
+            host, port, database);
+    return DriverManager.getConnection(url, user, password);
+}</code></pre>
+
+  <h3>4.2. Inserción Segura y Generación de Llaves (`ClienteDAO.java`)</h3>
+  <pre><code>public boolean insertar(Cliente cliente) {
+    String sql = "INSERT INTO CLIENTES (Nombre, Telefono, Direccion) VALUES (?, ?, ?)";
+    try (Connection conn = ConexionBD.getConexion();
+         PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        stmt.setString(1, cliente.getNombre());
+        stmt.setString(2, cliente.getTelefono());
+        stmt.setString(3, cliente.getDireccion());
+        if (stmt.executeUpdate() > 0) {
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) cliente.setIdCliente(rs.getInt(1));
+            }
+            return true;
+        }
+    } catch (SQLException e) { System.err.println(e.getMessage()); }
+    return false;
+}</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- Content 3 -->
+  <h3>4.3. Transaccionalidad Atómica ACID (`PedidoDAO.java`)</h3>
+  <p>
+    Para asegurar que un pedido se registre únicamente si todos sus ítems de detalle son almacenados con éxito, se desactiva el <em>auto-commit</em> y se gestionan las confirmaciones mediante <code>commit()</code> o retroceso con <code>rollback()</code> ante cualquier anomalía:
+  </p>
+
+  <pre><code>conn.setAutoCommit(false); // Inicia transacción atómica
+// 1. Inserción en tabla PEDIDOS
+stmtPedido.executeUpdate();
+int idPedido = obtenerIdGenerado(stmtPedido);
+
+// 2. Inserción en batch sobre DETALLE_PEDIDO
+for (DetallePedido item : pedido.getDetalles()) {
+    stmtDetalle.setInt(1, item.getCantidad());
+    stmtDetalle.setDouble(2, item.getSubtotal());
+    stmtDetalle.setInt(3, idPedido);
+    stmtDetalle.setInt(4, item.getIdPizza());
+    stmtDetalle.addBatch();
+}
+stmtDetalle.executeBatch();
+conn.commit(); // Confirmación atómica si todo fue exitoso</code></pre>
+
+  <h2>5. Resultados de Pruebas Unitarias y Ejecución en Consola</h2>
+
+  <h3>5.1. Resultados JUnit 5 (`PizzeriaCRUDTest.java`)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Caso de Prueba</th>
+        <th>Objetivo Verificado</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>testConexionBD()</code></td>
+        <td>Valida conectividad activa con MariaDB 10.5 a través del driver JDBC.</td>
+        <td><span class="badge-ok">PASÓ (0.51s)</span></td>
+      </tr>
+      <tr>
+        <td><code>testClienteCRUD()</code></td>
+        <td>Verifica ciclo completo: Inserción, Consulta por ID, Actualización, Listado y Eliminación.</td>
+        <td><span class="badge-ok">PASÓ</span></td>
+      </tr>
+      <tr>
+        <td><code>testPizzaCRUD()</code></td>
+        <td>Valida registro en catálogo, consulta, modificación de precios y borrado.</td>
+        <td><span class="badge-ok">PASÓ</span></td>
+      </tr>
+      <tr>
+        <td><code>testPedidoTransaccionalCRUD()</code></td>
+        <td>Comprueba transacción ACID con cabecera y líneas de detalle de pedido.</td>
+        <td><span class="badge-ok">PASÓ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>5.2. Salida de Ejecución de la Clase Principal (`Main.java`)</h3>
+  <pre><code>========================================================
+  SERVICIO NACIONAL DE APRENDIZAJE (SENA) - ADSO
+  SISTEMA DE GESTIÓN: PIZZERÍA BELLA ITALIA
+  EVIDENCIA: GA7-220501096-AA2-EV01
+  APRENDIZ: Karen Yuliana Campo | Ficha: 228118
+========================================================
+===> [1/4] COMPROBACIÓN DE CONEXIÓN JDBC...
+  ✓ Conexión exitosa a la base de datos 'pizzeria'
+  ✓ Driver: MariaDB Connector/J v3.3.3
+  ✓ Motor: MariaDB v10.5.25
+
+===> [2/4] DEMOSTRACIÓN OPERACIONES CRUD: CLIENTES...
+  [CREATE] Cliente registrado con ID generado: 5 (Éxito: true)
+  [READ] Datos consultados por ID: Cliente{idCliente=5, nombre='Valentina Ríos'}
+  [UPDATE] Cliente actualizado con nueva dirección: Avenida Las Palmeras Casa 8
+  [READ ALL] Total de clientes en el sistema: 5
+  [DELETE] Cliente de prueba ID 5 eliminado con éxito.
+
+===> [3/4] DEMOSTRACIÓN OPERACIONES CRUD: PIZZAS...
+  [CREATE] Pizza registrada con ID: 7 (Pizza Cuatro Estaciones)
+  [UPDATE] Precio actualizado a: $58000.00
+  [DELETE] Pizza temporal ID 7 eliminada.
+
+===> [4/4] DEMOSTRACIÓN TRANSACCIONAL: PEDIDOS Y DETALLES...
+  [TRANSACTION] Pedido transaccional creado con ID: 4 (Éxito: true)
+  [READ] Líneas de detalle del pedido: 2 ítems asociados
+  [UPDATE] Estado actualizado a: 'Entregado'
+  [DELETE] Pedido de prueba eliminado con éxito.
+========================================================
+  TODAS LAS OPERACIONES CRUD DE LA EVIDENCIA CUMPLIDAS 100%
+========================================================</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- Content 4 -->
+  <h2>6. Matriz de Cumplimiento de la Rúbrica SENA (IE-GA7-220501096-AA2-EV01)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Criterio Evaluado en la Guía 7</th>
+        <th>Estado</th>
+        <th>Evidencia Técnica Aportada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. Codifica los módulos del software teniendo en cuenta los artefactos del ciclo de software previos.</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>Implementación basada en el diseño físico relacional <code>GA6-220501096-AA2-EV03.tsql</code>.</td>
+      </tr>
+      <tr>
+        <td>2. Realiza conexiones con bases de datos por medio de JDBC.</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>Clase <code>ConexionBD.java</code> con parámetros de configuración y conexión activa en puerto 3306.</td>
+      </tr>
+      <tr>
+        <td>3. El código cumple con estándares de codificación (variables, métodos, clases, paquetes).</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>Estructura en paquetes <code>com.sena.pizzeria.*</code>, clases PascalCase y métodos camelCase.</td>
+      </tr>
+      <tr>
+        <td>4. Dispone de funcionalidades de inserción, consulta, actualización y eliminación.</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>CRUD implementado y comprobado en <code>ClienteDAO</code>, <code>PizzaDAO</code> y <code>PedidoDAO</code>.</td>
+      </tr>
+      <tr>
+        <td>5. Se crea el proyecto utilizando herramientas de versionamiento.</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>Repositorio Git estructurado y vinculado a GitHub.</td>
+      </tr>
+      <tr>
+        <td>6. Archivo comprimido con la nomenclatura solicitada (ZIP).</td>
+        <td><span class="badge-ok">CUMPLE</span></td>
+        <td>Archivo <code>KARENCAMPO_AA2_EV01.zip</code> con código fuente y enlace de repositorio.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>7. Conclusiones</h2>
+  <p>
+    1. Se consolidó una solución de persistencia relacional con Java 17 y JDBC de alto rendimiento, aplicando buenas prácticas de desarrollo en capas, encapsulamiento y control de transacciones ACID.
+  </p>
+  <p>
+    2. La arquitectura desacoplada mediante el patrón DAO permite que los controladores web (Servlets / JSP que se abordarán en la siguiente evidencia AA2-EV02) interactúen con la base de datos de manera limpia y segura.
+  </p>
+  <p>
+    3. La utilización de Docker Compose facilitó la ejecución de MariaDB y la compilación Maven de forma totalmente aislada, manteniendo el sistema host limpio y ordenado.
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      width: 900px;
+      height: 550px;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<svg width="900" height="550" viewBox="0 0 900 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" rx="20" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title -->
+  <rect x="30" y="24" width="840" height="60" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="65" cy="54" r="18" fill="#00A86B"/>
+  <text x="65" y="60" font-family="'Segoe UI', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">📅</text>
+  <text x="98" y="49" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold" fill="#0F172A">Cronograma Ágil y Desglose de Sprints (EDT / WBS)</text>
+  <text x="98" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748B">Plan de trabajo modular para la codificación y despliegue de Pizzería Bella Italia</text>
+
+  <!-- 4 Sprints Columns -->
+  <!-- Sprint 1 -->
+  <g transform="translate(35, 105)">
+    <rect width="195" height="340" rx="14" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+    <rect width="195" height="48" rx="14" fill="#EFF6FF"/>
+    <rect y="36" width="195" height="12" fill="#EFF6FF"/>
+    <text x="97" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">SPRINT 1 (Semanas 1-2)</text>
+    <text x="97" y="42" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#3B82F6" text-anchor="middle">SETUP &amp; ARQUITECTURA</text>
+
+    <!-- Tasks -->
+    <g transform="translate(12, 65)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">1.1 Repositorio Git</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">GitHub, ramas, .gitignore</text>
+    </g>
+
+    <g transform="translate(12, 125)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">1.2 Estándares &amp; Linter</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">ESLint, Prettier, Clean Code</text>
+    </g>
+
+    <g transform="translate(12, 185)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">1.3 Base de Datos</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">DDL MariaDB y MongoDB</text>
+    </g>
+
+    <g transform="translate(12, 245)">
+      <rect width="171" height="75" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+      <text x="8" y="18" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#1E40AF">ENTREGABLE S1:</text>
+      <text x="8" y="34" font-family="'Segoe UI', sans-serif" font-size="10" fill="#1E3A8A">Repositorio configurado con pipeline inicial y esquemas de datos.</text>
+    </g>
+  </g>
+
+  <!-- Sprint 2 -->
+  <g transform="translate(250, 105)">
+    <rect width="195" height="340" rx="14" fill="#FFFFFF" stroke="#00A86B" stroke-width="2"/>
+    <rect width="195" height="48" rx="14" fill="#ECFDF5"/>
+    <rect y="36" width="195" height="12" fill="#ECFDF5"/>
+    <text x="97" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">SPRINT 2 (Semanas 3-4)</text>
+    <text x="97" y="42" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#059669" text-anchor="middle">AUTH &amp; ROLES (RBAC)</text>
+
+    <!-- Tasks -->
+    <g transform="translate(12, 65)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">2.1 Módulo Login</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Validación JWT y sesiones</text>
+    </g>
+
+    <g transform="translate(12, 125)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">2.2 RBAC Multi-Rol</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Cliente, Cocinero, Admin</text>
+    </g>
+
+    <g transform="translate(12, 185)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">2.3 Tests de Seguridad</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Unit tests de credenciales</text>
+    </g>
+
+    <g transform="translate(12, 245)">
+      <rect width="171" height="75" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="8" y="18" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#065F46">ENTREGABLE S2:</text>
+      <text x="8" y="34" font-family="'Segoe UI', sans-serif" font-size="10" fill="#047857">Sistema de autenticación y control de accesos verificado.</text>
+    </g>
+  </g>
+
+  <!-- Sprint 3 -->
+  <g transform="translate(465, 105)">
+    <rect width="195" height="340" rx="14" fill="#FFFFFF" stroke="#EA580C" stroke-width="2"/>
+    <rect width="195" height="48" rx="14" fill="#FFF7ED"/>
+    <rect y="36" width="195" height="12" fill="#FFF7ED"/>
+    <text x="97" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#9A3412" text-anchor="middle">SPRINT 3 (Semanas 5-6)</text>
+    <text x="97" y="42" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#C2410C" text-anchor="middle">CATÁLOGO &amp; PEDIDOS</text>
+
+    <!-- Tasks -->
+    <g transform="translate(12, 65)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">3.1 Catálogo Pizzas</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Filtros, precios y toppings</text>
+    </g>
+
+    <g transform="translate(12, 125)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">3.2 Carrito Reactivo</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Regla envío gratis ($80k)</text>
+    </g>
+
+    <g transform="translate(12, 185)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">3.3 Checkout</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Validación de dirección</text>
+    </g>
+
+    <g transform="translate(12, 245)">
+      <rect width="171" height="75" rx="8" fill="#FFF7ED" stroke="#FED7AA"/>
+      <text x="8" y="18" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#9A3412">ENTREGABLE S3:</text>
+      <text x="8" y="34" font-family="'Segoe UI', sans-serif" font-size="10" fill="#B45309">Flujo completo de compra y generación de órdenes con TDD.</text>
+    </g>
+  </g>
+
+  <!-- Sprint 4 -->
+  <g transform="translate(680, 105)">
+    <rect width="195" height="340" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+    <rect width="195" height="48" rx="14" fill="#FAF5FF"/>
+    <rect y="36" width="195" height="12" fill="#FAF5FF"/>
+    <text x="97" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#5B21B6" text-anchor="middle">SPRINT 4 (Semanas 7-8)</text>
+    <text x="97" y="42" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#7C3AED" text-anchor="middle">KANBAN &amp; DESPLIEGUE</text>
+
+    <!-- Tasks -->
+    <g transform="translate(12, 65)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">4.1 Tablero Cocina</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Estados en tiempo real</text>
+    </g>
+
+    <g transform="translate(12, 125)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">4.2 Pruebas E2E</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Validación de regresión</text>
+    </g>
+
+    <g transform="translate(12, 185)">
+      <rect width="171" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="8" y="20" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">4.3 Despliegue Cloud</text>
+      <text x="8" y="38" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B">Hosting y base de datos</text>
+    </g>
+
+    <g transform="translate(12, 245)">
+      <rect width="171" height="75" rx="8" fill="#FAF5FF" stroke="#E9D5FF"/>
+      <text x="8" y="18" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#5B21B6">ENTREGABLE S4:</text>
+      <text x="8" y="34" font-family="'Segoe UI', sans-serif" font-size="10" fill="#6D28D9">Release v1.0.0 en producción y manual de usuario.</text>
+    </g>
+  </g>
+
+  <!-- Progress bar -->
+  <g transform="translate(35, 465)">
+    <rect width="840" height="60" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#0F172A">HITO FINAL DE LA GUÍA 7: APLICACIÓN WEB OPERATIVA CON CI/CD Y GITHUB</text>
+    <rect x="25" y="36" width="790" height="12" rx="6" fill="#E2E8F0"/>
+    <rect x="25" y="36" width="600" height="12" rx="6" fill="#00A86B"/>
+    <text x="735" y="46" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#047857">75% Planificado</text>
+  </g>
+</svg>
+
+</body>
+</html>

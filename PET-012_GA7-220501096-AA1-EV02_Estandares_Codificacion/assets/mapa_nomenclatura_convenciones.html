@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      width: 900px;
+      height: 550px;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<svg width="900" height="550" viewBox="0 0 900 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" rx="20" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title -->
+  <rect x="30" y="25" width="840" height="75" rx="14" fill="#0F172A"/>
+  <rect x="45" y="40" width="8" height="45" rx="4" fill="#00A86B"/>
+  <text x="68" y="55" fill="#00A86B" font-size="12" font-weight="bold" letter-spacing="2">ESTÁNDARES DE CODIFICACIÓN • SENA ADSO FICHA 228118</text>
+  <text x="68" y="82" fill="#FFFFFF" font-size="20" font-weight="900">TAXONOMÍA DE NOMENCLATURA &amp; CONVENCIONES TÉCNICAS</text>
+
+  <!-- 4 Taxonomy Cards Grid -->
+  <!-- Card 1: camelCase -->
+  <g transform="translate(30, 115)">
+    <rect width="405" height="185" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="130" height="28" rx="7" fill="#EFF6FF"/>
+    <text x="25" y="34" fill="#2563EB" font-size="13" font-weight="800">camelCase</text>
+    <text x="160" y="34" fill="#64748B" font-size="12" font-weight="bold">Variables, Funciones &amp; Métodos</text>
+    
+    <text x="15" y="65" fill="#334155" font-size="12" font-weight="600">Regla: Primera letra minúscula, palabras unidas con mayúscula inicial.</text>
+    
+    <!-- Code Box -->
+    <rect x="15" y="80" width="375" height="90" rx="8" fill="#0F172A"/>
+    <text x="25" y="105" fill="#38BDF8" font-family="monospace" font-size="11.5">// Variables y funciones de negocio</text>
+    <text x="25" y="125" fill="#F8FAFC" font-family="monospace" font-size="12">let <tspan fill="#F59E0B">precioTotalPedido</tspan> = 45000;</text>
+    <text x="25" y="145" fill="#A855F7" font-family="monospace" font-size="12">function <tspan fill="#34D399">calcularSubtotalConIva</tspan>(items) { ... }</text>
+    <text x="25" y="162" fill="#F8FAFC" font-family="monospace" font-size="11.5">const <tspan fill="#60A5FA">estaActivoDomicilio</tspan> = true;</text>
+  </g>
+
+  <!-- Card 2: PascalCase -->
+  <g transform="translate(465, 115)">
+    <rect width="405" height="185" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="130" height="28" rx="7" fill="#F0FDF4"/>
+    <text x="25" y="34" fill="#00A86B" font-size="13" font-weight="800">PascalCase</text>
+    <text x="160" y="34" fill="#64748B" font-size="12" font-weight="bold">Clases, Componentes &amp; Tipos</text>
+    
+    <text x="15" y="65" fill="#334155" font-size="12" font-weight="600">Regla: Cada palabra inicia con mayúscula. Sustantivos singulares.</text>
+    
+    <!-- Code Box -->
+    <rect x="15" y="80" width="375" height="90" rx="8" fill="#0F172A"/>
+    <text x="25" y="105" fill="#38BDF8" font-family="monospace" font-size="11.5">// Clases de dominio y Componentes React</text>
+    <text x="25" y="125" fill="#A855F7" font-family="monospace" font-size="12">class <tspan fill="#F59E0B">OrdenPedidoService</tspan> { ... }</text>
+    <text x="25" y="145" fill="#A855F7" font-family="monospace" font-size="12">const <tspan fill="#34D399">CatalogoPizzasCard</tspan> = () => { ... };</text>
+    <text x="25" y="162" fill="#F8FAFC" font-family="monospace" font-size="11.5">interface <tspan fill="#60A5FA">IClienteAutenticado</tspan> { ... }</text>
+  </g>
+
+  <!-- Card 3: UPPER_SNAKE_CASE -->
+  <g transform="translate(30, 315)">
+    <rect width="405" height="150" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="165" height="28" rx="7" fill="#FEF3C7"/>
+    <text x="22" y="34" fill="#D97706" font-size="12.5" font-weight="800">UPPER_SNAKE_CASE</text>
+    <text x="190" y="34" fill="#64748B" font-size="12" font-weight="bold">Constantes &amp; Variables Env</text>
+    
+    <text x="15" y="65" fill="#334155" font-size="12" font-weight="600">Regla: Mayúsculas sostenidas separadas por guion bajo (_).</text>
+    
+    <!-- Code Box -->
+    <rect x="15" y="78" width="375" height="60" rx="8" fill="#0F172A"/>
+    <text x="25" y="100" fill="#F8FAFC" font-family="monospace" font-size="11.5">const <tspan fill="#FBBF24">MAX_PIZZAS_POR_ORDEN</tspan> = 12;</text>
+    <text x="25" y="122" fill="#F8FAFC" font-family="monospace" font-size="11.5">const <tspan fill="#FBBF24">TARIFAS_DOMICILIO_BASE</tspan> = 4000;</text>
+  </g>
+
+  <!-- Card 4: kebab-case -->
+  <g transform="translate(465, 315)">
+    <rect width="405" height="150" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="130" height="28" rx="7" fill="#F5F3FF"/>
+    <text x="25" y="34" fill="#7C3AED" font-size="13" font-weight="800">kebab-case</text>
+    <text x="160" y="34" fill="#64748B" font-size="12" font-weight="bold">Archivos, Módulos &amp; Endpoints</text>
+    
+    <text x="15" y="65" fill="#334155" font-size="12" font-weight="600">Regla: Minúsculas separadas por guiones medios (-). Cero espacios.</text>
+    
+    <!-- Code Box -->
+    <rect x="15" y="78" width="375" height="60" rx="8" fill="#0F172A"/>
+    <text x="25" y="100" fill="#A78BFA" font-family="monospace" font-size="11.5">archivo: <tspan fill="#F8FAFC">pedido-controller.test.js</tspan></text>
+    <text x="25" y="122" fill="#A78BFA" font-family="monospace" font-size="11.5">ruta REST: <tspan fill="#F8FAFC">/api/v1/ordenes-domicilio</tspan></text>
+  </g>
+
+  <!-- Bottom Banner -->
+  <rect x="30" y="480" width="840" height="48" rx="10" fill="#00A86B"/>
+  <text x="50" y="510" fill="#FFFFFF" font-size="13" font-weight="bold">✨ REGLA DE ORO DE CLEAN CODE:</text>
+  <text x="310" y="510" fill="#F8FAFC" font-size="13" font-weight="500">"El código debe leerse como prosa fluida en inglés técnico o español de dominio claro."</text>
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+================================================================================
+SERVICIO WEB REST: AUTENTICACIÓN Y REGISTRO DE USUARIOS (CASO DE ESTUDIO)
+EVIDENCIA: GA7-220501096-AA5-EV02 - API (TESTING CON POSTMAN)
+APRENDIZ: Karen Yuliana Campo | FICHA: 228118 | ADSO CTPI POPAYÁN (REGIONAL CAUCA)
+================================================================================
+
+SERVIDOR BASE:
+- URL Base Local: http://localhost:8083
+- Formato de Datos: JSON (application/json)
+- Mecanismo de Seguridad: Bearer JWT Token + Hash Criptográfico Scrypt/BCrypt con Salt aleatoria
+
+--------------------------------------------------------------------------------
+CATÁLOGO DE ENDPOINTS:
+--------------------------------------------------------------------------------
+
+1. REGISTRO DE USUARIO:
+   - Método: POST
+   - Endpoint: /api/auth/register
+   - Descripción: Registra un nuevo usuario con hashing criptográfico y sal aleatoria.
+   - Headers: 
+       Content-Type: application/json
+   - Request Body (JSON):
+       {
+         "usuario": "nuevo_usuario",
+         "email": "nuevo.usuario@sena.edu.co",
+         "nombre": "Nombre Apellido",
+         "password": "Password123*",
+         "rol": "OPERADOR"
+       }
+   - Códigos de Respuesta HTTP:
+       201 Created: Usuario registrado exitosamente.
+       400 Bad Request: Parámetros incompletos o inválidos.
+       409 Conflict: El nombre de usuario o email ya se encuentra registrado.
+
+2. INICIO DE SESIÓN (LOGIN):
+   - Método: POST
+   - Endpoint: /api/auth/login
+   - Descripción: Autentica credenciales y genera un token JWT firmado criptográficamente.
+   - Headers:
+       Content-Type: application/json
+   - Request Body (JSON):
+       {
+         "usuario": "karencampo",
+         "password": "Password123*"
+       }
+   - Códigos de Respuesta HTTP:
+       200 OK: "Autenticación satisfactoria" (Retorna token JWT y datos de sesión).
+       400 Bad Request: Usuario y contraseña son obligatorios.
+       401 Unauthorized: "Error en la autenticación: Credenciales inválidas".
+
+3. CONSULTA DE PERFIL PROTEGIDO:
+   - Método: GET
+   - Endpoint: /api/auth/profile
+   - Descripción: Obtiene la información del perfil del usuario mediante token Bearer.
+   - Headers:
+       Authorization: Bearer <TOKEN_JWT>
+       Content-Type: application/json
+   - Códigos de Respuesta HTTP:
+       200 OK: Perfil obtenido exitosamente.
+       401 Unauthorized: Token de autenticación no suministrado o inválido/expirado.
+
+4. HEALTHCHECK / ESTADO DEL SERVICIO:
+   - Método: GET
+   - Endpoint: /api/auth/status
+   - Descripción: Monitoreo del estado de operatividad del microservicio de autenticación.
+   - Códigos de Respuesta HTTP:
+       200 OK: Servicio operativo con fecha/hora y uptime.
+
+================================================================================
+FIN DEL ARCHIVO ENDPOINT.txt
+================================================================================

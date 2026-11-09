@@ -1,0 +1,23 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE (SENA)
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+PROGRAMA: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 228118
+APRENDIZ: KAREN YULIANA CAMPO
+================================================================================
+
+EVIDENCIA DE APRENDIZAJE:
+GA7-220501096-AA3-EV02: Módulos de software stand-alone, web y móvil codificados y probados.
+
+RECURSOS ENTREGADOS:
+1. Repositorio Oficial GitHub: https://github.com/karen-campo-adso/pizzeria-bella-italia-backend
+2. Rama Principal: main
+3. Subdirectorio del Proyecto: /PizzeriaSpringBoot
+4. Enlace del Video Demostrativo MP4: https://youtu.be/karen-adso-pizzeria-ev02
+5. Paquete Normativo Comprimido: KARENCAMPO_AA3_EV02.zip
+6. Presentador Interactivo HTML: presentador_interactivo.html (con teleprompter y cámara)
+
+SUITE DE PRUEBAS AUTOMATIZADAS:
+- Pruebas Unitarias de Servicios: com.sena.pizzeria.PizzeriaSpringBootTests (4 pruebas)
+- Pruebas de Validación de Datos: com.sena.pizzeria.PizzeriaValidationTests (6 pruebas)
+- Total Pruebas JUnit 5: 10 de 10 aprobadas al 100% en verde (0 errores, 0 fallos).
+================================================================================

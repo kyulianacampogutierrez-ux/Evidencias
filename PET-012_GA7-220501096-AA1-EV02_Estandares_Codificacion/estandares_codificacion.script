@@ -1,0 +1,321 @@
+file.new {"intent":"web","width":1920,"height":1080,"pages":1}
+swatch.create {"name":"CanvasBg","color":"#F8FAFC"}
+swatch.create {"name":"CardWhite","color":"#FFFFFF"}
+swatch.create {"name":"BorderGray","color":"#CBD5E1"}
+swatch.create {"name":"DarkText","color":"#0F172A"}
+swatch.create {"name":"BodyText","color":"#334155"}
+swatch.create {"name":"SenaGreen","color":"#00A86B"}
+swatch.create {"name":"SenaLight","color":"#ECFDF5"}
+swatch.create {"name":"BluePrimary","color":"#2563EB"}
+swatch.create {"name":"BlueLight","color":"#EFF6FF"}
+swatch.create {"name":"PurplePrimary","color":"#7C3AED"}
+swatch.create {"name":"PurpleLight","color":"#FAF5FF"}
+swatch.create {"name":"AmberPrimary","color":"#D97706"}
+swatch.create {"name":"AmberLight","color":"#FEF3C7"}
+swatch.create {"name":"CodeBg","color":"#0F172A"}
+swatch.create {"name":"SolidRed","color":"#EF4444"}
+swatch.create {"name":"SolidOrange","color":"#F59E0B"}
+swatch.create {"name":"SolidGreen","color":"#10B981"}
+swatch.create {"name":"SolidBlue","color":"#3B82F6"}
+swatch.create {"name":"SolidPurple","color":"#8B5CF6"}
+frame.create {"rect":[0,0,1920,1080],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+frame.create {"rect":[50,35,1870,170],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":2}
+object.cornerOptions {"shape":"rounded","size":16}
+frame.create {"rect":[80,52,620,82],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaGreen"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[80,58,620,80],"content":"text","text":"GUÍA DE APRENDIZAJE 7 • FASE DE EJECUCIÓN (AP7)"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[80,92,1480,137],"content":"text","text":"Estándares de Codificación de Software • GA7-220501096-AA1-EV02"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":26,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,134,1480,159],"content":"text","text":"Nomenclatura Sintáctica • POO • Principios S.O.L.I.D. • Clean Architecture • Linters Automatizados"}
+object.color {"color":"#64748B","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"SemiBold"}}
+frame.create {"rect":[1540,52,1845,152],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.stroke {"swatch":"SenaGreen","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":12}
+frame.create {"rect":[1555,62,1830,84],"content":"text","text":"APRENDIZ SENA"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1555,84,1830,108],"content":"text","text":"Karen Yuliana Campo"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1555,110,1830,144],"content":"text","text":"Ficha 228118 • ADSO Virtual\nPopayán, Cauca • Pizzería Bella Italia"}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":11.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[50,190,920,430],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":14}
+frame.create {"rect":[75,208,335,236],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[85,213,325,233],"content":"text","text":"1. TAXONOMÍA DE NOMENCLATURA"}
+object.color {"color":"#2563EB","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[75,248,265,408],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[85,258,255,280],"content":"text","text":"camelCase"}
+object.color {"color":"#2563EB","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[85,282,255,397],"content":"text","text":"Variables & Funciones:\n• precioTotalPedido\n• calcularSubtotalIva()\n• estaActivoDomicilio\nRegla: Minúscula inicial, verbos en métodos."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[280,248,470,408],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[290,258,460,280],"content":"text","text":"PascalCase"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[290,282,460,397],"content":"text","text":"Clases & Componentes:\n• PedidoService\n• CatalogoPizzasCard\n• IClienteAutenticado\nRegla: Cada palabra inicia en mayúscula."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[485,248,690,408],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[495,258,680,280],"content":"text","text":"UPPER_SNAKE_CASE"}
+object.color {"color":"#D97706","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[495,282,680,397],"content":"text","text":"Constantes & Envs:\n• MAX_PIZZAS_ORDEN\n• TARIFA_DOMICILIO_BASE\n• UMBRAL_ENVIO_GRATIS\nRegla: Cero números mágicos en el código."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[705,248,900,408],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[715,258,890,280],"content":"text","text":"kebab-case"}
+object.color {"color":"#7C3AED","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[715,282,890,397],"content":"text","text":"Archivos & Endpoints:\n• pedido-service.js\n• /api/v1/ordenes-activas\n• .btn-primary-action\nRegla: Minúsculas y guiones, sin espacios."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[50,450,920,710],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":14}
+frame.create {"rect":[75,468,355,496],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[85,473,345,493],"content":"text","text":"2. PRINCIPIOS S.O.L.I.D. EN PIZZERÍA"}
+object.color {"color":"#7C3AED","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[75,508,230,693],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[85,518,117,550],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"SolidRed","weight":2}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[85,523,117,545],"content":"text","text":"S"}
+object.color {"color":"#EF4444","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[125,523,220,547],"content":"text","text":"Single Resp."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[85,560,220,680],"content":"text","text":"PedidoService solo lógica, FacturaPrinter solo PDFs."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[240,508,395,693],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[250,518,282,550],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"SolidOrange","weight":2}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[250,523,282,545],"content":"text","text":"O"}
+object.color {"color":"#F59E0B","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[290,523,385,547],"content":"text","text":"Open / Closed"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[250,560,385,680],"content":"text","text":"Strategy Pattern: cupones y descuentos sin tocar Core."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[405,508,560,693],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[415,518,447,550],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"SolidGreen","weight":2}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[415,523,447,545],"content":"text","text":"L"}
+object.color {"color":"#10B981","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[455,523,550,547],"content":"text","text":"Liskov Subst."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[415,560,550,680],"content":"text","text":"PizzaVegana y Gourmet son sustituibles sin fallos."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[570,508,725,693],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[580,518,612,550],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"SolidBlue","weight":2}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[580,523,612,545],"content":"text","text":"I"}
+object.color {"color":"#3B82F6","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[620,523,715,547],"content":"text","text":"Interface Seg."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[580,560,715,680],"content":"text","text":"Separar IPedidoCliente de IPedidoCocina."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[735,508,890,693],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[745,518,777,550],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"SolidPurple","weight":2}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[745,523,777,545],"content":"text","text":"D"}
+object.color {"color":"#8B5CF6","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[785,523,880,547],"content":"text","text":"Dep. Inversion"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[745,560,880,680],"content":"text","text":"Inyección de dependencias con IPedidoRepository."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[50,730,920,990],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":14}
+frame.create {"rect":[75,748,355,776],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[85,753,345,773],"content":"text","text":"3. REGLAS DE ORO DE CLEAN CODE"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[75,788,330,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[85,798,320,820],"content":"text","text":"Funciones < 20 Líneas"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[85,825,320,960],"content":"text","text":"• Un solo nivel de abstracción.\n• Hacen una sola cosa (Do One Thing).\n• Sin efectos secundarios ocultos.\n• Nombres de verbos auto-descriptivos."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[355,788,620,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[365,798,610,820],"content":"text","text":"Retorno Temprano (Guard)"}
+object.color {"color":"#2563EB","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[365,825,610,960],"content":"text","text":"• Validar precondiciones de entrada.\n• Salir de inmediato ante errores.\n• Evita pirámides de anidación if/else.\n• Código legible y predecible."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[645,788,900,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[655,798,890,820],"content":"text","text":"Principio Boy Scout"}
+object.color {"color":"#D97706","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[655,825,890,960],"content":"text","text":"• Deja el código más limpio de como lo encontraste.\n• Refactoriza con suite de pruebas TDD.\n• Cero variables muertas o imports huérfanos.\n• Comentarios solo donde el por qué no es obvio."}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[950,190,1870,710],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":14}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-012_GA7-220501096-AA1-EV02_Estandares_Codificacion/assets/radar_principios_solid.png","rect":[960,200,1860,700]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[950,730,1870,990],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+object.cornerOptions {"shape":"rounded","size":14}
+frame.create {"rect":[975,748,1315,776],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[985,753,1305,773],"content":"text","text":"4. PIPELINE AUTOMATIZADO DE CALIDAD"}
+object.color {"color":"#2563EB","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[975,788,1175,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[985,798,1013,826],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"DarkText"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[985,802,1013,822],"content":"text","text":"1"}
+object.color {"color":"#38BDF8","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1020,802,1165,824],"content":"text","text":"ESLint v9+"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[985,835,1165,960],"content":"text","text":"Reglas estrictas, prohíbe var, igualdad === y no-unused-vars."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[1190,788,1390,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[1200,798,1228,826],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"DarkText"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[1200,802,1228,822],"content":"text","text":"2"}
+object.color {"color":"#F472B6","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1235,802,1380,824],"content":"text","text":"Prettier v3"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1200,835,1380,960],"content":"text","text":"Tab de 2 espacios, comillas simples, punto y coma obligatorio."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[1405,788,1605,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[1415,798,1443,826],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"DarkText"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[1415,802,1443,822],"content":"text","text":"3"}
+object.color {"color":"#6366F1","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1450,802,1595,824],"content":"text","text":"Husky Pre-commit"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1415,835,1595,960],"content":"text","text":"Hook que intercepta git commit local y ejecuta lint-staged."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[1620,788,1820,973],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[1630,798,1658,826],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"DarkText"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[1630,802,1658,822],"content":"text","text":"4"}
+object.color {"color":"#10B981","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1665,802,1810,824],"content":"text","text":"TDD Test Runner"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1630,835,1810,960],"content":"text","text":"Ejecuta suite unitaria con node:test antes de confirmar el commit."}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI"}}
+frame.create {"rect":[50,1010,1870,1055],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.stroke {"swatch":"BorderGray","weight":1}
+object.cornerOptions {"shape":"rounded","size":10}
+frame.create {"rect":[80,1022,1180,1046],"content":"text","text":"SENA • Centro de Comercio y Servicios • Regional Cauca | ADSO Ficha 228118 • Rúbrica IE-GA7-220501096-AA1-EV02"}
+object.color {"color":"#64748B","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1250,1022,1850,1046],"content":"text","text":"Karen Yuliana Campo • Popayán, Cauca (100% Virtual)"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"right"}}

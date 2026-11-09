@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # ==========================================================
+  # SERVICIO 1: Base de Datos Relacional MariaDB (Pizzería)
+  # ==========================================================
+  db:
+    image: mariadb:10.5
+    container_name: sena-pizzeria-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: choco
+      MYSQL_DATABASE: pizzeria
+      MYSQL_USER: karen
+      MYSQL_PASSWORD: choco
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mariadb/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - pizzeria_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pchoco"]
+      interval: 4s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    networks:
+      - sena-net
+
+  # ==========================================================
+  # SERVICIO 2: Backend Java (JDK 17 + Maven + JDBC & Servlets)
+  # ==========================================================
+  backend-java:
+    image: maven:3.9.6-eclipse-temurin-17-alpine
+    container_name: sena-backend-java
+    working_dir: /app/PizzeriaBackend
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: pizzeria
+      DB_USER: karen
+      DB_PASS: choco
+    volumes:
+      - .:/app
+      - maven_m2_cache:/root/.m2
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sena-net
+    command: ["sh", "-c", "mvn clean test-compile && tail -f /dev/null"]
+
+  # ==========================================================
+  # SERVICIO 3: Ejecutor de Pruebas Automatizadas TDD
+  # ==========================================================
+  test-runner:
+    image: node:20-alpine
+    container_name: sena-test-runner
+    working_dir: /sena/CDE
+    environment:
+      SENA_ROOT: /sena
+      DB_HOST: db
+      DB_PORT: 3306
+    volumes:
+      - /home/danilo/Escritorio/Karen/SENA:/sena
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sena-net
+
+volumes:
+  pizzeria_db_data:
+    name: sena_pizzeria_db_data
+  maven_m2_cache:
+    name: sena_maven_m2_cache
+
+networks:
+  sena-net:
+    name: sena_network
+    driver: bridge

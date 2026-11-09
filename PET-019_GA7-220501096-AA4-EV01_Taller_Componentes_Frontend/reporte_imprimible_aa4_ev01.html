@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GA7-220501096-AA4-EV01 - Taller sobre Componentes Front-end</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 16mm 15mm 16mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      color: #0f172a;
+      line-height: 1.55;
+      font-size: 10pt;
+      background: #fff;
+    }
+
+    .cover {
+      page-break-after: always;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 3px solid #00a86b;
+      padding: 40px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    .cover-header {
+      text-align: center;
+      border-bottom: 2px solid #00a86b;
+      padding-bottom: 18px;
+    }
+
+    .sena-logo {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #00a86b;
+      letter-spacing: 2px;
+    }
+
+    .sena-sub {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #065f46;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .cover-body {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .cover-title {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .cover-evidence {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #2563eb;
+      background: #eff6ff;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 16px;
+    }
+
+    .cover-desc {
+      font-size: 10.5pt;
+      color: #475569;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cover-footer {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      font-size: 9pt;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .cover-footer div p {
+      margin-bottom: 4px;
+    }
+
+    .cover-footer strong {
+      color: #0f172a;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    h2 {
+      font-size: 14pt;
+      color: #065f46;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      color: #0f172a;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .highlight-card {
+      background: #f8fafc;
+      border-left: 4px solid #00a86b;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 9.5pt;
+    }
+
+    .diagram-box {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 14px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 8.5pt;
+      white-space: pre;
+      margin: 12px 0;
+      line-height: 1.35;
+    }
+
+    pre code {
+      display: block;
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 8.5pt;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      margin: 8px 0;
+      line-height: 1.3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 8.8pt;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .badge-ok {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 8pt;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="sena-logo">SENA 🟢</div>
+      <div class="sena-sub">Servicio Nacional de Aprendizaje</div>
+      <div style="font-size: 9.5pt; color: #64748b; margin-top: 4px;">Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</div>
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-evidence">EVIDENCIA DE CONOCIMIENTO: GA7-220501096-AA4-EV01</div>
+      <h1 class="cover-title">Taller Técnico: Componentes Front-end con React y JSX</h1>
+      <p class="cover-desc">
+        Estudio conceptual y metodológico sobre los pilares del desarrollo frontend moderno con <strong>React-JS</strong>: análisis diferencial de <strong>JSX</strong> y transpilación con Babel, componentes de clase frente a funciones con <strong>Hooks</strong>, gestión de <strong>SyntheticEvents</strong> y mapa conceptual de arquitectura.
+      </p>
+    </div>
+
+    <div class="cover-footer">
+      <div>
+        <p><strong>Aprendiz:</strong> Karen Yuliana Campo</p>
+        <p><strong>Programa:</strong> Análisis y Desarrollo de Software (ADSO)</p>
+        <p><strong>Ficha de Caracterización:</strong> 228118</p>
+        <p><strong>Modalidad:</strong> 100% Virtual</p>
+      </div>
+      <div>
+        <p><strong>Fase Formativa:</strong> Ejecución (AP7)</p>
+        <p><strong>Actividad:</strong> GA7-220501096-AA4</p>
+        <p><strong>Ciudad / Sede:</strong> Popayán, Cauca</p>
+        <p><strong>Fecha de Entrega:</strong> Noviembre de 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: INTRODUCCIÓN Y OBJETIVOS -->
+  <h2>1. Introducción y Objetivos</h2>
+  <p>
+    En la ingeniería de software actual, el desarrollo de interfaces de usuario (Frontend) ha experimentado una evolución paradigmática: se abandonó la manipulación directa e imperativa del Document Object Model (DOM) mediante JavaScript puro o bibliotecas tradicionales, dando paso a arquitecturas declarativas basadas en componentes reutilizables y reactivos.
+  </p>
+  <p>
+    En este contexto, <strong>React</strong> —desarrollada originalmente por Meta (Facebook) y respaldada por una vasta comunidad global de código abierto— se ha consolidado como la tecnología dominante para la construcción de Single Page Applications (SPA), interfaces web dinámicas y aplicaciones móviles multiplataforma.
+  </p>
+
+  <div class="highlight-card">
+    <strong>🎯 Objetivos del Taller Formativo:</strong>
+    <ul style="margin-top: 4px; margin-bottom: 0;">
+      <li>Analizar las diferencias técnicas, conceptuales y de procesamiento entre la biblioteca React y la extensión sintáctica JSX.</li>
+      <li>Examinar el concepto de clases en React, su ciclo de vida y contrastarlo con la evolución hacia componentes funcionales impulsada por los Hooks.</li>
+      <li>Describir el funcionamiento del sistema de eventos en React, su sintaxis <code>camelCase</code>, la delegación de eventos y el objeto unificado <code>SyntheticEvent</code>.</li>
+      <li>Diseñar un mapa conceptual representativo de la arquitectura de React, explicando el funcionamiento del Virtual DOM y la reconciliación.</li>
+      <li>Sintetizar las características clave que posicionan a React como el framework líder en la industria de desarrollo de software.</li>
+    </ul>
+  </div>
+
+  <!-- SECCIÓN 2: DIFERENCIA ENTRE REACT Y JSX -->
+  <h2>2. Diferencia entre React y JSX</h2>
+  <p>
+    Uno de los errores más comunes al iniciar en el ecosistema es confundir <strong>React</strong> con <strong>JSX</strong>, considerándolos términos intercambiables. En realidad, corresponden a dos conceptos distintos y complementarios:
+  </p>
+
+  <div class="diagram-box">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       REACT (Biblioteca / Motor Núcleo)                     │
+│  - Algoritmo de Reconciliación (Fiber)                                      │
+│  - Gestión del Virtual DOM y ciclo de vida de componentes                   │
+│  - Métodos API: React.createElement(), useState(), useEffect()              │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       ▲ Transpilación (Babel / Vite / SWC)
+                                       │ transforma etiquetas en llamadas JS
+┌──────────────────────────────────────┴──────────────────────────────────────┐
+│                  JSX (JavaScript XML - Extensión Sintáctica)                │
+│  - Azúcar sintáctico (Syntactic Sugar) para escribir HTML dentro de JS      │
+│  - Declarativo, seguro contra XSS y validado en tiempo de compilación       │
+└─────────────────────────────────────────────────────────────────────────────┘
+  </div>
+
+  <p>
+    <strong>React</strong> es la biblioteca responsable de orquestar el árbol de componentes, evaluar mutaciones de estado y sincronizar eficientemente la memoria con la pantalla.
+  </p>
+  <p>
+    <strong>JSX (JavaScript XML)</strong> es una extensión de la sintaxis estándar de ECMAScript. Permite estructurar la interfaz de forma declarativa y visualmente intuitiva. <strong>JSX no es interpretado por el navegador</strong>: herramientas como <strong>Babel</strong> o <strong>SWC</strong> lo transforman en llamadas nativas a <code>React.createElement()</code>.
+  </p>
+
+  <h3>Demostración Técnica: Código JSX vs. Transpilación a JavaScript Puro</h3>
+  <pre><code>// 1. Código en JSX (escrito por el desarrollador en la Pizzería Bella Italia)
+const TarjetaPizza = ({ nombre, precio }) => (
+  &lt;div className="card-pizza"&gt;
+    &lt;h3&gt;{nombre}&lt;/h3&gt;
+    &lt;p&gt;${precio} COP&lt;/p&gt;
+    &lt;button onClick={() => pedir(nombre)}&gt;Ordenar&lt;/button&gt;
+  &lt;/div&gt;
+);
+
+// 2. Transpilación real generada por Babel (ejecutada en el navegador)
+const TarjetaPizza = ({ nombre, precio }) => {
+  return React.createElement(
+    "div",
+    { className: "card-pizza" },
+    React.createElement("h3", null, nombre),
+    React.createElement("p", null, "$" + precio + " COP"),
+    React.createElement("button", { onClick: () => pedir(nombre) }, "Ordenar")
+  );
+};</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 3: CLASES EN REACT Y HOOKS -->
+  <h2>3. ¿Qué son Clases en React y su Evolución con Hooks?</h2>
+  <p>
+    En las versiones clásicas de React (anteriores a React 16.8), las <strong>Clases</strong> eran el único mecanismo disponible para declarar componentes con estado interno (*state*) y acceso a los métodos del ciclo de vida. Se creaban heredando de la clase base <code>React.Component</code> e implementando obligatoriamente el método <code>render()</code>:
+  </p>
+
+  <pre><code>import React, { Component } from 'react';
+
+class ContadorPizzas extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { cantidad: 1 };
+    this.incrementar = this.incrementar.bind(this); // Enlace manual del 'this'
+  }
+
+  componentDidMount() {
+    console.log("Componente montado en el DOM real");
+  }
+
+  componentWillUnmount() {
+    console.log("Limpieza de recursos antes de desmontar");
+  }
+
+  incrementar() {
+    this.setState(prev => ({ cantidad: prev.cantidad + 1 }));
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Pizzas: {this.state.cantidad}&lt;/p&gt;
+        &lt;button onClick={this.incrementar}&gt;+ Añadir&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+
+  <h3>La Revolución de los Componentes Funcionales con Hooks (React 16.8+)</h3>
+  <p>
+    La introducción de los **Hooks** transformó por completo la industria. Al permitir que funciones simples manejen estado local mediante <code>useState</code> y efectos colaterales con <code>useEffect</code>, se eliminó la necesidad de clases, resolviendo los problemas históricos asociados al contexto léxico del <code>this</code> y reduciendo notablemente las líneas de código:
+  </p>
+
+  <pre><code>import React, { useState, useEffect } from 'react';
+
+const ContadorPizzasModerno = () => {
+  const [cantidad, setCantidad] = useState(1);
+
+  useEffect(() => {
+    console.log("Efecto montado / actualizado");
+    return () => console.log("Limpieza automática al desmontar");
+  }, [cantidad]);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Pizzas: {cantidad}&lt;/p&gt;
+      &lt;button onClick={() => setCantidad(c => c + 1)}&gt;+ Añadir&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};</code></pre>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Criterio</th>
+        <th style="width: 35%;">Componentes de Clase (`React.Component`)</th>
+        <th style="width: 40%;">Componentes Funcionales Modernos con Hooks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sintaxis</strong></td>
+        <td>Clases ES6 con herencia y método <code>render()</code>.</td>
+        <td>Funciones puras de JavaScript (arrow functions).</td>
+      </tr>
+      <tr>
+        <td><strong>Estado</strong></td>
+        <td><code>this.state</code> y <code>this.setState()</code>.</td>
+        <td>Hook <code>useState()</code> desestructurado.</td>
+      </tr>
+      <tr>
+        <td><strong>Ciclo de Vida</strong></td>
+        <td>Métodos dispersos (<code>componentDidMount</code>, <code>Update</code>, etc.).</td>
+        <td>Hook unificado y declarativo <code>useEffect()</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Manejo de `this`</strong></td>
+        <td>Requiere binding explícito en el constructor.</td>
+        <td>Ámbito léxico nativo sin problemas de <code>this</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Estado Actual</strong></td>
+        <td>Código legado / en mantenimiento.</td>
+        <td><strong>Estándar oficial y recomendado por React</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 4: PRINCIPALES EVENTOS Y SYNTHETICEVENT -->
+  <h2>4. Principales Eventos en React y Sistema SyntheticEvent</h2>
+  <p>
+    Para garantizar máxima portabilidad entre navegadores y optimizar el consumo de memoria, React no asocia directamente oyentes en cada nodo del DOM real. En su lugar, utiliza un sistema centralizado de delegación de eventos basado en el objeto <strong>`SyntheticEvent`</strong>.
+  </p>
+  <p>
+    <code>SyntheticEvent</code> es un contenedor que envuelve el evento nativo del navegador, proporcionando una interfaz idéntica en Chrome, Firefox, Safari o navegadores móviles de acuerdo con la norma W3C.
+  </p>
+
+  <div class="highlight-card">
+    <strong>Diferencias Clave frente a Eventos Nativos del DOM:</strong>
+    <ul style="margin-top: 4px; margin-bottom: 0;">
+      <li><strong>Nomenclatura camelCase:</strong> <code>onClick</code> en vez de <code>onclick</code>; <code>onSubmit</code> en vez de <code>onsubmit</code>.</li>
+      <li><strong>Paso de Funciones:</strong> Se pasa una referencia a la función <code>onClick={manejador}</code> y no una cadena de texto.</li>
+      <li><strong>Prevención de Comportamiento por Defecto:</strong> Se debe invocar obligatoriamente <code>e.preventDefault()</code>; retornar <code>false</code> no surte efecto.</li>
+    </ul>
+  </div>
+
+  <h3>Catálogo de Eventos Principales en React:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 18%;">Categoría</th>
+        <th style="width: 22%;">Evento React</th>
+        <th style="width: 30%;">Momento de Disparo</th>
+        <th style="width: 30%;">Aplicación en Pizzería Bella Italia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mouse (Ratón)</strong></td>
+        <td><code>onClick</code></td>
+        <td>Clic primario sobre un elemento.</td>
+        <td>Botón para seleccionar pizza o confirmar comanda.</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><code>onMouseEnter</code> / <code>Leave</code></td>
+        <td>Cursor entra o sale del área.</td>
+        <td>Efecto visual de elevación en la tarjeta de pizza.</td>
+      </tr>
+      <tr>
+        <td><strong>Formularios</strong></td>
+        <td><code>onChange</code></td>
+        <td>Cambio en el valor del input/select.</td>
+        <td>Componentes controlados para capturar teléfono y dirección.</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><code>onSubmit</code></td>
+        <td>Envío del formulario.</td>
+        <td>Validación previa al llamado de la API REST Spring Boot.</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><code>onFocus</code> / <code>onBlur</code></td>
+        <td>Elemento gana o pierde el foco.</td>
+        <td>Validar que el teléfono tenga 10 dígitos al salir del input.</td>
+      </tr>
+      <tr>
+        <td><strong>Teclado</strong></td>
+        <td><code>onKeyDown</code></td>
+        <td>Presión de una tecla.</td>
+        <td>Cerrar ventana modal con tecla <code>Escape</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Táctil (Mobile)</strong></td>
+        <td><code>onTouchStart</code> / <code>End</code></td>
+        <td>Interacción en pantallas táctiles.</td>
+        <td>Navegación gestual por el catálogo en smartphones.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Ejemplo: Componente Controlado con `onChange` y `onSubmit`:</h3>
+  <pre><code>const FormularioCliente = () => {
+  const [cliente, setCliente] = useState({ nombre: '', telefono: '' });
+
+  const handleChange = (e) => {
+    // e es un SyntheticEvent normalizado
+    setCliente({ ...cliente, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Evita recarga del navegador
+    console.log("Enviando cliente a la API Spring Boot:", cliente);
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input name="nombre" value={cliente.nombre} onChange={handleChange} required /&gt;
+      &lt;input name="telefono" value={cliente.telefono} onChange={handleChange} required /&gt;
+      &lt;button type="submit"&gt;Registrar Cliente&lt;/button&gt;
+    &lt;/form&gt;
+  );
+};</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 5: MAPA CONCEPTUAL -->
+  <h2>5. Mapa Conceptual de la Arquitectura de React</h2>
+  <p>
+    La siguiente estructura conceptual representa de forma sinóptica las interrelaciones fundamentales del ecosistema React:
+  </p>
+
+  <div class="diagram-box">
+                               ┌─────────────────────────────────┐
+                               │       REACT ECOSYSTEM (SPA)     │
+                               └────────────────┬────────────────┘
+                                                │
+         ┌──────────────────────────────────────┼──────────────────────────────────────┐
+         ▼                                      ▼                                      ▼
+┌──────────────────┐                  ┌──────────────────┐                   ┌──────────────────┐
+│  PARADIGMA BASE  │                  │ VIRTUAL DOM (VDOM│                   │ GESTIÓN DE DATOS │
+└────────┬─────────┘                  └────────┬─────────┘                   └────────┬─────────┘
+         │                                     │                                      │
+ ┌───────┴───────┐                    ┌────────┴────────┐                    ┌────────┴────────┐
+ │ - Declarativo │                    │ - Copia Ligera  │                    │ - Props: Inmut. │
+ │ - Componentes │                    │ - Reconciliación│                    │   (Padre a Hijo)│
+ │ - Sintaxis JSX│                    │   (Diffing)     │                    │ - State: Mutable│
+ │   (Babel)     │                    │ - Algoritmo     │                    │   (useState)    │
+ └───────────────┘                    │   React Fiber   │                    │ - Unidirectional│
+                                      │ - Batch Updates │                    │   Data Flow     │
+                                      └────────┬────────┘                    └─────────────────┘
+                                               │ Modifica de forma eficiente
+                                               ▼
+                                      ┌──────────────────┐
+                                      │  DOM REAL (HTML) │
+                                      │  (Navegador Web) │
+                                      └──────────────────┘
+                                               ▲
+                                               │ Dispara eventos
+                                      ┌────────┴────────┐
+                                      │  SyntheticEvent │
+                                      │ - onClick       │
+                                      │ - onChange      │
+                                      │ - onSubmit      │
+                                      └─────────────────┘
+  </div>
+
+  <h3>Pilares Arquitectónicos Explicados:</h3>
+  <ol>
+    <li><strong>Virtual DOM y Algoritmo de Reconciliación (Fiber):</strong> React conserva una copia virtual del árbol DOM en memoria. Ante cambios de estado, ejecuta un proceso de comparación (*Diffing*) y aplica exclusivamente las modificaciones necesarias al DOM real por lotes (*batching*), maximizando la fluidez de renderizado a 60 FPS.</li>
+    <li><strong>Flujo Unidireccional de Datos (*One-Way Data Flow*):</strong> Las propiedades (*Props*) viajan exclusivamente de arriba hacia abajo (de componentes padres a hijos), mientras que los eventos y funciones callbacks permiten notificar cambios hacia arriba, garantizando alta predictibilidad en el estado.</li>
+    <li><strong>Componentización Modular:</strong> Cada elemento de la pantalla es una función autónoma reutilizable que combina su lógica, marcado y estilos en una sola unidad.</li>
+  </ol>
+
+  <!-- SECCIÓN 6: MATRIZ DE CUMPLIMIENTO -->
+  <h2>6. Matriz de Cumplimiento de la Rúbrica SENA (IE-GA7-220501096-AA4-EV01)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 45%;">Criterio Evaluado en la Guía 7</th>
+        <th style="width: 15%; text-align: center;">Resultado</th>
+        <th style="width: 40%;">Evidencia Aportada en el Documento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. El documento sigue las normas de presentación (portada, introducción, objetivo).</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Informe estructurado formal de 8 páginas con normas SENA y portada institucional.</td>
+      </tr>
+      <tr>
+        <td>2. Presenta la diferencia conceptual y técnica entre React y JSX.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Sección 2: Rol de biblioteca vs sintaxis, Babel y comparación de código.</td>
+      </tr>
+      <tr>
+        <td>3. Explica qué son las clases en React, su ciclo de vida y contraste con Hooks.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Sección 3: <code>React.Component</code>, fases de ciclo de vida y migración a Hooks.</td>
+      </tr>
+      <tr>
+        <td>4. Detalla los principales eventos de React y el sistema <code>SyntheticEvent</code>.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Sección 4: Catálogo de eventos, camelCase y ejemplos de inputs controlados.</td>
+      </tr>
+      <tr>
+        <td>5. Incluye un mapa conceptual completo y representativo de React.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Sección 5: Diagrama arquitectónico del Virtual DOM, Fiber, Props y State.</td>
+      </tr>
+      <tr>
+        <td>6. Describe las principales características del framework/biblioteca.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Sección 5 y 6: Component-based, declarativo, reconciliación y ecosistema.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 7: CONCLUSIONES -->
+  <h2>7. Conclusiones</h2>
+  <ol>
+    <li>React y JSX forman un ecosistema simbiótico donde la biblioteca aporta la reactividad y reconciliación eficiente del Virtual DOM, mientras que JSX otorga una sintaxis declarativa intuitiva que compila a JavaScript puro.</li>
+    <li>La adopción masiva de Componentes Funcionales con Hooks reemplazó con éxito a las clases de React, eliminando el boilerplate y las complejidades del contexto léxico del <code>this</code>.</li>
+    <li>El sistema de eventos sintéticos <code>SyntheticEvent</code> unifica el comportamiento de eventos en todos los navegadores web modernos, facilitando la construcción de aplicaciones robustas como el frontend de la Pizzería Bella Italia.</li>
+  </ol>
+
+  <div style="margin-top: 35px; border-top: 1px solid #cbd5e1; padding-top: 15px; text-align: center; font-size: 8.5pt; color: #64748b;">
+    <strong>SENA - Servicio Nacional de Aprendizaje</strong> | Regional Cauca - Popayán | Ficha 228118 ADSO<br>
+    Aprendiz: Karen Yuliana Campo | Documento de Entrega Oficial para Plataforma Zajuna
+  </div>
+
+</body>
+</html>

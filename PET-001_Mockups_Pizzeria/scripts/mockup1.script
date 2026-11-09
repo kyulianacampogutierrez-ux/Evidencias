@@ -1,0 +1,51 @@
+﻿file.new {"preset": "Web 1366 × 768"}
+swatch.create {"name": "BgCanvas", "color": "#0F172A"}
+swatch.create {"name": "HeaderBg", "color": "#1E293B"}
+swatch.create {"name": "CardBg", "color": "#FFFFFF"}
+swatch.create {"name": "PizzaRed", "color": "#E11D48"}
+swatch.create {"name": "PizzaGold", "color": "#D97706"}
+swatch.create {"name": "InputGray", "color": "#F1F5F9"}
+swatch.create {"name": "BorderGray", "color": "#CBD5E1"}
+swatch.create {"name": "TextDark", "color": "#0F172A"}
+swatch.create {"name": "TextMuted", "color": "#64748B"}
+
+frame.create {"rect": [0, 0, 1366, 768], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "BgCanvas"}
+
+frame.create {"rect": [0, 0, 1366, 64], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "HeaderBg"}
+
+frame.create {"rect": [40, 18, 800, 50], "content": "text", "text": "PIZZERIA BELLA ITALIA  |  MOCKUP 01: AUTENTICACION DE USUARIOS"}
+
+frame.create {"rect": [448, 120, 918, 660], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "CardBg"}
+
+frame.create {"rect": [448, 120, 918, 130], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+
+frame.create {"rect": [488, 160, 878, 205], "content": "text", "text": "INICIAR SESION"}
+
+frame.create {"rect": [488, 215, 878, 245], "content": "text", "text": "Acceso al Sistema de Gestion de Pedidos"}
+
+frame.create {"rect": [488, 265, 878, 285], "content": "text", "text": "Usuario / Correo:"}
+
+frame.create {"rect": [488, 290, 878, 335], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "InputGray"}
+
+frame.create {"rect": [500, 302, 866, 328], "content": "text", "text": "admin@pizzeriabellaitalia.com"}
+
+frame.create {"rect": [488, 360, 878, 380], "content": "text", "text": "Contraseña:"}
+
+frame.create {"rect": [488, 385, 878, 430], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "InputGray"}
+
+frame.create {"rect": [500, 397, 866, 423], "content": "text", "text": "••••••••••••••••"}
+
+frame.create {"rect": [488, 465, 878, 515], "shape": "rectangle", "content": "graphic"}
+object.fill {"swatch": "PizzaRed"}
+
+frame.create {"rect": [488, 477, 878, 508], "content": "text", "text": "INGRESAR AL SISTEMA"}
+
+frame.create {"rect": [488, 545, 878, 575], "content": "text", "text": "¿Olvido su contraseña?  |  Soporte TI"}
+
+frame.create {"rect": [488, 600, 878, 635], "content": "text", "text": "Proyecto Formativo SENA ADSO - Karen Campo"}

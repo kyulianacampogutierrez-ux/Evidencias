@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      width: 900px;
+      height: 550px;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<svg width="900" height="550" viewBox="0 0 900 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" rx="20" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title -->
+  <rect x="30" y="24" width="840" height="60" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="65" cy="54" r="18" fill="#7C3AED"/>
+  <text x="65" y="60" font-family="'Segoe UI', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">⚙️</text>
+  <text x="98" y="49" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold" fill="#0F172A">Pipeline Automatizado de Integración Continua (CI/CD)</text>
+  <text x="98" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748B">Flujo de verificación continua implementado con GitHub Actions y TDD</text>
+
+  <!-- Pipeline Stages -->
+  <g transform="translate(40, 115)">
+    <!-- Stage 1: Developer Push -->
+    <g transform="translate(0, 0)">
+      <rect width="145" height="240" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+      <rect width="145" height="40" rx="14" fill="#F1F5F9"/>
+      <rect y="30" width="145" height="10" fill="#F1F5F9"/>
+      <text x="72" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">1. COMMIT &amp; PUSH</text>
+
+      <circle cx="72" cy="85" r="28" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+      <text x="72" y="93" font-family="'Segoe UI', sans-serif" font-size="24" text-anchor="middle">💻</text>
+
+      <text x="72" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">Git Local (VS Code)</text>
+      <text x="72" y="160" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Conventional Commits</text>
+      <text x="72" y="178" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">feat(pizzeria): add cart</text>
+
+      <rect x="15" y="195" width="115" height="28" rx="6" fill="#EFF6FF"/>
+      <text x="72" y="213" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#1E40AF" text-anchor="middle">Trigger: git push</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 155 120 H 175" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Stage 2: Static Analysis / Linting -->
+    <g transform="translate(180, 0)">
+      <rect width="145" height="240" rx="14" fill="#FFFFFF" stroke="#00A86B" stroke-width="2"/>
+      <rect width="145" height="40" rx="14" fill="#ECFDF5"/>
+      <rect y="30" width="145" height="10" fill="#ECFDF5"/>
+      <text x="72" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#065F46" text-anchor="middle">2. STATIC LINT</text>
+
+      <circle cx="72" cy="85" r="28" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="72" y="93" font-family="'Segoe UI', sans-serif" font-size="24" text-anchor="middle">🔍</text>
+
+      <text x="72" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">ESLint &amp; Prettier</text>
+      <text x="72" y="160" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Reglas de estilo JS</text>
+      <text x="72" y="178" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">HTML5 Semántico</text>
+
+      <rect x="15" y="195" width="115" height="28" rx="6" fill="#ECFDF5"/>
+      <text x="72" y="213" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#065F46" text-anchor="middle">Gate 1: 0 Errors</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 335 120 H 355" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Stage 3: Automated Testing -->
+    <g transform="translate(360, 0)">
+      <rect width="145" height="240" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+      <rect width="145" height="40" rx="14" fill="#EFF6FF"/>
+      <rect y="30" width="145" height="10" fill="#EFF6FF"/>
+      <text x="72" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">3. TDD TESTS</text>
+
+      <circle cx="72" cy="85" r="28" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+      <text x="72" y="93" font-family="'Segoe UI', sans-serif" font-size="24" text-anchor="middle">🧪</text>
+
+      <text x="72" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">Node.js Test Runner</text>
+      <text x="72" y="160" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Unit &amp; Integration</text>
+      <text x="72" y="178" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">72/72 Tests Pass</text>
+
+      <rect x="15" y="195" width="115" height="28" rx="6" fill="#EFF6FF"/>
+      <text x="72" y="213" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#1E40AF" text-anchor="middle">Gate 2: 100% Green</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M 515 120 H 535" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Stage 4: Security Audit & Build -->
+    <g transform="translate(540, 0)">
+      <rect width="145" height="240" rx="14" fill="#FFFFFF" stroke="#EA580C" stroke-width="2"/>
+      <rect width="145" height="40" rx="14" fill="#FFF7ED"/>
+      <rect y="30" width="145" height="10" fill="#FFF7ED"/>
+      <text x="72" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#9A3412" text-anchor="middle">4. BUILD &amp; AUDIT</text>
+
+      <circle cx="72" cy="85" r="28" fill="#FFF7ED" stroke="#F97316" stroke-width="2"/>
+      <text x="72" y="93" font-family="'Segoe UI', sans-serif" font-size="24" text-anchor="middle">🛡️</text>
+
+      <text x="72" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">pnpm audit &amp; build</text>
+      <text x="72" y="160" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Empaquetado estático</text>
+      <text x="72" y="178" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Zero vulnerabilidades</text>
+
+      <rect x="15" y="195" width="115" height="28" rx="6" fill="#FFF7ED"/>
+      <text x="72" y="213" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#C2410C" text-anchor="middle">Gate 3: Safe Build</text>
+    </g>
+
+    <!-- Arrow 4 -->
+    <path d="M 695 120 H 715" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Stage 5: Deploy / Release -->
+    <g transform="translate(720, 0)">
+      <rect width="140" height="240" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+      <rect width="140" height="40" rx="14" fill="#FAF5FF"/>
+      <rect y="30" width="140" height="10" fill="#FAF5FF"/>
+      <text x="70" y="26" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#5B21B6" text-anchor="middle">5. DEPLOY CLOUD</text>
+
+      <circle cx="70" cy="85" r="28" fill="#FAF5FF" stroke="#A855F7" stroke-width="2"/>
+      <text x="70" y="93" font-family="'Segoe UI', sans-serif" font-size="24" text-anchor="middle">🚀</text>
+
+      <text x="70" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">GitHub Pages / Vercel</text>
+      <text x="70" y="160" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Pizzería Bella Italia</text>
+      <text x="70" y="178" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748B" text-anchor="middle">SSL &amp; CDN Activo</text>
+
+      <rect x="12" y="195" width="115" height="28" rx="6" fill="#FAF5FF"/>
+      <text x="70" y="213" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#6D28D9" text-anchor="middle">Production Ready</text>
+    </g>
+  </g>
+
+  <!-- Bottom Quality Assurance Banner -->
+  <g transform="translate(40, 390)">
+    <rect width="820" height="120" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="30" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#0F172A">Beneficios de la Integración Continua en el Proyecto:</text>
+    
+    <g transform="translate(25, 45)">
+      <circle cx="10" cy="10" r="10" fill="#ECFDF5"/>
+      <text x="10" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#00A86B" font-weight="bold" text-anchor="middle">✓</text>
+      <text x="30" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#334155"><strong>Detección temprana de bugs:</strong> Los errores se detectan en minutos antes de fusionar a la rama develop.</text>
+    </g>
+
+    <g transform="translate(25, 70)">
+      <circle cx="10" cy="10" r="10" fill="#EFF6FF"/>
+      <text x="10" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#2563EB" font-weight="bold" text-anchor="middle">✓</text>
+      <text x="30" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#334155"><strong>Despliegue reproducible:</strong> Cero diferencias entre el entorno de desarrollo local y el entorno de producción.</text>
+    </g>
+
+    <g transform="translate(25, 95)">
+      <circle cx="10" cy="10" r="10" fill="#FAF5FF"/>
+      <text x="10" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#7C3AED" font-weight="bold" text-anchor="middle">✓</text>
+      <text x="30" y="14" font-family="'Segoe UI', sans-serif" font-size="11" fill="#334155"><strong>Confianza en el equipo:</strong> Los aprendices del SENA colaboran de forma segura sin riesgo de romper el código base.</text>
+    </g>
+  </g>
+</svg>
+
+</body>
+</html>

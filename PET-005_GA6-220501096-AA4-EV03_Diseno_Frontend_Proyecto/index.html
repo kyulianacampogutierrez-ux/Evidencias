@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzería Bella Italia - Sistema de Gestión y Ventas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ESTILOS EMBEBIDOS PARA COMPATIBILIDAD TOTAL (INCLUSO AL ABRIR DESDE WINDOWS ZIP) -->
+  <style>
+/* ==========================================================================
+   PIZZERÍA BELLA ITALIA - ESTILOS VISUALES Y USABILIDAD (CSS3)
+   Basado en principios SENA: Retícula 8dp/16dp, Ley de Fitts, Colores Señaléticos
+   Evidencia: GA6-220501096-AA3-EV03
+   Aprendiz: Karen Campo
+   ========================================================================== */
+
+:root {
+  /* Paleta Señalética y Reservada SENA */
+  --color-primary: #e11d48;       /* Rojo característico pizzería */
+  --color-primary-hover: #be123c;
+  --color-gold: #f59e0b;          /* Amarillo artesanal / prevención */
+  --color-gold-hover: #d97706;
+  --color-success: #10b981;       /* Verde confirmación / éxito */
+  --color-success-hover: #059669;
+  
+  /* Escala de Neutros y Contraste WCAG */
+  --bg-app: #0f172a;              /* Fondo oscuro elegante */
+  --bg-card: #ffffff;             /* Fondo de tarjetas para máxima legibilidad */
+  --bg-surface: #1e293b;          /* Superficie de navbar y paneles oscuros */
+  --bg-input: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-dark: #334155;
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #f8fafc;
+  --text-gold: #f59e0b;
+  
+  /* Sistema de Espaciado Modular (Múltiplos de 8dp) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  
+  /* Tipografía Sans-Serif Limpia */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Sombras y Elevaciones */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+
+  /* Radio de bordes */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESET Y BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  color: var(--text-light);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* 1. NAVBAR */
+.navbar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+
+.brand-icon {
+  font-size: 2rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-light);
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.nav-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.nav-btn:hover {
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.badge {
+  background-color: var(--color-gold);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.user-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.user-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.btn-logout {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-logout:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* GESTIÓN DE VISTAS (SPA) */
+.main-content {
+  flex: 1;
+  padding: var(--space-xl) 0;
+}
+
+.view {
+  display: none;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.view.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. VISTA LOGIN */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  min-height: calc(100vh - 150px);
+}
+
+.login-card {
+  background: var(--bg-card);
+  color: var(--text-main);
+  width: 100%;
+  max-width: 440px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-accent-bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+}
+
+.login-header {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
+}
+
+.pizza-logo-circle {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  border-radius: var(--radius-full);
+  background-color: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.login-header h2 {
+  font-size: 1.6rem;
+  color: var(--text-main);
+}
+
+.login-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.login-form {
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: #334155;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: var(--space-lg);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* BOTONES SEGÚN LEY DE FITTS (Área táctil mínima de 44px) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 12px var(--space-lg);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-lg {
+  font-size: 1.05rem;
+  padding: 14px var(--space-xl);
+  min-height: 52px;
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 6px var(--space-md);
+  font-size: 0.85rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: var(--color-success-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--border-dark);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quick-credentials {
+  margin-top: var(--space-lg);
+  padding: var(--space-sm);
+  background-color: #f1f5f9;
+  border-radius: var(--radius-sm);
+}
+
+.label-demo {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: var(--space-xs);
+}
+
+.demo-chips {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.chip {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.login-footer {
+  text-align: center;
+  padding: var(--space-md);
+  background-color: #f8fafc;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* 3. VISTA MENÚ */
+.menu-hero {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--color-gold);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+}
+
+.menu-hero h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+.menu-hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: var(--space-xs) auto 0;
+  font-size: 1rem;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-dark);
+}
+
+.category-filters {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-dark);
+  padding: 0 var(--space-md);
+  border-radius: var(--radius-md);
+  flex: 1;
+  max-width: 380px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  color: var(--text-light);
+}
+
+.search-box input:focus {
+  box-shadow: none;
+}
+
+/* GRILLA DE TARJETAS DE PIZZA */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.pizza-card {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pizza-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.card-visual-header {
+  height: 90px;
+  padding: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card-visual-header.gold { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.card-visual-header.red { background: linear-gradient(135deg, #e11d48, #be123c); }
+.card-visual-header.green { background: linear-gradient(135deg, #10b981, #059669); }
+.card-visual-header.blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+
+.pizza-category-tag {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.pizza-size-badge {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+}
+
+.pizza-card-body {
+  padding: var(--space-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-xs);
+  color: var(--text-main);
+}
+
+.pizza-description {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
+.pizza-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  gap: var(--space-md);
+}
+
+.pizza-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.price-value {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* 4. VISTA CARRITO Y CHECKOUT */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.panel-header {
+  padding: var(--space-md) var(--space-lg);
+  color: #ffffff;
+}
+
+.panel-header.header-gold { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.panel-header.header-red { background: linear-gradient(90deg, #e11d48, #be123c); }
+
+.panel-header h3 {
+  font-size: 1.15rem;
+}
+
+.panel-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.cart-items-list {
+  padding: var(--space-md) var(--space-lg);
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+  gap: var(--space-sm);
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.cart-item-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: #f1f5f9;
+  border-radius: var(--radius-sm);
+  padding: 2px;
+}
+
+.qty-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-number {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cart-item-subtotal {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  min-width: 80px;
+  text-align: right;
+}
+
+.btn-remove-item {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.btn-remove-item:hover {
+  color: var(--color-primary);
+}
+
+/* TOTALS BREAKDOWN */
+.totals-breakdown {
+  padding: var(--space-md) var(--space-lg);
+  background-color: #f8fafc;
+  border-top: 1px solid var(--border-color);
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.totals-row strong {
+  color: var(--text-main);
+}
+
+.free-shipping-bar {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px dashed #6ee7b7;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px var(--space-sm);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  margin: var(--space-sm) 0;
+}
+
+.totals-grand {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 2px dashed var(--border-color);
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.grand-total {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* CHECKOUT FORM */
+.checkout-form {
+  padding: var(--space-lg);
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  padding-left: 14px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payment-card:hover {
+  background-color: #f8fafc;
+  border-color: var(--color-primary);
+}
+
+.payment-card input[type="radio"]:checked + .payment-info {
+  color: var(--color-primary);
+}
+
+.payment-info strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.payment-info small {
+  color: var(--text-muted);
+}
+
+/* 5. VISTA DE HISTORIAL DE PEDIDOS Y PANEL DE ADMIN */
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.kpi-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.kpi-icon {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.kpi-value {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-light);
+}
+
+.kpi-revenue .kpi-value { color: var(--color-gold); }
+.kpi-prep .kpi-value { color: #f97316; }
+.kpi-shipping .kpi-value { color: #3b82f6; }
+.kpi-delivered .kpi-value { color: var(--color-success); }
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.order-history-card {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  border-left: 6px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.order-history-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.order-history-card.status-preparacion { border-left-color: #f97316; }
+.order-history-card.status-camino { border-left-color: #3b82f6; }
+.order-history-card.status-entregado { border-left-color: var(--color-success); }
+
+.order-badge-status {
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.order-badge-status.badge-preparacion {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.order-badge-status.badge-camino {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.order-badge-status.badge-entregado {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.order-admin-controls {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 240px;
+}
+
+.control-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 800;
+}
+
+.status-actions-btns {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.btn-status-step {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-status-step:hover {
+  background: var(--bg-app);
+  color: white;
+}
+
+.btn-status-step.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* 6. MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.modal-dialog {
+  position: relative;
+  background: var(--bg-card);
+  color: var(--text-main);
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon-circle {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--space-md);
+  border-radius: var(--radius-full);
+  background-color: #ecfdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.modal-order-number {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.modal-body-info {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md);
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  text-align: left;
+}
+
+.info-bubble {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.88rem;
+}
+
+.info-bubble strong {
+  color: var(--color-success);
+}
+
+.modal-total-text {
+  margin-top: var(--space-sm);
+  font-size: 1.05rem;
+}
+
+.modal-total-text strong {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* 7. TOAST NOTIFICACIONES */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--bg-surface);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 300;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast.success { border-left-color: var(--color-success); }
+.toast.warning { border-left-color: var(--color-gold); }
+.toast.error   { border-left-color: var(--color-primary); }
+
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <header class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-icon">🍕</span>
+        <div class="brand-text">
+          <span class="brand-name">Bella Italia</span>
+          <span class="brand-tagline">Pizzería Artesanal • SENA ADSO</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks" style="display: none;">
+        <button class="nav-btn active" data-view="menuView">🍕 Menú</button>
+        <button class="nav-btn" data-view="cartView" id="navCartBtn">
+          🛒 Carrito <span class="badge" id="cartBadge">0</span>
+        </button>
+        <button class="nav-btn" data-view="ordersView" id="navOrdersBtn">
+          <span id="navOrdersLabel">📋 Mis Pedidos</span>
+          <span class="badge" id="ordersBadge" style="display: none;">0</span>
+        </button>
+      </nav>
+
+      <div class="user-profile" id="userProfile" style="display: none;">
+        <div class="avatar" id="userAvatar">KC</div>
+        <div class="user-info">
+          <span class="user-name" id="userName">Karen Campo</span>
+          <span class="user-role" id="userRole">Administrador</span>
+        </div>
+        <button class="btn-logout" id="btnLogout" title="Cerrar Sesión">🚪 Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE VISTAS -->
+  <main class="main-content">
+
+    <!-- 1. VISTA DE INICIO DE SESIÓN (LOGIN) -->
+    <section class="view active" id="loginView">
+      <div class="login-wrapper">
+        <div class="login-card">
+          <div class="card-accent-bar"></div>
+          <div class="login-header">
+            <div class="pizza-logo-circle">🍕</div>
+            <h2>Iniciar Sesión</h2>
+            <p>Acceso al Sistema de Gestión de Pedidos</p>
+          </div>
+
+          <form id="loginForm" class="login-form">
+            <div class="form-group">
+              <label for="loginEmail">Usuario o Correo Electrónico</label>
+              <div class="input-with-icon">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="loginEmail" placeholder="admin@pizzeriabellaitalia.com" value="admin@pizzeriabellaitalia.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Contraseña</label>
+              <div class="input-with-icon">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="loginPassword" placeholder="••••••••••••" value="admin123" required>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <label class="remember-me">
+                <input type="checkbox" checked> Recordar mi sesión
+              </label>
+              <a href="#" class="forgot-link" id="linkForgot">¿Olvidó su contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btnSubmitLogin">
+              Ingresar al Sistema
+            </button>
+
+            <div class="quick-credentials">
+              <span class="label-demo">💡 Cuentas de prueba para el evaluador:</span>
+              <div class="demo-chips">
+                <button type="button" class="chip" onclick="cargarDemo('admin')">👑 Admin (Karen Campo)</button>
+                <button type="button" class="chip" onclick="cargarDemo('cliente')">👤 Cliente (Carlos Mendoza)</button>
+              </div>
+            </div>
+          </form>
+
+          <footer class="login-footer">
+            <small>Evidencia GA6-220501096-AA3-EV03 • Aprendiz: Karen Yuliana Campo</small>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. VISTA DE MENÚ / CATÁLOGO DE PIZZAS -->
+    <section class="view" id="menuView">
+      <div class="container">
+        <!-- Hero Banner del Menú -->
+        <div class="menu-hero">
+          <div class="hero-badge">Tradición Italiana y Horno de Piedra</div>
+          <h1>Nuestras Pizzas Artesanales</h1>
+          <p>Masa madre con 48 horas de fermentación, ingredientes frescos y quesos seleccionados.</p>
+        </div>
+
+        <!-- Barra de Filtros y Búsqueda -->
+        <div class="filter-bar">
+          <div class="category-filters">
+            <button class="filter-btn active" data-category="todas">Todas</button>
+            <button class="filter-btn" data-category="Tradicional">Tradicionales</button>
+            <button class="filter-btn" data-category="Especial">Especiales</button>
+            <button class="filter-btn" data-category="Gourmet">Gourmet</button>
+          </div>
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="inputSearchPizza" placeholder="Buscar pizza por nombre o ingrediente...">
+          </div>
+        </div>
+
+        <!-- Grilla de Tarjetas de Pizzas -->
+        <div class="pizza-grid" id="pizzaGrid">
+          <!-- Inyectado dinámicamente por JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VISTA DE CARRITO Y CONFIRMACIÓN DE PEDIDO -->
+    <section class="view" id="cartView">
+      <div class="container">
+        <div class="section-header">
+          <button class="btn btn-outline btn-sm" onclick="mostrarVista('menuView')">← Volver al Menú</button>
+          <h2>Confirmación y Despacho del Pedido</h2>
+        </div>
+
+        <div class="checkout-layout">
+          <!-- Columna Izquierda: Resumen de Productos -->
+          <div class="checkout-col checkout-items-col">
+            <div class="panel">
+              <div class="panel-header header-gold">
+                <h3>📦 Resumen de Productos Seleccionados</h3>
+                <span class="panel-subtitle" id="cartCountSubtitle">0 productos</span>
+              </div>
+              
+              <div class="cart-items-list" id="cartItemsList">
+                <!-- Se inyectan las filas del carrito -->
+              </div>
+
+              <!-- Desglose de Totales -->
+              <div class="totals-breakdown">
+                <div class="totals-row">
+                  <span>Subtotal de Productos:</span>
+                  <strong id="summarySubtotal">$0 COP</strong>
+                </div>
+                <div class="totals-row">
+                  <span>Costo de Envío a Domicilio:</span>
+                  <span id="summaryShipping">$4.000 COP</span>
+                </div>
+                <div class="free-shipping-bar" id="freeShippingAlert">
+                  🛵 ¡Envío GRATIS en compras superiores a $80.000 COP!
+                </div>
+                <div class="totals-row totals-grand">
+                  <span>TOTAL A PAGAR:</span>
+                  <span class="grand-total" id="summaryGrandTotal">$0 COP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Formulario de Despacho -->
+          <div class="checkout-col checkout-form-col">
+            <div class="panel">
+              <div class="panel-header header-red">
+                <h3>📍 Datos de Entrega y Facturación</h3>
+                <span class="panel-subtitle">Ingrese los datos exactos del destino</span>
+              </div>
+
+              <form id="checkoutForm" class="checkout-form">
+                <div class="form-group">
+                  <label for="clientName">Nombre Completo del Cliente *</label>
+                  <input type="text" id="clientName" placeholder="Carlos Mendoza" value="Carlos Mendoza" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="clientPhone">Teléfono / Celular (10 dígitos) *</label>
+                  <input type="tel" id="clientPhone" placeholder="3101234567" value="3101234567" required pattern="[3][0-9]{9}">
+                </div>
+
+                <div class="form-group">
+                  <label for="clientAddress">Dirección Completa de Envío *</label>
+                  <input type="text" id="clientAddress" placeholder="Calle 12 # 34-56 (Barrio El Prado)" value="Calle 12 # 34-56" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="clientNotes">Indicaciones para el Domiciliario</label>
+                  <textarea id="clientNotes" rows="2" placeholder="Tocar timbre en la reja blanca. Apto 302..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Método de Pago</label>
+                  <div class="payment-options">
+                    <label class="payment-card">
+                      <input type="radio" name="paymentMethod" value="Efectivo contra entrega" checked>
+                      <div class="payment-info">
+                        <strong>💵 Efectivo</strong>
+                        <small>Pago al recibir el pedido</small>
+                      </div>
+                    </label>
+                    <label class="payment-card">
+                      <input type="radio" name="paymentMethod" value="Transferencia Nequi / Daviplata">
+                      <div class="payment-info">
+                        <strong>📱 Nequi / Daviplata</strong>
+                        <small>Llave de pago digital</small>
+                      </div>
+                    </label>
+                    <label class="payment-card">
+                      <input type="radio" name="paymentMethod" value="Datáfono Móvil">
+                      <div class="payment-info">
+                        <strong>💳 Datáfono</strong>
+                        <small>Tarjeta débito o crédito</small>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block btn-lg" id="btnConfirmOrder">
+                  🍕 Confirmar y Enviar a Cocina
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. VISTA DE PEDIDOS / GESTIÓN DE ÓRDENES (ADAPTADA POR ROL) -->
+    <section class="view" id="ordersView">
+      <div class="container">
+        
+        <!-- ENCABEZADO DINÁMICO POR ROL -->
+        <div class="section-header" style="justify-content: space-between; flex-wrap: wrap;">
+          <div>
+            <h2 id="ordersViewTitle">Historial de Pedidos</h2>
+            <p id="ordersViewSubtitle" style="color: var(--text-muted); font-size: 0.9rem;">
+              Seguimiento de pedidos en tiempo real
+            </p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-primary btn-sm" onclick="mostrarVista('menuView')">🍕 Ir al Menú</button>
+          </div>
+        </div>
+
+        <!-- PANEL DE MÉTRICAS EXCLUSIVO PARA ADMINISTRADOR -->
+        <div class="admin-kpi-grid" id="adminKpiGrid" style="display: none;">
+          <div class="kpi-card kpi-revenue">
+            <span class="kpi-icon">💰</span>
+            <div class="kpi-info">
+              <span class="kpi-label">Ingresos Totales</span>
+              <strong class="kpi-value" id="kpiTotalRevenue">$0 COP</strong>
+            </div>
+          </div>
+          <div class="kpi-card kpi-total">
+            <span class="kpi-icon">📦</span>
+            <div class="kpi-info">
+              <span class="kpi-label">Total Órdenes</span>
+              <strong class="kpi-value" id="kpiTotalOrders">0</strong>
+            </div>
+          </div>
+          <div class="kpi-card kpi-prep">
+            <span class="kpi-icon">👨‍🍳</span>
+            <div class="kpi-info">
+              <span class="kpi-label">En Cocina</span>
+              <strong class="kpi-value" id="kpiPrepOrders">0</strong>
+            </div>
+          </div>
+          <div class="kpi-card kpi-shipping">
+            <span class="kpi-icon">🛵</span>
+            <div class="kpi-info">
+              <span class="kpi-label">En Camino</span>
+              <strong class="kpi-value" id="kpiShippingOrders">0</strong>
+            </div>
+          </div>
+          <div class="kpi-card kpi-delivered">
+            <span class="kpi-icon">✅</span>
+            <div class="kpi-info">
+              <span class="kpi-label">Entregadas</span>
+              <strong class="kpi-value" id="kpiDeliveredOrders">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTROS DE ÓRDENES (ADMINISTRADOR) -->
+        <div class="filter-bar" id="adminFilterBar" style="display: none; margin-top: 16px;">
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-gold);">Filtrar por Estado:</span>
+          <div class="category-filters">
+            <button class="filter-btn active" data-order-filter="todas" onclick="filtrarOrdenesAdmin('todas', this)">Todas</button>
+            <button class="filter-btn" data-order-filter="En Preparación" onclick="filtrarOrdenesAdmin('En Preparación', this)">👨‍🍳 En Preparación</button>
+            <button class="filter-btn" data-order-filter="En Camino" onclick="filtrarOrdenesAdmin('En Camino', this)">🛵 En Camino</button>
+            <button class="filter-btn" data-order-filter="Entregado" onclick="filtrarOrdenesAdmin('Entregado', this)">✅ Entregadas</button>
+          </div>
+        </div>
+
+        <!-- LISTADO DE ÓRDENES / PEDIDOS -->
+        <div class="orders-list" id="ordersList" style="margin-top: 24px;">
+          <!-- Inyectado dinámicamente según el rol -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE ÉXITO DE ORDEN -->
+  <div class="modal" id="orderSuccessModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-icon-circle">✅</div>
+      <h2 id="modalOrderTitle">¡Pedido Recibido con Éxito!</h2>
+      <p class="modal-order-number">Código de Orden: <strong id="modalOrderId">ORD-000000</strong></p>
+      <div class="modal-body-info">
+        <div class="info-bubble">
+          <span>🕒 Tiempo estimado de entrega:</span>
+          <strong>30 a 45 minutos</strong>
+        </div>
+        <p id="modalDeliveryDetails">Enviando a: Calle 12 # 34-56 (Carlos Mendoza)</p>
+        <p class="modal-total-text">Total a Cobrar: <strong id="modalOrderTotal">$0 COP</strong></p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-block" onclick="cerrarModalYVerPedidos()">Ver en Historial de Pedidos</button>
+        <button class="btn btn-outline btn-block" onclick="cerrarModalYVolverMenu()">Volver al Menú</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST DE NOTIFICACIONES -->
+  <div class="toast" id="toast">Notificación</div>
+
+  <!-- SCRIPTS -->
+  
+  <!-- JAVASCRIPT COMPLETO EMBEBIDO PARA OPERACIÓN 100% AUTOCONTENIDA (INCLUSO DESDE ZIP) -->
+  <script>
+/**
+ * Pizzería Bella Italia - Frontend Application Logic
+ * Con Control de Acceso por Roles (RBAC): Cliente vs Administrador
+ * Evidencia: GA6-220501096-AA3-EV03
+ * Aprendiz: Karen Yuliana Campo
+ */
+
+// Catálogo base de pizzas
+const PIZZAS = [
+  {
+    id: 1,
+    nombre: 'Pizza Hawaiana',
+    tamano: 'Familiar',
+    porciones: 8,
+    precio: 45000,
+    categoria: 'Tradicional',
+    colorTheme: 'gold',
+    descripcion: 'Jamón dulce ahumado, piña caramelizada en miel orgánica y doble porción de queso mozzarella fundido sobre salsa napolitana artesanal.',
+    ingredientes: ['Jamón dulce premium', 'Piña caramelizada', 'Doble queso mozzarella', 'Salsa napolitana de la casa']
+  },
+  {
+    id: 2,
+    nombre: 'Pizza Pepperoni',
+    tamano: 'Mediana',
+    porciones: 6,
+    precio: 32000,
+    categoria: 'Especial',
+    colorTheme: 'red',
+    descripcion: 'Pepperoni americano crocante, queso mozzarella de primera calidad, salsa de tomates San Marzano y un toque de orégano silvestre.',
+    ingredientes: ['Pepperoni americano', 'Queso mozzarella fundido', 'Orégano silvestre', 'Base fina artesanal']
+  },
+  {
+    id: 3,
+    nombre: 'Pizza Pollo & Champiñón',
+    tamano: 'Familiar',
+    porciones: 8,
+    precio: 38000,
+    categoria: 'Gourmet',
+    colorTheme: 'green',
+    descripcion: 'Pechuga de pollo desmechada marinada, champiñones frescos salteados al ajillo, queso parmesano gratinado y salsa bechamel suave.',
+    ingredientes: ['Pechuga marinada', 'Champiñones al ajillo', 'Parmesano gratinado', 'Salsa bechamel suave']
+  },
+  {
+    id: 4,
+    nombre: 'Pizza Cuatro Quesos',
+    tamano: 'Personal',
+    porciones: 4,
+    precio: 22000,
+    categoria: 'Gourmet',
+    colorTheme: 'blue',
+    descripcion: 'Exquisita combinación de cuatro quesos europeos: mozzarella, gorgonzola, provolone dulce y queso parmesano madurado.',
+    ingredientes: ['Mozzarella', 'Gorgonzola italiano', 'Provolone dulce', 'Parmesano madurado']
+  }
+];
+
+// Cuentas de usuario registradas
+const USUARIOS = [
+  {
+    correo: 'admin@pizzeriabellaitalia.com',
+    clave: 'admin123',
+    nombre: 'Karen Campo',
+    rol: 'Administrador'
+  },
+  {
+    correo: 'carlos@cliente.com',
+    clave: 'cliente123',
+    nombre: 'Carlos Mendoza',
+    rol: 'Cliente'
+  }
+];
+
+// Estado global de la aplicación
+let estadoApp = {
+  usuarioActual: null,
+  carrito: [],
+  categoriaActiva: 'todas',
+  busquedaTexto: '',
+  filtroEstadoAdmin: 'todas',
+  pedidos: JSON.parse(localStorage.getItem('pizzeria_pedidos') || '[]')
+};
+
+// ==========================================
+// INICIALIZACIÓN
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  vincularEventos();
+  renderizarCatalogo();
+  actualizarVistaCarrito();
+});
+
+// Función global para chips de demo en el login
+window.cargarDemo = function(tipo) {
+  const emailInput = document.getElementById('loginEmail');
+  const passInput = document.getElementById('loginPassword');
+  if (tipo === 'admin') {
+    emailInput.value = 'admin@pizzeriabellaitalia.com';
+    passInput.value = 'admin123';
+  } else {
+    emailInput.value = 'carlos@cliente.com';
+    passInput.value = 'cliente123';
+  }
+  mostrarToast(`Credenciales de ${tipo.toUpperCase()} cargadas.`);
+};
+
+// ==========================================
+// GESTIÓN DE VISTAS (SPA)
+// ==========================================
+window.mostrarVista = function(vistaId) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const vistaTarget = document.getElementById(vistaId);
+  if (vistaTarget) {
+    vistaTarget.classList.add('active');
+  }
+
+  // Actualizar botones de la barra de navegación
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    if (btn.dataset.view === vistaId) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  if (vistaId === 'ordersView') {
+    renderizarSeccionOrdenes();
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// ==========================================
+// VINCULACIÓN DE EVENTOS
+// ==========================================
+function vincularEventos() {
+  // Login Form
+  const loginForm = document.getElementById('loginForm');
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const pass = document.getElementById('loginPassword').value.trim();
+
+    const usuario = USUARIOS.find(u => u.correo.toLowerCase() === email.toLowerCase() && u.clave === pass);
+    if (!usuario) {
+      mostrarToast('Usuario o contraseña incorrectos.', 'error');
+      return;
+    }
+
+    iniciarSesion(usuario);
+  });
+
+  // Logout
+  document.getElementById('btnLogout').addEventListener('click', () => {
+    cerrarSesion();
+  });
+
+  // Navegación
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      mostrarVista(btn.dataset.view);
+    });
+  });
+
+  // Filtros de categoría de pizza
+  document.querySelectorAll('.filter-btn[data-category]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn[data-category]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      estadoApp.categoriaActiva = btn.dataset.category;
+      renderizarCatalogo();
+    });
+  });
+
+  // Buscador de pizzas
+  const searchInput = document.getElementById('inputSearchPizza');
+  searchInput.addEventListener('input', (e) => {
+    estadoApp.busquedaTexto = e.target.value.toLowerCase().trim();
+    renderizarCatalogo();
+  });
+
+  // Formulario de Checkout
+  const checkoutForm = document.getElementById('checkoutForm');
+  checkoutForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    procesarPedido();
+  });
+}
+
+// ==========================================
+// AUTENTICACIÓN Y ADAPTACIÓN POR ROL
+// ==========================================
+function iniciarSesion(usuario) {
+  estadoApp.usuarioActual = usuario;
+
+  // Actualizar perfil de usuario en Navbar
+  document.getElementById('userName').textContent = usuario.nombre;
+  document.getElementById('userRole').textContent = usuario.rol;
+  document.getElementById('userAvatar').textContent = usuario.nombre.split(' ').map(n => n[0]).join('').slice(0, 2);
+
+  // Adaptar textos del Navbar según el Rol
+  const navOrdersLabel = document.getElementById('navOrdersLabel');
+  if (usuario.rol === 'Administrador') {
+    navOrdersLabel.textContent = '📊 Gestión de Órdenes';
+  } else {
+    navOrdersLabel.textContent = '🛍️ Mis Pedidos';
+  }
+
+  // Prellenar datos del cliente en el checkout si es Carlos
+  if (usuario.rol === 'Cliente') {
+    document.getElementById('clientName').value = usuario.nombre;
+    document.getElementById('clientPhone').value = '3101234567';
+    document.getElementById('clientAddress').value = 'Calle 12 # 34-56 (Barrio El Prado)';
+  }
+
+  document.getElementById('navLinks').style.display = 'flex';
+  document.getElementById('userProfile').style.display = 'flex';
+
+  mostrarToast(`¡Bienvenida/o, ${usuario.nombre} (${usuario.rol})!`, 'success');
+  mostrarVista('menuView');
+}
+
+function cerrarSesion() {
+  estadoApp.usuarioActual = null;
+  document.getElementById('navLinks').style.display = 'none';
+  document.getElementById('userProfile').style.display = 'none';
+  mostrarToast('Sesión cerrada correctamente.');
+  mostrarVista('loginView');
+}
+
+// ==========================================
+// RENDERIZADO DEL CATÁLOGO
+// ==========================================
+function renderizarCatalogo() {
+  const grid = document.getElementById('pizzaGrid');
+  grid.innerHTML = '';
+
+  const pizzasFiltradas = PIZZAS.filter(pizza => {
+    const coincideCategoria = estadoApp.categoriaActiva === 'todas' || pizza.categoria === estadoApp.categoriaActiva;
+    const coincideBusqueda = estadoApp.busquedaTexto === '' || 
+      pizza.nombre.toLowerCase().includes(estadoApp.busquedaTexto) ||
+      pizza.descripcion.toLowerCase().includes(estadoApp.busquedaTexto);
+    return coincideCategoria && coincideBusqueda;
+  });
+
+  if (pizzasFiltradas.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 48px; background: #1e293b; border-radius: 16px;">
+        <span style="font-size: 3rem;">🔍</span>
+        <h3 style="margin-top: 12px;">No se encontraron pizzas</h3>
+        <p style="color: #94a3b8;">Prueba con otro término de búsqueda o selecciona otra categoría.</p>
+      </div>
+    `;
+    return;
+  }
+
+  pizzasFiltradas.forEach(pizza => {
+    const card = document.createElement('article');
+    card.className = 'pizza-card';
+    card.innerHTML = `
+      <div class="card-visual-header ${pizza.colorTheme}">
+        <span class="pizza-category-tag">${pizza.categoria}</span>
+        <span class="pizza-size-badge">🍕 ${pizza.tamano} (${pizza.porciones} porciones)</span>
+      </div>
+      <div class="pizza-card-body">
+        <h3 class="pizza-title">${pizza.nombre}</h3>
+        <p class="pizza-description">${pizza.descripcion}</p>
+        <div class="pizza-footer">
+          <div class="pizza-price-box">
+            <span class="price-label">Precio</span>
+            <span class="price-value">${formatearMoneda(pizza.precio)}</span>
+          </div>
+          <button class="btn btn-primary" onclick="agregarPizza(${pizza.id})">
+            + Agregar al Pedido
+          </button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ==========================================
+// GESTIÓN DEL CARRITO
+// ==========================================
+window.agregarPizza = function(id) {
+  const pizza = PIZZAS.find(p => p.id === id);
+  if (!pizza) return;
+
+  const itemExistente = estadoApp.carrito.find(item => item.id === id);
+  if (itemExistente) {
+    itemExistente.cantidad++;
+  } else {
+    estadoApp.carrito.push({
+      id: pizza.id,
+      nombre: pizza.nombre,
+      tamano: pizza.tamano,
+      precio: pizza.precio,
+      cantidad: 1
+    });
+  }
+
+  actualizarVistaCarrito();
+  mostrarToast(`¡${pizza.nombre} agregada al carrito!`, 'success');
+};
+
+window.cambiarCantidad = function(id, delta) {
+  const item = estadoApp.carrito.find(i => i.id === id);
+  if (!item) return;
+
+  item.cantidad += delta;
+  if (item.cantidad <= 0) {
+    estadoApp.carrito = estadoApp.carrito.filter(i => i.id !== id);
+  }
+
+  actualizarVistaCarrito();
+};
+
+window.eliminarItem = function(id) {
+  estadoApp.carrito = estadoApp.carrito.filter(i => i.id !== id);
+  actualizarVistaCarrito();
+  mostrarToast('Producto eliminado del carrito.', 'warning');
+};
+
+function actualizarVistaCarrito() {
+  const totalItems = estadoApp.carrito.reduce((acc, curr) => acc + curr.cantidad, 0);
+  const subtotal = estadoApp.carrito.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0);
+  const envio = (subtotal === 0 || subtotal >= 80000) ? 0 : 4000;
+  const total = subtotal + envio;
+
+  // Actualizar Badge del Navbar
+  document.getElementById('cartBadge').textContent = totalItems;
+
+  const listContainer = document.getElementById('cartItemsList');
+  document.getElementById('cartCountSubtitle').textContent = `${totalItems} producto${totalItems === 1 ? '' : 's'}`;
+
+  if (estadoApp.carrito.length === 0) {
+    listContainer.innerHTML = `
+      <div style="text-align: center; padding: 32px; color: #64748b;">
+        <span style="font-size: 2.5rem;">🛒</span>
+        <p style="margin-top: 8px; font-weight: 600;">El carrito de compras está vacío.</p>
+        <button class="btn btn-outline btn-sm" style="margin-top: 12px; color: #0f172a; border-color: #cbd5e1;" onclick="mostrarVista('menuView')">
+          Ver Catálogo de Pizzas
+        </button>
+      </div>
+    `;
+    document.getElementById('btnConfirmOrder').disabled = true;
+  } else {
+    document.getElementById('btnConfirmOrder').disabled = false;
+    listContainer.innerHTML = '';
+    estadoApp.carrito.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'cart-item-row';
+      row.innerHTML = `
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.nombre}</div>
+          <div class="cart-item-detail">${item.tamano} • ${formatearMoneda(item.precio)} c/u</div>
+        </div>
+        <div class="quantity-controls">
+          <button class="qty-btn" type="button" onclick="cambiarCantidad(${item.id}, -1)">−</button>
+          <span class="qty-number">${item.cantidad}</span>
+          <button class="qty-btn" type="button" onclick="cambiarCantidad(${item.id}, 1)">+</button>
+        </div>
+        <div class="cart-item-subtotal">${formatearMoneda(item.precio * item.cantidad)}</div>
+        <button class="btn-remove-item" type="button" title="Eliminar" onclick="eliminarItem(${item.id})">✕</button>
+      `;
+      listContainer.appendChild(row);
+    });
+  }
+
+  // Actualizar cifras
+  document.getElementById('summarySubtotal').textContent = `${formatearMoneda(subtotal)} COP`;
+  document.getElementById('summaryShipping').textContent = envio === 0 ? '¡GRATIS!' : `${formatearMoneda(envio)} COP`;
+  document.getElementById('summaryGrandTotal').textContent = `${formatearMoneda(total)} COP`;
+
+  const freeAlert = document.getElementById('freeShippingAlert');
+  if (subtotal >= 80000) {
+    freeAlert.style.backgroundColor = '#ecfdf5';
+    freeAlert.style.color = '#047857';
+    freeAlert.textContent = '🎉 ¡Felicitaciones! Tienes ENVÍO TOTALMENTE GRATIS en esta orden.';
+  } else {
+    const restante = 80000 - subtotal;
+    freeAlert.style.backgroundColor = '#fffbeb';
+    freeAlert.style.color = '#b45309';
+    freeAlert.textContent = `🛵 ¡Agrega ${formatearMoneda(restante)} COP más para obtener ENVÍO GRATIS!`;
+  }
+}
+
+// ==========================================
+// PROCESAMIENTO DE ORDEN
+// ==========================================
+function procesarPedido() {
+  if (estadoApp.carrito.length === 0) {
+    mostrarToast('El carrito está vacío. Agrega una pizza antes de confirmar.', 'error');
+    return;
+  }
+
+  const nombre = document.getElementById('clientName').value.trim();
+  const telefono = document.getElementById('clientPhone').value.trim();
+  const direccion = document.getElementById('clientAddress').value.trim();
+  const notas = document.getElementById('clientNotes').value.trim();
+  const metodoPago = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+  const subtotal = estadoApp.carrito.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0);
+  const envio = subtotal >= 80000 ? 0 : 4000;
+  const total = subtotal + envio;
+  const idOrden = `ORD-${Date.now().toString().slice(-6)}`;
+
+  const nuevaOrden = {
+    id: idOrden,
+    fecha: new Date().toLocaleString('es-CO'),
+    cliente: {
+      nombre,
+      telefono,
+      direccion,
+      notas,
+      correo: estadoApp.usuarioActual?.correo || 'carlos@cliente.com'
+    },
+    metodoPago,
+    items: [...estadoApp.carrito],
+    subtotal,
+    envio,
+    total,
+    estado: 'En Preparación'
+  };
+
+  // Guardar en estado persistente
+  estadoApp.pedidos.unshift(nuevaOrden);
+  localStorage.setItem('pizzeria_pedidos', JSON.stringify(estadoApp.pedidos));
+
+  // Vaciar carrito
+  estadoApp.carrito = [];
+  actualizarVistaCarrito();
+
+  // Abrir Modal de Éxito
+  abrirModalExito(nuevaOrden);
+}
+
+function abrirModalExito(orden) {
+  document.getElementById('modalOrderId').textContent = orden.id;
+  document.getElementById('modalDeliveryDetails').textContent = `Destino: ${orden.cliente.direccion} • Cliente: ${orden.cliente.nombre} • Tel: ${orden.cliente.telefono}`;
+  document.getElementById('modalOrderTotal').textContent = `${formatearMoneda(orden.total)} COP`;
+
+  document.getElementById('orderSuccessModal').classList.add('active');
+}
+
+window.cerrarModalYVerPedidos = function() {
+  document.getElementById('orderSuccessModal').classList.remove('active');
+  mostrarVista('ordersView');
+};
+
+window.cerrarModalYVolverMenu = function() {
+  document.getElementById('orderSuccessModal').classList.remove('active');
+  mostrarVista('menuView');
+};
+
+// ==========================================
+// GESTIÓN DE ÓRDENES POR ROL (CLIENTE VS ADMIN)
+// ==========================================
+function renderizarSeccionOrdenes() {
+  const esAdmin = estadoApp.usuarioActual && estadoApp.usuarioActual.rol === 'Administrador';
+  const kpiGrid = document.getElementById('adminKpiGrid');
+  const adminFilterBar = document.getElementById('adminFilterBar');
+  const title = document.getElementById('ordersViewTitle');
+  const subtitle = document.getElementById('ordersViewSubtitle');
+  const container = document.getElementById('ordersList');
+
+  // Ajustes de visualización según el rol
+  if (esAdmin) {
+    title.textContent = '📊 Panel de Control: Gestión de Órdenes';
+    subtitle.textContent = 'Manejo central de pedidos, asignación de cocina y despachos en tiempo real.';
+    kpiGrid.style.display = 'grid';
+    adminFilterBar.style.display = 'flex';
+    actualizarMetricasKPI();
+  } else {
+    title.textContent = '🛍️ Mis Pedidos Realizados';
+    subtitle.textContent = 'Seguimiento y estado de entrega de tus pizzas.';
+    kpiGrid.style.display = 'none';
+    adminFilterBar.style.display = 'none';
+  }
+
+  // Filtrar pedidos según rol
+  let ordenesParaMostrar = [];
+  if (esAdmin) {
+    // Admin ve todo, con filtro opcional de estado
+    if (estadoApp.filtroEstadoAdmin === 'todas') {
+      ordenesParaMostrar = [...estadoApp.pedidos];
+    } else {
+      ordenesParaMostrar = estadoApp.pedidos.filter(p => (p.estado || '').includes(estadoApp.filtroEstadoAdmin));
+    }
+  } else {
+    // Cliente solo ve sus propios pedidos
+    const correoUsuario = estadoApp.usuarioActual?.correo?.toLowerCase();
+    const nombreUsuario = estadoApp.usuarioActual?.nombre?.toLowerCase();
+    ordenesParaMostrar = estadoApp.pedidos.filter(p => {
+      const matchCorreo = p.cliente.correo && p.cliente.correo.toLowerCase() === correoUsuario;
+      const matchNombre = p.cliente.nombre && p.cliente.nombre.toLowerCase() === nombreUsuario;
+      return matchCorreo || matchNombre;
+    });
+  }
+
+  container.innerHTML = '';
+
+  if (ordenesParaMostrar.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 48px; background: #1e293b; border-radius: 16px;">
+        <span style="font-size: 3rem;">${esAdmin ? '📦' : '🛍️'}</span>
+        <h3 style="margin-top: 12px;">${esAdmin ? 'No hay órdenes en esta categoría' : 'Aún no has realizado pedidos'}</h3>
+        <p style="color: #94a3b8;">${esAdmin ? 'Las nuevas órdenes de los clientes se reflejarán aquí automáticamente.' : 'Explora nuestro catálogo y ordena tu pizza artesanal favorita.'}</p>
+        ${!esAdmin ? '<button class="btn btn-primary" style="margin-top: 16px;" onclick="mostrarVista(\'menuView\')">Ver Menú</button>' : ''}
+      </div>
+    `;
+    return;
+  }
+
+  ordenesParaMostrar.forEach(p => {
+    const card = document.createElement('div');
+    const estadoClass = obtenerClaseEstado(p.estado);
+    card.className = `order-history-card ${estadoClass}`;
+
+    const itemsResumen = p.items.map(i => `<span style="display: inline-block; background: #f1f5f9; padding: 2px 8px; border-radius: 6px; margin: 2px; font-weight: 600;">${i.cantidad}x ${i.nombre}</span>`).join(' ');
+
+    let controlesAdminHtml = '';
+    if (esAdmin) {
+      controlesAdminHtml = `
+        <div class="order-admin-controls">
+          <span class="control-label">⚙️ Cambiar Estado (Admin):</span>
+          <div class="status-actions-btns">
+            <button class="btn-status-step ${p.estado === 'En Preparación' ? 'active' : ''}" onclick="cambiarEstadoOrden('${p.id}', 'En Preparación')">
+              👨‍🍳 Cocina
+            </button>
+            <button class="btn-status-step ${p.estado === 'En Camino' ? 'active' : ''}" onclick="cambiarEstadoOrden('${p.id}', 'En Camino')">
+              🛵 Despachar
+            </button>
+            <button class="btn-status-step ${p.estado === 'Entregado' ? 'active' : ''}" onclick="cambiarEstadoOrden('${p.id}', 'Entregado')">
+              ✅ Entregar
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <div style="flex: 1; min-width: 280px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <strong style="font-size: 1.15rem; color: #0f172a;">${p.id}</strong>
+          <span class="order-badge-status badge-${obtenerBadgeClass(p.estado)}">
+            ${obtenerIconoEstado(p.estado)} ${p.estado}
+          </span>
+        </div>
+        <small style="color: #64748b; display: block; margin-bottom: 8px;">
+          📅 ${p.fecha} • Método de Pago: <strong>${p.metodoPago}</strong>
+        </small>
+        <div style="margin: 8px 0;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Pizzas ordenadas:</span>
+          <div style="margin-top: 4px;">${itemsResumen}</div>
+        </div>
+        <div style="font-size: 0.85rem; color: #334155; margin-top: 8px;">
+          📍 <strong>Envío a:</strong> ${p.cliente.direccion} 
+          <span style="color: #64748b;">(Cliente: ${p.cliente.nombre} • Tel: ${p.cliente.telefono})</span>
+        </div>
+        ${p.cliente.notas ? `<div style="font-size: 0.8rem; color: #d97706; margin-top: 4px; font-style: italic;">📝 Nota: "${p.cliente.notas}"</div>` : ''}
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+        <div style="text-align: right;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 800;">Total Facturado</span>
+          <div style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800; color: #e11d48;">
+            ${formatearMoneda(p.total)} COP
+          </div>
+        </div>
+        ${controlesAdminHtml}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function actualizarMetricasKPI() {
+  const totalFacturado = estadoApp.pedidos.reduce((acc, curr) => acc + curr.total, 0);
+  const totalOrdenes = estadoApp.pedidos.length;
+  const enPrep = estadoApp.pedidos.filter(p => (p.estado || '').includes('Preparación')).length;
+  const enCamino = estadoApp.pedidos.filter(p => (p.estado || '').includes('Camino')).length;
+  const entregadas = estadoApp.pedidos.filter(p => (p.estado || '').includes('Entregado')).length;
+
+  document.getElementById('kpiTotalRevenue').textContent = `${formatearMoneda(totalFacturado)} COP`;
+  document.getElementById('kpiTotalOrders').textContent = totalOrdenes;
+  document.getElementById('kpiPrepOrders').textContent = enPrep;
+  document.getElementById('kpiShippingOrders').textContent = enCamino;
+  document.getElementById('kpiDeliveredOrders').textContent = entregadas;
+}
+
+window.filtrarOrdenesAdmin = function(estado, btn) {
+  document.querySelectorAll('#adminFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  estadoApp.filtroEstadoAdmin = estado;
+  renderizarSeccionOrdenes();
+};
+
+window.cambiarEstadoOrden = function(idOrden, nuevoEstado) {
+  const orden = estadoApp.pedidos.find(o => o.id === idOrden);
+  if (!orden) return;
+
+  orden.estado = nuevoEstado;
+  localStorage.setItem('pizzeria_pedidos', JSON.stringify(estadoApp.pedidos));
+
+  mostrarToast(`Orden ${idOrden} actualizada a: ${nuevoEstado}`, 'success');
+  renderizarSeccionOrdenes();
+};
+
+function obtenerClaseEstado(estado) {
+  if (estado.includes('Preparación')) return 'status-preparacion';
+  if (estado.includes('Camino')) return 'status-camino';
+  if (estado.includes('Entregado')) return 'status-entregado';
+  return '';
+}
+
+function obtenerBadgeClass(estado) {
+  if (estado.includes('Preparación')) return 'preparacion';
+  if (estado.includes('Camino')) return 'camino';
+  if (estado.includes('Entregado')) return 'entregado';
+  return 'preparacion';
+}
+
+function obtenerIconoEstado(estado) {
+  if (estado.includes('Preparación')) return '👨‍🍳';
+  if (estado.includes('Camino')) return '🛵';
+  if (estado.includes('Entregado')) return '✅';
+  return '📦';
+}
+
+// ==========================================
+// UTILIDADES
+// ==========================================
+function formatearMoneda(valor) {
+  return valor.toLocaleString('es-CO');
+}
+
+function mostrarToast(mensaje, tipo = 'default') {
+  const toast = document.getElementById('toast');
+  toast.textContent = mensaje;
+  toast.className = `toast show ${tipo}`;
+  setTimeout(() => {
+    toast.className = 'toast';
+  }, 3200);
+}
+
+  </script>
+
+</body>
+</html>

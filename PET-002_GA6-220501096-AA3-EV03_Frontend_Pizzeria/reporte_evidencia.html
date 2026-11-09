@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe Técnico - GA6-220501096-AA3-EV03</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 20mm;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+    }
+    .cover {
+      text-align: center;
+      padding: 40px 20px;
+      page-break-after: always;
+    }
+    .cover-logo {
+      font-size: 48pt;
+      margin-bottom: 20px;
+    }
+    .cover h1 {
+      font-size: 20pt;
+      color: #0f172a;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .cover h2 {
+      font-size: 14pt;
+      color: #e11d48;
+      margin-bottom: 30px;
+    }
+    .cover-meta {
+      margin-top: 60px;
+      font-size: 11pt;
+      line-height: 2;
+    }
+    h2 {
+      font-size: 14pt;
+      color: #0f172a;
+      border-bottom: 2px solid #e11d48;
+      padding-bottom: 4px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1e293b;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .code-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: Consolas, monospace;
+      font-size: 9.5pt;
+      margin: 12px 0;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 9pt;
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <div class="cover">
+    <div class="cover-logo">🍕</div>
+    <h1>SERVICIO NACIONAL DE APRENDIZAJE (SENA)</h1>
+    <h2>CENTRO DE FORMACIÓN EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)</h2>
+    <hr style="border: 0; height: 3px; background: #e11d48; width: 60%; margin: 30px auto;">
+    
+    <h3 style="font-size: 15pt; color: #0f172a; margin-top: 40px;">INFORME TÉCNICO DE IMPLEMENTACIÓN FRONTEND</h3>
+    <p style="font-size: 12pt; color: #475569;">
+      <strong>Evidencia:</strong> GA6-220501096-AA3-EV03<br>
+      <em>"Interfaces gráficas según requerimientos del proyecto"</em>
+    </p>
+
+    <div class="cover-meta">
+      <p>
+        <strong>Proyecto Formativo:</strong> Construcción de software para gestión y venta de pizzas<br>
+        <strong>Programa de Formación:</strong> Análisis y desarrollo de software (Código: 228118)<br>
+        <strong>Fase del Proyecto:</strong> Ejecución (AP6)<br>
+        <strong>Aprendiz:</strong> Karen Yuliana Campo<br>
+        <strong>Fecha:</strong> Noviembre de 2026
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <h2>1. INTRODUCCIÓN Y CONTEXTO</h2>
+  <p>
+    El presente documento técnico certifica y documenta el desarrollo de la interfaz gráfica de usuario para el sistema de pedidos y gestión de la <strong>Pizzería Bella Italia</strong>. Partiendo de los mockups y el esquema de navegación diseñados en la evidencia previa (<em>GA6-220501096-AA3-EV02</em>), se construyó una aplicación web frontend completamente interactiva y funcional basada en los estándares W3C (HTML5, CSS3 y JavaScript moderno), aplicando rigurosamente los principios de usabilidad, la norma ISO 13407 y desarrollo guiado por pruebas (<strong>TDD</strong>).
+  </p>
+
+  <h2>2. OBJETIVOS DE LA EVIDENCIA</h2>
+  <ul>
+    <li><strong>Objetivo General:</strong> Desarrollar la interfaz gráfica de usuario del software de la pizzería cumpliendo los requerimientos de usabilidad, estilos visuales, catálogo interactivo, cálculo de totales y control de pedidos.</li>
+    <li><strong>Objetivos Específicos:</strong>
+      <ul>
+        <li>Implementar los códigos visuales y la paleta cromática recomendada en los componentes formativos del SENA (colores reservados y señaléticos).</li>
+        <li>Aplicar la Ley de Fitts garantizando botones táctiles superiores a 48px y espaciados basados en la retícula de 8dp/16dp.</li>
+        <li>Diseñar una arquitectura de roles (RBAC) donde el Cliente disponga de su vista de pedidos personales y el Administrador cuente con un panel de control con métricas en vivo y cambio de estados de cocina/despacho.</li>
+        <li>Verificar la lógica de negocio mediante 16 pruebas unitarias automatizadas con la metodología TDD.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>3. FUNDAMENTACIÓN DE USABILIDAD Y DISEÑO VISUAL</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Principio SENA</th>
+        <th>Implementación en la Pizzería</th>
+        <th>Justificación Técnica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Códigos Cromáticos</strong></td>
+        <td>Rojo (#E11D48), Dorado (#F59E0B), Verde (#10B981)</td>
+        <td>El rojo resalta la identidad y llamados a la acción; el verde confirma el éxito; el azul oscuro (#0F172A) minimiza la fatiga visual.</td>
+      </tr>
+      <tr>
+        <td><strong>Retícula Modular</strong></td>
+        <td>Módulo de 8dp con márgenes de 16dp y 24dp</td>
+        <td>Estructura simétrica y limpia que asegura armonía visual en resoluciones móviles y de escritorio.</td>
+      </tr>
+      <tr>
+        <td><strong>Ley de Fitts</strong></td>
+        <td>Botones táctiles grandes (&ge; 48px de alto)</td>
+        <td>Optimiza la velocidad y precisión del usuario al pulsar con el dedo en pantallas táctiles o con el mouse.</td>
+      </tr>
+      <tr>
+        <td><strong>Norma ISO 13407 (DCU)</strong></td>
+        <td>Navegación fluida y reversible</td>
+        <td>El usuario puede modificar cantidades, vaciar el carrito o volver al catálogo en cualquier paso sin perder consistencia.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>4. ARQUITECTURA DE COMPONENTES FRONTEND</h2>
+  <p>La solución se encuentra estructurada en tres módulos limpios y desacoplados:</p>
+  <ul>
+    <li><strong>index.html:</strong> Marcado semántico HTML5 que estructura cuatro vistas dinámicas (Login, Catálogo, Checkout y Modal de confirmación). Compatible con apertura directa sin restricciones de red o CORS.</li>
+    <li><strong>styles.css:</strong> Estilos visuales CSS3 con variables nativas, cuadrícula CSS Grid para el menú de pizzas, Flexbox para la barra de navegación y media queries para diseño 100% responsive.</li>
+    <li><strong>app.js:</strong> Lógica de interacción en el cliente:
+      <ul>
+        <li>Autenticación y control de acceso basado en roles (Administrador vs. Cliente).</li>
+        <li>Filtros dinámicos por categorías (Tradicional, Especial, Gourmet) y barra de búsqueda en tiempo real.</li>
+        <li>Gestión reactiva del carrito con cálculo de subtotales, cobro de domicilio ($4.000 COP) y beneficio de envío gratis a partir de $80.000 COP.</li>
+        <li>Panel de administración de órdenes con métricas KPI (Ingresos, órdenes en cocina, despachos) y actualización de estados en vivo.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>5. RESULTADOS DE LA VALIDACIÓN TDD (TEST-DRIVEN DEVELOPMENT)</h2>
+  <p>
+    En cumplimiento de los estándares de aseguramiento de la calidad de software, la lógica fue testeada mediante pruebas unitarias automatizadas con el test runner de Node.js y pnpm:
+  </p>
+
+  <div class="code-box">
+$ pnpm test<br>
+&gt; node --test test/*.test.js<br><br>
+✔ 1. Autenticación de Usuario (Campos obligatorios, credenciales válidas, rechazo de erróneas)<br>
+✔ 2. Catálogo de Pizzas (Pizzas del proyecto formativo con atributos completos)<br>
+✔ 3. Gestión del Carrito (Inicialización, agregar, modificar cantidades, eliminar)<br>
+✔ 4. Cálculo de Totales y Tarifas (Subtotal, domicilio $4.000 y envío gratis &gt; $80.000)<br>
+✔ 5. Validación de Datos de Entrega (Celular 10 dígitos, dirección y generación de orden)<br>
+✔ 6. Gestión de Órdenes por Roles (Aislamiento de cliente, control total y métricas admin)<br><br>
+<strong>Resultado: 16 pruebas aprobadas (100% Pass) | 0 fallos | FASE VERDE</strong>
+  </div>
+
+  <h2>6. CONTENIDO DEL PAQUETE DE ENTREGA (ZIP)</h2>
+  <p>
+    El archivo comprimido <strong>GA6-220501096-AA3-EV03.zip</strong> contiene:
+  </p>
+  <ul>
+    <li><code>index.html</code> (Aplicación web lista para ejecutar en cualquier navegador).</li>
+    <li><code>styles.css</code> (Hoja de estilos responsiva con código accesible).</li>
+    <li><code>app.js</code> (Controlador JavaScript con la lógica de negocio y roles).</li>
+  </ul>
+
+  <br><br>
+  <p style="text-align: center; color: #64748b; font-size: 10pt;">
+    <em>Documento generado para la plataforma educativa Zajuna - SENA 2026.</em>
+  </p>
+
+</body>
+</html>

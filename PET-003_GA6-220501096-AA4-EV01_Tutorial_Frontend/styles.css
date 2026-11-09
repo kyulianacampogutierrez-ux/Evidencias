@@ -1,0 +1,715 @@
+/* ==========================================================================
+   TUTORIAL DIDÁCTICO DE FUNDAMENTOS FRONTEND (HTML5, CSS3 Y JAVASCRIPT)
+   Evidencia SENA: GA6-220501096-AA4-EV01
+   Aprendiz: Karen Yuliana Campo | Ficha: 228118
+   Basado en la Guía de Aprendizaje 6 y el Componente Formativo CF16
+   ========================================================================== */
+
+/* 1. VARIABLES GLOBALES Y RETÍCULA DE 8DP */
+:root {
+  /* Retícula modular de 8dp (CF16 SENA) */
+  --space-xs: 4px;
+  --space-sm: 8px;   /* 1x módulo base */
+  --space-md: 16px;  /* 2x margen lateral */
+  --space-lg: 24px;  /* 3x espaciado secciones */
+  --space-xl: 32px;  /* 4x grandes bloques */
+  --space-2xl: 48px; /* Altura mínima de botón táctil (Ley de Fitts) */
+
+  /* Tipografías */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+
+  /* Escala tipográfica */
+  --fs-h1: 2rem;       /* 32px */
+  --fs-h2: 1.375rem;   /* 22px */
+  --fs-h3: 1.125rem;   /* 18px */
+  --fs-body: 1rem;     /* 16px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-xs: 0.75rem;    /* 12px */
+  --line-height: 1.6;
+
+  /* Paleta Modo Claro (WCAG AA) */
+  --color-bg-app: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-header-bg: rgba(255, 255, 255, 0.95);
+
+  /* Colores Señaléticos (CF16 SENA) */
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-primary-light: #e0f2fe;
+
+  /* Colores Reservados (CF16 SENA) */
+  --color-danger: #ef4444;    /* Error y alertas críticas */
+  --color-warning: #f59e0b;   /* Prevención y atención */
+  --color-success: #10b981;   /* Aprobación y éxito */
+
+  /* Sombras de elevación */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* 2. MODO OSCURO (DARK THEME) */
+body.dark-theme {
+  --color-bg-app: #0b1120;
+  --color-bg-card: #1e293b;
+  --color-border: #334155;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-header-bg: rgba(15, 23, 42, 0.95);
+  --color-primary-light: rgba(56, 189, 248, 0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. RESET Y NORMALIZACIÓN */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  line-height: var(--line-height);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-app);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. BARRA DE PROGRESO DE LECTURA */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7, #10b981);
+  z-index: 1000;
+  transition: width 0.1s ease-out;
+}
+
+/* 5. ENCABEZADO PRINCIPAL (HEADER) */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-header-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.brand-badge {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.author-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-bg-card);
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.author-avatar {
+  font-size: 1.5rem;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: var(--fs-sm);
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.author-role {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.btn-theme-toggle {
+  min-height: 44px;
+  padding: 8px 16px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+.btn-theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-primary);
+}
+
+/* 6. LAYOUT MODULAR (GRID & FLEXBOX) */
+.layout-wrapper {
+  max-width: 1300px;
+  margin: var(--space-lg) auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-xl);
+  flex: 1;
+}
+
+/* 7. BARRA LATERAL (SIDEBAR DE NAVEGACIÓN) */
+.sidebar-nav {
+  position: relative;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.search-box {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text-main);
+}
+
+.search-input {
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  font-size: var(--fs-sm);
+  background-color: var(--color-bg-app);
+  color: var(--color-text-main);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.search-count {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.tutorial-nav {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-heading {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--color-text-main);
+}
+
+.nav-instruction {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* CUMPLIMIENTO GUÍA 6: LISTA ORDENADA <ol> */
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  background-color: var(--color-bg-app);
+  transition: all 0.2s ease;
+}
+
+.toc-num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+.toc-link:hover, .toc-link.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  padding-left: 18px;
+}
+
+.sidebar-card.info-box {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-xs);
+}
+
+.info-badge {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-success);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.info-code {
+  display: block;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* 8. CONTENIDO PRINCIPAL Y TARJETAS (CARDS) */
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.section-tag {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.intro-section h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+}
+
+.intro-lead {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.key-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.principle-item {
+  background-color: var(--color-bg-app);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.principle-item .p-icon {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+}
+
+.principle-item strong {
+  font-size: var(--fs-sm);
+  color: var(--color-text-main);
+}
+
+.principle-item span {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* 9. TARJETAS DE TEMAS DEL TUTORIAL (TEMA-CARD) */
+.tema-card {
+  scroll-margin-top: 100px;
+}
+
+.tema-header {
+  margin-bottom: var(--space-md);
+}
+
+.tema-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 8px;
+}
+
+.tema-pill {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.reading-time {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.tema-card h2 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.3;
+}
+
+.tema-figure {
+  margin: var(--space-md) 0 var(--space-lg) 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: #0f172a;
+}
+
+.tema-svg-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tema-figure figcaption {
+  padding: 10px 16px;
+  font-size: var(--fs-xs);
+  color: #94a3b8;
+  background-color: #0b1120;
+  border-top: 1px solid #1e293b;
+  font-style: italic;
+}
+
+.tema-content p {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-main);
+}
+
+.tema-content ul {
+  margin: 0 0 var(--space-md) 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tema-content li {
+  color: var(--color-text-main);
+}
+
+.analogy-box {
+  background-color: var(--color-bg-app);
+  border-left: 4px solid var(--color-warning);
+  padding: var(--space-md);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-md);
+}
+
+.analogy-box strong {
+  display: block;
+  font-size: var(--fs-sm);
+  color: #b45309;
+  margin-bottom: 4px;
+}
+
+body.dark-theme .analogy-box strong {
+  color: #fbbf24;
+}
+
+.analogy-box p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+/* 10. BLOQUES DE CÓDIGO CON BOTÓN DE COPIAR */
+.code-snippet-wrapper {
+  background-color: #0f172a;
+  border-radius: var(--radius-md);
+  border: 1px solid #334155;
+  overflow: hidden;
+  margin-top: var(--space-md);
+}
+
+.snippet-header {
+  background-color: #1e293b;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+.file-tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.btn-copy {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: all 0.2s;
+}
+
+.btn-copy:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+.btn-copy.copied {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: #ffffff;
+}
+
+pre {
+  padding: var(--space-md);
+  overflow-x: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+p code, li code {
+  font-family: var(--font-mono);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* 11. GLOSARIO TÉCNICO */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.glossary-item {
+  background-color: var(--color-bg-app);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.glossary-item dt {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.glossary-item dd {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* 12. BOTÓN FLOTANTE VOLVER ARRIBA */
+.btn-back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 800;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-back-to-top:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-primary-hover);
+}
+
+/* 13. PIE DE PÁGINA (FOOTER) */
+.main-footer {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-md);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.footer-col h3 {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* 14. ADAPTABILIDAD RESPONSIVA (MEDIA QUERIES) */
+@media (max-width: 992px) {
+  .layout-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .sidebar-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+}

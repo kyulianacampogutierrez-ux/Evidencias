@@ -1,0 +1,28 @@
+====================================================================
+SERVICIO NACIONAL DE APRENDIZAJE (SENA)
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA 228118
+EVIDENCIA: GA7-220501096-AA2-EV01: Codificación de módulos del software
+====================================================================
+
+DATOS DE LA APRENDIZ:
+- Nombre: Karen Yuliana Campo
+- Correo Electrónico: karen.campo@sena.edu.co
+- Centro: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Cauca
+- Modalidad: 100% Virtual
+
+ENLACES DEL PROYECTO:
+- Repositorio GitHub: https://github.com/karen-campo/PizzeriaBackend-JDBC.git
+- Rama Principal: main / master
+- Módulo: PizzeriaBackend (Java 17, Maven, JDBC, MariaDB/MySQL)
+- Orquestación: Docker & Docker Compose (sena-pizzeria-db, sena-backend-java)
+
+INSTRUCCIONES DE EJECUCIÓN CON DOCKER:
+1. Levantar la base de datos MariaDB:
+   $ docker compose up -d db
+
+2. Compilar y ejecutar pruebas unitarias con Maven:
+   $ docker compose run --rm backend-java mvn clean test
+
+3. Ejecutar la aplicación de demostración CRUD:
+   $ docker compose run --rm backend-java mvn exec:java -Dexec.mainClass="com.sena.pizzeria.app.Main"
+====================================================================

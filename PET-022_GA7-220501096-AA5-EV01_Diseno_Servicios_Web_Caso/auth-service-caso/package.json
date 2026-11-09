@@ -1,0 +1,22 @@
+{
+  "name": "auth-service-caso",
+  "version": "1.0.0",
+  "description": "Servicio Web REST de Autenticación y Registro de Usuarios - SENA ADSO Ficha 228118",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "sena",
+    "adso",
+    "auth",
+    "rest-api",
+    "jwt",
+    "bcrypt",
+    "servicios-web"
+  ],
+  "author": "Karen Yuliana Campo <karen.campo@sena.edu.co>",
+  "license": "MIT"
+}

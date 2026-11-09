@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentador de Diapositivas - GA6-240202501-AA1-EV02 | Karen Yuliana Campo</title>
+  <style>
+    :root {
+      --sena-green: #00A86B;
+      --sena-dark-green: #065F46;
+      --sena-light-green: #ECFDF5;
+      --blue-accent: #2563EB;
+      --bg-dark: #0F172A;
+      --bg-card: #1E293B;
+      --text-light: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-color: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background: #1E293B;
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .sena-badge {
+      background: var(--sena-green);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .header-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Engine Switcher */
+    .engine-switcher {
+      display: flex;
+      background: #0F172A;
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      gap: 4px;
+    }
+
+    .engine-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 7px 16px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .engine-btn.active {
+      background: var(--blue-accent);
+      color: white;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+    }
+
+    .engine-btn.designcraft.active {
+      background: var(--sena-green);
+      box-shadow: 0 2px 8px rgba(0, 168, 107, 0.4);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      background: #334155;
+      color: white;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .btn-action:hover {
+      background: #475569;
+    }
+
+    .btn-timer {
+      background: #0284C7;
+    }
+    .btn-timer:hover {
+      background: #0369A1;
+    }
+
+    /* Main Presentation Stage */
+    main {
+      flex: 1;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-stage-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .slide-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1360px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      user-select: none;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    /* Floating Navigation Controls */
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .nav-arrow:hover {
+      background: rgba(37, 99, 235, 0.9);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-arrow.prev { left: 35px; }
+    .nav-arrow.next { right: 35px; }
+
+    /* Bottom Slide Indicator & Thumbnails */
+    .stage-bottom-bar {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .slide-indicator {
+      font-size: 14px;
+      font-weight: 600;
+      color: #CBD5E1;
+      background: #1E293B;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #334155;
+    }
+
+    .slide-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .slide-dot {
+      width: 32px;
+      height: 8px;
+      border-radius: 4px;
+      background: #334155;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .slide-dot.active {
+      width: 48px;
+      background: var(--sena-green);
+    }
+
+    /* Teleprompter / Speaker Notes Drawer */
+    .teleprompter-drawer {
+      width: 440px;
+      background: #1E293B;
+      border-left: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.3s ease;
+      z-index: 50;
+    }
+
+    .teleprompter-drawer.collapsed {
+      width: 0;
+      display: none;
+    }
+
+    .drawer-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #162032;
+    }
+
+    .drawer-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #38BDF8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .drawer-content {
+      flex: 1;
+      padding: 18px;
+      overflow-y: auto;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .speech-box {
+      background: #0F172A;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .speech-box-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #A7F3D0;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .speech-text {
+      color: #F1F5F9;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    .grammar-pill {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      border: 1px solid rgba(37, 99, 235, 0.4);
+    }
+
+    .pronunciation-card {
+      background: #132034;
+      border-left: 3px solid #F59E0B;
+      padding: 10px 12px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .pronunciation-card strong {
+      color: #FCD34D;
+    }
+
+    .spanish-box {
+      background: #162032;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      color: #94A3B8;
+      border: 1px dashed #334155;
+    }
+
+    /* Floating Draggable Webcam Preview */
+    .webcam-box {
+      position: absolute;
+      bottom: 40px;
+      right: 470px;
+      width: 260px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      border: 2px solid var(--sena-green);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+      overflow: hidden;
+      z-index: 200;
+      display: none;
+      cursor: move;
+    }
+
+    .webcam-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1);
+    }
+
+    .webcam-header {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      color: white;
+    }
+
+    .webcam-close {
+      cursor: pointer;
+      color: #EF4444;
+      font-weight: bold;
+    }
+
+    /* Recording Timer Widget */
+    .timer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #0F172A;
+      border: 1px solid #334155;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .timer-badge.valid {
+      color: #10B981;
+      border-color: #059669;
+    }
+
+    .timer-badge.warning {
+      color: #F59E0B;
+    }
+
+    .timer-badge.danger {
+      color: #EF4444;
+      border-color: #DC2626;
+    }
+
+    /* Keyboard Shortcuts Modal */
+    .shortcuts-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+      background: #1E293B;
+      border: 1px solid #475569;
+      border-radius: 14px;
+      padding: 24px;
+      width: 480px;
+      max-width: 90vw;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #E2E8F0;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .shortcut-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #334155;
+      font-size: 14px;
+    }
+
+    kbd {
+      background: #0F172A;
+      border: 1px solid #475569;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #38BDF8;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="header-left">
+      <span class="sena-badge">SENA ADSO</span>
+      <div>
+        <div class="header-title">GA6-240202501-AA1-EV02 • Video Presentación Oral en Inglés</div>
+        <div class="header-subtitle">Aprendiz: Karen Yuliana Campo • Popayán, Cauca (100% Virtual) • Ficha 228118</div>
+      </div>
+    </div>
+
+    <!-- Engine Selector: DesignCraft vs FigCraft -->
+    <div class="engine-switcher">
+      <button id="btnDc" class="engine-btn designcraft active" onclick="switchEngine('designcraft')">
+        <span>✨</span> DesignCraft Deck
+      </button>
+      <button id="btnFc" class="engine-btn" onclick="switchEngine('figcraft')">
+        <span>🎨</span> FigCraft Deck
+      </button>
+    </div>
+
+    <!-- Controls: Timer, Camera, Fullscreen, Notes -->
+    <div class="header-controls">
+      <div id="timerDisplay" class="timer-badge warning">⏱️ 00:00</div>
+      <button id="btnTimerToggle" class="btn-action btn-timer" onclick="toggleTimer()">▶ Iniciar</button>
+      <button id="btnTimerReset" class="btn-action" onclick="resetTimer()">↺</button>
+      <button class="btn-action" onclick="toggleWebcam()">📹 Cámara</button>
+      <button class="btn-action" onclick="toggleNotes()">📋 Guion</button>
+      <button class="btn-action" onclick="toggleFullscreen()">⛶ Pantalla Completa</button>
+      <button class="btn-action" onclick="toggleShortcutsModal()">⌨️</button>
+    </div>
+  </header>
+
+  <!-- Presentation Workspace -->
+  <main>
+    <!-- Slide Canvas Area -->
+    <div class="slide-stage-container">
+      <button class="nav-arrow prev" onclick="prevSlide()">❮</button>
+      
+      <div class="slide-wrapper" id="slideWrapper">
+        <img id="currentSlideImg" class="slide-img" src="designcraft/slide_01.png" alt="Diapositiva">
+      </div>
+
+      <button class="nav-arrow next" onclick="nextSlide()">❯</button>
+
+      <!-- Stage Bottom Controls -->
+      <div class="stage-bottom-bar">
+        <div class="slide-indicator" id="slideCounter">Diapositiva 1 de 7</div>
+        <div class="slide-dots" id="slideDots">
+          <!-- Dots rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Teleprompter / Speaker Notes Drawer -->
+    <aside class="teleprompter-drawer" id="teleprompterDrawer">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <span>🎙️</span>
+          <span>Guion Oral (Speech Script)</span>
+        </div>
+        <button class="btn-action" style="padding: 3px 8px;" onclick="toggleNotes()">✕</button>
+      </div>
+
+      <div class="drawer-content" id="drawerContent">
+        <!-- Dynamic Slide Speech Content -->
+      </div>
+    </aside>
+
+    <!-- Floating Draggable Webcam Preview -->
+    <div class="webcam-box" id="webcamBox">
+      <div class="webcam-header">
+        <span>🔴 Webcam Live</span>
+        <span class="webcam-close" onclick="toggleWebcam()">✕</span>
+      </div>
+      <video id="webcamVideo" autoplay playsinline muted></video>
+    </div>
+  </main>
+
+  <!-- Shortcuts Modal -->
+  <div class="shortcuts-modal" id="shortcutsModal" onclick="toggleShortcutsModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-title">
+        <span>Atajos de Teclado</span>
+        <span style="cursor: pointer;" onclick="toggleShortcutsModal()">✕</span>
+      </div>
+      <div class="shortcut-row"><span>Siguiente Diapositiva</span> <kbd>→</kbd> o <kbd>Espacio</kbd></div>
+      <div class="shortcut-row"><span>Diapositiva Anterior</span> <kbd>←</kbd></div>
+      <div class="shortcut-row"><span>Pantalla Completa</span> <kbd>F11</kbd> o <kbd>F</kbd></div>
+      <div class="shortcut-row"><span>Mostrar/Ocultar Guion</span> <kbd>T</kbd></div>
+      <div class="shortcut-row"><span>Activar/Desactivar Cámara</span> <kbd>C</kbd></div>
+      <div class="shortcut-row"><span>Iniciar / Pausar Cronómetro</span> <kbd>P</kbd></div>
+      <div class="shortcut-row"><span>Ir a Diapositiva Directa</span> <kbd>1</kbd> - <kbd>7</kbd></div>
+    </div>
+  </div>
+
+  <script>
+    // State management
+    let currentEngine = 'designcraft'; // 'designcraft' | 'figcraft'
+    let currentSlide = 1;
+    const totalSlides = 7;
+
+    // Timer state
+    let timerSeconds = 0;
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    // Webcam state
+    let webcamStream = null;
+
+    // Slides Data & Speech Scripts
+    const speechData = [
+      {
+        slide: 1,
+        title: "Title & Institutional Cover",
+        estTime: "0:35 min",
+        english: "Good day, instructor and classmates. My name is <strong>Karen Yuliana Campo</strong>. I am an apprentice in the Software Analysis and Development program, Ficha <strong>228118</strong>, studying one hundred percent virtually from the historic city of <strong>Popayán, Cauca, Colombia</strong>.<br><br>Today, I am very pleased to present evidence <strong>GA6-240202501-AA1-EV02</strong>, titled: <em>'Technology as an Evolutionary Process in Software Engineering: The Case of Pizzería Bella Italia'</em>.<br><br>In this presentation, we will explore how digital technology evolves continuously, how cultural dynamics have reshaped our development environment, and how our formative project reflects this technological transformation.",
+        pronunciation: "Popayán, Cauca: /poʊ.pɑːˈjɑːn, ˈkaʊ.kɑː/ • Evolutionary: /ˌev.əˈluː.ʃən.er.i/ • Modality: /ˈvɝː.tʃu.əl moʊˈdæl.ə.t̬i/",
+        spanish: "Buen día instructor y compañeros. Mi nombre es Karen Yuliana Campo. Soy aprendiz de ADSO, Ficha 228118, estudiando 100% virtual desde Popayán, Cauca. Hoy presento la evidencia GA6-240202501-AA1-EV02..."
+      },
+      {
+        slide: 2,
+        title: "Evolutionary vs. Revolutionary Shifts in IT",
+        estTime: "0:45 min",
+        english: "In software engineering, technological change happens across two primary vectors: evolutionary change and revolutionary breakthroughs.<br><br>On the left, we observe <strong>evolutionary technologies</strong>. These represent steady, incremental improvements. For example, the progression from static HTML to dynamic component-based reactive frameworks, and the continuous enhancement of CSS design systems. These adaptations refine performance without breaking existing systems.<br><br>In contrast, on the right, <strong>revolutionary technologies</strong> disrupt entire industry foundations. Cloud computing completely transformed local server rooms into serverless global clouds, while generative AI and autonomous pair agents have revolutionized the way developers write, test, and refactor software.",
+        pronunciation: "Architecture: /ˈɑːr.kə.tek.tʃɚ/ • Revolutionary: /ˌrev.əˈluː.ʃən.er.i/ • Incremental: /ˌɪŋ.krəˈmen.t̬əl/",
+        spanish: "En ingeniería de software, el cambio tecnológico ocurre mediante dos vectores: cambio evolutivo (mejoras incrementales) e innovaciones revolucionarias (disrupciones de paradigma)..."
+      },
+      {
+        slide: 3,
+        title: "Cultural Variations: Remote Work & Virtual Learning",
+        estTime: "0:40 min",
+        english: "Technological evolution does not only alter code; it deeply transforms culture and human collaboration.<br><br>Historically, software teams were required to share a single physical office space in large capital cities. Today, modern cloud platforms, distributed version control, and asynchronous workflows have eliminated geographical boundaries.<br><br>As a SENA apprentice studying one hundred percent virtually from <strong>Popayán, Cauca</strong>, I collaborate seamlessly with peers across Colombia. We use modern agile ceremonies, git repositories, and digital pair programming tools. This cultural shift democratizes talent, fosters inclusive tech ecosystems, and proves that top-tier software solutions can be engineered from any region.",
+        pronunciation: "Asynchronous: /eɪˈsɪŋ.krə.nəs/ • Regional: /ˈriː.dʒən.əl/ • Collaboration: /kəˌlæb.əˈreɪ.ʃən/",
+        spanish: "La evolución tecnológica no solo altera el código; transforma profundamente la cultura y la colaboración humana. Desde Popayán, Cauca, participamos en equipos virtuales..."
+      },
+      {
+        slide: 4,
+        title: "Formative Project Case: Pizzería Bella Italia",
+        estTime: "0:45 min",
+        english: "Let us examine this evolution in our formative project: the information system for <strong>Pizzería Bella Italia</strong>.<br><br>In the past, artisanal pizzerias operated through manual phone calls, handwritten paper order slips, and physical cash registers. This traditional workflow caused lost tickets, delivery delays, and inventory inaccuracies.<br><br>In response, we developed a reactive single-page application. Our platform features role-based access control, an automated cart with instant free-shipping thresholds, and a real-time kitchen tracking screen that updates orders from preparation to delivery. This practical case demonstrates how applying evolutionary software principles turns an artisanal local business into an agile, customer-centric digital venture.",
+        pronunciation: "Artisanal: /ɑːrˈtɪz.ən.əl/ • Threshold: /ˈθreʃ.hoʊld/ • Kanban: /ˈkɑːn.bɑːn/",
+        spanish: "Examinemos esta evolución en nuestro proyecto formativo: el sistema de información para Pizzería Bella Italia. Pasamos de pedidos manuales en papel a una SPA reactiva con tablero Kanban..."
+      },
+      {
+        slide: 5,
+        title: "Grammar Spotlight: Future Perfect & Progressive",
+        estTime: "0:45 min",
+        english: "Now, let us examine our grammatical focus: expressing future milestones and continuous processes using the Future Perfect and Future Perfect Progressive tenses.<br><br>First, consider the <strong>Future Perfect</strong> for actions that will be completed before a specific point in time:<br>• <em>'By next semester, our team <span class=\"grammar-pill\">will have deployed</span> the cloud database and <span class=\"grammar-pill\">will have integrated</span> automated payment gateways into Pizzería Bella Italia.'</em><br>• <em>'By graduation, we <span class=\"grammar-pill\">will have developed</span> full-stack enterprise solutions following clean architecture standards.'</em><br><br>Second, observe the <strong>Future Perfect Progressive</strong> for actions continuing up to a future milestone:<br>• <em>'By December, I <span class=\"grammar-pill\">will have been studying</span> software development at SENA for nearly eighteen months.'</em><br>• <em>'By the end of this sprint, our team <span class=\"grammar-pill\">will have been coding</span> reactive user interfaces continuously for three weeks.'</em>",
+        pronunciation: "Will have deployed: /wɪl hæv dɪˈplɔɪd/ • Will have been studying: /wɪl hæv bɪn ˈstʌd.i.ɪŋ/",
+        spanish: "Enfoque gramatical: Future Perfect (acciones completadas antes de un punto futuro) y Future Perfect Progressive (duración continua de una acción hacia el futuro)..."
+      },
+      {
+        slide: 6,
+        title: "Emerging Technological Innovations",
+        estTime: "0:40 min",
+        english: "Looking toward the immediate horizon, several innovative technologies will continue to accelerate our discipline.<br><br>Autonomous agentic AI models are transforming development from basic auto-complete into end-to-end task automation and automated unit testing.<br><br>Serverless computing and edge architectures allow code to execute within milliseconds of the end user, minimizing latency and server maintenance.<br><br>Furthermore, automated design systems—such as DesignCraft and FigCraft—empower developers to programmatically generate vector interfaces, marketing assets, and interactive presentations directly from code. Embracing these emergent technologies is essential for modern software engineers.",
+        pronunciation: "Autonomous: /ɑːˈtɑː.nə.məs/ • Serverless: /ˈsɝː.vɚ.ləs/ • Milliseconds: /ˈmɪl.əˌsek.əndz/",
+        spanish: "Mirando hacia el horizonte inmediato, diversas tecnologías innovadoras continuarán acelerando nuestra disciplina: IA agéntica, Serverless Edge y diseño programático..."
+      },
+      {
+        slide: 7,
+        title: "Conclusions & Professional Outlook",
+        estTime: "0:35 min",
+        english: "To conclude, technology is not a static endpoint; it is a continuous evolutionary journey.<br><br>First, incremental evolutionary improvements provide system stability, while revolutionary disruptions open new market opportunities.<br><br>Second, remote work and virtual training empower apprentices in Popayán, Cauca to participate actively in the global knowledge economy.<br><br>And third, as future software developers, our responsibility is to combine clean technical architecture, continuous learning, and adaptability to solve real-world problems.<br><br>Thank you very much for your time and kind attention. Have a wonderful day!",
+        pronunciation: "Continuous: /kənˈtɪn.ju.əs/ • Adaptability: /əˌdæp.təˈbɪl.ə.t̬i/ • Attention: /əˈten.ʃən/",
+        spanish: "Para concluir, la tecnología no es un punto estático; es un viaje evolutivo continuo. ¡Muchas gracias por su atención y que tengan un excelente día!"
+      }
+    ];
+
+    // Engine slide paths
+    function getSlideSrc(engine, slideNum) {
+      if (engine === 'designcraft') {
+        const pad = String(slideNum).padStart(2, '0');
+        return `designcraft/slide_${pad}.png`;
+      } else {
+        const names = [
+          'Slide 1 - Cover.png',
+          'Slide 2 - Evolution.png',
+          'Slide 3 - Culture.png',
+          'Slide 4 - Pizzeria.png',
+          'Slide 5 - Grammar.png',
+          'Slide 6 - Innovations.png',
+          'Slide 7 - Conclusions.png'
+        ];
+        return `figcraft/${names[slideNum - 1]}`;
+      }
+    }
+
+    // Engine switcher
+    function switchEngine(engine) {
+      currentEngine = engine;
+      document.getElementById('btnDc').classList.toggle('active', engine === 'designcraft');
+      document.getElementById('btnFc').classList.toggle('active', engine === 'figcraft');
+      document.getElementById('btnFc').classList.toggle('designcraft', false);
+      updateView();
+    }
+
+    // Update Slide View & Drawer
+    function updateView() {
+      const img = document.getElementById('currentSlideImg');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = getSlideSrc(currentEngine, currentSlide);
+        img.style.opacity = '1';
+      }, 120);
+
+      document.getElementById('slideCounter').textContent = `Diapositiva ${currentSlide} de ${totalSlides} (${currentEngine === 'designcraft' ? 'DesignCraft' : 'FigCraft'})`;
+
+      // Update dots
+      const dotsContainer = document.getElementById('slideDots');
+      dotsContainer.innerHTML = '';
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `slide-dot ${i === currentSlide ? 'active' : ''}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      }
+
+      // Update teleprompter content
+      const data = speechData[currentSlide - 1];
+      const drawer = document.getElementById('drawerContent');
+      drawer.innerHTML = `
+        <div class="speech-box">
+          <div class="speech-box-title">
+            <span>SLIDE ${data.slide} • ${data.title.toUpperCase()}</span>
+            <span>⏱️ ${data.estTime}</span>
+          </div>
+          <div class="speech-text">${data.english}</div>
+        </div>
+
+        <div class="pronunciation-card">
+          <strong>🗣️ Guía de Pronunciación:</strong><br>
+          ${data.pronunciation}
+        </div>
+
+        <div class="spanish-box">
+          <strong>📝 Referencia en Español:</strong><br>
+          ${data.spanish}
+        </div>
+      `;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        updateView();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateView();
+      }
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      updateView();
+    }
+
+    // Timer functions
+    function toggleTimer() {
+      const btn = document.getElementById('btnTimerToggle');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        btn.textContent = '▶ Reanudar';
+        btn.style.background = '#0284C7';
+      } else {
+        isTimerRunning = true;
+        btn.textContent = '⏸ Pausar';
+        btn.style.background = '#D97706';
+        timerInterval = setInterval(() => {
+          timerSeconds++;
+          renderTimer();
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerSeconds = 0;
+      document.getElementById('btnTimerToggle').textContent = '▶ Iniciar';
+      document.getElementById('btnTimerToggle').style.background = '#0284C7';
+      renderTimer();
+    }
+
+    function renderTimer() {
+      const mins = Math.floor(timerSeconds / 60);
+      const secs = timerSeconds % 60;
+      const display = document.getElementById('timerDisplay');
+      display.textContent = `⏱️ ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+      // Color rules for 3 to 7 minutes
+      if (timerSeconds < 180) { // Under 3 min
+        display.className = 'timer-badge warning';
+      } else if (timerSeconds <= 420) { // 3:00 to 7:00 min (PERFECT)
+        display.className = 'timer-badge valid';
+      } else { // Over 7 min
+        display.className = 'timer-badge danger';
+      }
+    }
+
+    // Teleprompter drawer toggle
+    function toggleNotes() {
+      const drawer = document.getElementById('teleprompterDrawer');
+      drawer.classList.toggle('collapsed');
+    }
+
+    // Fullscreen toggle
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Webcam preview toggle
+    async function toggleWebcam() {
+      const box = document.getElementById('webcamBox');
+      const video = document.getElementById('webcamVideo');
+
+      if (box.style.display === 'block') {
+        box.style.display = 'none';
+        if (webcamStream) {
+          webcamStream.getTracks().forEach(t => t.stop());
+          webcamStream = null;
+        }
+      } else {
+        try {
+          webcamStream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 }, audio: false });
+          video.srcObject = webcamStream;
+          box.style.display = 'block';
+        } catch (err) {
+          alert('No se pudo acceder a la cámara web o no cuenta con permisos. Para grabar, también puedes usar OBS o Loom grabando tu pantalla.');
+        }
+      }
+    }
+
+    // Draggable Webcam
+    const webcamBox = document.getElementById('webcamBox');
+    let isDragging = false;
+    let dragStartX, dragStartY, initialLeft, initialTop;
+
+    webcamBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
+      const rect = webcamBox.getBoundingClientRect();
+      initialLeft = rect.left;
+      initialTop = rect.top;
+      webcamBox.style.right = 'auto';
+      webcamBox.style.bottom = 'auto';
+      webcamBox.style.left = initialLeft + 'px';
+      webcamBox.style.top = initialTop + 'px';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - dragStartX;
+      const dy = e.clientY - dragStartY;
+      webcamBox.style.left = (initialLeft + dx) + 'px';
+      webcamBox.style.top = (initialTop + dy) + 'px';
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Shortcuts modal
+    function toggleShortcutsModal() {
+      const modal = document.getElementById('shortcutsModal');
+      modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key.toLowerCase() === 't') {
+        toggleNotes();
+      } else if (e.key.toLowerCase() === 'c') {
+        toggleWebcam();
+      } else if (e.key.toLowerCase() === 'p') {
+        toggleTimer();
+      } else if (e.key >= '1' && e.key <= '7') {
+        goToSlide(parseInt(e.key));
+      }
+    });
+
+    // Initialize view on load
+    updateView();
+  </script>
+</body>
+</html>

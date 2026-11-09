@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzería Bella Italia - React SPA (Ejecución Directa en Navegador)</title>
+  
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- React 18, ReactDOM 18 y Babel Standalone para transpilar JSX en tiempo de ejecución -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* VARIABLES Y RESET */
+    :root {
+      --primary: #c2410c;
+      --primary-hover: #9a3412;
+      --primary-light: #ffedd5;
+      --secondary: #1e293b;
+      --accent: #15803d;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    input, select, textarea {
+      font-family: inherit;
+    }
+
+    /* AVISO DE EJECUCIÓN DIRECTA */
+    .local-banner-notice {
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+    }
+    .local-banner-notice strong {
+      color: #38bdf8;
+    }
+    .local-banner-notice .badge-tag {
+      background: #0284c7;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* NAVBAR */
+    .navbar-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .brand-icon {
+      font-size: 2rem;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .role-toggle-btn {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .role-toggle-btn.cliente {
+      background-color: #f1f5f9;
+      color: #334155;
+    }
+
+    .role-toggle-btn.admin {
+      background-color: #fef3c7;
+      color: #92400e;
+      border-color: #fcd34d;
+    }
+
+    .cart-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: white;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(194, 65, 12, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .cart-button:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .cart-badge {
+      background-color: white;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.96) 100%),
+                  url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+      color: white;
+      padding: 60px 24px 70px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background-color: rgba(194, 65, 12, 0.35);
+      color: #fdba74;
+      border: 1px solid rgba(253, 186, 116, 0.5);
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 22px;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .feature-pill {
+      background-color: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .feature-pill.highlight {
+      background-color: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-hero-primary {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 26px;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(194, 65, 12, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-hero-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* MAIN CONTAINER */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 24px;
+      min-height: 500px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-tag {
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      color: var(--secondary);
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    /* FILTROS Y BUSCADOR */
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .category-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      background-color: white;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .pill-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .pill-btn.active {
+      background-color: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(194, 65, 12, 0.25);
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 9px 36px 9px 36px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background-color: white;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .clear-search-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* MENU GRID */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 26px;
+    }
+
+    .pizza-card {
+      background-color: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pizza-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .pizza-card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: rgba(15, 23, 42, 0.85);
+      color: white;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .size-selector {
+      margin-bottom: 14px;
+    }
+
+    .selector-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .select-custom {
+      width: 100%;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background-color: var(--bg);
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .card-pricing-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .qty-control {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      background-color: var(--bg);
+      padding: 2px 6px;
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-number {
+      padding: 0 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .price-display {
+      text-align: right;
+    }
+
+    .price-unit {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .price-total {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .btn-add-cart {
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-add-cart:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-add-cart.added {
+      background-color: var(--accent);
+    }
+
+    /* CART DRAWER */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .drawer-container {
+      width: 100%;
+      max-width: 420px;
+      background-color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-xl);
+      animation: slideRight 0.25s ease-out;
+    }
+
+    @keyframes slideRight {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+
+    .drawer-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .drawer-close-btn {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .shipping-bar-wrap {
+      padding: 10px 20px;
+      background-color: #fffbeb;
+      border-bottom: 1px solid #fef3c7;
+      font-size: 0.85rem;
+    }
+
+    .shipping-progress-bg {
+      height: 6px;
+      background-color: #fde68a;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .shipping-progress-fill {
+      height: 100%;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 20px;
+    }
+
+    .cart-item-row {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item-img {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .cart-item-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 2px 0 6px;
+    }
+
+    .cart-item-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .qty-ctrl-sm {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg);
+    }
+
+    .qty-ctrl-sm button {
+      padding: 2px 8px;
+      font-weight: bold;
+    }
+
+    .qty-ctrl-sm span {
+      padding: 0 6px;
+      font-size: 0.85rem;
+    }
+
+    .cart-item-subtotal {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    .cart-remove-btn {
+      font-size: 0.85rem;
+    }
+
+    .drawer-footer {
+      padding: 18px 20px;
+      border-top: 1px solid var(--border);
+      background-color: #fafaf9;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .price-row.total {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--secondary);
+      border-top: 1px dashed var(--border);
+      padding-top: 8px;
+      margin-top: 6px;
+    }
+
+    .price-row.total strong {
+      color: var(--primary);
+    }
+
+    .btn-checkout {
+      width: 100%;
+      background-color: var(--accent);
+      color: white;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-top: 12px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-checkout:hover {
+      background-color: #166534;
+    }
+
+    /* MODAL CHECKOUT */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 250;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-container {
+      width: 100%;
+      max-width: 480px;
+      background-color: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .modal-form {
+      padding: 18px 20px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 3px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      outline: none;
+    }
+
+    .form-input.invalid {
+      border-color: #ef4444;
+      background-color: #fef2f2;
+    }
+
+    .form-error {
+      color: #ef4444;
+      font-size: 0.75rem;
+      margin-top: 3px;
+      display: block;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn-cancel {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+    }
+
+    .btn-submit {
+      flex: 2;
+      background-color: var(--accent);
+      color: white;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+    }
+
+    /* TRACKER */
+    .tracker-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #86efac;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .tracker-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      text-align: center;
+      margin-top: 14px;
+    }
+    .tracker-step.done {
+      color: #166534;
+      font-weight: bold;
+    }
+    .tracker-step.current {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* KPI DASHBOARD */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .kpi-card {
+      background: white;
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .kpi-icon {
+      font-size: 2rem;
+    }
+    .kpi-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+    .kpi-lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* COCINA TABLE */
+    .kitchen-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .kitchen-table th, .kitchen-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    .kitchen-table th {
+      background: #f8fafc;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .status-pendiente { background: #fef3c7; color: #92400e; }
+    .status-preparando { background: #ffedd5; color: #9a3412; }
+    .status-en_camino { background: #dbeafe; color: #1e40af; }
+    .status-entregado { background: #dcfce7; color: #166534; }
+
+    /* FOOTER */
+    .app-footer {
+      background: var(--secondary);
+      color: white;
+      padding: 30px 24px;
+      margin-top: 50px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor Raíz de React -->
+  <div id="root"></div>
+
+  <!-- SCRIPT CON REACT Y BABEL STANDALONE -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, createContext, useContext, useRef } = React;
+
+    // ==========================================
+    // 1. DATOS SEMILLA DE PIZZAS (CATÁLOGO REST)
+    // ==========================================
+    const INITIAL_PIZZAS = [
+      {
+        idPizza: 1,
+        nombre: 'Pizza Margarita Clásica',
+        descripcion: 'Salsa pomodoro San Marzano, mozzarella di bufala fresca, albahaca fresca y aceite de oliva virgen extra.',
+        precio: 25000,
+        categoria: 'Tradicionales',
+        imagen: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&auto=format&fit=crop&q=60'
+      },
+      {
+        idPizza: 2,
+        nombre: 'Pizza Pepperoni Especial',
+        descripcion: 'Generosa capa de pepperoni artesanal curado, queso mozzarella fundido y orégano silvestre italiano.',
+        precio: 28000,
+        categoria: 'Tradicionales',
+        imagen: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop&q=60'
+      },
+      {
+        idPizza: 3,
+        nombre: 'Pizza Cuatro Quesos Gourmet',
+        descripcion: 'Mezcla selecta de quesos mozzarella, gorgonzola DOP, parmesano reggiano de 24 meses y provolone ahumado.',
+        precio: 32000,
+        categoria: 'Gourmet',
+        imagen: 'https://images.unsplash.com/photo-1573821663912-569905455b1c?w=500&auto=format&fit=crop&q=60'
+      },
+      {
+        idPizza: 4,
+        nombre: 'Pizza Hawaiana Suprema',
+        descripcion: 'Jamón York ahumado de primera calidad, trozos de piña caramelizada al horno y doble queso mozzarella.',
+        precio: 27000,
+        categoria: 'Tradicionales',
+        imagen: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60'
+      },
+      {
+        idPizza: 5,
+        nombre: 'Pizza Vegetariana de la Huerta',
+        descripcion: 'Champiñones frescos de París, pimientos asados, cebolla morada crujiente, aceitunas negras y espinaca baby.',
+        precio: 29000,
+        categoria: 'Especiales',
+        imagen: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60'
+      },
+      {
+        idPizza: 6,
+        nombre: 'Pizza Carnes Bravas',
+        descripcion: 'Tocineta crocante, carne de res sazonada, chorizo italiano y un toque sutil de ají pepperoncino.',
+        precio: 34000,
+        categoria: 'Especiales',
+        imagen: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&auto=format&fit=crop&q=60'
+      }
+    ];
+
+    // ==========================================
+    // 2. CONTEXTO GLOBAL DEL CARRITO (CartContext)
+    // ==========================================
+    const CartContext = createContext();
+
+    function CartProvider({ children }) {
+      const [items, setItems] = useState([]);
+      const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+      const addToCart = (product) => {
+        setItems((prev) => {
+          const index = prev.findIndex(
+            (it) => it.idPizza === product.idPizza && it.tamano === product.tamano
+          );
+          if (index > -1) {
+            const next = [...prev];
+            const current = next[index];
+            const newQty = current.cantidad + product.cantidad;
+            next[index] = { ...current, cantidad: newQty, subtotal: current.precioUnitario * newQty };
+            return next;
+          }
+          return [...prev, { ...product }];
+        });
+        setIsDrawerOpen(true);
+      };
+
+      const updateQuantity = (idPizza, tamano, delta) => {
+        setItems((prev) =>
+          prev
+            .map((it) => {
+              if (it.idPizza === idPizza && it.tamano === tamano) {
+                const newQty = it.cantidad + delta;
+                if (newQty <= 0) return null;
+                return { ...it, cantidad: newQty, subtotal: it.precioUnitario * newQty };
+              }
+              return it;
+            })
+            .filter(Boolean)
+        );
+      };
+
+      const removeFromCart = (idPizza, tamano) => {
+        setItems((prev) => prev.filter((it) => !(it.idPizza === idPizza && it.tamano === tamano)));
+      };
+
+      const clearCart = () => setItems([]);
+
+      const totalItems = useMemo(() => items.reduce((acc, it) => acc + it.cantidad, 0), [items]);
+      const subtotalCOP = useMemo(() => items.reduce((acc, it) => acc + it.subtotal, 0), [items]);
+      const freeShippingEligible = subtotalCOP >= 50000;
+      const shippingCOP = subtotalCOP === 0 ? 0 : freeShippingEligible ? 0 : 6000;
+      const totalCOP = subtotalCOP + shippingCOP;
+
+      return (
+        <CartContext.Provider
+          value={{
+            items,
+            addToCart,
+            updateQuantity,
+            removeFromCart,
+            clearCart,
+            totalItems,
+            subtotalCOP,
+            shippingCOP,
+            totalCOP,
+            freeShippingEligible,
+            isDrawerOpen,
+            setIsDrawerOpen
+          }}
+        >
+          {children}
+        </CartContext.Provider>
+      );
+    }
+
+    const useCart = () => useContext(CartContext);
+
+    // ==========================================
+    // 3. COMPONENTES VISUALES EN REACT
+    // ==========================================
+
+    // NAVBAR
+    function Navbar({ activeSection, onNavigate, role, onToggleRole }) {
+      const { totalItems, setIsDrawerOpen } = useCart();
+      return (
+        <header className="navbar-header">
+          <div className="navbar-container">
+            <div className="navbar-brand" onClick={() => onNavigate('menu')}>
+              <span className="brand-icon">🍕</span>
+              <div>
+                <span className="brand-title">Pizzería Bella Italia</span>
+                <span className="brand-subtitle">Trattoria & Forno a Legna</span>
+              </div>
+            </div>
+
+            <nav className="navbar-nav">
+              <button
+                className={`nav-link ${activeSection === 'menu' ? 'active' : ''}`}
+                onClick={() => onNavigate('menu')}
+              >
+                Menú Tradicional
+              </button>
+              <button
+                className={`nav-link ${activeSection === 'cocina' ? 'active' : ''}`}
+                onClick={() => onNavigate('cocina')}
+              >
+                Comandas & Cocina
+              </button>
+              <button
+                className={`nav-link ${activeSection === 'kpis' ? 'active' : ''}`}
+                onClick={() => onNavigate('kpis')}
+              >
+                Métricas KPI
+              </button>
+
+              <button
+                className={`role-toggle-btn ${role === 'ADMIN' ? 'admin' : 'cliente'}`}
+                onClick={onToggleRole}
+              >
+                Rol: <strong>{role}</strong>
+              </button>
+
+              <button className="cart-button" onClick={() => setIsDrawerOpen(true)}>
+                <span>🛒</span>
+                <span>Carrito</span>
+                {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+              </button>
+            </nav>
+          </div>
+        </header>
+      );
+    }
+
+    // HERO BANNER
+    function HeroBanner({ onExplore }) {
+      return (
+        <section className="hero-banner">
+          <div className="hero-content">
+            <span className="hero-tag">🔥 AUTÉNTICA PIZZA NAPOLITANA &bull; POPAYÁN</span>
+            <h1 className="hero-title">Tradición Italiana Hecha con Pasión y Fuego</h1>
+            <p className="hero-desc">
+              Masa madre fermentada durante 48 horas, quesos madurados e ingredientes horneados en piso refractario a 450°C.
+            </p>
+            <div className="hero-features">
+              <div className="feature-pill">🚚 Domicilios Rápidos</div>
+              <div className="feature-pill highlight">✨ Envío GRATIS sobre $50.000</div>
+              <div className="feature-pill">🧀 100% Quesos Madurados</div>
+            </div>
+            <div className="hero-actions">
+              <button className="btn-hero-primary" onClick={onExplore}>
+                Pedir en Línea Ahora 🍕
+              </button>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // PIZZA CARD
+    function PizzaCard({ pizza, onAddToCart }) {
+      const [tamano, setTamano] = useState('mediana');
+      const [qty, setQty] = useState(1);
+      const [added, setAdded] = useState(false);
+
+      const factor = tamano === 'familiar' ? 1.4 : tamano === 'personal' ? 0.7 : 1.0;
+      const unitPrice = Math.round(pizza.precio * factor);
+
+      const handleAdd = () => {
+        onAddToCart({
+          idPizza: pizza.idPizza,
+          nombre: pizza.nombre,
+          tamano,
+          cantidad: qty,
+          precioUnitario: unitPrice,
+          subtotal: unitPrice * qty,
+          imagen: pizza.imagen
+        });
+        setAdded(true);
+        setTimeout(() => setAdded(false), 1200);
+      };
+
+      return (
+        <article className="pizza-card">
+          <div className="card-img-wrap">
+            <img src={pizza.imagen} alt={pizza.nombre} className="card-img" />
+            <span className="card-badge">{pizza.categoria}</span>
+          </div>
+          <div className="card-body">
+            <h3 className="card-title">{pizza.nombre}</h3>
+            <p className="card-desc">{pizza.descripcion}</p>
+
+            <div className="size-selector">
+              <label className="selector-label">Tamaño:</label>
+              <select className="select-custom" value={tamano} onChange={(e) => setTamano(e.target.value)}>
+                <option value="personal">Personal (4 porciones) - 30% desc.</option>
+                <option value="mediana">Mediana (8 porciones) - Estándar</option>
+                <option value="familiar">Familiar (12 porciones) + 40%</option>
+              </select>
+            </div>
+
+            <div className="card-pricing-row">
+              <div className="qty-control">
+                <button className="qty-btn" onClick={() => setQty((q) => Math.max(1, q - 1))}>-</button>
+                <span className="qty-number">{qty}</span>
+                <button className="qty-btn" onClick={() => setQty((q) => q + 1)}>+</button>
+              </div>
+              <div className="price-display">
+                <span className="price-unit">${unitPrice.toLocaleString('es-CO')} c/u</span>
+                <span className="price-total">${(unitPrice * qty).toLocaleString('es-CO')}</span>
+              </div>
+            </div>
+
+            <button className={`btn-add-cart ${added ? 'added' : ''}`} onClick={handleAdd}>
+              {added ? '¡Agregada al Pedido! ✓' : 'Agregar al Carrito 🛒'}
+            </button>
+          </div>
+        </article>
+      );
+    }
+
+    // CART DRAWER
+    function CartDrawer({ onProceedCheckout }) {
+      const {
+        items,
+        isDrawerOpen,
+        setIsDrawerOpen,
+        updateQuantity,
+        removeFromCart,
+        subtotalCOP,
+        shippingCOP,
+        totalCOP,
+        freeShippingEligible
+      } = useCart();
+
+      if (!isDrawerOpen) return null;
+
+      const progress = Math.min(100, Math.round((subtotalCOP / 50000) * 100));
+
+      return (
+        <div className="drawer-overlay" onClick={() => setIsDrawerOpen(false)}>
+          <div className="drawer-container" onClick={(e) => e.stopPropagation()}>
+            <div className="drawer-header">
+              <h2 className="drawer-title">🛒 Tu Pedido ({items.length})</h2>
+              <button className="drawer-close-btn" onClick={() => setIsDrawerOpen(false)}>✕</button>
+            </div>
+
+            <div className="shipping-bar-wrap">
+              {freeShippingEligible ? (
+                <div>🎉 ¡Felicidades! Tienes <strong>ENVÍO GRATIS</strong>.</div>
+              ) : (
+                <div>Agrega <strong>${(50000 - subtotalCOP).toLocaleString('es-CO')}</strong> más para <strong>ENVÍO GRATIS</strong>.</div>
+              )}
+              <div className="shipping-progress-bg">
+                <div className="shipping-progress-fill" style={{ width: `${progress}%` }}></div>
+              </div>
+            </div>
+
+            <div className="drawer-body">
+              {items.length === 0 ? (
+                <div style={{ textAlign: 'center', padding: '40px 0', color: '#64748b' }}>
+                  <div style={{ fontSize: '3rem' }}>🍕</div>
+                  <p>Tu carrito está vacío.</p>
+                </div>
+              ) : (
+                items.map((it) => (
+                  <div key={`${it.idPizza}-${it.tamano}`} className="cart-item-row">
+                    <img src={it.imagen} alt={it.nombre} className="cart-item-img" />
+                    <div className="cart-item-details">
+                      <div className="cart-item-name">{it.nombre}</div>
+                      <div className="cart-item-meta">{it.tamano} &bull; ${it.precioUnitario.toLocaleString('es-CO')} c/u</div>
+                      <div className="cart-item-actions">
+                        <div className="qty-ctrl-sm">
+                          <button onClick={() => updateQuantity(it.idPizza, it.tamano, -1)}>-</button>
+                          <span>{it.cantidad}</span>
+                          <button onClick={() => updateQuantity(it.idPizza, it.tamano, 1)}>+</button>
+                        </div>
+                        <span className="cart-item-subtotal">${it.subtotal.toLocaleString('es-CO')}</span>
+                        <button className="cart-remove-btn" onClick={() => removeFromCart(it.idPizza, it.tamano)}>🗑️</button>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {items.length > 0 && (
+              <div className="drawer-footer">
+                <div className="price-row">
+                  <span>Subtotal:</span>
+                  <span>${subtotalCOP.toLocaleString('es-CO')}</span>
+                </div>
+                <div className="price-row">
+                  <span>Domicilio:</span>
+                  <span style={{ color: freeShippingEligible ? '#15803d' : 'inherit', fontWeight: 'bold' }}>
+                    {freeShippingEligible ? 'GRATIS' : `$${shippingCOP.toLocaleString('es-CO')}`}
+                  </span>
+                </div>
+                <div className="price-row total">
+                  <span>Total:</span>
+                  <strong>${totalCOP.toLocaleString('es-CO')}</strong>
+                </div>
+                <button
+                  className="btn-checkout"
+                  onClick={() => {
+                    setIsDrawerOpen(false);
+                    onProceedCheckout();
+                  }}
+                >
+                  Confirmar y Pedir Ahora 🛵
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    // CUSTOMER FORM MODAL
+    function CustomerFormModal({ isOpen, onClose, onConfirm }) {
+      const { totalCOP } = useCart();
+      const [nombre, setNombre] = useState('');
+      const [telefono, setTelefono] = useState('');
+      const [direccion, setDireccion] = useState('');
+      const [metodoPago, setMetodoPago] = useState('EFECTIVO');
+      const [errors, setErrors] = useState({});
+
+      if (!isOpen) return null;
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        const errs = {};
+
+        if (!nombre.trim() || nombre.trim().length < 3) {
+          errs.nombre = 'El nombre completo debe tener al menos 3 caracteres.';
+        }
+
+        // Validación Regex celular colombiano (10 dígitos iniciando en 3)
+        const phoneRegex = /^3[0-9]{9}$/;
+        if (!telefono.trim() || !phoneRegex.test(telefono.trim())) {
+          errs.telefono = 'Ingrese un celular colombiano válido de 10 dígitos (ej: 3123456789).';
+        }
+
+        if (!direccion.trim() || direccion.trim().length < 5) {
+          errs.direccion = 'La dirección de domicilio debe tener al menos 5 caracteres.';
+        }
+
+        if (Object.keys(errs).length > 0) {
+          setErrors(errs);
+          return;
+        }
+
+        onConfirm({ nombre, telefono, direccion, metodoPago });
+      };
+
+      return (
+        <div className="modal-overlay" onClick={onClose}>
+          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2 className="modal-title">🛵 Datos de Entrega</h2>
+              <button onClick={onClose}>✕</button>
+            </div>
+            <form onSubmit={handleSubmit} className="modal-form">
+              <div className="form-group">
+                <label className="form-label">Nombre Completo *</label>
+                <input
+                  type="text"
+                  className={`form-input ${errors.nombre ? 'invalid' : ''}`}
+                  value={nombre}
+                  placeholder="Ej: Karen Yuliana Campo"
+                  onChange={(e) => setNombre(e.target.value)}
+                />
+                {errors.nombre && <span className="form-error">⚠️ {errors.nombre}</span>}
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Celular Colombiano (10 dígitos) *</label>
+                <input
+                  type="tel"
+                  maxLength="10"
+                  className={`form-input ${errors.telefono ? 'invalid' : ''}`}
+                  value={telefono}
+                  placeholder="Ej: 3101234567"
+                  onChange={(e) => setTelefono(e.target.value)}
+                />
+                {errors.telefono && <span className="form-error">⚠️ {errors.telefono}</span>}
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Dirección de Domicilio *</label>
+                <input
+                  type="text"
+                  className={`form-input ${errors.direccion ? 'invalid' : ''}`}
+                  value={direccion}
+                  placeholder="Ej: Calle 5 # 12-45, Popayán"
+                  onChange={(e) => setDireccion(e.target.value)}
+                />
+                {errors.direccion && <span className="form-error">⚠️ {errors.direccion}</span>}
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Método de Pago</label>
+                <select className="form-select" value={metodoPago} onChange={(e) => setMetodoPago(e.target.value)}>
+                  <option value="EFECTIVO">Efectivo contra entrega</option>
+                  <option value="NEQUI">Transferencia Nequi / Daviplata</option>
+                  <option value="DATAFONO">Datáfono (Tarjeta débito/crédito)</option>
+                </select>
+              </div>
+
+              <div style={{ background: '#f8fafc', padding: '10px 14px', borderRadius: '6px', margin: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                <span>Total a pagar:</span>
+                <strong style={{ color: '#c2410c', fontSize: '1.2rem' }}>${totalCOP.toLocaleString('es-CO')}</strong>
+              </div>
+
+              <div className="modal-actions">
+                <button type="button" className="btn-cancel" onClick={onClose}>Cancelar</button>
+                <button type="submit" className="btn-submit">Confirmar Pedido 🍕</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      );
+    }
+
+    // ORDER TRACKER
+    function OrderStatusTracker({ order }) {
+      if (!order) return null;
+      const steps = ['PENDIENTE', 'PREPARANDO', 'EN_CAMINO', 'ENTREGADO'];
+      const activeIdx = steps.indexOf(order.status);
+
+      return (
+        <div className="tracker-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div>
+              <span style={{ background: '#15803d', color: 'white', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>
+                ORDEN CONFIRMADA #{order.orderId}
+              </span>
+              <h3 style={{ color: '#14532d', marginTop: '6px' }}>¡Gracias por tu compra, {order.nombre}!</h3>
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <span style={{ fontSize: '0.8rem', color: '#166534' }}>Total:</span>
+              <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#15803d' }}>
+                ${order.total.toLocaleString('es-CO')}
+              </div>
+            </div>
+          </div>
+
+          <div className="tracker-steps">
+            <div className={`tracker-step ${activeIdx >= 0 ? 'done' : ''}`}>📝 Recibido</div>
+            <div className={`tracker-step ${activeIdx >= 1 ? 'done' : ''}`}>🔥 En Horno</div>
+            <div className={`tracker-step ${activeIdx >= 2 ? 'done' : ''}`}>🛵 En Camino</div>
+            <div className={`tracker-step ${activeIdx >= 3 ? 'done' : ''}`}>🍕 Entregado</div>
+          </div>
+        </div>
+      );
+    }
+
+    // KPI STATS
+    function KPIStats({ orders }) {
+      const revenue = orders.reduce((acc, ord) => acc + ord.total, 0);
+      const pending = orders.filter((o) => o.estado === 'PENDIENTE' || o.estado === 'PREPARANDO').length;
+      const delivered = orders.filter((o) => o.estado === 'ENTREGADO').length;
+
+      return (
+        <div className="kpi-grid">
+          <div className="kpi-card">
+            <span className="kpi-icon">💰</span>
+            <div>
+              <div className="kpi-val">${revenue.toLocaleString('es-CO')}</div>
+              <div className="kpi-lbl">Ingresos Totales (Hoy)</div>
+            </div>
+          </div>
+          <div className="kpi-card">
+            <span className="kpi-icon">📋</span>
+            <div>
+              <div className="kpi-val">{pending}</div>
+              <div className="kpi-lbl">Comandas en Cocina</div>
+            </div>
+          </div>
+          <div className="kpi-card">
+            <span className="kpi-icon">✅</span>
+            <div>
+              <div className="kpi-val">{delivered}</div>
+              <div className="kpi-lbl">Pedidos Entregados</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // COCINA PANEL
+    function OrderHistoryTable({ orders, onUpdateStatus }) {
+      return (
+        <div>
+          <div className="section-heading">
+            <span className="section-tag">PANEL OPERATIVO</span>
+            <h2 className="section-title">👨‍🍳 Comandas de Cocina</h2>
+          </div>
+          <table className="kitchen-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Dirección</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((ord) => (
+                <tr key={ord.idPedido}>
+                  <td><strong>#{ord.idPedido}</strong></td>
+                  <td>{ord.nombre}</td>
+                  <td>{ord.direccion}</td>
+                  <td>${ord.total.toLocaleString('es-CO')}</td>
+                  <td>
+                    <span className={`status-badge status-${ord.estado.toLowerCase()}`}>{ord.estado}</span>
+                  </td>
+                  <td>
+                    {ord.estado === 'PENDIENTE' && (
+                      <button
+                        style={{ background: '#ea580c', color: 'white', padding: '4px 10px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}
+                        onClick={() => onUpdateStatus(ord.idPedido, 'PREPARANDO')}
+                      >
+                        🔥 Al Horno
+                      </button>
+                    )}
+                    {ord.estado === 'PREPARANDO' && (
+                      <button
+                        style={{ background: '#0284c7', color: 'white', padding: '4px 10px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}
+                        onClick={() => onUpdateStatus(ord.idPedido, 'EN_CAMINO')}
+                      >
+                        🛵 Despachar
+                      </button>
+                    )}
+                    {ord.estado === 'EN_CAMINO' && (
+                      <button
+                        style={{ background: '#16a34a', color: 'white', padding: '4px 10px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}
+                        onClick={() => onUpdateStatus(ord.idPedido, 'ENTREGADO')}
+                      >
+                        ✓ Entregar
+                      </button>
+                    )}
+                    {ord.estado === 'ENTREGADO' && <span style={{ color: '#16a34a', fontWeight: 'bold' }}>✓ Completado</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    // ==========================================
+    // 4. APLICACIÓN PRINCIPAL (App)
+    // ==========================================
+    function App() {
+      const [activeSection, setActiveSection] = useState('menu');
+      const [role, setRole] = useState('CLIENTE');
+      const [selectedCat, setSelectedCat] = useState('Todas');
+      const [search, setSearch] = useState('');
+      const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+      const [confirmedOrder, setConfirmedOrder] = useState(null);
+
+      // Comandas iniciales de cocina
+      const [orders, setOrders] = useState([
+        { idPedido: 101, nombre: 'Carlos Mendoza', direccion: 'Calle 5 # 12-45, Popayán', total: 53000, estado: 'PREPARANDO' },
+        { idPedido: 102, nombre: 'María Fernanda Ruiz', direccion: 'Carrera 9 # 3-21, Popayán', total: 34000, estado: 'PENDIENTE' }
+      ]);
+
+      const { addToCart, totalCOP, clearCart } = useCart();
+
+      const filteredPizzas = useMemo(() => {
+        return INITIAL_PIZZAS.filter((p) => {
+          const matchCat = selectedCat === 'Todas' || p.categoria === selectedCat;
+          const matchSearch = !search || p.nombre.toLowerCase().includes(search.toLowerCase());
+          return matchCat && matchSearch;
+        });
+      }, [selectedCat, search]);
+
+      const handleConfirmOrder = ({ nombre, telefono, direccion }) => {
+        const newOrderId = Math.floor(100 + Math.random() * 900);
+        const newOrder = {
+          idPedido: newOrderId,
+          orderId: newOrderId,
+          nombre,
+          telefono,
+          direccion,
+          total: totalCOP,
+          estado: 'PENDIENTE',
+          status: 'PENDIENTE'
+        };
+
+        setOrders((prev) => [newOrder, ...prev]);
+        setConfirmedOrder(newOrder);
+        clearCart();
+        setIsCheckoutOpen(false);
+        window.scrollTo({ top: 380, behavior: 'smooth' });
+      };
+
+      const handleUpdateStatus = (id, newStatus) => {
+        setOrders((prev) =>
+          prev.map((ord) => (ord.idPedido === id ? { ...ord, estado: newStatus } : ord))
+        );
+        if (confirmedOrder && confirmedOrder.orderId === id) {
+          setConfirmedOrder((prev) => ({ ...prev, status: newStatus }));
+        }
+      };
+
+      return (
+        <div>
+          {/* Aviso informativo de ejecución directa */}
+          <div className="local-banner-notice">
+            <span>🍕 <strong>Pizzería Bella Italia</strong> &bull; Ejecución directa en navegador sin servidor local</span>
+            <span className="badge-tag">REACT 18 + BABEL LIVE</span>
+          </div>
+
+          <Navbar
+            activeSection={activeSection}
+            onNavigate={setActiveSection}
+            role={role}
+            onToggleRole={() => setRole(role === 'CLIENTE' ? 'ADMIN' : 'CLIENTE')}
+          />
+
+          <HeroBanner onExplore={() => setActiveSection('menu')} />
+
+          <main className="main-content">
+            {confirmedOrder && <OrderStatusTracker order={confirmedOrder} />}
+
+            {activeSection === 'menu' && (
+              <div>
+                <div className="section-heading">
+                  <span className="section-tag">CATÁLOGO GASTRONÓMICO</span>
+                  <h2 className="section-title">Nuestras Pizzas de Autor</h2>
+                  <p className="section-desc">Selecciona tu pizza, personaliza el tamaño y haz tu pedido.</p>
+                </div>
+
+                <div className="filter-bar">
+                  <div className="category-pills">
+                    {['Todas', 'Tradicionales', 'Especiales', 'Gourmet'].map((cat) => (
+                      <button
+                        key={cat}
+                        className={`pill-btn ${selectedCat === cat ? 'active' : ''}`}
+                        onClick={() => setSelectedCat(cat)}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="search-box">
+                    <span className="search-icon">🔍</span>
+                    <input
+                      type="text"
+                      className="search-input"
+                      placeholder="Buscar pizza..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
+                    {search && (
+                      <button className="clear-search-btn" onClick={() => setSearch('')}>✕</button>
+                    )}
+                  </div>
+                </div>
+
+                <div className="menu-grid">
+                  {filteredPizzas.map((p) => (
+                    <PizzaCard key={p.idPizza} pizza={p} onAddToCart={addToCart} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {activeSection === 'cocina' && (
+              <OrderHistoryTable orders={orders} onUpdateStatus={handleUpdateStatus} />
+            )}
+
+            {activeSection === 'kpis' && (
+              <div>
+                <div className="section-heading">
+                  <span className="section-tag">INDICADORES CLAVE</span>
+                  <h2 className="section-title">Métricas Operativas de la Pizzería</h2>
+                </div>
+                <KPIStats orders={orders} />
+              </div>
+            )}
+          </main>
+
+          <CartDrawer onProceedCheckout={() => setIsCheckoutOpen(true)} />
+
+          <CustomerFormModal
+            isOpen={isCheckoutOpen}
+            onClose={() => setIsCheckoutOpen(false)}
+            onConfirm={handleConfirmOrder}
+          />
+
+          <footer className="app-footer">
+            <div className="footer-container">
+              <div>
+                <h3>Pizzería Bella Italia</h3>
+                <p>Trattoria artesanal &bull; Horno de leña &bull; Popayán, Cauca</p>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <p><strong>SENA - Regional Cauca</strong> &bull; CTPI Popayán</p>
+                <p>Tecnología en Análisis y Desarrollo de Software (ADSO) - Ficha 228118</p>
+                <p>Aprendiz: <strong>Karen Yuliana Campo</strong> &bull; Evidencia: GA7-220501096-AA4-EV03</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    // Montaje en el DOM
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      <CartProvider>
+        <App />
+      </CartProvider>
+    );
+  </script>
+</body>
+</html>

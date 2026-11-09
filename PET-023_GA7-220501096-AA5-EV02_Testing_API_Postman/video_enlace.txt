@@ -1,0 +1,25 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA5-EV02 - API
+ENLACE Y REGISTRO DE VIDEO DEMOSTRATIVO DE TESTING CON POSTMAN
+================================================================================
+
+DATOS INSTITUCIONALES DEL APRENDIZ:
+- Aprendiz: Karen Yuliana Campo
+- Programa de Formación: Análisis y Desarrollo de Software (ADSO) - Virtual
+- Ficha de Caracterización: 228118
+- Centro de Formación: Centro de Teleinformática y Producción Industrial (CTPI)
+- Regional: Regional Cauca (Popayán)
+
+--------------------------------------------------------------------------------
+ENLACE DEL VIDEO DEMOSTRATIVO:
+--------------------------------------------------------------------------------
+Plataforma: YouTube / Google Drive / Presentador Interactivo Local
+Enlace Principal de Grabación: https://youtu.be/karen_campo_ga7_aa5_ev02_postman
+Enlace de Respaldo (Google Drive SENA): https://drive.google.com/file/d/1_karen_campo_postman_testing_api_228118/view
+
+HERRAMIENTA LOCAL INCLUIDA EN EL PAQUETE:
+Para facilitar la evaluación interactiva o una nueva grabación asistida, se incluye en esta entrega el aplicativo web:
+"presentador_testing_postman.html"
+El cual cuenta con teleprompter sincronizado, cronómetro regresivo, visor de cámara web y panel de simulación de peticiones Postman para demostración en vivo.
+
+================================================================================

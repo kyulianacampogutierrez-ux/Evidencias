@@ -1,0 +1,507 @@
+file.new {"intent":"web","width":1200,"height":2480,"pages":1}
+swatch.create {"name":"CanvasBg","color":"#F1F5F9"}
+swatch.create {"name":"CardWhite","color":"#FFFFFF"}
+swatch.create {"name":"SenaGreen","color":"#00A86B"}
+swatch.create {"name":"SenaDark","color":"#064E3B"}
+swatch.create {"name":"SenaLight","color":"#E6FFFA"}
+swatch.create {"name":"TealHeader","color":"#0D9488"}
+swatch.create {"name":"TealLight","color":"#F0FDFA"}
+swatch.create {"name":"TealBorder","color":"#99F6E4"}
+swatch.create {"name":"TealDark","color":"#0F766E"}
+swatch.create {"name":"TealBadge","color":"#CCFBF1"}
+swatch.create {"name":"AmberHeader","color":"#D97706"}
+swatch.create {"name":"AmberLight","color":"#FFFBEB"}
+swatch.create {"name":"AmberBorder","color":"#FDE68A"}
+swatch.create {"name":"AmberDark","color":"#B45309"}
+swatch.create {"name":"AmberBar","color":"#F59E0B"}
+swatch.create {"name":"GreenHeader","color":"#059669"}
+swatch.create {"name":"GreenLight","color":"#F0FDF4"}
+swatch.create {"name":"GreenBorder","color":"#A7F3D0"}
+swatch.create {"name":"GreenDark","color":"#047857"}
+swatch.create {"name":"GreenBar","color":"#10B981"}
+swatch.create {"name":"BlueHeader","color":"#0284C7"}
+swatch.create {"name":"BlueLight","color":"#EFF6FF"}
+swatch.create {"name":"BlueBorder","color":"#BFDBFE"}
+swatch.create {"name":"BlueDark","color":"#0369A1"}
+swatch.create {"name":"BlueBar","color":"#3B82F6"}
+swatch.create {"name":"PurpleHeader","color":"#7C3AED"}
+swatch.create {"name":"PurpleLight","color":"#FAF5FF"}
+swatch.create {"name":"PurpleBorder","color":"#E9D5FF"}
+swatch.create {"name":"PurpleDark","color":"#6D28D9"}
+swatch.create {"name":"PurpleBadge","color":"#F3E8FF"}
+swatch.create {"name":"BarBg","color":"#E2E8F0"}
+swatch.create {"name":"SubCardGray","color":"#F8FAFC"}
+swatch.create {"name":"CardBorderGray","color":"#CBD5E1"}
+swatch.create {"name":"BadgePillDark","color":"#0F172A"}
+frame.create {"rect":[0,0,1200,2480],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+frame.create {"rect":[40,25,1160,195],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaGreen"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"SenaDark","weight":2}
+frame.create {"rect":[40,25,1160,35],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaDark"}
+frame.create {"rect":[360,38,840,64],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaDark"}
+object.cornerOptions {"shape":"rounded","size":12}
+frame.create {"rect":[370,43,830,60],"content":"text","text":"SENA • ANÁLISIS Y DESARROLLO DE SOFTWARE • FICHA 228118"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[60,72,1140,115],"content":"text","text":"ESTILOS DE VIDA SALUDABLE"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":32,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[60,118,1140,145],"content":"text","text":"GUÍA VISUAL DE BIOMECÁNICA, NUTRICIÓN Y BIENESTAR PARA PROGRAMADORES"}
+object.color {"color":"#CCFBF1","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[280,155,920,185],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[290,161,910,180],"content":"text","text":"Aprendiz: Karen Yuliana Campo   |   Competencia: 230101507   |   Evidencia: GA6-230101507-AA2-EV01"}
+object.color {"color":"#064E3B","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[40,215,1160,705],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"TealHeader","weight":2}
+frame.create {"rect":[40,215,1160,260],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealHeader"}
+frame.create {"rect":[60,225,1140,252],"content":"text","text":"⚡ 1. METABOLISMO Y NECESIDADES ENERGÉTICAS DIARIAS"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,275,400,485],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"TealBorder","weight":1.5}
+frame.create {"rect":[80,290,220,318],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealBadge"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[90,295,210,313],"content":"text","text":"TASA METABÓLICA"}
+object.color {"color":"#0F766E","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[80,325,380,370],"content":"text","text":"60% – 75%"}
+object.color {"color":"#0D9488","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,375,380,395],"content":"text","text":"DEL GASTO TOTAL (GET)"}
+object.color {"color":"#0F766E","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,405,380,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[80,405,290,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealHeader"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[80,425,380,475],"content":"text","text":"• Energía basal que consume el cuerpo en reposo absoluto.\n• Vital para corazón, pulmones y trabajo neuronal al programar."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[420,275,760,485],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"AmberBorder","weight":1.5}
+frame.create {"rect":[440,290,580,318],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberBorder"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[450,295,570,313],"content":"text","text":"EFECTO TÉRMICO (ETA)"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[440,325,740,370],"content":"text","text":"8% – 10%"}
+object.color {"color":"#D97706","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[440,375,740,395],"content":"text","text":"DIGESTIÓN Y METABOLISMO"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[440,405,740,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[440,405,470,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberBar"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[440,425,740,475],"content":"text","text":"• Inversión calórica en masticar, digerir y asimilar nutrientes.\n• Mantener comidas regulares evita caídas de glucosa mental."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[780,275,1140,485],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"PurpleBorder","weight":1.5}
+frame.create {"rect":[800,290,960,318],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleBorder"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[810,295,950,313],"content":"text","text":"NIVEL ACTIVIDAD (NAF)"}
+object.color {"color":"#6D28D9","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[800,325,1120,370],"content":"text","text":"15% – 30%"}
+object.color {"color":"#7C3AED","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[800,375,1120,395],"content":"text","text":"FACTOR MULTIPLICADOR"}
+object.color {"color":"#6D28D9","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[800,405,1120,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[800,405,880,417],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleHeader"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[800,425,1120,475],"content":"text","text":"• Sedentario (escritorio sin ejercicio): GET = TMB × 1.20\n• Actividad Moderada (rutina 4-5 días): GET = TMB × 1.55"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,500,1140,690],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SubCardGray"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"CardBorderGray","weight":1.5}
+frame.create {"rect":[80,510,1120,532],"content":"text","text":"📐 FÓRMULA DE HARRIS-BENEDICT (MIFFLIN-ST JEOR) Y FACTORES CLAVE"}
+object.color {"color":"#0369A1","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,540,590,615],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"BlueBorder","weight":1}
+frame.create {"rect":[95,550,575,570],"content":"text","text":"👩 MUJERES: TMB = (10 × Peso kg) + (6.25 × Talla cm) - (5 × Edad) - 161"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[95,575,575,605],"content":"text","text":"Ejemplo ADSO (24 años, 60 kg, 165 cm): TMB = 1,340 kcal  ➔  GET Sedentario: 1,608 kcal/día"}
+object.color {"color":"#0369A1","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,540,1120,615],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"GreenBorder","weight":1}
+frame.create {"rect":[625,550,1105,570],"content":"text","text":"👨 HOMBRES: TMB = (10 × Peso kg) + (6.25 × Talla cm) - (5 × Edad) + 5"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[625,575,1105,605],"content":"text","text":"Factores biológicos determinantes: Peso corporal, Estatura/Talla, Edad, Sexo y Masa Magra."}
+object.color {"color":"#047857","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[80,630,1120,675],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,642,1105,665],"content":"text","text":"💡 Clave ADSO: El gasto energético total (GET) es la base para no subir de peso en jornadas de programación extensas."}
+object.color {"color":"#0F766E","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[40,725,1160,1245],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"AmberHeader","weight":2}
+frame.create {"rect":[40,725,1160,770],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberHeader"}
+frame.create {"rect":[60,735,1140,762],"content":"text","text":"🥗 2. NUTRICIÓN INTELIGENTE: EL COMBUSTIBLE COGNITIVO DEL CÓDIGO"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,785,400,1130],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"AmberBorder","weight":1.5}
+frame.create {"rect":[80,800,240,828],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberBorder"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[90,805,230,823],"content":"text","text":"🌾 CARBOHIDRATOS (CHO)"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[80,835,380,875],"content":"text","text":"45% – 65%"}
+object.color {"color":"#D97706","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,880,380,900],"content":"text","text":"DENSIDAD: 4 kcal/g • ENERGÍA CEREBRAL"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,910,380,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[80,910,260,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberBar"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[80,935,380,1115],"content":"text","text":"• Sustrato Primario: Glucosa indispensable para lógica algorítmica y foco sostenido.\n\n• Fuentes Óptimas: Avena integral, quinua, arroz integral, lentejas, garbanzos y frutas.\n\n⚠️ Alerta: Cero azúcares refinados para evitar hipoglucemia reactiva y letargo."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[420,785,760,1130],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"GreenBorder","weight":1.5}
+frame.create {"rect":[440,800,580,828],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenBorder"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[450,805,570,823],"content":"text","text":"🥩 PROTEÍNAS (PRO)"}
+object.color {"color":"#15803D","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[440,835,740,875],"content":"text","text":"10% – 35%"}
+object.color {"color":"#16A34A","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[440,880,740,900],"content":"text","text":"DENSIDAD: 4 kcal/g • REPARACIÓN"}
+object.color {"color":"#15803D","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[440,910,740,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[440,910,515,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenBar"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[440,935,740,1115],"content":"text","text":"• Estructura Magra: Previene atrofia muscular por sedentarismo (1.2 a 1.8 g/kg).\n\n• Neurotransmisores: Precursor de dopamina (motivación) y serotonina (calma).\n\n✔ Fuentes: Huevos, pollo, atún, salmón, tofu, frutos secos y legumbres."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[780,785,1140,1130],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BlueBorder","weight":1.5}
+frame.create {"rect":[800,800,970,828],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueBorder"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[810,805,960,823],"content":"text","text":"🥑 GRASAS SALUDABLES (LIP)"}
+object.color {"color":"#1D4ED8","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[800,835,1120,875],"content":"text","text":"20% – 35%"}
+object.color {"color":"#2563EB","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[800,880,1120,900],"content":"text","text":"DENSIDAD: 9 kcal/g • NEUROPROTECCIÓN"}
+object.color {"color":"#1D4ED8","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[800,910,1120,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BarBg"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[800,910,896,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueBar"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[800,935,1120,1115],"content":"text","text":"• Protección Mielínica: Ácidos grasos Omega-3 protegen las vainas neuronales.\n\n• Salud Hormonal: Regula síntesis de hormonas y absorción de vitaminas liposolubles.\n\n✔ Fuentes: Aguacate, aceite de oliva virgen extra, nueces, semillas de chía."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,1145,1140,1225],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BlueBorder","weight":1.5}
+frame.create {"rect":[80,1155,300,1215],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,1165,290,1195],"content":"text","text":"💧 2.0 A 3.0 L"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":22,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,1195,290,1210],"content":"text","text":"AGUA / DÍA (35 ml / kg)"}
+object.color {"color":"#EFF6FF","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[320,1160,1120,1215],"content":"text","text":"• Protocolo de Hidratación Celular para Desarrolladores ADSO:\nUna deshidratación del 1.5% al 2% reduce en un 20% la velocidad de procesamiento cognitivo, genera fatiga prematura y produce cefaleas tensionales durante la depuración de código."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[40,1265,1160,1805],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"GreenHeader","weight":2}
+frame.create {"rect":[40,1265,1160,1310],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenHeader"}
+frame.create {"rect":[60,1275,1140,1302],"content":"text","text":"🖥️ 3. ERGONOMÍA BIOMECÁNICA: CERO LESIONES EN EL PUESTO DE DESARROLLO"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,1325,590,1445],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"GreenBorder","weight":1}
+frame.create {"rect":[80,1335,180,1435],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,1360,170,1395],"content":"text","text":"50–70 cm"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":18,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,1395,170,1415],"content":"text","text":"DISTANCIA"}
+object.color {"color":"#CCFBF1","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[200,1340,575,1360],"content":"text","text":"1. MONITOR Y CAMPO VISUAL"}
+object.color {"color":"#047857","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[200,1365,575,1435],"content":"text","text":"• Borde superior de pantalla a la altura de los ojos (inclinación 10°-15° hacia abajo).\n• Separación equivalente a la longitud de tu brazo extendido."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,1325,1140,1445],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"GreenBorder","weight":1}
+frame.create {"rect":[630,1335,730,1435],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[640,1360,720,1395],"content":"text","text":"90°"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":26,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[640,1395,720,1415],"content":"text","text":"CODOS"}
+object.color {"color":"#CCFBF1","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[750,1340,1125,1360],"content":"text","text":"2. ANTEBRAZOS Y HOMBROS"}
+object.color {"color":"#047857","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[750,1365,1125,1435],"content":"text","text":"• Codos flexionados a 90° con antebrazos alineados al plano de la mesa.\n• Apoyabrazos graduados para no forzar elevación de trapecios."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,1460,590,1580],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SubCardGray"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"CardBorderGray","weight":1}
+frame.create {"rect":[80,1470,180,1570],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,1495,170,1530],"content":"text","text":"90°–105°"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,1530,170,1550],"content":"text","text":"RESPALDO"}
+object.color {"color":"#EFF6FF","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[200,1475,575,1495],"content":"text","text":"3. SILLA ERGONÓMICA Y ZONA LUMBAR"}
+object.color {"color":"#0369A1","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[200,1500,575,1570],"content":"text","text":"• Soporte lumbar activo ajustado a la lordosis anatómica (L1 a L5).\n• Borde anterior redondeado para no estrangular circulación venosa."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,1460,1140,1580],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SubCardGray"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"CardBorderGray","weight":1}
+frame.create {"rect":[630,1470,730,1570],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[640,1495,720,1530],"content":"text","text":"90°"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":26,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[640,1530,720,1550],"content":"text","text":"RODILLAS"}
+object.color {"color":"#EFF6FF","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[750,1475,1125,1495],"content":"text","text":"4. PIES Y EXTREMIDADES INFERIORES"}
+object.color {"color":"#0369A1","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[750,1500,1125,1570],"content":"text","text":"• Rodillas en ángulo de 90° con muslos completamente horizontales.\n• Pies 100% planos apoyados en suelo o sobre reposapiés basculante."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,1595,590,1785],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"AmberBorder","weight":1.5}
+frame.create {"rect":[80,1608,575,1630],"content":"text","text":"🛡️ PREVENCIÓN DEL SÍNDROME DEL TÚNEL CARPIANO (STC)"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[80,1635,575,1775],"content":"text","text":"• Muñecas en Posición Neutra: Nunca escribir con muñecas flexionadas o en desviación cubital/radial.\n• Mouse Vertical Ergonómico: Mantiene la rotación natural de cúbito y radio, liberando la presión sobre el nervio mediano.\n• Pad de Apoyo con Gel: Suaviza el contacto y previene bursitis y tendinitis de Quervain."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,1595,1140,1785],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"TealLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"TealBorder","weight":1.5}
+frame.create {"rect":[630,1608,1125,1630],"content":"text","text":"⏱️ REGLA 20-20-20 Y PROTOCOLO DE PAUSAS ACTIVAS"}
+object.color {"color":"#0F766E","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[630,1635,1125,1775],"content":"text","text":"• Regla 20-20-20: Cada 20 min de código, mira un objeto a 20 pies (6 metros) por 20 segundos para lubricar la córnea y relajar músculo ciliar.\n• Micro-Pausa Obligatoria: 5 minutos de estiramiento cada 45 a 50 min.\n• Batería de Ejercicios: Flexión cervical (15s), estiramiento flexores de muñeca (15s/lado), descompresión lumbar y elevación de talones."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[40,1825,1160,2355],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"PurpleHeader","weight":2}
+frame.create {"rect":[40,1825,1160,1870],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleHeader"}
+frame.create {"rect":[60,1835,1140,1862],"content":"text","text":"🧠 4. BIENESTAR INTEGRAL: SUEÑO, ESTRÉS Y CERO BURNOUT EN IT"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":15,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,1885,590,2095],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"PurpleBorder","weight":1.5}
+frame.create {"rect":[80,1900,180,1990],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,1920,170,1955],"content":"text","text":"7 – 8 h"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":22,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,1955,170,1975],"content":"text","text":"SUEÑO / NOCHE"}
+object.color {"color":"#F3E8FF","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[200,1905,575,1925],"content":"text","text":"🌙 HIGIENE DEL SUEÑO REPARADOR"}
+object.color {"color":"#6D28D9","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[200,1930,575,2085],"content":"text","text":"• Fase REM esencial para consolidar memoria de trabajo y algoritmos.\n• Cero Pantallas 60 min Antes: La luz azul bloquea la melatonina pineal.\n• Horario Fijo: Acostarse y levantarse a la misma hora estabiliza el ritmo circadiano."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,1885,1140,2095],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"AmberBorder","weight":1.5}
+frame.create {"rect":[630,1900,730,1990],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[640,1920,720,1955],"content":"text","text":"4x4x4"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":22,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[640,1955,720,1975],"content":"text","text":"RESPIRACIÓN"}
+object.color {"color":"#FFFBEB","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[750,1905,1125,1925],"content":"text","text":"🧘 GESTIÓN DEL CORTISOL Y ESTRÉS"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[750,1930,1125,2085],"content":"text","text":"• Box Breathing: Inhala 4s • Retén 4s • Exhala 4s • Pausa 4s.\n• Frena la activación del eje HPA y disminuye taquicardia por dead-lines.\n• Micro-pausas cognitivas de 2 min al afrontar bugs complejos."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,2110,590,2335],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"GreenBorder","weight":1.5}
+frame.create {"rect":[80,2125,180,2215],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"GreenHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,2145,170,2180],"content":"text","text":"150 min"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":18,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,2180,170,2200],"content":"text","text":"SEMANALES (OMS)"}
+object.color {"color":"#CCFBF1","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[200,2130,575,2150],"content":"text","text":"🏃 ACTIVIDAD FÍSICA CARDIOVASCULAR"}
+object.color {"color":"#047857","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[200,2155,575,2320],"content":"text","text":"• Mínimo 150 min de actividad aeróbica moderada o 75 min vigorosos.\n• Caminata vigorosa, natación o ciclismo para contrarrestar sedentarismo.\n• Estimula el BDNF cerebral, potenciando plasticidad y creatividad."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[610,2110,1140,2335],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BlueBorder","weight":1.5}
+frame.create {"rect":[630,2125,730,2215],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueHeader"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[640,2145,720,2180],"content":"text","text":"OFF"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":26,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[640,2180,720,2200],"content":"text","text":"DESCONEXIÓN"}
+object.color {"color":"#EFF6FF","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[750,2130,1125,2150],"content":"text","text":"📵 SALUD MENTAL Y LÍMITES LABORALES"}
+object.color {"color":"#0369A1","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[750,2155,1125,2320],"content":"text","text":"• Delimitar espacio de trabajo vs descanso en modalidades de teletrabajo.\n• Silenciar notificaciones de repositorios y mensajería fuera de jornada.\n• Fomentar vida social y aire libre para prevenir el síndrome de Burnout."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[40,2375,1160,2445],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaGreen"}
+object.cornerOptions {"shape":"rounded","size":10}
+frame.create {"rect":[60,2388,1140,2410],"content":"text","text":"SENA - Servicio Nacional de Aprendizaje  •  Centro de Diseño y Metrología  •  ADSO Ficha 228118"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[60,2414,1140,2434],"content":"text","text":"Evidencia: GA6-230101507-AA2-EV01  •  Aprendiz: Karen Yuliana Campo  •  Bogotá D.C., Colombia  •  2026"}
+object.color {"color":"#E6FFFA","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+type.para {"attrs":{"align":"center"}}

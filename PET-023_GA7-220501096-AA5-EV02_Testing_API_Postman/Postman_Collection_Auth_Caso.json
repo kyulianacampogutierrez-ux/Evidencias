@@ -1,0 +1,402 @@
+{
+  "info": {
+    "_postman_id": "c71a39f0-4592-411a-82bc-9d3e8e2fa534",
+    "name": "GA7-220501096-AA5-EV02 - Testing API Autenticación y Registro",
+    "description": "Colección de pruebas automatizadas en Postman para la validación exhaustiva de los endpoints REST del microservicio de autenticación y registro de usuarios, desarrollado por Karen Yuliana Campo (ADSO Ficha 228118, SENA CTPI Popayán).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Registro de Nuevo Usuario Exitoso (201 Created)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test(\"Respuesta incluye mensaje de registro exitoso y datos del usuario\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(true);",
+              "    pm.expect(jsonData.mensaje).to.include(\"exitosamente\");",
+              "    pm.expect(jsonData.usuario).to.have.property(\"id\");",
+              "    pm.expect(jsonData.usuario.usuario).to.eql(pm.environment.get(\"new_user\") || \"operador_popayan\");",
+              "    pm.expect(jsonData.usuario).to.not.have.property(\"hash\");",
+              "    pm.expect(jsonData.usuario).to.not.have.property(\"salt\");",
+              "});",
+              "",
+              "pm.test(\"Cabecera Content-Type es application/json\", function () {",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{new_user}}\",\n  \"email\": \"operador.cauca@sena.edu.co\",\n  \"nombre\": \"Operador Pizzería Cauca\",\n  \"password\": \"{{new_password}}\",\n  \"rol\": \"OPERADOR\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        },
+        "description": "Prueba de registro de nuevo usuario con hashing criptográfico y sal aleatoria."
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Registro Fallido: Usuario Duplicado (409 Conflict)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 409 Conflict\", function () {",
+              "    pm.response.to.have.status(409);",
+              "});",
+              "",
+              "pm.test(\"Mensaje indica que el usuario o email ya existe\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(false);",
+              "    pm.expect(jsonData.mensaje).to.include(\"ya se encuentra registrado\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{new_user}}\",\n  \"email\": \"operador.cauca@sena.edu.co\",\n  \"nombre\": \"Operador Pizzería Cauca\",\n  \"password\": \"{{new_password}}\",\n  \"rol\": \"OPERADOR\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        },
+        "description": "Verifica que el servicio web impida registrar cuentas duplicadas garantizando unicidad."
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Registro Fallido: Parámetros Incompletos (400 Bad Request)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 400 Bad Request\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test(\"Mensaje de error detalla campos faltantes\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(false);",
+              "    pm.expect(jsonData.mensaje).to.include(\"requeridos\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"usuario_incompleto\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        },
+        "description": "Comprueba el rechazo formal cuando el payload no provee las propiedades obligatorias."
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Login Exitoso: Autenticación Satisfactoria (200 OK con JWT)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 200 OK\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Mensaje exacto según Guía 7: Autenticación satisfactoria\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(true);",
+              "    pm.expect(jsonData.mensaje).to.eql(\"Autenticación satisfactoria\");",
+              "    pm.expect(jsonData).to.have.property(\"token\");",
+              "    pm.expect(jsonData.token).to.be.a(\"string\");",
+              "    ",
+              "    // Guardar token en variable de entorno para peticiones protegidas",
+              "    pm.environment.set(\"jwt_token\", jsonData.token);",
+              "});",
+              "",
+              "pm.test(\"Estructura del usuario autenticado\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.usuario).to.have.property(\"id\");",
+              "    pm.expect(jsonData.usuario.usuario).to.eql(pm.environment.get(\"test_user\") || \"karencampo\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{test_user}}\",\n  \"password\": \"{{test_password}}\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Valida el inicio de sesión exitoso devolviendo el mensaje 'Autenticación satisfactoria' y el token JWT."
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Login Fallido: Contraseña Inválida (401 Unauthorized)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 401 Unauthorized\", function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test(\"Mensaje exacto según Guía 7: Error en la autenticación\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(false);",
+              "    pm.expect(jsonData.mensaje).to.include(\"Error en la autenticación\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{test_user}}\",\n  \"password\": \"ContrasenaErronea2026\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Verifica que el intento de acceso con clave errónea retorne HTTP 401 con el mensaje 'Error en la autenticación'."
+      },
+      "response": []
+    },
+    {
+      "name": "06 - Login Fallido: Usuario Inexistente (401 Unauthorized)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 401 Unauthorized\", function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test(\"Mensaje indica Error en la autenticación sin exponer detalles internos\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(false);",
+              "    pm.expect(jsonData.mensaje).to.include(\"Error en la autenticación\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"usuario_fantasma_xyz\",\n  \"password\": \"PasswordSeguro123*\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Comprueba que intentar autenticarse con un usuario no registrado devuelva 401 Unauthorized."
+      },
+      "response": []
+    },
+    {
+      "name": "07 - Consulta de Perfil Protegido con Token JWT (200 OK)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 200 OK\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Perfil recuperado con token válido\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(true);",
+              "    pm.expect(jsonData.usuario).to.have.property(\"usuario\");",
+              "    pm.expect(jsonData.usuario).to.have.property(\"email\");",
+              "    pm.expect(jsonData.usuario).to.have.property(\"rol\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/auth/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "profile"
+          ]
+        },
+        "description": "Acceso al endpoint protegido mediante token JWT en cabecera Authorization."
+      },
+      "response": []
+    },
+    {
+      "name": "08 - Consulta de Perfil Denegado sin Token (401 Unauthorized)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Código de estado HTTP es 401 Unauthorized\", function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test(\"Mensaje indica token faltante o no suministrado\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.eql(false);",
+              "    pm.expect(jsonData.mensaje).to.include(\"no suministrado\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/auth/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "profile"
+          ]
+        },
+        "description": "Comprueba el rechazo automático al intentar acceder a rutas privadas sin cabecera Bearer."
+      },
+      "response": []
+    }
+  ]
+}

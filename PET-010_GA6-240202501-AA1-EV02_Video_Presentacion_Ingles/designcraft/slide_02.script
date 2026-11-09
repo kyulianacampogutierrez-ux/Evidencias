@@ -1,0 +1,156 @@
+file.new {"intent":"web","width":1920,"height":1080,"pages":1}
+swatch.create {"name":"CanvasBg","color":"#F8FAFC"}
+swatch.create {"name":"CardWhite","color":"#FFFFFF"}
+swatch.create {"name":"BorderGray","color":"#CBD5E1"}
+swatch.create {"name":"TextDark","color":"#0F172A"}
+swatch.create {"name":"TextBody","color":"#334155"}
+swatch.create {"name":"AccentColor","color":"#2563EB"}
+swatch.create {"name":"SenaGreen","color":"#00A86B"}
+swatch.create {"name":"BadgeBg","color":"#F1F5F9"}
+frame.create {"rect":[0,0,1920,1080],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+frame.create {"rect":[60,40,1860,170],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"BorderGray","weight":2}
+frame.create {"rect":[90,56,570,88],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":8}
+frame.create {"rect":[90,62,570,86],"content":"text","text":"TECHNOLOGY LIFE CYCLE & ARCHITECTURE"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[90,98,1540,153],"content":"text","text":"Evolutionary vs. Revolutionary Technologies in IT"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":30,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1680,65,1830,145],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BadgeBg"}
+object.cornerOptions {"shape":"rounded","size":12}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+frame.create {"rect":[1680,78,1830,108],"content":"text","text":"SLIDE 02"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":16,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1680,110,1830,135],"content":"text","text":"OF 07"}
+object.color {"color":"#64748B","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[60,190,940,575],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+frame.create {"rect":[90,215,910,265],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BadgeBg"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BorderGray","weight":1}
+frame.create {"rect":[110,226,890,261],"content":"text","text":"Evolutionary Technologies (Incremental)"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":19,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[95,287,121,313],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,290,121,312],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,285,895,340],"content":"text","text":"Continuous optimization of established paradigms"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,355,121,381],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,358,121,380],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,353,895,408],"content":"text","text":"Progression: Static HTML ➔ Dynamic DOM ➔ Reactive SPAs"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,423,121,449],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,426,121,448],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,421,895,476],"content":"text","text":"CSS evolution: Native styling ➔ Utility tokens ➔ Design Systems"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,491,121,517],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,494,121,516],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,489,895,544],"content":"text","text":"Low risk, predictable ROI, protects existing enterprise investments"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[60,595,940,980],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+frame.create {"rect":[90,620,910,670],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BadgeBg"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BorderGray","weight":1}
+frame.create {"rect":[110,631,890,666],"content":"text","text":"Revolutionary Technologies (Disruptive)"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":19,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[95,692,121,718],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,695,121,717],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,690,895,745],"content":"text","text":"Total paradigm replacement breaking obsolete practices"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,760,121,786],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,763,121,785],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,758,895,813],"content":"text","text":"Cloud infrastructure: On-premise server rooms ➔ Serverless edge"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,828,121,854],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,831,121,853],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,826,895,881],"content":"text","text":"Engineering workflows: Manual coding ➔ Agentic AI coproduction"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[95,896,121,922],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AccentColor"}
+object.cornerOptions {"shape":"rounded","size":6}
+frame.create {"rect":[95,899,121,921],"content":"text","text":"✓"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[135,894,895,949],"content":"text","text":"High transformational impact requiring organizational adaptation"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":16.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[960,190,1860,980],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-010_GA6-240202501-AA1-EV02_Video_Presentacion_Ingles/assets/card_slide2_evolution.png","rect":[980,210,1840,960]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[60,1000,1860,1055],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":12}
+object.stroke {"swatch":"BorderGray","weight":1}
+frame.create {"rect":[90,1014,1190,1044],"content":"text","text":"SENA • Centro de Comercio y Servicios • Regional Cauca | Ficha 228118 • ADSO"}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1200,1014,1830,1044],"content":"text","text":"Apprentice: Karen Yuliana Campo • Popayán, Cauca (100% Virtual)"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"right"}}

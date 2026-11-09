@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Especificación de Componentes Front-End - GA6-220501096-AA4-EV02</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .cover {
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90vh;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .cover-header {
+      border-bottom: 4px solid #39a900;
+      padding-bottom: 20px;
+    }
+    .cover-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: bold;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 10pt;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .cover-title {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
+    .cover-subtitle {
+      font-size: 13pt;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .cover-evidence {
+      font-size: 11pt;
+      color: #64748b;
+      font-family: monospace;
+      margin-top: 10px;
+    }
+    .cover-body {
+      margin: 30px 0;
+    }
+    .cover-meta-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 10pt;
+    }
+    .cover-meta-table td {
+      padding: 7px 14px;
+    }
+    .cover-meta-table td.label {
+      font-weight: bold;
+      color: #334155;
+      width: 190px;
+      border-right: 2px solid #cbd5e1;
+    }
+    .cover-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 16px;
+      font-size: 9.5pt;
+      color: #64748b;
+    }
+
+    /* ESTILOS DE CONTENIDO */
+    h1, h2, h3 {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 16pt;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 5px;
+      margin-top: 24px;
+    }
+    h2 {
+      font-size: 13pt;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      font-size: 11pt;
+      color: #0f172a;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    ul, ol {
+      margin: 0 0 12px 20px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .badge-success {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 8pt;
+      display: inline-block;
+    }
+    .code-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 8.5pt;
+      overflow-x: auto;
+      margin: 10px 0;
+      line-height: 1.4;
+    }
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0;
+      font-size: 9.5pt;
+    }
+    .callout-title {
+      font-weight: bold;
+      color: #15803d;
+      margin-bottom: 4px;
+    }
+    .component-spec-box {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+      margin: 12px 0;
+      background: #fbfcfe;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA FORMAL SENA -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="cover-badge">Servicio Nacional de Aprendizaje • SENA</div>
+      <div class="cover-title">ESPECIFICACIÓN DE COMPONENTES FRONT-END</div>
+      <div class="cover-subtitle">Sistema Web para Gestión y Venta de Pizzas (Pizzería Bella Italia)</div>
+      <div class="cover-evidence">EVIDENCIA: GA6-220501096-AA4-EV02</div>
+    </div>
+
+    <div class="cover-body">
+      <table class="cover-meta-table">
+        <tr>
+          <td class="label">Programa de Formación:</td>
+          <td>Análisis y Desarrollo de Software (ADSO)</td>
+        </tr>
+        <tr>
+          <td class="label">Código de Ficha:</td>
+          <td><strong>228118</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Aprendiz:</td>
+          <td><strong>Karen Yuliana Campo</strong></td>
+        </tr>
+        <tr>
+          <td class="label">Competencia Técnica:</td>
+          <td>220501096 - Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo.</td>
+        </tr>
+        <tr>
+          <td class="label">Resultado de Aprendizaje:</td>
+          <td>220501096-03 - Crear componentes front-end del software de acuerdo con el diseño.</td>
+        </tr>
+        <tr>
+          <td class="label">Actividad de Aprendizaje:</td>
+          <td>GA6-220501096-AA4 - Generar plantillas y estilos, de acuerdo con el diseño.</td>
+        </tr>
+        <tr>
+          <td class="label">Proyecto Formativo:</td>
+          <td>Construcción de software para gestión y venta de pizzas (Pizzería Bella Italia)</td>
+        </tr>
+        <tr>
+          <td class="label">Centro de Formación:</td>
+          <td>Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</td>
+        </tr>
+        <tr>
+          <td class="label">Fecha:</td>
+          <td>Noviembre de 2026</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cover-footer">
+      Metodología: <strong>TDD (Test-Driven Development)</strong> • Arquitectura Basada en Componentes • Retícula de 8dp (CF16 SENA)
+    </div>
+  </div>
+
+  <!-- PÁGINA 1: INTRODUCCIÓN Y OBJETIVOS -->
+  <h1>1. Introducción</h1>
+  <p>
+    En la ingeniería de software moderna, el desarrollo frontend ha abandonado las páginas monolíticas estructuradas con etiquetas genéricas 
+    para adoptar una **arquitectura basada en componentes modulares y reutilizables**. Un componente de interfaz de usuario (UI) encapsula 
+    estructura semántica (HTML5), reglas visuales (CSS3) y comportamiento reactivo (JavaScript), garantizando mantenibilidad, escalabilidad 
+    y accesibilidad universal.
+  </p>
+  <p>
+    El presente documento técnico da cumplimiento estricto a los lineamientos de la **Guía de Aprendizaje 6**, evidencia 
+    **GA6-220501096-AA4-EV02**, especificando la estructura de componentes requerida para el software de venta y gestión de pizzas de la 
+    <strong>Pizzería Bella Italia</strong>, tomando como base teórica el componente formativo institucional <strong>CF16: Herramientas para el diseño y desarrollo móvil híbrido</strong>.
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">📌 Instrucción Oficial de la Guía 6 (Pág. 13):</div>
+    <em>"Con base en las características del software a desarrollar, realice un documento donde especifique la estructura de componentes que se van a utilizar para cumplir con las necesidades del software a desarrollar. Se deben seguir las normas básicas de presentación de un documento escrito: portada, introducción, objetivo, definición de elementos HTML a utilizar en el diseño frontend. Formato: ZIP."</em>
+  </div>
+
+  <h1>2. Objetivo General y Objetivos Específicos</h1>
+  <h2>2.1 Objetivo General</h2>
+  <p>
+    Especificar la arquitectura, estructura semántica en HTML5, atributos de accesibilidad ARIA y estilos CSS3 de los componentes 
+    front-end del sistema de la Pizzería Bella Italia, garantizando el cumplimiento de los requerimientos funcionales del negocio 
+    y los estándares ergonómicos internacionales.
+  </p>
+
+  <h2>2.2 Objetivos Específicos</h2>
+  <ul>
+    <li>Descomponer la interfaz gráfica en un árbol jerárquico de componentes independientes (Component Tree).</li>
+    <li>Definir exhaustivamente las etiquetas semánticas HTML5 (`header`, `nav`, `main`, `section`, `article`, `figure`, `form`, `aside`, `footer`) asignadas a cada componente.</li>
+    <li>Incorporar atributos de accesibilidad WCAG 2.1 AA y roles WAI-ARIA para asegurar operabilidad universal mediante teclado y lectores de pantalla.</li>
+    <li>Aplicar los principios del CF16: retícula modular de 8dp, márgenes de 16dp, botones táctiles de al menos 48px según la Ley de Fitts y código cromático semiótico.</li>
+  </ul>
+
+  <h1>3. Contexto del Proyecto Formativo (Pizzería Bella Italia)</h1>
+  <p>
+    La solución atiende dos perfiles de usuario fundamentales:
+  </p>
+  <ul>
+    <li><strong>Cliente (Ej: Carlos Mendoza):</strong> Consulta el catálogo gastronómico, selecciona el tamaño de pizza con cálculo dinámico de precio, gestiona el carrito de compras, valida tarifas de domicilio (envío gratis si la compra supera $80.000 COP) y realiza seguimiento a sus órdenes en <code>🛍️ Mis Pedidos</code>.</li>
+    <li><strong>Administrador (Karen Campo):</strong> Monitorea en tiempo real los indicadores clave (KPIs: órdenes totales, en preparación, en camino, ingresos acumulados) y gestiona el flujo de despacho en <code>📊 Gestión de Órdenes</code> mediante botones de acción inmediata (<em>A Cocina</em> ➔ <em>Despachar</em> ➔ <em>Entregar</em>).</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 2: ARQUITECTURA Y ESPECIFICACIÓN DE COMPONENTES -->
+  <h1>4. Arquitectura de Componentes Front-End</h1>
+  <p>
+    La aplicación web se estructura en 8 componentes modulares distribuidos bajo un contenedor maestro (AppShell):
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Componente</th>
+        <th>Etiquetas Semánticas HTML5</th>
+        <th>Responsabilidad en el Sistema</th>
+        <th>Atributos ARIA / Accesibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>NavbarComponent</strong></td>
+        <td><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code></td>
+        <td>Barra superior persistente, identidad de marca, navegación principal y contador de carrito.</td>
+        <td><code>role="banner"</code>, <code>role="menubar"</code>, <code>aria-label</code></td>
+      </tr>
+      <tr>
+        <td><strong>AuthModalComponent</strong></td>
+        <td><code>&lt;div&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code></td>
+        <td>Ventana modal accesible de inicio de sesión con validación de roles (Cliente vs Admin).</td>
+        <td><code>role="dialog"</code>, <code>aria-modal="true"</code>, <code>aria-labelledby</code></td>
+      </tr>
+      <tr>
+        <td><strong>MenuCatalogComponent</strong></td>
+        <td><code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;div.grid&gt;</code></td>
+        <td>Sección principal de exhibición de productos artesanales con rejilla adaptable.</td>
+        <td><code>aria-labelledby="catalogTitle"</code></td>
+      </tr>
+      <tr>
+        <td><strong>PizzaCardComponent</strong></td>
+        <td><code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;button&gt;</code></td>
+        <td>Tarjeta de producto individual con selector de porciones y cálculo de precio en vivo.</td>
+        <td><code>&lt;figcaption class="sr-only"&gt;</code>, <code>data-pizza-id</code></td>
+      </tr>
+      <tr>
+        <td><strong>CartDrawerComponent</strong></td>
+        <td><code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;button&gt;</code></td>
+        <td>Gaveta lateral interactiva para modificar cantidades, calcular envío y total a pagar.</td>
+        <td><code>aria-live="polite"</code>, <code>aria-label="Aumentar cantidad"</code></td>
+      </tr>
+      <tr>
+        <td><strong>CheckoutFormComponent</strong></td>
+        <td><code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;input&gt;</code></td>
+        <td>Formulario de validación de dirección, celular (10 dígitos) y medio de pago.</td>
+        <td><code>novalidate</code>, <code>required</code>, <code>pattern="[0-9]{10}"</code></td>
+      </tr>
+      <tr>
+        <td><strong>OrdersDashboardComponent</strong></td>
+        <td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;div.kpis&gt;</code></td>
+        <td>Panel de KPIs para admin y vista personalizada de pedidos para clientes.</td>
+        <td><code>role="region"</code>, <code>role="feed"</code>, <code>role="toolbar"</code></td>
+      </tr>
+      <tr>
+        <td><strong>ToastNotificationComponent</strong></td>
+        <td><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></td>
+        <td>Alertas emergentes flotantes con retroalimentación sensorial inmediata.</td>
+        <td><code>aria-live="assertive"</code>, <code>role="alert"</code></td>
+      </tr>
+      <tr>
+        <td><strong>FooterComponent</strong></td>
+        <td><code>&lt;footer&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;p&gt;</code></td>
+        <td>Pie de página con datos de ficha 228118, aprendiz Karen Campo y enlaces legales.</td>
+        <td><code>role="contentinfo"</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>5. Especificación Técnica y Plantillas HTML5</h1>
+
+  <div class="component-spec-box">
+    <h3>5.1 Especificación del Componente PizzaCard</h3>
+    <p>
+      El componente <code>PizzaCard</code> modela cada pizza del horno artesanal. Cada tarjeta se define como un <code>&lt;article&gt;</code> autónomo:
+    </p>
+    <div class="code-box">
+&lt;article class="pizza-card" data-pizza-id="piz-01"&gt;
+  &lt;figure class="pizza-figure"&gt;
+    &lt;div class="pizza-badge-promo"&gt;Popular&lt;/div&gt;
+    &lt;img src="assets/pizza_margarita.jpg" alt="Pizza Margarita italiana" class="pizza-img"&gt;
+    &lt;figcaption class="sr-only"&gt;Salsa pomodoro, mozzarella y albahaca fresca&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;div class="pizza-body"&gt;
+    &lt;h3 class="pizza-title"&gt;Pizza Margherita Clásica&lt;/h3&gt;
+    &lt;p class="pizza-desc"&gt;Ingredientes 100% frescos horneados a la leña.&lt;/p&gt;
+    &lt;select class="size-select" aria-label="Seleccionar tamaño"&gt;
+      &lt;option value="Personal"&gt;Personal (4 porciones) - $28.000&lt;/option&gt;
+      &lt;option value="Mediana" selected&gt;Mediana (8 porciones) - $38.000&lt;/option&gt;
+      &lt;option value="Familiar"&gt;Familiar (12 porciones) - $48.000&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;footer class="pizza-footer"&gt;
+      &lt;span class="pizza-price"&gt;$38.000&lt;/span&gt;
+      &lt;button class="btn-add-cart" aria-label="Agregar al carrito"&gt;+ Agregar&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PÁGINA 3: REGLAS DE DISEÑO, ACCESIBILIDAD Y LISTA DE CHEQUEO -->
+  <h1>6. Aplicación de Principios de Diseño (SENA CF16)</h1>
+  <ul>
+    <li><strong>Retícula Espacial de 8dp y Margen de 16dp:</strong> Todo espaciado de tarjeta (padding), separación entre columnas (gap) y tamaño de fuentes se define en múltiplos de 8px, asegurando ritmo y consistencia matemática.</li>
+    <li><strong>Ley de Fitts en Botones Táctiles:</strong> Los botones de compra (`.btn-add-cart`), confirmación (`.btn-checkout`) y transiciones de estado tienen una altura mínima de **48px**, garantizando una fácil pulsación en pantallas móviles sin errores.</li>
+    <li><strong>Código Cromático Semiótico:</strong>
+      <ul>
+        <li><strong style="color:#ef4444;">Rojo (#ef4444):</strong> Reservado para alertas de error y cancelación de pedidos.</li>
+        <li><strong style="color:#d97706;">Amarillo (#f59e0b):</strong> Reservado para estados de preparación en cocina y advertencias.</li>
+        <li><strong style="color:#10b981;">Verde (#10b981):</strong> Reservado para confirmaciones de compra y despachos exitosos.</li>
+        <li><strong style="color:#0284c7;">Azul (#0284c7):</strong> Color señalético neutro para navegación y botones principales.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h1>7. Lista de Chequeo de Evaluación (IE-GA6-220501096-AA4-EV02)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Criterio de Evaluación SENA</th>
+        <th>Evidencia Técnica en el Documento</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Presentación con normas escritas (portada, introducción, objetivo)</td>
+        <td>Portada con ficha 228118, aprendiz Karen Campo, introducción y objetivos formales.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Especificación de la estructura de componentes front-end</td>
+        <td>Diagrama de árbol (Component Tree) con 8 componentes modulares desacoplados.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Definición detallada de elementos semánticos HTML5</td>
+        <td>Uso fundamentado de header, nav, main, section, article, figure, form, aside, footer.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Alineación con el proyecto formativo de desarrollo de software</td>
+        <td>Diseñado para la Pizzería Bella Italia con lógica de roles (Cliente vs Admin).</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Aplicación de criterios de usabilidad, estilos CSS y accesibilidad</td>
+        <td>Retícula de 8dp, márgenes de 16dp, Ley de Fitts (&ge;48px) y roles ARIA.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Entrega del producto en archivo comprimido ZIP</td>
+        <td>Empaquetado en GA6-220501096-AA4-EV02.zip con informe PDF y plantillas.</td>
+        <td><span class="badge-success">CUMPLE 100%</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>8. Conclusiones y Referencias</h1>
+  <p>
+    1. La arquitectura basada en componentes garantiza que el frontend de la Pizzería Bella Italia sea escalable, testeable y fácil de mantener a lo largo del ciclo formativo ADSO.<br>
+    2. El uso estricto de HTML5 semántico y roles ARIA cumple con los estándares internacionales de accesibilidad web (WCAG AA), permitiendo una interacción fluida para cualquier usuario.<br>
+    3. La articulación con el componente institucional CF16 proporciona rigor técnico y profesionalismo en la experiencia de usuario (UX/UI).
+  </p>
+  <p><strong>Referencias:</strong> SENA (2024) <em>CF16: Herramientas para el diseño y desarrollo móvil híbrido</em>; W3C (2023) <em>WCAG 2.1</em>; ISO 13407 (1999) <em>Human-centred design processes</em>.</p>
+
+</body>
+</html>

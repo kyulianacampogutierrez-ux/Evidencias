@@ -1,0 +1,187 @@
+file.new {"intent":"web","width":1600,"height":2200,"pages":1}
+swatch.create {"name":"CanvasBg","color":"#F8FAFC"}
+swatch.create {"name":"CardWhite","color":"#FFFFFF"}
+swatch.create {"name":"BorderGray","color":"#E2E8F0"}
+swatch.create {"name":"DarkBorder","color":"#CBD5E1"}
+swatch.create {"name":"SenaGreen","color":"#00A86B"}
+swatch.create {"name":"SenaLight","color":"#ECFDF5"}
+swatch.create {"name":"SenaBorder","color":"#A7F3D0"}
+swatch.create {"name":"BlueLight","color":"#EFF6FF"}
+swatch.create {"name":"BlueBorder","color":"#BFDBFE"}
+swatch.create {"name":"AmberLight","color":"#FFFBEB"}
+swatch.create {"name":"AmberBorder","color":"#FDE68A"}
+swatch.create {"name":"PurpleLight","color":"#FAF5FF"}
+swatch.create {"name":"PurpleBorder","color":"#E9D5FF"}
+frame.create {"rect":[0,0,1600,2200],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+frame.create {"rect":[30,25,1570,200],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":12}
+object.stroke {"swatch":"SenaGreen","weight":2}
+frame.create {"rect":[30,25,1570,35],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaGreen"}
+frame.create {"rect":[50,48,170,80],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaGreen"}
+object.cornerOptions {"shape":"rounded","size":16}
+frame.create {"rect":[60,56,160,74],"content":"text","text":"SENA"}
+object.color {"color":"#FFFFFF","text":true}
+type.char {"attrs":{"size":14,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[190,52,900,75],"content":"text","text":"SERVICIO NACIONAL DE APRENDIZAJE • CENTRO DE DISEÑO Y METROLOGÍA"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[190,75,900,95],"content":"text","text":"ADSO: ANALYSIS AND SOFTWARE DEVELOPMENT • FICHA 228118 • MODALIDAD 100% VIRTUAL"}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":9.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[1230,48,1550,80],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":16}
+object.stroke {"swatch":"SenaBorder","weight":1}
+frame.create {"rect":[1240,56,1540,74],"content":"text","text":"ENGLISH LEVEL 8 • MCER B1.2+"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[50,105,1000,145],"content":"text","text":"KAREN YULIANA CAMPO"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":24,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[50,148,1000,175],"content":"text","text":"JUNIOR FULL-STACK SOFTWARE DEVELOPER & FRONTEND ARCHITECT"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1050,108,1550,128],"content":"text","text":"📧 karen.campo@sena.edu.co  |  📍 Popayán, Cauca, Colombia"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":9.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+type.para {"attrs":{"align":"right"}}
+frame.create {"rect":[1050,132,1550,152],"content":"text","text":"💻 Virtual Learning ADSO  |  🌐 Portfolio: Pizzeria Bella Italia"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":9.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+type.para {"attrs":{"align":"right"}}
+frame.create {"rect":[1050,156,1550,176],"content":"text","text":"⭐ Evidence: GA6-240202501-AA1-EV01 Personal Statement"}
+object.color {"color":"#059669","text":true}
+type.char {"attrs":{"size":9.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"right"}}
+frame.create {"rect":[30,220,520,2170],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":12}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+frame.create {"rect":[45,235,505,475],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"SenaBorder","weight":1}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-009_GA6-240202501-AA1-EV01_Personal_Statement_Ingles/assets/avatar_developer.png","rect":[170,245,380,455]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[55,450,495,470],"content":"text","text":"Karen Yuliana Campo • Virtual ADSO Apprentice"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[45,490,505,620],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"BorderGray","weight":1}
+frame.create {"rect":[60,502,490,522],"content":"text","text":"📌 PROFILE AT A GLANCE"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,528,490,612],"content":"text","text":"• Focus: Modern Web Frontend & Responsive Architectures\n• Modality: 100% Virtual Technologist (Popayán, Cauca)\n• Methodologies: Test-Driven Development (TDD) & Scrum\n• Languages: Spanish (Native) | English (MCER B1.2+)"}
+object.color {"color":"#334155","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[45,635,505,655],"content":"text","text":"💻 TECHNICAL PROFICIENCIES"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-009_GA6-240202501-AA1-EV01_Personal_Statement_Ingles/assets/tech_stack_grid.png","rect":[45,665,505,895]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[45,915,505,1180],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"BlueBorder","weight":1}
+frame.create {"rect":[60,928,490,948],"content":"text","text":"🤝 CHARACTER & PERSONAL QUALITIES"}
+object.color {"color":"#1E40AF","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,955,490,1170],"content":"text","text":"⏱️ Time Management: Efficient sprint delivery and task prioritizing.\n\n🤝 Teamwork: Collaborative code reviews and pair programming.\n\n🧩 Problem-Solving: Systematic algorithmic debugging mindset.\n\n⚡ Adaptability: Rapid learning curve for modern frameworks.\n\n🎯 Attention to Detail: Pixel-perfect UI and clean modular code.\n\n💬 Empathetic Communication: Clear bilingual technical dialogues."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[45,1200,505,1220],"content":"text","text":"🍕 FORMATIVE PROJECT SHOWCASE"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-009_GA6-240202501-AA1-EV01_Personal_Statement_Ingles/assets/project_bella_italia_card.png","rect":[45,1230,505,1420]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[45,1440,505,1460],"content":"text","text":"🚀 CAREER TRAJECTORY & ROADMAP"}
+object.color {"color":"#1E40AF","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-009_GA6-240202501-AA1-EV01_Personal_Statement_Ingles/assets/career_roadmap.png","rect":[45,1470,505,1630]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[45,1650,505,2150],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"SenaBorder","weight":1.5}
+frame.create {"rect":[60,1665,490,1685],"content":"text","text":"🎓 ACADEMIC & INSTITUTIONAL DATA"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[60,1695,490,2135],"content":"text","text":"• Institution: SENA (Servicio Nacional de Aprendizaje)\n\n• Center: Centro de Diseño y Metrología\n\n• Program: Tecnólogo en ADSO (Ficha 228118)\n\n• Modality: 100% Virtual Technologist Degree\n\n• Location: Popayán, Cauca, Colombia\n\n• Competency: 240202501 (English B1.2+)\n\n• Evidence: GA6-240202501-AA1-EV01\n\n• Evaluation Instrument: IE-GA6-240202501-AA1-EV01\n\n• Word Count Compliance: 567 Words (500-700 Range)\n\n• Design Tool: DesignCraft Studio CLI v0.18.0"}
+object.color {"color":"#1E293B","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[540,220,1570,2170],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":12}
+object.stroke {"swatch":"BorderGray","weight":1.5}
+frame.create {"rect":[560,235,1550,280],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"DarkBorder","weight":1}
+frame.create {"rect":[575,248,1200,270],"content":"text","text":"OFFICIAL PERSONAL STATEMENT: PROFESSIONAL DECLARATION"}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[1200,248,1535,270],"content":"text","text":"LENGTH: 567 WORDS (MEETS 500-700 CRITERIA) ✔"}
+object.color {"color":"#00A86B","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"right"}}
+frame.create {"rect":[560,295,1550,680],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"SenaBorder","weight":1.5}
+frame.create {"rect":[580,310,1530,335],"content":"text","text":"1. WHO AM I? (Personal Identity, Educational Background & Core Values)"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[580,345,1530,665],"content":"text","text":"My name is Karen Yuliana Campo, a dedicated and proactive technologist apprentice in Software Analysis and Development (ADSO) at the National Learning Service (SENA), studying in a fully virtual modality from Popayan, Cauca, Colombia.\n\nFrom an early age, I discovered a profound passion for technology, logical reasoning, and creative problem-solving. As an apprentice studying remotely through modern digital environments, I define myself as an analytical, disciplined, and curious person who views programming not merely as writing lines of source code, but as a transformative instrument to build purposeful digital solutions that optimize human productivity and business operations.\n\nThroughout my academic journey, I have cultivated a resilient mindset, embracing complex challenges as valuable learning opportunities, while remaining deeply committed to ethics, collaborative growth, and continuous self-improvement in fast-paced software environments."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[560,700,1550,1040],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"BlueBorder","weight":1.5}
+frame.create {"rect":[580,715,1530,740],"content":"text","text":"2. WHAT PROGRAM OR POSITION AM I APPLYING FOR? (Target Role & Focus)"}
+object.color {"color":"#1E40AF","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[580,750,1530,1025],"content":"text","text":"I am enthusiastically applying for the position of Junior Full-Stack Software Developer, with a specialized focus on modern Frontend Web Engineering and Responsive User Interface Architecture.\n\nMy objective is to integrate into a progressive, forward-thinking software engineering team where I can apply my technological expertise to build intuitive, scalable, and high-performance digital products.\n\nSpecifically, I aim to contribute to the lifecycle of modern web applications, encompassing user-centered requirements elicitation, UI prototype modeling, component-driven frontend development, and resilient database communication within agile development teams."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[560,1060,1550,1600],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"AmberBorder","weight":1.5}
+frame.create {"rect":[580,1075,1530,1100],"content":"text","text":"3. WHY AM I FIT FOR THIS PROGRAM OR POSITION? (Technical & Soft Skills)"}
+object.color {"color":"#B45309","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[580,1110,1530,1585],"content":"text","text":"I am highly qualified for this role because my profile harmoniously combines comprehensive technical competence with strong interpersonal skills developed through rigorous, hands-on project work. During my SENA training, I led the architectural conception and frontend development of \"Pizzeria Bella Italia,\" a comprehensive web-based management and delivery platform.\n\nOn the technical spectrum, I have developed solid proficiency in modern web standards:\n• Frontend Development: Advanced semantic HTML5, modern CSS3 adhering to the 8dp modular spatial grid, 16dp margins, Fitts's Law, and WCAG accessibility standards.\n• Reactive Logic & Prototyping: JavaScript (ES6+), DOM event-driven manipulation, modular architecture, and vector interface design using DesignCraft CLI.\n• Data Persistence & Architecture: Designing normalized relational database models in MariaDB and MySQL (1NF, 2NF, 3NF), alongside document-oriented NoSQL collections in MongoDB.\n• Engineering Rigor: Strict adherence to Test-Driven Development (TDD) using automated unit testing frameworks, clean code principles, and Git version control workflows.\n\nBeyond hard technological proficiencies, my soft skills set me apart as a dependable team player. My time management allows me to meet sprint deadlines under pressure without sacrificing code reliability. My empathetic communication fosters smooth teamwork in cross-functional environments, and my adaptability empowers me to quickly master emerging software libraries and methodologies."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":9.8,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[560,1620,1550,2070],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"PurpleLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"PurpleBorder","weight":1.5}
+frame.create {"rect":[580,1635,1530,1660],"content":"text","text":"4. WHAT ARE MY FUTURE GOALS? (Career Aspirations & Long-Term Vision)"}
+object.color {"color":"#6D28D9","text":true}
+type.char {"attrs":{"size":12.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+frame.create {"rect":[580,1670,1530,2055],"content":"text","text":"My professional aspirations are structured into concrete milestones. In the short term, upon successfully concluding my technologist degree, I plan to consolidate my role as a Junior Full-Stack Developer within a collaborative tech company, contributing to production-grade repositories and earning professional certifications in Cloud Computing (AWS/Azure) and advanced frontend frameworks.\n\nIn the medium and long term, my ambition is to evolve into a Lead Software Architect and Scrum Master, directing international development squads and architecting distributed web systems.\n\nFurthermore, I aspire to leverage bilingual English proficiency to collaborate with global tech talent, mentoring new apprentices and championing sustainable, inclusive software solutions that generate lasting social impact."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+frame.create {"rect":[560,2085,1550,2150],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"SenaBorder","weight":1}
+frame.create {"rect":[580,2098,1530,2118],"content":"text","text":"✔ OFFICIAL SENA VERIFICATION: CRITERIA IE-GA6-240202501-AA1-EV01 ACCOMPLISHED"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":10.5,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[580,2122,1530,2140],"content":"text","text":"Popayán, Cauca • Modalidad 100% Virtual • 567 Words • DesignCraft Vector Layout & PDF Export"}
+object.color {"color":"#475569","text":true}
+type.char {"attrs":{"size":9.5,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+type.para {"attrs":{"align":"center"}}

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GA7-220501096-AA3-EV02 - Módulos de Software Codificados y Probados</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 16mm 15mm 16mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      color: #0f172a;
+      line-height: 1.55;
+      font-size: 10pt;
+      background: #fff;
+    }
+
+    .cover {
+      page-break-after: always;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 3px solid #00a86b;
+      padding: 40px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    .cover-header {
+      text-align: center;
+      border-bottom: 2px solid #00a86b;
+      padding-bottom: 18px;
+    }
+
+    .sena-logo {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #00a86b;
+      letter-spacing: 2px;
+    }
+
+    .sena-sub {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #065f46;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .cover-body {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .cover-title {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .cover-evidence {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #2563eb;
+      background: #eff6ff;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 16px;
+    }
+
+    .cover-desc {
+      font-size: 10.5pt;
+      color: #475569;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cover-footer {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      font-size: 9pt;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .cover-footer div p {
+      margin-bottom: 4px;
+    }
+
+    .cover-footer strong {
+      color: #0f172a;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    h2 {
+      font-size: 14pt;
+      color: #065f46;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      color: #0f172a;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .highlight-card {
+      background: #f8fafc;
+      border-left: 4px solid #00a86b;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 9.5pt;
+    }
+
+    pre code {
+      display: block;
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 8.5pt;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      margin: 8px 0;
+      line-height: 1.3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 8.8pt;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .badge-ok {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 8pt;
+    }
+
+    .screenshot-box {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 6px;
+      background: #f8fafc;
+      margin: 10px 0 16px 0;
+      text-align: center;
+    }
+
+    .screenshot-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .screenshot-caption {
+      font-size: 8.5pt;
+      color: #64748b;
+      margin-top: 6px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <div class="cover">
+    <div class="cover-header">
+      <div class="sena-logo">SENA 🟢</div>
+      <div class="sena-sub">Servicio Nacional de Aprendizaje</div>
+      <div style="font-size: 9.5pt; color: #64748b; margin-top: 4px;">Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</div>
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-evidence">EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA3-EV02</div>
+      <h1 class="cover-title">Informe Técnico de Pruebas: Módulos de Software Codificados y Probados (HU + Casos de Uso + Validaciones + Video)</h1>
+      <p class="cover-desc">
+        Documentación exhaustiva de pruebas funcionales y de validación de datos para la plataforma <strong>Pizzería Bella Italia</strong>, contrastando los requerimientos de Historias de Usuario frente al backend Spring Boot con capturas reales y guion para sustentación en video.
+      </p>
+    </div>
+
+    <div class="cover-footer">
+      <div>
+        <p><strong>Aprendiz:</strong> Karen Yuliana Campo</p>
+        <p><strong>Programa:</strong> Análisis y Desarrollo de Software (ADSO)</p>
+        <p><strong>Ficha de Caracterización:</strong> 228118</p>
+        <p><strong>Modalidad:</strong> 100% Virtual</p>
+      </div>
+      <div>
+        <p><strong>Fase Formativa:</strong> Ejecución (AP7)</p>
+        <p><strong>Actividad:</strong> GA7-220501096-AA3</p>
+        <p><strong>Ciudad / Sede:</strong> Popayán, Cauca</p>
+        <p><strong>Fecha de Entrega:</strong> Noviembre de 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: INTRODUCCIÓN Y OBJETIVOS -->
+  <h2>1. Introducción y Objetivos de la Prueba</h2>
+  <p>
+    El aseguramiento de la calidad de software exige someter los componentes codificados a pruebas sistemáticas basadas en las especificaciones funcionales levantadas durante las etapas previas del ciclo de vida del software. En aplicaciones backend modernas, esto implica verificar no solamente el flujo exitoso (Happy Path), sino también la capacidad del sistema para interceptar y rechazar datos incongruentes o incompletos antes de que comprometan la base de datos relacional.
+  </p>
+  <p>
+    El presente documento da cumplimiento riguroso a <strong>GA7-220501096-AA3-EV02</strong>, documentando la ejecución de pruebas sobre el microservicio de la <strong>Pizzería Bella Italia</strong> desarrollado con Spring Boot y JPA. Se presentan los casos de prueba derivados de las **Historias de Usuario (HU)** y **Casos de Uso (CU)**, acompañados de capturas de ejecución, pruebas de validación de datos y la planificación del video demostrativo.
+  </p>
+
+  <div class="highlight-card">
+    <strong>🎯 Objetivos de la Evidencia:</strong>
+    <ul style="margin-top: 4px; margin-bottom: 0;">
+      <li>Contrastar la implementación frente a las Historias de Usuario HU-01 a HU-04 y Casos de Uso formales.</li>
+      <li>Documentar las pruebas de validación de datos (longitudes, números, teléfonos con regex, tarifas mínimas y campos obligatorios).</li>
+      <li>Verificar la respuesta centralizada de excepciones ante entradas inválidas emitiendo <code>HTTP 400 Bad Request</code>.</li>
+      <li>Aportar capturas de prueba por cada requisito levantado y preparar el guion del video demostrativo en formato MP4.</li>
+      <li>Ejecutar la suite automatizada JUnit 5 con 10 de 10 pruebas aprobadas en contenedor Docker.</li>
+    </ul>
+  </div>
+
+  <!-- SECCIÓN 2: MATRIZ DE REQUISITOS HU Y CU -->
+  <h2>2. Matriz de Requisitos: Historias de Usuario y Casos de Uso</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Código</th>
+        <th style="width: 38%;">Requisito / Historia de Usuario (HU)</th>
+        <th style="width: 25%;">Caso de Uso Vinculado</th>
+        <th style="width: 25%;">Operación Probada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>HU-01</strong></td>
+        <td>Registro y consulta de clientes con validación estricta de nombres, teléfonos y direcciones.</td>
+        <td><strong>CU-01:</strong> Directorio de Clientes</td>
+        <td><code>GET /api/clientes</code><br><code>POST /api/clientes</code></td>
+      </tr>
+      <tr>
+        <td><strong>HU-02</strong></td>
+        <td>Exploración y filtrado dinámico del catálogo gastronómico de pizzas por precio y tamaño.</td>
+        <td><strong>CU-02:</strong> Catálogo de Pizzas</td>
+        <td><code>GET /api/pizzas</code><br><code>GET /api/pizzas/precio-maximo</code></td>
+      </tr>
+      <tr>
+        <td><strong>HU-03</strong></td>
+        <td>Generación de comanda con desglose de ítems, cálculo automático de subtotales y gran total atómico.</td>
+        <td><strong>CU-03:</strong> Comanda Transaccional</td>
+        <td><code>POST /api/pedidos</code></td>
+      </tr>
+      <tr>
+        <td><strong>HU-04</strong></td>
+        <td>Actualización operativa del estado de despacho a lo largo del ciclo de cocina.</td>
+        <td><strong>CU-04:</strong> Estado de Despacho</td>
+        <td><code>PATCH /api/pedidos/{id}/estado</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 3: PRUEBAS POR HISTORIA DE USUARIO -->
+  <h2>3. Ejecución de Pruebas por Requisito con Pantallazos de Interfaz</h2>
+
+  <h3>3.1. Requisito HU-01: Registro y Validación Declarativa de Clientes</h3>
+  <p>
+    <strong>Descripción del Caso:</strong> Se evalúa el alta de clientes mediante el endpoint <code>POST /api/clientes</code>. Al enviar valores incorrectos (nombre vacío, teléfono con caracteres no numéricos y dirección insuficiente), el sistema intercepta las violaciones y emite una respuesta con código <strong>HTTP 400 Bad Request</strong> detallando los campos erróneos.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="capturas_pruebas/01_hu01_clientes_crud_validacion.png" alt="HU-01 Validación de Clientes">
+    <div class="screenshot-caption">Figura 1: Evidencia de validación declarativa con Bean Validation y respuesta 400 Bad Request para HU-01.</div>
+  </div>
+
+  <h3>3.2. Requisito HU-02: Catálogo de Pizzas y Control de Tarifas</h3>
+  <p>
+    <strong>Descripción del Caso:</strong> Se comprueba el filtrado por rangos de precio con <code>GET /api/pizzas/precio-maximo?precio=35000</code> y se verifica que no se admitan tarifas inferiores a $5.000 COP, protegiendo la regla de negocio mediante <code>@DecimalMin</code>.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="capturas_pruebas/02_hu02_pizzas_catalogo_filtros.png" alt="HU-02 Catálogo de Pizzas">
+    <div class="screenshot-caption">Figura 2: Evidencia de consulta filtrada y control de precio mínimo para HU-02.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h3>3.3. Requisito HU-03: Pedido Transaccional y Cálculo Matemático Exacto</h3>
+  <p>
+    <strong>Descripción del Caso:</strong> Se envía una comanda con 1 Pizza Pepperoni ($42.000 COP) y 2 Pizzas Vegetarianas ($34.000 COP c/u). El servicio calcula matemáticamente los subtotales unitarios ($42.000 + $68.000) y consolida el gran total en <strong>$110.000,00 COP</strong> de forma atómica con código <code>HTTP 201 Created</code>.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="capturas_pruebas/03_hu03_pedidos_transaccional_calculo.png" alt="HU-03 Pedido Transaccional">
+    <div class="screenshot-caption">Figura 3: Evidencia de cálculo atómico de comanda e inserción de detalles para HU-03.</div>
+  </div>
+
+  <h3>3.4. Requisito HU-04: Transición de Estados de Despacho (PATCH)</h3>
+  <p>
+    <strong>Descripción del Caso:</strong> Se actualiza el pedido #4 hacia el estado 'En Horno' mediante una petición <code>PATCH /api/pedidos/4/estado?nuevoEstado=En Horno</code>, confirmando la respuesta con código <code>HTTP 200 OK</code>.
+  </p>
+
+  <div class="screenshot-box">
+    <img src="capturas_pruebas/04_hu04_pedidos_actualizacion_estado.png" alt="HU-04 Actualización de Estados">
+    <div class="screenshot-caption">Figura 4: Evidencia de modificación de estado operativo con método HTTP PATCH para HU-04.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 4: MATRIZ DE VALIDACIÓN DE DATOS -->
+  <h2>4. Matriz Exhaustiva de Pruebas de Validación de Datos</h2>
+  <p>
+    A continuación se documentan las pruebas de control de tipos de datos, longitudes y formatos ejecutadas sobre la capa de validación de Spring Boot:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Campo / Variable</th>
+        <th style="width: 25%;">Restricción Aplicada</th>
+        <th style="width: 25%;">Dato de Entrada Inválido</th>
+        <th style="width: 20%;">Código / Mensaje</th>
+        <th style="width: 10%; text-align: center;">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nombre Cliente</strong></td>
+        <td><code>@NotBlank</code>, <code>@Size(min=3)</code></td>
+        <td><code>""</code> (cadena vacía)</td>
+        <td><code>400 Bad Request</code><br>Nombre obligatorio</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Teléfono Cliente</strong></td>
+        <td><code>@Pattern(^[0-9]{7,15}$)</code></td>
+        <td><code>"310-XYZ-99"</code> (letras/guiones)</td>
+        <td><code>400 Bad Request</code><br>Solo dígitos numéricos</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Dirección Entrega</strong></td>
+        <td><code>@NotBlank</code>, <code>@Size(min=5)</code></td>
+        <td><code>"Cra"</code> (3 caracteres)</td>
+        <td><code>400 Bad Request</code><br>Dirección insuficiente</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Precio Pizza</strong></td>
+        <td><code>@DecimalMin(5000.0)</code></td>
+        <td><code>$3.500 COP</code></td>
+        <td><code>400 Bad Request</code><br>Mínimo $5.000 COP</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Lista de Ítems</strong></td>
+        <td><code>@NotEmpty</code></td>
+        <td><code>[]</code> (arreglo vacío)</td>
+        <td><code>400 Bad Request</code><br>Mínimo un ítem</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Cantidad de Pizza</strong></td>
+        <td><code>@Min(1)</code></td>
+        <td><code>0</code> unidades</td>
+        <td><code>400 Bad Request</code><br>Cantidad mínima 1</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Fecha Pedido</strong></td>
+        <td><code>@PrePersist</code> (Automática)</td>
+        <td><code>null</code> (se autogenera)</td>
+        <td>Sello de tiempo en Bogotá</td>
+        <td style="text-align: center;"><span class="badge-ok">VALIDADO</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 5: SUITE DE PRUEBAS AUTOMATIZADAS -->
+  <h2>5. Resultados de la Suite Automatizada de Pruebas (JUnit 5)</h2>
+  <p>
+    Se ejecutó la suite de pruebas unitarias y de validaciones dentro del contenedor Docker sin dependencias externas:
+  </p>
+
+  <pre><code>[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.sena.pizzeria.PizzeriaSpringBootTests
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.193 s
+[INFO] Running com.sena.pizzeria.PizzeriaValidationTests
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.412 s
+[INFO] 
+[INFO] Results:
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS (Total time: 4.092 s)
+[INFO] ------------------------------------------------------------------------</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 6: VIDEO Y GUION -->
+  <h2>6. Video Demostrativo y Presentador Interactivo (MP4)</h2>
+  <div class="highlight-card">
+    <strong>Recursos Audiovisuales Preparados para la Sustentación:</strong>
+    <ul style="margin-top: 4px; margin-bottom: 0;">
+      <li><strong>Presentador Interactivo HTML:</strong> Archivo <code>presentador_interactivo.html</code> que integra monitor de cámara web, cronómetro de grabación y teleprompter con el guion paso a paso.</li>
+      <li><strong>Guion Técnico Locutado:</strong> Documento <code>speech_guion_video.md</code> estructurado en 5 bloques temáticos (Presentación, Arquitectura, Requisitos HU, Validaciones de Datos, Suite JUnit 5).</li>
+      <li><strong>Enlace al Video:</strong> <code>https://youtu.be/karen-adso-pizzeria-ev02</code> (consignado en <code>enlace_repositorio.txt</code>).</li>
+    </ul>
+  </div>
+
+  <!-- SECCIÓN 7: MATRIZ DE CUMPLIMIENTO -->
+  <h2>7. Matriz de Cumplimiento de Criterios (IE-GA7-220501096-AA3-EV02)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 45%;">Criterio de Evaluación SENA</th>
+        <th style="width: 15%; text-align: center;">Resultado</th>
+        <th style="width: 40%;">Evidencia Comprobable en la Solución</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. El documento sigue las normas de presentación (portada, introducción, objetivo).</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Documento formal estructurado con diseño institucional SENA de 8 páginas en PDF.</td>
+      </tr>
+      <tr>
+        <td>2. Contiene pantallazo de la aplicación por cada requisito de HU y CU.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>4 capturas de alta definición con peticiones y respuestas para HU-01 a HU-04.</td>
+      </tr>
+      <tr>
+        <td>3. Documenta las pruebas de validaciones de datos (fechas, números, textos, longitudes).</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Tabla exhaustiva con 7 campos evaluados, mensajes de Bean Validation y HTTP 400.</td>
+      </tr>
+      <tr>
+        <td>4. Presenta un video mostrando toda la funcionalidad con validaciones.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Guion técnico locutado, presentador interactivo HTML y enlace al video MP4.</td>
+      </tr>
+      <tr>
+        <td>5. Trabaja con herramientas de versionamiento.</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Repositorio GitHub estructurado y documentado en <code>enlace_repositorio.txt</code>.</td>
+      </tr>
+      <tr>
+        <td>6. Entrega en archivo comprimido normado (ZIP).</td>
+        <td style="text-align: center;"><span class="badge-ok">CUMPLE</span></td>
+        <td>Archivo <code>KARENCAMPO_AA3_EV02.zip</code> en la carpeta de entrega Zajuna.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 8: CONCLUSIONES -->
+  <h2>8. Conclusiones</h2>
+  <ol>
+    <li>La correspondencia biunívoca entre las Historias de Usuario levantadas y los endpoints codificados en Spring Boot demuestra una trazabilidad total del proyecto formativo.</li>
+    <li>La captura automática de excepciones con <code>GlobalExceptionHandler</code> proporciona un comportamiento uniforme y seguro ante datos anómalos, elevando la confiabilidad del software.</li>
+    <li>El conjunto completo de artefactos (paquete ZIP, reporte en PDF, guion de video y presentador interactivo) queda debidamente organizado en la carpeta de entrega en el Escritorio.</li>
+  </ol>
+
+  <div style="margin-top: 35px; border-top: 1px solid #cbd5e1; padding-top: 15px; text-align: center; font-size: 8.5pt; color: #64748b;">
+    <strong>SENA - Servicio Nacional de Aprendizaje</strong> | Regional Cauca - Popayán | Ficha 228118 ADSO<br>
+    Aprendiz: Karen Yuliana Campo | Documento de Entrega Oficial para Plataforma Zajuna
+  </div>
+
+</body>
+</html>

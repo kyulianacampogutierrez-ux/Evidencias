@@ -1,0 +1,99 @@
+file.new {"intent":"web","width":1800,"height":1000,"pages":1}
+swatch.create {"name":"CanvasBg","color":"#F8FAFC"}
+swatch.create {"name":"CardWhite","color":"#FFFFFF"}
+swatch.create {"name":"BorderGray","color":"#E2E8F0"}
+swatch.create {"name":"DarkBorder","color":"#CBD5E1"}
+swatch.create {"name":"SenaGreen","color":"#00A86B"}
+swatch.create {"name":"SenaLight","color":"#ECFDF5"}
+swatch.create {"name":"SenaBorder","color":"#A7F3D0"}
+swatch.create {"name":"TealLight","color":"#F0FDFA"}
+swatch.create {"name":"TealBorder","color":"#99F6E4"}
+swatch.create {"name":"AmberLight","color":"#FFFBEB"}
+swatch.create {"name":"AmberBorder","color":"#FDE68A"}
+swatch.create {"name":"BlueLight","color":"#EFF6FF"}
+swatch.create {"name":"BlueBorder","color":"#BFDBFE"}
+swatch.create {"name":"RedLight","color":"#FEF2F2"}
+swatch.create {"name":"RedBorder","color":"#FECACA"}
+swatch.create {"name":"PurpleLight","color":"#FAF5FF"}
+swatch.create {"name":"PurpleBorder","color":"#E9D5FF"}
+frame.create {"rect":[0,0,1800,1000],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CanvasBg"}
+frame.create {"rect":[30,30,580,970],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"RedBorder","weight":2}
+frame.create {"rect":[45,45,565,95],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"RedLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"RedBorder","weight":1}
+frame.create {"rect":[55,60,555,85],"content":"text","text":"🚨 1. LAS 5 LESIONES MÁS COMUNES EN IT"}
+object.color {"color":"#991B1B","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/ilustracion_tunel_carpiano.png","rect":[45,105,565,380]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/ilustracion_cervicalgia.png","rect":[45,395,565,670]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/ilustracion_lumbalgia.png","rect":[45,685,565,955]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[610,30,1180,970],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"SenaBorder","weight":2}
+frame.create {"rect":[625,45,1165,95],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"SenaBorder","weight":1}
+frame.create {"rect":[635,60,1155,85],"content":"text","text":"⏱️ 2. BATERÍA PRÁCTICA DE 6 PAUSAS ACTIVAS"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[625,105,1165,145],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"AmberLight"}
+object.cornerOptions {"shape":"rounded","size":6}
+object.stroke {"swatch":"AmberBorder","weight":1}
+frame.create {"rect":[635,118,1155,138],"content":"text","text":"🎯 REGLA DE ORO: 5 MINUTOS CADA 45 A 50 MINUTOS DE PROGRAMACIÓN"}
+object.color {"color":"#92400E","text":true}
+type.char {"attrs":{"size":11,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_1_cuello.png","rect":[630,155,885,405]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_2_muneca.png","rect":[905,155,1160,405]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_3_tronco.png","rect":[630,420,885,670]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_4_pecho.png","rect":[905,420,1160,670]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_5_piernas.png","rect":[630,685,885,935]}
+object.fit {"mode":"fitProportionally"}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/pausa_6_ojos.png","rect":[905,685,1160,935]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[630,945,1160,965],"content":"text","text":"💡 Ejecuta cada movimiento de forma lenta y con respiración diafragmática continua."}
+object.color {"color":"#64748B","text":true}
+type.char {"attrs":{"size":9,"fontFamily":"Segoe UI","fontStyle":"Regular"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1210,30,1770,970],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"CardWhite"}
+object.cornerOptions {"shape":"rounded","size":14}
+object.stroke {"swatch":"BlueBorder","weight":2}
+frame.create {"rect":[1225,45,1755,95],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"BlueLight"}
+object.cornerOptions {"shape":"rounded","size":8}
+object.stroke {"swatch":"BlueBorder","weight":1}
+frame.create {"rect":[1235,60,1745,85],"content":"text","text":"🪑 3. HIGIENE POSTURAL Y PUESTO ERGONÓMICO"}
+object.color {"color":"#1E40AF","text":true}
+type.char {"attrs":{"size":13,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+file.place {"path":"C:/Users/Karen Campo/Desktop/SENA/CDE/Evidencias/PET-008_GA6-230101507-AA4-EV01_Folleto_Pausas_Activas/assets/ilustracion_puesto_ergonomico.png","rect":[1225,105,1755,490]}
+object.fit {"mode":"fitProportionally"}
+frame.create {"rect":[1225,505,1755,955],"shape":"rectangle","content":"graphic"}
+object.fill {"swatch":"SenaLight"}
+object.cornerOptions {"shape":"rounded","size":10}
+object.stroke {"swatch":"SenaBorder","weight":1.5}
+frame.create {"rect":[1245,520,1735,545],"content":"text","text":"✅ LISTA DE CHEQUEO DEL PUESTO ADSO"}
+object.color {"color":"#065F46","text":true}
+type.char {"attrs":{"size":12,"fontFamily":"Segoe UI","fontStyle":"Bold"}}
+type.para {"attrs":{"align":"center"}}
+frame.create {"rect":[1245,560,1735,945],"content":"text","text":"[ ✔ ] MONITOR: Borde superior alineado con ojos a 50 - 70 cm de distancia.\n\n[ ✔ ] BRAZOS Y CODOS: Flexionados en ángulo exacto de 90° con soporte.\n\n[ ✔ ] SILLA Y COLUMNA: Espaldar regulable con soporte en lordosis L1-L5.\n\n[ ✔ ] CADERA Y RODILLAS: Ángulo de 90° con 3 dedos de holgura tras rodilla.\n\n[ ✔ ] PIES: Apoyo 100% plano sobre piso firme o reposapiés con 15° de ángulo.\n\n[ ✔ ] MOUSE VERTICAL: Ergonomía de 57° tipo apretón de manos contra STC.\n\n[ ✔ ] REPOSAMUÑECAS: Pad de gel suave para tecleo con muñecas neutras.\n\n[ ✔ ] DESCANSO VISUAL: Regla 20-20-20 cada 20 min mirando a 6 metros.\n\n[ ✔ ] PAUSA ACTIVA: Alarma cada 45 a 50 min para rutina de 5 min.\n\n[ ✔ ] HIDRATACIÓN: 2.0 a 3.0 litros de agua al día para discos intervertebrales."}
+object.color {"color":"#0F172A","text":true}
+type.char {"attrs":{"size":10,"fontFamily":"Segoe UI","fontStyle":"Regular"}}

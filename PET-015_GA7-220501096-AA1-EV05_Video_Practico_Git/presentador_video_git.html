@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentador Interactivo Git - GA7-220501096-AA1-EV05 | Karen Yuliana Campo</title>
+  <style>
+    :root {
+      --sena-green: #00A86B;
+      --sena-dark: #065F46;
+      --sena-light: #ECFDF5;
+      --blue-accent: #2563EB;
+      --purple-accent: #7C3AED;
+      --bg-dark: #0B0F19;
+      --bg-card: #161F30;
+      --bg-card-light: #1E293B;
+      --text-light: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-color: #334155;
+      --terminal-bg: #030712;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sena-badge {
+      background: linear-gradient(135deg, var(--sena-green), #059669);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0, 168, 107, 0.3);
+    }
+
+    .header-info h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #F1F5F9;
+    }
+
+    .header-info p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Controls Bar */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .timer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #0F172A;
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: 'Consolas', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: #38BDF8;
+    }
+
+    .timer-badge.calibrated {
+      color: #4ADE80;
+      border-color: #22C55E;
+    }
+
+    .timer-badge.warning {
+      color: #FBBF24;
+      border-color: #F59E0B;
+    }
+
+    .timer-badge.overtime {
+      color: #F87171;
+      border-color: #EF4444;
+    }
+
+    .timer-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #EF4444;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .btn {
+      background: var(--bg-card-light);
+      color: var(--text-light);
+      border: 1px solid var(--border-color);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #334155;
+      border-color: #475569;
+    }
+
+    .btn-primary {
+      background: var(--sena-green);
+      border-color: var(--sena-green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #008F5B;
+    }
+
+    .btn-blue {
+      background: var(--blue-accent);
+      border-color: var(--blue-accent);
+      color: white;
+    }
+
+    .btn-blue:hover {
+      background: #1D4ED8;
+    }
+
+    /* Main Layout */
+    .workspace {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      flex: 1;
+      height: calc(100vh - 61px);
+      overflow: hidden;
+    }
+
+    /* Left Panel: Slide Stage & Terminal */
+    .stage-container {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 24px;
+      background: radial-gradient(circle at 50% 10%, #172554 0%, #0B0F19 80%);
+      gap: 20px;
+    }
+
+    /* Slide Card */
+    .slide-viewer {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-header {
+      background: rgba(15, 23, 42, 0.8);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .slide-step-badge {
+      background: rgba(37, 99, 235, 0.2);
+      color: #60A5FA;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .slide-content {
+      padding: 28px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .slide-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .slide-subtitle {
+      font-size: 14px;
+      color: #94A3B8;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* Visual Diagram Cards */
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .diagram-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(71, 85, 105, 0.5);
+      border-radius: 12px;
+      padding: 18px;
+      transition: all 0.2s;
+    }
+
+    .diagram-card:hover {
+      border-color: #38BDF8;
+      background: rgba(30, 41, 59, 0.8);
+    }
+
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #38BDF8;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #CBD5E1;
+      line-height: 1.4;
+    }
+
+    .code-pill {
+      display: inline-block;
+      background: #020617;
+      border: 1px solid #334155;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+      color: #34D399;
+      font-size: 12px;
+      margin: 2px 0;
+    }
+
+    /* Terminal Simulator Section */
+    .terminal-box {
+      background: var(--terminal-bg);
+      border: 1px solid #1E293B;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .terminal-header {
+      background: #0F172A;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1E293B;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .tdot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .tdot.red { background: #EF4444; }
+    .tdot.yellow { background: #F59E0B; }
+    .tdot.green { background: #10B981; }
+
+    .terminal-title {
+      font-size: 12px;
+      font-family: 'Consolas', monospace;
+      color: #94A3B8;
+    }
+
+    .terminal-body {
+      padding: 16px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #E2E8F0;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+
+    .t-prompt {
+      color: #38BDF8;
+      font-weight: bold;
+    }
+
+    .t-cmd {
+      color: #F8FAFC;
+      font-weight: bold;
+    }
+
+    .t-out {
+      color: #94A3B8;
+    }
+
+    .t-success {
+      color: #4ADE80;
+    }
+
+    .t-highlight {
+      color: #FBBF24;
+    }
+
+    /* Action Toolbar for Slide */
+    .slide-footer {
+      background: #0F172A;
+      border-top: 1px solid var(--border-color);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .slide-pagination {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Right Panel: Teleprompter & Camera */
+    .teleprompter-sidebar {
+      background: var(--bg-card);
+      border-left: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .teleprompter-header {
+      padding: 14px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .teleprompter-header h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #E2E8F0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .teleprompter-controls {
+      display: flex;
+      gap: 6px;
+    }
+
+    .teleprompter-body {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    .teleprompter-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #E2E8F0;
+    }
+
+    .script-cue {
+      background: rgba(59, 130, 246, 0.15);
+      border-left: 4px solid var(--blue-accent);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0 8px 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: #93C5FD;
+      text-transform: uppercase;
+    }
+
+    .speech-segment {
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      transition: background 0.2s;
+    }
+
+    .speech-segment.active {
+      background: rgba(0, 168, 107, 0.18);
+      border-left: 3px solid var(--sena-green);
+    }
+
+    .speech-highlight {
+      color: #38BDF8;
+      font-weight: 700;
+    }
+
+    .speech-cmd {
+      font-family: 'Consolas', monospace;
+      background: #020617;
+      color: #34D399;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    /* Floating Draggable Webcam Box */
+    .webcam-container {
+      position: fixed;
+      bottom: 24px;
+      right: 444px;
+      width: 240px;
+      height: 180px;
+      background: #000;
+      border-radius: 12px;
+      border: 2px solid var(--sena-green);
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+      z-index: 200;
+      cursor: move;
+      transition: width 0.2s, height 0.2s;
+    }
+
+    .webcam-container.minimized {
+      width: 140px;
+      height: 105px;
+    }
+
+    .webcam-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 26px;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+      font-size: 11px;
+      color: #E2E8F0;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+
+    .webcam-view {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1);
+    }
+
+    .webcam-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #090D16;
+      color: #64748B;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      gap: 8px;
+    }
+
+    /* Quick Copy Box */
+    .quick-commands {
+      padding: 12px 20px;
+      background: #0F172A;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cmd-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1E293B;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+    }
+
+    .cmd-text {
+      font-family: 'Consolas', monospace;
+      color: #38BDF8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 280px;
+    }
+
+    .copy-btn {
+      background: #334155;
+      color: white;
+      border: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .copy-btn:hover {
+      background: var(--blue-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="header-left">
+      <span class="sena-badge">SENA • ADSO</span>
+      <div class="header-info">
+        <h1>GA7-220501096-AA1-EV05: Versionamiento Git en Vivo</h1>
+        <p>Aprendiz: Karen Yuliana Campo | Ficha: 228118 | Popayán, Cauca</p>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="timer-badge" id="timerBadge">
+        <span class="timer-dot"></span>
+        <span id="timerDisplay">00:00</span>
+        <span style="font-size: 11px; color: #94A3B8; font-weight: normal;">/ 04:00</span>
+      </div>
+
+      <button class="btn" id="startTimerBtn" onclick="toggleTimer()">▶ Iniciar</button>
+      <button class="btn" onclick="resetTimer()">↺ Reiniciar</button>
+      <button class="btn btn-blue" id="toggleCamBtn" onclick="toggleWebcam()">📹 Activar Cámara</button>
+      <button class="btn btn-primary" onclick="toggleAutoScroll()">📜 Teleprompter Auto</button>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="workspace">
+    
+    <!-- Left Stage: Interactive Slide & Terminal -->
+    <section class="stage-container">
+      
+      <!-- Slide Viewer -->
+      <div class="slide-viewer">
+        <div class="slide-header">
+          <div class="slide-step-badge" id="slideStepBadge">Bloque 1 de 5 • Presentación</div>
+          <div style="font-size: 12px; color: #94A3B8;">Usa flechas ← / → del teclado</div>
+        </div>
+
+        <!-- Slide 1: Presentación Institucional -->
+        <div class="slide-content active" id="slide-1">
+          <h2 class="slide-title">Demostración Práctica de Git & GitHub</h2>
+          <p class="slide-subtitle">Conexión de repositorio local y remoto, ejecución de comandos y sincronización de versiones.</p>
+          
+          <div class="diagram-grid">
+            <div class="diagram-card">
+              <div class="card-label">Identidad Institucional</div>
+              <div class="card-title">Karen Yuliana Campo</div>
+              <div class="card-desc">
+                Aprendiz ADSO - Ficha 228118<br>
+                Centro de Teleinformática y Producción Industrial (CTPI)<br>
+                Regional Cauca • Popayán (100% Virtual)
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Evidencia Formativa</div>
+              <div class="card-title">GA7-220501096-AA1-EV05</div>
+              <div class="card-desc">
+                Actividad: Configurar herramientas de versionamiento para control de cambios en el código.<br>
+                Objetivo: Conectar equipo local con repositorio remoto.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Entorno Técnico</div>
+              <div class="card-title">Linux Ubuntu 22.04 LTS</div>
+              <div class="card-desc">
+                Git CLI v2.34+ • Protocolo HTTPS / TLS<br>
+                Repositorio en la nube: <span class="code-pill">Programa-Git</span><br>
+                Identidad: <span class="code-pill">karen.campo@sena.edu.co</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Paso 1 - Vinculación Remota -->
+        <div class="slide-content" id="slide-2">
+          <h2 class="slide-title">Paso 1: Vinculación del Repositorio Remoto</h2>
+          <p class="slide-subtitle">Creación de repositorio público en GitHub y vinculación al entorno local.</p>
+
+          <div class="diagram-grid">
+            <div class="diagram-card">
+              <div class="card-label">Acción 1</div>
+              <div class="card-title">Creación en GitHub</div>
+              <div class="card-desc">
+                Creación del repositorio público: <strong>Programa-Git</strong>.<br>
+                URL: <span class="code-pill">https://github.com/karen-campo/Programa-Git.git</span>
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Acción 2</div>
+              <div class="card-title">Asociación Remota</div>
+              <div class="card-desc">
+                Comando ejecutado:<br>
+                <span class="code-pill">git remote add github &lt;url&gt;</span><br>
+                Asocia el alias seguro al origen remoto.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Acción 3</div>
+              <div class="card-title">Inspección de Remotos</div>
+              <div class="card-desc">
+                Comando ejecutado:<br>
+                <span class="code-pill">git remote -v</span><br>
+                Verificación de endpoints activos de <em>fetch</em> y <em>push</em>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Paso 2 - Primer Push -->
+        <div class="slide-content" id="slide-3">
+          <h2 class="slide-title">Paso 2: Carga Inicial de Cambios</h2>
+          <p class="slide-subtitle">Envío de ramas y objetos locales hacia el servidor remoto de GitHub.</p>
+
+          <div class="diagram-grid">
+            <div class="diagram-card">
+              <div class="card-label">Flujo de Transporte</div>
+              <div class="card-title">git push github master</div>
+              <div class="card-desc">
+                Empaquetado de objetos, compresión delta e intercambio cifrado hacia GitHub.<br>
+                Creación de la rama remota <span class="code-pill">master</span>.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Verificación Web</div>
+              <div class="card-title">Historial en GitHub</div>
+              <div class="card-desc">
+                Inspección del commit inicial <span class="code-pill">aea77a8</span> en la nube con los archivos iniciales <span class="code-pill">README.md</span> y <span class="code-pill">Main.kt</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Paso 3 - kotlin.txt y Commit -->
+        <div class="slide-content" id="slide-4">
+          <h2 class="slide-title">Paso 3: Creación de kotlin.txt y Commit Oficial</h2>
+          <p class="slide-subtitle">Registro de datos institucionales, staging y commit con mensaje obligatorio.</p>
+
+          <div class="diagram-grid">
+            <div class="diagram-card">
+              <div class="card-label">Creación de Archivo</div>
+              <div class="card-title">cat &gt; kotlin.txt</div>
+              <div class="card-desc">
+                Contiene el nombre: <strong>Karen Yuliana Campo</strong> y correo: <strong>karen.campo@sena.edu.co</strong>.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Staging Area</div>
+              <div class="card-title">git add .</div>
+              <div class="card-desc">
+                Indexación del archivo no rastreado hacia el Staging Area para la siguiente instantánea.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Commit Formal</div>
+              <div class="card-title">git commit -m "Añadido datos."</div>
+              <div class="card-desc">
+                Generación del commit <span class="code-pill">04543e3</span> cumpliendo la consigna literal de la Guía 7.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Sincronización</div>
+              <div class="card-title">git push origin master</div>
+              <div class="card-desc">
+                Envío de la nueva instantánea al repositorio remoto en GitHub.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Historial y Conclusión -->
+        <div class="slide-content" id="slide-5">
+          <h2 class="slide-title">Validación Final: Historial de Versiones</h2>
+          <p class="slide-subtitle">Comprobación del árbol genealógico con git log y cierre formal de la evidencia.</p>
+
+          <div class="diagram-grid">
+            <div class="diagram-card">
+              <div class="card-label">Inspección de Log</div>
+              <div class="card-title">git log --graph --oneline</div>
+              <div class="card-desc">
+                Visualización compacta y gráfica de la sincronización perfecta entre <span class="code-pill">master</span> y <span class="code-pill">github/master</span>.
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <div class="card-label">Criterios Rúbrica</div>
+              <div class="card-title">IE-GA7-220501096-AA1-EV05</div>
+              <div class="card-desc">
+                Cumplimiento al 100% de los 8 ítems evaluativos de la rúbrica institucional SENA.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide Footer Controls -->
+        <div class="slide-footer">
+          <button class="btn" onclick="prevSlide()">◀ Anterior</button>
+          <span class="slide-pagination" id="slidePagination">1 / 5</span>
+          <button class="btn btn-blue" onclick="nextSlide()">Siguiente ▶</button>
+        </div>
+      </div>
+
+      <!-- Terminal Simulator Section -->
+      <div class="terminal-box">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="tdot red"></span>
+            <span class="tdot yellow"></span>
+            <span class="tdot green"></span>
+          </div>
+          <span class="terminal-title">karen@ubuntu: ~/Programa-Git (bash)</span>
+          <button class="btn" style="padding: 2px 8px; font-size: 11px;" onclick="simulateTerminal()">⚡ Simular Ejecución</button>
+        </div>
+
+        <div class="terminal-body" id="terminalLog">
+<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">git remote -v</span>
+<span class="t-out">github  https://github.com/karen-campo/Programa-Git.git (fetch)
+github  https://github.com/karen-campo/Programa-Git.git (push)
+origin  https://github.com/karen-campo/Programa-Git.git (fetch)
+origin  https://github.com/karen-campo/Programa-Git.git (push)</span>
+
+<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">git log --oneline --graph --decorate</span>
+<span class="t-success">* 04543e3</span> <span class="t-highlight">(HEAD -&gt; master, origin/master, github/master)</span> Añadido datos.
+<span class="t-success">* aea77a8</span> feat: commit inicial del proyecto Programa-Git
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Right Sidebar: Teleprompter & Quick Commands -->
+    <aside class="teleprompter-sidebar">
+      <div class="teleprompter-header">
+        <h2>📜 Teleprompter de Grabación</h2>
+        <div class="teleprompter-controls">
+          <button class="btn" style="padding: 2px 8px;" onclick="changeFontSize(1)">A+</button>
+          <button class="btn" style="padding: 2px 8px;" onclick="changeFontSize(-1)">A-</button>
+        </div>
+      </div>
+
+      <div class="teleprompter-body" id="teleprompterBody">
+        
+        <div class="script-cue">Bloque 1 (0:00 - 0:45) • Saludo y Presentación</div>
+        <div class="speech-segment active" id="cue-1">
+          <p class="teleprompter-text">
+            "¡Un cordial saludo a los instructores y compañeros del Servicio Nacional de Aprendizaje (SENA)!<br><br>
+            Mi nombre es <span class="speech-highlight">Karen Yuliana Campo</span>, aprendiz del tecnólogo en <span class="speech-highlight">Análisis y Desarrollo de Software (ADSO)</span> con ficha de caracterización <span class="speech-highlight">228118</span>, perteneciente al Centro de Teleinformática y Producción Industrial de la Regional Cauca, en modalidad virtual desde Popayán.<br><br>
+            En este video práctico daremos cumplimiento a la evidencia <span class="speech-highlight">GA7-220501096-AA1-EV05: Herramientas de versionamiento (GIT) instalada y configurada</span>. Conectaremos nuestro repositorio local con GitHub y demostraremos cada comando solicitado."
+          </p>
+        </div>
+
+        <div class="script-cue">Bloque 2 (0:45 - 1:40) • Paso 1: Vinculación Remota</div>
+        <div class="speech-segment" id="cue-2">
+          <p class="teleprompter-text">
+            "Para el <strong>Paso 1</strong>, nos encontramos en el directorio local de nuestro proyecto <span class="speech-cmd">Programa-Git</span>. Previamente inicializamos el repositorio con <span class="speech-cmd">git init</span> y configuramos mi nombre y correo institucional.<br><br>
+            En GitHub creamos el repositorio público <strong>Programa-Git</strong> y lo vinculamos mediante el protocolo HTTPS ejecutando:<br>
+            <span class="speech-cmd">git remote add github https://github.com/karen-campo/Programa-Git.git</span><br><br>
+            Verificamos los orígenes con <span class="speech-cmd">git remote -v</span>, observando la confirmación de las rutas para fetch y push."
+          </p>
+        </div>
+
+        <div class="script-cue">Bloque 3 (1:40 - 2:30) • Paso 2: Carga Inicial a GitHub</div>
+        <div class="speech-segment" id="cue-3">
+          <p class="teleprompter-text">
+            "Avanzamos al <strong>Paso 2</strong>. En nuestro repositorio local ya contamos con el commit inicial que incluye <span class="speech-cmd">README.md</span> y <span class="speech-cmd">Main.kt</span>.<br><br>
+            Ahora transferimos estos cambios a la nube ejecutando:<br>
+            <span class="speech-cmd">git push github master</span><br><br>
+            Al recargar GitHub en el navegador, comprobamos que los archivos y el commit <span class="speech-highlight">aea77a8</span> ya están disponibles en el historial remoto."
+          </p>
+        </div>
+
+        <div class="script-cue">Bloque 4 (2:30 - 3:35) • Paso 3: kotlin.txt y Commit</div>
+        <div class="speech-segment" id="cue-4">
+          <p class="teleprompter-text">
+            "Continuamos con el <strong>Paso 3</strong>. Creamos el archivo <span class="speech-cmd">kotlin.txt</span> con mi nombre y correo institucional usando:<br>
+            <span class="speech-cmd">cat &gt; kotlin.txt</span><br><br>
+            Revisamos el estado con <span class="speech-cmd">git status</span>, preparamos los cambios con <span class="speech-cmd">git add .</span> y formalizamos el commit con el mensaje exacto exigido por la guía:<br>
+            <span class="speech-cmd">git commit -m \"Añadido datos.\"</span><br><br>
+            Finalmente, enviamos la actualización al remoto con <span class="speech-cmd">git push origin master</span>."
+          </p>
+        </div>
+
+        <div class="script-cue">Bloque 5 (3:35 - 4:15) • Historial y Despedida</div>
+        <div class="speech-segment" id="cue-5">
+          <p class="teleprompter-text">
+            "Para concluir la demostración, ejecutamos en la terminal:<br>
+            <span class="speech-cmd">git log --oneline --graph --decorate</span><br><br>
+            Constatamos la alineación exacta entre la rama local <span class="speech-highlight">master</span> y la remota <span class="speech-highlight">github/master</span>.<br><br>
+            De esta forma demostramos la correcta operatividad de Git y GitHub para el desarrollo colaborativo en ADSO. ¡Muchas gracias por su atención!"
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Quick Commands Panel -->
+      <div class="quick-commands">
+        <div class="cmd-item">
+          <span class="cmd-text">git remote add github https://github.com/karen-campo/Programa-Git.git</span>
+          <button class="copy-btn" onclick="copyCmd('git remote add github https://github.com/karen-campo/Programa-Git.git')">Copiar</button>
+        </div>
+        <div class="cmd-item">
+          <span class="cmd-text">git remote -v</span>
+          <button class="copy-btn" onclick="copyCmd('git remote -v')">Copiar</button>
+        </div>
+        <div class="cmd-item">
+          <span class="cmd-text">git push github master</span>
+          <button class="copy-btn" onclick="copyCmd('git push github master')">Copiar</button>
+        </div>
+        <div class="cmd-item">
+          <span class="cmd-text">git commit -m "Añadido datos."</span>
+          <button class="copy-btn" onclick="copyCmd('git commit -m \"Añadido datos.\"')">Copiar</button>
+        </div>
+        <div class="cmd-item">
+          <span class="cmd-text">git log --oneline --graph --decorate</span>
+          <button class="copy-btn" onclick="copyCmd('git log --oneline --graph --decorate')">Copiar</button>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Floating Draggable Webcam Box -->
+  <div class="webcam-container" id="webcamBox">
+    <div class="webcam-header" id="webcamHeader">
+      <span>📹 Cámara Web</span>
+      <div>
+        <button class="btn" style="padding: 1px 6px; font-size: 10px;" onclick="toggleCamSize()">⛶</button>
+        <button class="btn" style="padding: 1px 6px; font-size: 10px;" onclick="closeWebcam()">✕</button>
+      </div>
+    </div>
+    <video class="webcam-view" id="webcamVideo" autoplay playsinline muted></video>
+    <div class="webcam-placeholder" id="webcamPlaceholder">
+      <span>📷 Cámara no iniciada</span>
+      <button class="btn btn-blue" style="font-size: 10px; padding: 4px 8px;" onclick="toggleWebcam()">Encender</button>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let currentSlide = 1;
+    const totalSlides = 5;
+    let timerInterval = null;
+    let timerSeconds = 0;
+    let autoScrollInterval = null;
+    let isWebcamOn = false;
+    let webcamStream = null;
+    let fontSize = 16;
+
+    // Slide Titles
+    const slideBadges = [
+      "Bloque 1 de 5 • Presentación Institucional",
+      "Bloque 2 de 5 • Paso 1: Vinculación Remota",
+      "Bloque 3 de 5 • Paso 2: Carga Inicial GitHub",
+      "Bloque 4 de 5 • Paso 3: kotlin.txt y Commit",
+      "Bloque 5 de 5 • Validación de Historial y Cierre"
+    ];
+
+    function showSlide(index) {
+      if (index < 1 || index > totalSlides) return;
+      currentSlide = index;
+
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const cue = document.getElementById(`cue-${i}`);
+        if (slide) slide.classList.toggle('active', i === currentSlide);
+        if (cue) cue.classList.toggle('active', i === currentSlide);
+      }
+
+      document.getElementById('slideStepBadge').textContent = slideBadges[currentSlide - 1];
+      document.getElementById('slidePagination').textContent = `${currentSlide} / ${totalSlides}`;
+
+      // Scroll teleprompter to active cue
+      const activeCue = document.getElementById(`cue-${currentSlide}`);
+      if (activeCue) {
+        activeCue.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) showSlide(currentSlide - 1);
+    }
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') nextSlide();
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+      if (e.key === ' ') {
+        e.preventDefault();
+        toggleTimer();
+      }
+      if (e.key.toLowerCase() === 'c') toggleWebcam();
+    });
+
+    // Timer Logic
+    function toggleTimer() {
+      const btn = document.getElementById('startTimerBtn');
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        btn.textContent = '▶ Continuar';
+      } else {
+        timerInterval = setInterval(() => {
+          timerSeconds++;
+          updateTimerDisplay();
+        }, 1000);
+        btn.textContent = '⏸ Pausar';
+      }
+    }
+
+    function resetTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timerSeconds = 0;
+      updateTimerDisplay();
+      document.getElementById('startTimerBtn').textContent = '▶ Iniciar';
+    }
+
+    function updateTimerDisplay() {
+      const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+      const secs = String(timerSeconds % 60).padStart(2, '0');
+      const display = document.getElementById('timerDisplay');
+      const badge = document.getElementById('timerBadge');
+      
+      display.textContent = `${mins}:${secs}`;
+
+      badge.classList.remove('calibrated', 'warning', 'overtime');
+      if (timerSeconds >= 210 && timerSeconds <= 270) {
+        badge.classList.add('calibrated'); // 3:30 - 4:30 ideal
+      } else if (timerSeconds > 270 && timerSeconds <= 300) {
+        badge.classList.add('warning'); // 4:30 - 5:00
+      } else if (timerSeconds > 300) {
+        badge.classList.add('overtime'); // > 5:00
+      }
+    }
+
+    // Webcam Controls
+    async function toggleWebcam() {
+      const video = document.getElementById('webcamVideo');
+      const placeholder = document.getElementById('webcamPlaceholder');
+      const btn = document.getElementById('toggleCamBtn');
+
+      if (isWebcamOn) {
+        if (webcamStream) {
+          webcamStream.getTracks().forEach(track => track.stop());
+          webcamStream = null;
+        }
+        video.srcObject = null;
+        video.style.display = 'none';
+        placeholder.style.display = 'flex';
+        btn.textContent = '📹 Activar Cámara';
+        isWebcamOn = false;
+      } else {
+        try {
+          webcamStream = await navigator.mediaDevices.getUserMedia({
+            video: { width: 1280, height: 720 },
+            audio: false
+          });
+          video.srcObject = webcamStream;
+          video.style.display = 'block';
+          placeholder.style.display = 'none';
+          btn.textContent = '🔴 Apagar Cámara';
+          isWebcamOn = true;
+        } catch (err) {
+          alert('No se pudo acceder a la cámara web: ' + err.message);
+        }
+      }
+    }
+
+    function closeWebcam() {
+      if (isWebcamOn) toggleWebcam();
+      document.getElementById('webcamBox').style.display = 'none';
+    }
+
+    function toggleCamSize() {
+      document.getElementById('webcamBox').classList.toggle('minimized');
+    }
+
+    // Draggable Webcam
+    dragElement(document.getElementById('webcamBox'));
+
+    function dragElement(elmnt) {
+      let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      const header = document.getElementById('webcamHeader');
+      if (header) {
+        header.onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        elmnt.style.right = 'auto';
+        elmnt.style.bottom = 'auto';
+      }
+
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+    // Teleprompter Auto-Scroll
+    function toggleAutoScroll() {
+      const body = document.getElementById('teleprompterBody');
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+      } else {
+        autoScrollInterval = setInterval(() => {
+          body.scrollTop += 1;
+        }, 50);
+      }
+    }
+
+    function changeFontSize(delta) {
+      fontSize = Math.max(12, Math.min(26, fontSize + delta));
+      document.querySelectorAll('.teleprompter-text').forEach(el => {
+        el.style.fontSize = `${fontSize}px`;
+      });
+    }
+
+    // Quick Copy
+    function copyCmd(cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const tLog = document.getElementById('terminalLog');
+        tLog.innerHTML += `\n<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">${cmd}</span>\n<span class="t-out">✓ Comando copiado al portapapeles</span>`;
+        tLog.scrollTop = tLog.scrollHeight;
+      });
+    }
+
+    function simulateTerminal() {
+      const tLog = document.getElementById('terminalLog');
+      tLog.innerHTML = `<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">git status</span>
+<span class="t-out">On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean</span>
+
+<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">cat kotlin.txt</span>
+<span class="t-out">======================================================
+REPOSITORIO PROGRAMA-GIT - SERVICIO NACIONAL DE APRENDIZAJE (SENA)
+EVIDENCIA: GA7-220501096-AA1-EV05
+======================================================
+Nombre de usuario: Karen Yuliana Campo
+Correo electrónico: karen.campo@sena.edu.co
+Rol / Perfil: Aprendiz ADSO
+Ficha de Caracterización: 228118
+Programa: Análisis y Desarrollo de Software (ADSO)
+Centro de Formación: Centro de Teleinformática y Producción Industrial (CTPI)
+Regional: Cauca (Popayán, Colombia)
+Modalidad: 100% Virtual</span>
+
+<span class="t-prompt">karen@ubuntu:~/Programa-Git$</span> <span class="t-cmd">git log --oneline --graph --decorate</span>
+<span class="t-success">* 04543e3</span> <span class="t-highlight">(HEAD -> master, origin/master, github/master)</span> Añadido datos.
+<span class="t-success">* aea77a8</span> feat: commit inicial del proyecto Programa-Git`;
+      tLog.scrollTop = tLog.scrollHeight;
+    }
+  </script>
+</body>
+</html>

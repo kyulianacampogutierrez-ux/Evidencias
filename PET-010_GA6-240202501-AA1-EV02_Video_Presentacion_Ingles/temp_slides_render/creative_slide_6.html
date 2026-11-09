@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%);
+      color: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 56px 36px 56px;
+      position: relative;
+    }
+
+    /* Ambient background graphics */
+    .bg-circle-1 {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 168, 107, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .bg-circle-2 {
+      position: absolute;
+      bottom: -150px;
+      left: 100px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Top Presentation Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 20px;
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pill-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF;
+      border: 1.5px solid #2563EB;
+      color: #2563EB;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .pill-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #2563EB;
+    }
+
+    .slide-main-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      max-width: 1450px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sena-badge-top {
+      background: #ECFDF5;
+      border: 1.5px solid #A7F3D0;
+      color: #065F46;
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slide-counter-badge {
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Main Slide Body */
+    .slide-content-stage {
+      flex: 1;
+      margin: 24px 0 20px 0;
+      display: flex;
+      gap: 28px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 12px 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      z-index: 10;
+    }
+
+    .footer-left {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .footer-right {
+      font-size: 15px;
+      font-weight: 700;
+      color: #00A86B;
+    }
+
+    /* Common Card Styles */
+    .hero-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bullet-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 19px;
+      color: #1E293B;
+      line-height: 1.45;
+    }
+
+    .check-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: #ECFDF5;
+      color: #00A86B;
+      border: 1.5px solid #A7F3D0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .metric-pill {
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-circle-1"></div>
+  <div class="bg-circle-2"></div>
+
+  <header>
+    <div class="header-left">
+      <div class="pill-category">
+        <span class="pill-dot"></span>
+        <span>FUTURE HORIZON & INDUSTRY TRENDS</span>
+      </div>
+      <h1 class="slide-main-title">Emerging Technological Innovations in Software</h1>
+    </div>
+    <div class="header-right">
+      <div class="sena-badge-top">🟢 SENA ADSO</div>
+      <div class="slide-counter-badge">SLIDE 06 / 07</div>
+    </div>
+  </header>
+
+  <div class="slide-content-stage">
+    
+  <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; width: 100%;">
+    <!-- Radar 1 -->
+    <div class="hero-card" style="border-left: 6px solid #7C3AED;">
+      <div class="card-heading" style="margin-bottom: 12px;">
+        <div class="icon-box" style="background: #F3E8FF; color: #7C3AED;">🤖</div>
+        <span style="font-size: 22px;">1. Autonomous AI &amp; Copilots</span>
+      </div>
+      <p style="font-size: 18px; color: #334155; line-height: 1.45;">
+        Multi-agent orchestration, automated unit test generation (TDD), and self-healing code synthesis accelerate cycle velocity by 40%.
+      </p>
+    </div>
+
+    <!-- Radar 2 -->
+    <div class="hero-card" style="border-left: 6px solid #2563EB;">
+      <div class="card-heading" style="margin-bottom: 12px;">
+        <div class="icon-box" style="background: #EFF6FF; color: #2563EB;">⚡</div>
+        <span style="font-size: 22px;">2. Serverless Edge Computing</span>
+      </div>
+      <p style="font-size: 18px; color: #334155; line-height: 1.45;">
+        Sub-20ms latency worldwide. Pay-per-execution backends eliminate idle server costs and provide instant elastic scaling for Bella Italia.
+      </p>
+    </div>
+
+    <!-- Radar 3 -->
+    <div class="hero-card" style="border-left: 6px solid #00A86B;">
+      <div class="card-heading" style="margin-bottom: 12px;">
+        <div class="icon-box" style="background: #ECFDF5; color: #00A86B;">🎨</div>
+        <span style="font-size: 22px;">3. Code-Driven Design (Craft)</span>
+      </div>
+      <p style="font-size: 18px; color: #334155; line-height: 1.45;">
+        DesignCraft &amp; FigCraft programmatic vector tooling bridges design and engineering. Design tokens generate production UI assets directly.
+      </p>
+    </div>
+
+    <!-- Radar 4 -->
+    <div class="hero-card" style="border-left: 6px solid #EA580C;">
+      <div class="card-heading" style="margin-bottom: 12px;">
+        <div class="icon-box" style="background: #FFF7ED; color: #EA580C;">🛡️</div>
+        <span style="font-size: 22px;">4. DevSecOps &amp; Continuous QA</span>
+      </div>
+      <p style="font-size: 18px; color: #334155; line-height: 1.45;">
+        Shift-left security vulnerability scanning, 100% test coverage gates, and zero-downtime rolling releases for maximum system stability.
+      </p>
+    </div>
+  </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">SENA • Centro de Comercio y Servicios • Regional Cauca | Ficha 228118 • ADSO</div>
+    <div class="footer-right">Aprendiz: Karen Yuliana Campo • Popayán, Cauca (Modalidad 100% Virtual)</div>
+  </footer>
+</body>
+</html>

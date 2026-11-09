@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Didáctico: Fundamentos de Componentes Frontend (HTML, CSS y JS) - SENA ADSO</title>
+  <meta name="description" content="Evidencia GA6-220501096-AA4-EV01: Tutorial interactivo sobre componentes frontend para aplicaciones web y móviles. Ficha 228118.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ESTILOS EMBEBIDOS PARA COMPATIBILIDAD TOTAL (INCLUSO AL ABRIR DESDE ZIP) -->
+  <style>
+/* ==========================================================================
+   TUTORIAL DIDÁCTICO DE FUNDAMENTOS FRONTEND (HTML5, CSS3 Y JAVASCRIPT)
+   Evidencia SENA: GA6-220501096-AA4-EV01
+   Aprendiz: Karen Yuliana Campo | Ficha: 228118
+   Basado en la Guía de Aprendizaje 6 y el Componente Formativo CF16
+   ========================================================================== */
+
+/* 1. VARIABLES GLOBALES Y RETÍCULA DE 8DP */
+:root {
+  /* Retícula modular de 8dp (CF16 SENA) */
+  --space-xs: 4px;
+  --space-sm: 8px;   /* 1x módulo base */
+  --space-md: 16px;  /* 2x margen lateral */
+  --space-lg: 24px;  /* 3x espaciado secciones */
+  --space-xl: 32px;  /* 4x grandes bloques */
+  --space-2xl: 48px; /* Altura mínima de botón táctil (Ley de Fitts) */
+
+  /* Tipografías */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+
+  /* Escala tipográfica */
+  --fs-h1: 2rem;       /* 32px */
+  --fs-h2: 1.375rem;   /* 22px */
+  --fs-h3: 1.125rem;   /* 18px */
+  --fs-body: 1rem;     /* 16px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-xs: 0.75rem;    /* 12px */
+  --line-height: 1.6;
+
+  /* Paleta Modo Claro (WCAG AA) */
+  --color-bg-app: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-header-bg: rgba(255, 255, 255, 0.95);
+
+  /* Colores Señaléticos (CF16 SENA) */
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-primary-light: #e0f2fe;
+
+  /* Colores Reservados (CF16 SENA) */
+  --color-danger: #ef4444;    /* Error y alertas críticas */
+  --color-warning: #f59e0b;   /* Prevención y atención */
+  --color-success: #10b981;   /* Aprobación y éxito */
+
+  /* Sombras de elevación */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* 2. MODO OSCURO (DARK THEME) */
+body.dark-theme {
+  --color-bg-app: #0b1120;
+  --color-bg-card: #1e293b;
+  --color-border: #334155;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-header-bg: rgba(15, 23, 42, 0.95);
+  --color-primary-light: rgba(56, 189, 248, 0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. RESET Y NORMALIZACIÓN */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  line-height: var(--line-height);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-app);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. BARRA DE PROGRESO DE LECTURA */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7, #10b981);
+  z-index: 1000;
+  transition: width 0.1s ease-out;
+}
+
+/* 5. ENCABEZADO PRINCIPAL (HEADER) */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-header-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.brand-badge {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.author-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-bg-card);
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.author-avatar {
+  font-size: 1.5rem;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: var(--fs-sm);
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.author-role {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.btn-theme-toggle {
+  min-height: 44px;
+  padding: 8px 16px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+.btn-theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-primary);
+}
+
+/* 6. LAYOUT MODULAR (GRID & FLEXBOX) */
+.layout-wrapper {
+  max-width: 1300px;
+  margin: var(--space-lg) auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-xl);
+  flex: 1;
+}
+
+/* 7. BARRA LATERAL (SIDEBAR DE NAVEGACIÓN) */
+.sidebar-nav {
+  position: relative;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.search-box {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text-main);
+}
+
+.search-input {
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  font-size: var(--fs-sm);
+  background-color: var(--color-bg-app);
+  color: var(--color-text-main);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.search-count {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.tutorial-nav {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-heading {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--color-text-main);
+}
+
+.nav-instruction {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* CUMPLIMIENTO GUÍA 6: LISTA ORDENADA <ol> */
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  background-color: var(--color-bg-app);
+  transition: all 0.2s ease;
+}
+
+.toc-num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+.toc-link:hover, .toc-link.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  padding-left: 18px;
+}
+
+.sidebar-card.info-box {
+  background-color: var(--color-bg-card);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-xs);
+}
+
+.info-badge {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-success);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.info-code {
+  display: block;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* 8. CONTENIDO PRINCIPAL Y TARJETAS (CARDS) */
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.section-tag {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.intro-section h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+}
+
+.intro-lead {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.key-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.principle-item {
+  background-color: var(--color-bg-app);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.principle-item .p-icon {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+}
+
+.principle-item strong {
+  font-size: var(--fs-sm);
+  color: var(--color-text-main);
+}
+
+.principle-item span {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* 9. TARJETAS DE TEMAS DEL TUTORIAL (TEMA-CARD) */
+.tema-card {
+  scroll-margin-top: 100px;
+}
+
+.tema-header {
+  margin-bottom: var(--space-md);
+}
+
+.tema-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 8px;
+}
+
+.tema-pill {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.reading-time {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.tema-card h2 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.3;
+}
+
+.tema-figure {
+  margin: var(--space-md) 0 var(--space-lg) 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: #0f172a;
+}
+
+.tema-svg-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tema-figure figcaption {
+  padding: 10px 16px;
+  font-size: var(--fs-xs);
+  color: #94a3b8;
+  background-color: #0b1120;
+  border-top: 1px solid #1e293b;
+  font-style: italic;
+}
+
+.tema-content p {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-main);
+}
+
+.tema-content ul {
+  margin: 0 0 var(--space-md) 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tema-content li {
+  color: var(--color-text-main);
+}
+
+.analogy-box {
+  background-color: var(--color-bg-app);
+  border-left: 4px solid var(--color-warning);
+  padding: var(--space-md);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-md);
+}
+
+.analogy-box strong {
+  display: block;
+  font-size: var(--fs-sm);
+  color: #b45309;
+  margin-bottom: 4px;
+}
+
+body.dark-theme .analogy-box strong {
+  color: #fbbf24;
+}
+
+.analogy-box p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+/* 10. BLOQUES DE CÓDIGO CON BOTÓN DE COPIAR */
+.code-snippet-wrapper {
+  background-color: #0f172a;
+  border-radius: var(--radius-md);
+  border: 1px solid #334155;
+  overflow: hidden;
+  margin-top: var(--space-md);
+}
+
+.snippet-header {
+  background-color: #1e293b;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+.file-tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.btn-copy {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: all 0.2s;
+}
+
+.btn-copy:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+.btn-copy.copied {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: #ffffff;
+}
+
+pre {
+  padding: var(--space-md);
+  overflow-x: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+p code, li code {
+  font-family: var(--font-mono);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* 11. GLOSARIO TÉCNICO */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.glossary-item {
+  background-color: var(--color-bg-app);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.glossary-item dt {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.glossary-item dd {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* 12. BOTÓN FLOTANTE VOLVER ARRIBA */
+.btn-back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 800;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-back-to-top:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-primary-hover);
+}
+
+/* 13. PIE DE PÁGINA (FOOTER) */
+.main-footer {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-md);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.footer-col h3 {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* 14. ADAPTABILIDAD RESPONSIVA (MEDIA QUERIES) */
+@media (max-width: 992px) {
+  .layout-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .sidebar-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+}
+
+  </style>
+</head>
+<body class="light-theme">
+
+  <!-- BARRA DE PROGRESO DE LECTURA (SCROLL PROGRESS) -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" role="progressbar" aria-label="Progreso de lectura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ENCABEZADO PRINCIPAL (HEADER SEMÁNTICO) -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">SENA • ADSO Ficha 228118</span>
+        <h1 class="brand-title">📘 Tutorial de Fundamentos Frontend</h1>
+        <p class="brand-subtitle">Componentes Web Modernos: HTML5 Semántico, CSS3 y JavaScript Interactivo</p>
+      </div>
+      
+      <div class="header-actions">
+        <div class="author-badge">
+          <span class="author-avatar">👩‍💻</span>
+          <div class="author-info">
+            <strong class="author-name">Karen Yuliana Campo</strong>
+            <span class="author-role">Aprendiz ADSO • Guía 6</span>
+          </div>
+        </div>
+        <button id="themeToggleBtn" class="btn-theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar a Modo Oscuro">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Modo Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL CON RETÍCULA MODULAR -->
+  <div class="layout-wrapper">
+
+    <!-- BARRA LATERAL DE NAVEGACIÓN Y TABLA DE CONTENIDO (NAV SEMÁNTICO) -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-sticky">
+        <div class="search-box">
+          <label for="topicSearch" class="search-label">🔍 Buscar en el tutorial:</label>
+          <input type="text" id="topicSearch" class="search-input" placeholder="Ej: retícula, Fitts, semántica..." autocomplete="off">
+          <span id="searchResultsCount" class="search-count"></span>
+        </div>
+
+        <nav class="tutorial-nav" aria-label="Temario del Tutorial">
+          <h2 class="nav-heading">📋 Temario del Tutorial</h2>
+          <p class="nav-instruction">Haz clic en cualquier tema para navegar a su explicación detallada:</p>
+          
+          <!-- CUMPLIMIENTO ESTRICTO GUÍA 6: LISTA ORDENADA <ol> CON ENLACES A CADA TEMA -->
+          <ol class="toc-list" id="tutorialToc">
+            <li><a href="#tema-1" class="toc-link" data-tema="tema-1"><span class="toc-num">01.</span> Estructura Semántica con HTML5</a></li>
+            <li><a href="#tema-2" class="toc-link" data-tema="tema-2"><span class="toc-num">02.</span> Tipografía, Escala y Jerarquía Visual</a></li>
+            <li><a href="#tema-3" class="toc-link" data-tema="tema-3"><span class="toc-num">03.</span> Retícula Espacial de 8dp y Margen de 16dp</a></li>
+            <li><a href="#tema-4" class="toc-link" data-tema="tema-4"><span class="toc-num">04.</span> Teoría del Color, Contraste y Significado</a></li>
+            <li><a href="#tema-5" class="toc-link" data-tema="tema-5"><span class="toc-num">05.</span> Iconografía, Semiótica y Ley de Fitts</a></li>
+            <li><a href="#tema-6" class="toc-link" data-tema="tema-6"><span class="toc-num">06.</span> Estructura de Navegación y DCU (ISO 13407)</a></li>
+          </ol>
+        </nav>
+
+        <div class="sidebar-card info-box">
+          <span class="info-badge">🎓 Competencia Técnica</span>
+          <p class="info-text"><strong>220501096:</strong> Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo.</p>
+          <small class="info-code">Evidencia: GA6-220501096-AA4-EV01</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL (MAIN SEMÁNTICO) -->
+    <main class="tutorial-main">
+
+      <!-- INTRODUCCIÓN GENERAL -->
+      <section class="intro-section card">
+        <span class="section-tag">Objetivo de la Evidencia</span>
+        <h2>¿Qué aprenderás en este tutorial?</h2>
+        <p class="intro-lead">
+          En el desarrollo web moderno, crear una interfaz no es simplemente colocar botones o textos de manera intuitiva; 
+          requiere comprender los <strong>códigos visuales</strong>, la <strong>jerarquía de la información</strong> y los estándares de 
+          <strong>accesibilidad y usabilidad</strong> definidos en el componente formativo <em>"Herramientas para el diseño y desarrollo móvil híbrido"</em> del SENA.
+        </p>
+        <div class="key-principles-grid">
+          <div class="principle-item">
+            <span class="p-icon">📐</span>
+            <strong>Retícula de 8dp</strong>
+            <span>Espaciado coherente y armónico.</span>
+          </div>
+          <div class="principle-item">
+            <span class="p-icon">🎯</span>
+            <strong>Ley de Fitts</strong>
+            <span>Botones táctiles de fácil pulsación.</span>
+          </div>
+          <div class="principle-item">
+            <span class="p-icon">🎨</span>
+            <strong>Colores Reservados</strong>
+            <span>Significado universal sin ambigüedades.</span>
+          </div>
+          <div class="principle-item">
+            <span class="p-icon">👥</span>
+            <strong>DCU (ISO 13407)</strong>
+            <span>Diseño centrado en el usuario final.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LISTADO DE TEMAS DETALLADOS -->
+      <section class="topics-section" id="topicsContainer">
+
+        <!-- TEMA 1 -->
+        <article class="tema-card card" id="tema-1">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 01 • Estructura</span>
+              <span class="reading-time">⏱️ 3 min de lectura</span>
+            </div>
+            <h2>Tema 1: Anatomía y Estructura Semántica con HTML5</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de estructura semántica HTML5">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <rect x="20" y="20" width="660" height="40" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+              <text x="40" y="45" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">&lt;header&gt; Barra Superior y Logotipo &lt;/header&gt;</text>
+              <rect x="20" y="70" width="200" height="110" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="2"/>
+              <text x="35" y="105" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">&lt;nav&gt; Navegación&lt;/nav&gt;</text>
+              <text x="35" y="130" fill="#94A3B8" font-family="sans-serif" font-size="11">Enlaces internos &lt;ol&gt;</text>
+              <rect x="235" y="70" width="445" height="110" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+              <text x="250" y="105" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">&lt;main&gt; Contenido Principal &lt;/main&gt;</text>
+              <rect x="250" y="120" width="200" height="45" rx="6" fill="#334155"/>
+              <text x="260" y="147" fill="#E2E8F0" font-family="sans-serif" font-size="11">&lt;section&gt; Bloque Temático</text>
+              <rect x="465" y="120" width="200" height="45" rx="6" fill="#334155"/>
+              <text x="475" y="147" fill="#E2E8F0" font-family="sans-serif" font-size="11">&lt;article&gt; Tarjeta / Post</text>
+              <rect x="20" y="190" width="660" height="30" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+              <text x="40" y="210" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">&lt;footer&gt; Información legal, enlaces y créditos del autor &lt;/footer&gt;</text>
+            </svg>
+            <figcaption>Figura 1.1: Distribución espacial de las etiquetas semánticas fundamentales en una página HTML5.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              En lugar de abusar de etiquetas genéricas como <code>&lt;div&gt;</code> para todo, HTML5 introdujo <strong>etiquetas semánticas</strong> 
+              que describen explícitamente su significado tanto para los desarrolladores como para los navegadores y lectores de pantalla para personas con discapacidad visual.
+            </p>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>Pensar en la estructura semántica es como armar el esqueleto humano. Si todo fueran huesos iguales (etiquetas <code>&lt;div&gt;</code>), no sabrías dónde va la cabeza ni las piernas. Las etiquetas semánticas como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> y <code>&lt;footer&gt;</code> le dan a cada parte su nombre y función natural.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">HTML5 Semántico</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>&lt;header&gt;
+  &lt;h1&gt;Pizzería Bella Italia&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav aria-label="Menú principal"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#tema-1"&gt;Estructura Semántica&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tema-2"&gt;Tipografía y Escala&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article class="tema-card"&gt;
+      &lt;h2&gt;Título del Contenido&lt;/h2&gt;
+      &lt;p&gt;Explicación clara del tema...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;Desarrollado por Karen Campo - ADSO 228118&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMA 2 -->
+        <article class="tema-card card" id="tema-2">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 02 • Tipografía</span>
+              <span class="reading-time">⏱️ 3 min de lectura</span>
+            </div>
+            <h2>Tema 2: Tipografía, Jerarquía Visual y Legibilidad</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de escala tipográfica">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <text x="30" y="55" fill="#38BDF8" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800">H1: Título Principal (32px / 2rem)</text>
+              <line x1="30" y1="75" x2="670" y2="75" stroke="#334155" stroke-width="1"/>
+              <text x="30" y="110" fill="#E2E8F0" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700">H2: Subtítulo de Sección (22px / 1.375rem)</text>
+              <line x1="30" y1="125" x2="670" y2="125" stroke="#334155" stroke-width="1"/>
+              <text x="30" y="155" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="500">Cuerpo de Texto y Párrafos: 16px (1rem) con interlineado 1.6 para máxima legibilidad</text>
+              <line x1="30" y1="175" x2="670" y2="175" stroke="#334155" stroke-width="1"/>
+              <text x="30" y="210" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="13">Código y Metadatos: 13px (0.8125rem) - Fuentes monoespaciadas claras</text>
+            </svg>
+            <figcaption>Figura 2.1: Escala tipográfica jerárquica recomendada por el componente formativo SENA CF16.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              El componente formativo del SENA señala que en dispositivos modernos y pantallas móviles, el uso de 
+              <strong>tipografías limpias y abiertas (Sans-serif)</strong> es esencial porque evita la fatiga visual. 
+              Además, la escala no debe ser arbitraria: los textos de lectura deben mantener un mínimo de <strong>16px</strong> (1rem), 
+              los encabezados principales oscilar entre <strong>28px y 34px</strong>, y el interlineado (<em>line-height</em>) debe situarse entre <strong>1.5 y 1.6</strong>.
+            </p>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>La jerarquía tipográfica es como un periódico impreso: con una mirada de 2 segundos, tus ojos saben cuál es la noticia principal por su gran titular, de qué trata cada columna por los subtítulos y dónde está el detalle fino del texto.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">CSS3 Jerarquía Tipográfica</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>:root {
+  --font-main: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --fs-h1: 2rem;      /* 32px */
+  --fs-h2: 1.375rem;  /* 22px */
+  --fs-body: 1rem;    /* 16px */
+  --line-height: 1.6;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  line-height: var(--line-height);
+  color: #1e293b;
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMA 3 -->
+        <article class="tema-card card" id="tema-3">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 03 • Espaciado</span>
+              <span class="reading-time">⏱️ 3 min de lectura</span>
+            </div>
+            <h2>Tema 3: Retícula Espacial (Grid de 8dp) y Margen de 16dp</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de retícula modular de 8dp">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <!-- Margen lateral 16dp -->
+              <rect x="20" y="20" width="32" height="200" rx="4" fill="#EF4444" fill-opacity="0.2" stroke="#EF4444" stroke-dasharray="4 4"/>
+              <text x="25" y="125" fill="#F87171" font-family="'JetBrains Mono', monospace" font-size="11" transform="rotate(-90 25 125)">Margen 16px</text>
+              <!-- Bloque 1 -->
+              <rect x="65" y="30" width="180" height="180" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+              <text x="85" y="70" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="14">Caja 1 (Módulo)</text>
+              <text x="85" y="100" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="12">Padding: 16px (2x8)</text>
+              <text x="85" y="125" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="12">Min-height: 48px (6x8)</text>
+              <rect x="85" y="145" width="140" height="48" rx="6" fill="#0284C7"/>
+              <text x="110" y="174" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">Touch 48px</text>
+              <!-- Gap 16dp -->
+              <rect x="255" y="30" width="16" height="180" fill="#10B981" fill-opacity="0.3"/>
+              <text x="257" y="125" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="10" transform="rotate(-90 257 125)">Gap 16px</text>
+              <!-- Bloque 2 -->
+              <rect x="280" y="30" width="370" height="180" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+              <text x="305" y="70" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="14">Caja 2 (Contenedor Responsivo)</text>
+              <text x="305" y="100" fill="#E2E8F0" font-family="sans-serif" font-size="13">Todos los márgenes y rellenos son múltiplos de 8:</text>
+              <text x="305" y="130" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="13">8px (1x) • 16px (2x) • 24px (3x) • 32px (4x)</text>
+              <text x="305" y="160" fill="#94A3B8" font-family="sans-serif" font-size="12">Garantiza consistencia visual matemática en toda la pantalla.</text>
+            </svg>
+            <figcaption>Figura 3.1: Métrica matemática de múltiplos de 8dp y márgenes de 16dp según la guía SENA CF16.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              El componente formativo del SENA destaca que <em>"se debe utilizar un módulo de espaciado y separación de <strong>8dp</strong>, 
+              siendo común tener márgenes laterales de <strong>16dp</strong>"</em>. 
+              Al diseñar bajo esta regla matemática, todo elemento gráfico (botones, tarjetas, espaciado entre párrafos e íconos) 
+              se escala armoniosamente en cualquier pantalla.
+            </p>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>Imagina escribir en un cuaderno cuadriculado donde cada cuadrito mide 8 milímetros. En vez de poner márgenes al azar de 7mm o 13mm que desalinean todo, usas 1 cuadro (8px), 2 cuadros (16px) o 3 cuadros (24px). El resultado se ve ordenado y profesional al instante.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">CSS3 Retícula de 8dp</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>:root {
+  --space-1: 8px;   /* Módulo base 1x */
+  --space-2: 16px;  /* Margen lateral 2x */
+  --space-3: 24px;  /* Separación secciones 3x */
+  --space-4: 32px;  /* Separación bloques mayores 4x */
+}
+
+.container {
+  padding-left: var(--space-2);   /* Margen lateral 16dp */
+  padding-right: var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2);            /* Espacio de 16dp */
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMA 4 -->
+        <article class="tema-card card" id="tema-4">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 04 • Teoría del Color</span>
+              <span class="reading-time">⏱️ 3 min de lectura</span>
+            </div>
+            <h2>Tema 4: Teoría del Color, Contraste y Significado Semiótico</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de colores reservados y señaléticos">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <!-- Color Rojo -->
+              <rect x="30" y="30" width="190" height="90" rx="8" fill="#EF4444"/>
+              <text x="45" y="65" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">🔴 ROJO (Peligro/Error)</text>
+              <text x="45" y="90" fill="#FEE2E2" font-family="sans-serif" font-size="11">Alerta errores y cancelación.</text>
+              <!-- Color Amarillo -->
+              <rect x="255" y="30" width="190" height="90" rx="8" fill="#F59E0B"/>
+              <text x="270" y="65" fill="#78350F" font-family="sans-serif" font-weight="bold" font-size="16">🟡 AMARILLO (Alerta)</text>
+              <text x="270" y="90" fill="#78350F" font-family="sans-serif" font-size="11">Prevención y confirmación.</text>
+              <!-- Color Verde -->
+              <rect x="480" y="30" width="190" height="90" rx="8" fill="#10B981"/>
+              <text x="495" y="65" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">🟢 VERDE (Éxito)</text>
+              <text x="495" y="90" fill="#D1FAE5" font-family="sans-serif" font-size="11">Confirmación y acción correcta.</text>
+              <!-- Colores Señaléticos -->
+              <rect x="30" y="140" width="640" height="70" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="1"/>
+              <text x="50" y="170" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="14">🔵 Colores Señaléticos: Blanco, Negro y Azul</text>
+              <text x="50" y="195" fill="#94A3B8" font-family="sans-serif" font-size="12">Utilizados para estructuración informativa, enlaces interactivos y fondo de lectura accesible (WCAG AA).</text>
+            </svg>
+            <figcaption>Figura 4.1: Clasificación de colores reservados y señaléticos según el marco semiótico del SENA.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              El componente formativo define el <strong>código cromático</strong> señalando que los colores son simultáneamente 
+              <em>"color y signo"</em>, pues conllevan un mensaje intrínseco:
+            </p>
+            <ul>
+              <li><strong>Rojo:</strong> Color reservado para advertir peligro, fallos y errores del sistema.</li>
+              <li><strong>Amarillo:</strong> Color reservado para prevención, advirtiendo consecuencias antes de una acción.</li>
+              <li><strong>Verde:</strong> Color reservado para éxito, validación y confirmación satisfactoria.</li>
+              <li><strong>Blanco, Negro y Azul:</strong> Colores señaléticos que estructuran la información y guían la navegación.</li>
+            </ul>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>Es igual que un semáforo de tránsito: si una aplicación te muestra un botón de "Aceptar" en color rojo chillón y el de "Cancelar" en verde, tu cerebro se confunde inmediatamente porque esos colores ya tienen un significado cultural grabado en la mente humana.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">Variables de Color Semiótico</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>:root {
+  /* Colores Reservados */
+  --color-danger: #ef4444;    /* Error y alertas críticas */
+  --color-warning: #f59e0b;   /* Prevención y atención */
+  --color-success: #10b981;   /* Aprobación y éxito */
+  
+  /* Colores Señaléticos */
+  --color-primary: #0284c7;   /* Azul para botones y enlaces */
+  --color-bg-dark: #0f172a;   /* Negro/Gris fondo oscuro */
+  --color-text-dark: #f8fafc; /* Blanco para texto accesible */
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMA 5 -->
+        <article class="tema-card card" id="tema-5">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 05 • Ergonomía e Íconos</span>
+              <span class="reading-time">⏱️ 4 min de lectura</span>
+            </div>
+            <h2>Tema 5: Iconografía, Semiótica y Ley de Fitts</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de la Ley de Fitts e iconografía semiótica">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <!-- Zona de Fitts -->
+              <rect x="30" y="30" width="300" height="180" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="2"/>
+              <text x="50" y="65" fill="#C084FC" font-family="sans-serif" font-weight="bold" font-size="14">🎯 Ley de Fitts: Tiempo = a + b * log2(D/W)</text>
+              <text x="50" y="90" fill="#94A3B8" font-family="sans-serif" font-size="11">Botones grandes (W) y cercanos (D) se pulsan más rápido.</text>
+              <rect x="50" y="115" width="260" height="50" rx="8" fill="#7C3AED"/>
+              <text x="95" y="146" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">Área Táctil Mínima: 48px</text>
+              <text x="50" y="190" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11">✔ Fácil acceso con el pulgar móvil</text>
+              <!-- 3 Dimensiones Semióticas -->
+              <rect x="360" y="30" width="310" height="180" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+              <text x="380" y="65" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="14">📐 3 Dimensiones del Ícono</text>
+              <text x="380" y="95" fill="#F8FAFC" font-family="sans-serif" font-size="12"><strong>1. Semiótica:</strong> Relación directa (🗑️ = Borrar)</text>
+              <text x="380" y="125" fill="#F8FAFC" font-family="sans-serif" font-size="12"><strong>2. Semántica:</strong> Coherencia de estilo uniforme</text>
+              <text x="380" y="155" fill="#F8FAFC" font-family="sans-serif" font-size="12"><strong>3. Funcional:</strong> Intuitivo y de respuesta inmediata</text>
+              <text x="380" y="190" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="11">Icono + Etiqueta textual = Mayor claridad</text>
+            </svg>
+            <figcaption>Figura 5.1: Ley de Fitts aplicada a controles táctiles y las 3 dimensiones del lenguaje de signos.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              La <strong>Ley de Fitts</strong> es un principio ergonómico fundamental: describe que el tiempo que un usuario tarda en 
+              alcanzar un objetivo con el dedo o el ratón depende del <em>tamaño del objetivo</em> y de la <em>distancia</em> hasta él. 
+              Por esta razón, los botones de acción principal deben medir al menos <strong>48x48 píxeles</strong> en dispositivos táctiles 
+              y situarse en zonas de fácil alcance (como las esquinas o la parte inferior).
+            </p>
+            <p>
+              Por su parte, los íconos operan bajo tres dimensiones críticas:
+            </p>
+            <ul>
+              <li><strong>Dimensión Semiótica:</strong> Similitud con el objeto real (un lápiz para editar, una papelera para eliminar).</li>
+              <li><strong>Dimensión Semántica:</strong> Unificación visual (todos los íconos comparten el mismo grosor de trazo o estilo).</li>
+              <li><strong>Dimensión Funcional:</strong> Comunica la acción sin necesidad de un manual de usuario.</li>
+            </ul>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>Un botón de 20 píxeles en el celular es como intentar tocar con guantes de boxeo un botón microscópico: vas a fallar y a presionar otra cosa por error. Con botones de 48px con buen espacio alrededor, puedes comprar una pizza con una sola mano mientras caminas sin equivocarte.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">CSS3 Botón Ergonómico Fitts</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>.btn-tactil {
+  min-height: 48px;              /* Cumple la Ley de Fitts */
+  min-width: 48px;
+  padding: 12px 24px;
+  border-radius: 8px;            /* Múltiplo de 8dp */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-tactil:hover {
+  transform: translateY(-2px);   /* Microinteracción táctil */
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMA 6 -->
+        <article class="tema-card card" id="tema-6">
+          <header class="tema-header">
+            <div class="tema-meta">
+              <span class="tema-pill">Tema 06 • Arquitectura y DCU</span>
+              <span class="reading-time">⏱️ 4 min de lectura</span>
+            </div>
+            <h2>Tema 6: Estructura de Navegación y DCU (ISO 13407)</h2>
+          </header>
+
+          <figure class="tema-figure">
+            <svg class="tema-svg-illustration" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama del ciclo ISO 13407 de diseño centrado en el usuario">
+              <rect width="700" height="240" rx="12" fill="#0F172A"/>
+              <!-- Fase 1 -->
+              <circle cx="100" cy="120" r="60" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+              <text x="65" y="115" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="12">1. Contexto</text>
+              <text x="60" y="135" fill="#94A3B8" font-family="sans-serif" font-size="10">Entrevistas &</text>
+              <text x="65" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10">Audiencia</text>
+              <!-- Flecha 1 -->
+              <path d="M 165 120 L 205 120" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrow)"/>
+              <!-- Fase 2 -->
+              <circle cx="270" cy="120" r="60" fill="#1E293B" stroke="#A855F7" stroke-width="2"/>
+              <text x="235" y="115" fill="#C084FC" font-family="sans-serif" font-weight="bold" font-size="12">2. Requisitos</text>
+              <text x="240" y="135" fill="#94A3B8" font-family="sans-serif" font-size="10">Historias de</text>
+              <text x="245" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10">Usuario</text>
+              <!-- Flecha 2 -->
+              <path d="M 335 120 L 375 120" stroke="#A855F7" stroke-width="3"/>
+              <!-- Fase 3 -->
+              <circle cx="440" cy="120" r="60" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+              <text x="408" y="115" fill="#34D399" font-family="sans-serif" font-weight="bold" font-size="12">3. Prototipos</text>
+              <text x="410" y="135" fill="#94A3B8" font-family="sans-serif" font-size="10">DesignCraft &</text>
+              <text x="420" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10">Frontend</text>
+              <!-- Flecha 3 -->
+              <path d="M 505 120 L 545 120" stroke="#10B981" stroke-width="3"/>
+              <!-- Fase 4 -->
+              <circle cx="610" cy="120" r="60" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+              <text x="575" y="115" fill="#FBBF24" font-family="sans-serif" font-weight="bold" font-size="12">4. Evaluación</text>
+              <text x="580" y="135" fill="#94A3B8" font-family="sans-serif" font-size="10">Pruebas TDD &</text>
+              <text x="585" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10">Feedback</text>
+            </svg>
+            <figcaption>Figura 6.1: Las 4 fases del Diseño Centrado en el Usuario bajo el estándar internacional ISO 13407.</figcaption>
+          </figure>
+
+          <div class="tema-content">
+            <p>
+              El estándar <strong>ISO 13407</strong> establece el marco del <strong>Diseño Centrado en el Usuario (DCU)</strong> a través de 
+              cuatro etapas iterativas: entender el contexto de uso, especificar los requisitos del usuario, producir prototipos y evaluar 
+              los diseños con pruebas continuas.
+            </p>
+            <p>
+              Respecto a las <strong>estructuras de navegación</strong>, se clasifican en:
+            </p>
+            <ul>
+              <li><strong>Lineales:</strong> Secuencia paso a paso obligatoria (como los carritos de compra o wizards de bienvenida).</li>
+              <li><strong>Jerárquicas:</strong> Estructura en árbol donde el usuario elige categorías antes de profundizar (como la carta de pizzas y bebidas).</li>
+              <li><strong>Aleatorias:</strong> Libre exploración según el interés espontáneo del visitante.</li>
+            </ul>
+            <div class="analogy-box">
+              <strong>💡 Analogía para mortales:</strong>
+              <p>El DCU es como cocinar para tus invitados preguntándoles qué alergias tienen antes de comprar los ingredientes, en lugar de preparar un plato exótico al azar y descubrir en la mesa que nadie puede comerlo.</p>
+            </div>
+
+            <div class="code-snippet-wrapper">
+              <div class="snippet-header">
+                <span class="file-tag">JavaScript Interactivo de Navegación</span>
+                <button class="btn-copy" onclick="copiarSnippet(this)">Copiar</button>
+              </div>
+              <pre><code>// Navegación suave con compensación de altura del encabezado
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SECCIÓN DEL GLOSARIO TÉCNICO (SENA CF16) -->
+      <section class="glossary-section card">
+        <span class="section-tag">Vocabulario Técnico</span>
+        <h2>📖 Glosario de Conceptos Frontend (SENA CF16)</h2>
+        <dl class="glossary-grid">
+          <div class="glossary-item">
+            <dt>Estándar ISO 13407</dt>
+            <dd>Marco internacional que guía el ciclo de vida de desarrollo de software bajo los principios del Diseño Centrado en el Usuario (DCU).</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Ley de Fitts</dt>
+            <dd>Principio de ergonomía que postula que el tiempo necesario para mover el dedo o ratón a un botón depende de su distancia y de su tamaño físico.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Retícula de 8dp</dt>
+            <dd>Métrica modular donde todas las dimensiones, márgenes y separaciones se definen como múltiplos exactos de 8 píxeles.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Skeumorfismo</dt>
+            <dd>Estilo de diseño gráfico que imita texturas y objetos de la vida real (como interruptores de palanca o texturas de cuero) para generar familiaridad.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Píxel Escalado (sp / rem)</dt>
+            <dd>Unidad tipográfica relativa que se adapta proporcionalmente a la configuración de accesibilidad del usuario y a la densidad de la pantalla.</dd>
+          </div>
+        </dl>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- BOTÓN FLOTANTE VOLVER ARRIBA -->
+  <button id="backToTopBtn" class="btn-back-to-top" aria-label="Volver al inicio del tutorial" title="Volver arriba">↑</button>
+
+  <!-- PIE DE PÁGINA (FOOTER SEMÁNTICO) -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Proyecto Formativo</h3>
+        <p>Construcción de software para gestión y venta de pizzas (Pizzería Bella Italia).</p>
+        <p>Servicio Nacional de Aprendizaje (SENA) • Regional Cauca / CTPI</p>
+      </div>
+      <div class="footer-col">
+        <h3>Datos de la Entrega</h3>
+        <p><strong>Evidencia:</strong> GA6-220501096-AA4-EV01</p>
+        <p><strong>Programa:</strong> Análisis y Desarrollo de Software (ADSO)</p>
+        <p><strong>Ficha:</strong> 228118 • Aprendiz: Karen Yuliana Campo</p>
+      </div>
+      <div class="footer-col">
+        <h3>Metodología & Calidad</h3>
+        <p>Desarrollado bajo <strong>TDD (Test-Driven Development)</strong> con 100% de pruebas unitarias aprobadas en verde.</p>
+        <p>© 2026 Karen Campo. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="tutorial.js"></script>
+  <!-- SCRIPT EMBEBIDO PARA COMPATIBILIDAD TOTAL -->
+  <script>
+/**
+ * TUTORIAL DIDÁCTICO DE FUNDAMENTOS FRONTEND (HTML, CSS Y JS)
+ * Evidencia: GA6-220501096-AA4-EV01
+ * Aprendiz: Karen Yuliana Campo | Ficha: 228118
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initScrollProgress();
+  initSearch();
+  initBackToTop();
+  initTocHighlight();
+  initSmoothScroll();
+});
+
+/* 1. MODO OSCURO / MODO CLARO (DARK / LIGHT THEME) */
+function initTheme() {
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const themeIcon = document.getElementById('themeIcon');
+  const themeText = document.getElementById('themeText');
+  const body = document.body;
+
+  // Cargar preferencia guardada
+  const savedTheme = localStorage.getItem('tutorial-theme') || 'light';
+  if (savedTheme === 'dark') {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    if (themeIcon) themeIcon.textContent = '☀️';
+    if (themeText) themeText.textContent = 'Modo Claro';
+    if (toggleBtn) toggleBtn.title = 'Cambiar a Modo Claro';
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark-theme');
+      if (isDark) {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Modo Oscuro';
+        toggleBtn.title = 'Cambiar a Modo Oscuro';
+        localStorage.setItem('tutorial-theme', 'light');
+      } else {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Modo Claro';
+        toggleBtn.title = 'Cambiar a Modo Claro';
+        localStorage.setItem('tutorial-theme', 'dark');
+      }
+    });
+  }
+}
+
+/* 2. BARRA DE PROGRESO DE LECTURA (SCROLL PROGRESS) */
+function initScrollProgress() {
+  const progressBar = document.getElementById('scrollProgressBar');
+  if (!progressBar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = `${progress}%`;
+    progressBar.setAttribute('aria-valuenow', Math.round(progress));
+  }, { passive: true });
+}
+
+/* 3. BÚSQUEDA Y FILTRADO EN TIEMPO REAL DE TEMAS */
+function initSearch() {
+  const searchInput = document.getElementById('topicSearch');
+  const countLabel = document.getElementById('searchResultsCount');
+  const cards = document.querySelectorAll('.tema-card');
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const match = text.includes(term);
+      if (match) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (term.length > 0) {
+      countLabel.textContent = `${visibleCount} de ${cards.length} temas coincidentes`;
+    } else {
+      countLabel.textContent = '';
+    }
+  });
+}
+
+/* 4. RESALTADO DEL ÍNDICE ACTIVO AL HACER SCROLL */
+function initTocHighlight() {
+  const links = document.querySelectorAll('.toc-link');
+  const sections = document.querySelectorAll('.tema-card');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(sec => {
+      if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }, { passive: true });
+}
+
+/* 5. NAVEGACIÓN SUAVE CON COMPENSACIÓN DE ENCABEZADO */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || targetId === '') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+/* 6. BOTÓN FLOTANTE "VOLVER ARRIBA" */
+function initBackToTop() {
+  const btn = document.getElementById('backToTopBtn');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.style.display = 'flex';
+    } else {
+      btn.style.display = 'none';
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/* 7. COPIAR CÓDIGO AL PORTAPAPELES */
+window.copiarSnippet = function(button) {
+  const wrapper = button.closest('.code-snippet-wrapper');
+  if (!wrapper) return;
+  const code = wrapper.querySelector('code');
+  if (!code) return;
+
+  const textToCopy = code.innerText;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    const originalText = button.textContent;
+    button.textContent = '✔ ¡Copiado!';
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(() => {
+    button.textContent = 'Error al copiar';
+  });
+};
+
+  </script>
+
+</body>
+</html>

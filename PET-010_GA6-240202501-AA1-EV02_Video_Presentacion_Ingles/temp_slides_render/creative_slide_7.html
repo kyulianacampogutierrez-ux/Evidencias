@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%);
+      color: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 56px 36px 56px;
+      position: relative;
+    }
+
+    /* Ambient background graphics */
+    .bg-circle-1 {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 168, 107, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .bg-circle-2 {
+      position: absolute;
+      bottom: -150px;
+      left: 100px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Top Presentation Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 20px;
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pill-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF;
+      border: 1.5px solid #00A86B;
+      color: #00A86B;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .pill-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #00A86B;
+    }
+
+    .slide-main-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      max-width: 1450px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sena-badge-top {
+      background: #ECFDF5;
+      border: 1.5px solid #A7F3D0;
+      color: #065F46;
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slide-counter-badge {
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Main Slide Body */
+    .slide-content-stage {
+      flex: 1;
+      margin: 24px 0 20px 0;
+      display: flex;
+      gap: 28px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 12px 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      z-index: 10;
+    }
+
+    .footer-left {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .footer-right {
+      font-size: 15px;
+      font-weight: 700;
+      color: #00A86B;
+    }
+
+    /* Common Card Styles */
+    .hero-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bullet-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 19px;
+      color: #1E293B;
+      line-height: 1.45;
+    }
+
+    .check-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: #ECFDF5;
+      color: #00A86B;
+      border: 1.5px solid #A7F3D0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .metric-pill {
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-circle-1"></div>
+  <div class="bg-circle-2"></div>
+
+  <header>
+    <div class="header-left">
+      <div class="pill-category">
+        <span class="pill-dot"></span>
+        <span>SUMMARY, ETHICS & PROFESSIONAL VISION</span>
+      </div>
+      <h1 class="slide-main-title">Strategic Conclusions & Future Outlook</h1>
+    </div>
+    <div class="header-right">
+      <div class="sena-badge-top">🟢 SENA ADSO</div>
+      <div class="slide-counter-badge">SLIDE 07 / 07</div>
+    </div>
+  </header>
+
+  <div class="slide-content-stage">
+    
+  <div style="flex: 1.2; display: flex; flex-direction: column; gap: 18px;">
+    <!-- Takeaway 1 -->
+    <div class="hero-card" style="border-left: 6px solid #00A86B; padding: 22px 26px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="background: #00A86B; color: white; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">1</span>
+        <div>
+          <div style="font-size: 21px; font-weight: 800; color: #0F172A;">Balance Incremental Stability with Revolutionary Leaps</div>
+          <div style="font-size: 17px; color: #475569; margin-top: 4px;">Evolutionary refactoring guarantees business uptime, while revolutionary tools unlock new market opportunities.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takeaway 2 -->
+    <div class="hero-card" style="border-left: 6px solid #2563EB; padding: 22px 26px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="background: #2563EB; color: white; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">2</span>
+        <div>
+          <div style="font-size: 21px; font-weight: 800; color: #0F172A;">Virtual Education Democratizes Global Software Engineering</div>
+          <div style="font-size: 17px; color: #475569; margin-top: 4px;">Studying virtually from Popayán, Cauca proves regional developers can build high-impact enterprise solutions anywhere.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takeaway 3 -->
+    <div class="hero-card" style="border-left: 6px solid #7C3AED; padding: 22px 26px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="background: #7C3AED; color: white; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">3</span>
+        <div>
+          <div style="font-size: 21px; font-weight: 800; color: #0F172A;">Continuous Adaptation as the Core Professional Philosophy</div>
+          <div style="font-size: 17px; color: #475569; margin-top: 4px;">Tools will evolve drastically; the most resilient skill of an ADSO developer is the ability to learn, test, and adapt.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Sign-off Card -->
+  <div style="flex: 0.8; display: flex; flex-direction: column;">
+    <div class="hero-card" style="flex: 1; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #ECFDF5 0%, #EFF6FF 100%); border: 2px solid #A7F3D0;">
+      <div style="font-size: 48px; margin-bottom: 12px;">🌟</div>
+      <h3 style="font-size: 32px; font-weight: 800; color: #064E3B; margin-bottom: 10px;">Thank You!</h3>
+      <p style="font-size: 19px; color: #047857; margin-bottom: 24px; max-width: 420px; line-height: 1.45;">
+        "Technology is not a static endpoint; it is a continuous evolutionary journey."
+      </p>
+      <div style="background: #FFFFFF; border: 1.5px solid #00A86B; padding: 12px 24px; border-radius: 12px;">
+        <div style="font-size: 14px; font-weight: 700; color: #64748B;">ORAL PRESENTATION GA6-240202501-AA1-EV02</div>
+        <div style="font-size: 18px; font-weight: 800; color: #0F172A;">Karen Yuliana Campo • Popayán, Cauca</div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">SENA • Centro de Comercio y Servicios • Regional Cauca | Ficha 228118 • ADSO</div>
+    <div class="footer-right">Aprendiz: Karen Yuliana Campo • Popayán, Cauca (Modalidad 100% Virtual)</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      width: 900px;
+      height: 550px;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<svg width="900" height="550" viewBox="0 0 900 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Top Title -->
+  <rect x="30" y="25" width="840" height="75" rx="14" fill="#0F172A"/>
+  <rect x="45" y="40" width="8" height="45" rx="4" fill="#2563EB"/>
+  <text x="68" y="55" fill="#60A5FA" font-size="12" font-weight="bold" letter-spacing="2">PARADIGMA ORIENTADO A OBJETOS &amp; ARQUITECTURA LIMPIA</text>
+  <text x="68" y="82" fill="#FFFFFF" font-size="20" font-weight="900">LOS 5 PRINCIPIOS S.O.L.I.D. APLICADOS A PIZZERÍA BELLA ITALIA</text>
+
+  <!-- 5 Horizontal Columns for SOLID -->
+  <!-- S -->
+  <g transform="translate(30, 115)">
+    <rect width="158" height="350" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="45" height="45" rx="10" fill="#EF4444"/>
+    <text x="28" y="47" fill="#FFFFFF" font-size="24" font-weight="900">S</text>
+    <text x="15" y="85" fill="#0F172A" font-size="14" font-weight="800">Single Responsibility</text>
+    <text x="15" y="105" fill="#EF4444" font-size="11" font-weight="bold">(Responsabilidad Única)</text>
+    <line x1="15" y1="115" x2="143" y2="115" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <text x="15" y="135" fill="#475569" font-size="11" font-weight="600">Una clase debe tener una sola y única razón para cambiar.</text>
+    
+    <rect x="10" y="180" width="138" height="155" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="18" y="200" fill="#0F172A" font-size="10.5" font-weight="bold">Implementación:</text>
+    <text x="18" y="220" fill="#00A86B" font-size="10" font-weight="600">✔ PedidoService</text>
+    <text x="25" y="235" fill="#64748B" font-size="9.5">Solo lógica de orden</text>
+    <text x="18" y="255" fill="#00A86B" font-size="10" font-weight="600">✔ FacturaPrinter</text>
+    <text x="25" y="270" fill="#64748B" font-size="9.5">Solo generación PDF</text>
+    <text x="18" y="290" fill="#00A86B" font-size="10" font-weight="600">✔ NotificadorWs</text>
+    <text x="25" y="305" fill="#64748B" font-size="9.5">Solo avisos de entrega</text>
+  </g>
+
+  <!-- O -->
+  <g transform="translate(200, 115)">
+    <rect width="158" height="350" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="45" height="45" rx="10" fill="#F59E0B"/>
+    <text x="26" y="47" fill="#FFFFFF" font-size="24" font-weight="900">O</text>
+    <text x="15" y="85" fill="#0F172A" font-size="14" font-weight="800">Open / Closed</text>
+    <text x="15" y="105" fill="#D97706" font-size="11" font-weight="bold">(Abierto / Cerrado)</text>
+    <line x1="15" y1="115" x2="143" y2="115" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <text x="15" y="135" fill="#475569" font-size="11" font-weight="600">Abierto para extensión, cerrado para modificación directa.</text>
+    
+    <rect x="10" y="180" width="138" height="155" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="18" y="200" fill="#0F172A" font-size="10.5" font-weight="bold">Implementación:</text>
+    <text x="18" y="220" fill="#D97706" font-size="10" font-weight="600">Strategy Pattern:</text>
+    <text x="18" y="240" fill="#475569" font-size="9.5">• DescuentoCupon</text>
+    <text x="18" y="255" fill="#475569" font-size="9.5">• DescuentoMartes</text>
+    <text x="18" y="270" fill="#475569" font-size="9.5">• DescuentoFidelidad</text>
+    <text x="18" y="295" fill="#00A86B" font-size="9.5" font-weight="bold">Se agregan promociones sin alterar el Core.</text>
+  </g>
+
+  <!-- L -->
+  <g transform="translate(370, 115)">
+    <rect width="158" height="350" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="45" height="45" rx="10" fill="#10B981"/>
+    <text x="29" y="47" fill="#FFFFFF" font-size="24" font-weight="900">L</text>
+    <text x="15" y="85" fill="#0F172A" font-size="14" font-weight="800">Liskov Substitution</text>
+    <text x="15" y="105" fill="#059669" font-size="11" font-weight="bold">(Sustitución de Liskov)</text>
+    <line x1="15" y1="115" x2="143" y2="115" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <text x="15" y="135" fill="#475569" font-size="11" font-weight="600">Subtipos deben ser sustituibles por sus clases base sin fallos.</text>
+    
+    <rect x="10" y="180" width="138" height="155" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="18" y="200" fill="#0F172A" font-size="10.5" font-weight="bold">Implementación:</text>
+    <text x="18" y="220" fill="#0F172A" font-size="10" font-weight="bold">Base: ProductoPizza</text>
+    <text x="18" y="240" fill="#475569" font-size="9.5">↳ PizzaClasica</text>
+    <text x="18" y="255" fill="#475569" font-size="9.5">↳ PizzaVegana</text>
+    <text x="18" y="270" fill="#475569" font-size="9.5">↳ PizzaGourmet</text>
+    <text x="18" y="295" fill="#059669" font-size="9.5" font-weight="bold">Todas cumplen el contrato calcularCosto().</text>
+  </g>
+
+  <!-- I -->
+  <g transform="translate(540, 115)">
+    <rect width="158" height="350" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="45" height="45" rx="10" fill="#3B82F6"/>
+    <text x="32" y="47" fill="#FFFFFF" font-size="24" font-weight="900">I</text>
+    <text x="15" y="85" fill="#0F172A" font-size="14" font-weight="800">Interface Segregation</text>
+    <text x="15" y="105" fill="#2563EB" font-size="11" font-weight="bold">(Segregación Interfaz)</text>
+    <line x1="15" y1="115" x2="143" y2="115" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <text x="15" y="135" fill="#475569" font-size="11" font-weight="600">No obligar a clientes a depender de métodos que no usan.</text>
+    
+    <rect x="10" y="180" width="138" height="155" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="18" y="200" fill="#0F172A" font-size="10.5" font-weight="bold">Implementación:</text>
+    <text x="18" y="220" fill="#2563EB" font-size="10" font-weight="600">Separar Contratos:</text>
+    <text x="18" y="240" fill="#475569" font-size="9.5">• IPedidoCliente (crear)</text>
+    <text x="18" y="255" fill="#475569" font-size="9.5">• IPedidoCocina (estado)</text>
+    <text x="18" y="270" fill="#475569" font-size="9.5">• IPedidoMotorizado</text>
+    <text x="18" y="295" fill="#2563EB" font-size="9.5" font-weight="bold">Interfaces precisas y acotadas.</text>
+  </g>
+
+  <!-- D -->
+  <g transform="translate(710, 115)">
+    <rect width="160" height="350" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="15" y="15" width="45" height="45" rx="10" fill="#8B5CF6"/>
+    <text x="27" y="47" fill="#FFFFFF" font-size="24" font-weight="900">D</text>
+    <text x="15" y="85" fill="#0F172A" font-size="14" font-weight="800">Dependency Inversion</text>
+    <text x="15" y="105" fill="#7C3AED" font-size="11" font-weight="bold">(Inversión Dependencia)</text>
+    <line x1="15" y1="115" x2="143" y2="115" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <text x="15" y="135" fill="#475569" font-size="11" font-weight="600">Módulos de alto nivel dependen de abstracciones, no de detalles.</text>
+    
+    <rect x="10" y="180" width="140" height="155" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="18" y="200" fill="#0F172A" font-size="10.5" font-weight="bold">Implementación:</text>
+    <text x="18" y="220" fill="#7C3AED" font-size="10" font-weight="600">Inyección Dependencias:</text>
+    <text x="18" y="240" fill="#475569" font-size="9.5">PedidoService depende de</text>
+    <text x="18" y="255" fill="#7C3AED" font-size="10" font-weight="bold">IPedidoRepository</text>
+    <text x="18" y="275" fill="#475569" font-size="9.5">(Permite cambiar SQLite por Postgres sin tocar negocio).</text>
+  </g>
+
+  <!-- Bottom Banner -->
+  <rect x="30" y="480" width="840" height="48" rx="10" fill="#0F172A"/>
+  <text x="50" y="510" fill="#00A86B" font-size="13" font-weight="bold">🚀 IMPACTO EN EL SOFTWARE:</text>
+  <text x="260" y="510" fill="#F8FAFC" font-size="13" font-weight="500">Alta Cohesión • Bajo Acoplamiento • 100% Testabilidad en TDD • Cero Fragilidad</text>
+</svg>
+
+</body>
+</html>
