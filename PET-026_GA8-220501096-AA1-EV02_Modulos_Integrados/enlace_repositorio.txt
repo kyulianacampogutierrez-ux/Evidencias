@@ -1,0 +1,50 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA1-EV02
+TITULO: Módulos Integrados
+        (Entrega Formal del Software Integrado - Pizzería Gourmet Bella Italia)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-026_GA8-220501096-AA1-EV02_Modulos_Integrados
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA DE MÓDULOS INTEGRADOS:
+Esta evidencia constituye la entrega formal del software completamente integrado
+y en estado operativo para la Pizzería Gourmet Bella Italia Popayán, cumpliendo con
+todos los requerimientos estipulados en la Guía de Aprendizaje 8:
+
+1. REQUERIMIENTOS Y ACTAS DE APROBACIÓN:
+   - Acta formal de aprobación firmada por los interesados del negocio.
+   - Matriz de trazabilidad de 15 Requerimientos Funcionales (RF-01 a RF-15) 100% aprobados.
+   - Matriz de 5 Requerimientos No Funcionales (RNF-01 a RNF-05) verificados técnicamente.
+
+2. URLS DE SERVICIOS Y DESPLIEGUE OPERATIVO:
+   - Frontend Web React SPA:        http://localhost:5173
+   - Backend Go Fiber v2:           http://localhost:8085
+   - Healthcheck y Metadatos:       http://localhost:8085/health
+   - Base de Datos MongoDB:         mongodb://localhost:27017
+   - Aplicación Móvil Metro:        http://localhost:8081
+
+3. ARCHIVOS EJECUTABLES Y SCRIPTS DE ARRANQUE:
+   - Script de despliegue automatizado: ejecutables/iniciar_sistema.sh
+   - Script de pruebas continuas TDD:   ejecutables/ejecutar_pruebas.sh
+   - Colección ejecutable Postman v2.1: ejecutables/Postman_Collection_Proyecto_Pizzeria.json
+
+4. MANUALES TÉCNICOS Y DE USUARIO:
+   - Manual Técnico de Instalación, Configuración de Servidores y Base de Datos MongoDB.
+   - Manual de Usuario y Guía de Operación para Clientes y Administrador.
+
+5. CONTROL DE CALIDAD Y PRUEBAS:
+   - 189 pruebas automatizadas TDD aprobadas (100% GREEN).
+   - 20 aserciones de integración en Postman aprobadas (20/20 PASS).
+================================================================================
