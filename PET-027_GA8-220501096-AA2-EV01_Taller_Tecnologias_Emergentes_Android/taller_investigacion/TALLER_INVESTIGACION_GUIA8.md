@@ -28,6 +28,14 @@ El presente taller aborda dos dimensiones fundamentales:
    - **Aplicación Móvil Híbrida/Multiplataforma (React Native / Expo):** Generada a partir del ecosistema JavaScript/TypeScript de la pizzería.
    - **Entorno de Compilación Aislado mediante Docker:** Cumpliendo estrictamente con la directriz de ingeniería de **cero polución en la máquina anfitriona**, prescindiendo de la instalación de Android Studio y emuladores pesados en el host, implementando una imagen Dockerizada basada en OpenJDK 17, Gradle 8.5/9.x y las herramientas oficiales de línea de comandos de Android SDK (`cmdline-tools`, `platforms;android-34`, `build-tools;34.0.0`).
 
+> ### 📌 OBSERVACIÓN TÉCNICA Y ALCANCE DE LAS ENTREGAS:
+> 1. **No se instaló Android Studio por su gran tamaño:** Debido al elevado peso en disco (más de 25 GB) y alto consumo de memoria RAM de Android Studio, se utilizó **Visual Studio Code** como editor ligero y ágil, gestionando la compilación a través de un entorno hermético en **Docker** (OpenJDK 17, Gradle y Android SDK Command-line Tools).
+> 2. **Aplicación Nativa para Cumplimiento de la Guía:** Se desarrolló y compiló una **aplicación nativa en Java orientada a Android 14 (API 34)** para dar estricta solución técnica a cada uno de los puntos requeridos en la evidencia formativa.
+> 3. **Aplicación React Native para el Proyecto Formativo:** Para la solución integral del proyecto formativo (*Pizzería Gourmet Bella Italia Popayán*), se compiló una aplicación moderna en **React Native**, generando la **APK Release Standalone** con el bundle JavaScript completamente embebido (`index.android.bundle`), eliminando la dependencia del servidor de desarrollo Metro.
+> 4. **Se adjuntan ambas APKs:** En la entrega y dentro de `KARENCAMPO_AA2_EV01.zip` se adjuntan:
+>    - `pizzeria-bella-italia-nativa.apk` (12 MB) - Solución nativa Java Android 14+.
+>    - `pizzeria-bella-italia-rn.apk` (61 MB) - Solución React Native Release Standalone.
+
 ---
 
 ## 2. SECCIÓN 1: INVESTIGACIÓN CONCEPTUAL DEL ECOSISTEMA ANDROID
