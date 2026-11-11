@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+  <defs>
+    <!-- Filtro sombra -->
+    <filter id="shadow-comp" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+
+  <!-- Encabezado -->
+  <g filter="url(#shadow-comp)">
+    <rect x="50" y="25" width="2300" height="110" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="80" y="40" width="580" height="26" rx="6" fill="#00A86B"/>
+    <text x="370" y="58" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SENA ADSO • GUÍA DE APRENDIZAJE 8 (TOPOLOGÍA DOCKER COMPOSE)</text>
+
+    <text x="80" y="96" font-size="26" font-weight="bold" fill="#0F172A">Diagrama de Componentes UML 2.5 • Pizzería Bella Italia Popayán</text>
+    <text x="80" y="122" font-size="13" fill="#64748B">Arquitectura Física y Lógica: Puertos, Interfaces Provistas (Lollipops -O) e Interfaces Requeridas (Sockets -(), Despliegue en Contenedores</text>
+
+    <rect x="1870" y="38" width="450" height="84" rx="10" fill="#ECFDF5" stroke="#00A86B" stroke-width="1.5"/>
+    <text x="1890" y="62" font-size="13" font-weight="bold" fill="#065F46">Aprendiz: Karen Yuliana Campo</text>
+    <text x="1890" y="84" font-size="12" fill="#047857">Ficha: 228118 • CTPI Popayán - Regional Cauca</text>
+    <text x="1890" y="106" font-size="11.5" fill="#475569">Orquestación: docker-compose.yml (4 Servicios)</text>
+  </g>
+
+  <!-- ==================== LEYENDA UML DE COMPONENTES ==================== -->
+  <g>
+    <rect x="50" y="145" width="2300" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="70" y="171" font-size="12" font-weight="bold" fill="#0F172A">NOTACIÓN UML 2.5 COMPONENTES:</text>
+    <!-- Puerto -->
+    <rect x="260" y="159" width="16" height="16" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <text x="285" y="171" font-size="11.5" fill="#334155">Puerto de Red</text>
+    <!-- Interfaz Provista (Lollipop) -->
+    <line x1="420" y1="167" x2="470" y2="167" stroke="#0F172A" stroke-width="2"/>
+    <circle cx="480" cy="167" r="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <text x="500" y="171" font-size="11.5" fill="#334155">Interfaz Provista (Lollipop -O)</text>
+    <!-- Interfaz Requerida (Socket) -->
+    <line x1="720" y1="167" x2="760" y2="167" stroke="#0F172A" stroke-width="2"/>
+    <path d="M 770 157 A 10 10 0 0 1 770 177" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <text x="785" y="171" font-size="11.5" fill="#334155">Interfaz Requerida (Socket -()</text>
+    <!-- Conector de Ensamble -->
+    <line x1="1020" y1="167" x2="1055" y2="167" stroke="#0F172A" stroke-width="2"/>
+    <path d="M 1065 157 A 10 10 0 0 1 1065 177" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <circle cx="1063" cy="167" r="7" fill="#FFFFFF" stroke="#00A86B" stroke-width="2"/>
+    <line x1="1070" y1="167" x2="1105" y2="167" stroke="#0F172A" stroke-width="2"/>
+    <text x="1115" y="171" font-size="11.5" fill="#00A86B" font-weight="bold">Conector de Ensamble (-O)───()</text>
+  </g>
+
+  <!-- ==================== LÍNEAS DE INTERFACES Y ENSAMBLE ==================== -->
+  <g>
+    <!-- Cliente Web a Backend Go (Puerto 8085) -->
+    <!-- Socket desde Web -->
+    <line x1="570" y1="360" x2="680" y2="360" stroke="#2563EB" stroke-width="2.5"/>
+    <path d="M 692 346 A 14 14 0 0 1 692 374" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+    <!-- Lollipop desde Backend -->
+    <line x1="780" y1="360" x2="702" y2="360" stroke="#0F172A" stroke-width="2.5"/>
+    <circle cx="692" cy="360" r="10" fill="#FFFFFF" stroke="#00A86B" stroke-width="2.5"/>
+    <text x="692" y="335" font-size="11.5" font-weight="bold" fill="#0F172A" text-anchor="middle">IAuthRestAPI &amp; ICatalogoAPI</text>
+    <text x="692" y="390" font-size="10.5" fill="#64748B" text-anchor="middle">HTTP REST /api/* (Port 8085)</text>
+
+    <!-- Cliente Móvil a Backend Go (Puerto 8085 LAN) -->
+    <line x1="570" y1="840" x2="680" y2="840" stroke="#059669" stroke-width="2.5"/>
+    <path d="M 692 826 A 14 14 0 0 1 692 854" fill="none" stroke="#059669" stroke-width="2.5"/>
+    <line x1="780" y1="840" x2="702" y2="840" stroke="#0F172A" stroke-width="2.5"/>
+    <circle cx="692" cy="840" r="10" fill="#FFFFFF" stroke="#00A86B" stroke-width="2.5"/>
+    <text x="692" y="815" font-size="11.5" font-weight="bold" fill="#0F172A" text-anchor="middle">IPedidosAPI &amp; ITrackingAPI</text>
+    <text x="692" y="870" font-size="10.5" fill="#64748B" text-anchor="middle">Wi-Fi LAN http://192.168.20.21:8085</text>
+
+    <!-- Backend Go a MongoDB (Puerto 27017) -->
+    <!-- Socket desde Backend -->
+    <line x1="1680" y1="600" x2="1780" y2="600" stroke="#0284C7" stroke-width="2.5"/>
+    <path d="M 1792 586 A 14 14 0 0 1 1792 614" fill="none" stroke="#0284C7" stroke-width="2.5"/>
+    <!-- Lollipop desde MongoDB -->
+    <line x1="1880" y1="600" x2="1802" y2="600" stroke="#0F172A" stroke-width="2.5"/>
+    <circle cx="1792" cy="600" r="10" fill="#FFFFFF" stroke="#00A86B" stroke-width="2.5"/>
+    <text x="1792" y="575" font-size="12" font-weight="bold" fill="#0F172A" text-anchor="middle">IMongoWireProtocol (TCP 27017)</text>
+    <text x="1792" y="630" font-size="10.5" fill="#64748B" text-anchor="middle">BSON Connection Pool (sena-mongodb:27017)</text>
+  </g>
+
+  <!-- ==================== NODO 1: CONTENEDOR FRONTEND WEB ==================== -->
+  <g filter="url(#shadow-comp)">
+    <!-- Marco del Contenedor Físico -->
+    <rect x="50" y="200" width="520" height="420" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="50" y="200" width="520" height="52" rx="14" fill="#EEF2FF"/>
+    <rect x="50" y="200" width="520" height="4" fill="#4F46E5"/>
+
+    <!-- Símbolo de Componente UML en esquina superior derecha -->
+    <rect x="520" y="215" width="22" height="26" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.8"/>
+    <rect x="514" y="219" width="10" height="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.8"/>
+    <rect x="514" y="229" width="10" height="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.8"/>
+
+    <text x="75" y="226" font-size="10" font-weight="bold" fill="#4F46E5">&lt;&lt;component / container&gt;&gt;</text>
+    <text x="75" y="244" font-size="16" font-weight="bold" fill="#0F172A">sena-frontend-vite (Port 5173:5173)</text>
+
+    <!-- Puerto de Salida HTTP -->
+    <rect x="560" y="350" width="18" height="20" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+    <text x="569" y="342" font-size="9" font-weight="bold" fill="#4F46E5" text-anchor="middle">p_out</text>
+
+    <!-- Componentes Lógicos Internos -->
+    <rect x="75" y="270" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="291" font-size="12" font-weight="bold" fill="#0F172A">⬢ React 18 SPA Engine (Vite Preview Server)</text>
+    <text x="90" y="308" font-size="10" fill="#64748B">Renderizado de componentes, HMR y bundle JavaScript optimizado</text>
+
+    <rect x="75" y="330" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="351" font-size="12" font-weight="bold" fill="#0F172A">⬢ CartaMenu &amp; PizzaModal (Catálogo)</text>
+    <text x="90" y="368" font-size="10" fill="#64748B">Visualización de pizzas napolitanas a 380°C y selección de tamaños</text>
+
+    <rect x="75" y="390" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="411" font-size="12" font-weight="bold" fill="#0F172A">⬢ CartDrawer &amp; CheckoutModal (Compras)</text>
+    <text x="90" y="428" font-size="10" fill="#64748B">Cálculo de subtotales, cupón SENA2026 (-15%) y pasarela de pago</text>
+
+    <rect x="75" y="450" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="471" font-size="12" font-weight="bold" fill="#0F172A">⬢ TrackingView &amp; AdminDashboard</text>
+    <text x="90" y="488" font-size="10" fill="#64748B">Seguimiento en tiempo real y panel métrico de ventas para Karen</text>
+
+    <rect x="75" y="510" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="531" font-size="12" font-weight="bold" fill="#0F172A">⬢ TanStack Query &amp; Axios API Client</text>
+    <text x="90" y="548" font-size="10" fill="#64748B">Manejo de estado asíncrono, reintentos y caché HTTP</text>
+  </g>
+
+  <!-- ==================== NODO 2: DISPOSITIVO MÓVIL REACT NATIVE ==================== -->
+  <g filter="url(#shadow-comp)">
+    <rect x="50" y="660" width="520" height="460" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="50" y="660" width="520" height="52" rx="14" fill="#ECFDF5"/>
+    <rect x="50" y="660" width="520" height="4" fill="#059669"/>
+
+    <rect x="520" y="675" width="22" height="26" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+    <rect x="514" y="679" width="10" height="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+    <rect x="514" y="689" width="10" height="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+
+    <text x="75" y="686" font-size="10" font-weight="bold" fill="#059669">&lt;&lt;component / mobile host&gt;&gt;</text>
+    <text x="75" y="704" font-size="16" font-weight="bold" fill="#0F172A">PizzeriaMobileReactNative (Expo SDK 58)</text>
+
+    <!-- Puerto Salida Móvil -->
+    <rect x="560" y="830" width="18" height="20" fill="#FFFFFF" stroke="#059669" stroke-width="2"/>
+    <text x="569" y="822" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">p_lan</text>
+
+    <!-- Componentes Lógicos Internos -->
+    <rect x="75" y="730" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="751" font-size="12" font-weight="bold" fill="#0F172A">⬢ React Native 0.88 + Hermes Bytecode (1.6 MB)</text>
+    <text x="90" y="768" font-size="10" fill="#64748B">Ejecución nativa fluida en teléfono físico mediante Expo Go</text>
+
+    <rect x="75" y="790" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="811" font-size="12" font-weight="bold" fill="#0F172A">⬢ SafeLayout &amp; TopInset Manager</text>
+    <text x="90" y="828" font-size="10" fill="#64748B">Espaciador superior nativo adaptado a notch, cutout y barra de estado</text>
+
+    <rect x="75" y="850" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="871" font-size="12" font-weight="bold" fill="#0F172A">⬢ Segmented Role Switcher [Admin ⇄ Cliente]</text>
+    <text x="90" y="888" font-size="10" fill="#64748B">Conmutación de usuario instantánea (0 ms) con autenticación en background</text>
+
+    <rect x="75" y="910" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="931" font-size="12" font-weight="bold" fill="#0F172A">⬢ Live Tracking Stepper (5 Fases en Vivo)</text>
+    <text x="90" y="948" font-size="10" fill="#64748B">Recibido → Preparación → En Horno → En Camino → Entregado</text>
+
+    <rect x="75" y="970" width="470" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="991" font-size="12" font-weight="bold" fill="#0F172A">⬢ Metro Bundler Bridge (Port 8081:8081)</text>
+    <text x="90" y="1008" font-size="10" fill="#64748B">Contenedor node:22-alpine con Fast Refresh bidireccional</text>
+  </g>
+
+  <!-- ==================== NODO 3: BACKEND GO FIBER V2 REST ==================== -->
+  <g filter="url(#shadow-comp)">
+    <rect x="780" y="200" width="900" height="920" rx="14" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5"/>
+    <rect x="780" y="200" width="900" height="54" rx="14" fill="#EFF6FF"/>
+    <rect x="780" y="200" width="900" height="4" fill="#0284C7"/>
+
+    <rect x="1635" y="215" width="22" height="26" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.8"/>
+    <rect x="1629" y="219" width="10" height="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.8"/>
+    <rect x="1629" y="229" width="10" height="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.8"/>
+
+    <text x="805" y="226" font-size="10" font-weight="bold" fill="#0284C7">&lt;&lt;component / container&gt;&gt;</text>
+    <text x="805" y="244" font-size="17" font-weight="bold" fill="#0F172A">sena-backend-go (Golang 1.22 + Fiber v2 REST Engine)</text>
+
+    <!-- Puerto Entrada HTTP 8085 -->
+    <rect x="770" y="350" width="18" height="20" fill="#FFFFFF" stroke="#DC2626" stroke-width="2"/>
+    <text x="758" y="364" font-size="9" font-weight="bold" fill="#DC2626" text-anchor="end">Port 8085</text>
+
+    <rect x="770" y="830" width="18" height="20" fill="#FFFFFF" stroke="#DC2626" stroke-width="2"/>
+    <text x="758" y="844" font-size="9" font-weight="bold" fill="#DC2626" text-anchor="end">LAN :8085</text>
+
+    <!-- Puerto Salida a MongoDB -->
+    <rect x="1670" y="590" width="18" height="20" fill="#FFFFFF" stroke="#0284C7" stroke-width="2"/>
+    <text x="1695" y="584" font-size="9" font-weight="bold" fill="#0284C7">p_db</text>
+
+    <!-- Módulos de Negocio Internos -->
+    <g>
+      <rect x="805" y="270" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="820" y="292" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Fiber v2 Router &amp; FastHTTP Core</text>
+      <text x="820" y="310" font-size="10.5" fill="#64748B">Enrutamiento ultrarrápido con latencias de 0.8 ms</text>
+      <text x="820" y="324" font-size="10" fill="#0284C7">Endpoints: /health, /api/* con recuperación de pánicos</text>
+
+      <rect x="1245" y="270" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="1260" y="292" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ JWT Security &amp; Auth Guard (v5)</text>
+      <text x="1260" y="310" font-size="10.5" fill="#64748B">Firmado criptográfico HMAC-SHA256 y Bcrypt</text>
+      <text x="1260" y="324" font-size="10" fill="#0284C7">Roles: ADMIN (control total), CLIENTE (órdenes propias)</text>
+    </g>
+
+    <g>
+      <rect x="805" y="350" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="820" y="372" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Módulo Carta &amp; Pizzas Napolitanas</text>
+      <text x="820" y="390" font-size="10.5" fill="#64748B">Filtros por categoría (Clásicas, Especiales, Gourmet)</text>
+      <text x="820" y="404" font-size="10" fill="#0284C7">Precios: Personal, Mediana, Familiar con adiciones</text>
+
+      <rect x="1245" y="350" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="1260" y="372" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Módulo Carrito &amp; Cupones SENA</text>
+      <text x="1260" y="390" font-size="10.5" fill="#64748B">Validación del cupón SENA2026 (15% OFF)</text>
+      <text x="1260" y="404" font-size="10" fill="#0284C7">Cálculo de subtotal, descuentos e impuestos</text>
+    </g>
+
+    <g>
+      <rect x="805" y="430" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="820" y="452" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Módulo Order Workflow &amp; Stepper</text>
+      <text x="820" y="470" font-size="10.5" fill="#64748B">Máquina de estados en tiempo real para pedidos</text>
+      <text x="820" y="484" font-size="10" fill="#0284C7">RECIBIDO → PREPARACION → HORNO → CAMINO → ENTREGADO</text>
+
+      <rect x="1245" y="430" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="1260" y="452" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Módulo Pasarela de Pagos (Mock Gateway)</text>
+      <text x="1260" y="470" font-size="10.5" fill="#64748B">Tarjetas Crédito/Débito, PSE, Nequi, Daviplata, Efectivo</text>
+      <text x="1260" y="484" font-size="10" fill="#0284C7">Generación de transaccionId y comprobante en línea</text>
+    </g>
+
+    <g>
+      <rect x="805" y="510" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="820" y="532" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Admin Dashboard Reporting</text>
+      <text x="820" y="550" font-size="10.5" fill="#64748B">Agregaciones para métricas de ventas y recuentos</text>
+      <text x="820" y="564" font-size="10" fill="#0284C7">Ventas aprobadas ($135.700 COP) y órdenes activas</text>
+
+      <rect x="1245" y="510" width="415" height="64" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="1260" y="532" font-size="12.5" font-weight="bold" fill="#0F172A">⬢ Client Profile &amp; Addresses Manager</text>
+      <text x="1260" y="550" font-size="10.5" fill="#64748B">Direcciones en Popayán (Barrio Pandiguando, Centro)</text>
+      <text x="1260" y="564" font-size="10" fill="#0284C7">Puntos de fidelidad (350 Pts) y catálogo de pedidos</text>
+    </g>
+
+    <g>
+      <rect x="805" y="590" width="855" height="64" rx="8" fill="#F0FDFA" stroke="#99F6E4"/>
+      <text x="820" y="612" font-size="13" font-weight="bold" fill="#0F766E">⬢ Driver Oficial MongoDB (go.mongodb.org/mongo-driver/v2)</text>
+      <text x="820" y="630" font-size="10.5" fill="#334155">Pool persistente de conexiones con serialización BSON, timeouts resilientes y transacciones documentales</text>
+    </g>
+  </g>
+
+  <!-- ==================== NODO 4: CONTENEDOR MONGODB 6 ==================== -->
+  <g filter="url(#shadow-comp)">
+    <rect x="1880" y="200" width="470" height="920" rx="14" fill="#FFFFFF" stroke="#059669" stroke-width="2.5"/>
+    <rect x="1880" y="200" width="470" height="54" rx="14" fill="#ECFDF5"/>
+    <rect x="1880" y="200" width="470" height="4" fill="#059669"/>
+
+    <rect x="2305" y="215" width="22" height="26" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+    <rect x="2299" y="219" width="10" height="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+    <rect x="2299" y="229" width="10" height="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+
+    <text x="1905" y="226" font-size="10" font-weight="bold" fill="#059669">&lt;&lt;component / database&gt;&gt;</text>
+    <text x="1905" y="244" font-size="16" font-weight="bold" fill="#0F172A">sena-mongodb (Mongo 6 Jammy)</text>
+
+    <!-- Puerto Entrada TCP 27017 -->
+    <rect x="1870" y="590" width="18" height="20" fill="#FFFFFF" stroke="#059669" stroke-width="2"/>
+    <text x="1858" y="604" font-size="9" font-weight="bold" fill="#059669" text-anchor="end">Port 27017</text>
+
+    <!-- Colecciones NoSQL -->
+    <rect x="1905" y="270" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="1920" y="292" font-size="13" font-weight="bold" fill="#0F172A">📁 Colección: pizzas</text>
+    <text x="1920" y="312" font-size="10.5" fill="#64748B">8 pizzas activas categorizadas con precios y adiciones</text>
+
+    <rect x="1905" y="345" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="1920" y="367" font-size="13" font-weight="bold" fill="#0F172A">📁 Colección: usuarios</text>
+    <text x="1920" y="387" font-size="10.5" fill="#64748B">Admin (karencampo) y Cliente (carlos_cliente) con Bcrypt</text>
+
+    <rect x="1905" y="420" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="1920" y="442" font-size="13" font-weight="bold" fill="#0F172A">📁 Colección: pedidos</text>
+    <text x="1920" y="462" font-size="10.5" fill="#64748B">Órdenes PED-2026-XXX con historial de tracking embebido</text>
+
+    <rect x="1905" y="495" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="1920" y="517" font-size="13" font-weight="bold" fill="#0F172A">📁 Colección: categorias</text>
+    <text x="1920" y="537" font-size="10.5" fill="#64748B">Taxonomía del menú: CLASICAS, ESPECIALES, GOURMET</text>
+
+    <rect x="1905" y="570" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="1920" y="592" font-size="13" font-weight="bold" fill="#0F172A">📁 Colección: cupones</text>
+    <text x="1920" y="612" font-size="10.5" fill="#64748B">Cupones de descuento válidos (ej: SENA2026 con 15% OFF)</text>
+
+    <rect x="1905" y="645" width="420" height="85" rx="8" fill="#F0FDFA" stroke="#99F6E4"/>
+    <text x="1920" y="667" font-size="12" font-weight="bold" fill="#0F766E">⚙️ WiredTiger Storage Engine</text>
+    <text x="1920" y="685" font-size="10" fill="#334155">• Bloqueo a nivel de documento para alta concurrencia</text>
+    <text x="1920" y="700" font-size="10" fill="#334155">• Índices únicos en usuario, email y numeroPedido</text>
+    <text x="1920" y="715" font-size="10" fill="#334155">• Volumen Docker montado: sena-mongodb-data</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1200" y="1295" font-size="12" fill="#64748B" text-anchor="middle">Diagrama de Componentes UML 2.5 • Topología Docker Compose • Pizzería Bella Italia • SENA ADSO Ficha 228118 • Karen Yuliana Campo • Popayán</text>
+</svg>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "usuario": "karencampo",
+    "email": "karen.campo@sena.edu.co",
+    "nombre": "Karen Yuliana Campo",
+    "rol": "ADMINISTRADOR",
+    "salt": "a901a34e50d3d937f0d7b30520038a5b",
+    "hash": "f121fdda25fa4876225f1db390763bacc794b3ba824d19e132db3dc5ab0632871e91be596b54b840a99cb31cc198c96d4da8d2ba12297f946c2a7b44424339da",
+    "fechaRegistro": "2026-11-10T03:00:32.980Z"
+  },
+  {
+    "id": 2,
+    "usuario": "operador_popayan",
+    "email": "operador.cauca@sena.edu.co",
+    "nombre": "Operador Pizzería Cauca",
+    "rol": "OPERADOR",
+    "salt": "2304eba0e31f451aab001bdb8fcfd1a3",
+    "hash": "5e3f973995deceed5d86a29052607dfbc9a2654cc26f6fdff0b231def0cad99f2dcee4a251bf649ce36447515343662ff6e92ed94d5f0cca176fa2afba082380",
+    "fechaRegistro": "2026-11-10T03:01:45.285Z"
+  }
+]

@@ -1,0 +1,2 @@
+{"command": "frame.create", "params": {"name": "Diagrama de Paquetes UML", "x": 0, "y": 0, "width": 2400, "height": 1350}}
+{"command": "shape.rectangle", "params": {"parent": 2, "name": "CanvasBg", "x": 0, "y": 0, "width": 2400, "height": 1350, "props": {"fills": [{"type": "solid", "color": {"r": 0.973, "g": 0.98, "b": 0.988, "a": 1.0}}]}}}

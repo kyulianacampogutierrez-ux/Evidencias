@@ -1,0 +1,100 @@
+================================================================================
+EVIDENCIA GA7-220501096-AA5-EV03: DISEÑO Y DESARROLLO DE SERVICIOS WEB - PROYECTO
+ESPECIFICACIÓN DE ENDPOINTS REST API - PIZZERÍA BELLA ITALIA POPAYÁN
+APRENDIZ: Karen Yuliana Campo | FICHA: 228118 | CTPI POPAYÁN - CAUCA
+BASE URL: http://localhost:8085
+================================================================================
+
+[MÓDULO SISTEMA]
+1. GET /health
+   - Descripcion: Verificacion de salud del microservicio y conectividad MongoDB
+   - Autenticacion: Publico
+   - Respuesta: 200 OK {"status": "UP", "database": "MongoDB"}
+
+2. GET /api/health
+   - Descripcion: Metadatos institucionales SENA del servicio web
+   - Autenticacion: Publico
+   - Respuesta: 200 OK {"aprendiz": "Karen Yuliana Campo", "ficha": "228118"}
+
+[MÓDULO AUTENTICACIÓN Y CLIENTES]
+3. POST /api/auth/register
+   - Descripcion: Registro de usuarios clientes con hashing Bcrypt
+   - Autenticacion: Publico
+   - Request Body: {"usuario", "email", "password", "nombre", "telefono", "direccion"}
+   - Respuesta: 201 Created {"mensaje": "Usuario registrado exitosamente"}
+
+4. POST /api/auth/login
+   - Descripcion: Autenticacion de usuario y emision de Token JWT Bearer
+   - Autenticacion: Publico
+   - Request Body: {"usuario", "password"}
+   - Respuesta: 200 OK {"token": "<JWT_STRING>", "tipo": "Bearer", "usuario": {...}}
+
+5. GET /api/auth/profile
+   - Descripcion: Perfil del usuario en sesion extraido de los Claims JWT
+   - Autenticacion: Bearer Token (Cualquier rol)
+   - Respuesta: 200 OK {"usuario", "email", "nombre", "rol", "direcciones"}
+
+[MÓDULO CARTA Y CATÁLOGO]
+6. GET /api/categorias
+   - Descripcion: Lista de categorias de pizza (Tradicional, Especial, etc.)
+   - Autenticacion: Publico
+   - Respuesta: 200 OK [{"id", "codigo", "nombre", "descripcion"}]
+
+7. GET /api/pizzas
+   - Descripcion: Catalogo completo de pizzas napolitanas a 380°C
+   - Autenticacion: Publico
+   - Respuesta: 200 OK [{"codigo", "nombre", "precios": {"personal", "mediana", "familiar"}}]
+
+8. GET /api/pizzas/:codigo
+   - Descripcion: Detalle de una pizza por codigo BSON
+   - Autenticacion: Publico
+   - Respuesta: 200 OK {"codigo", "nombre", "ingredientes", "precios"}
+
+[MÓDULO CUPONES Y PROMOCIONES]
+9. POST /api/cupones/validar
+   - Descripcion: Validacion y calculo de descuento de cupon (ej: SENA2026 -15%)
+   - Autenticacion: Publico
+   - Request Body: {"codigo": "SENA2026", "subtotal": 50000.0}
+   - Respuesta: 200 OK {"valido": true, "porcentaje": 15.0, "descuento": 7500.0}
+
+[MÓDULO PEDIDOS Y TRACKING]
+10. POST /api/pedidos
+    - Descripcion: Creacion de orden de pedido con calculo de subtotales y envio
+    - Autenticacion: Bearer Token (CLIENTE / ADMIN)
+    - Request Body: {"items": [{"pizzaCodigo", "tamano", "cantidad"}], "cuponCodigo", "metodoPago"}
+    - Respuesta: 201 Created {"numeroPedido": "PED-2026-003", "total", "estado": "RECIBIDO"}
+
+11. GET /api/pedidos/:numero
+    - Descripcion: Consulta y tracking en vivo de una orden de pedido
+    - Autenticacion: Publico
+    - Respuesta: 200 OK {"numeroPedido", "estadoActual", "tiempoRestante", "historial": [...]}
+
+12. GET /api/pedidos/mis-pedidos
+    - Descripcion: Historial de pedidos del cliente autenticado
+    - Autenticacion: Bearer Token (CLIENTE / ADMIN)
+    - Respuesta: 200 OK [{"numeroPedido", "fecha", "total", "estado"}]
+
+[MÓDULO MEDIOS DE PAGO]
+13. POST /api/pagos/procesar
+    - Descripcion: Procesamiento simulado de transaccion (Nequi, Daviplata, Tarjeta)
+    - Autenticacion: Publico
+    - Request Body: {"numeroPedido", "metodo": "NEQUI", "monto": 85600.0, "telefono": "3124567890"}
+    - Respuesta: 200 OK {"transaccionId", "estado": "APROBADO", "recibo": "REC-78291"}
+
+[MÓDULO ADMINISTRADOR]
+14. GET /api/admin/dashboard
+    - Descripcion: Metricas operativas y resumen de ventas en tiempo real
+    - Autenticacion: Bearer Token (Solo ADMIN)
+    - Respuesta: 200 OK {"ventasTotales", "pedidosActivos", "pedidosCompletados", "usuariosRegistrados"}
+
+15. GET /api/admin/pedidos
+    - Descripcion: Listado maestro de ordenes de la pizzeria
+    - Autenticacion: Bearer Token (Solo ADMIN)
+    - Respuesta: 200 OK [{"numeroPedido", "cliente", "total", "estado", "fecha"}]
+
+16. PUT /api/admin/pedidos/:numero/estado
+    - Descripcion: Actualizacion del estado en el tracking de 5 fases
+    - Autenticacion: Bearer Token (Solo ADMIN)
+    - Request Body: {"nuevoEstado": "EN_CAMINO", "nota": "Despachado con repartidor"}
+    - Respuesta: 200 OK {"mensaje": "Estado de pedido actualizado correctamente"}
+================================================================================

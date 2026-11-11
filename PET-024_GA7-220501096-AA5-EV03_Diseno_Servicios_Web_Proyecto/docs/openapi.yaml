@@ -1,0 +1,244 @@
+openapi: 3.0.3
+info:
+  title: API REST Pizzería Bella Italia Popayán
+  description: |
+    Especificación formal de servicios web RESTful para el proyecto formativo de la
+    Pizzería Gourmet Bella Italia, desarrollado por la aprendiz Karen Yuliana Campo
+    en el marco de la Guía de Aprendizaje 7 (GA7-220501096-AA5-EV03) del programa ADSO.
+  version: 2.0.0
+  contact:
+    name: Karen Yuliana Campo (Aprendiz SENA)
+    email: karen.campo@misena.edu.co
+servers:
+  - url: http://localhost:8085
+    description: Servidor de Desarrollo Local (Docker Compose)
+  - url: http://192.168.20.21:8085
+    description: Servidor de Red Local Wi-Fi para Dispositivos Móviles React Native
+paths:
+  /health:
+    get:
+      summary: Healthcheck del Microservicio
+      responses:
+        '200':
+          description: Servicio saludable y conectado a MongoDB
+  /api/health:
+    get:
+      summary: Metadatos institucionales del Servicio
+      responses:
+        '200':
+          description: Metadatos de la aprendiz y ficha SENA
+  /api/auth/register:
+    post:
+      summary: Registro de nuevos usuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        '201':
+          description: Usuario registrado exitosamente
+        '400':
+          description: Datos inválidos
+        '409':
+          description: Usuario o email ya registrado
+  /api/auth/login:
+    post:
+      summary: Autenticación y expedición de JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Autenticación exitosa
+        '401':
+          description: Credenciales incorrectas
+  /api/auth/profile:
+    get:
+      summary: Perfil del usuario autenticado
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Datos del perfil
+        '401':
+          description: Token no provisto o inválido
+  /api/categorias:
+    get:
+      summary: Catálogo de Categorías
+      responses:
+        '200':
+          description: Lista de categorías
+  /api/pizzas:
+    get:
+      summary: Catálogo de Pizzas
+      responses:
+        '200':
+          description: Lista de pizzas
+  /api/pizzas/{codigo}:
+    get:
+      summary: Detalle de una Pizza
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalle de la pizza
+        '404':
+          description: Pizza no encontrada
+  /api/cupones/validar:
+    post:
+      summary: Validación de cupón promocional
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                codigo:
+                  type: string
+                  example: SENA2026
+                subtotal:
+                  type: number
+                  example: 50000.0
+      responses:
+        '200':
+          description: Descuento calculado
+  /api/pedidos:
+    post:
+      summary: Creación de Pedido
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PedidoRequest'
+      responses:
+        '201':
+          description: Pedido registrado
+  /api/pedidos/{numero}:
+    get:
+      summary: Tracking y detalle de pedido
+      parameters:
+        - name: numero
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Información y estado del pedido
+  /api/pagos/procesar:
+    post:
+      summary: Procesamiento de pago
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                numeroPedido:
+                  type: string
+                metodo:
+                  type: string
+                  enum: [NEQUI, DAVIPLATA, TARJETA]
+                monto:
+                  type: number
+      responses:
+        '200':
+          description: Transacción aprobada
+  /api/admin/dashboard:
+    get:
+      summary: Métricas administrativas
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Estadísticas generales de ventas
+  /api/admin/pedidos/{numero}/estado:
+    put:
+      summary: Actualización de estado de pedido
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: numero
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nuevoEstado:
+                  type: string
+                  enum: [RECIBIDO, EN_PREPARACION, EN_HORNO, EN_CAMINO, ENTREGADO]
+                nota:
+                  type: string
+      responses:
+        '200':
+          description: Estado actualizado
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    RegisterRequest:
+      type: object
+      required: [usuario, email, password, nombre]
+      properties:
+        usuario:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        nombre:
+          type: string
+        telefono:
+          type: string
+    LoginRequest:
+      type: object
+      required: [usuario, password]
+      properties:
+        usuario:
+          type: string
+        password:
+          type: string
+    PedidoRequest:
+      type: object
+      required: [items, direccionEnvio, metodoPago]
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              pizzaCodigo:
+                type: string
+              tamano:
+                type: string
+              cantidad:
+                type: integer
+        cuponCodigo:
+          type: string
+        direccionEnvio:
+          type: string
+        metodoPago:
+          type: string

@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+  <defs>
+    <marker id="arrow-pkg" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+    </marker>
+    <filter id="shadow-pkg" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+
+  <!-- Encabezado -->
+  <g filter="url(#shadow-pkg)">
+    <rect x="50" y="25" width="2300" height="110" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="80" y="40" width="580" height="26" rx="6" fill="#00A86B"/>
+    <text x="370" y="58" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SENA ADSO • GUÍA DE APRENDIZAJE 8 (AA1-EV01 &amp; AA1-EV02)</text>
+
+    <text x="80" y="96" font-size="26" font-weight="bold" fill="#0F172A">Diagrama de Paquetes UML 2.5 • Clean &amp; Hexagonal Architecture</text>
+    <text x="80" y="122" font-size="13" fill="#64748B">Organización Modular en 5 Capas: Presentación Web/Móvil, Transporte HTTP, Servicios de Aplicación, Dominio y Persistencia NoSQL</text>
+
+    <rect x="1870" y="38" width="450" height="84" rx="10" fill="#ECFDF5" stroke="#00A86B" stroke-width="1.5"/>
+    <text x="1890" y="62" font-size="13" font-weight="bold" fill="#065F46">Aprendiz: Karen Yuliana Campo</text>
+    <text x="1890" y="84" font-size="12" fill="#047857">Ficha: 228118 • CTPI Popayán - Cauca</text>
+    <text x="1890" y="106" font-size="11.5" fill="#475569">Modelo: Clean Architecture (Separación Estricta)</text>
+  </g>
+
+  <!-- LÍNEAS DE DEPENDENCIA ENTRE CAPAS (UML DEPENDENCY) -->
+  <g>
+    <!-- Capa 1 a Capa 2 -->
+    <path d="M 600 370 L 600 420" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="615" y="400" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;use&gt;&gt; HTTP REST</text>
+
+    <path d="M 1750 370 L 1750 420" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="1765" y="400" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;use&gt;&gt; HTTP REST</text>
+
+    <!-- Capa 2 a Capa 3 -->
+    <path d="M 1150 630 L 1150 680" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="1165" y="660" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;import&gt;&gt;</text>
+
+    <!-- Capa 3 a Capa 4 -->
+    <path d="M 700 880 L 700 930" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="715" y="910" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;use&gt;&gt; Entidades</text>
+
+    <!-- Capa 3 a Capa 5 -->
+    <path d="M 1650 880 L 1650 1140" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="1665" y="990" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;use&gt;&gt; Repositorios</text>
+
+    <!-- Capa 5 a Capa 4 -->
+    <path d="M 1150 1140 L 1150 1090" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arrow-pkg)"/>
+    <text x="1165" y="1120" font-size="12" font-weight="bold" fill="#2563EB">&lt;&lt;import&gt;&gt; Mapeo BSON</text>
+  </g>
+
+  <!-- ==================== CAPA 1: PRESENTACIÓN ==================== -->
+  <g filter="url(#shadow-pkg)">
+    <!-- Contenedor Capa -->
+    <rect x="50" y="160" width="2300" height="210" rx="12" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="80" y="185" font-size="13" font-weight="bold" fill="#1D4ED8">&lt;&lt;layer&gt;&gt; CAPA 1: CLIENTES DE PRESENTACIÓN (FRONTEND WEB &amp; MÓVIL)</text>
+
+    <!-- Paquete Web -->
+    <rect x="80" y="200" width="160" height="22" rx="4" fill="#EEF2FF" stroke="#CBD5E1"/>
+    <text x="95" y="215" font-size="10.5" font-weight="bold" fill="#4338CA">package</text>
+    <rect x="80" y="220" width="1050" height="135" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="245" font-size="15" font-weight="bold" fill="#0F172A">co.edu.sena.pizzeria.web (Vite + React 18 + Tailwind + TanStack)</text>
+    <text x="100" y="270" font-size="11.5" fill="#334155">📦 components/ (CartaMenu, CartDrawer, CheckoutModal, TrackingView, AdminDashboard, ClientProfile)</text>
+    <text x="100" y="292" font-size="11.5" fill="#334155">📦 context/ (AuthContext con JWT Bearer, CartContext con cálculo de subtotal y cupón SENA2026)</text>
+    <text x="100" y="314" font-size="11.5" fill="#334155">📦 services/ (apiClient centralizado con Axios, pizzaService, authService, pedidoService)</text>
+
+    <!-- Paquete Mobile -->
+    <rect x="1220" y="200" width="160" height="22" rx="4" fill="#ECFDF5" stroke="#CBD5E1"/>
+    <text x="1235" y="215" font-size="10.5" font-weight="bold" fill="#065F46">package</text>
+    <rect x="1220" y="220" width="1100" height="135" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="1240" y="245" font-size="15" font-weight="bold" fill="#0F172A">co.edu.sena.pizzeria.mobile (React Native + Expo SDK 58)</text>
+    <text x="1240" y="270" font-size="11.5" fill="#334155">📦 App.js (Entrypoint, SafeLayout con TopInset nativo, BottomTabs con 5 accesos)</text>
+    <text x="1240" y="292" font-size="11.5" fill="#334155">📦 components/ (SegmentedRoleSwitcher [Admin ⇄ Cliente en 0ms], TrackingStepper 5 fases)</text>
+    <text x="1240" y="314" font-size="11.5" fill="#334155">📦 src/config/ (api.js con endpoint LAN http://192.168.20.21:8085, authStorage, mockFallbacks)</text>
+  </g>
+
+  <!-- ==================== CAPA 2: TRANSPORTE HTTP & MIDDLEWARES ==================== -->
+  <g filter="url(#shadow-pkg)">
+    <rect x="50" y="420" width="2300" height="210" rx="12" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="80" y="445" font-size="13" font-weight="bold" fill="#1D4ED8">&lt;&lt;layer&gt;&gt; CAPA 2: TRANSPORTE HTTP, ENRUTAMIENTO &amp; MIDDLEWARE (GO FIBER V2 REST)</text>
+
+    <!-- handlers -->
+    <rect x="80" y="460" width="140" height="22" rx="4" fill="#EFF6FF" stroke="#CBD5E1"/>
+    <text x="95" y="475" font-size="10.5" font-weight="bold" fill="#1D4ED8">package</text>
+    <rect x="80" y="480" width="720" height="135" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="505" font-size="15" font-weight="bold" fill="#0F172A">handlers (Controladores HTTP Fiber v2)</text>
+    <text x="100" y="530" font-size="11.5" fill="#334155">• AuthHandler (Login, Register, RefreshToken)</text>
+    <text x="100" y="552" font-size="11.5" fill="#334155">• PizzaHandler (GetPizzas, GetCategorias, CreatePizza)</text>
+    <text x="100" y="574" font-size="11.5" fill="#334155">• PedidoHandler (CrearPedido, GetPedido, Tracking)</text>
+    <text x="100" y="596" font-size="11.5" fill="#334155">• AdminHandler (DashboardMetrics, UpdateOrderStatus)</text>
+
+    <!-- middleware -->
+    <rect x="850" y="460" width="140" height="22" rx="4" fill="#EFF6FF" stroke="#CBD5E1"/>
+    <text x="865" y="475" font-size="10.5" font-weight="bold" fill="#1D4ED8">package</text>
+    <rect x="850" y="480" width="700" height="135" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="870" y="505" font-size="15" font-weight="bold" fill="#0F172A">middleware (Filtros de Seguridad)</text>
+    <text x="870" y="530" font-size="11.5" fill="#334155">• JWTMiddleware (Bearer Token Guard &amp; Role Claims: ADMIN/CLIENTE)</text>
+    <text x="870" y="552" font-size="11.5" fill="#334155">• CORSMiddleware (Allow Web :5173, Mobile :8081, LAN 192.168.20.21)</text>
+    <text x="870" y="574" font-size="11.5" fill="#334155">• LoggerMiddleware (Audit Method, Latency, Client IP, Status Code)</text>
+    <text x="870" y="596" font-size="11.5" fill="#334155">• RecoverMiddleware (Pánico graceful recovery sin caída de servidor)</text>
+
+    <!-- routes -->
+    <rect x="1600" y="460" width="140" height="22" rx="4" fill="#EFF6FF" stroke="#CBD5E1"/>
+    <text x="1615" y="475" font-size="10.5" font-weight="bold" fill="#1D4ED8">package</text>
+    <rect x="1600" y="480" width="720" height="135" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="1620" y="505" font-size="15" font-weight="bold" fill="#0F172A">routes (Mapeo Central de Endpoints REST)</text>
+    <text x="1620" y="530" font-size="11.5" fill="#334155">• PublicRoutes: /health, /api/auth/login, /api/pizzas, /api/categorias</text>
+    <text x="1620" y="552" font-size="11.5" fill="#334155">• ClientRoutes: /api/pedidos, /api/cupones/validar, /api/pagos/procesar</text>
+    <text x="1620" y="574" font-size="11.5" fill="#334155">• AdminRoutes: /api/admin/dashboard, /api/admin/pedidos/:num/estado</text>
+    <text x="1620" y="596" font-size="11.5" fill="#334155">• ApiGroup: /api/v1 prefix con versionamiento semántico</text>
+  </g>
+
+  <!-- ==================== CAPA 3: SERVICIOS DE APLICACIÓN ==================== -->
+  <g filter="url(#shadow-pkg)">
+    <rect x="50" y="680" width="2300" height="200" rx="12" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="80" y="705" font-size="13" font-weight="bold" fill="#1D4ED8">&lt;&lt;layer&gt;&gt; CAPA 3: SERVICIOS DE APLICACIÓN &amp; REGLAS DE NEGOCIO</text>
+
+    <!-- services -->
+    <rect x="80" y="720" width="140" height="22" rx="4" fill="#FAF5FF" stroke="#CBD5E1"/>
+    <text x="95" y="735" font-size="10.5" font-weight="bold" fill="#7C3AED">package</text>
+    <rect x="80" y="740" width="2240" height="125" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="765" font-size="15" font-weight="bold" fill="#0F172A">services (Orquestadores de Casos de Uso y Flujos de Trabajo)</text>
+    <text x="100" y="790" font-size="11.5" fill="#334155">⚙️ AuthService: Validación de credenciales Bcrypt, generación de tokens JWT con claims de usuario y expiración a 24 horas.</text>
+    <text x="100" y="812" font-size="11.5" fill="#334155">⚙️ PedidoService: Creación de órdenes (PED-2026-XXX), aplicación de cupones, cálculo de subtotal/envío y máquina de estados.</text>
+    <text x="100" y="834" font-size="11.5" fill="#334155">⚙️ CatalogoService: Consulta de pizzas por categoría, verificación de disponibilidad y adiciones de masa madre napolitana.</text>
+    <text x="100" y="854" font-size="11.5" fill="#334155">⚙️ PagoService: Procesamiento de transacciones con tarjeta, PSE, Nequi y Daviplata con generación de recibo formal.</text>
+  </g>
+
+  <!-- ==================== CAPA 4: DOMINIO DEL NEGOCIO ==================== -->
+  <g filter="url(#shadow-pkg)">
+    <rect x="50" y="930" width="2300" height="160" rx="12" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="80" y="955" font-size="13" font-weight="bold" fill="#1D4ED8">&lt;&lt;layer&gt;&gt; CAPA 4: DOMINIO DEL SISTEMA (ENTIDADES, VALUE OBJECTS &amp; DTOS)</text>
+
+    <!-- models -->
+    <rect x="80" y="970" width="140" height="22" rx="4" fill="#FEF3C7" stroke="#CBD5E1"/>
+    <text x="95" y="985" font-size="10.5" font-weight="bold" fill="#D97706">package</text>
+    <rect x="80" y="990" width="1050" height="85" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="1015" font-size="14.5" font-weight="bold" fill="#0F172A">models (Entidades Go con Tags BSON &amp; JSON)</text>
+    <text x="100" y="1038" font-size="11" fill="#334155">Usuario, Direccion, Pizza, PreciosTamano, Pedido, ItemPedido, TrackingPaso, TransaccionPago, Cupon</text>
+    <text x="100" y="1058" font-size="10.5" fill="#64748B">Reglas: Validación de email, longitud de contraseña, cálculo estricto de subtotales, inmutabilidad de precios.</text>
+
+    <!-- dtos & enums -->
+    <rect x="1220" y="970" width="140" height="22" rx="4" fill="#FEF3C7" stroke="#CBD5E1"/>
+    <text x="1235" y="985" font-size="10.5" font-weight="bold" fill="#D97706">package</text>
+    <rect x="1220" y="990" width="1100" height="85" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="1240" y="1015" font-size="14.5" font-weight="bold" fill="#0F172A">dtos &amp; enums (Objetos de Transferencia y Enumeraciones)</text>
+    <text x="1240" y="1038" font-size="11" fill="#334155">DTOs: LoginRequest, RegisterRequest, TokenResponse, PedidoRequestDTO, EstadoUpdateRequestDTO</text>
+    <text x="1240" y="1058" font-size="10.5" fill="#64748B">Enums: RolUsuario (ADMIN, CLIENTE), EstadoPedido (5 pasos), CategoriaPizza (4 tipos), MetodoPago (3 opciones)</text>
+  </g>
+
+  <!-- ==================== CAPA 5: PERSISTENCIA E INFRAESTRUCTURA ==================== -->
+  <g filter="url(#shadow-pkg)">
+    <rect x="50" y="1140" width="2300" height="160" rx="12" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="80" y="1165" font-size="13" font-weight="bold" fill="#1D4ED8">&lt;&lt;layer&gt;&gt; CAPA 5: PERSISTENCIA NOSQL MONGODB E INFRAESTRUCTURA</text>
+
+    <!-- repository -->
+    <rect x="80" y="1180" width="140" height="22" rx="4" fill="#F0FDFA" stroke="#CBD5E1"/>
+    <text x="95" y="1195" font-size="10.5" font-weight="bold" fill="#0D9488">package</text>
+    <rect x="80" y="1200" width="720" height="85" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="100" y="1225" font-size="14.5" font-weight="bold" fill="#0F172A">repository (Implementación MongoDB)</text>
+    <text x="100" y="1248" font-size="11" fill="#334155">UsuarioMongoRepo, PizzaMongoRepo, PedidoMongoRepo, CuponMongoRepo</text>
+    <text x="100" y="1268" font-size="10.5" fill="#64748B">Operaciones atómicas a nivel de documento BSON sin bloqueos globales.</text>
+
+    <!-- database -->
+    <rect x="850" y="1180" width="140" height="22" rx="4" fill="#F0FDFA" stroke="#CBD5E1"/>
+    <text x="865" y="1195" font-size="10.5" font-weight="bold" fill="#0D9488">package</text>
+    <rect x="850" y="1200" width="700" height="85" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="870" y="1225" font-size="14.5" font-weight="bold" fill="#0F172A">database (Driver Oficial MongoDB 6)</text>
+    <text x="870" y="1248" font-size="11" fill="#334155">MongoConnection (go.mongodb.org/mongo-driver), Pool de Conexiones (Max: 50)</text>
+    <text x="870" y="1268" font-size="10.5" fill="#64748B">Semillero: init-mongo.js con colecciones (usuarios, pizzas, pedidos, categorias, cupones)</text>
+
+    <!-- config -->
+    <rect x="1600" y="1180" width="140" height="22" rx="4" fill="#F0FDFA" stroke="#CBD5E1"/>
+    <text x="1615" y="1195" font-size="10.5" font-weight="bold" fill="#0D9488">package</text>
+    <rect x="1600" y="1200" width="720" height="85" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="1620" y="1225" font-size="14.5" font-weight="bold" fill="#0F172A">config (Variables de Entorno &amp; Docker)</text>
+    <text x="1620" y="1248" font-size="11" fill="#334155">Environment (.env), PORT (8085), MONGO_URI (mongodb://sena-mongodb:27017)</text>
+    <text x="1620" y="1268" font-size="10.5" fill="#64748B">Red bridge sena-network aislada protegiendo el sistema anfitrión Linux.</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1200" y="1325" font-size="12" fill="#64748B" text-anchor="middle">Diagrama de Paquetes UML 2.5 • Clean Architecture • Pizzería Bella Italia • SENA ADSO Ficha 228118 • Karen Yuliana Campo • Popayán</text>
+</svg>

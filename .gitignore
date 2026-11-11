@@ -26,3 +26,10 @@ generador_capturas_pruebas.html
 page_hu*.html
 **/assets/*.html
 assets/*.html
+
+# Binarios y ejecutables compilados
+server
+*.exe
+*.o
+*.so
+*.dylib

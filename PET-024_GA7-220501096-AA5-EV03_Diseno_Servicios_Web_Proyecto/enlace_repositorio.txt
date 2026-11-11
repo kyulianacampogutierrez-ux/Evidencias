@@ -1,0 +1,40 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA7-220501096-AA5-EV03
+TITULO: Diseño y Desarrollo de Servicios Web - Proyecto Formativo
+        (Sistema de Gestión y Pedidos - Pizzería Gourmet Bella Italia)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-024_GA7-220501096-AA5-EV03_Diseno_Servicios_Web_Proyecto
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN TÉCNICA DEL PROYECTO Y SUS SERVICIOS WEB:
+Implementación de la arquitectura de servicios web RESTful para el proyecto formativo
+de la Pizzería Gourmet Bella Italia, construida bajo el siguiente stack tecnológico:
+1. Base de Datos: MongoDB 6 NoSQL (Base de datos: pizzeria_db con WiredTiger Engine).
+2. Backend REST: Go 1.22 con framework Fiber v2 y autenticación segura JWT Bearer.
+3. Control de Acceso: Role-Based Access Control (RBAC) con roles ADMIN y CLIENTE,
+   y hashing seguro de contraseñas mediante Bcrypt.
+4. Módulos Implementados:
+   - Autenticación y Perfil de Usuario (/api/auth)
+   - Carta y Catálogo de Pizzas Artesanales a 380°C (/api/pizzas, /api/categorias)
+   - Cupones Promocionales con descuento porcentual (/api/cupones/validar)
+   - Carrito y Pedidos con cálculo de subtotales y envío (/api/pedidos)
+   - Seguimiento en Vivo (Tracking de 5 Fases) (/api/pedidos/:numero)
+   - Pasarela y Procesamiento de Medios de Pago (/api/pagos/procesar)
+   - Módulo de Administración Integral con Dashboard Métrico (/api/admin)
+5. Modelado Arquitectónico: Diagramas UML 2.5 (Clases, Paquetes y Componentes)
+   diseñados y renderizados en Draw.io, DesignCraft y FigCraft.
+6. Especificación de Interfaz: Especificación técnica OpenAPI 3.0.3 y Colección
+   de pruebas automatizadas Postman v2.1 con aserciones funcionales completas.
+7. Orquestación: Docker Compose en red aislada bridge (sena-network).
+================================================================================
