@@ -1,0 +1,56 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA1-EV01
+TITULO: Desarrollar software a partir de la integración de sus módulos componentes
+        (Sistema de Gestión, Carta y Pedidos - Pizzería Gourmet Bella Italia Popayán)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-025_GA8-220501096-AA1-EV01_Desarrollar_Software_Integracion_Modulos
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA INTEGRACIÓN DE MÓDULOS Y COMPONENTES:
+La presente evidencia documenta y materializa la integración técnica y funcional
+de los componentes de software desarrollados para la Pizzería Bella Italia Popayán,
+en estricto apego a los lineamientos de la Guía de Aprendizaje 8:
+
+1. ARQUITECTURA MULTICAPA INTEGRADA:
+   - Capa 1 (Presentación):
+     * Aplicación Web React (SPA desarrollada con Vite, React 18, TailwindCSS y Lucide Icons).
+     * Aplicación Móvil Híbrida (React Native 0.74 / Expo, optimizada para Android y Web).
+   - Capa 2 (Lógica de Negocio y Servicios Web):
+     * Microservicio RESTful en Go 1.22 con framework Fiber v2 (Puerto 8085).
+     * Microservicio auxiliar de gestión en Spring Boot 3 con Java 17 (Puerto 8082).
+     * Módulo de Autenticación y Registro con JWT y RBAC en Node.js Express (Puerto 8083).
+   - Capa 3 (Persistencia de Datos y Almacenamiento):
+     * MongoDB 6 NoSQL con WiredTiger Storage Engine para catálogo, pedidos, cupones y transacciones.
+     * MariaDB 10.5 Relacional para auditoría transaccional e inventario gastronómico.
+
+2. MODELADO ARQUITECTÓNICO UML 2.5:
+   - Diagrama de Clases: Detalla entidades de dominio, métodos, relaciones de agregación y composición.
+   - Diagrama de Paquetes: Organiza la estructura modular por capas de presentación, lógica, middlewares y acceso a datos.
+   - Diagrama de Componentes: Modela la interacción entre interfaces frontend, gateways de API, brokers de pago y colecciones MongoDB.
+   - Diseñados y exportados en Draw.io (.drawio, .png, .svg) con enlaces interactivos en diagrams.net.
+
+3. MÓDULOS FUNCIONALES INTEGRADOS:
+   - Módulo de Autenticación Segura y Perfil (JWT Bearer, Bcrypt, Roles ADMIN/CLIENTE).
+   - Módulo de Carta Gastronómica y Catálogo de Pizzas Artesanales a 380°C (/api/pizzas).
+   - Módulo de Validación de Cupones Promocionales con Reglas de Negocio (/api/cupones/validar).
+   - Módulo de Checkout, Carrito y Pedidos con Tracking en 5 Estados (/api/pedidos).
+   - Pasarela de Pagos Simulada (Nequi, Daviplata, PSE, Tarjeta Crédito, Contraentrega).
+   - Módulo de Administración y Analítica con Dashboard Métrico en Tiempo Real.
+
+4. CONTROL DE CALIDAD Y PRUEBAS:
+   - Suite de Pruebas TDD automatizadas: 100% aprobadas en Node.js Test Runner.
+   - Colección de pruebas de integración Postman v2.1: 20/20 aserciones aprobadas sin fallos.
+   - Orquestación en contenedores Docker y Docker Compose (sena-network aislada).
+================================================================================

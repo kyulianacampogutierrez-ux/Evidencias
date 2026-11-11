@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Pizzeria Bella Italia",
+    "slug": "pizzeria-bella-italia",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0c0a09"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#D32F2F"
+      },
+      "package": "co.edu.sena.pizzeriabellaitalia"
+    },
+    "extra": {
+      "aprendiz": "Karen Yuliana Campo",
+      "ficha": "228118",
+      "centro": "CTPI Popayán - Regional Cauca"
+    }
+  }
+}

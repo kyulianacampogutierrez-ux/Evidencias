@@ -1,0 +1,403 @@
+{
+  "info": {
+    "name": "Pizzería Bella Italia - API REST Proyecto Formativo (SENA Guía 7)",
+    "_postman_id": "b3e94a12-87fc-4e2b-a01c-6d5e9f8a1234",
+    "description": "Colección oficial de pruebas de integración para la evidencia GA7-220501096-AA5-EV03. Aprendiz: Karen Yuliana Campo - Ficha: 228118 - CTPI Popayán.\n\nContiene variables de colección autónomas (puerto 8085) para ejecutarse de forma independiente con o sin entorno seleccionado.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8085",
+      "type": "string"
+    },
+    {
+      "key": "usuario_cliente",
+      "value": "carlos_cliente",
+      "type": "string"
+    },
+    {
+      "key": "password_cliente",
+      "value": "Cliente123*",
+      "type": "string"
+    },
+    {
+      "key": "usuario_admin",
+      "value": "karencampo",
+      "type": "string"
+    },
+    {
+      "key": "password_admin",
+      "value": "Admin123*",
+      "type": "string"
+    },
+    {
+      "key": "test_user",
+      "value": "carlos_cliente",
+      "type": "string"
+    },
+    {
+      "key": "test_password",
+      "value": "Cliente123*",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token_cliente",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token_admin",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "ultimo_numero_pedido",
+      "value": "PED-2026-001",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "01. Sistema - Healthcheck General",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('El microservicio reporta estado UP', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.status).to.eql('UP');",
+              "    pm.expect(data.database).to.include('MongoDB');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "02. Sistema - Metadatos Institucionales SENA",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/health",
+          "host": ["{{base_url}}"],
+          "path": ["api", "health"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Identificación de la aprendiz Karen Yuliana Campo', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.aprendiz).to.eql('Karen Yuliana Campo');",
+              "    pm.expect(data.ficha).to.eql('228118');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "03. Auth - Login Cliente y Captura Dinámica de JWT",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{usuario_cliente}}\",\n  \"password\": \"{{password_cliente}}\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Retorna token JWT válido y almacena en variables', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.token).to.be.a('string');",
+              "    pm.collectionVariables.set('jwt_token_cliente', data.token);",
+              "    pm.environment.set('jwt_token_cliente', data.token);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "04. Auth - Perfil del Usuario Autenticado (Bearer)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token_cliente}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/auth/profile",
+          "host": ["{{base_url}}"],
+          "path": ["api", "auth", "profile"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Valida datos de perfil extraídos del token', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.usuario).to.have.property('usuario');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "05. Carta - Catálogo de Pizzas Artesanales",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/pizzas",
+          "host": ["{{base_url}}"],
+          "path": ["api", "pizzas"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('El catálogo contiene pizzas con precios por tamaño', function () {",
+              "    var data = pm.response.json();",
+              "    var pizzas = Array.isArray(data) ? data : (data.pizzas || []);",
+              "    pm.expect(pizzas).to.be.an('array');",
+              "    pm.expect(pizzas.length).to.be.above(0);",
+              "    pm.expect(pizzas[0]).to.have.property('precios');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "06. Cupones - Validación Cupón SENA2026 (-15%)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"codigo\": \"SENA2026\",\n  \"subtotal\": 100000.0\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/cupones/validar",
+          "host": ["{{base_url}}"],
+          "path": ["api", "cupones", "validar"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Aplica correctamente 15% de descuento', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.valido).to.be.true;",
+              "    pm.expect(data.porcentaje).to.eql(15.0);",
+              "    pm.expect(data.descuento).to.eql(15000.0);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "07. Pedidos - Creación de Pedido con Descuento",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token_cliente}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"items\": [\n    {\n      \"pizzaCodigo\": \"PIZ-MARG-01\",\n      \"tamano\": \"familiar\",\n      \"precioUnitario\": 48000.0,\n      \"cantidad\": 1\n    }\n  ],\n  \"cuponCodigo\": \"SENA2026\",\n  \"direccionEnvio\": \"Calle 5 # 4-22, Popayán\",\n  \"metodoPago\": \"NEQUI\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/pedidos",
+          "host": ["{{base_url}}"],
+          "path": ["api", "pedidos"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 201 Created', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('Retorna número de pedido y estado RECIBIDO', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.pedido).to.have.property('numeroPedido');",
+              "    pm.expect(data.pedido.estado).to.eql('RECIBIDO');",
+              "    pm.collectionVariables.set('ultimo_numero_pedido', data.pedido.numeroPedido);",
+              "    pm.environment.set('ultimo_numero_pedido', data.pedido.numeroPedido);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "08. Pagos - Procesamiento de Pago Nequi",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numeroPedido\": \"{{ultimo_numero_pedido}}\",\n  \"metodo\": \"NEQUI\",\n  \"monto\": 44800,\n  \"telefono\": \"3124567890\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/pagos/procesar",
+          "host": ["{{base_url}}"],
+          "path": ["api", "pagos", "procesar"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Pago procesado y aprobado exitosamente', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.estado).to.eql('APROBADO');",
+              "    pm.expect(data).to.have.property('transaccionId');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "09. Admin - Login Administrador",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario\": \"{{usuario_admin}}\",\n  \"password\": \"{{password_admin}}\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Usuario tiene rol ADMIN', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data.usuario.rol).to.eql('ADMIN');",
+              "    pm.collectionVariables.set('jwt_token_admin', data.token);",
+              "    pm.environment.set('jwt_token_admin', data.token);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "10. Admin - Métricas del Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token_admin}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/admin/dashboard",
+          "host": ["{{base_url}}"],
+          "path": ["api", "admin", "dashboard"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code es 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Dashboard provee métricas financieras y operativas', function () {",
+              "    var data = pm.response.json();",
+              "    pm.expect(data).to.have.property('totalVentas');",
+              "    pm.expect(data).to.have.property('pedidosActivos');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
