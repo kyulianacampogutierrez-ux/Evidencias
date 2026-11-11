@@ -33,3 +33,10 @@ server
 *.o
 *.so
 *.dylib
+
+# Build outputs y archivos de compilación móvil
+**/build/
+**/.cxx/
+*.apk
+**/.gradle/
+**/.expo/
