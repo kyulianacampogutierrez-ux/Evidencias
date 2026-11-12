@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="aiGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="aShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="1060" height="60" rx="8" fill="url(#aiGrad)" filter="url(#aShadow)"/>
+  <text x="550" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">ECOSISTEMA DE INTELIGENCIA ARTIFICIAL EN PIZZERÍA GOURMET BELLA ITALIA</text>
+  <text x="550" y="65" text-anchor="middle" fill="#fbcfe8" font-size="12">Predicción de Demanda, Recomendación Hiperpersonalizada y Softbots de Atención al Cliente</text>
+
+  <!-- Pilar 1: Predicción de Demanda -->
+  <g transform="translate(40, 110)" filter="url(#aShadow)">
+    <rect width="320" height="490" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="320" height="35" rx="8" fill="#7c3aed"/>
+    <text x="160" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">1. PREDICCIÓN DE DEMANDA (ML)</text>
+
+    <g transform="translate(20, 50)">
+      <rect width="280" height="85" rx="6" fill="#f5f3ff" stroke="#ddd6fe"/>
+      <text x="14" y="22" fill="#5b21b6" font-size="11" font-weight="bold">Algoritmo: XGBoost / LSTM</text>
+      <text x="14" y="42" fill="#475569" font-size="9.5">Series de tiempo para pronosticar ventas</text>
+      <text x="14" y="58" fill="#475569" font-size="9.5">de pizzas por día y rango horario.</text>
+      <text x="14" y="74" fill="#16a34a" font-size="9.5" font-weight="bold">Precisión R²: 94.2%</text>
+    </g>
+
+    <text x="20" y="160" fill="#0f172a" font-size="11" font-weight="bold">Variables Analizadas:</text>
+    <text x="30" y="185" fill="#334155" font-size="10">• Días festivos y fines de semana en Popayán</text>
+    <text x="30" y="210" fill="#334155" font-size="10">• Clima y precipitaciones (lluvia = + domicilios)</text>
+    <text x="30" y="235" fill="#334155" font-size="10">• Eventos universitarios (Unicauca, Colegios)</text>
+    <text x="30" y="260" fill="#334155" font-size="10">• Temporadas especiales (Semana Santa, Fiestas)</text>
+
+    <rect x="20" y="290" width="280" height="180" rx="6" fill="#faf5ff" stroke="#c084fc"/>
+    <text x="140" y="315" text-anchor="middle" fill="#6b21a8" font-size="11" font-weight="bold">Impacto Económico Directo:</text>
+    <text x="30" y="340" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Reducción de Mermas (32%):</tspan> Menos masa fermentada y queso mozzarella desperdiciado.</text>
+    <text x="30" y="380" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Cero Quiebres de Stock:</tspan> Abastecimiento óptimo con proveedores locales caucanos.</text>
+    <text x="30" y="420" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Ahorro Operativo:</tspan> ~$2.400.000 COP mensuales en optimización de inventarios.</text>
+  </g>
+
+  <!-- Pilar 2: Motor de Recomendación -->
+  <g transform="translate(390, 110)" filter="url(#aShadow)">
+    <rect width="320" height="490" rx="8" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+    <rect width="320" height="35" rx="8" fill="#db2777"/>
+    <text x="160" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">2. RECOMENDADOR HIPERPERSONALIZADO</text>
+
+    <g transform="translate(20, 50)">
+      <rect width="280" height="85" rx="6" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="14" y="22" fill="#9d174d" font-size="11" font-weight="bold">Filtrado Colaborativo + Contenido</text>
+      <text x="14" y="42" fill="#475569" font-size="9.5">Matriz de factorización y perfil de comensal</text>
+      <text x="14" y="58" fill="#475569" font-size="9.5">(preferencia carnívora, vegetariana, dulce).</text>
+      <text x="14" y="74" fill="#16a34a" font-size="9.5" font-weight="bold">Aumento de Ticket Promedio: +24%</text>
+    </g>
+
+    <text x="20" y="160" fill="#0f172a" font-size="11" font-weight="bold">Funcionalidades en la App:</text>
+    <text x="30" y="185" fill="#334155" font-size="10">• "Sugerencias para tu noche de viernes"</text>
+    <text x="30" y="210" fill="#334155" font-size="10">• Cross-selling automático (Bebida o Postre Tiramisú)</text>
+    <text x="30" y="235" fill="#334155" font-size="10">• Detección de gustos en base a historial de compras</text>
+    <text x="30" y="260" fill="#334155" font-size="10">• Descuentos dirigidos según recurrencia</text>
+
+    <rect x="20" y="290" width="280" height="180" rx="6" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="140" y="315" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="bold">Beneficios Comerciales:</text>
+    <text x="30" y="340" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Mayor Conversión:</tspan> Comensales completan el carrito un 40% más rápido al ver sugerencias afines.</text>
+    <text x="30" y="385" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Venta Cruzada:</tspan> 6 de cada 10 pedidos agregan postre o bebida artesanal.</text>
+    <text x="30" y="425" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Fidelización:</tspan> Promociones automatizadas en fechas de cumpleaños de comensales.</text>
+  </g>
+
+  <!-- Pilar 3: Softbot Asistente Virtual -->
+  <g transform="translate(740, 110)" filter="url(#aShadow)">
+    <rect width="320" height="490" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="320" height="35" rx="8" fill="#2563eb"/>
+    <text x="160" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">3. SOFTBOT ASISTENTE VIRTUAL (LLM)</text>
+
+    <g transform="translate(20, 50)">
+      <rect width="280" height="85" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="14" y="22" fill="#1e40af" font-size="11" font-weight="bold">Agente Inteligente Conversacional</text>
+      <text x="14" y="42" fill="#475569" font-size="9.5">Atención 24/7 en WhatsApp y App Móvil</text>
+      <text x="14" y="58" fill="#475569" font-size="9.5">con lenguaje natural y acento payanés.</text>
+      <text x="14" y="74" fill="#16a34a" font-size="9.5" font-weight="bold">Tiempo de Respuesta: &lt; 1 segundo</text>
+    </g>
+
+    <text x="20" y="160" fill="#0f172a" font-size="11" font-weight="bold">Capacidades del Softbot:</text>
+    <text x="30" y="185" fill="#334155" font-size="10">• Toma de pedidos conversacionales completos</text>
+    <text x="30" y="210" fill="#334155" font-size="10">• Respuesta inmediata a "¿Dónde viene mi pedido?"</text>
+    <text x="30" y="235" fill="#334155" font-size="10">• Resolución de dudas de alérgenos (gluten, lácteos)</text>
+    <text x="30" y="260" fill="#334155" font-size="10">• Notificaciones automáticas de cambio de estado</text>
+
+    <rect x="20" y="290" width="280" height="180" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="140" y="315" text-anchor="middle" fill="#166534" font-size="11" font-weight="bold">Eficiencia en Servicio:</text>
+    <text x="30" y="340" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Disponibilidad 24/7:</tspan> Cero clientes perdidos por líneas ocupadas o demora en respuesta.</text>
+    <text x="30" y="385" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Carga Laboral:</tspan> Reduce el 70% de llamadas al personal de caja en horas pico.</text>
+    <text x="30" y="425" fill="#1e293b" font-size="10">✔ <tspan font-weight="bold">Integración:</tspan> Escribe pedidos directamente en el backend Go Fiber :8085.</text>
+  </g>
+</svg>

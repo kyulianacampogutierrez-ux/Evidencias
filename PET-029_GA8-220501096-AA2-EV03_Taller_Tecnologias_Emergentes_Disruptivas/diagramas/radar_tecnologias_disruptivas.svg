@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="radarHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="radShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="1060" height="60" rx="8" fill="url(#radarHeader)" filter="url(#radShadow)"/>
+  <text x="550" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">RADAR DE LAS 10 TECNOLOGÍAS EMERGENTES Y DISRUPTIVAS (SENA GUÍA 8)</text>
+  <text x="550" y="65" text-anchor="middle" fill="#94a3b8" font-size="12">Matriz de Madurez Tecnológica, Impacto en la Industria y Prioridad de Adopción</text>
+
+  <!-- Tabla de las 10 Tecnologías -->
+  <g transform="translate(40, 100)" filter="url(#radShadow)">
+    <rect width="1020" height="510" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Encabezado de Tabla -->
+    <rect width="1020" height="35" rx="8" fill="#0284c7"/>
+    <text x="30" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">#</text>
+    <text x="60" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">Tecnología Emergente / Disruptiva</text>
+    <text x="360" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">Concepto Esencial de la Guía 8</text>
+    <text x="660" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">Madurez</text>
+    <text x="760" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">Impacto Pizzería</text>
+    <text x="910" y="22" fill="#ffffff" font-size="10.5" font-weight="bold">Selección Sec. 2</text>
+
+    <!-- Fila 1: IoT -->
+    <text x="30" y="62" fill="#0f172a" font-size="10" font-weight="bold">1</text>
+    <text x="60" y="62" fill="#0369a1" font-size="10" font-weight="bold">Internet de las Cosas (IoT)</text>
+    <text x="360" y="62" fill="#334155" font-size="9.5">Aparatos inteligentes, telemetría de hornos, sensores de temperatura.</text>
+    <text x="660" y="62" fill="#16a34a" font-size="9.5" font-weight="bold">Consolidada</text>
+    <text x="760" y="62" fill="#334155" font-size="9.5">Cadena de frío y horneado</text>
+    <text x="920" y="62" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="75" x2="1000" y2="75" stroke="#f1f5f9"/>
+
+    <!-- Fila 2: IA (Seleccionada) -->
+    <rect x="15" y="80" width="990" height="35" fill="#fdf4ff" rx="4"/>
+    <text x="30" y="102" fill="#7c3aed" font-size="10" font-weight="bold">2</text>
+    <text x="60" y="102" fill="#7c3aed" font-size="10" font-weight="bold">Inteligencia Artificial (IA)</text>
+    <text x="360" y="102" fill="#581c87" font-size="9.5">Softbots, aprendizaje automático, modelos predictivos y LLMs.</text>
+    <text x="660" y="102" fill="#e11d48" font-size="9.5" font-weight="bold">Disruptiva</text>
+    <text x="760" y="102" fill="#581c87" font-size="9.5">Demanda y recomendación</text>
+    <text x="910" y="102" fill="#7c3aed" font-size="9.5" font-weight="bold">★ SELECCIONADA</text>
+
+    <!-- Fila 3: Crowdsourcing -->
+    <text x="30" y="142" fill="#0f172a" font-size="10" font-weight="bold">3</text>
+    <text x="60" y="142" fill="#0369a1" font-size="10" font-weight="bold">Crowdsourcing</text>
+    <text x="360" y="142" fill="#334155" font-size="9.5">El poder de muchos, inteligencia colectiva y cocreación de recetas.</text>
+    <text x="660" y="142" fill="#16a34a" font-size="9.5" font-weight="bold">Consolidada</text>
+    <text x="760" y="142" fill="#334155" font-size="9.5">Calificaciones y feedback</text>
+    <text x="920" y="142" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="155" x2="1000" y2="155" stroke="#f1f5f9"/>
+
+    <!-- Fila 4: Voice to text (Seleccionada) -->
+    <rect x="15" y="160" width="990" height="35" fill="#f0f9ff" rx="4"/>
+    <text x="30" y="182" fill="#0284c7" font-size="10" font-weight="bold">4</text>
+    <text x="60" y="182" fill="#0284c7" font-size="10" font-weight="bold">Voice to Text</text>
+    <text x="360" y="182" fill="#0369a1" font-size="9.5">Asistentes virtuales, transcripción ASR y pedidos manos libres.</text>
+    <text x="660" y="182" fill="#e11d48" font-size="9.5" font-weight="bold">Disruptiva</text>
+    <text x="760" y="182" fill="#0369a1" font-size="9.5">Pedidos por voz y cocina</text>
+    <text x="910" y="182" fill="#0284c7" font-size="9.5" font-weight="bold">★ SELECCIONADA</text>
+
+    <!-- Fila 5: Geolocation -->
+    <text x="30" y="222" fill="#0f172a" font-size="10" font-weight="bold">5</text>
+    <text x="60" y="222" fill="#0369a1" font-size="10" font-weight="bold">Geolocation (Geolocalización)</text>
+    <text x="360" y="222" fill="#334155" font-size="9.5">Drones, geofencing, ruteo optimizado de repartidores en Popayán.</text>
+    <text x="660" y="222" fill="#16a34a" font-size="9.5" font-weight="bold">Consolidada</text>
+    <text x="760" y="222" fill="#334155" font-size="9.5">Tracking en mapa en vivo</text>
+    <text x="920" y="222" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="235" x2="1000" y2="235" stroke="#f1f5f9"/>
+
+    <!-- Fila 6: Impresión 3D -->
+    <text x="30" y="262" fill="#0f172a" font-size="10" font-weight="bold">6</text>
+    <text x="60" y="262" fill="#0369a1" font-size="10" font-weight="bold">Impresión 3D (3D Printing)</text>
+    <text x="360" y="262" fill="#334155" font-size="9.5">Fabricación aditiva, moldes alimentarios y repuestos de cocina.</text>
+    <text x="660" y="262" fill="#d97706" font-size="9.5" font-weight="bold">En Maduración</text>
+    <text x="760" y="262" fill="#334155" font-size="9.5">Moldes para masa artesanal</text>
+    <text x="920" y="262" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="275" x2="1000" y2="275" stroke="#f1f5f9"/>
+
+    <!-- Fila 7: Blockchain -->
+    <text x="30" y="302" fill="#0f172a" font-size="10" font-weight="bold">7</text>
+    <text x="60" y="302" fill="#0369a1" font-size="10" font-weight="bold">Blockchain</text>
+    <text x="360" y="302" fill="#334155" font-size="9.5">Cadena de bloques, trazabilidad de ingredientes y Smart Contracts.</text>
+    <text x="660" y="302" fill="#d97706" font-size="9.5" font-weight="bold">En Maduración</text>
+    <text x="760" y="302" fill="#334155" font-size="9.5">Certificación origen DOP</text>
+    <text x="920" y="302" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="315" x2="1000" y2="315" stroke="#f1f5f9"/>
+
+    <!-- Fila 8: Bases de Conocimiento (Seleccionada) -->
+    <rect x="15" y="320" width="990" height="35" fill="#ecfdf5" rx="4"/>
+    <text x="30" y="342" fill="#059669" font-size="10" font-weight="bold">8</text>
+    <text x="60" y="342" fill="#059669" font-size="10" font-weight="bold">Googles Privados (RAG)</text>
+    <text x="360" y="342" fill="#065f46" font-size="9.5">Bases de conocimiento, búsqueda semántica vectorial confidencial.</text>
+    <text x="660" y="342" fill="#e11d48" font-size="9.5" font-weight="bold">Disruptiva</text>
+    <text x="760" y="342" fill="#065f46" font-size="9.5">Manuales y recetas internas</text>
+    <text x="910" y="342" fill="#059669" font-size="9.5" font-weight="bold">★ SELECCIONADA</text>
+
+    <!-- Fila 9: Robótica -->
+    <text x="30" y="382" fill="#0f172a" font-size="10" font-weight="bold">9</text>
+    <text x="60" y="382" fill="#0369a1" font-size="10" font-weight="bold">Robótica Disruptiva</text>
+    <text x="360" y="382" fill="#334155" font-size="9.5">Cobots industriales, brazos para estirar masa y hornos automáticos.</text>
+    <text x="660" y="382" fill="#d97706" font-size="9.5" font-weight="bold">Emergente</text>
+    <text x="760" y="382" fill="#334155" font-size="9.5">Automatización de cocción</text>
+    <text x="920" y="382" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="395" x2="1000" y2="395" stroke="#f1f5f9"/>
+
+    <!-- Fila 10: Tecnologías Visuales -->
+    <text x="30" y="422" fill="#0f172a" font-size="10" font-weight="bold">10</text>
+    <text x="60" y="422" fill="#0369a1" font-size="10" font-weight="bold">Tecnologías Visuales (AR/VR)</text>
+    <text x="360" y="422" fill="#334155" font-size="9.5">Visualización 3D en mesa con Realidad Aumentada y hologramas.</text>
+    <text x="660" y="422" fill="#d97706" font-size="9.5" font-weight="bold">Emergente</text>
+    <text x="760" y="422" fill="#334155" font-size="9.5">Menú inmersivo AR en mesa</text>
+    <text x="920" y="422" fill="#64748b" font-size="9.5">—</text>
+    <line x1="20" y1="435" x2="1000" y2="435" stroke="#f1f5f9"/>
+
+    <!-- Resumen Inferior -->
+    <rect x="20" y="450" width="980" height="45" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="510" y="478" text-anchor="middle" fill="#0f172a" font-size="10.5" font-weight="bold">
+      Las tres tecnologías seleccionadas para profundización en la Sección 2 responden a la tríada del software moderno: Percepción (Voz), Conocimiento (RAG) y Decisión (IA).
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA2-EV03
+TITULO: Taller sobre tecnologías emergentes y disruptivas
+        (Investigación Técnica y Aplicación en IA, Voice to Text y Googles Privados)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-029_GA8-220501096-AA2-EV03_Taller_Tecnologias_Emergentes_Disruptivas
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL TALLER:
+Esta evidencia contiene el desarrollo integral del taller técnico sobre tecnologías
+emergentes y disruptivas estipulado en la Guía de Aprendizaje 8 del programa ADSO:
+
+1. SECCIÓN 1: PANORAMA DE 10 TECNOLOGÍAS EMERGENTES Y DISRUPTIVAS:
+   - Internet de las Cosas (IoT) - Crecimiento de aparatos inteligentes y telemetría.
+   - Inteligencia Artificial (IA) - Softbots, aprendizaje automático y modelos fundacionales.
+   - Crowdsourcing - El poder de muchos, inteligencia colectiva y computación distribuida.
+   - Voice to Text - Reconocimiento automático del habla y asistentes virtuales.
+   - Geolocation - Georreferenciación, drones, geofencing y control ciudadano.
+   - Impresión 3D - Fabricación aditiva personalizada y democratización del hardware.
+   - Blockchain - Cadena de bloques, criptografía asimétrica y contratos inteligentes.
+   - Bases de Conocimiento - Googles privados, búsqueda semántica y arquitectura RAG.
+   - Robótica Disruptiva - Cobots, automatización industrial y cinemática colaborativa.
+   - Tecnologías Visuales - Modelado 3D, Realidad Virtual, Realidad Aumentada y Hologramas.
+
+2. SECCIÓN 2: PROFUNDIZACIÓN EXHAUSTIVA EN LAS 3 TECNOLOGÍAS SELECCIONADAS:
+   - Inteligencia Artificial: Fundamentos, características, aplicación en demanda y recomendación
+     para Pizzería Bella Italia Popayán, y recursos de hardware/software necesarios.
+   - Voice to Text: Arquitectura ASR, transcripción en tiempo real, comando de voz para pedidos
+     y manos libres en cocina, y librerías/APIs para su desarrollo.
+   - Bases de Conocimiento (Googles Privados): Búsqueda semántica vectorial, Retrieval-Augmented
+     Generation (RAG), gestión privada de recetas/BPM de la pizzería y recursos tecnológicos.
+
+3. ARTEFACTOS Y DOCUMENTOS FORMALES:
+   - Documento formal institucional en formato PDF de alta calidad técnica y visual.
+   - Diagramas de arquitectura: Pipeline Voice-to-Order, Arquitectura RAG + IA y Radar Disruptivo.
+   - Paquete comprimido normativo KARENCAMPO_AA2_EV03.zip.
+================================================================================
