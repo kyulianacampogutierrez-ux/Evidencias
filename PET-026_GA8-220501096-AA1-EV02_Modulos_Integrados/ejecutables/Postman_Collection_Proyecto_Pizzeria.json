@@ -2,7 +2,7 @@
   "info": {
     "name": "Pizzería Bella Italia - API REST Proyecto Formativo (SENA Guía 7)",
     "_postman_id": "b3e94a12-87fc-4e2b-a01c-6d5e9f8a1234",
-    "description": "Colección oficial de pruebas de integración para la evidencia GA7-220501096-AA5-EV03. Aprendiz: Karen Yuliana Campo - Ficha: 228118 - CTPI Popayán.\n\nContiene variables de colección autónomas (puerto 8085) para ejecutarse de forma independiente con o sin entorno seleccionado.",
+    "description": "Colección oficial de pruebas de integración para la evidencia GA7-220501096-AA5-EV03. Aprendiz: Karen Yuliana Campo - Ficha: 3186681 - CTPI Popayán.\n\nContiene variables de colección autónomas (puerto 8085) para ejecutarse de forma independiente con o sin entorno seleccionado.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -110,7 +110,7 @@
               "pm.test('Identificación de la aprendiz Karen Yuliana Campo', function () {",
               "    var data = pm.response.json();",
               "    pm.expect(data.aprendiz).to.eql('Karen Yuliana Campo');",
-              "    pm.expect(data.ficha).to.eql('228118');",
+              "    pm.expect(data.ficha).to.eql('3186681');",
               "});"
             ],
             "type": "text/javascript"

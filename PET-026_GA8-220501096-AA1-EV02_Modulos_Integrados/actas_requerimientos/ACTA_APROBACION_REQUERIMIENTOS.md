@@ -7,7 +7,7 @@
 **Fecha de Aprobación:** 10 de Noviembre de 2026  
 **Lugar:** Popayán, Cauca — Sede Centro Histórico  
 **Entidad Evaluadora:** Servicio Nacional de Aprendizaje (SENA) — CTPI Popayán  
-**Programa:** Tecnología en Análisis y Desarrollo de Software (ADSO) — Ficha: 228118  
+**Programa:** Tecnología en Análisis y Desarrollo de Software (ADSO) — Ficha: 3186681  
 **Aprendiz Responsable:** Karen Yuliana Campo  
 **Interesado / Stakeholder del Negocio:** Gerencia General y Dirección de Operaciones — Pizzería Gourmet Bella Italia  
 
@@ -59,5 +59,5 @@ Por medio del presente documento, los interesados del proyecto formativo y el eq
 _____________________________________          _____________________________________
         KAREN YULIANA CAMPO                              GERENCIA GENERAL
            Aprendiz ADSO                          Pizzería Gourmet Bella Italia Popayán
-         Ficha SENA: 228118                               Interesado del Negocio
+         Ficha SENA: 3186681                               Interesado del Negocio
 ```

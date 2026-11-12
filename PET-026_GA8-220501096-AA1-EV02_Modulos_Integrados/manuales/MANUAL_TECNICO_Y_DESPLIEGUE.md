@@ -5,7 +5,7 @@
 ---
 
 **Aprendiz:** Karen Yuliana Campo  
-**Ficha:** 228118 — ADSO  
+**Ficha:** 3186681 — ADSO  
 **Centro:** Centro de Teleinformática y Producción Industrial (CTPI) — SENA Regional Cauca  
 
 ---
@@ -45,7 +45,7 @@ El microservicio central se configura mediante las siguientes variables de entor
 PORT=8085
 MONGO_URI=mongodb://sena-mongodb:27017
 MONGO_DB=pizzeria_db
-JWT_SECRET=SENA_ADSO_228118_BELLA_ITALIA_GO_FIBER_2026
+JWT_SECRET=SENA_ADSO_3186681_BELLA_ITALIA_GO_FIBER_2026
 ALLOW_ORIGINS=*
 NODE_ENV=production
 ```

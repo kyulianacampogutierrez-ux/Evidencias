@@ -3,7 +3,7 @@ package co.edu.sena.pizzerianativa.model;
 /**
  * Modelo de datos Pizza para la aplicación móvil nativa Android 14.
  * Proyecto formativo: Pizzería Gourmet Bella Italia Popayán.
- * Aprendiz: Karen Yuliana Campo - Ficha 228118 - CTPI Popayán
+ * Aprendiz: Karen Yuliana Campo - Ficha 3186681 - CTPI Popayán
  */
 public class Pizza {
     private String id;

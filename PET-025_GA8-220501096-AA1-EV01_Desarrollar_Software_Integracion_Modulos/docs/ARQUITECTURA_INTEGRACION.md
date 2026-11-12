@@ -5,7 +5,7 @@
 ---
 
 **Aprendiz:** Karen Yuliana Campo  
-**Ficha:** 228118  
+**Ficha:** 3186681  
 **Programa:** Tecnología en Análisis y Desarrollo de Software (ADSO)  
 **Centro:** Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca  
 **Servicio Nacional de Aprendizaje (SENA)**  

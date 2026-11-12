@@ -161,7 +161,7 @@ services:
       MONGO_URI: mongodb://mongodb:27017
       MONGO_DB: pizzeria_db
       PORT: 8085
-      JWT_SECRET: SENA_ADSO_228118_BELLA_ITALIA_GO_FIBER_2026
+      JWT_SECRET: SENA_ADSO_3186681_BELLA_ITALIA_GO_FIBER_2026
     volumes:
       - ./PizzeriaBackendGo:/app
     depends_on:

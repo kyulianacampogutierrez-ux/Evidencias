@@ -1,7 +1,7 @@
 # MANUAL TÉCNICO DE ARQUITECTURA Y DESPLIEGUE MÓVIL
 ## EVIDENCIA GA8-220501096-AA2-EV02: APK (DESARROLLAR MÓDULOS MÓVILES SEGÚN REQUERIMIENTOS DEL PROYECTO)
 **Proyecto Formativo:** Pizzería Gourmet Bella Italia Popayán  
-**Aprendiz:** Karen Yuliana Campo | **Ficha:** 228118  
+**Aprendiz:** Karen Yuliana Campo | **Ficha:** 3186681  
 **Centro:** Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca  
 
 ---

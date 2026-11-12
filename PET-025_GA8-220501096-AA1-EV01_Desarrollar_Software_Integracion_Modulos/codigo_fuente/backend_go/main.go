@@ -45,7 +45,7 @@ func main() {
 
 	log.Printf("================================================================")
 	log.Printf("SERVICIO REST: Pizzería Bella Italia (Go + Fiber v2 + MongoDB)")
-	log.Printf("Aprendiz: Karen Yuliana Campo | Ficha: 228118 | ADSO CTPI Popayán")
+	log.Printf("Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | ADSO CTPI Popayán")
 	log.Printf("Servidor escuchando en: http://0.0.0.0:%s", port)
 	log.Printf("Healthcheck: http://localhost:%s/health", port)
 	log.Printf("================================================================")

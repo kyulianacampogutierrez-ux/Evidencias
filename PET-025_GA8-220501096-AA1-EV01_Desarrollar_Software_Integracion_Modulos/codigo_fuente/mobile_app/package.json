@@ -1,7 +1,7 @@
 {
   "name": "pizzeria-mobile-react-native",
   "version": "1.0.0",
-  "description": "Aplicación Móvil React Native - Pizzería Bella Italia Popayán - SENA ADSO Ficha 228118",
+  "description": "Aplicación Móvil React Native - Pizzería Bella Italia Popayán - SENA ADSO Ficha 3186681",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

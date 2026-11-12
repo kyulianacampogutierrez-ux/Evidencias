@@ -57,7 +57,7 @@ func GetDashboardStats(c *fiber.Ctx) error {
 			"clientesRegistrados": totalUsuarios,
 		},
 		"sucursal": "Sede Popayán - Centro Histórico",
-		"aprendiz": "Karen Yuliana Campo - Ficha 228118",
+		"aprendiz": "Karen Yuliana Campo - Ficha 3186681",
 	})
 }
 

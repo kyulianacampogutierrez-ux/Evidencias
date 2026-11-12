@@ -46,7 +46,7 @@ export function Footer() {
         <div className="space-y-2">
           <h4 className="text-xs font-bold uppercase tracking-wider text-white">Información Formativa</h4>
           <p className="text-xs text-stone-300 font-semibold">Tecnología en Análisis y Desarrollo de Software (ADSO)</p>
-          <p className="text-xs text-stone-400">Ficha: <span className="text-amber-400 font-mono font-bold">228118</span></p>
+          <p className="text-xs text-stone-400">Ficha: <span className="text-amber-400 font-mono font-bold">3186681</span></p>
           <p className="text-xs text-stone-400">Aprendiz: <span className="text-white font-medium">Karen Yuliana Campo</span></p>
           <p className="text-[11px] text-stone-500">Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca</p>
         </div>
@@ -54,7 +54,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-500">
-        © 2026 Pizzería Bella Italia. Proyecto Formativo SENA ADSO Ficha 228118. Todos los derechos reservados.
+        © 2026 Pizzería Bella Italia. Proyecto Formativo SENA ADSO Ficha 3186681. Todos los derechos reservados.
       </div>
     </footer>
   );

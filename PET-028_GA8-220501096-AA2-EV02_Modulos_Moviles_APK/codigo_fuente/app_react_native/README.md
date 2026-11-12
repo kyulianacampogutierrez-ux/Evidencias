@@ -1,7 +1,7 @@
 # Pizzería Bella Italia - Aplicación Móvil (React Native)
 
 **Programa:** Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual  
-**Ficha:** 228118  
+**Ficha:** 3186681  
 **Aprendiz:** Karen Yuliana Campo  
 **Centro:** Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca  
 **Actividad de Aprendizaje:** Guía de Aprendizaje 8 - Módulos Móviles del Proyecto  

@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Actividad Principal Nativa Android 14 (API 34).
  * Evidencia: GA8-220501096-AA2-EV01 - Taller Tecnologías Emergentes y Disruptivas Móviles.
- * Aprendiz: Karen Yuliana Campo | Ficha: 228118 | Centro: CTPI Popayán - Regional Cauca.
+ * Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | Centro: CTPI Popayán - Regional Cauca.
  */
 public class MainActivity extends AppCompatActivity {
 

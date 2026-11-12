@@ -19,7 +19,7 @@ func SetupRoutes(app *fiber.App) {
 			"database":  "MongoDB (pizzeria_db)",
 			"version":   "2.0.0",
 			"aprendiz":  "Karen Yuliana Campo",
-			"ficha":     "228118",
+			"ficha":     "3186681",
 			"centro":    "CTPI Popayán - Regional Cauca",
 			"timestamp": time.Now().Format(time.RFC3339),
 		})
@@ -32,7 +32,7 @@ func SetupRoutes(app *fiber.App) {
 			"servicio": "pizzeria-backend-go-fiber",
 			"database": "MongoDB (pizzeria_db)",
 			"aprendiz": "Karen Yuliana Campo",
-			"ficha":    "228118",
+			"ficha":    "3186681",
 		})
 	})
 

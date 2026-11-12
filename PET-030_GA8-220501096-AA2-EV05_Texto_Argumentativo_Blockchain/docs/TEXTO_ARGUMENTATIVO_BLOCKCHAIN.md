@@ -2,7 +2,7 @@
 ## DESCENTRALIZACIÓN, CONFIANZA CRIPTOGRÁFICA E INMUTABILIDAD: EL IMPACTO DISRUPTIVO DE BLOCKCHAIN EN LA INGENIERÍA DE SOFTWARE Y LA TRAZABILIDAD AGROALIMENTARIA
 
 **Programa de Formación:** Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual  
-**Ficha de Caracterización:** 228118  
+**Ficha de Caracterización:** 3186681  
 **Evidencia:** GA8-220501096-AA2-EV05 - Texto argumentativo sobre blockchain  
 **Aprendiz:** Karen Yuliana Campo  
 **Centro de Formación:** Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca  
@@ -334,7 +334,7 @@ pragma solidity ^0.8.20;
 /**
  * @title BellaItaliaSupply
  * @dev Gestión inmutable de trazabilidad de ingredientes y pagos escrow a campesinos caucanos
- * @author Karen Yuliana Campo - Aprendiz SENA ADSO Ficha 228118
+ * @author Karen Yuliana Campo - Aprendiz SENA ADSO Ficha 3186681
  */
 contract BellaItaliaSupply {
     address public immutable administradora;

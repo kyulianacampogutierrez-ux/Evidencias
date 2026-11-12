@@ -26,7 +26,7 @@ const PROFILES = {
     rol: 'ADMIN',
     email: 'karen.campo@sena.edu.co',
     telefono: '+57 312 456 7890',
-    ficha: '228118',
+    ficha: '3186681',
     centro: 'CTPI Popayán - Regional Cauca',
     direccionPrincipal: 'Calle 4 Norte # 18-24, Popayán (Sede CTPI)',
   },
@@ -36,7 +36,7 @@ const PROFILES = {
     rol: 'CLIENTE',
     email: 'carlos.cliente@correo.com',
     telefono: '+57 315 789 1234',
-    ficha: '228118 (Cliente Registrado)',
+    ficha: '3186681 (Cliente Registrado)',
     centro: 'Popayán - Usuario Residencial',
     direccionPrincipal: 'Carrera 9 # 15-40, Barrio Pandiguando, Popayán',
     direcciones: [
@@ -185,7 +185,7 @@ export default function App() {
           <View style={styles.brandRow}>
             <Text style={styles.logoText}>🍕 Bella <Text style={styles.logoHighlight}>Italia</Text></Text>
             <View style={styles.senaBadge}>
-              <Text style={styles.senaBadgeText}>SENA 228118</Text>
+              <Text style={styles.senaBadgeText}>SENA 3186681</Text>
             </View>
           </View>
           <Text style={styles.headerCity}>Popayán, Cauca</Text>

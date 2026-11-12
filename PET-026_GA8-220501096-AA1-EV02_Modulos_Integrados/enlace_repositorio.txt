@@ -4,7 +4,7 @@ TITULO: Módulos Integrados
         (Entrega Formal del Software Integrado - Pizzería Gourmet Bella Italia)
 APRENDIZ: Karen Yuliana Campo
 PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
-FICHA: 228118
+FICHA: 3186681
 CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
 INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
 ================================================================================

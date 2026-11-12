@@ -1,6 +1,6 @@
 // ==============================================================================
 // SCRIPT DE INICIALIZACIÓN MONGODB: PIZZERÍA BELLA ITALIA
-// Programa: ADSO - Ficha: 228118 | Aprendiz: Karen Yuliana Campo | CTPI Popayán
+// Programa: ADSO - Ficha: 3186681 | Aprendiz: Karen Yuliana Campo | CTPI Popayán
 // ==============================================================================
 
 db = db.getSiblingDB('pizzeria_db');

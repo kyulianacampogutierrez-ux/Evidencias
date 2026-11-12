@@ -16,7 +16,7 @@ var jwtSecretKey = []byte(getJWTSecret())
 func getJWTSecret() string {
 	secret := os.Getenv("JWT_SECRET")
 	if secret == "" {
-		return "SENA_ADSO_228118_BELLA_ITALIA_GO_FIBER_2026"
+		return "SENA_ADSO_3186681_BELLA_ITALIA_GO_FIBER_2026"
 	}
 	return secret
 }

@@ -5,7 +5,7 @@
 ---
 
 **Aprendiz:** Karen Yuliana Campo  
-**Ficha:** 228118 — ADSO  
+**Ficha:** 3186681 — ADSO  
 **CTPI Popayán — SENA Regional Cauca**  
 
 ---
