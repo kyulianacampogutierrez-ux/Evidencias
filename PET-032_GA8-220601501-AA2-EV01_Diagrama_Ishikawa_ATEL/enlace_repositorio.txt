@@ -1,0 +1,52 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220601501-AA2-EV01
+TITULO: Diagrama de Ishikawa o Espina de Pescado, sobre las estrategias para la
+        prevención y control de los impactos ambientales, accidentes y enfermedades
+        laborales (ATEL).
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 3186681
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-032_GA8-220601501-AA2-EV01_Diagrama_Ishikawa_ATEL
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL DIAGRAMA DE ISHIKAWA:
+Esta evidencia da cumplimiento formal y técnico a la Guía de Aprendizaje 8 en la
+competencia 220601501 mediante la construcción analítica de diagramas causa-efecto
+(Espina de Pescado / Ishikawa) basados en el estudio de caso "Vestidos y Costuras S.A.S.":
+
+1. DIAGRAMA DE ISHIKAWA PRINCIPAL (ESPINA DE PESCADO 6M - ATEL):
+   - Problema Central (Cabeza del Pez): "Alta frecuencia de caídas, tropiezos y riesgo
+     inminente de fracturas y traumatismos graves en escaleras al sótano de bordado".
+   - Espina 1: Método (Procedimiento de trabajo, ausencia de protocolos, tránsito con carga).
+   - Espina 2: Mano de Obra (Comportamiento, adaptación visual, falta de inducción en autocuidado).
+   - Espina 3: Máquinas / Equipos (Bordadoras en sótano confinado, sin montacargas).
+   - Espina 4: Materiales (Calzado ordinario sin suela antideslizante, bultos obstructivos).
+   - Espina 5: Medio Ambiente / Entorno Locativo (Déficit severo de luz, penumbra, escalones resbaladizos).
+   - Espina 6: Medición / Gestión SG-SST (Inacción ante reporte previo, omisión de controles, falta de COPASST).
+
+2. DIAGRAMA DE ISHIKAWA AMBIENTAL (IMPACTOS AMBIENTALES TEXTILES):
+   - Problema Central: "Consumo energético ineficiente y generación de residuos peligrosos (RESPEL) y textiles".
+   - Análisis de causas en energía, residuos de telas, luminarias fluorescentes con mercurio y ruido.
+
+3. PLAN INTEGRAL DE ESTRATEGIAS DE PREVENCIÓN Y CONTROL (ATEL Y AMBIENTAL):
+   - Estrategias de prevención y control para Accidentes de Trabajo (AT).
+   - Estrategias de prevención y control para Enfermedades Laborales (EL).
+   - Estrategias de prevención y control para Impactos Ambientales (PIGA y Res. 2184/2019).
+   - Articulación con el Proyecto Formativo: Pizzería Gourmet Bella Italia Popayán.
+
+4. DOCUMENTOS DISPONIBLES EN ESTE PAQUETE:
+   - GA8-220601501-AA2-EV01_Diagrama_Ishikawa_ATEL.pdf (Documento formal en PDF solicitado por el usuario)
+   - GA8-220601501-AA2-EV01_Diagrama_Ishikawa_ATEL.docx (Formato oficial Microsoft Word)
+   - Diagramas: Ishikawa 6M ATEL, Ishikawa Ambiental y Mapa Estratégico de Control.
+   - Paquete comprimido normativo KARENCAMPO_AA2_EV01.zip.
+================================================================================

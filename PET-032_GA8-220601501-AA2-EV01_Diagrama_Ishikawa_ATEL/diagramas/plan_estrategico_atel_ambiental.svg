@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <defs>
+    <linearGradient id="bgGradP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <filter id="shadowP" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="520" fill="url(#bgGradP)"/>
+
+  <!-- Title Header -->
+  <rect x="30" y="20" width="940" height="60" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadowP)"/>
+  <rect x="30" y="20" width="8" height="60" rx="4" fill="#059669"/>
+  <text x="50" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#F8FAFC">PLAN ESTRATÉGICO INTEGRAL DE PREVENCIÓN Y CONTROL (ATEL Y MEDIO AMBIENTE)</text>
+  <text x="50" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94A3B8">Articulación de Controles Técnicos, Gestión de Salud y Sostenibilidad Ambiental</text>
+
+  <!-- Pillar 1: Accidentes de Trabajo (AT) -->
+  <rect x="30" y="100" width="295" height="390" rx="8" fill="#111827" stroke="#DC2626" stroke-width="1.5" filter="url(#shadowP)"/>
+  <rect x="30" y="100" width="295" height="35" rx="8" fill="#B91C1C"/>
+  <text x="177" y="123" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. CONTROL DE ACCIDENTES (AT)</text>
+
+  <rect x="45" y="150" width="265" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="55" y="170" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#F87171">• Adecuación Locativa en Escaleras</text>
+  <text x="55" y="190" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Cintas antideslizantes fotoluminiscentes en huellas</text>
+  <text x="55" y="205" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">y pasamanos tubular doble a 90 cm de altura.</text>
+
+  <rect x="45" y="230" width="265" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="55" y="250" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FBBF24">• Iluminación LED y Autonomía</text>
+  <text x="55" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Luminarias LED herméticas de 300 luxes con</text>
+  <text x="55" y="285" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">sensor de presencia y luces de emergencia (90 min).</text>
+
+  <rect x="45" y="310" width="265" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="55" y="330" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38BDF8">• Gestión Inmediata de Reportes</text>
+  <text x="55" y="350" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Canal digital de reporte de condiciones inseguras;</text>
+  <text x="55" y="365" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">intervención obligatoria en menos de 48 horas.</text>
+
+  <rect x="45" y="395" width="265" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="55" y="415" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#4ADE80">• EPP y Procedimiento Seguro</text>
+  <text x="55" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Calzado antideslizante con suela de poliuretano (SRC)</text>
+  <text x="55" y="450" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">y prohibición de cargar paquetes que tapen la vista.</text>
+
+  <!-- Pillar 2: Enfermedades Laborales (EL) -->
+  <rect x="350" y="100" width="295" height="390" rx="8" fill="#111827" stroke="#0284C7" stroke-width="1.5" filter="url(#shadowP)"/>
+  <rect x="350" y="100" width="295" height="35" rx="8" fill="#0284C7"/>
+  <text x="497" y="123" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. PREVENCIÓN DE ENFERMEDADES (EL)</text>
+
+  <rect x="365" y="150" width="265" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="375" y="170" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#60A5FA">• Ergonomía y Puestos de Trabajo</text>
+  <text x="375" y="190" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Sillas ergonómicas regulables en altura para</text>
+  <text x="375" y="205" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">operarias bordadoras; postura neutra de columna.</text>
+
+  <rect x="365" y="230" width="265" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="375" y="250" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FBBF24">• Salud Visual (Fatiga Ocular)</text>
+  <text x="375" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Eliminación de contrastes oscuros; 500-750 luxes</text>
+  <text x="375" y="285" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">en mesas de bordado para evitar astenopia visual.</text>
+
+  <rect x="365" y="310" width="265" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="375" y="330" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38BDF8">• Programa de Pausas Activas</text>
+  <text x="375" y="350" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Ejercicios de estiramiento muscular cada 2 horas</text>
+  <text x="375" y="365" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">para mitigar túnel carpiano y dorsolumbalgias.</text>
+
+  <rect x="365" y="395" width="265" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="375" y="415" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#4ADE80">• Ventilación Mecánica en Sótano</text>
+  <text x="375" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Extracción de micropartículas textiles en suspensión</text>
+  <text x="375" y="450" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">y renovación de aire para evitar rinitis laboral.</text>
+
+  <!-- Pillar 3: Medio Ambiente -->
+  <rect x="670" y="100" width="300" height="390" rx="8" fill="#111827" stroke="#059669" stroke-width="1.8" filter="url(#shadowP)"/>
+  <rect x="670" y="100" width="300" height="35" rx="8" fill="#047857"/>
+  <text x="820" y="123" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. GESTIÓN AMBIENTAL (PIGA)</text>
+
+  <rect x="685" y="150" width="270" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="695" y="170" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#34D399">• Eficiencia Energética (Huella de CO₂)</text>
+  <text x="695" y="190" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Ahorro del 65% del consumo de alumbrado mediante</text>
+  <text x="695" y="205" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">tecnología LED y apagado automático en descansos.</text>
+
+  <rect x="685" y="230" width="270" height="70" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="695" y="250" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FBBF24">• Disposición Segura de RESPEL</text>
+  <text x="695" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Entrega de bombillos fluorescentes con mercurio</text>
+  <text x="695" y="285" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">al programa posconsumo autorizado "Lúmina".</text>
+
+  <rect x="685" y="310" width="270" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="695" y="330" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6EE7B7">• Economía Circular de Retazos</text>
+  <text x="695" y="350" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Segregación en caneca blanca (Res. 2184/2019) y</text>
+  <text x="695" y="365" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">donación a cooperativas de ecodiseño caucano.</text>
+
+  <rect x="685" y="395" width="270" height="75" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="695" y="415" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#A7F3D0">• Transferencia a Pizzería Bella Italia</text>
+  <text x="695" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Compostaje de residuos orgánicos y recolección</text>
+  <text x="695" y="450" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">de aceites vegetales usados (ACU) en Popayán.</text>
+</svg>

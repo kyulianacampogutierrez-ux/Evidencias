@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620">
+  <defs>
+    <linearGradient id="bgGradIshi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="boneGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="shadowIshi" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="620" fill="url(#bgGradIshi)"/>
+
+  <!-- Main Header -->
+  <rect x="30" y="15" width="1040" height="60" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadowIshi)"/>
+  <rect x="30" y="15" width="8" height="60" rx="4" fill="#EF4444"/>
+  <text x="50" y="40" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#F8FAFC">DIAGRAMA DE ISHIKAWA (ESPINA DE PESCADO 6M) - ANÁLISIS CAUSA-RAÍZ DE ATEL</text>
+  <text x="50" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#94A3B8">Caso "Vestidos y Costuras S.A.S.": Caídas y Tropiezos en Escaleras al Sótano de Bordadoras</text>
+
+  <!-- Central Backbone (Columna Vertebral) -->
+  <line x1="50" y1="330" x2="840" y2="330" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+  <!-- Arrow to Head -->
+  <polygon points="840,318 865,330 840,342" fill="#38BDF8"/>
+
+  <!-- Fish Head (Cabeza del Pez: Problema / Efecto) -->
+  <path d="M 865 330 L 910 230 L 1070 230 L 1070 430 L 910 430 Z" fill="url(#headGrad)" stroke="#B91C1C" stroke-width="2" filter="url(#shadowIshi)"/>
+  <text x="990" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">EFECTO / PROBLEMA:</text>
+  <text x="990" y="295" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#FEF08A" text-anchor="middle">CAÍDAS Y TROPIEZOS</text>
+  <text x="990" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#FEF08A" text-anchor="middle">EN ESCALERAS AL SÓTANO</text>
+  <text x="990" y="340" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle">Riesgo inminente de</text>
+  <text x="990" y="358" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle">fracturas, traumatismos</text>
+  <text x="990" y="376" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle">y ausentismo laboral</text>
+  <rect x="925" y="390" width="130" height="25" rx="4" fill="#7F1D1D"/>
+  <text x="990" y="407" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#FEE2E2" text-anchor="middle">NIVEL I (GTC 45)</text>
+
+  <!-- ==================== UPPER SPINES (TOP) ==================== -->
+
+  <!-- Top Spine 1: MÉTODO (X = 180) -->
+  <line x1="280" y1="330" x2="160" y2="130" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="90" y="95" width="140" height="32" rx="6" fill="#0284C7" stroke="#38BDF8" filter="url(#shadowIshi)"/>
+  <text x="160" y="116" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. MÉTODO</text>
+  <!-- Sub-causes Método -->
+  <line x1="220" y1="230" x2="110" y2="230" stroke="#64748B" stroke-width="1.5"/>
+  <text x="105" y="225" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Sin procedimiento de descenso seguro</text>
+  <line x1="250" y1="280" x2="140" y2="280" stroke="#64748B" stroke-width="1.5"/>
+  <text x="135" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Transporte manual con carga obstructiva</text>
+  <line x1="190" y1="180" x2="80" y2="180" stroke="#64748B" stroke-width="1.5"/>
+  <text x="75" y="175" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Falta de pausas de aclimatación visual</text>
+
+  <!-- Top Spine 2: MÁQUINAS / EQUIPOS (X = 460) -->
+  <line x1="530" y1="330" x2="410" y2="130" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="330" y="95" width="160" height="32" rx="6" fill="#0284C7" stroke="#38BDF8" filter="url(#shadowIshi)"/>
+  <text x="410" y="116" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. MÁQUINAS / EQUIPOS</text>
+  <!-- Sub-causes Máquinas -->
+  <line x1="470" y1="230" x2="360" y2="230" stroke="#64748B" stroke-width="1.5"/>
+  <text x="355" y="225" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Bordadoras reubicadas en sótano ciego</text>
+  <line x1="500" y1="280" x2="380" y2="280" stroke="#64748B" stroke-width="1.5"/>
+  <text x="375" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Ausencia de malacate o montacargas</text>
+  <line x1="440" y1="180" x2="330" y2="180" stroke="#64748B" stroke-width="1.5"/>
+  <text x="325" y="175" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Falta de luminarias auxiliares autónomas</text>
+
+  <!-- Top Spine 3: MEDIO AMBIENTE / ENTORNO (X = 720) -->
+  <line x1="770" y1="330" x2="650" y2="130" stroke="#DC2626" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="560" y="95" width="180" height="32" rx="6" fill="#B91C1C" stroke="#EF4444" filter="url(#shadowIshi)"/>
+  <text x="650" y="116" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. ENTORNO LOCATIVO ⚠</text>
+  <!-- Sub-causes Entorno -->
+  <line x1="710" y1="230" x2="600" y2="230" stroke="#F87171" stroke-width="1.5"/>
+  <text x="595" y="225" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#FCA5A5">• DÉFICIT LUMÍNICO SEVERO (&lt;50 lux)</text>
+  <line x1="740" y1="280" x2="620" y2="280" stroke="#F87171" stroke-width="1.5"/>
+  <text x="615" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Peldaños lisos sin cintas rugosas</text>
+  <line x1="680" y1="180" x2="570" y2="180" stroke="#F87171" stroke-width="1.5"/>
+  <text x="565" y="175" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Pasamanos inexistente o discontinuo</text>
+
+  <!-- ==================== LOWER SPINES (BOTTOM) ==================== -->
+
+  <!-- Bottom Spine 4: MANO DE OBRA (X = 180) -->
+  <line x1="280" y1="330" x2="160" y2="520" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="90" y="525" width="140" height="32" rx="6" fill="#0284C7" stroke="#38BDF8" filter="url(#shadowIshi)"/>
+  <text x="160" y="546" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4. MANO DE OBRA</text>
+  <!-- Sub-causes Mano de Obra -->
+  <line x1="220" y1="420" x2="110" y2="420" stroke="#64748B" stroke-width="1.5"/>
+  <text x="105" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Prisa por cumplir cuotas de producción</text>
+  <line x1="250" y1="375" x2="140" y2="375" stroke="#64748B" stroke-width="1.5"/>
+  <text x="135" y="390" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Desconocimiento de riesgos de caída</text>
+  <line x1="190" y1="475" x2="80" y2="475" stroke="#64748B" stroke-width="1.5"/>
+  <text x="75" y="490" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Desensibilización al peligro cotidiano</text>
+
+  <!-- Bottom Spine 5: MATERIALES / EPP (X = 460) -->
+  <line x1="530" y1="330" x2="410" y2="520" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="330" y="525" width="160" height="32" rx="6" fill="#0284C7" stroke="#38BDF8" filter="url(#shadowIshi)"/>
+  <text x="410" y="546" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5. MATERIALES / EPP</text>
+  <!-- Sub-causes Materiales -->
+  <line x1="470" y1="420" x2="360" y2="420" stroke="#64748B" stroke-width="1.5"/>
+  <text x="355" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Uso de calzado ordinario no antideslizante</text>
+  <line x1="500" y1="375" x2="380" y2="375" stroke="#64748B" stroke-width="1.5"/>
+  <text x="375" y="390" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Peldaños con grasa o polvo textil acumulado</text>
+  <line x1="440" y1="475" x2="330" y2="475" stroke="#64748B" stroke-width="1.5"/>
+  <text x="325" y="490" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Cajas de cartón de bobinas como obstáculos</text>
+
+  <!-- Bottom Spine 6: MEDICIÓN / GESTIÓN (X = 720) -->
+  <line x1="770" y1="330" x2="650" y2="520" stroke="#DC2626" stroke-width="4" stroke-linecap="round"/>
+  <!-- Category Box -->
+  <rect x="560" y="525" width="180" height="32" rx="6" fill="#B91C1C" stroke="#EF4444" filter="url(#shadowIshi)"/>
+  <text x="650" y="546" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">6. GESTIÓN SG-SST ⚠</text>
+  <!-- Sub-causes Gestión -->
+  <line x1="710" y1="420" x2="590" y2="420" stroke="#F87171" stroke-width="1.5"/>
+  <text x="585" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#FCA5A5">• OMISIÓN ANTE REPORTE PREVIO (Inacción)</text>
+  <line x1="740" y1="375" x2="620" y2="375" stroke="#F87171" stroke-width="1.5"/>
+  <text x="615" y="390" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Falta de inspecciones de seguridad periódicas</text>
+  <line x1="680" y1="475" x2="560" y2="475" stroke="#F87171" stroke-width="1.5"/>
+  <text x="555" y="490" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">• Inexistencia de canal digital trazable de reporte</text>
+
+  <!-- Bottom Badge: Aprendiz y Ficha -->
+  <rect x="30" y="580" width="1040" height="26" rx="4" fill="#047857" fill-opacity="0.3"/>
+  <text x="550" y="597" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#86EFAC" text-anchor="middle">SENA ADSO Ficha 3186681 • Aprendiz: Karen Yuliana Campo • Centro de Teleinformática y Producción Industrial (CTPI Popayán)</text>
+</svg>
