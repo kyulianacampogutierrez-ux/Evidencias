@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#1C2541"/>
+    </linearGradient>
+    <linearGradient id="senaGreen4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#39A900"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="italianRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="polyGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="520" fill="url(#bgGrad4)"/>
+
+  <!-- Title Header -->
+  <rect x="30" y="20" width="940" height="60" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="30" y="20" width="8" height="60" rx="4" fill="url(#senaGreen4)"/>
+  <text x="50" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#F8FAFC">ARQUITECTURA BLOCKCHAIN DE TRAZABILIDAD Y SMART CONTRACTS - PIZZERÍA BELLA ITALIA</text>
+  <text x="50" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94A3B8">Cadena Agroalimentaria "De la Granja Caucana a la Mesa" y Certificación Digital Inmutable</text>
+
+  <!-- Layer 1: Proveedores Caucanos e IoT -->
+  <rect x="30" y="95" width="215" height="395" rx="8" fill="#111827" stroke="#39A900" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="30" y="95" width="215" height="35" rx="8" fill="url(#senaGreen4)"/>
+  <text x="137" y="118" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. ORIGEN Y TELEMETRÍA</text>
+
+  <rect x="42" y="145" width="190" height="95" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="52" y="165" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#4ADE80">Quesos de Silvia, Cauca</text>
+  <text x="52" y="185" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Cooperativa Guambiana</text>
+  <text x="52" y="203" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Lote L-2026-Q84</text>
+  <text x="52" y="221" font-family="'Courier New', monospace" font-size="9" fill="#86EFAC">DID: did:cauca:silvia01</text>
+
+  <rect x="42" y="250" width="190" height="95" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="52" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#F87171">Tomate Orgánico Timbío</text>
+  <text x="52" y="290" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Cero pesticidas químicos</text>
+  <text x="52" y="308" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Cosecha: 10-Nov-2026</text>
+  <text x="52" y="326" font-family="'Courier New', monospace" font-size="9" fill="#FCA5A5">DID: did:cauca:timbio03</text>
+
+  <rect x="42" y="355" width="190" height="120" rx="6" fill="#0F172A" stroke="#059669"/>
+  <text x="52" y="375" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#34D399">Sensores IoT / ESP32</text>
+  <text x="52" y="395" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E2E8F0">• Sensor Temp: DS18B20 (4°C)</text>
+  <text x="52" y="413" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E2E8F0">• GPS Tracker en camión frío</text>
+  <text x="52" y="431" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E2E8F0">• Firma telemetría con clave</text>
+  <text x="52" y="449" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#86EFAC">✓ Envío MQTT a Gateway</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="245" y1="290" x2="270" y2="290" stroke="#22C55E" stroke-width="2.5"/>
+  <polygon points="270,285 280,290 270,295" fill="#22C55E"/>
+
+  <!-- Layer 2: Oráculo y Smart Contracts -->
+  <rect x="280" y="95" width="225" height="395" rx="8" fill="#111827" stroke="#7C3AED" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="280" y="95" width="225" height="35" rx="8" fill="url(#polyGrad)"/>
+  <text x="392" y="118" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. SMART CONTRACTS (EVM)</text>
+
+  <rect x="292" y="145" width="200" height="110" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="302" y="165" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#C084FC">Oráculo Descentralizado</text>
+  <text x="302" y="185" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Conecta mundo físico con la red</text>
+  <text x="302" y="203" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Verifica que la temperatura en el</text>
+  <text x="302" y="221" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">  transporte no haya superado 6°C</text>
+  <text x="302" y="239" font-family="'Courier New', monospace" font-size="8.5" fill="#E9D5FF">Chainlink Node / Webhook API</text>
+
+  <rect x="292" y="265" width="200" height="135" rx="6" fill="#4C1D95" fill-opacity="0.4" stroke="#8B5CF6"/>
+  <text x="302" y="285" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#F3E8FF">Contrato: BellaItaliaSupply.sol</text>
+  <text x="302" y="305" font-family="'Courier New', monospace" font-size="8.5" fill="#E9D5FF">function registrarLote(...) {</text>
+  <text x="302" y="322" font-family="'Courier New', monospace" font-size="8.5" fill="#E9D5FF">  require(temp &lt;= 6, "Cadena rota");</text>
+  <text x="302" y="339" font-family="'Courier New', monospace" font-size="8.5" fill="#E9D5FF">  lotes[id] = Lote(origen, hash);</text>
+  <text x="302" y="356" font-family="'Courier New', monospace" font-size="8.5" fill="#A7F3D0">  pagoEscrow(campesino);</text>
+  <text x="302" y="373" font-family="'Courier New', monospace" font-size="8.5" fill="#E9D5FF">}</text>
+
+  <rect x="292" y="410" width="200" height="65" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="302" y="430" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#FBBF24">Pago Automático (Escrow)</text>
+  <text x="302" y="448" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">Fondos liberados sin demoras de</text>
+  <text x="302" y="463" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#E2E8F0">intermediarios ni cobros bancarios.</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="505" y1="290" x2="530" y2="290" stroke="#8B5CF6" stroke-width="2.5"/>
+  <polygon points="530,285 540,290 530,295" fill="#8B5CF6"/>
+
+  <!-- Layer 3: Red Blockchain (Polygon / Hyperledger) -->
+  <rect x="540" y="95" width="200" height="395" rx="8" fill="#111827" stroke="#0284C7" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="540" y="95" width="200" height="35" rx="8" fill="#0284C7"/>
+  <text x="640" y="118" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. RED DISTRIBUIDA</text>
+
+  <rect x="550" y="145" width="180" height="100" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="560" y="165" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38BDF8">Capa de Consenso</text>
+  <text x="560" y="185" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Red: Polygon PoS /</text>
+  <text x="560" y="200" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">  Hyperledger Fabric</text>
+  <text x="560" y="218" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Costo por Tx: &lt; $0.005 USD</text>
+  <text x="560" y="235" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Tiempo de bloque: 2 seg</text>
+
+  <rect x="550" y="255" width="180" height="110" rx="6" fill="#0C4A6E" fill-opacity="0.4" stroke="#0284C7"/>
+  <text x="560" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#BAE6FD">Almacenamiento</text>
+  <text x="560" y="295" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E0F2FE">• On-Chain: Hashes cripto,</text>
+  <text x="560" y="310" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E0F2FE">  sellos de tiempo, IDs lotes</text>
+  <text x="560" y="330" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E0F2FE">• Off-Chain (IPFS/Mongo):</text>
+  <text x="560" y="348" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#E0F2FE">  Fichas sanitarias, fotos</text>
+
+  <rect x="550" y="375" width="180" height="100" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="560" y="395" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#6EE7B7">Certificado NFT / Lote</text>
+  <text x="560" y="415" font-family="'Courier New', monospace" font-size="8.5" fill="#A7F3D0">Token ID: #8491</text>
+  <text x="560" y="432" font-family="'Courier New', monospace" font-size="8.5" fill="#A7F3D0">Hash: 0x9f8b...21</text>
+  <text x="560" y="450" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#F8FAFC">Garantía Inmutable BPM</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="740" y1="290" x2="765" y2="290" stroke="#0284C7" stroke-width="2.5"/>
+  <polygon points="765,285 775,290 765,295" fill="#0284C7"/>
+
+  <!-- Layer 4: App Móvil y Comensal Popayán -->
+  <rect x="775" y="95" width="200" height="395" rx="8" fill="#111827" stroke="#DC2626" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="775" y="95" width="200" height="35" rx="8" fill="url(#italianRed)"/>
+  <text x="875" y="118" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4. APP MÓVIL Y CLIENTE</text>
+
+  <rect x="785" y="145" width="180" height="110" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="795" y="165" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#F87171">Empaque Inteligente</text>
+  <text x="795" y="185" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Código QR dinámico en la</text>
+  <text x="795" y="200" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">  caja de la pizza artesanal</text>
+  <text x="795" y="218" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">• Escaneo con cámara del móvil</text>
+  <text x="795" y="235" font-family="'Courier New', monospace" font-size="8.5" fill="#FCA5A5">URL: verify.bellaitalia.co</text>
+
+  <rect x="785" y="265" width="180" height="120" rx="6" fill="#991B1B" fill-opacity="0.3" stroke="#DC2626"/>
+  <text x="795" y="285" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#FECDD3">App Móvil React Native</text>
+  <text x="795" y="305" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFE4E6">• Muestra pasaporte del plato</text>
+  <text x="795" y="322" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFE4E6">• Nombre del maestro lechero</text>
+  <text x="795" y="339" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFE4E6">• Ruta satelital de Timbío</text>
+  <text x="795" y="356" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFE4E6">• Registro sanitario Invima</text>
+  <text x="795" y="373" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#A7F3D0">✓ Verificación On-Chain</text>
+
+  <rect x="785" y="395" width="180" height="80" rx="6" fill="#1E293B" stroke="#334155"/>
+  <text x="795" y="415" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#FBBF24">Tokens de Fidelización</text>
+  <text x="795" y="433" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#CBD5E1">• El cliente recibe tokens</text>
+  <text x="795" y="448" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#CBD5E1">  "BellaCoin" por cada pedido</text>
+  <text x="795" y="463" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#CBD5E1">  redimibles en pizzas y postres.</text>
+</svg>

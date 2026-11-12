@@ -1,0 +1,55 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA2-EV05
+TITULO: Texto argumentativo sobre blockchain
+        (Descentralización, Criptografía, Inmutabilidad y Trazabilidad en Software)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-030_GA8-220501096-AA2-EV05_Texto_Argumentativo_Blockchain
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL TEXTO ARGUMENTATIVO:
+Esta evidencia da estricto cumplimiento a la Guía de Aprendizaje 8 mediante un ensayo
+técnico y argumentativo de alto rigor académico (mínimo 3 páginas exigidas, desarrollado
+en extensión profunda con premisas, fundamentación lógica y conclusiones demostrativas):
+
+1. ESTRUCTURA ARGUMENTATIVA Y CONCEPTUAL:
+   - Premisa Central: La superación del problema de la confianza y el punto único de fallo
+     a través de libros mayores distribuidos (DLT) y consenso matemático.
+   - Objetivos y Antecedentes Históricos: Desde el sellado de tiempo de Haber-Stornetta (1991),
+     árboles de Merkle, Bit Gold de Nick Szabo, b-money de Wei Dai, hasta Satoshi Nakamoto
+     (2008) y la revolución de contratos inteligentes de Ethereum.
+   - Fundamentos Criptográficos: Criptografía asimétrica (curvas elípticas ECDSA secp256k1),
+     claves públicas/privadas, firmas digitales y funciones hash deterministas (SHA-256).
+   - Anatomía del Bloque y Encadenamiento: Estructura de cabecera (prev_hash, Merkle root,
+     nonce, timestamp), propagación P2P e inmutabilidad estricta retrospectiva.
+   - Minería y Consenso: Proof of Work (PoW) vs Proof of Stake (PoS), ajuste de dificultad
+     y teoría de juegos bizantina.
+   - Productos y Criptomonedas: Bitcoin, Ethereum, Smart Contracts, DeFi, NFTs, y trazabilidad
+     en la cadena de suministro agroalimentaria.
+   - Articulación con el Proyecto Formativo: Sistema de trazabilidad inmutable y smart contracts
+     para la Pizzería Gourmet Bella Italia Popayán (denominación de origen y pago a campesinos).
+
+2. ARTEFACTOS Y DIAGRAMAS ARQUITECTURALES:
+   - Diagrama 1: Topología de Redes (Centralizada vs Descentralizada vs Distribuida P2P Blockchain).
+   - Diagrama 2: Anatomía de un Bloque y Encadenamiento Criptográfico de Merkle.
+   - Diagrama 3: Ciclo de Vida de una Transacción, Mempool y Consenso de Minería.
+   - Diagrama 4: Arquitectura de Trazabilidad Agroalimentaria Blockchain para Pizzería Bella Italia.
+   (Formatos disponibles: SVG vectorial, PNG de alta definición y archivo editable .drawio).
+
+3. ARCHIVOS DISPONIBLES EN ESTE PAQUETE:
+   - GA8-220501096-AA2-EV05_Texto_Argumentativo_Blockchain.pdf (Documento formal con portada y estilo SENA)
+   - GA8-220501096-AA2-EV05_Texto_Argumentativo_Blockchain.docx (Formato nativo Microsoft Word)
+   - KARENCAMPO_AA2_EV05.zip (Archivo comprimido normativo con documentación y diagramas)
+   - enlace_repositorio.txt (Este documento de verificación)
+================================================================================
