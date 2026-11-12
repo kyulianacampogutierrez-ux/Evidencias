@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="compHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="cShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="1060" height="60" rx="8" fill="url(#compHeader)" filter="url(#cShadow)"/>
+  <text x="550" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">DIAGRAMA DE COMPONENTES POR CAPAS - ARQUITECTURA MÓVIL</text>
+  <text x="550" y="65" text-anchor="middle" fill="#e0e7ff" font-size="12">Desacoplamiento en Capa Presentación, Capa Lógica, Capa Servicios y Backend RESTful</text>
+
+  <!-- CAPA 1: PRESENTACIÓN -->
+  <g transform="translate(40, 100)" filter="url(#cShadow)">
+    <rect width="1020" height="150" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="30" fill="#3b82f6" rx="8"/>
+    <text x="140" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">CAPA 1: PRESENTACIÓN &amp; UI MÓVIL</text>
+    
+    <g transform="translate(30, 45)">
+      <rect width="200" height="85" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="100" y="25" text-anchor="middle" fill="#1e3a8a" font-size="11" font-weight="bold">&lt;&lt;React Native Component&gt;&gt;</text>
+      <text x="100" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">CartaMenu &amp; PizzaCard</text>
+      <text x="100" y="65" text-anchor="middle" fill="#64748b" font-size="10">Grid de catálogo y filtrado</text>
+    </g>
+
+    <g transform="translate(260, 45)">
+      <rect width="200" height="85" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="100" y="25" text-anchor="middle" fill="#1e3a8a" font-size="11" font-weight="bold">&lt;&lt;React Native Component&gt;&gt;</text>
+      <text x="100" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">CartDrawer &amp; Checkout</text>
+      <text x="100" y="65" text-anchor="middle" fill="#64748b" font-size="10">Items, cupón y pago</text>
+    </g>
+
+    <g transform="translate(490, 45)">
+      <rect width="220" height="85" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="110" y="25" text-anchor="middle" fill="#1e3a8a" font-size="11" font-weight="bold">&lt;&lt;React Native Component&gt;&gt;</text>
+      <text x="110" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">OrderTrackingView</text>
+      <text x="110" y="65" text-anchor="middle" fill="#64748b" font-size="10">Línea de tiempo de 5 etapas</text>
+    </g>
+
+    <g transform="translate(740, 45)">
+      <rect width="240" height="85" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="120" y="25" text-anchor="middle" fill="#1e3a8a" font-size="11" font-weight="bold">&lt;&lt;Java Android Native&gt;&gt;</text>
+      <text x="120" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">RecyclerView + CardView</text>
+      <text x="120" y="65" text-anchor="middle" fill="#64748b" font-size="10">Renderizado nativo en memoria</text>
+    </g>
+  </g>
+
+  <!-- Flecha Intercapa 1 -> 2 -->
+  <line x1="550" y1="250" x2="550" y2="280" stroke="#6366f1" stroke-width="3" stroke-dasharray="5"/>
+
+  <!-- CAPA 2: LÓGICA DE NEGOCIO & ESTADO -->
+  <g transform="translate(40, 280)" filter="url(#cShadow)">
+    <rect width="1020" height="150" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <rect x="0" y="0" width="310" height="30" fill="#22c55e" rx="8"/>
+    <text x="155" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">CAPA 2: LÓGICA DE NEGOCIO Y ESTADO</text>
+
+    <g transform="translate(40, 45)">
+      <rect width="210" height="85" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+      <text x="105" y="25" text-anchor="middle" fill="#15803d" font-size="11" font-weight="bold">&lt;&lt;State Context&gt;&gt;</text>
+      <text x="105" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">CartContext / Reducer</text>
+      <text x="105" y="65" text-anchor="middle" fill="#64748b" font-size="10">Gestión de items y precios</text>
+    </g>
+
+    <g transform="translate(280, 45)">
+      <rect width="210" height="85" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+      <text x="105" y="25" text-anchor="middle" fill="#15803d" font-size="11" font-weight="bold">&lt;&lt;Business Hook&gt;&gt;</text>
+      <text x="105" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">useCuponDiscount</text>
+      <text x="105" y="65" text-anchor="middle" fill="#64748b" font-size="10">Validación cupón SENA2026</text>
+    </g>
+
+    <g transform="translate(520, 45)">
+      <rect width="210" height="85" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+      <text x="105" y="25" text-anchor="middle" fill="#15803d" font-size="11" font-weight="bold">&lt;&lt;Security Context&gt;&gt;</text>
+      <text x="105" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">AuthContext (JWT)</text>
+      <text x="105" y="65" text-anchor="middle" fill="#64748b" font-size="10">Tokens Bearer y roles</text>
+    </g>
+
+    <g transform="translate(760, 45)">
+      <rect width="210" height="85" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+      <text x="105" y="25" text-anchor="middle" fill="#15803d" font-size="11" font-weight="bold">&lt;&lt;Hermes Bytecode&gt;&gt;</text>
+      <text x="105" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">Fabric C++ Engine</text>
+      <text x="105" y="65" text-anchor="middle" fill="#64748b" font-size="10">Ejecución nativa precompilada</text>
+    </g>
+  </g>
+
+  <!-- Flecha Intercapa 2 -> 3 -->
+  <line x1="550" y1="430" x2="550" y2="460" stroke="#22c55e" stroke-width="3" stroke-dasharray="5"/>
+
+  <!-- CAPA 3: SERVICIOS Y PERSISTENCIA LOCAL -->
+  <g transform="translate(40, 460)" filter="url(#cShadow)">
+    <rect width="1020" height="150" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="0" y="0" width="330" height="30" fill="#f59e0b" rx="8"/>
+    <text x="165" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">CAPA 3: SERVICIOS HTTP Y PERSISTENCIA</text>
+
+    <g transform="translate(60, 45)">
+      <rect width="260" height="85" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="130" y="25" text-anchor="middle" fill="#b45309" font-size="11" font-weight="bold">&lt;&lt;HTTP Client&gt;&gt;</text>
+      <text x="130" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">ApiService (Fetch / Axios)</text>
+      <text x="130" y="65" text-anchor="middle" fill="#64748b" font-size="10">Comunicación RESTful JSON</text>
+    </g>
+
+    <g transform="translate(380, 45)">
+      <rect width="260" height="85" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="130" y="25" text-anchor="middle" fill="#b45309" font-size="11" font-weight="bold">&lt;&lt;Local Storage&gt;&gt;</text>
+      <text x="130" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">AsyncStorage Manager</text>
+      <text x="130" y="65" text-anchor="middle" fill="#64748b" font-size="10">Persistencia offline de pedidos</text>
+    </g>
+
+    <g transform="translate(700, 45)">
+      <rect width="260" height="85" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="130" y="25" text-anchor="middle" fill="#b45309" font-size="11" font-weight="bold">&lt;&lt;Payment Gateway&gt;&gt;</text>
+      <text x="130" y="45" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">Simulador Nequi/PSE</text>
+      <text x="130" y="65" text-anchor="middle" fill="#64748b" font-size="10">Aprobación bancaria y recibo</text>
+    </g>
+  </g>
+
+  <!-- Flecha Intercapa 3 -> 4 -->
+  <line x1="550" y1="610" x2="550" y2="640" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5"/>
+
+  <!-- CAPA 4: SERVIDOR BACKEND Y BASE DE DATOS -->
+  <g transform="translate(40, 640)" filter="url(#cShadow)">
+    <rect width="1020" height="180" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="30" fill="#475569" rx="8"/>
+    <text x="170" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">CAPA 4: BACKEND REMOTO Y ALMACENAMIENTO</text>
+
+    <g transform="translate(100, 50)">
+      <rect width="360" height="100" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="180" y="30" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="bold">Backend RESTful: Go Fiber v2 (:8085)</text>
+      <text x="180" y="55" text-anchor="middle" fill="#0369a1" font-size="11">Endpoints: /api/pizzas | /api/cupones/validar</text>
+      <text x="180" y="75" text-anchor="middle" fill="#0369a1" font-size="11">/api/pedidos | /api/pagos/procesar | /api/admin/dashboard</text>
+      <text x="180" y="92" text-anchor="middle" fill="#15803d" font-size="10" font-weight="bold">Desplegado en Docker: sena-backend-go</text>
+    </g>
+
+    <g transform="translate(560, 50)">
+      <rect width="360" height="100" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="180" y="30" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="bold">Base de Datos NoSQL: MongoDB 6 (:27017)</text>
+      <text x="180" y="55" text-anchor="middle" fill="#334155" font-size="11">Base de datos: pizzeria_db</text>
+      <text x="180" y="75" text-anchor="middle" fill="#334155" font-size="11">Colecciones: pizzas, usuarios, pedidos, cupones, pagos</text>
+      <text x="180" y="92" text-anchor="middle" fill="#15803d" font-size="10" font-weight="bold">Desplegado en Docker: sena-mongodb</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="navGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <filter id="nShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="1060" height="60" rx="8" fill="url(#navGrad)" filter="url(#nShadow)"/>
+  <text x="550" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">MAPA DE NAVEGACIÓN Y FLUJO DE USUARIO (MOBILE UX FLOW)</text>
+  <text x="550" y="65" text-anchor="middle" fill="#ffe4e6" font-size="12">Pizzería Gourmet Bella Italia Popayán | Arquitectura de Pantallas y Transiciones React Native</text>
+
+  <!-- 1. Splash Screen -->
+  <g transform="translate(60, 120)" filter="url(#nShadow)">
+    <rect width="180" height="90" rx="8" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+    <rect width="180" height="26" rx="8" fill="#e11d48"/>
+    <text x="90" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">1. Splash Screen</text>
+    <text x="90" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Carga de Logo Bella Italia</text>
+    <text x="90" y="66" text-anchor="middle" fill="#64748b" font-size="10">Verificación de sesión JWT</text>
+  </g>
+
+  <!-- Flecha Splash -> Home -->
+  <line x1="240" y1="165" x2="300" y2="165" stroke="#e11d48" stroke-width="2"/>
+  <polygon points="295,160 305,165 295,170" fill="#e11d48"/>
+
+  <!-- 2. Home / Carta Menu -->
+  <g transform="translate(310, 110)" filter="url(#nShadow)">
+    <rect width="220" height="110" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="220" height="26" rx="8" fill="#0284c7"/>
+    <text x="110" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">2. Menú &amp; Catálogo Principal</text>
+    <text x="110" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Filtro por Categorías (Tabs)</text>
+    <text x="110" y="66" text-anchor="middle" fill="#0f172a" font-size="11">Barra de búsqueda en tiempo real</text>
+    <text x="110" y="85" text-anchor="middle" fill="#64748b" font-size="10">Pizzas destacadas y artesanas</text>
+  </g>
+
+  <!-- Flecha Home -> Modal Detalle -->
+  <line x1="530" y1="165" x2="590" y2="165" stroke="#0284c7" stroke-width="2"/>
+  <polygon points="585,160 595,165 585,170" fill="#0284c7"/>
+
+  <!-- 3. Modal Detalle Pizza -->
+  <g transform="translate(600, 110)" filter="url(#nShadow)">
+    <rect width="210" height="110" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="210" height="26" rx="8" fill="#16a34a"/>
+    <text x="105" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">3. Modal Personalización</text>
+    <text x="105" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Tamaño: Personal/Med/Fam</text>
+    <text x="105" y="66" text-anchor="middle" fill="#0f172a" font-size="11">Adiciones e ingredientes</text>
+    <text x="105" y="85" text-anchor="middle" fill="#15803d" font-size="10" font-weight="bold">+ Agregar al Carrito</text>
+  </g>
+
+  <!-- Flecha Modal -> Cart -->
+  <line x1="705" y1="220" x2="705" y2="280" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="700,275 705,285 710,275" fill="#16a34a"/>
+
+  <!-- 4. Carrito de Compras -->
+  <g transform="translate(590, 290)" filter="url(#nShadow)">
+    <rect width="230" height="120" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="230" height="26" rx="8" fill="#16a34a"/>
+    <text x="115" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">4. Carrito de Compras</text>
+    <text x="115" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Lista de productos y cantidades</text>
+    <text x="115" y="66" text-anchor="middle" fill="#d97706" font-size="11" font-weight="bold">Cupón promocional SENA2026</text>
+    <text x="115" y="85" text-anchor="middle" fill="#0f172a" font-size="11">Subtotal + Descuento + Domicilio</text>
+    <text x="115" y="103" text-anchor="middle" fill="#15803d" font-size="10" font-weight="bold">Boton: Ir a Pagar (Checkout)</text>
+  </g>
+
+  <!-- Flecha Carrito -> Checkout -->
+  <line x1="590" y1="350" x2="520" y2="350" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="525,345 515,350 525,355" fill="#16a34a"/>
+
+  <!-- 5. Checkout y Pago -->
+  <g transform="translate(290, 290)" filter="url(#nShadow)">
+    <rect width="220" height="120" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="220" height="26" rx="8" fill="#7c3aed"/>
+    <text x="110" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">5. Checkout &amp; Pasarela</text>
+    <text x="110" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Dirección de entrega Popayán</text>
+    <text x="110" y="66" text-anchor="middle" fill="#0f172a" font-size="11">Teléfono y observaciones</text>
+    <text x="110" y="85" text-anchor="middle" fill="#7c3aed" font-size="11">Nequi / Daviplata / PSE / Efectivo</text>
+    <text x="110" y="103" text-anchor="middle" fill="#6d28d9" font-size="10" font-weight="bold">Boton: Confirmar Pedido</text>
+  </g>
+
+  <!-- Flecha Checkout -> Confirmado / Tracking -->
+  <line x1="400" y1="410" x2="400" y2="470" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="395,465 400,475 405,465" fill="#7c3aed"/>
+
+  <!-- 6. Seguimiento en Vivo (Order Tracking) -->
+  <g transform="translate(280, 480)" filter="url(#nShadow)">
+    <rect width="240" height="140" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="240" height="26" rx="8" fill="#059669"/>
+    <text x="120" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">6. Seguimiento en Vivo (Tracking)</text>
+    <text x="120" y="48" text-anchor="middle" fill="#0f172a" font-size="11" font-weight="bold">Código de Orden: PED-2026-XXXX</text>
+    <text x="120" y="68" text-anchor="middle" fill="#047857" font-size="10">1. RECIBIDO (Confirmado)</text>
+    <text x="120" y="84" text-anchor="middle" fill="#047857" font-size="10">2. EN PREPARACIÓN (Mesa)</text>
+    <text x="120" y="100" text-anchor="middle" fill="#047857" font-size="10">3. EN HORNO (Cocción artesanal)</text>
+    <text x="120" y="116" text-anchor="middle" fill="#047857" font-size="10">4. EN CAMINO (Repartidor)</text>
+    <text x="120" y="130" text-anchor="middle" fill="#047857" font-size="10">5. ENTREGADO (Completado)</text>
+  </g>
+
+  <!-- 7. Perfil y Auth -->
+  <g transform="translate(60, 290)" filter="url(#nShadow)">
+    <rect width="190" height="120" rx="8" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+    <rect width="190" height="26" rx="8" fill="#475569"/>
+    <text x="95" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">7. Perfil / Autenticación</text>
+    <text x="95" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Login / Registro de Cliente</text>
+    <text x="95" y="66" text-anchor="middle" fill="#0f172a" font-size="11">Historial de compras previas</text>
+    <text x="95" y="85" text-anchor="middle" fill="#0f172a" font-size="11">Datos personales y direcciones</text>
+    <text x="95" y="103" text-anchor="middle" fill="#ef4444" font-size="10">Cerrar Sesión</text>
+  </g>
+
+  <!-- Flecha Home -> Perfil -->
+  <line x1="310" y1="180" x2="155" y2="180" stroke="#475569" stroke-width="2"/>
+  <line x1="155" y1="180" x2="155" y2="290" stroke="#475569" stroke-width="2"/>
+  <polygon points="150,285 155,295 160,285" fill="#475569"/>
+
+  <!-- 8. Admin Dashboard -->
+  <g transform="translate(600, 480)" filter="url(#nShadow)">
+    <rect width="220" height="140" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+    <rect width="220" height="26" rx="8" fill="#ea580c"/>
+    <text x="110" y="18" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">8. Panel Administrador</text>
+    <text x="110" y="48" text-anchor="middle" fill="#0f172a" font-size="11">Métricas de Ventas y Pedidos</text>
+    <text x="110" y="68" text-anchor="middle" fill="#0f172a" font-size="11">Gestión de Estados en Cocina</text>
+    <text x="110" y="88" text-anchor="middle" fill="#0f172a" font-size="11">Catálogo de Pizzas CRUD</text>
+    <text x="110" y="108" text-anchor="middle" fill="#0f172a" font-size="11">Auditoría y usuarios</text>
+    <text x="110" y="126" text-anchor="middle" fill="#c2410c" font-size="10" font-weight="bold">Acceso restringido ROL ADMIN</text>
+  </g>
+
+  <!-- Bottom Navigation Bar Legend -->
+  <g transform="translate(60, 670)" filter="url(#nShadow)">
+    <rect width="980" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="30" y="30" fill="#0f172a" font-size="13" font-weight="bold">BARRA DE NAVEGACIÓN INFERIOR (BOTTOM TABS NAVIGATION):</text>
+    <text x="30" y="55" fill="#334155" font-size="11">• <tspan font-weight="bold">Tab 1 (Inicio / Carta):</tspan> Acceso instantáneo a la carta completa de pizzas con categorías dinámicas.</text>
+    <text x="30" y="75" fill="#334155" font-size="11">• <tspan font-weight="bold">Tab 2 (Carrito):</tspan> Badge flotante con contador de ítems agregados y acceso directo al checkout.</text>
+    <text x="30" y="95" fill="#334155" font-size="11">• <tspan font-weight="bold">Tab 3 (Mis Pedidos / Tracking):</tspan> Consulta de órdenes activas y trazabilidad de entrega en Popayán.</text>
+    <text x="30" y="115" fill="#334155" font-size="11">• <tspan font-weight="bold">Tab 4 (Mi Perfil):</tspan> Gestión de cuenta, direcciones registradas y botón de administración (si rol = ADMIN).</text>
+  </g>
+</svg>

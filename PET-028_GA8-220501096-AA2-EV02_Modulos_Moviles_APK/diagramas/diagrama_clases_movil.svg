@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',system-ui,sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="classGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Título Superior -->
+  <rect x="20" y="20" width="1060" height="60" rx="8" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="550" y="45" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">DIAGRAMA DE CLASES - APLICACIÓN MÓVIL REACT NATIVE &amp; ANDROID NATIVO</text>
+  <text x="550" y="65" text-anchor="middle" fill="#bae6fd" font-size="12">Proyecto: Pizzería Gourmet Bella Italia Popayán | SENA ADSO Ficha 228118 | Karen Yuliana Campo</text>
+
+  <!-- 1. Pizza -->
+  <g transform="translate(40, 110)" filter="url(#shadow)">
+    <rect width="230" height="210" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="230" height="36" rx="6" fill="#0284c7"/>
+    <text x="115" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Model&gt;&gt; Pizza</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ codigo : String</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ nombre : String</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ categoria : Categoria</text>
+    <text x="12" y="109" fill="#334155" font-size="11">+ descripcion : String</text>
+    <text x="12" y="127" fill="#334155" font-size="11">+ imagenUrl : String</text>
+    <text x="12" y="145" fill="#334155" font-size="11">+ precios : PreciosTamano</text>
+    <text x="12" y="163" fill="#334155" font-size="11">+ ingredientes : List&lt;String&gt;</text>
+    <line x1="0" y1="172" x2="230" y2="172" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="190" fill="#0369a1" font-size="11">+ getPrecio(tamano) : Double</text>
+  </g>
+
+  <!-- 2. PreciosTamano -->
+  <g transform="translate(300, 110)" filter="url(#shadow)">
+    <rect width="200" height="150" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="200" height="36" rx="6" fill="#0284c7"/>
+    <text x="100" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;ValueObject&gt;&gt; Precios</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ personal : Double</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ mediana : Double</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ familiar : Double</text>
+    <line x1="0" y1="102" x2="200" y2="102" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="122" fill="#0369a1" font-size="11">+ formatearCOP() : String</text>
+    <text x="12" y="139" fill="#0369a1" font-size="11">+ validarPrecios() : Boolean</text>
+  </g>
+
+  <!-- 3. ItemCarrito -->
+  <g transform="translate(530, 110)" filter="url(#shadow)">
+    <rect width="230" height="210" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="230" height="36" rx="6" fill="#16a34a"/>
+    <text x="115" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Model&gt;&gt; ItemCarrito</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ itemUid : String</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ pizza : Pizza</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ tamano : String</text>
+    <text x="12" y="109" fill="#334155" font-size="11">+ precioUnitario : Double</text>
+    <text x="12" y="127" fill="#334155" font-size="11">+ cantidad : Int</text>
+    <text x="12" y="145" fill="#334155" font-size="11">+ adiciones : List&lt;Adicion&gt;</text>
+    <line x1="0" y1="158" x2="230" y2="158" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="177" fill="#15803d" font-size="11">+ calcularSubtotal() : Double</text>
+    <text x="12" y="195" fill="#15803d" font-size="11">+ incrementar() / decrementar()</text>
+  </g>
+
+  <!-- 4. CuponDescuento -->
+  <g transform="translate(790, 110)" filter="url(#shadow)">
+    <rect width="270" height="180" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="270" height="36" rx="6" fill="#d97706"/>
+    <text x="135" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Model&gt;&gt; CuponDescuento</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ codigo : String (ej. SENA2026)</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ porcentaje : Double (15%)</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ maxDescuento : Double</text>
+    <text x="12" y="109" fill="#334155" font-size="11">+ activo : Boolean</text>
+    <text x="12" y="127" fill="#334155" font-size="11">+ expiracion : Date</text>
+    <line x1="0" y1="138" x2="270" y2="138" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="157" fill="#b45309" font-size="11">+ aplicarDescuento(subtotal) : Double</text>
+    <text x="12" y="173" fill="#b45309" font-size="11">+ estaVigente() : Boolean</text>
+  </g>
+
+  <!-- 5. Pedido -->
+  <g transform="translate(40, 350)" filter="url(#shadow)">
+    <rect width="250" height="230" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="250" height="36" rx="6" fill="#7c3aed"/>
+    <text x="125" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Entity&gt;&gt; Pedido</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ numeroPedido : String</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ clienteUsuario : String</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ items : List&lt;ItemCarrito&gt;</text>
+    <text x="12" y="109" fill="#334155" font-size="11">+ subtotal : Double</text>
+    <text x="12" y="127" fill="#334155" font-size="11">+ cuponAplicado : CuponDescuento</text>
+    <text x="12" y="145" fill="#334155" font-size="11">+ costoEnvio : Double (4000 COP)</text>
+    <text x="12" y="163" fill="#334155" font-size="11">+ total : Double</text>
+    <text x="12" y="181" fill="#334155" font-size="11">+ estado : EstadoPedido</text>
+    <line x1="0" y1="192" x2="250" y2="192" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="211" fill="#6d28d9" font-size="11">+ avanzarEstado() : EstadoPedido</text>
+  </g>
+
+  <!-- 6. CartContext / Hook -->
+  <g transform="translate(320, 350)" filter="url(#shadow)">
+    <rect width="270" height="210" rx="6" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="270" height="36" rx="6" fill="#059669"/>
+    <text x="135" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Context / Hook&gt;&gt; CartContext</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ items : List&lt;ItemCarrito&gt;</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ cupon : CuponDescuento</text>
+    <text x="12" y="91" fill="#334155" font-size="11">+ subtotal : Double</text>
+    <text x="12" y="109" fill="#334155" font-size="11">+ descuento : Double</text>
+    <text x="12" y="127" fill="#334155" font-size="11">+ total : Double</text>
+    <line x1="0" y1="138" x2="270" y2="138" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="157" fill="#047857" font-size="11">+ agregarItem(pizza, tamano, adic)</text>
+    <text x="12" y="173" fill="#047857" font-size="11">+ removerItem(itemUid)</text>
+    <text x="12" y="189" fill="#047857" font-size="11">+ aplicarCupon(codigo) : Promise</text>
+    <text x="12" y="203" fill="#047857" font-size="11">+ vaciarCarrito()</text>
+  </g>
+
+  <!-- 7. ApiService -->
+  <g transform="translate(620, 350)" filter="url(#shadow)">
+    <rect width="240" height="210" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="240" height="36" rx="6" fill="#2563eb"/>
+    <text x="120" y="24" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&lt;&lt;Service&gt;&gt; ApiService</text>
+    <text x="12" y="55" fill="#334155" font-size="11">+ baseUrl : String (:8085)</text>
+    <text x="12" y="73" fill="#334155" font-size="11">+ timeout : Int (10000 ms)</text>
+    <line x1="0" y1="84" x2="240" y2="84" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="103" fill="#1d4ed8" font-size="11">+ getPizzas() : Promise&lt;Pizza[]&gt;</text>
+    <text x="12" y="121" fill="#1d4ed8" font-size="11">+ login(user, pass) : Promise&lt;Auth&gt;</text>
+    <text x="12" y="139" fill="#1d4ed8" font-size="11">+ validarCupon(code, subtotal)</text>
+    <text x="12" y="157" fill="#1d4ed8" font-size="11">+ crearPedido(data, token)</text>
+    <text x="12" y="175" fill="#1d4ed8" font-size="11">+ procesarPago(pagoData)</text>
+    <text x="12" y="193" fill="#1d4ed8" font-size="11">+ getTracking(numeroPedido)</text>
+  </g>
+
+  <!-- 8. Android Native Classes -->
+  <g transform="translate(880, 350)" filter="url(#shadow)">
+    <rect width="180" height="210" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+    <rect width="180" height="36" rx="6" fill="#475569"/>
+    <text x="90" y="24" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">&lt;&lt;Java Nativo&gt;&gt;</text>
+    <text x="12" y="55" fill="#0f172a" font-size="11" font-weight="bold">MainActivity</text>
+    <text x="12" y="71" fill="#475569" font-size="10">+ onCreate(Bundle)</text>
+    <text x="12" y="86" fill="#475569" font-size="10">+ initViews()</text>
+    <line x1="0" y1="96" x2="180" y2="96" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="113" fill="#0f172a" font-size="11" font-weight="bold">PizzaAdapter</text>
+    <text x="12" y="129" fill="#475569" font-size="10">+ onCreateViewHolder()</text>
+    <text x="12" y="144" fill="#475569" font-size="10">+ onBindViewHolder()</text>
+    <line x1="0" y1="154" x2="180" y2="154" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="12" y="171" fill="#0f172a" font-size="11" font-weight="bold">Pizza (POO)</text>
+    <text x="12" y="187" fill="#475569" font-size="10">+ nombre, precioBase</text>
+    <text x="12" y="201" fill="#475569" font-size="10">+ getFormatedPrice()</text>
+  </g>
+
+  <!-- Relaciones / Flechas -->
+  <!-- Pizza to Precios -->
+  <line x1="270" y1="160" x2="300" y2="160" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Pizza to ItemCarrito -->
+  <line x1="270" y1="210" x2="530" y2="210" stroke="#16a34a" stroke-width="2" stroke-dasharray="4"/>
+  <!-- Cupon to ItemCarrito -->
+  <line x1="790" y1="190" x2="760" y2="190" stroke="#d97706" stroke-width="2"/>
+  <!-- ItemCarrito to Pedido -->
+  <line x1="645" y1="320" x2="645" y2="340" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="645" y1="340" x2="165" y2="340" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="165" y1="340" x2="165" y2="350" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- Footer / Leyenda -->
+  <rect x="40" y="600" width="1020" height="220" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="60" y="630" fill="#0f172a" font-size="14" font-weight="bold">PATRONES DE DISEÑO Y PRINCIPIOS DE ARQUITECTURA MÓVIL</text>
+  <text x="60" y="655" fill="#334155" font-size="12">• <tspan font-weight="bold">Single Responsibility Principle (SRP):</tspan> Cada componente (PizzaCard, CartDrawer, ApiService) tiene una única responsabilidad aislada.</text>
+  <text x="60" y="680" fill="#334155" font-size="12">• <tspan font-weight="bold">Observer &amp; Context Pattern (React):</tspan> CartContext y AuthContext distribuyen el estado reactivo hacia las pantallas sin prop-drilling.</text>
+  <text x="60" y="705" fill="#334155" font-size="12">• <tspan font-weight="bold">Repository &amp; Gateway Pattern:</tspan> ApiService encapsula los endpoints RESTful de Go Fiber desacoplando la interfaz de los detalles de red.</text>
+  <text x="60" y="730" fill="#334155" font-size="12">• <tspan font-weight="bold">Dualidad Tecnológica:</tspan> React Native implementa la lógica completa del negocio (Hermes C++ Engine) y Java Nativo implementa RecyclerView POO.</text>
+  <text x="60" y="755" fill="#334155" font-size="12">• <tspan font-weight="bold">Persistencia Segura:</tspan> Almacenamiento local mediante AsyncStorage y JWT en cabeceras Bearer para transacciones seguras.</text>
+  <text x="60" y="780" fill="#0369a1" font-size="12" font-weight="bold">Compatibilidad: Android 14+ (API Level 34) | Compilado en entorno aislado Docker OpenJDK 17 + Gradle 8.5/9.4.1</text>
+</svg>

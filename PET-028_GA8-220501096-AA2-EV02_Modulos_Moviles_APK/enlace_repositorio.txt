@@ -1,0 +1,54 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA2-EV02
+TITULO: APK (desarrollar módulos móviles según requerimientos del proyecto)
+        (Despliegue y Validación de Aplicaciones Móviles Android 14+ Nativa y React Native)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-028_GA8-220501096-AA2-EV02_Modulos_Moviles_APK
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y MÓDULOS MÓVILES DESARROLLADOS:
+Esta evidencia constituye la entrega formal del software móvil completamente funcional,
+cumpliendo con la totalidad de los lineamientos de la Guía de Aprendizaje 8:
+
+1. REQUERIMIENTOS DEL SISTEMA IMPLEMENTADOS (RF-01 A RF-15):
+   - Módulo de Catálogo y Carta Digital de Pizzas Gourmet y Postres.
+   - Selector dinámico de tamaños (Personal, Mediana, Familiar) y cálculo de precios.
+   - Personalización de ingredientes y adiciones especiales.
+   - Carrito de compras interactivo con persistencia local en dispositivo.
+   - Motor de validación de cupones de descuento (Cupón SENA2026 -15%).
+   - Checkout móvil con captura de dirección de entrega en Popayán.
+   - Pasarela de medios de pago móviles (Nequi, Daviplata, PSE, Tarjeta, Efectivo).
+   - Trazabilidad y seguimiento de pedidos en tiempo real con línea de tiempo (Tracking).
+   - Perfil de usuario cliente con autenticación Bearer JWT.
+   - Panel de control y métricas del administrador móvil.
+
+2. APLICACIONES MÓVILES GENERADAS Y COMPILADAS:
+   - pizzeria-bella-italia-rn.apk: Aplicación móvil completa del proyecto formativo
+     en React Native con motor Hermes, arquitectura por componentes y bundle JS embebido (Release standalone).
+   - pizzeria-bella-italia-nativa.apk: Aplicación móvil nativa en Java POO para Android 14+
+     (API 34) implementando RecyclerView, CardView y ciclo de vida de actividades.
+
+3. ARQUITECTURA Y MODELADO UML 2.5:
+   - Diagrama de clases de la solución móvil.
+   - Diagrama de paquetes por capas (Presentación, Lógica, Datos, Configuración).
+   - Diagrama de componentes y capas de integración.
+   - Mapa de navegación móvil (Navigation User Flowchart).
+
+4. AMBIENTE DE CONSTRUCCIÓN Y OBSERVACIÓN INSTITUCIONAL:
+   - Compilación automatizada en contenedor aislado Docker (pizzeria-android-builder:34)
+     con OpenJDK 17, Gradle 8.5/9.4.1 y Android SDK CLI (API 34/36).
+   - Por optimización de hardware y ahorro de espacio, se prescindió de Android Studio
+     en la máquina anfitriona, empleando Visual Studio Code y Docker CLI.
+================================================================================

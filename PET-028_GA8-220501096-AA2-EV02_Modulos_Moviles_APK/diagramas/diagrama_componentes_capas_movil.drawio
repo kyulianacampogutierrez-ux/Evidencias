@@ -1,0 +1,16 @@
+<mxfile host="app.diagrams.net" modified="2026-11-11T21:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram id="componentes-03" name="Diagrama Componentes Móvil">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="DIAGRAMA DE COMPONENTES POR CAPAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;fontColor=#ffffff;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1060" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Capas: 1. Presentación UI, 2. Lógica de Negocio y Estado, 3. Servicios HTTP y Persistencia, 4. Backend RESTful Go Fiber y MongoDB." style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;fillColor=#f8fafc;strokeColor=#cbd5e1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="1020" height="700" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
