@@ -1,0 +1,64 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220601501-AA3-EV01
+TITULO: Mapa mental respecto a los planes y acciones establecidos en el medio
+        ambiente y SST.
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 3186681
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-033_GA8-220601501-AA3-EV01_Mapa_Mental_Planes_Acciones_SST_Ambiental
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y METODOLOGÍA DEL MAPA MENTAL:
+Esta evidencia da cumplimiento formal y técnico a la Guía de Aprendizaje 8 en la
+competencia 220601501, siguiendo fielmente los lineamientos pedagógicos del anexo
+"Guia-para-hacer-mapa-mental.docx" y los principios teóricos de Tony Buzan:
+
+1. ESTRUCTURA CENTRAL (NODO IMPACTANTE):
+   - Tema Central: "PLANES Y ACCIONES: MEDIO AMBIENTE Y SST".
+   - Integración sinérgica entre el Sistema de Gestión de la Seguridad y Salud en
+     el Trabajo (SG-SST - Decreto 1072 de 2015) y los Planes Institucionales de
+     Gestión Ambiental (PIGA / ISO 14001 / Decreto 1076 de 2015).
+
+2. CUATRO RAMAS PRINCIPALES EN EL SENTIDO DE LAS AGUJAS DEL RELOJ (CLOCKWISE):
+   - Rama 1 (Verde Esmeralda): PLANES AMBIENTALES (PIGA & ISO 14001)
+     * Uso eficiente de energía y agua.
+     * Gestión integral de residuos (Código de colores Resolución 2184 de 2019).
+     * Gestión segura de residuos peligrosos (RESPEL Decreto 1076 de 2015).
+     * Huella de carbono y compensación ambiental.
+   - Rama 2 (Cian / Turquesa): ACCIONES DE CULTURA AMBIENTAL Y ECONOMÍA CIRCULAR
+     * Compras sostenibles y criterios de eco-etiquetado.
+     * Compostaje comunitario y valorización de orgánicos en Popayán/Timbío.
+     * Recolección certificada de Aceites de Cocina Usados (ACU) para biodiésel.
+     * Estrategia de cero papel y digitalización operativa.
+   - Rama 3 (Azul Real): PLANES DEL SISTEMA DE GESTIÓN SST (SG-SST)
+     * Plan de Trabajo Anual de SST (Resolución 0312 de 2019).
+     * Plan Anual de Capacitación, Inducción y Entrenamiento.
+     * Plan de Prevención, Preparación y Respuesta ante Emergencias.
+     * Programas de Vigilancia Epidemiológica (PVE visual, biomecánico y psicosocial).
+   - Rama 4 (Ámbar / Naranja): ACCIONES DE PREVENCIÓN Y CONTROL EN SST
+     * Jerarquía de Controles (Eliminación, Sustitución, Ingeniería, Administrativo, EPP).
+     * Comités Paritarios (COPASST y Comité de Convivencia Laboral).
+     * Ergonomía física en puestos de desarrollo de software y manipulación de cargas.
+     * Hábitos de autocuidado, pausas activas laborales y salud visual.
+
+3. DATOS DE IDENTIFICACIÓN:
+   - Ubicados de manera visible en la esquina inferior derecha del mapa mental,
+     conforme lo exige el lineamiento del anexo oficial del SENA.
+
+4. ENTREGABLES DISPONIBLES:
+   - GA8-220601501-AA3-EV01_Mapa_Mental_1_Hoja.pdf (Extensión exacta de 1 hoja horizontal).
+   - GA8-220601501-AA3-EV01_Mapa_Mental_Planes_Acciones.pdf (Informe técnico extendido con mapa integrado).
+   - GA8-220601501-AA3-EV01_Mapa_Mental_Planes_Acciones.docx (Formato editable Microsoft Word).
+   - Diagrama vectorial SVG y render PNG en alta definición (2400x1350 px).
+   - Paquete comprimido normativo KARENCAMPO_AA3_EV01.zip.
+================================================================================

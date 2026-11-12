@@ -1,0 +1,431 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1400" width="2400" height="1400" style="background:#f8fafc; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradientes de Fondo y Nodos -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Gradientes de Ramas Principales -->
+    <!-- Rama 1: Verde Esmeralda (Planes Ambientales) -->
+    <linearGradient id="gEnvPlan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <!-- Rama 2: Cian / Turquesa (Acciones Ambientales) -->
+    <linearGradient id="gEnvAct" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Rama 3: Azul Real (Planes SG-SST) -->
+    <linearGradient id="gSSTPlan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Rama 4: Ámbar / Naranja (Acciones Prevención SST) -->
+    <linearGradient id="gSSTAct" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Sombras y Filtros -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-opacity="0.12"/>
+    </filter>
+    <filter id="centerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- FONDO CON BORDE DECORATIVO INSTITUCIONAL -->
+  <rect x="0" y="0" width="2400" height="1400" fill="url(#bgGrad)"/>
+  <rect x="25" y="25" width="2350" height="1350" rx="20" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="35" y="35" width="2330" height="1330" rx="16" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- BARRA SUPERIOR INSTITUCIONAL -->
+  <g id="headerBar">
+    <rect x="50" y="50" width="2300" height="65" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#dropShadow)"/>
+    <text x="80" y="90" font-size="20" font-weight="800" fill="#065f46" letter-spacing="1">SENA • CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) — REGIONAL CAUCA</text>
+    <text x="80" y="106" font-size="12" font-weight="600" fill="#64748b">PROGRAMA ADSO • FICHA 3186681 | MAPA MENTAL: PLANES Y ACCIONES EN MEDIO AMBIENTE Y SST (GA8-220601501-AA3-EV01)</text>
+    <rect x="2060" y="62" width="260" height="40" rx="8" fill="#059669"/>
+    <text x="2190" y="87" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">METODOLOGÍA TONY BUZAN</text>
+  </g>
+
+  <!-- NUBES DE AGRUPACIÓN (BUZAN: Nubes que concentran o destacan ideas) -->
+  <!-- Nube Rama 1: Planes Ambientales -->
+  <path d="M 1270 140 C 1350 120, 1600 120, 1750 130 C 1950 140, 2220 180, 2280 280 C 2320 380, 2300 480, 2220 540 C 2050 600, 1850 580, 1650 560 C 1450 540, 1300 520, 1260 480 Z" fill="#ecfdf5" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="2020" y="155" font-size="13" font-weight="bold" fill="#047857" letter-spacing="0.5">ZONA 1: PLANES AMBIENTALES (PIGA)</text>
+
+  <!-- Nube Rama 2: Acciones Ambientales -->
+  <path d="M 1280 920 C 1420 890, 1700 870, 1920 890 C 2150 910, 2300 980, 2310 1080 C 2310 1180, 2150 1250, 1900 1260 C 1680 1270, 1450 1240, 1320 1200 C 1240 1140, 1250 1000, 1280 920 Z" fill="#ecfeff" fill-opacity="0.5" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="2040" y="905" font-size="13" font-weight="bold" fill="#0e7490" letter-spacing="0.5">ZONA 2: ACCIONES Y ECONOMÍA CIRCULAR</text>
+
+  <!-- Nube Rama 3: Planes SG-SST -->
+  <path d="M 1120 920 C 980 890, 700 870, 480 890 C 250 910, 100 980, 90 1080 C 90 1180, 250 1250, 500 1260 C 720 1270, 950 1240, 1080 1200 C 1160 1140, 1150 1000, 1120 920 Z" fill="#eff6ff" fill-opacity="0.5" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="200" y="905" font-size="13" font-weight="bold" fill="#1d4ed8" letter-spacing="0.5">ZONA 3: PLANES DEL SG-SST (DEC. 1072)</text>
+
+  <!-- Nube Rama 4: Acciones SST -->
+  <path d="M 1130 140 C 1050 120, 800 120, 650 130 C 450 140, 180 180, 120 280 C 80 380, 100 480, 180 540 C 350 600, 550 580, 750 560 C 950 540, 1100 520, 1140 480 Z" fill="#fffbeb" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="180" y="155" font-size="13" font-weight="bold" fill="#b45309" letter-spacing="0.5">ZONA 4: ACCIONES Y CONTROL SST</text>
+
+  <!-- ========================================================================= -->
+  <!-- RAMAS PRINCIPALES Y LÍNEAS CURVAS CONECTORAS (BUZAN: Curvas orgánicas gruesas) -->
+  <!-- ========================================================================= -->
+
+  <!-- CONECTORES RAMA 1 (Verde - Noreste) -->
+  <path d="M 1320 660 Q 1480 560 1680 370" fill="none" stroke="#059669" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 1680 370 Q 1780 300 1900 240" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 370 Q 1820 340 1960 320" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 370 Q 1820 420 1960 410" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 370 Q 1780 470 1900 500" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sub-ramas terminales Rama 1 -->
+  <path d="M 1900 240 L 2020 200" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1900 240 L 2020 240" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 320 L 2080 300" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 320 L 2080 340" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 410 L 2080 390" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 410 L 2080 430" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1900 500 L 2020 480" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1900 500 L 2020 520" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- CONECTORES RAMA 2 (Cian - Sureste) -->
+  <path d="M 1320 740 Q 1480 840 1680 1010" fill="none" stroke="#0891b2" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 1680 1010 Q 1780 950 1900 930" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 1010 Q 1820 1010 1960 1010" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 1010 Q 1820 1080 1960 1100" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 1680 1010 Q 1760 1150 1860 1190" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sub-ramas terminales Rama 2 -->
+  <path d="M 1900 930 L 2020 910" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1900 930 L 2020 950" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 1010 L 2080 990" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 1010 L 2080 1030" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 1100 L 2080 1080" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 1960 1100 L 2080 1120" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- CONECTORES RAMA 3 (Azul - Suroeste) -->
+  <path d="M 1080 740 Q 920 840 720 1010" fill="none" stroke="#1d4ed8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 720 1010 Q 620 950 500 930" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 1010 Q 580 1010 440 1010" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 1010 Q 580 1080 440 1100" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 1010 Q 620 1150 500 1190" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sub-ramas terminales Rama 3 -->
+  <path d="M 500 930 L 380 910" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 930 L 380 950" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 1010 L 320 990" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 1010 L 320 1030" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 1100 L 320 1080" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 1100 L 320 1120" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 1190 L 380 1170" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 1190 L 380 1210" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- CONECTORES RAMA 4 (Ámbar - Noroeste) -->
+  <path d="M 1080 660 Q 920 560 720 370" fill="none" stroke="#d97706" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 720 370 Q 620 300 500 240" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 370 Q 580 340 440 320" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 370 Q 580 420 440 410" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 720 370 Q 620 470 500 500" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sub-ramas terminales Rama 4 -->
+  <path d="M 500 240 L 380 200" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 240 L 380 240" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 320 L 320 300" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 320 L 320 340" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 410 L 320 390" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 440 410 L 320 430" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 500 L 380 480" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 500 500 L 380 520" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ========================================================================= -->
+  <!-- NODO CENTRAL (TEMA PROTAGÓNICO DE ALTO IMPACTO)                          -->
+  <!-- ========================================================================= -->
+  <g id="centralNode" filter="url(#centerGlow)">
+    <!-- Anillo exterior radiante -->
+    <circle cx="1200" cy="700" r="145" fill="none" stroke="#10b981" stroke-width="6" opacity="0.4"/>
+    <circle cx="1200" cy="700" r="135" fill="none" stroke="#3b82f6" stroke-width="4" opacity="0.6"/>
+    <circle cx="1200" cy="700" r="125" fill="url(#centerGrad)" stroke="#ffffff" stroke-width="5" filter="url(#dropShadow)"/>
+
+    <!-- Icono Fusión: Planeta Tierra + Escudo + Hoja Ecológica -->
+    <circle cx="1200" cy="640" r="32" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <!-- Escudo / Cruz Médica -->
+    <path d="M 1195 628 L 1205 628 L 1205 635 L 1212 635 L 1212 645 L 1205 645 L 1205 652 L 1195 652 L 1195 645 L 1188 645 L 1188 635 L 1195 635 Z" fill="#ffffff"/>
+    <!-- Hoja Viva Verde -->
+    <path d="M 1200 622 C 1215 615, 1228 625, 1225 640 C 1222 650, 1205 646, 1200 622 Z" fill="#10b981"/>
+
+    <!-- Textos Centrales -->
+    <text x="1200" y="690" font-size="19" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">PLANES Y ACCIONES</text>
+    <text x="1200" y="715" font-size="16" font-weight="800" fill="#34d399" text-anchor="middle" letter-spacing="1.5">MEDIO AMBIENTE Y SST</text>
+    <line x1="1110" y1="728" x2="1290" y2="728" stroke="#38bdf8" stroke-width="2"/>
+    <text x="1200" y="746" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">SISTEMA INTEGRADO DE GESTIÓN</text>
+    <text x="1200" y="764" font-size="10.5" font-weight="600" fill="#94a3b8" text-anchor="middle">Dec. 1072/2015 • Dec. 1076/2015 • GTC 45</text>
+    <text x="1200" y="780" font-size="9.5" font-weight="bold" fill="#f59e0b" text-anchor="middle">↻ SENTIDO HORARIO (BUZAN)</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RAMA 1 (NORESTE - VERDE): PLANES AMBIENTALES (PIGA & ISO 14001)           -->
+  <!-- ========================================================================= -->
+  <!-- Nodo Principal Rama 1 -->
+  <g id="node_R1" filter="url(#dropShadow)">
+    <rect x="1500" y="335" width="340" height="60" rx="30" fill="url(#gEnvPlan)" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="1535" cy="365" r="20" fill="#ffffff"/>
+    <text x="1535" y="372" font-size="20" text-anchor="middle">🌱</text>
+    <text x="1695" y="360" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">PLANES AMBIENTALES</text>
+    <text x="1695" y="378" font-size="11" font-weight="600" fill="#d1fae5" text-anchor="middle">PIGA • ISO 14001 • Dec. 1076/2015</text>
+  </g>
+
+  <!-- Sub-Rama 1.1: Uso Eficiente de Recursos -->
+  <g id="sub_R1_1">
+    <rect x="1800" y="215" width="200" height="38" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1820" y="238" font-size="12" font-weight="bold" fill="#047857">⚡ 1. Uso Eficiente Recursos</text>
+    <!-- Terminales -->
+    <rect x="2020" y="180" width="230" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2035" y="200" font-size="10.5" font-weight="600" fill="#14532d">Ahorro Energía: LED &amp; Sensores PIR</text>
+    <rect x="2020" y="222" width="230" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2035" y="242" font-size="10.5" font-weight="600" fill="#14532d">Ahorro Agua: Válvulas y Flujómetros</text>
+  </g>
+
+  <!-- Sub-Rama 1.2: Gestión Integral de Residuos -->
+  <g id="sub_R1_2">
+    <rect x="1830" y="295" width="230" height="38" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1845" y="318" font-size="12" font-weight="bold" fill="#047857">♻️ 2. Residuos Sólidos (Res. 2184)</text>
+    <!-- Terminales -->
+    <rect x="2080" y="280" width="235" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2095" y="300" font-size="10.5" font-weight="600" fill="#14532d">⚪ Blanco: Reciclables (Cartón, Vidrio)</text>
+    <rect x="2080" y="322" width="235" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2095" y="342" font-size="10.5" font-weight="600" fill="#14532d">🟢 Verde: Orgánicos | ⚫ Negro: Ordinario</text>
+  </g>
+
+  <!-- Sub-Rama 1.3: Gestión RESPEL -->
+  <g id="sub_R1_3">
+    <rect x="1830" y="385" width="230" height="38" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1845" y="408" font-size="12" font-weight="bold" fill="#047857">☣️ 3. Manejo RESPEL (Dec. 1076)</text>
+    <!-- Terminales -->
+    <rect x="2080" y="370" width="235" height="32" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+    <text x="2095" y="390" font-size="10.5" font-weight="600" fill="#991b1b">Luminarias Mercurio &amp; Baterías RAEE</text>
+    <rect x="2080" y="412" width="235" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2095" y="432" font-size="10.5" font-weight="600" fill="#14532d">Entrega Certificada Gestor Posconsumo</text>
+  </g>
+
+  <!-- Sub-Rama 1.4: Huella de Carbono -->
+  <g id="sub_R1_4">
+    <rect x="1800" y="475" width="210" height="38" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1815" y="498" font-size="12" font-weight="bold" fill="#047857">🌍 4. Huella CO2 &amp; Mitigación</text>
+    <!-- Terminales -->
+    <rect x="2020" y="460" width="235" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2035" y="480" font-size="10.5" font-weight="600" fill="#14532d">Movilidad Sostenible y Teletrabajo</text>
+    <rect x="2020" y="502" width="235" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="2035" y="522" font-size="10.5" font-weight="600" fill="#14532d">Siembra Árboles Nativos en Popayán</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RAMA 2 (SURESTE - CIAN): ACCIONES DE CULTURA AMBIENTAL & CIRCULARIDAD      -->
+  <!-- ========================================================================= -->
+  <!-- Nodo Principal Rama 2 -->
+  <g id="node_R2" filter="url(#dropShadow)">
+    <rect x="1500" y="975" width="350" height="60" rx="30" fill="url(#gEnvAct)" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="1535" cy="1005" r="20" fill="#ffffff"/>
+    <text x="1535" y="1012" font-size="20" text-anchor="middle">🔄</text>
+    <text x="1700" y="1000" font-size="15.5" font-weight="bold" fill="#ffffff" text-anchor="middle">ACCIONES AMBIENTALES</text>
+    <text x="1700" y="1018" font-size="11" font-weight="600" fill="#cffafe" text-anchor="middle">Economía Circular • Cultura • Sostenibilidad</text>
+  </g>
+
+  <!-- Sub-Rama 2.1: Compras Verdes Sostenibles -->
+  <g id="sub_R2_1">
+    <rect x="1800" y="905" width="210" height="38" rx="8" fill="#ffffff" stroke="#06b6d4" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1815" y="928" font-size="12" font-weight="bold" fill="#0e7490">🛒 1. Compras Sostenibles</text>
+    <!-- Terminales -->
+    <rect x="2020" y="890" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2035" y="910" font-size="10.5" font-weight="600" fill="#164e63">Empaques Biodegradables y Bagazo</text>
+    <rect x="2020" y="932" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2035" y="952" font-size="10.5" font-weight="600" fill="#164e63">Proveedores Agroecológicos de Popayán</text>
+  </g>
+
+  <!-- Sub-Rama 2.2: Compostaje Comunitario -->
+  <g id="sub_R2_2">
+    <rect x="1830" y="985" width="230" height="38" rx="8" fill="#ffffff" stroke="#06b6d4" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1845" y="1008" font-size="12" font-weight="bold" fill="#0e7490">🍂 2. Compostaje &amp; Circularidad</text>
+    <!-- Terminales -->
+    <rect x="2080" y="970" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2095" y="990" font-size="10.5" font-weight="600" fill="#164e63">Residuos de Masa/Tomate a Compost</text>
+    <rect x="2080" y="1012" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2095" y="1032" font-size="10.5" font-weight="600" fill="#164e63">Alianza con Fincas Agrícolas de Timbío</text>
+  </g>
+
+  <!-- Sub-Rama 2.3: Recuperación Aceites Usados ACU -->
+  <g id="sub_R2_3">
+    <rect x="1830" y="1075" width="230" height="38" rx="8" fill="#ffffff" stroke="#06b6d4" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="1845" y="1098" font-size="12" font-weight="bold" fill="#0e7490">🛢️ 3. Reciclaje Aceites (ACU)</text>
+    <!-- Terminales -->
+    <rect x="2080" y="1060" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2095" y="1080" font-size="10.5" font-weight="600" fill="#164e63">Acopio en Bidones Herméticos</text>
+    <rect x="2080" y="1102" width="235" height="32" rx="6" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+    <text x="2095" y="1122" font-size="10.5" font-weight="600" fill="#164e63">Transformación a Biodiésel Renovable</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RAMA 3 (SUROESTE - AZUL): PLANES DEL SISTEMA SG-SST (DEC. 1072 / 2015)     -->
+  <!-- ========================================================================= -->
+  <!-- Nodo Principal Rama 3 -->
+  <g id="node_R3" filter="url(#dropShadow)">
+    <rect x="550" y="975" width="340" height="60" rx="30" fill="url(#gSSTPlan)" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="585" cy="1005" r="20" fill="#ffffff"/>
+    <text x="585" y="1012" font-size="20" text-anchor="middle">📋</text>
+    <text x="745" y="1000" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">PLANES DEL SG-SST</text>
+    <text x="745" y="1018" font-size="11" font-weight="600" fill="#bfdbfe" text-anchor="middle">Dec. 1072/2015 • Res. 0312/2019</text>
+  </g>
+
+  <!-- Sub-Rama 3.1: Plan de Trabajo Anual -->
+  <g id="sub_R3_1">
+    <rect x="360" y="905" width="220" height="38" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="375" y="928" font-size="12" font-weight="bold" fill="#1d4ed8">📅 1. Plan Anual de Trabajo</text>
+    <!-- Terminales -->
+    <rect x="100" y="890" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="115" y="910" font-size="10.5" font-weight="600" fill="#1e3a8a">Objetivos y Presupuesto Gerencial</text>
+    <rect x="100" y="932" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="115" y="952" font-size="10.5" font-weight="600" fill="#1e3a8a">Cumplimiento Estándares Res. 0312</text>
+  </g>
+
+  <!-- Sub-Rama 3.2: Plan de Capacitación -->
+  <g id="sub_R3_2">
+    <rect x="340" y="985" width="230" height="38" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="355" y="1008" font-size="12" font-weight="bold" fill="#1d4ed8">🎓 2. Plan de Capacitación</text>
+    <!-- Terminales -->
+    <rect x="80" y="970" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="95" y="990" font-size="10.5" font-weight="600" fill="#1e3a8a">Inducción y Reinducción en Seguridad</text>
+    <rect x="80" y="1012" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="95" y="1032" font-size="10.5" font-weight="600" fill="#1e3a8a">Formación de Brigadas y Primeros Auxilios</text>
+  </g>
+
+  <!-- Sub-Rama 3.3: Plan de Emergencias -->
+  <g id="sub_R3_3">
+    <rect x="340" y="1075" width="230" height="38" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="355" y="1098" font-size="12" font-weight="bold" fill="#1d4ed8">🚨 3. Plan de Emergencias</text>
+    <!-- Terminales -->
+    <rect x="80" y="1060" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="95" y="1080" font-size="10.5" font-weight="600" fill="#1e3a8a">Rutas Evacuación NTC 1461 &amp; Extintores</text>
+    <rect x="80" y="1102" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="95" y="1122" font-size="10.5" font-weight="600" fill="#1e3a8a">Simulacros Anuales de Evacuación</text>
+  </g>
+
+  <!-- Sub-Rama 3.4: Vigilancia Epidemiológica -->
+  <g id="sub_R3_4">
+    <rect x="360" y="1165" width="230" height="38" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="375" y="1188" font-size="12" font-weight="bold" fill="#1d4ed8">🩺 4. Vigilancia Médica (PVE)</text>
+    <!-- Terminales -->
+    <rect x="100" y="1150" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="115" y="1170" font-size="10.5" font-weight="600" fill="#1e3a8a">PVE Visual (Pantallas y Astenopia)</text>
+    <rect x="100" y="1192" width="245" height="32" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="115" y="1212" font-size="10.5" font-weight="600" fill="#1e3a8a">PVE Biomecánico (Túnel Carpiano)</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RAMA 4 (NOROESTE - ÁMBAR): ACCIONES DE PREVENCIÓN Y CONTROL SST           -->
+  <!-- ========================================================================= -->
+  <!-- Nodo Principal Rama 4 -->
+  <g id="node_R4" filter="url(#dropShadow)">
+    <rect x="550" y="335" width="340" height="60" rx="30" fill="url(#gSSTAct)" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="585" cy="365" r="20" fill="#ffffff"/>
+    <text x="585" y="372" font-size="20" text-anchor="middle">🛡️</text>
+    <text x="745" y="360" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">ACCIONES EN SST</text>
+    <text x="745" y="378" font-size="11" font-weight="600" fill="#fef3c7" text-anchor="middle">Jerarquía Controles • COPASST • Ergonomía</text>
+  </g>
+
+  <!-- Sub-Rama 4.1: Jerarquía de Controles GTC 45 -->
+  <g id="sub_R4_1">
+    <rect x="360" y="215" width="220" height="38" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="375" y="238" font-size="12" font-weight="bold" fill="#b45309">⚖️ 1. Jerarquía Controles</text>
+    <!-- Terminales -->
+    <rect x="100" y="180" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="115" y="200" font-size="10.5" font-weight="600" fill="#78350f">Ingeniería: 300 Lux &amp; Pasamanos Doble</text>
+    <rect x="100" y="222" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="115" y="242" font-size="10.5" font-weight="600" fill="#78350f">Administrativos: PTS y Dotación EPP</text>
+  </g>
+
+  <!-- Sub-Rama 4.2: Comités Paritarios -->
+  <g id="sub_R4_2">
+    <rect x="340" y="295" width="230" height="38" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="355" y="318" font-size="12" font-weight="bold" fill="#b45309">👥 2. Participación COPASST</text>
+    <!-- Terminales -->
+    <rect x="80" y="280" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="95" y="300" font-size="10.5" font-weight="600" fill="#78350f">Inspecciones Planeadas Mensuales</text>
+    <rect x="80" y="322" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="95" y="342" font-size="10.5" font-weight="600" fill="#78350f">Investigación Oportuna de Incidentes</text>
+  </g>
+
+  <!-- Sub-Rama 4.3: Ergonomía de Puestos -->
+  <g id="sub_R4_3">
+    <rect x="340" y="385" width="230" height="38" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="355" y="408" font-size="12" font-weight="bold" fill="#b45309">🪑 3. Ergonomía en Puesto</text>
+    <!-- Terminales -->
+    <rect x="80" y="370" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="95" y="390" font-size="10.5" font-weight="600" fill="#78350f">Silla Ergonómica Lumbar &amp; Pantalla Nivel</text>
+    <rect x="80" y="412" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="95" y="432" font-size="10.5" font-weight="600" fill="#78350f">Manejo Seguro Cargas (&lt;25kg H / 12.5kg M)</text>
+  </g>
+
+  <!-- Sub-Rama 4.4: Autocuidado y Pausas Activas -->
+  <g id="sub_R4_4">
+    <rect x="360" y="475" width="220" height="38" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" filter="url(#dropShadow)"/>
+    <text x="375" y="498" font-size="12" font-weight="bold" fill="#b45309">🧘 4. Pausas &amp; Autocuidado</text>
+    <!-- Terminales -->
+    <rect x="100" y="460" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="115" y="480" font-size="10.5" font-weight="600" fill="#78350f">Pausas Activas Cada 2 Horas (PET-008)</text>
+    <rect x="100" y="502" width="245" height="32" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="115" y="522" font-size="10.5" font-weight="600" fill="#78350f">Calzado Antideslizante Suela SRC</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RECUADRO DE DATOS PERSONALES DEL APRENDIZ (PARTE INFERIOR DERECHA)        -->
+  <!-- EXIGENCIA EXPRESA DE LA GUÍA SENA: "En la parte inferior derecha,         -->
+  <!-- debe colocar sus datos personales."                                       -->
+  <!-- ========================================================================= -->
+  <g id="studentInfoBadge" filter="url(#dropShadow)">
+    <rect x="1870" y="1165" width="480" height="185" rx="14" fill="#ffffff" stroke="#059669" stroke-width="2.5"/>
+    <rect x="1870" y="1165" width="480" height="36" rx="14" fill="#065f46"/>
+    <rect x="1870" y="1185" width="480" height="16" fill="#065f46"/>
+    <text x="2110" y="1189" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">DATOS DE IDENTIFICACIÓN DEL APRENDIZ</text>
+
+    <!-- Filas de Información -->
+    <text x="1890" y="1225" font-size="12" font-weight="bold" fill="#0f172a">APRENDIZ:</text>
+    <text x="1980" y="1225" font-size="12" font-weight="800" fill="#065f46">Karen Yuliana Campo</text>
+
+    <text x="1890" y="1248" font-size="12" font-weight="bold" fill="#0f172a">PROGRAMA:</text>
+    <text x="1980" y="1248" font-size="12" font-weight="600" fill="#334155">Tecnología en Análisis y Desarrollo de Software (ADSO)</text>
+
+    <text x="1890" y="1271" font-size="12" font-weight="bold" fill="#0f172a">FICHA:</text>
+    <text x="1980" y="1271" font-size="12" font-weight="800" fill="#059669">3186681</text>
+    <text x="2070" y="1271" font-size="12" font-weight="bold" fill="#0f172a">MODALIDAD:</text>
+    <text x="2170" y="1271" font-size="12" font-weight="600" fill="#334155">100% Virtual</text>
+
+    <text x="1890" y="1294" font-size="12" font-weight="bold" fill="#0f172a">CENTRO:</text>
+    <text x="1980" y="1294" font-size="11.5" font-weight="600" fill="#334155">CTPI Popayán — Regional Cauca</text>
+
+    <text x="1890" y="1317" font-size="12" font-weight="bold" fill="#0f172a">EVIDENCIA:</text>
+    <text x="1980" y="1317" font-size="11.5" font-weight="700" fill="#1d4ed8">GA8-220601501-AA3-EV01 (Mapa Mental)</text>
+
+    <text x="1890" y="1339" font-size="11.5" font-weight="bold" fill="#0f172a">PROYECTO:</text>
+    <text x="1980" y="1339" font-size="11.5" font-weight="600" fill="#047857">Pizzería Gourmet Bella Italia Popayán • Nov 2026</text>
+  </g>
+
+  <!-- LEYENDA METODOLÓGICA TONY BUZAN (ESQUINA INFERIOR IZQUIERDA) -->
+  <g id="buzanLegend" filter="url(#dropShadow)">
+    <rect x="50" y="1235" width="430" height="115" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="65" y="1258" font-size="11.5" font-weight="800" fill="#0f172a">REGLAS MNEMOTÉCNICAS DE TONY BUZAN APLICADAS:</text>
+    <text x="65" y="1278" font-size="10.5" fill="#334155">• <tspan font-weight="bold" fill="#047857">Sentido Horario:</tspan> Lectura radial iniciando a las 12:00 hacia la derecha.</text>
+    <text x="65" y="1296" font-size="10.5" fill="#334155">• <tspan font-weight="bold" fill="#1d4ed8">Código Cromático:</tspan> Una gama de color específica por bifurcación principal.</text>
+    <text x="65" y="1314" font-size="10.5" fill="#334155">• <tspan font-weight="bold" fill="#b45309">Jerarquía Orgánica:</tspan> Ramas gruesas centrales que se afinan al exterior.</text>
+    <text x="65" y="1332" font-size="10.5" fill="#334155">• <tspan font-weight="bold" fill="#0e7490">Iconografía Nemotécnica:</tspan> Asociación inmediata cerebro-imagen.</text>
+  </g>
+
+</svg>
