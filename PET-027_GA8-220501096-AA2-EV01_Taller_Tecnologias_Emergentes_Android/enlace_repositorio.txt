@@ -1,0 +1,44 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220501096-AA2-EV01
+TITULO: Taller. Integración, tecnologías emergentes y disruptivas
+        (Desarrollo y Compilación Móvil Android 14+ Nativa y React Native en Docker)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 228118
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-027_GA8-220501096-AA2-EV01_Taller_Tecnologias_Emergentes_Android
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y EVIDENCIAS INCLUIDAS:
+1. TALLER DE INVESTIGACIÓN TÉCNICA:
+   - Análisis de arquitectura de software para dispositivos móviles (Android / iOS).
+   - Estructura de paquetes de distribución (.apk, .aab), manifest y permisos de seguridad.
+   - Seguridad multiusuario en Android: UIDs/GIDs Linux, Sandboxing y principio de menor privilegio.
+   - Componentes clave de Android: Activity, Service, BroadcastReceiver, ContentProvider.
+   - Comparativa de entornos integrados de desarrollo (Android Studio, VS Code, CLI).
+
+2. ARTEFACTOS Y APLICACIONES MÓVILES GENERADAS:
+   - Aplicación Android Nativa (Java POO + Android SDK API 34+):
+     Código fuente en carpeta app_nativa_android/ y APK compilada para Android 14+.
+   - Aplicación Móvil React Native (Hermes + Fabric C++ Engine):
+     Código fuente en carpeta app_react_native/ y APK standalone release con bundle JS embebido.
+
+3. AMBIENTE DE CONSTRUCCIÓN AISLADO (DOCKER):
+   - Imagen Docker de compilación (pizzeria-android-builder:34) con OpenJDK 17, Gradle 8.5/9.4.1
+     y Android SDK CLI sin requerir Android Studio ni emuladores en la máquina anfitriona.
+
+4. OBSERVACIÓN INSTITUCIONAL:
+   - Se prescindió de Android Studio por optimización de espacio y rendimiento; se utilizó
+     Visual Studio Code como IDE principal y Docker para la generación de binarios.
+   - Se adjuntan ambos ejecutables: APK nativa (resolución de guía) y APK React Native release
+     (proyecto formativo Pizzería Gourmet Bella Italia Popayán).
+================================================================================
