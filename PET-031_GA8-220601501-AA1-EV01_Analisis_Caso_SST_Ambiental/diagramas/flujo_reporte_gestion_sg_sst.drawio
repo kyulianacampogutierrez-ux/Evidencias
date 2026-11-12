@@ -1,0 +1,16 @@
+<mxfile host="Electron" modified="2026-11-11T22:38:00.000Z" agent="Antigravity/SENA ADSO" version="21.6.8" type="device">
+  <diagram id="flujo_reporte_gestion_sg_sst" name="Ruta de Gestión del SG-SST y Reporte de Incidentes">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Ruta de Gestión del SG-SST y Reporte de Incidentes&lt;/b&gt;&lt;br&gt;SENA ADSO - Ficha 3186681 - Karen Yuliana Campo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node_main" value="Ruta de Gestión del SG-SST y Reporte de Incidentes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#059669;strokeWidth=2;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="80" width="400" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

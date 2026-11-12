@@ -1,0 +1,57 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA8-220601501-AA1-EV01
+TITULO: Análisis de caso de situaciones que se presentan en el contexto ambiental y del SST
+        (Estudio de Caso "Vestidos y Costuras S.A.S.", Matriz GTC 45 y Matriz Ambiental)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 3186681
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-031_GA8-220601501-AA1-EV01_Analisis_Caso_SST_Ambiental
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL ANÁLISIS:
+Esta evidencia da cumplimiento formal y técnico a la Guía de Aprendizaje 8 en la
+competencia transversal 220601501 (Protección ambiental, seguridad y salud en el trabajo):
+
+1. PARTE A: ANÁLISIS E INTERPRETACIÓN DEL CASO "VESTIDOS Y COSTURAS S.A.S.":
+   - Identificación de condiciones de seguridad (infraestructura, escaleras, orden y aseo).
+   - Factores de riesgo presentes (locativos, físicos por déficit lumínico, mecánicos, biomecánicos).
+   - Tipos de peligro según clasificación GTC 45.
+   - Condiciones de seguridad por actividad económica (confección textil manufacturera).
+   - Falla administrativa y legal en el SG-SST (inacción ante reporte previo, omisión del
+     Decreto 1072 de 2015, Art. 2.2.4.6.26 y Resolución 0312 de 2019).
+
+2. PARTE B: MATRIZ DE IDENTIFICACIÓN DE PELIGROS Y VALORACIÓN DE RIESGOS (GTC 45):
+   - Proceso, zona, actividad, tarea y rutinario (Sí).
+   - Efectos posibles sobre la salud y seguridad de los operarios.
+   - Controles existentes (Fuente, Medio, Individuo).
+   - Evaluación matemática del riesgo: Nivel de Deficiencia (ND), Nivel de Exposición (NE),
+     Nivel de Probabilidad (NP), Nivel de Consecuencia (NC) y Nivel de Riesgo (NR).
+   - Valoración de aceptabilidad del riesgo (Nivel I - No Aceptable).
+   - Jerarquía de controles de intervención: Eliminación, Sustitución, Controles de Ingeniería
+     (rediseño lumínico LED y bandas antideslizantes), Administrativos (inspección y señalización) y EPP.
+
+3. PARTE C: MATRIZ DE ASPECTOS E IMPACTOS AMBIENTALES:
+   - Identificación de aspectos e impactos del proceso productivo textil (consumo eléctrico,
+     residuos de retazos, ruido ambiental, bombillos fluorescentes con mercurio).
+   - Plan de manejo y mitigación ambiental según Decreto 1076 de 2015 y Resolución 2184 de 2019.
+
+4. PARTE D: ARTICULACIÓN CON EL PROYECTO FORMATIVO (PIZZERÍA BELLA ITALIA POPAYÁN):
+   - Transferencia y lecciones aprendidas: Seguridad en bodegas subterráneas, ergonomía en software,
+     prevención de caídas a distinto nivel y gestión de residuos orgánicos en Popayán.
+
+5. ARTEFACTOS Y DOCUMENTOS FORMALES:
+   - GA8-220601501-AA1-EV01_Analisis_Caso_SST_Ambiental.pdf (Documento formal con portada y estilo SENA)
+   - GA8-220601501-AA1-EV01_Analisis_Caso_SST_Ambiental.docx (Formato oficial Microsoft Word)
+   - Diagramas: Jerarquía de Controles GTC 45, Mapa de Calor de Riesgos, Flujo SG-SST y Matriz Ambiental.
+   - Paquete comprimido normativo KARENCAMPO_AA1_EV01.zip.
+================================================================================

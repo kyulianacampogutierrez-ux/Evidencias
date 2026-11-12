@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <defs>
+    <linearGradient id="bgGradSST" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="elimGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="sustGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="ingGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="adminGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="eppGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadowSST" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="520" fill="url(#bgGradSST)"/>
+
+  <!-- Header -->
+  <rect x="30" y="20" width="940" height="60" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <rect x="30" y="20" width="8" height="60" rx="4" fill="#059669"/>
+  <text x="50" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#F8FAFC">JERARQUÍA DE CONTROLES DE INTERVENCIÓN (GTC 45 / DECRETO 1072 DE 2015)</text>
+  <text x="50" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94A3B8">Plan de Mitigación Integral para el Caso "Vestidos y Costuras S.A.S." (Escaleras y Déficit Lumínico)</text>
+
+  <!-- Left Side: Inverted Pyramid Structure -->
+  <!-- Level 1: Eliminación -->
+  <polygon points="50,105 550,105 500,165 100,165" fill="url(#elimGrad)" stroke="#B91C1C" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <text x="300" y="132" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. ELIMINACIÓN (Máxima Efectividad)</text>
+  <text x="300" y="150" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#FEE2E2" text-anchor="middle">Suprimir físicamente el peligro o traslado de máquinas bordadoras al 1er piso</text>
+
+  <!-- Level 2: Sustitución -->
+  <polygon points="100,175 500,175 450,235 150,235" fill="url(#sustGrad)" stroke="#B45309" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <text x="300" y="202" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. SUSTITUCIÓN</text>
+  <text x="300" y="220" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#FEF3C7" text-anchor="middle">Reemplazar luminarias tenues por luminarias LED industriales de 300 lux</text>
+
+  <!-- Level 3: Controles de Ingeniería -->
+  <polygon points="150,245 450,245 400,305 200,305" fill="url(#ingGrad)" stroke="#1D4ED8" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <text x="300" y="272" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. CONTROLES DE INGENIERÍA ★</text>
+  <text x="300" y="290" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#DBEAFE" text-anchor="middle">Pasamanos dobles, bandas antideslizantes y sensor de movimiento</text>
+
+  <!-- Level 4: Controles Administrativos -->
+  <polygon points="200,315 400,315 350,375 250,375" fill="url(#adminGrad)" stroke="#0F766E" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <text x="300" y="342" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4. CONTROLES ADMINISTRATIVOS</text>
+  <text x="300" y="360" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CCFBF1" text-anchor="middle">Señalización NTC 1461, inspección COPASST y protocolo</text>
+
+  <!-- Level 5: EPP -->
+  <polygon points="250,385 350,385 320,445 280,445" fill="url(#eppGrad)" stroke="#047857" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <text x="300" y="412" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5. EPP</text>
+  <text x="300" y="430" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#D1FAE5" text-anchor="middle">Calzado con suela antideslizante</text>
+
+  <!-- Inverted Arrow Indicator -->
+  <line x1="25" y1="105" x2="25" y2="445" stroke="#94A3B8" stroke-width="2"/>
+  <polygon points="20,110 25,95 30,110" fill="#EF4444"/>
+  <polygon points="20,440 25,455 30,440" fill="#10B981"/>
+  <text x="18" y="280" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#CBD5E1" transform="rotate(-90, 18, 280)" text-anchor="middle">EFECTIVIDAD DE LA INTERVENCIÓN</text>
+
+  <!-- Right Side: Detailed Action Plan for Vestidos y Costuras S.A.S. -->
+  <rect x="580" y="105" width="390" height="385" rx="8" fill="#111827" stroke="#334155" stroke-width="1.5" filter="url(#shadowSST)"/>
+  <rect x="580" y="105" width="390" height="35" rx="8" fill="#1E293B"/>
+  <text x="775" y="128" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#38BDF8" text-anchor="middle">PLAN DE ACCIÓN TÉCNICO INMEDIATO</text>
+
+  <!-- Item 1: Iluminación -->
+  <rect x="595" y="150" width="360" height="65" rx="6" fill="#1E293B" stroke="#3B82F6"/>
+  <text x="605" y="168" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#60A5FA">• Rediseño Lumínico (Resolución 2400/1979)</text>
+  <text x="605" y="186" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Instalación de paneles LED herméticos IP65 con mínimo 150-300 luxes</text>
+  <text x="605" y="202" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94A3B8">Sensor de presencia en descansos y luces de emergencia autónomas.</text>
+
+  <!-- Item 2: Escaleras y Pasamanos -->
+  <rect x="595" y="225" width="360" height="65" rx="6" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="605" y="243" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FBBF24">• Adecuación Locativa y Antideslizante</text>
+  <text x="605" y="261" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Cintas fotoluminiscentes antideslizantes de alta abrasión en huellas.</text>
+  <text x="605" y="277" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94A3B8">Pasamanos tubular doble a 90 cm de altura en ambos costados.</text>
+
+  <!-- Item 3: Gestión Administrativa SG-SST -->
+  <rect x="595" y="300" width="360" height="65" rx="6" fill="#1E293B" stroke="#EF4444"/>
+  <text x="605" y="318" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#F87171">• Subsanación de la Omisión Administrativa</text>
+  <text x="605" y="336" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Apertura formal de Acción Correctiva / Preventiva (Decreto 1072, Art. 2.2.4.6.33).</text>
+  <text x="605" y="352" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94A3B8">Reunión extraordinaria del COPASST para seguimiento de la condición insegura.</text>
+
+  <!-- Item 4: Monitoreo y EPP -->
+  <rect x="595" y="375" width="360" height="65" rx="6" fill="#1E293B" stroke="#10B981"/>
+  <text x="605" y="393" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#34D399">• Señalización, Inducción y Calzado</text>
+  <text x="605" y="411" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#CBD5E1">Señales preventivas "Peligro: Descenso de Escaleras" según NTC 1461.</text>
+  <text x="605" y="427" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94A3B8">Dotación de calzado ergonómico antideslizante a los 12 operarios.</text>
+
+  <!-- Footer Indicator -->
+  <rect x="595" y="450" width="360" height="30" rx="4" fill="#047857" fill-opacity="0.3"/>
+  <text x="775" y="470" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#6EE7B7" text-anchor="middle">Meta: 0 Accidentes Graves y Reducción del Riesgo de Nivel I a Nivel III/IV</text>
+</svg>
