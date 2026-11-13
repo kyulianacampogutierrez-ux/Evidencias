@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { width: 1400px; height: 750px; background: #0f172a; font-family: 'Consolas', 'Fira Code', monospace; padding: 25px; }
+    .window { background: #1e293b; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); border: 1px solid #334155; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+    .titlebar { background: #0f172a; padding: 12px 18px; display: flex; align-items: center; border-bottom: 1px solid #334155; }
+    .dots { display: flex; gap: 8px; margin-right: 20px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #eab308; }
+    .dot-green { background: #22c55e; }
+    .title { color: #94a3b8; font-size: 13px; font-weight: bold; }
+    .content { padding: 25px; color: #f8fafc; font-size: 14px; line-height: 1.6; flex: 1; overflow: hidden; }
+    .prompt { color: #38bdf8; font-weight: bold; }
+    .cmd { color: #f1f5f9; font-weight: bold; }
+    .success { color: #4ade80; }
+    .info { color: #818cf8; }
+    .accent { color: #f59e0b; }
+    .muted { color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+      <div class="title">karen@ctpi-popayan: ~/SENA/PizzeriaBellaItalia (Testing Toolchain Setup)</div>
+    </div>
+    <div class="content">
+      <p><span class="prompt">karen@ctpi:~$</span> <span class="cmd">node --version &amp;&amp; npm --version &amp;&amp; docker --version</span></p>
+      <p class="success">v20.20.2</p>
+      <p class="success">10.8.2</p>
+      <p class="success">Docker version 28.0.1, build 068a01e</p>
+      <br>
+      <p><span class="prompt">karen@ctpi:~$</span> <span class="cmd">cat &lt;&lt; 'EOF' &gt; package.json (Configuración de Motor de Pruebas Unitarias)</span></p>
+      <p class="muted">{</p>
+      <p class="muted">&nbsp;&nbsp;"name": "pizzeria-gourmet-bella-italia-testing",</p>
+      <p class="muted">&nbsp;&nbsp;"version": "1.0.0",</p>
+      <p class="muted">&nbsp;&nbsp;"type": "module",</p>
+      <p class="muted">&nbsp;&nbsp;"scripts": {</p>
+      <p class="muted">&nbsp;&nbsp;&nbsp;&nbsp;"test": "node --test --test-reporter=tap pruebas/",</p>
+      <p class="muted">&nbsp;&nbsp;&nbsp;&nbsp;"test:watch": "node --test --watch pruebas/",</p>
+      <p class="muted">&nbsp;&nbsp;&nbsp;&nbsp;"test:coverage": "node --test --experimental-test-coverage pruebas/"</p>
+      <p class="muted">&nbsp;&nbsp;}</p>
+      <p class="muted">}</p>
+      <br>
+      <p><span class="prompt">karen@ctpi:~$</span> <span class="cmd">npm list --depth=0</span></p>
+      <p class="info">pizzeria-gourmet-bella-italia-testing@1.0.0 /home/danilo/Escritorio/Karen/SENA/CDE</p>
+      <p class="success">├── node:test@builtin (Motor Nativo Oficial Node.js 20 LTS)</p>
+      <p class="success">├── node:assert/strict@builtin (Biblioteca de Aserciones Fuertes)</p>
+      <p class="success">├── postman-runtime &amp; newman@5.3.2 (Automatización CI/CD de APIs)</p>
+      <p class="success">└── supertest@6.3.4 (Testing HTTP de Endpoints RESTful)</p>
+      <br>
+      <p class="accent">[ESTADO]: Entorno de pruebas configurado exitosamente para la solución de software (Ficha 3186681).</p>
+    </div>
+  </div>
+</body>
+</html>

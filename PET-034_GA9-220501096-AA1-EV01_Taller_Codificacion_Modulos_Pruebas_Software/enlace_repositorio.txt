@@ -1,0 +1,46 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA9-220501096-AA1-EV01
+TITULO: Taller sobre codificación de módulos del software (Testing y Control de Calidad)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 3186681
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-034_GA9-220501096-AA1-EV01_Taller_Codificacion_Modulos_Pruebas_Software
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL TALLER:
+Esta evidencia da cumplimiento formal y técnico a la Guía de Aprendizaje 9 en la
+competencia 220501096, desarrollando en su totalidad el taller sobre pruebas y
+codificación de módulos de software aplicado a la "Pizzería Gourmet Bella Italia Popayán":
+
+1. DESARROLLO DE LAS PREGUNTAS ORIENTADORAS DEL TALLER:
+   - Pregunta 1: Taxonomía integral de pruebas de software (Unitarias, Integración,
+     Sistema, Aceptación, Funcionales, No Funcionales, Caja Blanca, Caja Negra, Regresión,
+     Rendimiento y Seguridad). Características y beneficios para la calidad de software.
+   - Pregunta 2: Selección y justificación técnica de las pruebas más adecuadas para el
+     proyecto formativo Pizzería Gourmet Bella Italia Popayán (arquitectura de microservicios
+     Go/Node REST API, MongoDB, frontend React y app móvil React Native).
+   - Pregunta 3: Investigación, comparativa e instalación de herramientas de prueba
+     (Node.js Native Test Runner, Assert Strict, Supertest, Postman y Newman CLI).
+   - Pregunta 4: Ejecución real de 11 casos de prueba automatizados sobre los módulos de
+     cálculo de órdenes, impuestos (Impoconsumo 8%), envíos a Popayán, seguridad/RBAC,
+     saneamiento XSS/NoSQL e inventario de ingredientes gourmet, con capturas de pantalla.
+   - Pregunta 5: Resumen estructurado de resultados, métricas de ejecución (156 ms) y
+     tasa de éxito del 100%.
+
+2. ENTREGABLES DISPONIBLES EN ESTE PAQUETE:
+   - GA9-220501096-AA1-EV01_Taller_Codificacion_Modulos_Pruebas.pdf (Documento formal en PDF)
+   - GA9-220501096-AA1-EV01_Taller_Codificacion_Modulos_Pruebas.docx (Formato editable Word)
+   - Capturas de pantalla en alta resolución (Instalación, Ejecución de Tests, Dashboard)
+   - Código fuente de pruebas automatizadas: pruebas/pizzeria_modules_testing.js
+   - Paquete comprimido normativo KARENCAMPO_AA1_EV01_GUIA9.zip
+================================================================================

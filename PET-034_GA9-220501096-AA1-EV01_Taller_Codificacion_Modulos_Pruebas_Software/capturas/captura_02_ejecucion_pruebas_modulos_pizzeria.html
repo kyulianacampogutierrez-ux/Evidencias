@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { width: 1400px; height: 850px; background: #0f172a; font-family: 'Consolas', 'Fira Code', monospace; padding: 25px; }
+    .window { background: #1e293b; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); border: 1px solid #334155; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+    .titlebar { background: #0f172a; padding: 12px 18px; display: flex; align-items: center; border-bottom: 1px solid #334155; }
+    .dots { display: flex; gap: 8px; margin-right: 20px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #eab308; }
+    .dot-green { background: #22c55e; }
+    .title { color: #94a3b8; font-size: 13px; font-weight: bold; }
+    .content { padding: 22px 25px; color: #f8fafc; font-size: 13.5px; line-height: 1.5; flex: 1; overflow: hidden; }
+    .prompt { color: #38bdf8; font-weight: bold; }
+    .cmd { color: #f1f5f9; font-weight: bold; }
+    .pass { color: #22c55e; font-weight: bold; }
+    .suite { color: #60a5fa; font-weight: bold; }
+    .dur { color: #94a3b8; font-size: 12px; }
+    .summary-box { background: #0f172a; border-left: 4px solid #22c55e; padding: 12px 18px; margin-top: 15px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+      <div class="title">karen@ctpi-popayan: node --test pruebas/pizzeria_modules_testing.js (Resultados de Pruebas)</div>
+    </div>
+    <div class="content">
+      <p><span class="prompt">karen@ctpi:~/SENA$</span> <span class="cmd">node --test pruebas/pizzeria_modules_testing.js</span></p>
+      <br>
+      <p class="suite">▶ Pizzería Gourmet Bella Italia Popayán - Pruebas de Módulos (GA9-AA1-EV01)</p>
+      
+      <p class="suite">&nbsp;&nbsp;▶ Módulo 1: Calculadora de Pedidos y Facturación</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP01:</span> Debe calcular correctamente subtotal, impoconsumo del 8% y envío en Popayán Centro <span class="dur">(3.2ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP02:</span> Debe otorgar envío gratuito cuando el subtotal supera $60.000 COP <span class="dur">(0.3ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP03:</span> Debe aplicar correctamente el cupón de descuento BELLAITALIA10 (10%) <span class="dur">(0.2ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP04:</span> Debe rechazar pedidos con lista vacía de productos <span class="dur">(0.6ms)</span></p>
+
+      <p class="suite">&nbsp;&nbsp;▶ Módulo 2: Autenticación, Roles y Seguridad</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP05:</span> Debe validar contraseñas robustas (mayúscula, minúscula, dígito, símbolo, &gt;=8 chars) <span class="dur">(0.5ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP06:</span> Debe validar formato de correo electrónico <span class="dur">(0.4ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP07:</span> Debe validar jerarquía de control de acceso basada en roles (RBAC) <span class="dur">(0.3ms)</span></p>
+
+      <p class="suite">&nbsp;&nbsp;▶ Módulo 3: Clientes, Teléfonos y Saneamiento XSS</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP08:</span> Debe validar número celular colombiano de 10 dígitos iniciando en 3 <span class="dur">(0.8ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP09:</span> Debe sanear entradas para evitar inyecciones XSS y NoSQL <span class="dur">(0.5ms)</span></p>
+
+      <p class="suite">&nbsp;&nbsp;▶ Módulo 4: Gestión de Inventario y Disponibilidad</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP10:</span> Debe reservar ingredientes cuando hay stock disponible y descontar cantidad exacta <span class="dur">(0.7ms)</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pass">✔ CP11:</span> Debe lanzar excepción si se solicitan más ingredientes de los disponibles <span class="dur">(0.3ms)</span></p>
+
+      <div class="summary-box">
+        <p><strong style="color:#38bdf8;">RESUMEN DE EJECUCIÓN (NODE.JS TEST RUNNER):</strong></p>
+        <p>ℹ Suites ejecutadas: <strong>5</strong> | Total Casos de Prueba: <strong>11</strong></p>
+        <p><span class="pass">✔ Aprobados: 11 (100.0%)</span> | ❌ Fallidos: <strong>0 (0.0%)</strong> | ⚠️ Cancelados/Omitidos: <strong>0</strong></p>
+        <p>⏱️ Tiempo Total de Ejecución: <strong>156.71 ms</strong> | Aprendiz: <strong>Karen Yuliana Campo</strong> (Ficha 3186681)</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
