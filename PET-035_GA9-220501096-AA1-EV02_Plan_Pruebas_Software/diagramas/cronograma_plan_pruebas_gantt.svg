@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 550" width="1200" height="550" style="background:#ffffff; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <rect x="20" y="20" width="1160" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="40" y="55" font-size="18" font-weight="bold" fill="#065f46">CRONOGRAMA DE EJECUCIÓN DEL PLAN DE PRUEBAS (PLANIFICACIÓN TEMPORAL)</text>
+  <text x="1150" y="55" font-size="12" font-weight="bold" fill="#64748b" text-anchor="end">4 SEMANAS • METODOLOGÍA ÁGIL</text>
+
+  <!-- CABECERA DE TIEMPO (SEMANAS) -->
+  <rect x="350" y="100" width="190" height="35" fill="#065f46"/>
+  <text x="445" y="122" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SEMANA 1</text>
+  
+  <rect x="545" y="100" width="190" height="35" fill="#047857"/>
+  <text x="640" y="122" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SEMANA 2</text>
+  
+  <rect x="740" y="100" width="190" height="35" fill="#059669"/>
+  <text x="835" y="122" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SEMANA 3</text>
+  
+  <rect x="935" y="100" width="190" height="35" fill="#10b981"/>
+  <text x="1030" y="122" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SEMANA 4</text>
+
+  <!-- LÍNEAS GUÍA -->
+  <line x1="350" y1="135" x2="350" y2="480" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="540" y1="135" x2="540" y2="480" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="735" y1="135" x2="735" y2="480" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="930" y1="135" x2="930" y2="480" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="1125" y1="135" x2="1125" y2="480" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- TAREAS GANTT -->
+  <!-- T1: Análisis de Requerimientos -->
+  <rect x="50" y="150" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="172" font-size="11.5" font-weight="bold" fill="#1e293b">1. Análisis Requisitos &amp; RTM</text>
+  <rect x="350" y="153" width="180" height="28" rx="4" fill="#0284c7"/>
+  <text x="440" y="171" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">100% Completado</text>
+
+  <!-- T2: Configuración de Ambientes Docker -->
+  <rect x="50" y="200" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="222" font-size="11.5" font-weight="bold" fill="#1e293b">2. Entornos Docker &amp; Mocks</text>
+  <rect x="420" y="203" width="170" height="28" rx="4" fill="#6366f1"/>
+  <text x="505" y="221" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Docker Compose OK</text>
+
+  <!-- T3: Pruebas Unitarias de Lógica -->
+  <rect x="50" y="250" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="272" font-size="11.5" font-weight="bold" fill="#1e293b">3. Pruebas Unitarias (TDD)</text>
+  <rect x="545" y="253" width="220" height="28" rx="4" fill="#059669"/>
+  <text x="655" y="271" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">OrderCalculator / Auth OK</text>
+
+  <!-- T4: Pruebas de Integración API REST -->
+  <rect x="50" y="300" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="322" font-size="11.5" font-weight="bold" fill="#1e293b">4. Pruebas Integración API</text>
+  <rect x="680" y="303" width="220" height="28" rx="4" fill="#0d9488"/>
+  <text x="790" y="321" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Go Fiber &amp; MongoDB OK</text>
+
+  <!-- T5: Pruebas de Seguridad & OWASP -->
+  <rect x="50" y="350" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="372" font-size="11.5" font-weight="bold" fill="#1e293b">5. Seguridad &amp; Saneamiento</text>
+  <rect x="740" y="353" width="200" height="28" rx="4" fill="#d97706"/>
+  <text x="840" y="371" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">XSS / NoSQL / RBAC</text>
+
+  <!-- T6: Pruebas de Carga & Cierre -->
+  <rect x="50" y="400" width="280" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="65" y="422" font-size="11.5" font-weight="bold" fill="#1e293b">6. Carga, Regresión &amp; Cierre</text>
+  <rect x="880" y="403" width="245" height="28" rx="4" fill="#e11d48"/>
+  <text x="1000" y="421" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Informe Final &amp; Pase Prod</text>
+
+  <rect x="50" y="460" width="1075" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="70" y="485" font-size="11" fill="#475569">Responsable: <strong>Karen Yuliana Campo</strong> (QA Lead / Aprendiz ADSO Ficha 3186681) | Estado: <strong>100% Ejecutado y Aprobado</strong></text>
+</svg>

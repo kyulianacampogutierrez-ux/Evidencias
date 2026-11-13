@@ -1,0 +1,52 @@
+================================================================================
+EVIDENCIA DE APRENDIZAJE: GA9-220501096-AA1-EV02
+TITULO: Realiza plan pruebas de software (Estándar IEEE 829 / ISO/IEC/IEEE 29119)
+APRENDIZ: Karen Yuliana Campo
+PROGRAMA: Tecnología en Análisis y Desarrollo de Software (ADSO) - Modalidad Virtual
+FICHA: 3186681
+CENTRO: Centro de Teleinformática y Producción Industrial (CTPI) - Popayán, Regional Cauca
+INSTRUCTORA / EVALUADORA: Servicio Nacional de Aprendizaje (SENA)
+================================================================================
+
+ENLACE DEL REPOSITORIO OFICIAL DE CONTROL DE VERSIONES (GIT / GITHUB):
+https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+
+RUTA DIRECTA DE LA EVIDENCIA EN GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-035_GA9-220501096-AA1-EV02_Plan_Pruebas_Software
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA Y ESTRUCTURA DEL PLAN DE PRUEBAS:
+Esta evidencia da cumplimiento formal y técnico a la Guía de Aprendizaje 9 en la
+competencia 220501096, formulando el Plan Maestro de Pruebas de Software (Master
+Test Plan) para la solución "Pizzería Gourmet Bella Italia Popayán" bajo los estándares
+internacionales IEEE 829 e ISO/IEC/IEEE 29119:
+
+1. ALCANCE Y ANÁLISIS DE REQUERIMIENTOS:
+   - Identificación de funcionalidades existentes (Autenticación JWT, Gestión de
+     Catálogo Gourmet, Carrito de Compras, Registro de Clientes).
+   - Identificación de nuevas funcionalidades a probar (Cálculo del Impoconsumo 8%,
+     Tarifas Zonales de Domicilio en Popayán, Módulo KDS de Cocina en tiempo real,
+     Trazabilidad de Insumos y App Móvil Android para Repartidores).
+
+2. ESTRATEGIA, CRITERIOS Y AMBIENTES DE PRUEBA:
+   - Estrategia piramidal: Pruebas Unitarias, Integración REST, Seguridad (OWASP),
+     Rendimiento y Carga en horas pico gastronómicas.
+   - Criterios de Inicio, Suspensión, Reanudación y Aprobación/Cierre.
+   - Arquitectura de Ambientes Dockerizados (Dev, Test y Staging).
+
+3. METODOLOGÍA, CRONOGRAMA Y ARTEFACTOS:
+   - Metodología ágil TDD articulada con sprints Scrum.
+   - Cronograma detallado de ejecución (Gantt por semanas y fases).
+   - Diseño formal de artefactos de registro: Plantilla de Caso de Prueba IEEE 829,
+     Formato de Reporte de Defectos (Bug Tracking) y Matriz de Trazabilidad RTM.
+   - Matriz de Gestión de Riesgos de Pruebas y Planes de Contingencia.
+
+4. ENTREGABLES DISPONIBLES EN ESTE PAQUETE:
+   - GA9-220501096-AA1-EV02_Plan_Pruebas_Software.pdf (Documento formal en PDF, >4 hojas)
+   - GA9-220501096-AA1-EV02_Plan_Pruebas_Software.docx (Formato editable Word)
+   - Diagramas de arquitectura: Ciclo de Vida del Testing, Ambientes Docker y Cronograma
+   - Plantillas de artefactos de prueba (plantillas/): RTM, Test Cases y Bug Report
+   - Paquete comprimido normativo KARENCAMPO_AA1_EV02_GUIA9.zip
+================================================================================

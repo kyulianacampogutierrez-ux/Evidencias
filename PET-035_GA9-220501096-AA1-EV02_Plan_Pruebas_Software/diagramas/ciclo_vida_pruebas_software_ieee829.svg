@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650" style="background:#ffffff; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#065f46"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0369a1"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4338ca"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#be123c"/><stop offset="100%" stop-color="#f43f5e"/></linearGradient>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <!-- ENCABEZADO -->
+  <rect x="20" y="20" width="1160" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="40" y="55" font-size="18" font-weight="bold" fill="#065f46">CICLO DE VIDA DEL PLAN DE PRUEBAS DE SOFTWARE (ESTÁNDAR IEEE 829 / ISO 29119)</text>
+  <text x="1150" y="55" font-size="12" font-weight="bold" fill="#64748b" text-anchor="end">BELLA ITALIA POPAYÁN</text>
+
+  <!-- FASE 1 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="120" width="160" height="200" rx="10" fill="url(#g1)"/>
+    <circle cx="130" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="130" y="172" font-size="20" text-anchor="middle" fill="#ffffff">📋</text>
+    <text x="130" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 1</text>
+    <text x="130" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">PLANIFICACIÓN</text>
+    <text x="130" y="260" font-size="10" fill="#d1fae5" text-anchor="middle">• Alcance y Objetivos</text>
+    <text x="130" y="278" font-size="10" fill="#d1fae5" text-anchor="middle">• Asignación Recursos</text>
+    <text x="130" y="296" font-size="10" fill="#d1fae5" text-anchor="middle">• Matriz de Riesgos</text>
+  </g>
+
+  <!-- FLECHA 1-2 -->
+  <path d="M 220 220 L 235 220" stroke="#059669" stroke-width="4" />
+  <polygon points="235,220 225,214 225,226" fill="#059669"/>
+
+  <!-- FASE 2 -->
+  <g filter="url(#shadow)">
+    <rect x="245" y="120" width="160" height="200" rx="10" fill="url(#g2)"/>
+    <circle cx="325" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="325" y="172" font-size="20" text-anchor="middle" fill="#ffffff">✏️</text>
+    <text x="325" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 2</text>
+    <text x="325" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">DISEÑO Y ANÁLISIS</text>
+    <text x="325" y="260" font-size="10" fill="#e0f2fe" text-anchor="middle">• Casos de Prueba (CP)</text>
+    <text x="325" y="278" font-size="10" fill="#e0f2fe" text-anchor="middle">• Matriz RTM</text>
+    <text x="325" y="296" font-size="10" fill="#e0f2fe" text-anchor="middle">• Datos de Prueba (JSON)</text>
+  </g>
+
+  <!-- FLECHA 2-3 -->
+  <polygon points="430,220 420,214 420,226" fill="#0284c7"/>
+
+  <!-- FASE 3 -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="120" width="160" height="200" rx="10" fill="url(#g3)"/>
+    <circle cx="520" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="520" y="172" font-size="20" text-anchor="middle" fill="#ffffff">🐳</text>
+    <text x="520" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 3</text>
+    <text x="520" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">ENTORNO &amp; PREP.</text>
+    <text x="520" y="260" font-size="10" fill="#e0e7ff" text-anchor="middle">• Contenedores Docker</text>
+    <text x="520" y="278" font-size="10" fill="#e0e7ff" text-anchor="middle">• Base Datos MongoDB</text>
+    <text x="520" y="296" font-size="10" fill="#e0e7ff" text-anchor="middle">• Mocking y Fixtures</text>
+  </g>
+
+  <!-- FLECHA 3-4 -->
+  <polygon points="625,220 615,214 615,226" fill="#6366f1"/>
+
+  <!-- FASE 4 -->
+  <g filter="url(#shadow)">
+    <rect x="635" y="120" width="160" height="200" rx="10" fill="url(#g4)"/>
+    <circle cx="715" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="715" y="172" font-size="20" text-anchor="middle" fill="#ffffff">🚀</text>
+    <text x="715" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 4</text>
+    <text x="715" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">EJECUCIÓN TDD</text>
+    <text x="715" y="260" font-size="10" fill="#fef3c7" text-anchor="middle">• Unitarias (node:test)</text>
+    <text x="715" y="278" font-size="10" fill="#fef3c7" text-anchor="middle">• Integración REST API</text>
+    <text x="715" y="296" font-size="10" fill="#fef3c7" text-anchor="middle">• Seguridad &amp; Carga</text>
+  </g>
+
+  <!-- FLECHA 4-5 -->
+  <polygon points="820,220 810,214 810,226" fill="#f59e0b"/>
+
+  <!-- FASE 5 -->
+  <g filter="url(#shadow)">
+    <rect x="830" y="120" width="160" height="200" rx="10" fill="url(#g5)"/>
+    <circle cx="910" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="910" y="172" font-size="20" text-anchor="middle" fill="#ffffff">🐛</text>
+    <text x="910" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 5</text>
+    <text x="910" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">DEFECT TRACKING</text>
+    <text x="910" y="260" font-size="10" fill="#ffe4e6" text-anchor="middle">• Registro de Bugs</text>
+    <text x="910" y="278" font-size="10" fill="#ffe4e6" text-anchor="middle">• Clasificación Severidad</text>
+    <text x="910" y="296" font-size="10" fill="#ffe4e6" text-anchor="middle">• Re-test y Verificación</text>
+  </g>
+
+  <!-- FLECHA 5-6 -->
+  <polygon points="1015,220 1005,214 1005,226" fill="#f43f5e"/>
+
+  <!-- FASE 6 -->
+  <g filter="url(#shadow)">
+    <rect x="1025" y="120" width="140" height="200" rx="10" fill="url(#g6)"/>
+    <circle cx="1095" cy="165" r="24" fill="#ffffff" opacity="0.2"/>
+    <text x="1095" y="172" font-size="20" text-anchor="middle" fill="#ffffff">📊</text>
+    <text x="1095" y="210" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 6</text>
+    <text x="1095" y="230" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">CIERRE &amp; SQA</text>
+    <text x="1095" y="260" font-size="10" fill="#d1fae5" text-anchor="middle">• Informe Final</text>
+    <text x="1095" y="278" font-size="10" fill="#d1fae5" text-anchor="middle">• Tasa Éxito 100%</text>
+    <text x="1095" y="296" font-size="10" fill="#d1fae5" text-anchor="middle">• Pase a Producción</text>
+  </g>
+
+  <!-- SECCIÓN INFERIOR: ARTEFACTOS Y GOBERNANZA -->
+  <rect x="50" y="360" width="1115" height="250" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="80" y="395" font-size="14" font-weight="bold" fill="#0f172a">ARTEFACTOS Y GOBERNANZA DEL PLAN DE PRUEBAS DE SOFTWARE</text>
+
+  <rect x="80" y="420" width="320" height="160" rx="8" fill="#ffffff" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="100" y="450" font-size="12" font-weight="bold" fill="#059669">📄 ESPECIFICACIÓN DE CASOS (IEEE 829)</text>
+  <text x="100" y="475" font-size="11" fill="#475569">• ID único, módulo y precondiciones</text>
+  <text x="100" y="495" font-size="11" fill="#475569">• Pasos detallados y Test Data (JSON)</text>
+  <text x="100" y="515" font-size="11" fill="#475569">• Resultados esperados vs obtenidos</text>
+  <text x="100" y="535" font-size="11" fill="#475569">• Criterio de pase/falla estricto</text>
+
+  <rect x="440" y="420" width="320" height="160" rx="8" fill="#ffffff" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="460" y="450" font-size="12" font-weight="bold" fill="#0284c7">🔍 MATRIZ DE TRAZABILIDAD (RTM)</text>
+  <text x="460" y="475" font-size="11" fill="#475569">• Vinculación RF-XX con Historias de Usuario</text>
+  <text x="460" y="495" font-size="11" fill="#475569">• Mapeo 1 a N con casos de prueba</text>
+  <text x="460" y="515" font-size="11" fill="#475569">• Garantía de 100% de cobertura de código</text>
+  <text x="460" y="535" font-size="11" fill="#475569">• Control de cambios y alcance</text>
+
+  <rect x="800" y="420" width="335" height="160" rx="8" fill="#ffffff" stroke="#e2e8f0" filter="url(#shadow)"/>
+  <text x="820" y="450" font-size="12" font-weight="bold" fill="#be123c">🛑 GESTIÓN DE INCIDENCIAS (BUG REPORT)</text>
+  <text x="820" y="475" font-size="11" fill="#475569">• Clasificación de Severidad (Bloqueante, Alta, Media)</text>
+  <text x="820" y="495" font-size="11" fill="#475569">• Pasos reproducibles y logs de consola</text>
+  <text x="820" y="515" font-size="11" fill="#475569">• Ciclo: New -> Assigned -> Fixed -> Closed</text>
+  <text x="820" y="535" font-size="11" fill="#475569">• Cero bugs críticos como criterio de aceptación</text>
+</svg>

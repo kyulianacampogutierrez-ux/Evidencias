@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650" style="background:#ffffff; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <rect x="20" y="20" width="1160" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="40" y="55" font-size="18" font-weight="bold" fill="#065f46">ARQUITECTURA DE AMBIENTES DE PRUEBA ORQUESTADOS (DOCKER COMPOSE)</text>
+  <text x="1150" y="55" font-size="12" font-weight="bold" fill="#64748b" text-anchor="end">SENA CTPI • ADSO 3186681</text>
+
+  <!-- CONTENEDOR PRINCIPAL DOCKER COMPOSE -->
+  <rect x="40" y="100" width="1120" height="510" rx="14" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6"/>
+  <rect x="60" y="115" width="280" height="32" rx="6" fill="#0284c7"/>
+  <text x="200" y="136" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">🐳 RED DOCKER AISLADA (sena-net)</text>
+
+  <!-- SERVICIO 1: TEST RUNNER -->
+  <g filter="url(#shadow2)">
+    <rect x="80" y="170" width="310" height="190" rx="10" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect x="80" y="170" width="310" height="35" rx="10" fill="#059669"/>
+    <rect x="80" y="190" width="310" height="15" fill="#059669"/>
+    <text x="235" y="194" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">node-test-runner (Tester Core)</text>
+    <text x="100" y="230" font-size="11" fill="#334155">• <strong>Imagen:</strong> node:20-alpine</text>
+    <text x="100" y="250" font-size="11" fill="#334155">• <strong>Framework:</strong> node:test nativo &amp; assert</text>
+    <text x="100" y="270" font-size="11" fill="#334155">• <strong>Utilidades:</strong> Newman CLI, Supertest</text>
+    <text x="100" y="290" font-size="11" fill="#334155">• <strong>Volumen:</strong> /sena/CDE montado</text>
+    <text x="100" y="310" font-size="11" fill="#334155">• <strong>Ejecución:</strong> TDD unitario &amp; integración</text>
+    <text x="100" y="335" font-size="11" font-weight="bold" fill="#059669">ESTADO: HEALTHY (Tiempo: 156 ms)</text>
+  </g>
+
+  <!-- SERVICIO 2: BACKEND GO FIBER -->
+  <g filter="url(#shadow2)">
+    <rect x="440" y="170" width="320" height="190" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="440" y="170" width="320" height="35" rx="10" fill="#0284c7"/>
+    <rect x="440" y="190" width="320" height="15" fill="#0284c7"/>
+    <text x="600" y="194" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">backend-go-api (Puerto 8085)</text>
+    <text x="460" y="230" font-size="11" fill="#334155">• <strong>Imagen:</strong> golang:1.22-alpine</text>
+    <text x="460" y="250" font-size="11" fill="#334155">• <strong>Framework:</strong> Go Fiber v2 REST</text>
+    <text x="460" y="270" font-size="11" fill="#334155">• <strong>Endpoints:</strong> /auth, /pizzas, /pedidos, /health</text>
+    <text x="460" y="290" font-size="11" fill="#334155">• <strong>Seguridad:</strong> JWT Middleware &amp; RBAC</text>
+    <text x="460" y="310" font-size="11" fill="#334155">• <strong>Conexión:</strong> mongodb://mongodb:27017</text>
+    <text x="460" y="335" font-size="11" font-weight="bold" fill="#0284c7">ESTADO: RUNNING (Latencia &lt; 15 ms)</text>
+  </g>
+
+  <!-- SERVICIO 3: BASE DE DATOS MONGODB -->
+  <g filter="url(#shadow2)">
+    <rect x="810" y="170" width="320" height="190" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+    <rect x="810" y="170" width="320" height="35" rx="10" fill="#10b981"/>
+    <rect x="810" y="190" width="320" height="15" fill="#10b981"/>
+    <text x="970" y="194" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">mongodb-pizzeria (Puerto 27017)</text>
+    <text x="830" y="230" font-size="11" fill="#334155">• <strong>Imagen:</strong> mongo:7.0-jammy</text>
+    <text x="830" y="250" font-size="11" fill="#334155">• <strong>Base de Datos:</strong> pizzeria_db</text>
+    <text x="830" y="270" font-size="11" fill="#334155">• <strong>Colecciones:</strong> pizzas, pedidos, clientes</text>
+    <text x="830" y="290" font-size="11" fill="#334155">• <strong>Aislamiento:</strong> Volumen temporal en test</text>
+    <text x="830" y="310" font-size="11" fill="#334155">• <strong>Seguridad:</strong> Autenticación &amp; TLS opcional</text>
+    <text x="830" y="335" font-size="11" font-weight="bold" fill="#10b981">ESTADO: HEALTHCHECK PASSED</text>
+  </g>
+
+  <!-- CLIENTES Y CONSUMIDORES EN PRUEBA -->
+  <rect x="80" y="390" width="500" height="190" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow2)"/>
+  <rect x="80" y="390" width="500" height="30" rx="10" fill="#334155"/>
+  <text x="330" y="411" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">CLIENTE WEB &amp; FRONTEND (React + Vite - Puerto 5173)</text>
+  <text x="100" y="445" font-size="11" fill="#475569">• <strong>Pruebas de Componentes:</strong> Carrito de compras, catálogo reactivo</text>
+  <text x="100" y="470" font-size="11" fill="#475569">• <strong>Pruebas de Integración Web:</strong> Axios interceptors, JWT localStorage</text>
+  <text x="100" y="495" font-size="11" fill="#475569">• <strong>Responsive Testing:</strong> Visualización fluida en escritorio y tablet</text>
+  <text x="100" y="520" font-size="11" fill="#475569">• <strong>Saneamiento XSS:</strong> React DOM escaping nativo validado</text>
+
+  <rect x="630" y="390" width="500" height="190" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow2)"/>
+  <rect x="630" y="390" width="500" height="30" rx="10" fill="#4338ca"/>
+  <text x="880" y="411" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">CLIENTE MÓVIL (React Native Android 14+ - APK)</text>
+  <text x="650" y="445" font-size="11" fill="#475569">• <strong>Entorno Móvil:</strong> Emulador y APK Release probada en Android API 34</text>
+  <text x="650" y="470" font-size="11" fill="#475569">• <strong>Módulos Probados:</strong> Selección de ingredientes, geolocalización Popayán</text>
+  <text x="650" y="495" font-size="11" fill="#475569">• <strong>Offline Mode:</strong> Manejo de conectividad intermitente en despacho</text>
+  <text x="650" y="520" font-size="11" fill="#475569">• <strong>Consumo API:</strong> Peticiones HTTPS a microservicio Go con Auth Bearer</text>
+</svg>
