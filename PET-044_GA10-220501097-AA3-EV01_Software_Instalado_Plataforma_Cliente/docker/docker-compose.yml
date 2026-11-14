@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Servidor Web de Aplicaciones Local para Despliegue de Plantilla en Plataforma del Cliente
+  servidor-web-cliente:
+    image: nginx:alpine
+    container_name: sena-cliente-landing-pizzeria
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    volumes:
+      - ../plantilla_web:/usr/share/nginx/html:ro
+    environment:
+      - NGINX_PORT=80
+      - APP_ENV=production_client
+      - SENA_PROJECT=Pizzeria_Bella_Italia_Popayan
+      - APPRENDIZ=Karen_Yuliana_Campo
+      - FICHA=3186681
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:80/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - sena-client-net
+
+networks:
+  sena-client-net:
+    driver: bridge

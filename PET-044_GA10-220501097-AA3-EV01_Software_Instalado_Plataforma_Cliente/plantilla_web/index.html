@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzería Gourmet Bella Italia Popayán | Landing Page Oficial</title>
+  <style>
+    :root {
+      --primary: #c026d3;
+      --primary-dark: #86198f;
+      --accent-green: #059669;
+      --accent-red: #dc2626;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --text: #334155;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    /* Barra Superior de Navegación */
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+      color: #064e3b;
+      text-decoration: none;
+    }
+    .logo-badge {
+      background: #047857;
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #475569;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #047857;
+    }
+    .btn-cta {
+      background: #047857;
+      color: #ffffff !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .btn-cta:hover {
+      background: #065f46;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(6,78,59,0.92) 0%, rgba(4,120,87,0.88) 100%),
+                  url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop') center/cover;
+      color: #ffffff;
+      padding: 90px 24px 80px 24px;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .hero p {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-bottom: 28px;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .h-badge {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Sección de Características */
+    .features {
+      max-width: 1200px;
+      margin: -35px auto 40px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 10;
+    }
+    .feat-card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      border-top: 4px solid #10b981;
+      text-align: center;
+    }
+    .feat-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .feat-card h3 {
+      font-size: 18px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .feat-card p {
+      font-size: 13.5px;
+      color: #64748b;
+    }
+
+    /* Menú Gourmet */
+    .menu-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 24px;
+    }
+    .sec-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .sec-header h2 {
+      font-size: 30px;
+      color: #064e3b;
+      margin-bottom: 8px;
+    }
+    .sec-header p {
+      color: #64748b;
+      font-size: 15px;
+    }
+    .pizza-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .pizza-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s;
+    }
+    .pizza-card:hover {
+      transform: translateY(-4px);
+    }
+    .pizza-img {
+      height: 150px;
+      background: #cbd5e1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    .pizza-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #dc2626;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .pizza-body {
+      padding: 16px;
+    }
+    .pizza-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    .pizza-desc {
+      font-size: 12.5px;
+      color: #64748b;
+      height: 40px;
+      margin-bottom: 12px;
+    }
+    .pizza-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+    }
+    .pizza-price {
+      font-size: 17px;
+      font-weight: 800;
+      color: #047857;
+    }
+    .btn-add {
+      background: #047857;
+      color: #ffffff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    /* Formulario de Checkout / Prueba Local */
+    .checkout-box {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .checkout-box h3 {
+      color: #064e3b;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 4px;
+    }
+    .form-group input, .form-group select {
+      padding: 9px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: #047857;
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Footer Institucional SENA */
+    footer {
+      background: #064e3b;
+      color: #ecfdf5;
+      padding: 30px 24px;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #a7f3d0;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-badge">PIZZA</span>
+        Bella Italia Popayán
+      </a>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#caracteristicas">Especialidades</a>
+        <a href="#menu">Menú Gourmet</a>
+        <a href="#pedido" class="btn-cta">Hacer Pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="h-badge">📍 Popayán, Cauca</span>
+        <span class="h-badge">🔥 Horno de Leña 450°C</span>
+        <span class="h-badge">🍕 Receta Napolitana 100% Auténtica</span>
+      </div>
+      <h1>El Auténtico Arte de la Pizza Italiana en el Corazón de Popayán</h1>
+      <p>Masa madre con 72 horas de fermentación natural, queso Mozzarella di Bufala y los más selectos ingredientes gourmet llevados directo a tu mesa.</p>
+      <a href="#menu" class="btn-cta" style="font-size: 16px; padding: 12px 28px;">Ver Menú y Ofertas</a>
+    </div>
+  </section>
+
+  <!-- Características -->
+  <div class="features" id="caracteristicas">
+    <div class="feat-card">
+      <div class="feat-icon">🌾</div>
+      <h3>Fermentación Lenta</h3>
+      <p>Masa madre madurada durante 72 horas que garantiza máxima ligereza y digestión perfecta.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🍅</div>
+      <h3>Ingredientes DOC</h3>
+      <p>Salsa de tomate San Marzano dell'Agro Sarnese-Nocerino y quesos artesanales seleccionados.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🛵</div>
+      <h3>Despacho en Popayán</h3>
+      <p>Cobertura integral en sectores Norte, Centro y Sur con empaques térmicos especializados.</p>
+    </div>
+  </div>
+
+  <!-- Menú Gourmet -->
+  <section class="menu-section" id="menu">
+    <div class="sec-header">
+      <h2>Nuestras Pizzas Gourmet Destacadas</h2>
+      <p>Selecciona tu especialidad favorita elaborada al instante por nuestros maestros pizzeros</p>
+    </div>
+
+    <div class="pizza-grid">
+      <!-- Pizza 1 -->
+      <div class="pizza-card">
+        <div class="pizza-img" style="background: #fef3c7;">
+          🍕
+          <span class="pizza-badge">TRADICIONAL</span>
+        </div>
+        <div class="pizza-body">
+          <div class="pizza-title">Margherita D.O.C.</div>
+          <div class="pizza-desc">Tomate San Marzano, mozzarella fior di latte, albahaca fresca y aceite de oliva virgen extra.</div>
+          <div class="pizza-footer">
+            <span class="pizza-price">$38.000</span>
+            <button class="btn-add" onclick="agregar('Margherita D.O.C.', 38000)">Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizza 2 -->
+      <div class="pizza-card">
+        <div class="pizza-img" style="background: #fee2e2;">
+          🍕
+          <span class="pizza-badge">ESPECIAL</span>
+        </div>
+        <div class="pizza-body">
+          <div class="pizza-title">Prosciutto e Funghi</div>
+          <div class="pizza-desc">Jamón serrano curado, champiñones frescos salteados al ajo, queso mozzarella y orégano.</div>
+          <div class="pizza-footer">
+            <span class="pizza-price">$44.000</span>
+            <button class="btn-add" onclick="agregar('Prosciutto e Funghi', 44000)">Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizza 3 -->
+      <div class="pizza-card">
+        <div class="pizza-img" style="background: #dbeafe;">
+          🍕
+          <span class="pizza-badge">PREMIUM</span>
+        </div>
+        <div class="pizza-body">
+          <div class="pizza-title">Quattro Formaggi</div>
+          <div class="pizza-desc">Mezcla noble de gorgonzola italiano, fontina alpina, provolone ahumado y parmigiano reggiano.</div>
+          <div class="pizza-footer">
+            <span class="pizza-price">$46.000</span>
+            <button class="btn-add" onclick="agregar('Quattro Formaggi', 46000)">Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizza 4 -->
+      <div class="pizza-card">
+        <div class="pizza-img" style="background: #ecfdf5;">
+          🍕
+          <span class="pizza-badge">POPAYÁN TOP</span>
+        </div>
+        <div class="pizza-body">
+          <div class="pizza-title">Bella Italia Especial</div>
+          <div class="pizza-desc">Pepperoni madurado artesanal, tocineta crocante, tomates secos marinados y reducción balsámica.</div>
+          <div class="pizza-footer">
+            <span class="pizza-price">$48.000</span>
+            <button class="btn-add" onclick="agregar('Bella Italia Especial', 48000)">Pedir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulo de Pedido y Despliegue Local -->
+  <section class="checkout-box" id="pedido">
+    <h3>🛒 Formulario de Registro y Checkout de Pedidos (Despliegue Local)</h3>
+    <form id="orderForm" onsubmit="procesarPedido(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clienteNombre">Nombre Completo del Cliente:</label>
+          <input type="text" id="clienteNombre" required placeholder="Ej. Carlos Martínez" value="Karen Campo">
+        </div>
+        <div class="form-group">
+          <label for="clienteTel">Teléfono Móvil (MinTIC +57):</label>
+          <input type="tel" id="clienteTel" required placeholder="Ej. 3187654321" value="3186681000">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clienteDir">Dirección de Entrega en Popayán:</label>
+          <input type="text" id="clienteDir" required placeholder="Ej. Carrera 9 # 4-25 Centro" value="Calle 5 # 10-30 Barrio Bolívar">
+        </div>
+        <div class="form-group">
+          <label for="productoSelect">Producto Seleccionado:</label>
+          <select id="productoSelect">
+            <option value="Bella Italia Especial - $48.000">Bella Italia Especial - $48.000 COP</option>
+            <option value="Margherita D.O.C. - $38.000">Margherita D.O.C. - $38.000 COP</option>
+            <option value="Prosciutto e Funghi - $44.000">Prosciutto e Funghi - $44.000 COP</option>
+            <option value="Quattro Formaggi - $46.000">Quattro Formaggi - $46.000 COP</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Confirmar Registro y Liquidar Pedido</button>
+    </form>
+    <div id="resultadoPedido" style="margin-top: 15px; display: none; padding: 12px; border-radius: 6px; background: #ecfdf5; border: 1px solid #10b981; color: #064e3b; font-weight: 600;">
+    </div>
+  </section>
+
+  <!-- Pie de Página Institucional -->
+  <footer>
+    <p><strong>Pizzería Gourmet Bella Italia Popayán</strong> • Proyecto Formativo SENA ADSO - Ficha 3186681</p>
+    <p>Aprendiz: Karen Yuliana Campo • Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</p>
+    <p style="margin-top: 8px; opacity: 0.8; font-size: 11.5px;">Despliegue local en contenedor Docker • Evidencia GA10-220501097-AA3-EV01 • Servidor Web Nginx &amp; PHP</p>
+  </footer>
+
+  <script>
+    function agregar(nombre, precio) {
+      document.getElementById('productoSelect').value = nombre + ' - $' + precio.toLocaleString('es-CO');
+      document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+    }
+    function procesarPedido(e) {
+      e.preventDefault();
+      const nom = document.getElementById('clienteNombre').value;
+      const tel = document.getElementById('clienteTel').value;
+      const dir = document.getElementById('clienteDir').value;
+      const prod = document.getElementById('productoSelect').value;
+      const box = document.getElementById('resultadoPedido');
+      box.style.display = 'block';
+      box.innerHTML = '✔ ¡Pedido registrado exitosamente en el servidor local!<br>' +
+                      '<strong>Cliente:</strong> ' + nom + ' | <strong>Teléfono:</strong> ' + tel + '<br>' +
+                      '<strong>Dirección Popayán:</strong> ' + dir + '<br>' +
+                      '<strong>Producto:</strong> ' + prod + ' | <strong>Estado:</strong> EN PREPARACIÓN (Mesa/Horno)';
+    }
+  </script>
+</body>
+</html>
