@@ -1,0 +1,44 @@
+services:
+  sena-pruebas-funcionales-web:
+    image: httpd:alpine
+    container_name: sena-pruebas-funcionales-web
+    restart: unless-stopped
+    ports:
+      - "8096:80"
+    volumes:
+      - ./../sitio_pruebas_funcionales:/usr/local/apache2/htdocs/
+    networks:
+      - sena_pruebas_net
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  sena-pruebas-funcionales-db:
+    image: mysql:8.0
+    container_name: sena-pruebas-funcionales-db
+    restart: unless-stopped
+    ports:
+      - "3311:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: RootSecurePass2026*
+      MYSQL_DATABASE: pizzeria_pruebas_db
+      MYSQL_USER: pizzeria_test_user
+      MYSQL_PASSWORD: TestUserPass2026!
+    volumes:
+      - mysql_pruebas_data:/var/lib/mysql
+    networks:
+      - sena_pruebas_net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pRootSecurePass2026*"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  sena_pruebas_net:
+    driver: bridge
+
+volumes:
+  mysql_pruebas_data:

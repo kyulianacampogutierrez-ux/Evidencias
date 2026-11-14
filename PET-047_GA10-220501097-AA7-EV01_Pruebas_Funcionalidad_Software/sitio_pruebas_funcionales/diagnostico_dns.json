@@ -1,0 +1,44 @@
+{
+  "dominio": "pizzeriabellaitalia-popayan.rf.gd",
+  "servidor_nombres": [
+    "ns1.epizy.com",
+    "ns2.epizy.com"
+  ],
+  "registros_dns": {
+    "A": {
+      "host": "@",
+      "tipo": "A",
+      "valor": "185.27.134.148",
+      "ttl": 300,
+      "estado": "ACTIVO_RESOLVIENDO"
+    },
+    "CNAME": {
+      "host": "www",
+      "tipo": "CNAME",
+      "valor": "pizzeriabellaitalia-popayan.rf.gd",
+      "ttl": 300,
+      "estado": "ACTIVO_CANONICO"
+    },
+    "TXT": {
+      "host": "@",
+      "tipo": "TXT",
+      "valor": "v=spf1 include:_spf.rf.gd ~all",
+      "ttl": 300,
+      "estado": "VALIDADO_SPF"
+    }
+  },
+  "certificado_ssl": {
+    "emisor": "Let's Encrypt Authority X3",
+    "protocolo": "TLSv1.3",
+    "cifrado": "ECDHE-RSA-AES256-GCM-SHA384",
+    "vigencia": "90 dias (Auto-renovacion certbot)",
+    "hsts": true
+  },
+  "verificacion_http": {
+    "puerto_http": 80,
+    "puerto_https": 443,
+    "redireccion_301": "FORZADA_CORRECTA",
+    "codigo_respuesta": 200,
+    "tiempo_latencia_ms": 14.2
+  }
+}

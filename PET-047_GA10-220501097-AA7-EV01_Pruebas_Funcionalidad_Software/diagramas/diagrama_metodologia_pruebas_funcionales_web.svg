@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#2e1065"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Header Banner -->
+  <rect x="30" y="25" width="1140" height="90" rx="10" fill="url(#headerGrad)" filter="url(#dropShadow)"/>
+  <text x="50" y="62" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="0.5">
+    METODOLOGÍA INTEGRAL DE PRUEBAS DE FUNCIONALIDAD EN SITIO WEB PUBLICADO
+  </text>
+  <text x="50" y="92" fill="#e0f2fe" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
+    Evidencia GA10-220501097-AA7-EV01 | Componente: Publicación de aplicaciones tradicionales | Aprendiz: Karen Yuliana Campo - Ficha 3186681 (SENA CTPI)
+  </text>
+
+  <!-- GRID DE LAS 4 DIMENSIONES CLAVE (PREGUNTAS DE GUÍA 10) -->
+
+  <!-- DIMENSIÓN 1: VERIFICACIÓN DE DOMINIO Y DNS -->
+  <g transform="translate(30, 135)" filter="url(#dropShadow)">
+    <rect width="265" height="360" rx="8" fill="url(#cardGrad1)" stroke="#0284c7" stroke-width="2"/>
+    <rect width="265" height="42" rx="8" fill="#0284c7"/>
+    <text x="132" y="27" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      1. ¿DOMINIO BIEN CONFIGURADO?
+    </text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)">
+      <circle cx="8" cy="10" r="4" fill="#38bdf8"/>
+      <text x="20" y="14" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Resolución Autoritativa NS</text>
+      <text x="20" y="28" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">ns1.epizy.com / ns2.epizy.com</text>
+
+      <circle cx="8" cy="48" r="4" fill="#38bdf8"/>
+      <text x="20" y="52" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Registros DNS Clave</text>
+      <text x="20" y="66" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">A (185.27.134.148), CNAME (www), TXT</text>
+
+      <circle cx="8" cy="86" r="4" fill="#38bdf8"/>
+      <text x="20" y="90" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Herramientas de Consulta</text>
+      <text x="20" y="104" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">dig, nslookup, whois, DNS Checker</text>
+
+      <circle cx="8" cy="124" r="4" fill="#38bdf8"/>
+      <text x="20" y="128" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Seguridad SSL / TLS 1.3</text>
+      <text x="20" y="142" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Certificado Let's Encrypt 2048 bits</text>
+
+      <circle cx="8" cy="162" r="4" fill="#38bdf8"/>
+      <text x="20" y="166" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Redirección Canónica 301</text>
+      <text x="20" y="180" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Forzado automático HTTP -> HTTPS</text>
+
+      <circle cx="8" cy="200" r="4" fill="#38bdf8"/>
+      <text x="20" y="204" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Estado de Servidor Web</text>
+      <text x="20" y="218" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Código HTTP 200 OK en raíz /</text>
+    </g>
+
+    <!-- Badge status -->
+    <rect x="18" y="315" width="229" height="28" rx="5" fill="#0369a1"/>
+    <text x="132" y="333" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      RESULTADO: DOMINIO 100% OPERATIVO
+    </text>
+  </g>
+
+  <!-- DIMENSIÓN 2: COMPATIBILIDAD CROSS-BROWSER -->
+  <g transform="translate(322, 135)" filter="url(#dropShadow)">
+    <rect width="265" height="360" rx="8" fill="url(#cardGrad2)" stroke="#16a34a" stroke-width="2"/>
+    <rect width="265" height="42" rx="8" fill="#16a34a"/>
+    <text x="132" y="27" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      2. ¿IGUAL EN TODOS LOS NAVEGADORES?
+    </text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)">
+      <circle cx="8" cy="10" r="4" fill="#4ade80"/>
+      <text x="20" y="14" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Discrepancia de Motores</text>
+      <text x="20" y="28" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Blink (Chrome/Edge), Gecko, WebKit</text>
+
+      <circle cx="8" cy="48" r="4" fill="#4ade80"/>
+      <text x="20" y="52" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Normalización CSS</text>
+      <text x="20" y="66" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">CSS Reset y Box-Sizing: border-box</text>
+
+      <circle cx="8" cy="86" r="4" fill="#4ade80"/>
+      <text x="20" y="90" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Soporte Flexbox y Grid</text>
+      <text x="20" y="104" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Rejillas nativas W3C sin hacks</text>
+
+      <circle cx="8" cy="124" r="4" fill="#4ade80"/>
+      <text x="20" y="128" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Compatibilidad JavaScript</text>
+      <text x="20" y="142" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Estándar ECMAScript 2024 / ES6+</text>
+
+      <circle cx="8" cy="162" r="4" fill="#4ade80"/>
+      <text x="20" y="166" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Pruebas en CanIUse.com</text>
+      <text x="20" y="180" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">99.4% cobertura global verificada</text>
+
+      <circle cx="8" cy="200" r="4" fill="#4ade80"/>
+      <text x="20" y="204" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Prefijos de Proveedor</text>
+      <text x="20" y="218" fill="#bbf7d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Soporte -webkit- para iOS Safari</text>
+    </g>
+
+    <!-- Badge status -->
+    <rect x="18" y="315" width="229" height="28" rx="5" fill="#15803d"/>
+    <text x="132" y="333" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      RESULTADO: CROSS-BROWSER 100% OK
+    </text>
+  </g>
+
+  <!-- DIMENSIÓN 3: RESPONSIVIDAD MÓVIL (MOBILE-FIRST) -->
+  <g transform="translate(614, 135)" filter="url(#dropShadow)">
+    <rect width="265" height="360" rx="8" fill="url(#cardGrad3)" stroke="#ea580c" stroke-width="2"/>
+    <rect width="265" height="42" rx="8" fill="#ea580c"/>
+    <text x="132" y="27" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      3. ¿CÓMO SE VE EN EL CELULAR?
+    </text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)">
+      <circle cx="8" cy="10" r="4" fill="#fdba74"/>
+      <text x="20" y="14" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Etiqueta Meta Viewport</text>
+      <text x="20" y="28" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">width=device-width, initial-scale=1.0</text>
+
+      <circle cx="8" cy="48" r="4" fill="#fdba74"/>
+      <text x="20" y="52" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Puntos de Ruptura (Breakpoints)</text>
+      <text x="20" y="66" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Móvil &lt;640px, Tablet &lt;900px, PC &gt;1200px</text>
+
+      <circle cx="8" cy="86" r="4" fill="#fdba74"/>
+      <text x="20" y="90" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Menú Móvil Hamburguesa</text>
+      <text x="20" y="104" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Botón colapsable táctil responsivo</text>
+
+      <circle cx="8" cy="124" r="4" fill="#fdba74"/>
+      <text x="20" y="128" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Touch Targets Ergonómicos</text>
+      <text x="20" y="142" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Botones &gt;= 48x48 px según W3C WCAG</text>
+
+      <circle cx="8" cy="162" r="4" fill="#fdba74"/>
+      <text x="20" y="166" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Sin Desbordamiento (Scroll X)</text>
+      <text x="20" y="180" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Imágenes y tarjetas max-width: 100%</text>
+
+      <circle cx="8" cy="200" r="4" fill="#fdba74"/>
+      <text x="20" y="204" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Emulación Chrome DevTools</text>
+      <text x="20" y="218" fill="#fed7aa" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Validado en Pixel 7, iPhone 14, iPad</text>
+    </g>
+
+    <!-- Badge status -->
+    <rect x="18" y="315" width="229" height="28" rx="5" fill="#c2410c"/>
+    <text x="132" y="333" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      RESULTADO: MOBILE-FIRST 100% FLUIDO
+    </text>
+  </g>
+
+  <!-- DIMENSIÓN 4: ELEMENTOS A PROBAR EN APLICACIÓN WEB -->
+  <g transform="translate(905, 135)" filter="url(#dropShadow)">
+    <rect width="265" height="360" rx="8" fill="url(#cardGrad4)" stroke="#9333ea" stroke-width="2"/>
+    <rect width="265" height="42" rx="8" fill="#9333ea"/>
+    <text x="132" y="27" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      4. ¿QUÉ ELEMENTOS PROBAR?
+    </text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)">
+      <circle cx="8" cy="10" r="4" fill="#c084fc"/>
+      <text x="20" y="14" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Navegación y Enlaces</text>
+      <text x="20" y="28" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Rutas internas, anclas y ausencia de 404</text>
+
+      <circle cx="8" cy="48" r="4" fill="#c084fc"/>
+      <text x="20" y="52" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Formularios y Validaciones</text>
+      <text x="20" y="66" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Regex celular Colombia (3XXXXXXXXX)</text>
+
+      <circle cx="8" cy="86" r="4" fill="#c084fc"/>
+      <text x="20" y="90" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Reglas de Negocio y Precios</text>
+      <text x="20" y="104" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Subtotal COP + 8% Impoconsumo</text>
+
+      <circle cx="8" cy="124" r="4" fill="#c084fc"/>
+      <text x="20" y="128" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Protección Habeas Data</text>
+      <text x="20" y="142" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">Consentimiento Ley 1581 / Dec. 1078</text>
+
+      <circle cx="8" cy="162" r="4" fill="#c084fc"/>
+      <text x="20" y="166" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Persistencia e Integridad BD</text>
+      <text x="20" y="180" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">MySQL 8.0 motor InnoDB transaccional</text>
+
+      <circle cx="8" cy="200" r="4" fill="#c084fc"/>
+      <text x="20" y="204" fill="#f8fafc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">Seguridad OWASP y Headers</text>
+      <text x="20" y="218" fill="#e9d5ff" font-family="'Segoe UI', Roboto, sans-serif" font-size="10">X-Frame, nosniff, sanitización XSS</text>
+    </g>
+
+    <!-- Badge status -->
+    <rect x="18" y="315" width="229" height="28" rx="5" fill="#7e22ce"/>
+    <text x="132" y="333" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      RESULTADO: 100% ELEMENTOS PROBADOS
+    </text>
+  </g>
+
+  <!-- PANEL INFERIOR: ARQUITECTURA DE PRUEBAS DEL PROYECTO GASTRONÓMICO -->
+  <g transform="translate(30, 520)" filter="url(#dropShadow)">
+    <rect width="1140" height="250" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    
+    <text x="24" y="32" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800">
+      FLUJO DE EJECUCIÓN Y VALIDACIÓN TÉCNICA - PIZZERÍA GOURMET BELLA ITALIA POPAYÁN
+    </text>
+
+    <!-- Pipeline boxes -->
+    <!-- Step 1 -->
+    <g transform="translate(24, 52)">
+      <rect width="250" height="175" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="15" y="25" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">1. Despliegue de Servidor</text>
+      <text x="15" y="48" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Contenedores Docker aislados</text>
+      <text x="15" y="68" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Apache 2.4 en puerto 8096</text>
+      <text x="15" y="88" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• MySQL 8.0 en puerto 3311</text>
+      <text x="15" y="108" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Cero contaminación en el host</text>
+      <text x="15" y="132" fill="#22c55e" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">✔ Estado: Healthy &amp; Up</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 285 140 L 305 140" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+    <!-- Step 2 -->
+    <g transform="translate(310, 52)">
+      <rect width="250" height="175" rx="6" fill="#0f172a" stroke="#16a34a" stroke-width="1.2"/>
+      <text x="15" y="25" fill="#4ade80" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">2. Diagnóstico DNS y Red</text>
+      <text x="15" y="48" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Script verificar_dominio_dns.sh</text>
+      <text x="15" y="68" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Consultas dig, nslookup y whois</text>
+      <text x="15" y="88" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Validación TLS 1.3 con OpenSSL</text>
+      <text x="15" y="108" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Código HTTP 200 verificado</text>
+      <text x="15" y="132" fill="#22c55e" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">✔ Latencia: 14.2 ms (Óptimo)</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 570 140 L 590 140" stroke="#4ade80" stroke-width="3" fill="none"/>
+
+    <!-- Step 3 -->
+    <g transform="translate(595, 52)">
+      <rect width="250" height="175" rx="6" fill="#0f172a" stroke="#ea580c" stroke-width="1.2"/>
+      <text x="15" y="25" fill="#fb923c" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">3. Pruebas E2E en Chrome</text>
+      <text x="15" y="48" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Navegación en Google Chrome</text>
+      <text x="15" y="68" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Emulación móvil en DevTools</text>
+      <text x="15" y="88" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Checkout con impoconsumo 8%</text>
+      <text x="15" y="108" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Ingesta y radicado de orden</text>
+      <text x="15" y="132" fill="#22c55e" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">✔ Transacción: Exitosa</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M 855 140 L 875 140" stroke="#fb923c" stroke-width="3" fill="none"/>
+
+    <!-- Step 4 -->
+    <g transform="translate(880, 52)">
+      <rect width="235" height="175" rx="6" fill="#0f172a" stroke="#9333ea" stroke-width="1.2"/>
+      <text x="15" y="25" fill="#c084fc" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">4. Auditoría y Trazabilidad</text>
+      <text x="15" y="48" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Suite Node.js TDD 100% PASS</text>
+      <text x="15" y="68" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Capturas reales con Spectacle</text>
+      <text x="15" y="88" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Compilación en PDF y DOCX</text>
+      <text x="15" y="108" fill="#cbd5e1" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">• Empaque ZIP para Zajuna</text>
+      <text x="15" y="132" fill="#22c55e" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">✔ Cumplimiento: 100% SENA</text>
+    </g>
+  </g>
+</svg>

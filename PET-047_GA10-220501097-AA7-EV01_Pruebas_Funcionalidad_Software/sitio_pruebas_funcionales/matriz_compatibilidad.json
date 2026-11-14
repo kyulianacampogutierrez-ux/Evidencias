@@ -1,0 +1,70 @@
+{
+  "plataforma": "Pizzería Gourmet Bella Italia Popayán",
+  "estudio_cross_browser": [
+    {
+      "navegador": "Google Chrome",
+      "motor_renderizado": "Blink / V8",
+      "version_probada": "131.0+ (Desktop & Android)",
+      "soporte_css_flexbox_grid": "100%",
+      "soporte_ecmascript": "ES2024+",
+      "resultado_visual": "EXCELENTE - Fidelidad 100%",
+      "estado": "PASS"
+    },
+    {
+      "navegador": "Mozilla Firefox",
+      "motor_renderizado": "Gecko / SpiderMonkey",
+      "version_probada": "132.0+ (Desktop & Android)",
+      "soporte_css_flexbox_grid": "100%",
+      "soporte_ecmascript": "ES2024+",
+      "resultado_visual": "EXCELENTE - Fidelidad 100%",
+      "estado": "PASS"
+    },
+    {
+      "navegador": "Apple Safari",
+      "motor_renderizado": "WebKit / JavaScriptCore",
+      "version_probada": "17.0+ (macOS & iOS)",
+      "soporte_css_flexbox_grid": "99.8% (Requiere -webkit-appearance reset)",
+      "soporte_ecmascript": "ES2023+",
+      "resultado_visual": "EXCELENTE - Normalizado con meta viewport",
+      "estado": "PASS"
+    },
+    {
+      "navegador": "Microsoft Edge",
+      "motor_renderizado": "Blink / V8",
+      "version_probada": "131.0+ (Windows 11 & Android)",
+      "soporte_css_flexbox_grid": "100%",
+      "soporte_ecmascript": "ES2024+",
+      "resultado_visual": "EXCELENTE - Fidelidad 100%",
+      "estado": "PASS"
+    }
+  ],
+  "dispositivos_moviles_emulados": [
+    {
+      "dispositivo": "Google Pixel 7",
+      "resolucion": "412 x 915 px",
+      "orientacion": "Portrait",
+      "touch_targets": ">= 48px",
+      "menu_hamburguesa": "FUNCIONAL",
+      "desbordamiento_horizontal": "NINGUNO (0px)",
+      "estado": "PASS"
+    },
+    {
+      "dispositivo": "Apple iPhone 14 Pro",
+      "resolucion": "393 x 852 px",
+      "orientacion": "Portrait",
+      "touch_targets": ">= 48px",
+      "menu_hamburguesa": "FUNCIONAL",
+      "desbordamiento_horizontal": "NINGUNO (0px)",
+      "estado": "PASS"
+    },
+    {
+      "dispositivo": "Apple iPad Mini",
+      "resolucion": "768 x 1024 px",
+      "orientacion": "Portrait & Landscape",
+      "touch_targets": ">= 48px",
+      "menu_hamburguesa": "ADAPTATIVO_GRID",
+      "desbordamiento_horizontal": "NINGUNO (0px)",
+      "estado": "PASS"
+    }
+  ]
+}
