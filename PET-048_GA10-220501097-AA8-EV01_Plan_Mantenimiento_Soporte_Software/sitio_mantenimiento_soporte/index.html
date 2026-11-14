@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portal de Mantenimiento y Soporte Técnico | Pizzería Gourmet Bella Italia Popayán - GA10-AA8-EV01</title>
+  
+  <style>
+    :root {
+      --primary: #0369a1;
+      --primary-dark: #0c4a6e;
+      --primary-light: #e0f2fe;
+      --secondary: #059669;
+      --secondary-light: #ecfdf5;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --dark: #0f172a;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-muted: #64748b;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      color: var(--dark);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      font-size: 14.5px;
+    }
+
+    /* Top bar */
+    .top-status-bar {
+      background: #0f172a;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 7px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary);
+    }
+    .top-status-bar strong {
+      color: #38bdf8;
+    }
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #064e3b;
+      color: #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .dot-pulse {
+      width: 7px;
+      height: 7px;
+      background: #34d399;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-container {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      font-size: 30px;
+      background: var(--primary-light);
+      padding: 6px;
+      border-radius: 8px;
+    }
+    .brand-text h1 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.1;
+    }
+    .brand-text span {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      font-size: 13.5px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1250px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+
+    /* Banner ISO 14764 */
+    .iso-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      border-left: 6px solid #38bdf8;
+    }
+    .iso-banner h2 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .iso-banner p {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--primary);
+    }
+    .kpi-card h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 2px;
+    }
+    .kpi-status {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    /* Layout Sections */
+    .section-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.3fr;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .panel {
+      background: #ffffff;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .panel-header {
+      border-bottom: 2px solid var(--gray-border);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-header h3 {
+      font-size: 16.5px;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 8px;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background: #fafaf9;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-p1 { background: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+    .badge-p2 { background: #ffedd5; color: #9a3412; border: 1px solid #fb923c; }
+    .badge-p3 { background: #fef9c3; color: #854d0e; border: 1px solid #facc15; }
+    .badge-p4 { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.15);
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: var(--primary-dark);
+    }
+
+    .alert-ticket-created {
+      display: none;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 12px;
+      color: #065f46;
+      font-size: 12.5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 24px 20px;
+      margin-top: 40px;
+      font-size: 12.5px;
+      text-align: center;
+      border-top: 3px solid var(--primary);
+    }
+
+    @media (max-width: 900px) {
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE ESTADO EN VIVO -->
+  <div class="top-status-bar">
+    <div>
+      <span>Servidor de Producción: <strong>Apache 2.4 &middot; cPanel Hosting</strong></span> |
+      <span>Base de Datos: <strong>MySQL 8.0 (InnoDB)</strong></span> |
+      <span>Dominio: <strong>pizzeriabellaitalia-popayan.rf.gd</strong></span>
+    </div>
+    <div>
+      <span class="badge-live"><span class="dot-pulse"></span> SISTEMA ESTABLE &middot; SLA 99.98% CUMPLIDO</span>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="header-container">
+      <div class="brand-box">
+        <span class="brand-icon">🛠️</span>
+        <div class="brand-text">
+          <h1>Centro de Mantenimiento & Soporte Técnico</h1>
+          <span>Pizzería Gourmet Bella Italia Popayán &middot; Ficha SENA 3186681 (Karen Yuliana Campo)</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#iso-marco" class="active">Norma ISO/IEC 14764</a></li>
+        <li><a href="#cronograma">Cronograma Anual</a></li>
+        <li><a href="#sla">Matriz SLA</a></li>
+        <li><a href="#mesa-ayuda">Mesa de Ayuda</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- BANNER ISO/IEC 14764 -->
+    <section id="iso-marco" class="iso-banner">
+      <h2><span>📘</span> Plan de Mantenimiento de Software según el Estándar Internacional ISO/IEC 14764</h2>
+      <p>
+        Evidencia <strong>GA10-220501097-AA8-EV01</strong> | Guía de Aprendizaje 10 &middot; Aprendiz: <strong>Karen Yuliana Campo</strong>.<br>
+        Implementación estructurada de los seis procesos del ciclo de vida del mantenimiento: <strong>1)</strong> Proceso de implementación, <strong>2)</strong> Análisis de modificaciones y problemas, <strong>3)</strong> Implementación de la modificación, <strong>4)</strong> Aceptación y revisión, <strong>5)</strong> Migración de versiones, y <strong>6)</strong> Retiro o decomiso seguro del software.
+      </p>
+    </section>
+
+    <!-- METRICAS DE SALUD Y OPERABILIDAD (KPIS) -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <h4>Disponibilidad (Uptime)</h4>
+        <div class="kpi-value">99.98%</div>
+        <div class="kpi-status">✔ Supera meta SLA (99.5%)</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Tiempo Medio Entre Fallos (MTBF)</h4>
+        <div class="kpi-value">720 hrs</div>
+        <div class="kpi-status">✔ 30 días de operación continua</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Tiempo Medio de Reparación (MTTR)</h4>
+        <div class="kpi-value">38 min</div>
+        <div class="kpi-status">✔ Dentro de ventana P1 (&lt; 2 hrs)</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Mantenimientos Preventivos</h4>
+        <div class="kpi-value">12 / 12</div>
+        <div class="kpi-status">✔ 100% Ejecutados según cronograma</div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN CRONOGRAMA Y MATRIZ SLA -->
+    <div class="section-grid">
+
+      <!-- Panel Cronograma -->
+      <section id="cronograma" class="panel">
+        <div class="panel-header">
+          <h3><span>📅</span> Cronograma Anual de Mantenimiento Preventivo (2026-2027)</h3>
+          <span style="font-size: 11.5px; color: var(--primary); font-weight: 700;">Ventana: Domingos 02:00 - 04:00 COT</span>
+        </div>
+
+        <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 10px;">
+          Actividades preventivas programadas para mitigar degradación de rendimiento y prevenir brechas de seguridad:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 20%;">Frecuencia</th>
+              <th style="width: 35%;">Actividad de Mantenimiento</th>
+              <th style="width: 25%;">Alcance y Verificación</th>
+              <th style="width: 20%;">Responsable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Semanal</strong></td>
+              <td>Respaldo Integral y Rotación de Logs</td>
+              <td>Dump MySQL + tar.gz de public_html; purga de logs Apache.</td>
+              <td>Karen Campo (DBA)</td>
+            </tr>
+            <tr>
+              <td><strong>Quincenal</strong></td>
+              <td>Optimización de Tablas MySQL</td>
+              <td><code>OPTIMIZE TABLE</code> en tablas de pedidos y clientes.</td>
+              <td>Karen Campo (DBA)</td>
+            </tr>
+            <tr>
+              <td><strong>Mensual</strong></td>
+              <td>Auditoría de Seguridad y Parches</td>
+              <td>Revisión de paquetes en contenedores, parches PHP/Apache.</td>
+              <td>Equipo DevOps</td>
+            </tr>
+            <tr>
+              <td><strong>Bimestral</strong></td>
+              <td>Renovación Certificado SSL/TLS</td>
+              <td>Verificación de renovación certbot Let's Encrypt (90 días).</td>
+              <td>Administrador Red</td>
+            </tr>
+            <tr>
+              <td><strong>Trimestral</strong></td>
+              <td>Pruebas de Simulación de Desastre (DRP)</td>
+              <td>Restauración de backup en ambiente Staging y validación de sumas SHA-256.</td>
+              <td>Interventoría SENA</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Panel Matriz SLA -->
+      <section id="sla" class="panel">
+        <div class="panel-header">
+          <h3><span>⏱️</span> Matriz de Severidad y Acuerdos de Nivel de Servicio (SLA)</h3>
+        </div>
+
+        <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 10px;">
+          Mantenimiento correctivo para incidentes en producción:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Impacto Operacional</th>
+              <th>Respuesta</th>
+              <th>Solución (MTTR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-pill badge-p1">P1 - Crítica</span></td>
+              <td>Caída total del checkout o base de datos detenida.</td>
+              <td>&lt; 15 min</td>
+              <td>&lt; 2 horas</td>
+            </tr>
+            <tr>
+              <td><span class="badge-pill badge-p2">P2 - Alta</span></td>
+              <td>Fallo en pasarela o degradación de latencia &gt; 3 seg.</td>
+              <td>&lt; 30 min</td>
+              <td>&lt; 4 horas</td>
+            </tr>
+            <tr>
+              <td><span class="badge-pill badge-p3">P3 - Media</span></td>
+              <td>Falla visual de UI que no impide ordenar pizza.</td>
+              <td>&lt; 2 horas</td>
+              <td>&lt; 24 horas</td>
+            </tr>
+            <tr>
+              <td><span class="badge-pill badge-p4">P4 - Baja</span></td>
+              <td>Sugerencia de mejora o ajuste cosmético menor.</td>
+              <td>&lt; 8 horas</td>
+              <td>&lt; 72 horas</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+    <!-- SECCIÓN MESA DE AYUDA / RADICACIÓN DE INCIDENCIAS -->
+    <div class="section-grid">
+
+      <!-- Formulario Radicación Ticket -->
+      <section id="mesa-ayuda" class="panel">
+        <div class="panel-header">
+          <h3><span>🎫</span> Mesa de Ayuda: Registro de Solicitud de Mantenimiento (RFC)</h3>
+          <span style="font-size: 11px; background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 700;">HelpDesk Activo</span>
+        </div>
+
+        <form id="formTicket" onsubmit="radicarTicket(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label for="tipoMantenimiento">Tipo de Mantenimiento *</label>
+              <select id="tipoMantenimiento" class="form-control">
+                <option value="Correctivo">Mantenimiento Correctivo (Incidencia/Error)</option>
+                <option value="Preventivo">Mantenimiento Preventivo (Rutina/Optimización)</option>
+                <option value="Adaptativo">Mantenimiento Adaptativo (Cambio de Entorno/Ley)</option>
+                <option value="Perfectivo">Mantenimiento Perfectivo (Mejora de Desempeño)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nivelSeveridad">Nivel de Severidad (SLA) *</label>
+              <select id="nivelSeveridad" class="form-control" onchange="actualizarSlaEstimado()">
+                <option value="P1 - Crítica">P1 - Crítica (Solución en &lt; 2h)</option>
+                <option value="P2 - Alta">P2 - Alta (Solución en &lt; 4h)</option>
+                <option value="P3 - Media" selected>P3 - Media (Solución en &lt; 24h)</option>
+                <option value="P4 - Baja">P4 - Baja (Solución en &lt; 72h)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label for="moduloAfectado">Módulo del Sistema Afectado *</label>
+              <select id="moduloAfectado" class="form-control">
+                <option value="Motor de Checkout y Pedidos">Motor de Checkout y Pedidos en Línea</option>
+                <option value="Catálogo Gastronómico">Catálogo Gastronómico de Pizzas</option>
+                <option value="Base de Datos MySQL">Base de Datos Relacional MySQL</option>
+                <option value="Servidor Web Apache / SSL">Servidor Web Apache / Certificados SSL</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="solicitanteNombre">Nombre del Reportante *</label>
+              <input type="text" id="solicitanteNombre" class="form-control" value="Operador Turno Popayán (Admin)" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcionProblema">Descripción Detallada del Problema o Solicitud de Cambio *</label>
+            <textarea id="descripcionProblema" class="form-control" rows="3" required placeholder="Detalle la falla observada, mensajes de error HTTP o la tarea preventiva requerida..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            📩 Radicar Ticket de Mantenimiento en Mesa de Ayuda
+          </button>
+        </form>
+
+        <div class="alert-ticket-created" id="alertTicket">
+          <strong>¡Ticket de Mantenimiento Radicado Exitosamente!</strong><br>
+          <span id="ticketDetalle">Radicado: #TCK-2026-9812 | Tipo: Correctivo | SLA: 24 horas | Asignado a: Karen Yuliana Campo (Líder QA).</span>
+        </div>
+      </section>
+
+      <!-- Historial de Tickets Recientes -->
+      <section class="panel">
+        <div class="panel-header">
+          <h3><span>📜</span> Bitácora de Mantenimientos Recientes</h3>
+        </div>
+
+        <table style="font-size: 11.5px;">
+          <thead>
+            <tr>
+              <th>ID Ticket</th>
+              <th>Tipo</th>
+              <th>Severidad</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaBitacora">
+            <tr>
+              <td><code>#TCK-2026-084</code></td>
+              <td>Preventivo</td>
+              <td><span class="badge-pill badge-p3">P3 - Media</span></td>
+              <td><strong style="color: var(--secondary);">RESUELTO</strong></td>
+            </tr>
+            <tr>
+              <td><code>#TCK-2026-083</code></td>
+              <td>Correctivo</td>
+              <td><span class="badge-pill badge-p1">P1 - Crítica</span></td>
+              <td><strong style="color: var(--secondary);">RESUELTO</strong></td>
+            </tr>
+            <tr>
+              <td><code>#TCK-2026-082</code></td>
+              <td>Adaptativo</td>
+              <td><span class="badge-pill badge-p2">P2 - Alta</span></td>
+              <td><strong style="color: var(--secondary);">RESUELTO</strong></td>
+            </tr>
+            <tr>
+              <td><code>#TCK-2026-081</code></td>
+              <td>Preventivo</td>
+              <td><span class="badge-pill badge-p4">P4 - Baja</span></td>
+              <td><strong style="color: var(--secondary);">RESUELTO</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top: 14px; font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 10px; border-radius: 6px; border: 1px dashed #cbd5e1;">
+          <strong>Política de Cierre (ISO 14764):</strong> Ningún ticket correctivo se cierra sin prueba de regresión en ambiente Staging y firma de aceptación de la aprendiz Karen Campo.
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <p><strong>Pizzería Gourmet Bella Italia Popayán</strong> &middot; Centro Histórico Popayán, Calle 4 # 5-28</p>
+      <p style="margin-top: 4px;">Tecnología en Análisis y Desarrollo de Software (ADSO) | Ficha 3186681 | Aprendiz: Karen Yuliana Campo</p>
+      <p style="margin-top: 4px; font-size: 11.5px; color: #64748b;">
+        Evidencia GA10-220501097-AA8-EV01 &middot; Componente: Actividades de documentación y entrega de software en procesos de implantación
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function actualizarSlaEstimado() {
+      // Feedback dinámico según severidad
+    }
+
+    function radicarTicket(event) {
+      event.preventDefault();
+      const tipo = document.getElementById('tipoMantenimiento').value;
+      const sev = document.getElementById('nivelSeveridad').value;
+      const modulo = document.getElementById('moduloAfectado').value;
+      const desc = document.getElementById('descripcionProblema').value;
+      const numTicket = '#TCK-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById('ticketDetalle').innerHTML = 
+        '<strong>Radicado:</strong> ' + numTicket + '<br>' +
+        '<strong>Módulo:</strong> ' + modulo + ' | <strong>Severidad:</strong> ' + sev + '<br>' +
+        '<strong>Tipo:</strong> ' + tipo + ' | <strong>Responsable asignado:</strong> Karen Yuliana Campo (DBA/DevOps)<br>' +
+        '<strong>Descripción registrada:</strong> "' + desc.substring(0, 70) + '..."<br>' +
+        '<strong>Estado:</strong> REGISTRADO EN BITÁCORA Y EN PROCESO DE ATENCIÓN SEGÚN SLA.';
+
+      document.getElementById('alertTicket').style.display = 'block';
+
+      // Insertar en tabla
+      const tbody = document.getElementById('tablaBitacora');
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td><code>' + numTicket + '</code></td><td>' + tipo + '</td><td><span class="badge-pill badge-p2">' + sev.split(' ')[0] + '</span></td><td><strong style="color: #0369a1;">EN ATENCIÓN</strong></td>';
+      tbody.prepend(tr);
+
+      alert('¡Ticket ' + numTicket + ' registrado exitosamente bajo estándar ISO/IEC 14764!');
+    }
+  </script>
+</body>
+</html>

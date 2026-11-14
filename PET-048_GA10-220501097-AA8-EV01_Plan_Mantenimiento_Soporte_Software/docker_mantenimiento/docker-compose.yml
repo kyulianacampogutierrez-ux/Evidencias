@@ -1,0 +1,44 @@
+services:
+  sena-mantenimiento-soporte-web:
+    image: httpd:alpine
+    container_name: sena-mantenimiento-soporte-web
+    restart: unless-stopped
+    ports:
+      - "8097:80"
+    volumes:
+      - ./../sitio_mantenimiento_soporte:/usr/local/apache2/htdocs/
+    networks:
+      - sena_mantenimiento_net
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  sena-mantenimiento-soporte-db:
+    image: mysql:8.0
+    container_name: sena-mantenimiento-soporte-db
+    restart: unless-stopped
+    ports:
+      - "3312:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: RootSecurePass2026*
+      MYSQL_DATABASE: pizzeria_soporte_db
+      MYSQL_USER: pizzeria_soporte_user
+      MYSQL_PASSWORD: SoportePass2026!
+    volumes:
+      - mysql_soporte_data:/var/lib/mysql
+    networks:
+      - sena_mantenimiento_net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pRootSecurePass2026*"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  sena_mantenimiento_net:
+    driver: bridge
+
+volumes:
+  mysql_soporte_data:

@@ -1,0 +1,54 @@
+{
+  "proyecto": "Pizzería Gourmet Bella Italia Popayán",
+  "responsable_plan": "Karen Yuliana Campo (Ficha 3186681)",
+  "estandar_referencia": "ISO/IEC 14764:2006 (Ingeniería de Software - Procesos de ciclo de vida - Mantenimiento)",
+  "ano_plan": "2026-2027",
+  "ventana_mantenimiento_oficial": "Domingos de 02:00 a 04:00 COT (Baja concurrencia)",
+  "cronograma_actividades": [
+    {
+      "id": "ACT-PREV-01",
+      "tipo": "Preventivo",
+      "frecuencia": "Semanal",
+      "actividad": "Respaldo integral relacional MySQL y compresión de archivos public_html",
+      "procedimiento": "mysqldump con compresión gzip y archivado tar de assets",
+      "responsable": "Karen Campo (DBA)",
+      "impacto_estimado": "Sin interrupción del servicio (Online Hot Backup)"
+    },
+    {
+      "id": "ACT-PREV-02",
+      "tipo": "Preventivo",
+      "frecuencia": "Quincenal",
+      "actividad": "Depuración, análisis y optimización de tablas MySQL",
+      "procedimiento": "OPTIMIZE TABLE y ANALYZE TABLE sobre tablas transaccionales",
+      "responsable": "Karen Campo (DBA)",
+      "impacto_estimado": "Bloqueo temporal de lectura menor a 5 segundos"
+    },
+    {
+      "id": "ACT-PREV-03",
+      "tipo": "Preventivo",
+      "frecuencia": "Mensual",
+      "actividad": "Auditoría de seguridad, rotación de logs y parches de infraestructura",
+      "procedimiento": "logrotate, purga de logs mayores a 30 días y actualización de imágenes Docker",
+      "responsable": "Equipo DevOps",
+      "impacto_estimado": "Reinicio de contenedor Apache menor a 10 segundos"
+    },
+    {
+      "id": "ACT-PREV-04",
+      "tipo": "Preventivo",
+      "frecuencia": "Bimestral",
+      "actividad": "Verificación y renovación anticipada de certificados SSL/TLS Let's Encrypt",
+      "procedimiento": "certbot renew --dry-run y verificación de vigencia > 30 días",
+      "responsable": "Administrador de Red",
+      "impacto_estimado": "Cero tiempo de inactividad"
+    },
+    {
+      "id": "ACT-PREV-05",
+      "tipo": "Preventivo",
+      "frecuencia": "Trimestral",
+      "actividad": "Simulación de recuperación ante desastres (Disaster Recovery Plan - DRP)",
+      "procedimiento": "Restauración de backup en servidor Staging y validación de sumas SHA-256",
+      "responsable": "Karen Campo & Interventoría SENA",
+      "impacto_estimado": "Aislado en ambiente de pruebas (Sin impacto en producción)"
+    }
+  ]
+}

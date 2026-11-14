@@ -1,0 +1,41 @@
+{
+  "acuerdos_nivel_servicio": {
+    "empresa": "Pizzería Gourmet Bella Italia Popayán",
+    "horas_cobertura_soporte": "Lunes a Domingo 10:00 - 23:00 COT (Horario comercial)",
+    "soporte_critico_24_7": true,
+    "matriz_severidad": [
+      {
+        "nivel": "P1 - Crítica",
+        "descripcion": "Interrupción total del sistema web o imposibilidad completa de procesar pedidos en el checkout.",
+        "tiempo_primera_respuesta": "15 minutos",
+        "tiempo_solucion_mttr": "2 horas",
+        "canal_escalamiento": "Llamada telefónica inmediata al Administrador y DevOps",
+        "procedimiento": "Rollback inmediato o hotfix en Staging y despliegue prioritario"
+      },
+      {
+        "nivel": "P2 - Alta",
+        "descripcion": "Degradación severa del servicio (latencia > 3 seg) o fallo en métodos de pago secundarios.",
+        "tiempo_primera_respuesta": "30 minutos",
+        "tiempo_solucion_mttr": "4 horas",
+        "canal_escalamiento": "Notificación por HelpDesk y correo prioritario",
+        "procedimiento": "Optimización de consultas o conmutación a método alternativo"
+      },
+      {
+        "nivel": "P3 - Media",
+        "descripcion": "Fallo funcional parcial o defecto cosmético que no impide la toma de órdenes.",
+        "tiempo_primera_respuesta": "2 horas",
+        "tiempo_solucion_mttr": "24 horas",
+        "canal_escalamiento": "Ticket en Mesa de Ayuda",
+        "procedimiento": "Corrección en ciclo estándar de release quincenal"
+      },
+      {
+        "nivel": "P4 - Baja",
+        "descripcion": "Solicitud de mejora, consulta técnica o cambio cosmético menor.",
+        "tiempo_primera_respuesta": "8 horas",
+        "tiempo_solucion_mttr": "72 horas",
+        "canal_escalamiento": "Ticket en Mesa de Ayuda",
+        "procedimiento": "Evaluación en comité de cambios RFC"
+      }
+    ]
+  }
+}
