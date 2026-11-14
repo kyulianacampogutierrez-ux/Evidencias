@@ -1,0 +1,68 @@
+version: '3.8'
+
+# ==============================================================================
+# ORQUESTACIÓN DOCKER COMPOSE - SERVICIOS CLIENTE: APACHE + MYSQL EN LINUX
+# Evidencia: GA10-220501097-AA5-EV01 - Configuración de Servicios, BD y Software
+# Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | SENA CTPI Popayán
+# ==============================================================================
+
+services:
+  # 1. GESTOR DE BASE DE DATOS MYSQL 8.0 (Ubuntu/Debian Based)
+  servidor_mysql:
+    image: mysql:8.0
+    container_name: sena-cliente-mysql-servidor
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: RootPizzeria2026!
+      MYSQL_DATABASE: pizzeria_bella_italia_db
+      MYSQL_USER: karen_admin
+      MYSQL_PASSWORD: SenaPopayan2026!
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mysql_pizzeria_datos:/var/lib/mysql
+    networks:
+      - red-servicios-cliente-sena
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -pRootPizzeria2026! --silent || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  # 2. SERVIDOR DE APLICACIONES APACHE 2.4 CON PHP 8.2 (Ubuntu/Debian Based)
+  servidor_apache:
+    image: sena-apache-php:8.2
+    container_name: sena-cliente-apache-servidor
+    restart: unless-stopped
+    depends_on:
+      servidor_mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: servidor_mysql
+      DB_PORT: 3306
+      DB_NAME: pizzeria_bella_italia_db
+      DB_USER: karen_admin
+      DB_PASS: SenaPopayan2026!
+    ports:
+      - "8090:80"
+    volumes:
+      - ../aplicacion_web:/var/www/html
+    networks:
+      - red-servicios-cliente-sena
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  mysql_pizzeria_datos:
+    name: sena_mysql_pizzeria_vol
+
+networks:
+  red-servicios-cliente-sena:
+    name: sena_cliente_red_bridge
+    driver: bridge

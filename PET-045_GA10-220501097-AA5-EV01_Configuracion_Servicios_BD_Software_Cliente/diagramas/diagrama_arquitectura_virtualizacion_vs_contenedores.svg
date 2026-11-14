@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="vmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="dockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Fondo General -->
+  <rect width="1200" height="800" fill="#f8fafc" />
+
+  <!-- Encabezado Institucional SENA -->
+  <rect x="30" y="25" width="1140" height="100" rx="12" fill="url(#headerGrad)" filter="url(#shadow)" />
+  <text x="60" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">
+    SERVICIO NACIONAL DE APRENDIZAJE - SENA | CTPI POPAYÁN (REGIONAL CAUCA)
+  </text>
+  <text x="60" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#a7f3d0">
+    EVIDENCIA GA10-220501097-AA5-EV01: CONFIGURACIÓN DE SERVICIOS, BASES DE DATOS Y SOFTWARE EN CLIENTE
+  </text>
+  <text x="60" y="107" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#e2e8f0">
+    Pila Tecnológica: Ubuntu Linux + Apache 2.4 + MySQL 8.0 • Proyecto: Pizzería Gourmet Bella Italia Popayán • Aprendiz: Karen Yuliana Campo (Ficha 3186681)
+  </text>
+
+  <!-- ========================================================================= -->
+  <!-- COLUMNA IZQUIERDA: VIRTUALIZACIÓN TRADICIONAL (MÁQUINA VIRTUAL)           -->
+  <!-- ========================================================================= -->
+  <rect x="30" y="145" width="550" height="475" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  
+  <!-- Encabezado Enfoque 1 -->
+  <rect x="30" y="145" width="550" height="50" rx="12" fill="url(#vmGrad)" />
+  <rect x="30" y="180" width="550" height="15" fill="url(#vmGrad)" />
+  <text x="50" y="176" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">
+    1. ARQUITECTURA DE VIRTUALIZACIÓN (MÁQUINA VIRTUAL)
+  </text>
+
+  <!-- Capa 1: Aplicación y Servicios (App + Apache + MySQL) -->
+  <rect x="55" y="210" width="500" height="60" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+  <text x="75" y="235" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#1e3a8a">
+    Capa de Aplicación y Servicios: Pizzería Gourmet Bella Italia
+  </text>
+  <text x="75" y="255" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#475569">
+    Apache HTTP Server 2.4 (Puerto 80) + MySQL Server 8.0 (Puerto 3306) + PHP 8.2 Mod
+  </text>
+
+  <!-- Capa 2: Binarios y Librerías del SO Huésped -->
+  <rect x="55" y="280" width="500" height="45" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2" />
+  <text x="75" y="308" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#334155">
+    Binarios y Librerías del Huésped: glibc, libapache2-mod-php, mysql-client (Debian/Ubuntu)
+  </text>
+
+  <!-- Capa 3: Sistema Operativo Huésped (Guest OS) -->
+  <rect x="55" y="335" width="500" height="65" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+  <text x="75" y="360" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#92400e">
+    Guest OS: Ubuntu Server 22.04 LTS Completo (Kernel Propio)
+  </text>
+  <text x="75" y="383" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#78350f">
+    Demanda overhead de CPU, init systemd independiente y memoria estática reservada (2048 MB)
+  </text>
+
+  <!-- Capa 4: Hipervisor Tipo 2 -->
+  <rect x="55" y="410" width="500" height="45" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5" />
+  <text x="75" y="438" font-family="'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="bold" fill="#5b21b6">
+    Hipervisor Tipo 2 (VirtualBox / VMware Workstation / KVM)
+  </text>
+
+  <!-- Capa 5: Sistema Operativo Anfitrión (Host OS) -->
+  <rect x="55" y="465" width="500" height="42" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2" />
+  <text x="75" y="491" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#1e293b">
+    Sistema Operativo Anfitrión del Cliente (Linux Ubuntu / Windows Host)
+  </text>
+
+  <!-- Capa 6: Hardware Físico Subyacente -->
+  <rect x="55" y="517" width="500" height="42" rx="8" fill="#cbd5e1" stroke="#475569" stroke-width="1.2" />
+  <text x="75" y="543" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">
+    Infraestructura de Hardware Físico (CPU x86_64, RAM DDR4/DDR5, Almacenamiento NVMe)
+  </text>
+
+  <!-- Métricas Clave VM -->
+  <rect x="55" y="570" width="500" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="65" y="594" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">
+    Métricas VM: Arranque: ~45-60s | Consumo Base: 2048 MB RAM | Espacio Disco: ~15 GB (.vdi)
+  </text>
+
+
+  <!-- ========================================================================= -->
+  <!-- COLUMNA DERECHA: ENFOQUE MODERNO DE CONTENEDORES (DOCKER)                -->
+  <!-- ========================================================================= -->
+  <rect x="620" y="145" width="550" height="475" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  
+  <!-- Encabezado Enfoque 2 -->
+  <rect x="620" y="145" width="550" height="50" rx="12" fill="url(#dockerGrad)" />
+  <rect x="620" y="180" width="550" height="15" fill="url(#dockerGrad)" />
+  <text x="640" y="176" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">
+    2. ARQUITECTURA DE CONTENEDORES (DOCKER ENGINE)
+  </text>
+
+  <!-- Contenedores Ligeros (Lado a Lado) -->
+  <!-- Contenedor 1: Apache + PHP -->
+  <rect x="640" y="210" width="245" height="115" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="655" y="235" font-family="'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="bold" fill="#0e7490">
+    Contenedor Apache 2.4
+  </text>
+  <text x="655" y="255" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#155e75">
+    • Imagen: sena-apache-php:8.2
+  </text>
+  <text x="655" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#155e75">
+    • Puerto: 8090:80 (Host:Cont)
+  </text>
+  <text x="655" y="295" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#155e75">
+    • Volumen: /var/www/html (App)
+  </text>
+  <text x="655" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">
+    [✓] Consumo: ~38 MB RAM
+  </text>
+
+  <!-- Contenedor 2: MySQL 8.0 -->
+  <rect x="905" y="210" width="245" height="115" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5" />
+  <text x="920" y="235" font-family="'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="bold" fill="#047857">
+    Contenedor MySQL 8.0
+  </text>
+  <text x="920" y="255" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#166534">
+    • Imagen: mysql:8.0 oficial
+  </text>
+  <text x="920" y="275" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#166534">
+    • Puerto: 3308:3306
+  </text>
+  <text x="920" y="295" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#166534">
+    • DB: pizzeria_bella_italia_db
+  </text>
+  <text x="920" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">
+    [✓] Consumo: ~180 MB RAM
+  </text>
+
+  <!-- Red Bridge Interna Docker -->
+  <rect x="640" y="335" width="510" height="40" rx="6" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,4" />
+  <text x="660" y="360" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#0369a1">
+    Red Bridge Aislada: red-servicios-cliente-sena (Resolución DNS automática)
+  </text>
+
+  <!-- Capa Docker Engine / Runtime -->
+  <rect x="640" y="385" width="510" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+  <text x="660" y="412" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">
+    Docker Engine (Daemon Containerd / RunC)
+  </text>
+  <text x="660" y="435" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#1e3a8a">
+    Aislamiento a nivel de Kernel mediante Namespaces (PID, NET, IPC) y Control Groups (cgroups)
+  </text>
+
+  <!-- Capa Kernel Compartido del Host -->
+  <rect x="640" y="465" width="510" height="42" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2" />
+  <text x="660" y="491" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#1e293b">
+    Kernel Linux Compartido (Sin sobrecarga de emulación de hardware)
+  </text>
+
+  <!-- Capa Hardware Físico Subyacente -->
+  <rect x="640" y="517" width="510" height="42" rx="8" fill="#cbd5e1" stroke="#475569" stroke-width="1.2" />
+  <text x="660" y="543" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">
+    Infraestructura de Hardware Físico (CPU, Memoria RAM y Almacenamiento NVMe)
+  </text>
+
+  <!-- Métricas Clave Docker -->
+  <rect x="640" y="570" width="510" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="650" y="594" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#047857">
+    Métricas Docker: Arranque: ~2-3s | Consumo Total: ~220 MB RAM | Espacio Imagen: ~550 MB
+  </text>
+
+  <!-- ========================================================================= -->
+  <!-- TABLA COMPARATIVA INFERIOR (RESUMEN EJECUTIVO)                            -->
+  <!-- ========================================================================= -->
+  <rect x="30" y="635" width="1140" height="140" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  
+  <text x="50" y="660" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#064e3b">
+    CUADRO COMPARATIVO TÉCNICO: VIRTUALIZACIÓN BASADA EN HIPERVISOR VS. CONTENEDORES LIGEROS DOCKER
+  </text>
+
+  <!-- Fila Encabezados -->
+  <rect x="50" y="670" width="1100" height="24" fill="#f1f5f9" />
+  <text x="60" y="686" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#334155">CRITERIO EVALUATIVO</text>
+  <text x="280" y="686" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#1e3a8a">MÁQUINA VIRTUAL UBUNTU (VIRTUALBOX)</text>
+  <text x="650" y="686" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#0e7490">CONTENEDORES DOCKER (APACHE + MYSQL)</text>
+  <text x="980" y="686" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#047857">IMPACTO EN CLIENTE</text>
+
+  <!-- Fila 1 -->
+  <text x="60" y="710" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0f172a">Aislamiento y Kernel</text>
+  <text x="280" y="710" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Kernel independiente completo (Fuerte)</text>
+  <text x="650" y="710" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Kernel compartido con Namespaces / cgroups</text>
+  <text x="980" y="710" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">Máxima eficiencia</text>
+
+  <!-- Fila 2 -->
+  <text x="60" y="730" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0f172a">Consumo y Eficiencia</text>
+  <text x="280" y="730" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Alto (Asignación rígida 2 GB RAM)</text>
+  <text x="650" y="730" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Mínimo (Demanda dinámica ~220 MB RAM)</text>
+  <text x="980" y="730" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">90% Ahorro Recursos</text>
+
+  <!-- Fila 3 -->
+  <text x="60" y="750" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0f172a">Despliegue y Portabilidad</text>
+  <text x="280" y="750" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Lenta (Exportación OVA de 5-15 GB)</text>
+  <text x="650" y="750" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#475569">Inmediata (docker compose up -d en segundos)</text>
+  <text x="980" y="750" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">100% Cero Polución</text>
+
+  <!-- Fila 4 -->
+  <text x="60" y="768" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b">
+    ADSO Ficha 3186681 • Centro de Teleinformática y Producción Industrial (CTPI Popayán) • Karen Yuliana Campo
+  </text>
+</svg>
