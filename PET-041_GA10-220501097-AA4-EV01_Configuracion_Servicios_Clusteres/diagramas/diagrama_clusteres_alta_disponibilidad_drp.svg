@@ -1,0 +1,405 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" width="1400" height="980">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="senaGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39a900"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="980" fill="url(#bgGrad)"/>
+
+  <!-- Header Banner -->
+  <rect x="25" y="20" width="1350" height="105" rx="12" fill="#1f2937" stroke="#374151" stroke-width="2" filter="url(#shadowBox)"/>
+  <rect x="25" y="20" width="1350" height="6" rx="3" fill="url(#senaGreen)"/>
+
+  <!-- SENA Badge -->
+  <rect x="45" y="38" width="125" height="32" rx="6" fill="#39a900"/>
+  <text x="107" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SENA | ADSO</text>
+  <text x="45" y="94" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#9ca3af">Ficha 3186681 • CTPI Popayán - Cauca</text>
+  <text x="45" y="112" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Aprendiz: Karen Yuliana Campo</text>
+
+  <!-- Title & Subtitle -->
+  <text x="710" y="58" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#f9fafb" text-anchor="middle">
+    GESTIÓN DE REDUNDANCIA, ALTA DISPONIBILIDAD Y CLÚSTERES DE SERVICIOS
+  </text>
+  <text x="710" y="82" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">
+    Evidencia GA10-220501097-AA4-EV01: Conceptos y principios acerca de configuración de servicios
+  </text>
+  <text x="710" y="105" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#39a900" font-weight="bold" text-anchor="middle">
+    Arquitectura de Clústeres • RPO &amp; RTO • Análisis de Riesgos e Impacto (BIA) • Plan de Continuidad (BCP) y Recuperación (DRP)
+  </text>
+
+  <!-- ==================== BLOQUE 1: TAXONOMÍA Y TIPOS DE CLÚSTERES ==================== -->
+  <g transform="translate(25, 140)">
+    <rect x="0" y="0" width="430" height="400" rx="10" fill="#111827" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="430" height="34" rx="8" fill="url(#blueGrad)"/>
+    <text x="215" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      1. TIPOS DE CLÚSTERES Y PROCESAMIENTO
+    </text>
+
+    <!-- Card 1: HA Failover -->
+    <rect x="15" y="44" width="400" height="80" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="25" y="64" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">
+      🛡️ 1. Alta Disponibilidad (HA - High Availability / Failover)
+    </text>
+    <text x="25" y="80" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Nodos Activo-Pasivo / Activo-Activo con detección de latido (Heartbeat).
+    </text>
+    <text x="25" y="94" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Conmutación automática por fallo (Failover) sin interrupción de servicio.
+    </text>
+    <text x="25" y="108" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Tecnologías: Pacemaker, Corosync, Keepalived (VRRP), Patroni para PostgreSQL.
+    </text>
+
+    <!-- Card 2: Load Balancing -->
+    <rect x="15" y="132" width="400" height="80" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+    <text x="25" y="152" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#34d399">
+      ⚖️ 2. Balanceo de Carga (Load Balancing Clusters)
+    </text>
+    <text x="25" y="168" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Reparto equitativo de solicitudes entrantes entre múltiples nodos backend.
+    </text>
+    <text x="25" y="182" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Algoritmos: Round Robin, Weighted, Least Connections, IP Hash.
+    </text>
+    <text x="25" y="196" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Tecnologías: Nginx Load Balancer, HAProxy, AWS ALB, Traefik Reverse Proxy.
+    </text>
+
+    <!-- Card 3: HPC -->
+    <rect x="15" y="220" width="400" height="80" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="25" y="240" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">
+      ⚡ 3. Alto Rendimiento (HPC - High Performance Computing)
+    </text>
+    <text x="25" y="256" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Cómputo paralelo distribuido para cálculos numéricos masivos o IA.
+    </text>
+    <text x="25" y="270" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Procesamiento de paso de mensajes (MPI) y particionamiento de tareas.
+    </text>
+    <text x="25" y="284" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Tecnologías: Slurm Workload Manager, OpenMPI, Beowulf Clusters, Apache Spark.
+    </text>
+
+    <!-- Card 4: Distributed Storage -->
+    <rect x="15" y="308" width="400" height="80" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="25" y="328" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#c084fc">
+      💾 4. Almacenamiento Distribuido (Storage Clusters)
+    </text>
+    <text x="25" y="344" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Sistema de archivos compartido y replicado en tiempo real entre discos.
+    </text>
+    <text x="25" y="358" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • Tolerancia a la pérdida física de servidores o discos sin corrupción de datos.
+    </text>
+    <text x="25" y="372" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Tecnologías: Ceph Storage, GlusterFS, DRBD (Distributed Replicated Block Device).
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 2: CONTINUIDAD DEL NEGOCIO, RPO & RTO ==================== -->
+  <g transform="translate(475, 140)">
+    <rect x="0" y="0" width="450" height="400" rx="10" fill="#111827" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="450" height="34" rx="8" fill="url(#amberGrad)"/>
+    <text x="225" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fde68a" text-anchor="middle">
+      2. GESTIÓN DE CONTINUIDAD, RPO Y RTO
+    </text>
+
+    <!-- RPO / RTO Timeline Visual -->
+    <rect x="15" y="44" width="420" height="135" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="225" y="62" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#fde68a" text-anchor="middle">
+      LÍNEA TEMPORAL: ANATOMÍA DE UN INCIDENTE DE DISPONIBILIDAD
+    </text>
+
+    <!-- Time axis line -->
+    <line x1="35" y1="105" x2="415" y2="105" stroke="#475569" stroke-width="3"/>
+
+    <!-- Point 1: Last Backup -->
+    <circle cx="90" cy="105" r="7" fill="#22c55e"/>
+    <text x="90" y="90" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#86efac" text-anchor="middle">Último Backup</text>
+    <text x="90" y="125" font-family="'Segoe UI', sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">T - 5 min</text>
+
+    <!-- Point 2: Disaster Event -->
+    <circle cx="225" cy="105" r="8" fill="#ef4444"/>
+    <text x="225" y="85" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#fca5a5" text-anchor="middle">💥 DESASTRE</text>
+    <text x="225" y="125" font-family="'Segoe UI', sans-serif" font-size="8" fill="#fca5a5" text-anchor="middle">Interrupción (T = 0)</text>
+
+    <!-- Point 3: Service Restored -->
+    <circle cx="360" cy="105" r="7" fill="#3b82f6"/>
+    <text x="360" y="90" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#93c5fd" text-anchor="middle">Servicio Restaurado</text>
+    <text x="360" y="125" font-family="'Segoe UI', sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">T + 2 min</text>
+
+    <!-- RPO bracket (Left) -->
+    <path d="M 90 140 L 225 140" stroke="#f59e0b" stroke-width="2"/>
+    <text x="157" y="155" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      ⏪ RPO: Pérdida Máx. de Datos
+    </text>
+    <text x="157" y="168" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">
+      Meta Bella Italia: RPO &lt; 5 min
+    </text>
+
+    <!-- RTO bracket (Right) -->
+    <path d="M 225 140 L 360 140" stroke="#38bdf8" stroke-width="2"/>
+    <text x="292" y="155" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      ⏩ RTO: Tiempo de Recuperación
+    </text>
+    <text x="292" y="168" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">
+      Meta Bella Italia: RTO &lt; 2 min
+    </text>
+
+    <!-- Card BIA & Priority -->
+    <rect x="15" y="190" width="420" height="95" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="210" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fde68a">
+      📊 BIA (Business Impact Analysis) y Gestión de Prioridades
+    </text>
+    <text x="25" y="228" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prioridad P1 (Crítica):</strong> API de Pedidos y Pasarela de Pagos (RTO: 2 min, RPO: 0).
+    </text>
+    <text x="25" y="244" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prioridad P2 (Operativa):</strong> Pantallas de Cocina KDS y App Móvil Meseros (RTO: 15 min).
+    </text>
+    <text x="25" y="260" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prioridad P3 (Administrativa):</strong> Reportes contables e inventarios (RTO: 4 horas).
+    </text>
+    <text x="25" y="276" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Impacto financiero evaluado: $350.000 COP/hora por inactividad total en horas pico.
+    </text>
+
+    <!-- Card BCP vs DRP -->
+    <rect x="15" y="295" width="420" height="95" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="315" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fde68a">
+      📋 BCP (Continuidad) vs. DRP (Recuperación de Desastres)
+    </text>
+    <text x="25" y="333" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>BCP (Enfoque Organizacional):</strong> Procedimientos en modo degradado offline en POS locales, toma de comandas físicas de emergencia y roles del comité de crisis.
+    </text>
+    <text x="25" y="358" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>DRP (Enfoque Tecnológico):</strong> Restauración de réplicas en nodo caliente (*Hot Site* en la nube), inyección de logs WAL de PostgreSQL y conmutación de DNS.
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 3: ANÁLISIS DE RIESGOS Y PRUEBAS ==================== -->
+  <g transform="translate(945, 140)">
+    <rect x="0" y="0" width="430" height="400" rx="10" fill="#111827" stroke="#ef4444" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="430" height="34" rx="8" fill="url(#redGrad)"/>
+    <text x="215" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fca5a5" text-anchor="middle">
+      3. MATRIZ DE RIESGOS Y PRUEBAS DE OPERACIÓN
+    </text>
+
+    <!-- Matriz de Riesgo Top -->
+    <rect x="15" y="44" width="400" height="150" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="64" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fca5a5">
+      ⚠️ MATRIZ DE RIESGOS CRÍTICOS IDENTIFICADOS EN POPAYÁN
+    </text>
+
+    <text x="25" y="84" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Corte de Energía Eléctrica (CEO Popayán):</strong>
+    </text>
+    <text x="35" y="98" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Probabilidad: Alta | Impacto: Severo | Mitigación: UPS 1000VA + Planta de gas.
+    </text>
+
+    <text x="25" y="116" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Corte de Fibra Óptica (Vía Panamericana):</strong>
+    </text>
+    <text x="35" y="130" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Probabilidad: Media | Impacto: Crítico | Mitigación: Enlace Dual WAN 4G/Starlink.
+    </text>
+
+    <text x="25" y="148" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Corrupción de Disco o Malware / Ransomware:</strong>
+    </text>
+    <text x="35" y="162" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Probabilidad: Baja | Impacto: Fatal | Mitigación: Copias 3-2-1 cifradas e inmutables.
+    </text>
+
+    <text x="25" y="180" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#4ade80">
+      ✓ Nivel de Riesgo Residual Global: Mitigado a Nivel Bajo / Aceptable.
+    </text>
+
+    <!-- Pruebas de Operación Bottom -->
+    <rect x="15" y="204" width="400" height="180" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="224" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa">
+      🧪 METODOLOGÍA DE PRUEBAS DE OPERACIÓN Y SIMULACIÓN
+    </text>
+
+    <text x="25" y="244" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prueba de Escritorio (Tabletop):</strong>
+    </text>
+    <text x="35" y="258" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Revisión trimestral de roles, contactos de emergencia y procedimientos DRP.
+    </text>
+
+    <text x="25" y="276" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prueba de Conmutación en Caliente (Failover Drill):</strong>
+    </text>
+    <text x="35" y="290" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Desconexión física del nodo primario de base de datos para verificar que Patroni promueva la réplica a master en &lt; 15 segundos sin caída web.
+    </text>
+
+    <text x="25" y="308" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Ingeniería del Caos (Chaos Monkey Test):</strong>
+    </text>
+    <text x="35" y="322" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Eliminación aleatoria de un contenedor Docker de la API Spring Boot; Docker Swarm regenera la réplica sana automáticamente en &lt; 5 segundos.
+    </text>
+
+    <text x="25" y="340" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">
+      • <strong>Prueba de Restauración de Copias (Drill Restore):</strong>
+    </text>
+    <text x="35" y="354" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Restauración mensual del último dump y logs WAL en máquina de prueba aislada.
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 4: ARQUITECTURA DE ALTA DISPONIBILIDAD PIZZERÍA ==================== -->
+  <g transform="translate(25, 555)">
+    <rect x="0" y="0" width="1350" height="395" rx="10" fill="#111827" stroke="#39a900" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="1350" height="34" rx="8" fill="url(#senaGreen)"/>
+    <text x="675" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      4. ARQUITECTURA TÉCNICA DE ALTA DISPONIBILIDAD Y RESPALDO (PIZZERÍA GOURMET BELLA ITALIA POPAYÁN)
+    </text>
+
+    <!-- Layer 1: Redundancia WAN -->
+    <rect x="15" y="44" width="250" height="335" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="140" y="66" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      CAPA 1: REDUNDANCIA WAN
+    </text>
+    <rect x="25" y="80" width="230" height="65" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="35" y="98" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#4ade80">ISP 1 (Primario - 300 Mbps)</text>
+    <text x="35" y="114" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Fibra Óptica GPON</text>
+    <text x="35" y="128" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• IP Pública Estática (DNS principal)</text>
+
+    <rect x="25" y="155" width="230" height="65" rx="4" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="35" y="173" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24">ISP 2 (Backup Failover)</text>
+    <text x="35" y="189" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Módem 4G LTE / Starlink LEO</text>
+    <text x="35" y="203" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Conmutación automática en &lt;10 seg</text>
+
+    <rect x="25" y="230" width="230" height="135" rx="4" fill="#0f172a" stroke="#475569"/>
+    <text x="35" y="248" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#e2e8f0">Router / Firewall Dual WAN</text>
+    <text x="35" y="266" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Detección mediante ping continuo</text>
+    <text x="35" y="280" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Dynamic DNS (Cloudflare API)</text>
+    <text x="35" y="294" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Túnel WireGuard VPN cifrado</text>
+    <text x="35" y="318" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#38bdf8">Garantiza operación continua de cobros con tarjetas bancarias</text>
+
+    <!-- Layer 2: Proxy Inverso y Balanceo HA -->
+    <rect x="280" y="44" width="260" height="335" rx="6" fill="#1e293b" stroke="#10b981"/>
+    <text x="410" y="66" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#34d399" text-anchor="middle">
+      CAPA 2: PROXY &amp; BALANCEO
+    </text>
+
+    <rect x="290" y="80" width="240" height="85" rx="4" fill="#0f172a" stroke="#10b981"/>
+    <text x="300" y="98" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#4ade80">Clúster Keepalived (VRRP)</text>
+    <text x="300" y="114" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>IP Virtual (VIP):</strong> 192.168.10.100</text>
+    <text x="300" y="128" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Nodo Maestro: Nginx Principal</text>
+    <text x="300" y="142" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Nodo Backup: Nginx Secundario</text>
+    <text x="300" y="156" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Failover automático transparente &lt; 1 seg</text>
+
+    <rect x="290" y="175" width="240" height="190" rx="4" fill="#0f172a" stroke="#475569"/>
+    <text x="300" y="195" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#e2e8f0">Nginx Reverse Proxy &amp; SSL</text>
+    <text x="300" y="213" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Terminación TLS 1.3 con Let's Encrypt</text>
+    <text x="300" y="227" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Balanceo Round Robin con pesaje</text>
+    <text x="300" y="241" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Healthcheck continuo a `/actuator/health`</text>
+    <text x="300" y="255" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Rate Limiting (Prevención de ataques DoS)</text>
+    <text x="300" y="269" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Compresión Brotli / Gzip</text>
+    <text x="300" y="295" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#4ade80">Retira del tráfico cualquier instancia de backend no saludable en &lt; 2 seg</text>
+
+    <!-- Layer 3: Backend Spring Boot Cluster -->
+    <rect x="555" y="44" width="260" height="335" rx="6" fill="#1e293b" stroke="#8b5cf6"/>
+    <text x="685" y="66" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#c084fc" text-anchor="middle">
+      CAPA 3: MICROSERVICIOS API
+    </text>
+
+    <rect x="565" y="80" width="240" height="135" rx="4" fill="#0f172a" stroke="#8b5cf6"/>
+    <text x="575" y="98" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#ddd6fe">Docker Swarm / K3s Cluster</text>
+    <text x="575" y="114" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>Instancia API-1:</strong> Contenedor Docker</text>
+    <text x="575" y="128" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>Instancia API-2:</strong> Contenedor Docker</text>
+    <text x="575" y="142" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Arquitectura Stateless (Sin estado)</text>
+    <text x="575" y="156" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Tokens JWT validados criptográficamente</text>
+    <text x="575" y="170" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Escalabilidad horizontal elástica</text>
+    <text x="575" y="195" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#c084fc">Reinicio automático en &lt; 3 seg ante fallos del proceso Java</text>
+
+    <rect x="565" y="225" width="240" height="140" rx="4" fill="#0f172a" stroke="#475569"/>
+    <text x="575" y="245" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#e2e8f0">Pool de Conexiones HikariCP</text>
+    <text x="575" y="263" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Máx. 20 conexiones por réplica</text>
+    <text x="575" y="277" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Circuit Breaker Resilience4j</text>
+    <text x="575" y="291" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Modo degraded si falla la DB</text>
+    <text x="575" y="315" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#93c5fd">Protege la base de datos de saturación por concurrencia masiva</text>
+
+    <!-- Layer 4: Base de Datos HA (PostgreSQL) -->
+    <rect x="830" y="44" width="260" height="335" rx="6" fill="#1e293b" stroke="#3b82f6"/>
+    <text x="960" y="66" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      CAPA 4: POSTGRESQL CLUSTER
+    </text>
+
+    <rect x="840" y="80" width="240" height="135" rx="4" fill="#0f172a" stroke="#3b82f6"/>
+    <text x="850" y="98" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#93c5fd">Replicación Física Streaming</text>
+    <text x="850" y="114" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>Nodo Primario (Master):</strong> Lectura / Escritura</text>
+    <text x="850" y="128" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>Nodo Standby (Replica):</strong> Solo Lectura</text>
+    <text x="850" y="142" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Envío continuo de logs WAL</text>
+    <text x="850" y="156" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Conmutación gestionada por Patroni</text>
+    <text x="850" y="170" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Prevención Split-Brain mediante etcd</text>
+    <text x="850" y="195" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#38bdf8">Pérdida de datos en caída: 0 transacciones (Sincronía estricta)</text>
+
+    <rect x="840" y="225" width="240" height="140" rx="4" fill="#0f172a" stroke="#475569"/>
+    <text x="850" y="245" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#e2e8f0">PgBouncer Connection Pooling</text>
+    <text x="850" y="263" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Modo transaccional optimizado</text>
+    <text x="850" y="277" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Reduce consumo de RAM de PG</text>
+    <text x="850" y="291" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Redirección de consultas pesadas a réplica</text>
+    <text x="850" y="315" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#93c5fd">Tiempo de conmutación automática: &lt; 15 seg</text>
+
+    <!-- Layer 5: Estrategia de Backup 3-2-1 y DRP -->
+    <rect x="1105" y="44" width="230" height="335" rx="6" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="1220" y="66" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      CAPA 5: BACKUP 3-2-1 &amp; DRP
+    </text>
+
+    <rect x="1115" y="80" width="210" height="85" rx="4" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="1125" y="98" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fde68a">Regla de Respaldo 3-2-1</text>
+    <text x="1125" y="114" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>3 Copias:</strong> Prod, Local y Cloud</text>
+    <text x="1125" y="128" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>2 Medios:</strong> NVMe local y S3 Cloud</text>
+    <text x="1125" y="142" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• <strong>1 Fuera de Sitio:</strong> Región Bogotá</text>
+    <text x="1125" y="156" font-family="'Segoe UI', sans-serif" font-size="8" fill="#fbbf24">Inmune a desastres físicos en Popayán</text>
+
+    <rect x="1115" y="175" width="210" height="190" rx="4" fill="#0f172a" stroke="#475569"/>
+    <text x="1125" y="195" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#e2e8f0">Herramientas DRP</text>
+    <text x="1125" y="213" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• `pgBackRest` / `WAL-G` continuo</text>
+    <text x="1125" y="227" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Cifrado AES-256 en reposo</text>
+    <text x="1125" y="241" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Inmutabilidad contra Ransomware</text>
+    <text x="1125" y="255" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Backup lógico diario a las 02:00</text>
+    <text x="1125" y="269" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Simulacro mensual de restauración</text>
+    <text x="1125" y="295" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#fde68a">RTO &lt; 2 min en Hot Site Cloud</text>
+  </g>
+
+  <!-- Bottom Institutional Strip -->
+  <rect x="25" y="955" width="1350" height="18" rx="4" fill="#030712"/>
+  <text x="700" y="968" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">
+    Servicio Nacional de Aprendizaje SENA • Centro de Teleinformática y Producción Industrial (CTPI Popayán) • Programa ADSO • Ficha 3186681 • Karen Yuliana Campo
+  </text>
+</svg>
