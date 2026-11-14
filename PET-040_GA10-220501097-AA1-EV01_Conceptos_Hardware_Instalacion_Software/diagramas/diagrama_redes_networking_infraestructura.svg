@@ -1,0 +1,374 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" width="1400" height="980">
+  <defs>
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="senaGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39a900"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="980" fill="url(#bgDark)"/>
+
+  <!-- Header Banner -->
+  <rect x="25" y="20" width="1350" height="105" rx="12" fill="#1f2937" stroke="#374151" stroke-width="2" filter="url(#shadowBox)"/>
+  <rect x="25" y="20" width="1350" height="6" rx="3" fill="url(#senaGreen)"/>
+
+  <!-- SENA Badge -->
+  <rect x="45" y="38" width="125" height="32" rx="6" fill="#39a900"/>
+  <text x="107" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SENA | ADSO</text>
+  <text x="45" y="94" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#9ca3af">Ficha 3186681 • CTPI Popayán - Cauca</text>
+  <text x="45" y="112" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Aprendiz: Karen Yuliana Campo</text>
+
+  <!-- Title & Subtitle -->
+  <text x="710" y="58" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#f9fafb" text-anchor="middle">
+    ARQUITECTURA DE REDES, NETWORKING E INFRAESTRUCTURA DE DESPLIEGUE
+  </text>
+  <text x="710" y="82" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">
+    Evidencia GA10-220501097-AA1-EV01: Conceptos y principios de hardware e instalación de software
+  </text>
+  <text x="710" y="105" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#39a900" font-weight="bold" text-anchor="middle">
+    Modelos de Referencia (OSI vs TCP/IP) • Familias de Protocolos • Estándares • Medios de Transmisión • Despliegue Linux Server
+  </text>
+
+  <!-- ==================== BLOQUE 1: MODELOS OSI vs TCP/IP ==================== -->
+  <g transform="translate(25, 140)">
+    <rect x="0" y="0" width="430" height="390" rx="10" fill="#111827" stroke="#2563eb" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="430" height="34" rx="8" fill="url(#blueGrad)"/>
+    <text x="215" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      1. MODELOS DE REFERENCIA (OSI vs. TCP/IP)
+    </text>
+
+    <!-- Subheaders -->
+    <rect x="15" y="44" width="190" height="24" rx="4" fill="#1e293b"/>
+    <text x="110" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">MODELO OSI (ISO 7498)</text>
+
+    <rect x="225" y="44" width="190" height="24" rx="4" fill="#1e293b"/>
+    <text x="320" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">MODELO TCP/IP (IETF)</text>
+
+    <!-- Layer 7, 6, 5 vs Layer 4 App -->
+    <rect x="15" y="75" width="190" height="36" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6"/>
+    <text x="25" y="92" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#bfdbfe">7. Aplicación</text>
+    <text x="25" y="105" font-family="'Segoe UI', sans-serif" font-size="9" fill="#93c5fd">HTTP, DNS, SSH, FTP</text>
+
+    <rect x="15" y="117" width="190" height="36" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6"/>
+    <text x="25" y="134" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#bfdbfe">6. Presentación</text>
+    <text x="25" y="147" font-family="'Segoe UI', sans-serif" font-size="9" fill="#93c5fd">TLS/SSL, JSON, MIME</text>
+
+    <rect x="15" y="159" width="190" height="36" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6"/>
+    <text x="25" y="176" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#bfdbfe">5. Sesión</text>
+    <text x="25" y="189" font-family="'Segoe UI', sans-serif" font-size="9" fill="#93c5fd">Sockets, RPC, NetBIOS</text>
+
+    <!-- Combined TCP/IP App Layer -->
+    <rect x="225" y="75" width="190" height="120" rx="4" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6"/>
+    <text x="235" y="125" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#ddd6fe">4. APLICACIÓN</text>
+    <text x="235" y="145" font-family="'Segoe UI', sans-serif" font-size="10" fill="#c4b5fd">HTTP/1.1, HTTP/2, HTTP/3</text>
+    <text x="235" y="162" font-family="'Segoe UI', sans-serif" font-size="10" fill="#c4b5fd">TLS 1.3, DNS, WebSocket</text>
+
+    <!-- Layer 4 Transport vs Layer 3 Transport -->
+    <rect x="15" y="202" width="190" height="42" rx="4" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e"/>
+    <text x="25" y="220" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#bbf7d0">4. Transporte</text>
+    <text x="25" y="236" font-family="'Segoe UI', sans-serif" font-size="9" fill="#86efac">Control extremo a extremo</text>
+
+    <rect x="225" y="202" width="190" height="42" rx="4" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e"/>
+    <text x="235" y="220" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#bbf7d0">3. TRANSPORTE</text>
+    <text x="235" y="236" font-family="'Segoe UI', sans-serif" font-size="9" fill="#86efac">TCP (Confiable) / UDP / QUIC</text>
+
+    <!-- Layer 3 Network vs Layer 2 Internet -->
+    <rect x="15" y="251" width="190" height="42" rx="4" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b"/>
+    <text x="25" y="269" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#fde68a">3. Red</text>
+    <text x="25" y="285" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fcd34d">Enrutamiento lógico (IPv4/v6)</text>
+
+    <rect x="225" y="251" width="190" height="42" rx="4" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b"/>
+    <text x="235" y="269" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#fde68a">2. INTERNET</text>
+    <text x="235" y="285" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fcd34d">IPv4, IPv6, ICMP, ARP, OSPF</text>
+
+    <!-- Layer 2 & 1 vs Layer 1 Network Access -->
+    <rect x="15" y="300" width="190" height="38" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444"/>
+    <text x="25" y="316" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fecaca">2. Enlace de Datos (MAC)</text>
+    <text x="25" y="331" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fca5a5">Ethernet 802.3, Wi-Fi 802.11</text>
+
+    <rect x="15" y="344" width="190" height="36" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444"/>
+    <text x="25" y="360" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fecaca">1. Física (Señal / Bits)</text>
+    <text x="25" y="373" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fca5a5">Cobre, Fibra, Ondas RF</text>
+
+    <rect x="225" y="300" width="190" height="80" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444"/>
+    <text x="235" y="335" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#fecaca">1. ACCESO A LA RED</text>
+    <text x="235" y="353" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fca5a5">Ethernet (802.3), Wi-Fi (802.11)</text>
+    <text x="235" y="368" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fca5a5">Drivers NIC, Tramas y Señal</text>
+  </g>
+
+  <!-- ==================== BLOQUE 2: FAMILIAS DE PROTOCOLOS (TCP vs UDP) ==================== -->
+  <g transform="translate(475, 140)">
+    <rect x="0" y="0" width="450" height="390" rx="10" fill="#111827" stroke="#10b981" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="450" height="34" rx="8" fill="url(#tealGrad)"/>
+    <text x="225" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#34d399" text-anchor="middle">
+      2. FAMILIAS DE PROTOCOLOS: TCP vs. UDP
+    </text>
+
+    <!-- Card TCP -->
+    <rect x="15" y="44" width="420" height="155" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="15" y="44" width="420" height="26" rx="4" fill="#1e3a8a"/>
+    <text x="25" y="62" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#60a5fa">
+      🔵 TCP (Transmission Control Protocol - RFC 9293): Orientado a Conexión
+    </text>
+    <text x="25" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Three-Way Handshake:</strong> Sincronización previa estricta (SYN → SYN-ACK → ACK).
+    </text>
+    <text x="25" y="103" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Confiabilidad Total:</strong> Confirmación por ACKs, retransmisión por pérdidas (ARQ).
+    </text>
+    <text x="25" y="121" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Control de Flujo y Congestión:</strong> Ventana deslizante (Sliding Window), Slow Start.
+    </text>
+    <text x="25" y="139" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Orden Secuencial:</strong> Reensamblaje estricto de segmentos sin corrupción.
+    </text>
+    <text x="25" y="157" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#93c5fd">
+      • Uso en Proyecto: API RESTful (HTTPS), PostgreSQL, Pedidos, Pasarelas de Pago.
+    </text>
+    <text x="25" y="175" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Sobrecarga encabezado: 20 a 60 bytes | Estado de sesión: Mantenido en memoria del kernel.
+    </text>
+
+    <!-- Card UDP -->
+    <rect x="15" y="210" width="420" height="165" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="15" y="210" width="420" height="26" rx="4" fill="#78350f"/>
+    <text x="25" y="228" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#fcd34d">
+      🟡 UDP (User Datagram Protocol - RFC 768): No Orientado a Conexión
+    </text>
+    <text x="25" y="251" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Envío Best-Effort:</strong> Envío directo de datagramas sin handshake ni acuse ("fire &amp; forget").
+    </text>
+    <text x="25" y="269" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Ultra Baja Latencia:</strong> Cero retardo por establecimiento o retransmisión.
+    </text>
+    <text x="25" y="287" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Mínima Sobrecarga:</strong> Encabezado fijo ultraligero de solo 8 bytes.
+    </text>
+    <text x="25" y="305" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Soporte Broadcast / Multicast:</strong> Notificaciones masivas en red local.
+    </text>
+    <text x="25" y="323" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fde68a">
+      • Uso en Infraestructura: Resolución DNS (puerto 53), Sincronización NTP (puerto 123).
+    </text>
+    <text x="25" y="341" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">
+      Evolución moderna: Protocolo QUIC / HTTP/3 opera sobre UDP eliminando bloqueos HoL.
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 3: ORGANIZACIONES DE ESTÁNDARES ==================== -->
+  <g transform="translate(945, 140)">
+    <rect x="0" y="0" width="430" height="390" rx="10" fill="#111827" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="430" height="34" rx="8" fill="url(#purpleGrad)"/>
+    <text x="215" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#c084fc" text-anchor="middle">
+      3. ORGANIZACIONES DE ESTÁNDARES EN NETWORKING
+    </text>
+
+    <!-- Standards cards -->
+    <rect x="15" y="44" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="62" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">ISO (International Organization for Standardization)</text>
+    <text x="25" y="78" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">Norma ISO/IEC 7498-1: Modelo de Referencia OSI de 7 capas para interconexión.</text>
+
+    <rect x="15" y="100" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="118" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">IEEE (Institute of Electrical and Electronics Engineers)</text>
+    <text x="25" y="134" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">Comité IEEE 802: 802.3 (Ethernet), 802.11 (Wi-Fi), 802.1Q (VLANs), 802.15 (WPAN).</text>
+
+    <rect x="15" y="156" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="174" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">IETF (Internet Engineering Task Force)</text>
+    <text x="25" y="190" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">Publicación de estándares RFC: IPv4 (RFC 791), IPv6 (RFC 8200), TCP, UDP, TLS 1.3.</text>
+
+    <rect x="15" y="212" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="230" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">ITU-T (Unión Internacional de Telecomunicaciones)</text>
+    <text x="25" y="246" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">Estándares globales de telecomunicaciones, fibra óptica monomodo (G.652), xDSL, 5G.</text>
+
+    <rect x="15" y="268" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="286" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">ANSI / TIA / EIA</text>
+    <text x="25" y="302" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">ANSI/TIA-568-D (Cableado estructurado par trenzado y fibra), TIA-569, TIA-942 Data Centers.</text>
+
+    <rect x="15" y="324" width="400" height="50" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="342" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">W3C (World Wide Web Consortium)</text>
+    <text x="25" y="358" font-family="'Segoe UI', sans-serif" font-size="9" fill="#cbd5e1">Estándares abiertos de la Web: HTML5, DOM, WebSockets, WebRTC, APIs RESTful.</text>
+  </g>
+
+  <!-- ==================== BLOQUE 4: MEDIOS DE TRANSMISIÓN ==================== -->
+  <g transform="translate(25, 545)">
+    <rect x="0" y="0" width="655" height="405" rx="10" fill="#111827" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="655" height="34" rx="8" fill="url(#blueGrad)"/>
+    <text x="327" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#93c5fd" text-anchor="middle">
+      4. MEDIOS DE TRANSMISIÓN (GUIADOS vs. NO GUIADOS)
+    </text>
+
+    <!-- Subsección Medios Guiados -->
+    <rect x="15" y="44" width="305" height="24" rx="4" fill="#1e3a8a"/>
+    <text x="167" y="60" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">MEDIOS GUIADOS (Físicos / Alámbricos)</text>
+
+    <rect x="15" y="74" width="305" height="98" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="92" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#60a5fa">Par Trenzado (UTP / STP - TIA-568)</text>
+    <text x="25" y="108" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Cat 5e (1 Gbps / 100 MHz / 100m)</text>
+    <text x="25" y="123" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Cat 6 (1 Gbps / 10 Gbps a 55m / 250 MHz)</strong> - LAN POS</text>
+    <text x="25" y="138" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Cat 6A (10 Gbps / 500 MHz / 100m) - Servidores</text>
+    <text x="25" y="153" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Conector RJ-45 • T568A / T568B • Inmunidad a diafonía</text>
+
+    <rect x="15" y="178" width="305" height="98" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="196" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#60a5fa">Fibra Óptica (Pulsos de Luz / Reflexión)</text>
+    <text x="25" y="212" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Monomodo (SMF - OS2):</strong> Núcleo 9 µm, láser, >40 km</text>
+    <text x="25" y="227" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Multimodo (MMF - OM3/OM4):</strong> Núcleo 50 µm, VCSEL, &lt;550m</text>
+    <text x="25" y="242" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Inmune a interferencias EMI/RFI, altísimo ancho de banda</text>
+    <text x="25" y="257" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Conectores LC, SC, ST • Backbone de ISP para Bella Italia</text>
+
+    <rect x="15" y="282" width="305" height="110" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="300" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#60a5fa">Cable Coaxial (Cobre / Dieléctrico / Malla)</text>
+    <text x="25" y="316" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• RG-6 / RG-59 (75 Ω): Redes de banda ancha HFC y CCTV</text>
+    <text x="25" y="331" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Histórico: 10Base5 (Thicknet) y 10Base2 (Thinnet)</text>
+    <text x="25" y="346" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Conector BNC / Tipo F roscado</text>
+    <text x="25" y="361" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Uso actual: Acometidas de respaldo y circuito de vigilancia</text>
+
+    <!-- Subsección Medios No Guiados -->
+    <rect x="335" y="44" width="305" height="24" rx="4" fill="#065f46"/>
+    <text x="487" y="60" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">MEDIOS NO GUIADOS (Inalámbricos / Espacio)</text>
+
+    <rect x="335" y="74" width="305" height="98" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="345" y="92" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#34d399">Radiofrecuencia (Wi-Fi &amp; Celular)</text>
+    <text x="345" y="108" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Wi-Fi 6 (IEEE 802.11ax):</strong> Bandas 2.4 / 5 GHz, OFDMA, MU-MIMO</text>
+    <text x="345" y="123" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Redes Móviles 4G LTE y 5G NR (Sub-6 GHz y mmWave)</text>
+    <text x="345" y="138" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Bluetooth 5.3 (BLE / 2.4 GHz): Terminales de pago e impresoras</text>
+    <text x="345" y="153" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Propagación omnidireccional • Susceptible a obstáculos y ruidos</text>
+
+    <rect x="335" y="178" width="305" height="98" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="345" y="196" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#34d399">Microondas (Terrestres &amp; Satelitales)</text>
+    <text x="345" y="212" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Terrestres (1-40 GHz):</strong> Enlaces punto a punto (LoS)</text>
+    <text x="345" y="227" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Satelitales GEO (36.000 km):</strong> Gran cobertura, latencia ~600ms</text>
+    <text x="345" y="242" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• <strong>Satelitales LEO (Starlink 550 km):</strong> Baja latencia ~25ms</text>
+    <text x="345" y="257" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Respaldo de conectividad para el restaurante en Popayán</text>
+
+    <rect x="335" y="282" width="305" height="110" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="345" y="300" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#34d399">Infrarrojos &amp; Óptica Inalámbrica (Li-Fi)</text>
+    <text x="345" y="316" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Longitudes de onda de 300 GHz a 430 THz</text>
+    <text x="345" y="331" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Línea de vista estricta (no atraviesa paredes)</text>
+    <text x="345" y="346" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">• Sensores de proximidad y lectores de código óptico POS</text>
+    <text x="345" y="361" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8">Máxima seguridad perimetral dentro del recinto físico</text>
+  </g>
+
+  <!-- ==================== BLOQUE 5: INFRAESTRUCTURA DE DESPLIEGUE PIZZERÍA ==================== -->
+  <g transform="translate(695, 545)">
+    <rect x="0" y="0" width="680" height="405" rx="10" fill="#111827" stroke="#39a900" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="680" height="34" rx="8" fill="url(#senaGreen)"/>
+    <text x="340" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      5. INFRAESTRUCTURA Y SISTEMA OPERATIVO DE SERVIDOR (PIZZERÍA BELLA ITALIA)
+    </text>
+
+    <!-- Top Server Specs Box -->
+    <rect x="15" y="44" width="650" height="110" rx="6" fill="#1e293b" stroke="#39a900" stroke-width="1"/>
+    <text x="25" y="64" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#4ade80">
+      🐧 SISTEMA OPERATIVO SELECCIONADO: Ubuntu Server 24.04 LTS (Kernel Linux 6.8 x86_64)
+    </text>
+    <text x="25" y="84" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Modo Headless (Sin GUI):</strong> 100% de CPU y RAM optimizados para procesos backend de alta concurrencia.
+    </text>
+    <text x="25" y="102" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Seguridad Robusta:</strong> Filtrado por nftables/UFW, AppArmor, SSH con llave criptográfica Ed25519, Fail2ban.
+    </text>
+    <text x="25" y="120" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Virtualización y Contenedores:</strong> Docker Engine + Docker Compose con soporte nativo de cgroups v2 y namespaces.
+    </text>
+    <text x="25" y="138" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#e2e8f0">
+      • <strong>Pila de Software:</strong> Nginx Reverse Proxy (TLS 1.3), OpenJDK 17 (Spring Boot API REST), PostgreSQL 16 DB.
+    </text>
+
+    <!-- Network Topology Scheme -->
+    <rect x="15" y="162" width="650" height="230" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="25" y="180" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8">
+      DISEÑO DE SEGMENTACIÓN DE RED FÍSICA Y LÓGICA (VLANs 802.1Q)
+    </text>
+
+    <!-- Step 1: ISP -->
+    <rect x="25" y="195" width="130" height="52" rx="4" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="90" y="215" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8" text-anchor="middle">Acometida ISP</text>
+    <text x="90" y="230" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#94a3b8" text-anchor="middle">Fibra SMF (300 Mbps)</text>
+    <text x="90" y="242" font-family="'Segoe UI', sans-serif" font-size="8" fill="#64748b" text-anchor="middle">IP Pública Estática</text>
+
+    <!-- Arrow -->
+    <path d="M 155 221 L 185 221" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="170" y="215" font-family="'Segoe UI', sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">WAN</text>
+
+    <!-- Step 2: Router Firewall -->
+    <rect x="185" y="195" width="140" height="52" rx="4" fill="#1e293b" stroke="#ef4444"/>
+    <text x="255" y="215" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#f87171" text-anchor="middle">Router / Firewall</text>
+    <text x="255" y="230" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1" text-anchor="middle">NAT / VPN WireGuard</text>
+    <text x="255" y="242" font-family="'Segoe UI', sans-serif" font-size="8" fill="#fca5a5" text-anchor="middle">Inspección Stateful</text>
+
+    <!-- Arrow -->
+    <path d="M 325 221 L 355 221" stroke="#22c55e" stroke-width="2"/>
+    <text x="340" y="215" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac" text-anchor="middle">Trunk</text>
+
+    <!-- Step 3: Switch Core -->
+    <rect x="355" y="195" width="145" height="52" rx="4" fill="#1e293b" stroke="#22c55e"/>
+    <text x="427" y="215" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#4ade80" text-anchor="middle">Switch Gestionable</text>
+    <text x="427" y="230" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1" text-anchor="middle">Gigabit IEEE 802.1Q</text>
+    <text x="427" y="242" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac" text-anchor="middle">PoE+ para APs Wi-Fi</text>
+
+    <!-- Arrow -->
+    <path d="M 500 221 L 530 221" stroke="#f59e0b" stroke-width="2"/>
+
+    <!-- Step 4: Ubuntu Server -->
+    <rect x="530" y="195" width="125" height="52" rx="4" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="592" y="215" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24" text-anchor="middle">Ubuntu Server</text>
+    <text x="592" y="230" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1" text-anchor="middle">Docker Backend</text>
+    <text x="592" y="242" font-family="'Segoe UI', sans-serif" font-size="8" fill="#fde68a" text-anchor="middle">192.168.10.10</text>
+
+    <!-- 3 VLAN Branch Cards -->
+    <rect x="25" y="260" width="195" height="120" rx="4" fill="#1e293b" stroke="#3b82f6"/>
+    <text x="35" y="278" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#60a5fa">VLAN 10: GESTIÓN &amp; SRV</text>
+    <text x="35" y="295" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Subred: 192.168.10.0/24</text>
+    <text x="35" y="310" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Servidor Linux Host</text>
+    <text x="35" y="325" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Base de Datos PostgreSQL</text>
+    <text x="35" y="340" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Cableado Cat 6A blindado</text>
+    <text x="35" y="360" font-family="'Segoe UI', sans-serif" font-size="8" fill="#93c5fd">Prioridad QoS: Crítica (ToS 5)</text>
+
+    <rect x="235" y="260" width="195" height="120" rx="4" fill="#1e293b" stroke="#22c55e"/>
+    <text x="245" y="278" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#4ade80">VLAN 20: POS &amp; OPERACIÓN</text>
+    <text x="245" y="295" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Subred: 192.168.20.0/24</text>
+    <text x="245" y="310" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Terminales POS Cocina/Caja</text>
+    <text x="245" y="325" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Tablets Meseros (App Móvil)</text>
+    <text x="245" y="340" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Impresoras térmicas Ethernet</text>
+    <text x="245" y="360" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Wi-Fi WPA3 Enterprise</text>
+
+    <rect x="445" y="260" width="210" height="120" rx="4" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="455" y="278" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24">VLAN 30: CLIENTES GUEST</text>
+    <text x="455" y="295" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Subred: 192.168.30.0/24</text>
+    <text x="455" y="310" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Wi-Fi Invitados (Portal Cautivo)</text>
+    <text x="455" y="325" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Aislamiento Client Isolation</text>
+    <text x="455" y="340" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">• Ancho de banda limitado (5 Mbps)</text>
+    <text x="455" y="360" font-family="'Segoe UI', sans-serif" font-size="8" fill="#fde68a">Acceso prohibido a VLAN 10/20</text>
+  </g>
+
+  <!-- Bottom Institutional Footer -->
+  <rect x="25" y="955" width="1350" height="18" rx="4" fill="#030712"/>
+  <text x="700" y="968" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">
+    Servicio Nacional de Aprendizaje SENA • Centro de Teleinformática y Producción Industrial (CTPI Popayán) • Programa ADSO • Ficha 3186681 • Karen Yuliana Campo
+  </text>
+</svg>
