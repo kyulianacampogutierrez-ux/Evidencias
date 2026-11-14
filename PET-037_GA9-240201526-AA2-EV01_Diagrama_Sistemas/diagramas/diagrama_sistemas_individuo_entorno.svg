@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00324D" />
+      <stop offset="50%" stop-color="#0F4C81" />
+      <stop offset="100%" stop-color="#39A900" />
+    </linearGradient>
+
+    <!-- Gradientes para los círculos concéntricos -->
+    <radialGradient id="gradYo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8F5E9" />
+      <stop offset="70%" stop-color="#C8E6C9" />
+      <stop offset="100%" stop-color="#81C784" />
+    </radialGradient>
+    <radialGradient id="gradFamilia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E1F5FE" stop-opacity="0.7" />
+      <stop offset="85%" stop-color="#B3E5FC" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#4FC3F7" stop-opacity="0.9" />
+    </radialGradient>
+    <radialGradient id="gradAcademico" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E1" stop-opacity="0.6" />
+      <stop offset="85%" stop-color="#FFECB3" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFD54F" stop-opacity="0.85" />
+    </radialGradient>
+    <radialGradient id="gradSocial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EDE7F6" stop-opacity="0.5" />
+      <stop offset="85%" stop-color="#D1C4E9" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#B39DDB" stop-opacity="0.8" />
+    </radialGradient>
+
+    <!-- Filtros de sombra suave -->
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.12" />
+    </filter>
+    <filter id="shadowCard" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Fondo Decorativo -->
+  <rect x="0" y="0" width="1200" height="900" fill="#F8FAFC" />
+
+  <!-- Encabezado Institucional -->
+  <g transform="translate(30, 20)" filter="url(#shadowBox)">
+    <rect width="1140" height="85" rx="10" fill="url(#headerGrad)" />
+    <text x="570" y="34" fill="#FFFFFF" font-size="19" font-weight="800" text-anchor="middle" letter-spacing="1">DIAGRAMA DE SISTEMAS: RELACIÓN DEL INDIVIDUO CON EL ENTORNO</text>
+    <text x="570" y="58" fill="#E2E8F0" font-size="12.5" font-weight="600" text-anchor="middle">Modelo Bioecológico y Sistémico de Interacción Social | Evidencia: GA9-240201526-AA2-EV01</text>
+    <text x="570" y="76" fill="#C8E6C9" font-size="11" text-anchor="middle">Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | ADSO | CTPI Popayán - Regional Cauca | Noviembre 2026</text>
+  </g>
+
+  <!-- Centro de las Circunferencias Concéntricas: (X=500, Y=510) -->
+  <!-- 4. CÍRCULO EXTERIOR: CONTEXTO SOCIAL AMPLIO (R=340) -->
+  <circle cx="500" cy="510" r="340" fill="url(#gradSocial)" stroke="#7E57C2" stroke-width="2.5" stroke-dasharray="6,4" />
+
+  <!-- 3. CÍRCULO MESOSISTEMA: CONTEXTO ACADÉMICO / LABORAL / VECINDARIO (R=250) -->
+  <circle cx="500" cy="510" r="250" fill="url(#gradAcademico)" stroke="#FFA000" stroke-width="2.5" />
+
+  <!-- 2. CÍRCULO MICROSISTEMA: FAMILIA / ENTORNO INMEDIATO (R=160) -->
+  <circle cx="500" cy="510" r="160" fill="url(#gradFamilia)" stroke="#0288D1" stroke-width="2.5" />
+
+  <!-- 1. CÍRCULO ONTOSISTEMA: YO (R=75) -->
+  <circle cx="500" cy="510" r="75" fill="url(#gradYo)" stroke="#2E7D32" stroke-width="3" filter="url(#shadowCard)" />
+
+  <!-- Textos dentro del núcleo YO -->
+  <text x="500" y="495" fill="#1B5E20" font-size="16" font-weight="900" text-anchor="middle">YO</text>
+  <text x="500" y="515" fill="#00324D" font-size="10.5" font-weight="700" text-anchor="middle">Karen Campo</text>
+  <text x="500" y="530" fill="#333333" font-size="8.5" text-anchor="middle">Valores, Principios</text>
+  <text x="500" y="542" fill="#333333" font-size="8.5" text-anchor="middle">y Motivaciones</text>
+
+  <!-- Rótulo en Anillo 2: FAMILIA -->
+  <path id="pathFamilia" d="M 370 510 A 130 130 0 0 1 630 510" fill="none" />
+  <text fill="#01579B" font-size="11" font-weight="800" text-anchor="middle">
+    <textPath href="#pathFamilia" startOffset="50%">PLANO 2: FAMILIA (ENTORNO INMEDIATO)</textPath>
+  </text>
+
+  <!-- Rótulo en Anillo 3: ACADÉMICO / LABORAL -->
+  <path id="pathAcademico" d="M 290 510 A 210 210 0 0 1 710 510" fill="none" />
+  <text fill="#E65100" font-size="11" font-weight="800" text-anchor="middle">
+    <textPath href="#pathAcademico" startOffset="50%">PLANO 3: ACADÉMICO, LABORAL, VECINDARIO Y COMUNIDAD</textPath>
+  </text>
+
+  <!-- Rótulo en Anillo 4: CONTEXTO SOCIAL AMPLIO -->
+  <path id="pathSocial" d="M 200 510 A 300 300 0 0 1 800 510" fill="none" />
+  <text fill="#4A148C" font-size="11" font-weight="800" text-anchor="middle">
+    <textPath href="#pathSocial" startOffset="50%">PLANO 4: CONTEXTO SOCIAL MÁS AMPLIO (MACROSISTEMA)</textPath>
+  </text>
+
+  <!-- ==================== TARJETAS LATERALES Y DESCRIPCIONES ==================== -->
+
+  <!-- TARJETA 1: YO (Verde) -->
+  <g transform="translate(870, 125)" filter="url(#shadowCard)">
+    <rect width="300" height="175" rx="8" fill="#FFFFFF" stroke="#39A900" stroke-width="2" />
+    <rect width="300" height="28" rx="8" fill="#39A900" />
+    <text x="150" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">PLANO 1: YO (ONTOSISTEMA)</text>
+    <text x="12" y="46" fill="#00324D" font-size="10" font-weight="bold">Identidad:</text>
+    <text x="75" y="46" fill="#333333" font-size="9.5">Karen Yuliana Campo (21 años)</text>
+    <text x="12" y="64" fill="#00324D" font-size="10" font-weight="bold">Rol:</text>
+    <text x="42" y="64" fill="#333333" font-size="9.5">Aprendiz ADSO | Ficha 3186681</text>
+    <text x="12" y="82" fill="#00324D" font-size="10" font-weight="bold">Motivaciones:</text>
+    <text x="12" y="98" fill="#475569" font-size="8.8">• Dominio del desarrollo de software de calidad.</text>
+    <text x="12" y="112" fill="#475569" font-size="8.8">• Innovación con Pizzería Bella Italia Popayán.</text>
+    <text x="12" y="126" fill="#475569" font-size="8.8">• Superación personal y movilidad social digna.</text>
+    <text x="12" y="144" fill="#00324D" font-size="10" font-weight="bold">Principios y Valores:</text>
+    <text x="12" y="160" fill="#1B5E20" font-size="8.8" font-weight="600">Empatía, Integridad, Alteridad, Perseverancia, Respeto.</text>
+  </g>
+
+  <!-- TARJETA 2: FAMILIA (Azul) -->
+  <g transform="translate(870, 315)" filter="url(#shadowCard)">
+    <rect width="300" height="185" rx="8" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" />
+    <rect width="300" height="28" rx="8" fill="#0288D1" />
+    <text x="150" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">PLANO 2: FAMILIA (MICROSISTEMA)</text>
+    <text x="12" y="46" fill="#00324D" font-size="10" font-weight="bold">Grado de Confianza:</text>
+    <text x="135" y="46" fill="#0288D1" font-size="9.5" font-weight="bold">Máxima Confianza (Apego Seguro)</text>
+    <text x="12" y="66" fill="#00324D" font-size="10" font-weight="bold">Personas Representativas:</text>
+    <text x="12" y="84" fill="#333333" font-size="9">• <tspan font-weight="bold">Madre (Luz Marina):</tspan> Soporte emocional y fortaleza ética.</text>
+    <text x="12" y="100" fill="#333333" font-size="9">• <tspan font-weight="bold">Padre / Figura Paterna:</tspan> Disciplina, esfuerzo y trabajo.</text>
+    <text x="12" y="116" fill="#333333" font-size="9">• <tspan font-weight="bold">Hermanos:</tspan> Convivencia, cooperación y lealtad.</text>
+    <text x="12" y="132" fill="#333333" font-size="9">• <tspan font-weight="bold">Abuela:</tspan> Sabiduría, tradición familiar y afecto puro.</text>
+    <text x="12" y="148" fill="#333333" font-size="9">• <tspan font-weight="bold">Pareja / Círculo Íntimo:</tspan> Proyección y confianza mutua.</text>
+    <text x="12" y="168" fill="#555555" font-size="8.5" font-style="italic">"Núcleo de validación incondicional y refugio de valores."</text>
+  </g>
+
+  <!-- TARJETA 3: ACADÉMICO / LABORAL / COMUNIDAD (Naranja) -->
+  <g transform="translate(870, 515)" filter="url(#shadowCard)">
+    <rect width="300" height="185" rx="8" fill="#FFFFFF" stroke="#FFA000" stroke-width="2" />
+    <rect width="300" height="28" rx="8" fill="#FFA000" />
+    <text x="150" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">PLANO 3: ACADÉMICO Y LABORAL</text>
+    <text x="12" y="46" fill="#00324D" font-size="10" font-weight="bold">Grado de Confianza:</text>
+    <text x="135" y="46" fill="#E65100" font-size="9.5" font-weight="bold">Confianza Media-Alta (Cooperativa)</text>
+    <text x="12" y="66" fill="#00324D" font-size="10" font-weight="bold">Integrantes del Ecosistema:</text>
+    <text x="12" y="84" fill="#333333" font-size="9">• <tspan font-weight="bold">Instructores ADSO:</tspan> Guía formativa, técnica y axiológica.</text>
+    <text x="12" y="100" fill="#333333" font-size="9">• <tspan font-weight="bold">Compañeros Ficha 3186681:</tspan> Apoyo mutuo en proyectos.</text>
+    <text x="12" y="116" fill="#333333" font-size="9">• <tspan font-weight="bold">Equipo Bella Italia:</tspan> Sincronía técnica en equipo Scrum.</text>
+    <text x="12" y="132" fill="#333333" font-size="9">• <tspan font-weight="bold">Vecindario Popayán:</tspan> Convivencia barrial, saludo cívico.</text>
+    <text x="12" y="148" fill="#333333" font-size="9">• <tspan font-weight="bold">Grupos Significativos:</tspan> Semillero TI / Grupo deportivo.</text>
+    <text x="12" y="168" fill="#555555" font-size="8.5" font-style="italic">"Espacio de crecimiento técnico, socialización y debate."</text>
+  </g>
+
+  <!-- TARJETA 4: CONTEXTO SOCIAL AMPLIO (Púrpura) -->
+  <g transform="translate(870, 715)" filter="url(#shadowCard)">
+    <rect width="300" height="160" rx="8" fill="#FFFFFF" stroke="#7E57C2" stroke-width="2" />
+    <rect width="300" height="28" rx="8" fill="#7E57C2" />
+    <text x="150" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">PLANO 4: CONTEXTO SOCIAL AMPLIO</text>
+    <text x="12" y="46" fill="#00324D" font-size="10" font-weight="bold">Grado de Confianza:</text>
+    <text x="135" y="46" fill="#4A148C" font-size="9.5" font-weight="bold">Confianza Institucional / Normativa</text>
+    <text x="12" y="66" fill="#00324D" font-size="10" font-weight="bold">Entidades y Actores Colectivos:</text>
+    <text x="12" y="84" fill="#333333" font-size="9">• <tspan font-weight="bold">Instituciones Públicas:</tspan> Alcaldía Popayán, SENA, MinTIC.</text>
+    <text x="12" y="100" fill="#333333" font-size="9">• <tspan font-weight="bold">Gremios y Sector TI:</tspan> Fedesoft, Cámara Comercio Cauca.</text>
+    <text x="12" y="116" fill="#333333" font-size="9">• <tspan font-weight="bold">Sociedad Civil y Transeúntes:</tspan> Relación de respeto cívico.</text>
+    <text x="12" y="132" fill="#333333" font-size="9">• <tspan font-weight="bold">Medios y Redes Sociales:</tspan> Interacción digital no vinculante.</text>
+  </g>
+
+  <!-- Conectores visuales entre el gráfico central y las tarjetas -->
+  <!-- Línea hacia Yo -->
+  <path d="M 545 470 L 680 215 L 870 215" fill="none" stroke="#39A900" stroke-width="2" stroke-dasharray="4,4" />
+  <circle cx="545" cy="470" r="4" fill="#39A900" />
+
+  <!-- Línea hacia Familia -->
+  <path d="M 590 410 L 720 405 L 870 405" fill="none" stroke="#0288D1" stroke-width="2" stroke-dasharray="4,4" />
+  <circle cx="590" cy="410" r="4" fill="#0288D1" />
+
+  <!-- Línea hacia Académico -->
+  <path d="M 645 660 L 750 605 L 870 605" fill="none" stroke="#FFA000" stroke-width="2" stroke-dasharray="4,4" />
+  <circle cx="645" cy="660" r="4" fill="#FFA000" />
+
+  <!-- Línea hacia Social Amplio -->
+  <path d="M 680 770 L 770 795 L 870 795" fill="none" stroke="#7E57C2" stroke-width="2" stroke-dasharray="4,4" />
+  <circle cx="680" cy="770" r="4" fill="#7E57C2" />
+
+  <!-- Leyenda y Matriz Axiológica (Cuadro Izquierdo Inferior) -->
+  <g transform="translate(40, 765)" filter="url(#shadowBox)">
+    <rect width="420" height="110" rx="6" fill="#FFFFFF" stroke="#00324D" stroke-width="1.5" />
+    <rect width="420" height="24" rx="6" fill="#00324D" />
+    <text x="210" y="16" fill="#FFFFFF" font-size="10.5" font-weight="bold" text-anchor="middle">MATRIZ AXIOLÓGICA Y CULTURA DE PAZ</text>
+    <text x="10" y="38" fill="#15803D" font-size="9" font-weight="bold">Alteridad y Empatía:</text>
+    <text x="135" y="38" fill="#333333" font-size="8.8">Reconocimiento genuino del otro como sujeto de derechos.</text>
+    <text x="10" y="54" fill="#0284C7" font-size="9" font-weight="bold">Comunicación Asertiva:</text>
+    <text x="135" y="54" fill="#333333" font-size="8.8">Expresión clara y respetuosa para la prevención de violencia.</text>
+    <text x="10" y="70" fill="#D97706" font-size="9" font-weight="bold">Bien Común:</text>
+    <text x="135" y="70" fill="#333333" font-size="8.8">Articulación de metas individuales hacia el progreso colectivo.</text>
+    <text x="10" y="86" fill="#7C3AED" font-size="9" font-weight="bold">Resolución Pacífica:</text>
+    <text x="135" y="86" fill="#333333" font-size="8.8">Uso del diálogo constructivo y negociación sin confrontación.</text>
+    <text x="10" y="102" fill="#555555" font-size="8" font-style="italic">Marco: Competencia Enrique Low Murtra (240201526) | SENA CTPI Popayán</text>
+  </g>
+</svg>
