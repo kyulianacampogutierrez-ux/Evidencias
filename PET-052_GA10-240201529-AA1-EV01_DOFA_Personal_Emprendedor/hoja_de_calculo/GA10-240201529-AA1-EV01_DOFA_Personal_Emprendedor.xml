@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Matriz DOFA Personal y Plan de Acción Emprendedor - Karen Campo</Title>
+  <Subject>Evidencia GA10-240201529-AA1-EV01</Subject>
+  <Author>Karen Yuliana Campo</Author>
+  <Company>SENA CTPI Popayán</Company>
+ </DocumentProperties>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#1E293B"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <!-- Títulos Principales -->
+  <Style ss:ID="TituloPrincipal">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="15" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#047857" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SubtituloPrincipal">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#065F46" ss:Pattern="Solid"/>
+  </Style>
+  <!-- Encabezados de Tabla -->
+  <Style ss:ID="HeaderVerde">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#064E3B"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#064E3B"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#064E3B"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#064E3B"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#059669" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="HeaderAzul">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0C4A6E"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0C4A6E"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0C4A6E"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0C4A6E"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#0284C7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="HeaderRojo">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#7F1D1D"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#7F1D1D"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#7F1D1D"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#7F1D1D"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#DC2626" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="HeaderAmarillo">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#78350F"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#78350F"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#78350F"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#78350F"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#D97706" ss:Pattern="Solid"/>
+  </Style>
+  <!-- Estilos de Celdas Normales y con Bordes -->
+  <Style ss:ID="CeldaNormal">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="9.5" ss:Color="#1E293B"/>
+  </Style>
+  <Style ss:ID="CeldaCentrada">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="9.5" ss:Color="#1E293B"/>
+  </Style>
+  <Style ss:ID="CeldaNumero">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="9.5" ss:Color="#1E293B"/>
+   <NumberFormat ss:Format="#,##0.0"/>
+  </Style>
+  <Style ss:ID="CeldaPorcentaje">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="9.5" ss:Color="#1E293B"/>
+   <NumberFormat ss:Format="0.0%"/>
+  </Style>
+  <Style ss:ID="CeldaPuntaje">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="9.5" ss:Bold="1" ss:Color="#0F172A"/>
+   <NumberFormat ss:Format="#,##0.00"/>
+  </Style>
+  <Style ss:ID="FilaTotal">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Double" ss:Weight="3" ss:Color="#0F172A"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0F172A"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#0F172A"/>
+   <Interior ss:Color="#F1F5F9" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="#,##0.00"/>
+  </Style>
+  <!-- Estilos para DOFA -->
+  <Style ss:ID="TagDebilidad">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Bold="1" ss:Color="#991B1B"/>
+   <Interior ss:Color="#FEE2E2" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="TagFortaleza">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Bold="1" ss:Color="#166534"/>
+   <Interior ss:Color="#DCFCE7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="TagAmenaza">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Bold="1" ss:Color="#92400E"/>
+   <Interior ss:Color="#FEF3C7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="TagOportunidad">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Bold="1" ss:Color="#075985"/>
+   <Interior ss:Color="#E0F2FE" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 1: PORTADA INSTITUCIONAL Y PERFIL DEL EMPRENDEDOR                -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Portada_Institucional">
+  <Table ss:DefaultColumnWidth="60" ss:DefaultRowHeight="20">
+   <Column ss:Width="30"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="380"/>
+   <Column ss:Width="120"/>
+
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">SERVICIO NACIONAL DE APRENDIZAJE (SENA)</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="SubtituloPrincipal">
+     <Data ss:Type="String">REGIONAL CAUCA - CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI)</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">CAMPO INSTITUCIONAL</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="HeaderVerde"><Data ss:Type="String">DETALLE TÉCNICO Y CURRICULAR</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Programa de Formación</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Tecnología en Análisis y Desarrollo de Software (ADSO)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Número de Ficha</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">3186681</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Fase del Proyecto</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Fase 4 - Implantación (AP10)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Competencia Transversal</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">240201529 - Gestionar procesos propios de la cultura emprendedora y empresarial de acuerdo con el perfil personal y los requerimientos de los contextos productivo y social</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Resultado de Aprendizaje (RAP)</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">240201529-01 - Integrar elementos de la cultura emprendedora teniendo en cuenta el perfil personal y el contexto de desarrollo social</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Actividad de Aprendizaje</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">GA10-240201529-AA1 - Reconocer capacidades personales para convertirse en emprendedor, como parte de su proyecto de vida en términos de desarrollo humano y económico</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Evidencia de Aprendizaje</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">GA10-240201529-AA1-EV01 - DOFA personal (Hoja de Cálculo y Análisis Estratégico)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Instrumento de Evaluación</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">IE-GA10-240201529-AA1-EV01 (Lista de Chequeo: Aplica acciones de emprendimiento de acuerdo con elementos de desarrollo personal y social)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Componente Formativo</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Ser emprendedor</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Aprendiz</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Yuliana Campo</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Instructor Técnico</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Danilo</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Fecha de Elaboración</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Noviembre de 2026</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="HeaderAzul"><Data ss:Type="String">EJE ESTRATÉGICO</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="HeaderAzul"><Data ss:Type="String">DEFINICIÓN DEL PROYECTO DE EMPRENDIMIENTO Y VIDA</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Nombre del Emprendimiento</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Pizzería Gourmet Bella Italia Popayán (Plataforma Omnicanal y Cocina Artesanal)</Data></Cell>
+   </Row>
+   <Row ss:Height="40">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Misión Personal Emprendedora</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Fusionar mis competencias como desarrolladora de software ADSO con la pasión por la gastronomía caucana de excelencia, liderando un modelo de negocio innovador, digitalizado y sostenible que genere empleo digno e impulse los productos locales de Popayán.</Data></Cell>
+   </Row>
+   <Row ss:Height="40">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Visión Personal (2028)</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">Consolidar a Bella Italia Popayán como la pizzería artesanal y tecnológica insignia del suroccidente colombiano, escalando su modelo de franquicia y software integral a otras ciudades gastronómicas mediante el respaldo de Fondo Emprender SENA.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 2: MATRIZ DOFA PERSONAL DETALLADA (ANÁLISIS INTERNO Y EXTERNO)  -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Matriz_DOFA_Personal">
+  <Table ss:DefaultColumnWidth="65" ss:DefaultRowHeight="20">
+   <Column ss:Width="25"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="340"/>
+   <Column ss:Width="75"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+
+   <!-- TÍTULO DE LA HOJA -->
+   <Row ss:Height="30">
+    <Cell ss:Index="2" ss:MergeAcross="5" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">MATRIZ DOFA PERSONAL DEL SER EMPRENDEDOR - KAREN CAMPO</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <!-- SECCIÓN 1: FORTALEZAS INTERNAS (F) -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="5" ss:StyleID="HeaderVerde">
+     <Data ss:Type="String">1. ANÁLISIS INTERNO: FORTALEZAS DEL EMPRENDEDOR (F) - FACTORES CLAVE DE ÉXITO</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Factor de Personalidad / Habilidad</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Descripción Detallada e Impacto en el Emprendimiento</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Nivel (1-5)</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Ponderación</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Puntaje</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagFortaleza"><Data ss:Type="String">F1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Dominio Técnico en Software ADSO</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Capacidad de programar y mantener la arquitectura web, carrito, monitor KDS y facturación DIAN sin depender de proveedores de software externos costosos.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.25</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagFortaleza"><Data ss:Type="String">F2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Pasión por la Gastronomía Caucana</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Profundo amor y conocimiento de ingredientes autóctonos (pipián, quesos de Silvia) y masas de fermentación lenta de 48 horas en leña.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.00</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagFortaleza"><Data ss:Type="String">F3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Disciplina y Rigor Metodológico</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Hábitos consolidados de estudio, planificación minuciosa, seguimiento a cronogramas y cumplimiento de estándares de calidad (ISO/IEC e higiene BPM).</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.90</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagFortaleza"><Data ss:Type="String">F4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Resiliencia y Capacidad de Iteración</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Tolerancia constructiva ante errores técnicos o pruebas fallidas; mentalidad orientada a la mejora continua y corrección rápida ante imprevistos.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.90</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagFortaleza"><Data ss:Type="String">F5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Liderazgo Colaborativo y Empatía</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Facilidad para motivar al equipo de trabajo (cocineros, cajeros, domiciliarios) mediante escucha activa y respeto a la dignidad humana.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.60</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">SUBTOTAL FORTALEZAS (F)</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Promedio Ponderado de Fortalezas</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=AVERAGE(R[-5]C:R[-1]C)"><Data ss:Type="Number">4.6</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">4.65</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- SECCIÓN 2: DEBILIDADES INTERNAS (D) -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="5" ss:StyleID="HeaderRojo">
+     <Data ss:Type="String">2. ANÁLISIS INTERNO: DEBILIDADES DEL EMPRENDEDOR (D) - ASPECTOS POR MEJORAR</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderRojo"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Carencia o Debilidad de Personalidad</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Descripción Detallada y Riesgo para el Emprendimiento</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Nivel (1-5)</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Ponderación</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Puntaje</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagDebilidad"><Data ss:Type="String">D1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Experiencia Comercial B2C Limitada</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Timidez inicial para el cierre de ventas directas y negociación agresiva con distribuidores mayoristas de insumos gastronómicos.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.875</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagDebilidad"><Data ss:Type="String">D2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Tendencia al Perfeccionismo Técnico</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Riesgo de retrasar lanzamientos comerciales por buscar la perfección extrema en detalles del software o en recetas de cocina.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.80</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagDebilidad"><Data ss:Type="String">D3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Capital Financiero Propio Limitado</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Escasez de recursos monetarios líquidos personales para costear maquinaria industrial pesada (horno leña refractario, batidoras) sin apalancamiento.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.125</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagDebilidad"><Data ss:Type="String">D4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Dificultad Inicial para Delegar</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Sobrecarga de trabajo por querer supervisar personalmente tanto la línea de cocina como las funciones de caja y despliegue del sistema.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.525</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagDebilidad"><Data ss:Type="String">D5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Conocimiento Financiero/Tributario Intermedio</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Necesidad de profundizar en la legislación de retenciones, IVA del 19% e impuesto nacional al consumo para la presentación formal de balances.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.45</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">SUBTOTAL DEBILIDADES (D)</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Promedio Ponderado de Debilidades</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=AVERAGE(R[-5]C:R[-1]C)"><Data ss:Type="Number">3.7</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">3.775</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- SECCIÓN 3: OPORTUNIDADES EXTERNAS (O) -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="5" ss:StyleID="HeaderAzul">
+     <Data ss:Type="String">3. ANÁLISIS EXTERNO: OPORTUNIDADES DEL ENTORNO (O) - VENTAJAS COMPETITIVAS</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderAzul"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Oportunidad del Entorno o Mercado</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Descripción Detallada y Beneficio Potencial</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Nivel (1-5)</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Ponderación</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Puntaje</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagOportunidad"><Data ss:Type="String">O1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Convocatorias Fondo Emprender SENA</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Acceso a capital semilla no reembolsable (hasta $90-$100 millones COP) para infraestructura, nómina y maquinaria al cumplir hitos empresariales.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.25</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagOportunidad"><Data ss:Type="String">O2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Popayán Ciudad Creativa de la Gastronomía UNESCO</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Reconocimiento internacional de la ciudad que atrae turistas y comensales exigentes en busca de fusiones culinarias autóctonas de alta gama.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.25</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagOportunidad"><Data ss:Type="String">O3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Auge del Comercio Electrónico y Domicilios</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Crecimiento superior al 35% anual en pedidos por canales digitales y conveniencia de pago móvil (Wompi, Bancolombia, PSE) en Popayán.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.90</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagOportunidad"><Data ss:Type="String">O4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Alianzas con Productores Campesinos de Silvia</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Adquisición directa de quesos madurados, vegetales orgánicos y trucha sin intermediarios, garantizando frescura y precios estables.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.60</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagOportunidad"><Data ss:Type="String">O5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Incentivos a la Digitalización de MIPYMES</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Beneficios del MinTIC y Cámara de Comercio del Cauca para negocios gastronómicos basados en tecnologías 4.0 y factura electrónica.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.60</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">SUBTOTAL OPORTUNIDADES (O)</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Promedio Ponderado de Oportunidades</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=AVERAGE(R[-5]C:R[-1]C)"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">4.60</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- SECCIÓN 4: AMENAZAS EXTERNAS (A) -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="5" ss:StyleID="HeaderAmarillo">
+     <Data ss:Type="String">4. ANÁLISIS EXTERNO: AMENAZAS DEL ENTORNO (A) - FACTORES DE RIESGO</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Amenaza del Entorno o Competencia</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Descripción Detallada y Consecuencia Negativa</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Nivel (1-5)</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Ponderación</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Puntaje</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagAmenaza"><Data ss:Type="String">A1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Volatilidad e Inflación de Insumos</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Incrementos abruptos en el precio del trigo importado, queso mozzarella y leña para el horno, que pueden erosionar los márgenes de ganancia.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1.125</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagAmenaza"><Data ss:Type="String">A2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Competencia de Cadenas Masivas Low-Cost</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Presión comercial de franquicias multinacionales con promociones agresivas de precios bajos y presupuestos millonarios de publicidad.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.80</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagAmenaza"><Data ss:Type="String">A3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Interrupciones de Servicios Públicos / Conectividad</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Cortes imprevistos de energía o internet en el sector histórico de Popayán que afecten el funcionamiento del servidor web o del horno.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.70</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagAmenaza"><Data ss:Type="String">A4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Cambios y Complejidad en Normas DIAN</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Nuevas resoluciones tributarias que exijan actualizaciones continuas en los anexos técnicos de facturación electrónica y nómina electrónica.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.70</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="TagAmenaza"><Data ss:Type="String">A5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Riesgos de Ciberseguridad y Fraude Web</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Intentos de suplantación de identidad en pagos digitales o ataques de denegación de servicio a la pasarela de pedidos en línea.</Data></Cell>
+    <Cell ss:StyleID="CeldaNumero"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="CeldaPorcentaje"><Data ss:Type="Number">0.15</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">0.45</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">SUBTOTAL AMENAZAS (A)</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Promedio Ponderado de Amenazas</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=AVERAGE(R[-5]C:R[-1]C)"><Data ss:Type="Number">3.7</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-5]C:R[-1]C)"><Data ss:Type="Number">3.775</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 3: MATRIZ DE CRUCE ESTRATÉGICO (FO, DO, FA, DA)                 -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Cruce_Estrategico_FODA">
+  <Table ss:DefaultColumnWidth="65" ss:DefaultRowHeight="20">
+   <Column ss:Width="25"/>
+   <Column ss:Width="65"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="360"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="70"/>
+
+   <!-- TÍTULO -->
+   <Row ss:Height="30">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">MATRIZ DE CRUCE ESTRATÉGICO FODA (ESTRATEGIAS DE ACCIÓN)</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <!-- ESTRATEGIAS FO: OFENSIVAS -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="HeaderVerde">
+     <Data ss:Type="String">ESTRATEGIAS FO (FORTALEZAS + OPORTUNIDADES) - ESTRATEGIAS OFENSIVAS Y DE EXPANSIÓN</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Factores Cruzados</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Descripción Estratégica</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Meta / Resultado Clave</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Impacto</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FO-01</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F1 (Software) + O3 (E-Commerce)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Potenciar el portal de comercio electrónico propio eliminando comisiones del 25% de apps comerciales de terceros, ofreciendo promociones dinámicas.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Captar el 60% de pedidos a través del portal web propio en 6 meses.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (5.0)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FO-02</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F2 (Pasión) + O2 (UNESCO Popayán)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Diseñar y posicionar la línea exclusiva 'Pizzas con Sabor Caucano' (Pipián Payanés y Queso de Silvia) respaldada en el reconocimiento gastronómico mundial de Popayán.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Obtener el sello gastronómico local y publicar reseña en guías turísticas.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (5.0)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FO-03</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F3 (Rigor) + O1 (Fondo Emprender)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Estructurar el plan de negocio formal con soporte documental del SENA para postular a la convocatoria nacional de Fondo Emprender 2027.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Radicar proyecto de capital semilla con viabilidad técnica superior a 90 puntos.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (5.0)</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- ESTRATEGIAS DO: ADAPTATIVAS -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="HeaderAzul">
+     <Data ss:Type="String">ESTRATEGIAS DO (DEBILIDADES + OPORTUNIDADES) - ESTRATEGIAS ADAPTATIVAS Y DE REORIENTACIÓN</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderAzul"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Factores Cruzados</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Descripción Estratégica</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Meta / Resultado Clave</Data></Cell>
+    <Cell ss:StyleID="HeaderAzul"><Data ss:Type="String">Impacto</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DO-01</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D3 (Capital) + O1 (Fondo Emprender)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Financiar la compra del horno industrial giratorio y adecuaciones de cocina mediante los recursos condonables del Fondo Emprender SENA.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Adquirir activos productivos por $80 millones COP sin endeudamiento bancario.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">MUY ALTO (5.0)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DO-02</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D1 (Ventas) + O5 (MinTIC / Formación)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Inscribirse en talleres gratuitos de marketing digital, ventas B2C y pitch comercial ofrecidos por el Centro de Desarrollo Empresarial SENA (SBDC).</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Completar 40 horas de formación en habilidades blandas de ventas en 3 meses.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">MEDIO (4.0)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DO-03</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D5 (Tributario) + O5 (Digitalización)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Aprovechar capacitaciones de la Cámara de Comercio del Cauca sobre Régimen Simple de Tributación (RST) y Facturación DIAN 1.9.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Migrar la microempresa al RST logrando una reducción de cargas tributarias.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">MEDIO (4.0)</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- ESTRATEGIAS FA: DEFENSIVAS -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="HeaderAmarillo">
+     <Data ss:Type="String">ESTRATEGIAS FA (FORTALEZAS + AMENAZAS) - ESTRATEGIAS DEFENSIVAS</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Factores Cruzados</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Descripción Estratégica</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Meta / Resultado Clave</Data></Cell>
+    <Cell ss:StyleID="HeaderAmarillo"><Data ss:Type="String">Impacto</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FA-01</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F1 (Software) + A1 (Inflación Insumos)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Implementar en el sistema un submódulo de escandallos y control automático de mermas de masa y quesos para blindar los costos de producción.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Mantener el costo de materia prima por debajo del 32% del precio final.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (4.5)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FA-02</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F2 (Calidad) + A2 (Cadenas Low-Cost)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Diferenciación radical: No competir por precio bajo contra comida rápida industrial, sino por valor gourmet artesanal, salud y digestibilidad (fermentación 48h).</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Tasa de fidelización y recompra superior al 45% en clientes de Popayán.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (4.5)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">FA-03</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">F4 (Resiliencia) + A3 (Fallas Servicios)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Adquirir UPS de respaldo para router y terminales POS, además de soporte para modo offline con sincronización diferida en la base de datos local.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Cero interrupciones de facturación ante cortes de internet de hasta 2 horas.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">MEDIO (4.0)</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+
+   <!-- ESTRATEGIAS DA: SUPERVIVENCIA -->
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="HeaderRojo">
+     <Data ss:Type="String">ESTRATEGIAS DA (DEBILIDADES + AMENAZAS) - ESTRATEGIAS DE SUPERVIVENCIA Y MITIGACIÓN</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="HeaderRojo"><Data ss:Type="String">Cód.</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Factores Cruzados</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Descripción Estratégica</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Meta / Resultado Clave</Data></Cell>
+    <Cell ss:StyleID="HeaderRojo"><Data ss:Type="String">Impacto</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DA-01</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D4 (Delegación) + A1 (Sobrecarga/Costos)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Elaborar manuales de procedimientos operativos estándar (SOP) y capacitar al jefe de cocina y cajero para evitar depender exclusivamente del fundador.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Operación autónoma del restaurante durante turnos continuos sin presencia del líder.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (4.5)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DA-02</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D2 (Perfeccionismo) + A2 (Competencia)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Adoptar la metodología Lean Startup con Producto Mínimo Viable (MVP): lanzar productos con calidad óptima sin esperar meses de desarrollo innecesario.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Ciclos de retroalimentación de clientes quincenales y ajustes ágiles.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">ALTO (4.0)</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">DA-03</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">D5 (Tributario) + A4 (DIAN)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Contratar una póliza de asesoría contable externa por horas y utilizar el portal de facturación validado previamente por la DIAN.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Cero sanciones tributarias o inconsistencias en declaraciones bimestrales.</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">MEDIO (4.0)</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 4: DIAGNÓSTICO EMOCIONAL Y DE TEMPERAMENTO                      -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Diagnostico_Emocional">
+  <Table ss:DefaultColumnWidth="65" ss:DefaultRowHeight="20">
+   <Column ss:Width="25"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="280"/>
+   <Column ss:Width="280"/>
+
+   <!-- TÍTULO -->
+   <Row ss:Height="30">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">DIAGNÓSTICO DEL TEMPERAMENTO, RESILIENCIA Y MANEJO DE EMOCIONES</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">DIMENSIÓN ACTITUDINAL</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">COMPORTAMIENTO CUANDO LAS COSAS SALEN BIEN (ÉXITO)</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">COMPORTAMIENTO CUANDO LAS COSAS NO SALEN BIEN (ADVERSIDAD)</Data></Cell>
+   </Row>
+
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">1. Temperamento y Autocontrol</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Mantengo serenidad y humildad. Evito la euforia desmedida reconociendo que los buenos resultados son fruto del trabajo en equipo y de la disciplina diaria.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Evito reacciones impulsivas o de pánico. Respiro profundo, evalúo los hechos objetivos y concentro mi energía en la solución del problema y no en la búsqueda de culpables.</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">2. Paciencia y Tolerancia</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Entiendo que el crecimiento de la pizzería es un proceso progresivo; no me precipito a endeudamientos innecesarios por un buen mes de ventas.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Comprendo que la fermentación de masas, el software y los negocios toman tiempo. La paciencia me permite iterar recetas y refactorizar código sin desesperar.</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">3. Tranquilidad Emocional</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Disfruto la satisfacción del deber cumplido, agradezco a clientes y colaboradores, y dedico tiempo a la familia para mantener el equilibrio mental.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Practico pausas activas y desconexión controlada para disipar el estrés de los picos de pedidos o fallos de servidores, evitando el síndrome de desgaste (burnout).</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">4. Disciplina y Rigor</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">La disciplina se refuerza: mantengo los mismos horarios de apertura, control de calidad y auditoría contable sin relajar los estándares por el éxito.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">La disciplina es mi ancla: aunque no haya motivación emocional en un día difícil, me apego a la rutina de trabajo, a las metas diarias y al plan de acción.</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">5. Nivel de Seguimiento del Objetivo</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">El éxito me confirma que la visión es viable. Aprovecho para reinvertir en tecnología y capacitación del equipo hacia metas de mayor escala.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">El objetivo principal no cambia; solo cambia el plan o la táctica. Un cliente insatisfecho o un bug en producción se convierte en insumo de mejora inmediata.</Data></Cell>
+   </Row>
+
+   <Row ss:Height="14"><Cell ss:Index="2"/></Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="HeaderAzul">
+     <Data ss:Type="String">RESPUESTAS ORIENTADORAS CLAVE DE LA GUÍA 10 (SECCIÓN 3.2.1)</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">¿Cómo los aspectos identificados le ayudarán a impulsar su emprendimiento?</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">El autoconocimiento me permite apalancar mis fortalezas distintivas (desarrollo de software y pasión gastronómica) para crear una propuesta única en Popayán. Saber con exactitud mis debilidades me impulsa a formarme en finanzas y delegar a tiempo, convirtiendo la gestión empírica en una empresa estructurada con visión escalable.</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">¿Qué estrategia le ayudaría a su personalidad para minimizar amenazas del entorno?</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="CeldaNormal"><Data ss:Type="String">La estrategia de Diferenciación por Calidad y Alianzas Locales: no competir por precio con multinacionales, sino respaldarme en la identidad caucana (Silvia y Popayán UNESCO), la automatización digital y el rigor metodológico. Mi personalidad analítica me permite crear planes de contingencia anticipados (ahorro, energía de respaldo y capacitación legal).</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 5: PLAN DE ACCIÓN PERSONAL Y METAS SMART                       -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Plan_Accion_SMART">
+  <Table ss:DefaultColumnWidth="65" ss:DefaultRowHeight="20">
+   <Column ss:Width="25"/>
+   <Column ss:Width="45"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="260"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="70"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="75"/>
+
+   <!-- TÍTULO -->
+   <Row ss:Height="30">
+    <Cell ss:Index="2" ss:MergeAcross="6" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">PLAN DE ACCIÓN Y METAS SMART DEL EMPRENDEDOR (CRONOGRAMA A 12 MESES)</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">ID</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Dimensión</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Objetivo Específico SMART</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Responsable</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Plazo</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Indicador (KPI)</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">Estado</Data></Cell>
+   </Row>
+
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Técnica / IT</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Desplegar la versión 1.0 del portal web y monitor KDS en servidores contenerizados.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo (Dev)</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 1</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">100% de módulos operativos</Data></Cell>
+    <Cell ss:StyleID="TagFortaleza"><Data ss:Type="String">CUMPLIDA</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Personal</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Realizar curso de 40 horas en Inteligencia Emocional y Gestión del Estrés.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 2</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Certificado aprobado</Data></Cell>
+    <Cell ss:StyleID="TagOportunidad"><Data ss:Type="String">EN PROCESO</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Financiera</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Estructurar el modelo de costos y punto de equilibrio con asesor del SENA SBDC.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo + Asesor</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 3</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Documento financiero validado</Data></Cell>
+    <Cell ss:StyleID="TagOportunidad"><Data ss:Type="String">EN PROCESO</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Operativa</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Formalizar alianza comercial con dos productores de quesos de Silvia, Cauca.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 4</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">2 convenios firmados</Data></Cell>
+    <Cell ss:StyleID="TagAmenaza"><Data ss:Type="String">PLANIFICADA</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Comercial</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Lanzar campaña digital en redes sociales alcanzando 5.000 visualizaciones locales.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo (Mkt)</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 5</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">500 pedidos registrados</Data></Cell>
+    <Cell ss:StyleID="TagAmenaza"><Data ss:Type="String">PLANIFICADA</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M6</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Institucional</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Radicar plan de negocio en la plataforma formal de Fondo Emprender SENA.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 6</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Número de radicado asignado</Data></Cell>
+    <Cell ss:StyleID="TagAmenaza"><Data ss:Type="String">PLANIFICADA</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M7</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Organizacional</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Contratar y capacitar a dos personas (cajero y ayudante de cocina) con manuales SOP.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 8</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">2 empleos formales generados</Data></Cell>
+    <Cell ss:StyleID="TagAmenaza"><Data ss:Type="String">PLANIFICADA</Data></Cell>
+   </Row>
+   <Row ss:Height="32">
+    <Cell ss:Index="2" ss:StyleID="CeldaCentrada"><Data ss:Type="String">M8</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Calidad</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Obtener certificación BPM expedida por la Secretaría de Salud Municipal de Popayán.</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Karen Campo</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Mes 12</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Concepto Sanitario Favorable</Data></Cell>
+    <Cell ss:StyleID="TagAmenaza"><Data ss:Type="String">PLANIFICADA</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <!-- ===================================================================== -->
+ <!-- HOJA 6: DASHBOARD DE CONTROL Y CALIFICACIÓN CUANTITATIVA             -->
+ <!-- ===================================================================== -->
+ <Worksheet ss:Name="Dashboard_Metricas">
+  <Table ss:DefaultColumnWidth="65" ss:DefaultRowHeight="20">
+   <Column ss:Width="30"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="250"/>
+
+   <!-- TÍTULO -->
+   <Row ss:Height="30">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="TituloPrincipal">
+     <Data ss:Type="String">DASHBOARD CUANTITATIVO DEL PERFIL EMPRENDEDOR</Data>
+    </Cell>
+   </Row>
+   <Row ss:Height="12"><Cell ss:Index="2"/></Row>
+
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="HeaderVerde"><Data ss:Type="String">INDICADOR DE MATURIDAD</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">VALOR OBTENIDO</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">RANGO ÓPTIMO</Data></Cell>
+    <Cell ss:StyleID="HeaderVerde"><Data ss:Type="String">INTERPRETACIÓN ESTRATÉGICA</Data></Cell>
+   </Row>
+
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Puntaje Ponderado Fortalezas (F)</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje"><Data ss:Type="Number">4.65</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">4.0 a 5.0</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Excelente base técnica, metodológica y actitudinal</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Puntaje Ponderado Debilidades (D)</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje"><Data ss:Type="Number">3.78</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">&lt; 3.0 (deseable)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Carencias financieras y de ventas mitigables con formación</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Puntaje Ponderado Oportunidades (O)</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje"><Data ss:Type="Number">4.60</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">4.0 a 5.0</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Entorno caucano altamente favorable (Fondo Emprender/UNESCO)</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Puntaje Ponderado Amenazas (A)</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje"><Data ss:Type="Number">3.78</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">&lt; 3.5 (deseable)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Riesgos inflacionarios y de competencia controlables</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Índice de Potencial Emprendedor (IPE)</Data></Cell>
+    <Cell ss:StyleID="CeldaPuntaje"><Data ss:Type="Number">1.23</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">&gt; 1.0 (Favorable)</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Balance positivo: Factores impulsores superan los restrictivos</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="CeldaNormal"><Data ss:Type="String">Nivel Global de Madurez del Perfil</Data></Cell>
+    <Cell ss:StyleID="TagFortaleza"><Data ss:Type="String">ALTO POTENCIAL</Data></Cell>
+    <Cell ss:StyleID="CeldaCentrada"><Data ss:Type="String">Alto</Data></Cell>
+    <Cell ss:StyleID="CeldaNormal"><Data ss:Type="String">Perfil calificado para postulación a fondos institucionales</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

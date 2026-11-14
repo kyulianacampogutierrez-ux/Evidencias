@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200" style="background:#ffffff; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Sombras -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <filter id="bannerShadow" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#047857" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Gradientes -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="60%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+
+    <!-- Cuadrantes DOFA -->
+    <linearGradient id="fGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <linearGradient id="oGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="aGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+
+    <!-- Cruce Estratégico -->
+    <linearGradient id="foGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="doGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="faGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="daGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ENCABEZADO INSTITUCIONAL -->
+  <rect x="40" y="30" width="1520" height="110" rx="14" fill="url(#headerGrad)" filter="url(#bannerShadow)"/>
+  <text x="80" y="75" font-size="26" font-weight="800" fill="#ffffff" letter-spacing="0.5">MATRIZ DOFA PERSONAL DEL SER EMPRENDEDOR Y CRUCE ESTRATÉGICO FODA</text>
+  <text x="80" y="112" font-size="16" font-weight="500" fill="#a7f3d0">Evidencia GA10-240201529-AA1-EV01 | Aprendiz: Karen Yuliana Campo - Ficha 3186681 | ADSO - CTPI Popayán | Proyecto: Pizzería Bella Italia</text>
+
+  <!-- =================================================================== -->
+  <!-- COLUMNA IZQUIERDA: MATRIZ DE FACTORES (ANÁLISIS INTERNO Y EXTERNO) -->
+  <!-- =================================================================== -->
+
+  <!-- CUADRANTE F: FORTALEZAS (INTERNO) -->
+  <g transform="translate(40, 165)">
+    <rect width="740" height="235" rx="12" fill="url(#fGrad)" stroke="#10b981" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="42" rx="12" fill="#059669"/>
+    <rect y="30" width="740" height="12" fill="#059669"/>
+    <text x="25" y="28" font-size="18" font-weight="700" fill="#ffffff">FORTALEZAS INTERNAS (F) - FACTORES CLAVE DE ÉXITO</text>
+    <text x="630" y="28" font-size="14" font-weight="600" fill="#d1fae5">Score: 4.65 / 5.0</text>
+
+    <!-- Items F -->
+    <text x="25" y="70" font-size="14" font-weight="700" fill="#065f46">F1. Dominio Técnico en Software ADSO (Nivel 5.0): <tspan font-weight="400" fill="#1e293b">Desarrollo autónomo de Web, KDS y POS DIAN.</tspan></text>
+    <text x="25" y="102" font-size="14" font-weight="700" fill="#065f46">F2. Pasión por la Gastronomía Caucana (Nivel 5.0): <tspan font-weight="400" fill="#1e293b">Masa madre 48h e insumos autóctonos (Pipián/Silvia).</tspan></text>
+    <text x="25" y="134" font-size="14" font-weight="700" fill="#065f46">F3. Disciplina y Rigor Metodológico (Nivel 4.5): <tspan font-weight="400" fill="#1e293b">Gestión ágil, hábitos de estudio y calidad ISO/BPM.</tspan></text>
+    <text x="25" y="166" font-size="14" font-weight="700" fill="#065f46">F4. Resiliencia y Capacidad de Iteración (Nivel 4.5): <tspan font-weight="400" fill="#1e293b">Tolerancia constructiva al error y mentalidad de mejora.</tspan></text>
+    <text x="25" y="198" font-size="14" font-weight="700" fill="#065f46">F5. Liderazgo Colaborativo y Empatía (Nivel 4.0): <tspan font-weight="400" fill="#1e293b">Capacidad de motivar al equipo de cocina y reparto.</tspan></text>
+  </g>
+
+  <!-- CUADRANTE D: DEBILIDADES (INTERNO) -->
+  <g transform="translate(820, 165)">
+    <rect width="740" height="235" rx="12" fill="url(#dGrad)" stroke="#ef4444" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="42" rx="12" fill="#dc2626"/>
+    <rect y="30" width="740" height="12" fill="#dc2626"/>
+    <text x="25" y="28" font-size="18" font-weight="700" fill="#ffffff">DEBILIDADES INTERNAS (D) - ASPECTOS POR FORTALECER</text>
+    <text x="630" y="28" font-size="14" font-weight="600" fill="#fee2e2">Score: 3.78 / 5.0</text>
+
+    <!-- Items D -->
+    <text x="25" y="70" font-size="14" font-weight="700" fill="#991b1b">D1. Experiencia Comercial B2C Limitada (Nivel 3.5): <tspan font-weight="400" fill="#1e293b">Timidez inicial en cierres de ventas y negociación masiva.</tspan></text>
+    <text x="25" y="102" font-size="14" font-weight="700" fill="#991b1b">D2. Tendencia al Perfeccionismo Técnico (Nivel 4.0): <tspan font-weight="400" fill="#1e293b">Riesgo de retrasar lanzamientos comerciales por detalles.</tspan></text>
+    <text x="25" y="134" font-size="14" font-weight="700" fill="#991b1b">D3. Capital Financiero Propio Limitado (Nivel 4.5): <tspan font-weight="400" fill="#1e293b">Recursos líquidos reducidos para maquinaria industrial pesada.</tspan></text>
+    <text x="25" y="166" font-size="14" font-weight="700" fill="#991b1b">D4. Dificultad Inicial para Delegar Tareas (Nivel 3.5): <tspan font-weight="400" fill="#1e293b">Sobrecarga operativa por querer controlar todo el proceso.</tspan></text>
+    <text x="25" y="198" font-size="14" font-weight="700" fill="#991b1b">D5. Conocimiento Tributario Intermedio (Nivel 3.0): <tspan font-weight="400" fill="#1e293b">Necesidad de dominar declaraciones RST, retenciones e IVA.</tspan></text>
+  </g>
+
+  <!-- CUADRANTE O: OPORTUNIDADES (EXTERNO) -->
+  <g transform="translate(40, 420)">
+    <rect width="740" height="235" rx="12" fill="url(#oGrad)" stroke="#0284c7" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="42" rx="12" fill="#0284c7"/>
+    <rect y="30" width="740" height="12" fill="#0284c7"/>
+    <text x="25" y="28" font-size="18" font-weight="700" fill="#ffffff">OPORTUNIDADES EXTERNAS (O) - VENTAJAS DE ENTORNO</text>
+    <text x="630" y="28" font-size="14" font-weight="600" fill="#e0f2fe">Score: 4.60 / 5.0</text>
+
+    <!-- Items O -->
+    <text x="25" y="70" font-size="14" font-weight="700" fill="#075985">O1. Fondo Emprender SENA (Nivel 5.0): <tspan font-weight="400" fill="#1e293b">Capital semilla no reembolsable hasta $100M COP para maquinaria.</tspan></text>
+    <text x="25" y="102" font-size="14" font-weight="700" fill="#075985">O2. Popayán Ciudad Gastronómica UNESCO (Nivel 5.0): <tspan font-weight="400" fill="#1e293b">Alto flujo turístico y aprecio por experiencias culinarias de autor.</tspan></text>
+    <text x="25" y="134" font-size="14" font-weight="700" fill="#075985">O3. Auge del E-Commerce y Domicilios (Nivel 4.5): <tspan font-weight="400" fill="#1e293b">Crecimiento del 35% anual en compras gastronómicas en línea.</tspan></text>
+    <text x="25" y="166" font-size="14" font-weight="700" fill="#075985">O4. Alianzas con Productores Campesinos de Silvia (Nivel 4.0): <tspan font-weight="400" fill="#1e293b">Compra directa de quesos madurados sin intermediarios.</tspan></text>
+    <text x="25" y="198" font-size="14" font-weight="700" fill="#075985">O5. Incentivos a Digitalización MIPYMES (Nivel 4.0): <tspan font-weight="400" fill="#1e293b">Apoyo institucional MinTIC y Cámara de Comercio del Cauca.</tspan></text>
+  </g>
+
+  <!-- CUADRANTE A: AMENAZAS (EXTERNO) -->
+  <g transform="translate(820, 420)">
+    <rect width="740" height="235" rx="12" fill="url(#aGrad)" stroke="#f59e0b" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="42" rx="12" fill="#d97706"/>
+    <rect y="30" width="740" height="12" fill="#d97706"/>
+    <text x="25" y="28" font-size="18" font-weight="700" fill="#ffffff">AMENAZAS EXTERNAS (A) - FACTORES DE RIESGO</text>
+    <text x="630" y="28" font-size="14" font-weight="600" fill="#fef3c7">Score: 3.78 / 5.0</text>
+
+    <!-- Items A -->
+    <text x="25" y="70" font-size="14" font-weight="700" fill="#92400e">A1. Volatilidad e Inflación de Insumos (Nivel 4.5): <tspan font-weight="400" fill="#1e293b">Alzas en trigo, mozzarella y energía que presionan el margen.</tspan></text>
+    <text x="25" y="102" font-size="14" font-weight="700" fill="#92400e">A2. Competencia de Cadenas Low-Cost (Nivel 4.0): <tspan font-weight="400" fill="#1e293b">Guerra de precios agresiva de marcas masivas de comida rápida.</tspan></text>
+    <text x="25" y="134" font-size="14" font-weight="700" fill="#92400e">A3. Fallas en Conectividad y Servicios (Nivel 3.5): <tspan font-weight="400" fill="#1e293b">Cortes de internet o energía en el Centro Histórico de Popayán.</tspan></text>
+    <text x="25" y="166" font-size="14" font-weight="700" fill="#92400e">A4. Reformas y Exigencias DIAN Continuas (Nivel 3.5): <tspan font-weight="400" fill="#1e293b">Actualizaciones normativas tributarias complejas y recurrentes.</tspan></text>
+    <text x="25" y="198" font-size="14" font-weight="700" fill="#92400e">A5. Ciberseguridad en Transacciones Digitales (Nivel 3.0): <tspan font-weight="400" fill="#1e293b">Riesgo de fraude o ciberataques en pagos electrónicos.</tspan></text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- SECCIÓN INFERIOR: MATRIZ DE CRUCE ESTRATÉGICO FODA (ACCIONES CLAVE)-->
+  <!-- =================================================================== -->
+
+  <!-- ESTRATEGIAS FO (OFENSIVAS) -->
+  <g transform="translate(40, 680)">
+    <rect width="740" height="235" rx="12" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="38" rx="12" fill="url(#foGrad)"/>
+    <rect y="26" width="740" height="12" fill="url(#foGrad)"/>
+    <text x="25" y="26" font-size="16" font-weight="700" fill="#ffffff">ESTRATEGIAS FO (OFENSIVAS) - USAR FORTALEZAS PARA APROVECHAR OPORTUNIDADES</text>
+
+    <text x="25" y="65" font-size="13.5" font-weight="700" fill="#065f46">FO-01 (F1 + O3): <tspan font-weight="400" fill="#1e293b">Venta directa por App web propia, ahorrando 25% de comisiones de terceros.</tspan></text>
+    <text x="25" y="105" font-size="13.5" font-weight="700" fill="#065f46">FO-02 (F2 + O2): <tspan font-weight="400" fill="#1e293b">Posicionar la línea 'Pizzas con Sabor Caucano' amparada en Popayán UNESCO.</tspan></text>
+    <text x="25" y="145" font-size="13.5" font-weight="700" fill="#065f46">FO-03 (F3 + O1): <tspan font-weight="400" fill="#1e293b">Postular formalmente al Fondo Emprender SENA con viabilidad técnica &gt; 90 pts.</tspan></text>
+    <text x="25" y="185" font-size="13.5" font-weight="700" fill="#065f46">FO-04 (F1/F2 + O4): <tspan font-weight="400" fill="#1e293b">Trazabilidad digital de ingredientes orgánicos desde granjas de Silvia al comensal.</tspan></text>
+  </g>
+
+  <!-- ESTRATEGIAS DO (ADAPTATIVAS) -->
+  <g transform="translate(820, 680)">
+    <rect width="740" height="235" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="38" rx="12" fill="url(#doGrad)"/>
+    <rect y="26" width="740" height="12" fill="url(#doGrad)"/>
+    <text x="25" y="26" font-size="16" font-weight="700" fill="#ffffff">ESTRATEGIAS DO (ADAPTATIVAS) - SUPERAR DEBILIDADES APROVECHANDO OPORTUNIDADES</text>
+
+    <text x="25" y="65" font-size="13.5" font-weight="700" fill="#0369a1">DO-01 (D3 + O1): <tspan font-weight="400" fill="#1e293b">Financiar horno giratorio industrial mediante capital semilla no reembolsable SENA.</tspan></text>
+    <text x="25" y="105" font-size="13.5" font-weight="700" fill="#0369a1">DO-02 (D1 + O5): <tspan font-weight="400" fill="#1e293b">Capacitación en técnicas de venta consultiva y pitch en Centro de Negocios SBDC.</tspan></text>
+    <text x="25" y="145" font-size="13.5" font-weight="700" fill="#0369a1">DO-03 (D5 + O5): <tspan font-weight="400" fill="#1e293b">Migrar al Régimen Simple de Tributación (RST) con apoyo de Cámara de Comercio.</tspan></text>
+    <text x="25" y="185" font-size="13.5" font-weight="700" fill="#0369a1">DO-04 (D2 + O3): <tspan font-weight="400" fill="#1e293b">Adoptar mentalidad MVP (Lean Startup): validar ofertas en 2 semanas sin dilatar.</tspan></text>
+  </g>
+
+  <!-- ESTRATEGIAS FA (DEFENSIVAS) -->
+  <g transform="translate(40, 935)">
+    <rect width="740" height="235" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="38" rx="12" fill="url(#faGrad)"/>
+    <rect y="26" width="740" height="12" fill="url(#faGrad)"/>
+    <text x="25" y="26" font-size="16" font-weight="700" fill="#ffffff">ESTRATEGIAS FA (DEFENSIVAS) - USAR FORTALEZAS PARA NEUTRALIZAR AMENAZAS</text>
+
+    <text x="25" y="65" font-size="13.5" font-weight="700" fill="#b45309">FA-01 (F1 + A1): <tspan font-weight="400" fill="#1e293b">Módulo de control de escandallos en software para blindar costo de materia prima &lt;32%.</tspan></text>
+    <text x="25" y="105" font-size="13.5" font-weight="700" fill="#b45309">FA-02 (F2 + A2): <tspan font-weight="400" fill="#1e293b">Diferenciación radical de alta cocina artesanal: no entrar a guerra de precios masivos.</tspan></text>
+    <text x="25" y="145" font-size="13.5" font-weight="700" fill="#b45309">FA-03 (F3 + A4): <tspan font-weight="400" fill="#1e293b">Automatizar la generación de CUFE y QR DIAN eliminando riesgo de multas fiscales.</tspan></text>
+    <text x="25" y="185" font-size="13.5" font-weight="700" fill="#b45309">FA-04 (F4 + A3): <tspan font-weight="400" fill="#1e293b">UPS y modo offline en POS para continuar atendiendo comandas ante fallas de red.</tspan></text>
+  </g>
+
+  <!-- ESTRATEGIAS DA (SUPERVIVENCIA) -->
+  <g transform="translate(820, 935)">
+    <rect width="740" height="235" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect width="740" height="38" rx="12" fill="url(#daGrad)"/>
+    <rect y="26" width="740" height="12" fill="url(#daGrad)"/>
+    <text x="25" y="26" font-size="16" font-weight="700" fill="#ffffff">ESTRATEGIAS DA (SUPERVIVENCIA) - REDUCIR DEBILIDADES Y ELUDIR AMENAZAS</text>
+
+    <text x="25" y="65" font-size="13.5" font-weight="700" fill="#b91c1c">DA-01 (D4 + A1): <tspan font-weight="400" fill="#1e293b">Estandarizar manuales SOP de cocina y caja, permitiendo delegación y evitando fatiga.</tspan></text>
+    <text x="25" y="105" font-size="13.5" font-weight="700" fill="#b91c1c">DA-02 (D3 + A1): <tspan font-weight="400" fill="#1e293b">Constituir fondo de contingencia operativa con el 10% de ventas netas mensuales.</tspan></text>
+    <text x="25" y="145" font-size="13.5" font-weight="700" fill="#b91c1c">DA-03 (D5 + A4): <tspan font-weight="400" fill="#1e293b">Contratar póliza de asesoría tributaria trimestral con contador público certificado.</tspan></text>
+    <text x="25" y="185" font-size="13.5" font-weight="700" fill="#b91c1c">DA-04 (D2 + A5): <tspan font-weight="400" fill="#1e293b">Certificación SSL TLS 1.3 y pasarela auditada Wompi para blindar pagos contra fraude.</tspan></text>
+  </g>
+
+</svg>
