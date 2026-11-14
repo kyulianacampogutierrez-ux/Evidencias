@@ -1,0 +1,7 @@
+# Robots.txt - Pizzería Gourmet Bella Italia Popayán
+# Dominio de Producción: https://pizzeriabellaitalia-popayan.rf.gd
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /database/
+Sitemap: https://pizzeriabellaitalia-popayan.rf.gd/sitemap.xml

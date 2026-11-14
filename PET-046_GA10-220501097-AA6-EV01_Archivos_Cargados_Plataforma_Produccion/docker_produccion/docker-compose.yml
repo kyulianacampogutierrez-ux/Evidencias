@@ -1,0 +1,60 @@
+version: '3.8'
+
+# ==============================================================================
+# ORQUESTACIÓN DOCKER COMPOSE - ENTORNO DE PRODUCCIÓN PIZZERÍA GOURMET
+# Evidencia: GA10-220501097-AA6-EV01 - Archivos Cargados en Plataforma Producción
+# Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | SENA CTPI Popayán
+# ==============================================================================
+
+services:
+  # 1. SERVIDOR WEB EN PRODUCCIÓN (APACHE HTTP SERVER - PUERTO 8095)
+  servidor_web_produccion:
+    image: httpd:alpine
+    container_name: sena-produccion-pizzeria-web
+    restart: unless-stopped
+    ports:
+      - "8095:80"
+    volumes:
+      - ../sitio_web_produccion:/usr/local/apache2/htdocs:ro
+    networks:
+      - sena_produccion_net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:80/ || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  # 2. MOTOR DE BASE DE DATOS EN PRODUCCIÓN (MYSQL 8.0 - PUERTO 3310)
+  servidor_mysql_produccion:
+    image: mysql:8.0
+    container_name: sena-produccion-pizzeria-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: RootPopayan2026!
+      MYSQL_DATABASE: pizzeria_produccion_db
+      MYSQL_USER: karen_admin
+      MYSQL_PASSWORD: AdminPopayanSecure2026!
+    ports:
+      - "3310:3306"
+    volumes:
+      - ../migracion_produccion/migracion_produccion_pizzeria.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ../configuracion_seguridad/roles_privilegios_usuarios.sql:/docker-entrypoint-initdb.d/roles.sql:ro
+      - vol_pizzeria_produccion_datos:/var/lib/mysql
+    networks:
+      - sena_produccion_net
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -pRootPopayan2026! --silent || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  vol_pizzeria_produccion_datos:
+    name: sena_produccion_mysql_vol
+
+networks:
+  sena_produccion_net:
+    name: sena_produccion_bridge_net
+    driver: bridge

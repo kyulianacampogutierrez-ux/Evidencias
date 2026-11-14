@@ -1,0 +1,23 @@
+{
+  "plataforma": {
+    "entorno": "PRODUCCION",
+    "proveedor_hosting": "InfinityFree / cPanel Cloud Web",
+    "dominio_publico": "https://pizzeriabellaitalia-popayan.rf.gd",
+    "servidor_web": "Apache 2.4 + Nginx Reverse Proxy",
+    "motor_base_datos": "MySQL 8.0 Enterprise / InnoDB",
+    "seguridad_ssl": "Let's Encrypt Authority X3 (TLSv1.3 - 256 bits)"
+  },
+  "proyecto": {
+    "nombre": "Pizzería Gourmet Bella Italia Popayán",
+    "aprendiz": "Karen Yuliana Campo",
+    "ficha": "3186681",
+    "centro": "CTPI Popayán - Regional Cauca",
+    "municipio": "Popayán, Cauca, Colombia"
+  },
+  "politicas_permisos": {
+    "carpetas": "0755 (rwxr-xr-x)",
+    "archivos": "0644 (rw-r--r--)",
+    "usuario_propietario": "karen_admin",
+    "grupo": "www-data"
+  }
+}

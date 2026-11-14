@@ -1,0 +1,29 @@
+# ==============================================================================
+# ARCHIVO DE CONFIGURACIÓN DE PRODUCCIÓN .HTACCESS (APACHE / CPANEL)
+# Evidencia: GA10-220501097-AA6-EV01 - Archivos Cargados en Plataforma Producción
+# Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | SENA CTPI Popayán
+# ==============================================================================
+
+# 1. Forzar Redirección Segura a HTTPS (SSL/TLS)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 2. Cabeceras de Seguridad y Protección contra Ataques (OWASP)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# 3. Compresión GZIP de Assets para Máximo Rendimiento
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# 4. Prohibición de Listado de Directorios
+Options -Indexes

@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="stepGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="stepGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="stepGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#be123c" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Fondo General -->
+  <rect width="1200" height="800" fill="#f8fafc" />
+
+  <!-- Encabezado Institucional SENA -->
+  <rect x="30" y="25" width="1140" height="100" rx="12" fill="url(#headerGrad)" filter="url(#shadow)" />
+  <text x="60" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">
+    SERVICIO NACIONAL DE APRENDIZAJE - SENA | CTPI POPAYÁN (REGIONAL CAUCA)
+  </text>
+  <text x="60" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#a7f3d0">
+    EVIDENCIA GA10-220501097-AA6-EV01: ARCHIVOS CARGADOS EN LA PLATAFORMA DE PRODUCCIÓN
+  </text>
+  <text x="60" y="107" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#e2e8f0">
+    Despliegue en Hosting Tradicional Web • Dominio: pizzeriabellaitalia-popayan.rf.gd • Aprendiz: Karen Yuliana Campo (Ficha 3186681)
+  </text>
+
+  <!-- ========================================================================= -->
+  <!-- FLUJO PRINCIPAL DE 4 FASES (PRODUCCIÓN TRADICIONAL)                       -->
+  <!-- ========================================================================= -->
+
+  <!-- FASE 1: Estructuración de Archivos y Plantilla Web -->
+  <rect x="40" y="150" width="265" height="460" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="40" y="150" width="265" height="46" rx="10" fill="url(#stepGrad1)" />
+  <rect x="40" y="180" width="265" height="16" fill="url(#stepGrad1)" />
+  <text x="55" y="179" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    1. ESTRUCTURACIÓN WEB
+  </text>
+  
+  <rect x="55" y="210" width="235" height="75" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+  <text x="65" y="230" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#1e3a8a">Plantilla Gourmet HTML5</text>
+  <text x="65" y="248" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#3b82f6">• index.html adaptado</text>
+  <text x="65" y="265" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#3b82f6">• Catálogo 4 pizzas en COP</text>
+  <text x="65" y="280" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#3b82f6">• Formulario de checkout</text>
+
+  <rect x="55" y="295" width="235" height="85" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="65" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#334155">Árbol de Directorios</text>
+  <text x="65" y="333" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">📁 public_html/</text>
+  <text x="65" y="348" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">├── 📄 index.html (644)</text>
+  <text x="65" y="363" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">├── 📁 assets/ (755)</text>
+  <text x="65" y="375" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">└── 📄 .htaccess (644)</text>
+
+  <rect x="55" y="390" width="235" height="100" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+  <text x="65" y="410" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">Optimización y SEO</text>
+  <text x="65" y="428" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Directivas robots.txt</text>
+  <text x="65" y="445" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Estructura sitemap.xml</text>
+  <text x="65" y="462" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Metadatos OpenGraph</text>
+  <text x="65" y="479" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Compresión Gzip assets</text>
+
+  <rect x="55" y="500" width="235" height="95" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="65" y="520" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Empaquetado Seguro</text>
+  <text x="65" y="538" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Preparación de bundle ZIP</text>
+  <text x="65" y="555" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">para transferencia remota</text>
+  <text x="65" y="572" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">hacia el hosting del cliente.</text>
+
+
+  <!-- FASE 2: Hosting y Dominio Personalizado -->
+  <rect x="330" y="150" width="265" height="460" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="330" y="150" width="265" height="46" rx="10" fill="url(#stepGrad2)" />
+  <rect x="330" y="180" width="265" height="16" fill="url(#stepGrad2)" />
+  <text x="345" y="179" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    2. HOSTING &amp; DOMINIO
+  </text>
+
+  <rect x="345" y="210" width="235" height="75" rx="6" fill="#f0fdfa" stroke="#ccfbf1" />
+  <text x="355" y="230" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#0f766e">Hosting Web cPanel</text>
+  <text x="355" y="248" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#115e59">• Proveedor: Cloud Hosting</text>
+  <text x="355" y="265" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#115e59">• Panel de control cPanel</text>
+  <text x="355" y="280" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#115e59">• Soporte PHP 8.2 + MySQL</text>
+
+  <rect x="345" y="295" width="235" height="85" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="355" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#334155">Dominio Personalizado</text>
+  <text x="355" y="333" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#0f766e">🌐 pizzeriabellaitalia-popayan.rf.gd</text>
+  <text x="355" y="348" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">• Zona DNS configurada</text>
+  <text x="355" y="363" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">• Registro A y CNAME activos</text>
+
+  <rect x="345" y="390" width="235" height="100" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+  <text x="355" y="410" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">Certificado SSL / HTTPS</text>
+  <text x="355" y="428" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Let's Encrypt Authority</text>
+  <text x="355" y="445" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Cifrado TLSv1.3 (256 bits)</text>
+  <text x="355" y="462" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Redirección 301 forzada</text>
+  <text x="355" y="479" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Candado de seguridad verde</text>
+
+  <rect x="345" y="500" width="235" height="95" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="355" y="520" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Acceso a Producción</text>
+  <text x="355" y="538" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Cuentas FTP y administrador</text>
+  <text x="355" y="555" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">File Manager web seguro</text>
+  <text x="355" y="572" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">con autenticación robusta.</text>
+
+
+  <!-- FASE 3: Carga, Migración de Datos y Privilegios -->
+  <rect x="620" y="150" width="265" height="460" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="620" y="150" width="265" height="46" rx="10" fill="url(#stepGrad3)" />
+  <rect x="620" y="180" width="265" height="16" fill="url(#stepGrad3)" />
+  <text x="635" y="179" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    3. CARGA, MIGRACIÓN &amp; ROLES
+  </text>
+
+  <rect x="635" y="210" width="235" height="75" rx="6" fill="#fffbeb" stroke="#fde68a" />
+  <text x="645" y="230" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#92400e">Carga a public_html/</text>
+  <text x="645" y="248" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#b45309">• Transferencia vía FTPS</text>
+  <text x="645" y="265" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#b45309">• Descompresión en el host</text>
+  <text x="645" y="280" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#b45309">• Verificación de integridad</text>
+
+  <rect x="635" y="295" width="235" height="85" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="645" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#334155">Permisos de Archivos</text>
+  <text x="645" y="333" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Carpetas: 0755 (drwxr-xr-x)</text>
+  <text x="645" y="348" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Archivos: 0644 (-rw-r--r--)</text>
+  <text x="645" y="363" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#b91c1c">• Cero permisos 777 (OWASP)</text>
+
+  <rect x="635" y="390" width="235" height="100" rx="6" fill="#fef3c7" stroke="#fcd34d" />
+  <text x="645" y="410" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#78350f">Migración SQL Producción</text>
+  <text x="645" y="428" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#92400e">• BD: pizzeria_produccion_db</text>
+  <text x="645" y="445" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#92400e">• Tablas: productos, clientes</text>
+  <text x="645" y="462" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#92400e">• Ingesta catálogo Popayán</text>
+  <text x="645" y="479" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#92400e">• Motor transaccional InnoDB</text>
+
+  <rect x="635" y="500" width="235" height="95" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="645" y="520" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Roles de Usuario (PoLP)</text>
+  <text x="645" y="538" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">• karen_admin (DBA total)</text>
+  <text x="645" y="555" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">• pizzeria_app_user (DML)</text>
+  <text x="645" y="572" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">• auditor_sena (Read-Only)</text>
+
+
+  <!-- FASE 4: Pruebas y Operatividad en Producción -->
+  <rect x="910" y="150" width="250" height="460" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="910" y="150" width="250" height="46" rx="10" fill="url(#stepGrad4)" />
+  <rect x="910" y="180" width="250" height="16" fill="url(#stepGrad4)" />
+  <text x="925" y="179" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    4. PRUEBAS &amp; OPERATIVIDAD
+  </text>
+
+  <rect x="925" y="210" width="220" height="75" rx="6" fill="#fff1f2" stroke="#fecdd3" />
+  <text x="935" y="230" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#9f1239">Pruebas Funcionales</text>
+  <text x="935" y="248" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Navegación en Chrome</text>
+  <text x="935" y="265" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Selección de pizzas COP</text>
+  <text x="935" y="280" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Validación formulario</text>
+
+  <rect x="925" y="295" width="220" height="85" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="935" y="315" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#334155">Liquidación de Pedidos</text>
+  <text x="935" y="333" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Generación código orden</text>
+  <text x="935" y="348" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Cálculo impoconsumo 8%</text>
+  <text x="935" y="363" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#be123c">• Confirmación en vivo</text>
+
+  <rect x="925" y="390" width="220" height="100" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+  <text x="935" y="410" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="bold" fill="#065f46">Auditoría con DevTools</text>
+  <text x="935" y="428" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Código HTTP: 200 OK</text>
+  <text x="935" y="445" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Tiempo de carga &lt; 25 ms</text>
+  <text x="935" y="462" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Consola: 0 errores JS</text>
+  <text x="935" y="479" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#047857">• Cabeceras seguras activas</text>
+
+  <rect x="925" y="500" width="220" height="95" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="935" y="520" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Veredicto Final</text>
+  <text x="935" y="538" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">[✓] PLATAFORMA PUBLICADA</text>
+  <text x="935" y="555" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Cumplimiento al 100% de la</text>
+  <text x="935" y="572" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">lista IE-GA10-AA6-EV01.</text>
+
+  <!-- ========================================================================= -->
+  <!-- TABLA INFERIOR DE CUMPLIMIENTO DE CRITERIOS SENA                          -->
+  <!-- ========================================================================= -->
+  <rect x="40" y="630" width="1120" height="145" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="60" y="655" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#064e3b">
+    MATRIZ DE CUMPLIMIENTO DE CRITERIOS EVALUATIVOS (LISTA DE CHEQUEO IE-GA10-220501097-AA6-EV01)
+  </text>
+
+  <!-- Encabezados de Tabla -->
+  <rect x="60" y="665" width="1080" height="22" fill="#f1f5f9" />
+  <text x="70" y="680" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#334155">CRITERIO INSTITUCIONAL</text>
+  <text x="370" y="680" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#334155">IMPLEMENTACIÓN EN LA EVIDENCIA</text>
+  <text x="780" y="680" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#334155">EVIDENCIA COMPROBATORIA</text>
+  <text x="1040" y="680" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="bold" fill="#047857">ESTADO</text>
+
+  <text x="70" y="702" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#0f172a">Publicación en plataforma de producción</text>
+  <text x="370" y="702" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Hosting cPanel con dominio pizzeriabellaitalia-popayan.rf.gd</text>
+  <text x="780" y="702" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Carga en public_html/ con permisos 0755/0644</text>
+  <text x="1040" y="702" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#047857">APROBADO</text>
+
+  <text x="70" y="720" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#0f172a">Pruebas de funcionalidad y operatividad</text>
+  <text x="370" y="720" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Navegación completa, catálogo y liquidación de órdenes en vivo</text>
+  <text x="780" y="720" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">DevTools 200 OK y cálculo correcto de impoconsumo</text>
+  <text x="1040" y="720" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#047857">APROBADO</text>
+
+  <text x="70" y="738" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#0f172a">Migración de datos según el plan</text>
+  <text x="370" y="738" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Volcado relacional de tablas clientes, productos y pedidos</text>
+  <text x="780" y="738" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Script SQL ejecutado en pizzeria_produccion_db</text>
+  <text x="1040" y="738" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#047857">APROBADO</text>
+
+  <text x="70" y="756" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#0f172a">Configuración de usuarios y privilegios</text>
+  <text x="370" y="756" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Segregación de roles: DBA karen_admin, App DML y Auditoría</text>
+  <text x="780" y="756" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Principio de Menor Privilegio (PoLP) y chmod Unix</text>
+  <text x="1040" y="756" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#047857">APROBADO</text>
+
+</svg>
