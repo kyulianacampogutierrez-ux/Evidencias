@@ -112,12 +112,11 @@
     <text x="150" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">PLANO 2: FAMILIA (MICROSISTEMA)</text>
     <text x="12" y="46" fill="#00324D" font-size="10" font-weight="bold">Grado de Confianza:</text>
     <text x="135" y="46" fill="#0288D1" font-size="9.5" font-weight="bold">Máxima Confianza (Apego Seguro)</text>
-    <text x="12" y="66" fill="#00324D" font-size="10" font-weight="bold">Personas Representativas:</text>
-    <text x="12" y="84" fill="#333333" font-size="9">• <tspan font-weight="bold">Madre (Luz Marina):</tspan> Soporte emocional y fortaleza ética.</text>
-    <text x="12" y="100" fill="#333333" font-size="9">• <tspan font-weight="bold">Padre / Figura Paterna:</tspan> Disciplina, esfuerzo y trabajo.</text>
-    <text x="12" y="116" fill="#333333" font-size="9">• <tspan font-weight="bold">Hermanos:</tspan> Convivencia, cooperación y lealtad.</text>
-    <text x="12" y="132" fill="#333333" font-size="9">• <tspan font-weight="bold">Abuela:</tspan> Sabiduría, tradición familiar y afecto puro.</text>
-    <text x="12" y="148" fill="#333333" font-size="9">• <tspan font-weight="bold">Pareja / Círculo Íntimo:</tspan> Proyección y confianza mutua.</text>
+    <text x="12" y="68" fill="#00324D" font-size="10" font-weight="bold">Entorno Inmediato:</text>
+    <text x="12" y="88" fill="#333333" font-size="9.2">• <tspan font-weight="bold">La Familia:</tspan> Entorno afectivo y moral primordial.</text>
+    <text x="12" y="106" fill="#333333" font-size="9">• Vínculos de afecto incondicional, lealtad y cuidado mutuo.</text>
+    <text x="12" y="124" fill="#333333" font-size="9">• Escuela primera de valores, principios éticos y convivencia.</text>
+    <text x="12" y="142" fill="#333333" font-size="9">• Refugio de apoyo emocional, contención y orientación.</text>
     <text x="12" y="168" fill="#555555" font-size="8.5" font-style="italic">"Núcleo de validación incondicional y refugio de valores."</text>
   </g>
 

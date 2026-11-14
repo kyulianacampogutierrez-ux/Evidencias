@@ -68,11 +68,10 @@ A continuación se presenta la representación visual de los cuatro planos conc�
 |     |     |                                                                           |     |     |
 |     |     |     +---------------------------------------------------------------+     |     |     |
 |     |     |     |  PLANO 2: FAMILIA Y ENTORNO INMEDIATO (MICROSISTEMA)          |     |     |     |
-|     |     |     |  - Madre (Luz Marina): Fortaleza moral y guía afectiva        |     |     |     |
-|     |     |     |  - Padre / Figura Paterna: Ejemplo de trabajo y perseverancia |     |     |     |
-|     |     |     |  - Hermanos: Solidaridad, convivencia y lealtad fraternal     |     |     |     |
-|     |     |     |  - Abuela: Sabiduría ancestral caucana y afecto incondicional |     |     |     |
-|     |     |     |  - Pareja / Círculo Íntimo: Proyección mutua y apoyo seguro   |     |     |     |
+|     |     |     |  - La Familia: Entorno inmediato de máxima confianza          |     |     |     |
+|     |     |     |  - Vínculos de afecto incondicional, lealtad y cuidado mutuo  |     |     |     |
+|     |     |     |  - Escuela primaria de valores éticos y principios de paz    |     |     |     |
+|     |     |     |  - Refugio de apoyo emocional, contención y orientación       |     |     |     |
 |     |     |     |  * Vínculo: Máxima confianza, afecto primario e incondicional |     |     |     |
 |     |     |     |                                                               |     |     |     |
 |     |     |     |     +---------------------------------------------------+     |     |     |     |
@@ -111,13 +110,9 @@ A continuación se presenta la representación visual de los cuatro planos conc�
   - *Responsabilidad Social:* Convicción de que el conocimiento adquirido debe orientarse siempre hacia el bien común y la convivencia pacífica.
 
 #### Plano 2: FAMILIA (Microsistema Primario y Red de Apego Seguro)
-* **Composición y Personas Representativas:**
-  - *Mi Madre (Luz Marina):* Mi mayor referente moral, ejemplo de resiliencia, sacrificio y entrega incondicional. En ella encuentro el consejo sabio, la serenidad ante la incertidumbre y el consuelo emocional en momentos de fatiga.
-  - *Mi Padre / Figura Paterna:* Representa la disciplina, el valor del trabajo honesto y el compromiso con los deberes adquiridos.
-  - *Mis Hermanos:* Compañeros de ruta vital con quienes aprendí desde la infancia el significado de compartir, negociar, defender el bien común familiar y perdonar de manera sincera.
-  - *Mi Abuela:* Custodia de la memoria, las tradiciones culinarias caucanas y los valores espirituales de la familia; su presencia me conecta con mis raíces.
-  - *Mi Pareja / Círculo Íntimo:* Persona de máxima confianza con quien comparto metas de vida, reflexiones profundas y apoyo recíproco en los estudios y proyectos laborales.
-* **Nivel de Confianza y Dinámica:** Máxima confianza. Es el círculo donde me muestro con absoluta autenticidad y vulnerabilidad, sabiendo que existe un lazo de afecto incondicional que no depende del éxito temporal, sino del amor mutuo.
+* **Entorno Inmediato:** La Familia.
+* **Descripción y Dinámica:** Constituye el entorno más inmediato, caracterizado por relaciones de máxima cercanía, intimidad afectiva y plena confianza. La familia es mi mayor referente moral y refugio de valores, donde encuentro el apoyo afectivo, la serenidad ante la incertidumbre, el consejo orientador y el respaldo incondicional en todas las etapas de la vida. Representa la escuela primera donde aprendí el valor del esfuerzo, la disciplina, la lealtad, la solidaridad cotidiana y la convivencia armónica.
+* **Nivel de Confianza:** Máxima confianza. Es el círculo donde me muestro con absoluta autenticidad y vulnerabilidad, sabiendo que existe un lazo de afecto incondicional que no depende del éxito temporal, sino del amor y la unión familiar.
 
 #### Plano 3: CONTEXTO ACADÉMICO, LABORAL, VECINDARIO Y GRUPOS SIGNIFICATIVOS (Mesosistema)
 * **Entorno Académico SENA CTPI:**
@@ -158,9 +153,9 @@ Asimismo, mi principio de **honestidad** condiciona con quién decido forjar laz
 Las personas en las que deposito mi confianza más profunda, inquebrantable y absoluta se encuentran situadas en el **Plano 2: La Familia**.
 
 Esta realidad psicológica y afectiva obedece a razones fundamentales de desarrollo humano:
-1. **Historia y Continuidad del Vínculo:** La familia es el único sistema que ha permanecido constante en todas las etapas de mi vida. Mis padres y hermanos me han conocido en momentos de éxito, pero también en mis instantes de mayor fragilidad, incertidumbre, error y dolor. Su amor y aceptación no han sido transaccionales ni han dependido de una calificación académica o un logro laboral.
-2. **Incondicionalidad Emocional:** Mientras que en los planos laboral y social la permanencia del vínculo suele estar sujeta al cumplimiento de metas, contratos o afinidades temporales, en la familia existe un compromiso de lealtad y cuidado mutuo que trasciende las circunstancias. Sé que frente a una crisis grave, mi madre o mis hermanos responderán con solidaridad real y desinteresada.
-3. **Refugio Psicológico:** En la familia no requiero sostener máscaras profesionales o sociales de suficiencia. Puedo manifestar mis temores, dudas y cansancio con la seguridad de que seré escuchada con ternura y orientada con firmeza moral. Esta seguridad de apego es la que me brinda la tranquilidad mental necesaria para salir a competir y desempeñarme con confianza en los planos más exteriores del sistema.
+1. **Historia y Continuidad del Vínculo:** La familia es el único sistema que ha permanecido constante en todas las etapas de mi vida, conociendo mis fortalezas y momentos difíciles sin juzgarme. Su presencia y aceptación no han sido transaccionales ni han dependido de una calificación académica o un logro laboral.
+2. **Incondicionalidad Emocional:** Mientras que en los planos laboral y social la permanencia del vínculo suele estar sujeta al cumplimiento de metas, contratos o afinidades temporales, en la familia existe un compromiso de lealtad y cuidado mutuo que trasciende las circunstancias. Frente a una crisis, la familia responde con solidaridad real y desinteresada.
+3. **Refugio Psicológico:** En la familia no requiero sostener máscaras profesionales o sociales de suficiencia. Puedo manifestar mis temores, dudas y cansancio con la seguridad de que seré escuchada con comprensión y orientada con firmeza moral. Esta seguridad de apego es la que me brinda la tranquilidad mental necesaria para salir a desempeñarme con confianza en los planos más exteriores del sistema.
 
 ---
 
