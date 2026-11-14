@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Manual Técnico del Software | Pizzería Gourmet Bella Italia Popayán - GA10-AA10-EV01</title>
+  
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --secondary: #059669;
+      --secondary-light: #ecfdf5;
+      --accent: #d97706;
+      --dark: #0f172a;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-muted: #64748b;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      background-color: #f1f5f9;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    /* Header Bar */
+    header {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0f172a 100%);
+      color: #ffffff;
+      padding: 24px 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-title h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header-title p {
+      font-size: 13.5px;
+      color: #bae6fd;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
+    .badge-primary {
+      background: rgba(255,255,255,0.2);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .badge-success {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1300px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+
+    .nav-tab {
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: none;
+      background: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-tab:hover {
+      background: var(--gray-light);
+      color: var(--primary-dark);
+    }
+
+    .nav-tab.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Content Cards */
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-border);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .card-header {
+      border-bottom: 1px solid var(--gray-border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-header h2 {
+      font-size: 18px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* KPI Item */
+    .kpi-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+    }
+
+    .kpi-card h4 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .kpi-sub {
+      font-size: 11.5px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    th, td {
+      border: 1px solid var(--gray-border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--gray-light);
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Code & Terminal Blocks */
+    pre {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      font-size: 12px;
+      overflow-x: auto;
+      margin: 10px 0;
+      border: 1px solid #1e293b;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      background: #e2e8f0;
+      color: #0f172a;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 11.5px;
+    }
+
+    /* Diagram Containers */
+    .diagram-container {
+      text-align: center;
+      background: #0f172a;
+      padding: 20px;
+      border-radius: var(--radius);
+      margin: 16px 0;
+    }
+
+    .diagram-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* Search & Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .filter-input {
+      flex: 1;
+      padding: 8px 14px;
+      border: 1px solid var(--gray-border);
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    /* Tab Content Visibility */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid var(--gray-border);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header>
+    <div class="header-content">
+      <div class="header-title">
+        <h1>PORTAL DE MANUAL TÉCNICO DEL SOFTWARE</h1>
+        <p>Sistema de Gestión y Comercio Electrónico "Pizzería Gourmet Bella Italia Popayán" | Guía 10 - Evidencia GA10-220501097-AA10-EV01</p>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-primary">SENA CTPI Popayán (Ficha 3186681)</span>
+        <span class="badge badge-primary">Aprendiz: Karen Yuliana Campo</span>
+        <span class="badge badge-success">● Estado: Certificado Producción</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="container">
+
+    <!-- RESUMEN DE ARQUITECTURA (KPIS) -->
+    <div class="grid-4">
+      <div class="kpi-card">
+        <h4>Arquitectura del Sistema</h4>
+        <div class="kpi-value">Microservicios</div>
+        <div class="kpi-sub">✔ RESTful API + SPA React 18</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Base de Datos Relacional</h4>
+        <div class="kpi-value">MySQL 8.0</div>
+        <div class="kpi-sub">✔ Motor InnoDB / Charset utf8mb4</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Entidades y Tablas</h4>
+        <div class="kpi-value">8 Tablas</div>
+        <div class="kpi-sub">✔ 100% Integridad Referencial FK</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Aislamiento Operativo</h4>
+        <div class="kpi-value">Docker Compose</div>
+        <div class="kpi-sub">✔ Zero Host Pollution (:8099 / :3314)</div>
+      </div>
+    </div>
+
+    <!-- NAVEGACIÓN POR PESTAÑAS DEL MANUAL TÉCNICO -->
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab active" onclick="switchTab('tab-prerrequisitos')">1. Prerrequisitos de Instalación</button>
+      <button class="nav-tab" onclick="switchTab('tab-frameworks')">2. Frameworks y Estándares</button>
+      <button class="nav-tab" onclick="switchTab('tab-casos-uso')">3. Diagrama de Casos de Uso</button>
+      <button class="nav-tab" onclick="switchTab('tab-er-diccionario')">4. Modelo E-R y Diccionario de Datos</button>
+      <button class="nav-tab" onclick="switchTab('tab-componentes')">5. Diagrama de Componentes</button>
+      <button class="nav-tab" onclick="switchTab('tab-scripts')">6. Scripts de Instalación</button>
+    </nav>
+
+    <!-- PESTAÑA 1: PRERREQUISITOS DE INSTALACIÓN -->
+    <section id="tab-prerrequisitos" class="tab-content active">
+      <div class="card">
+        <div class="card-header">
+          <h2>1. Prerrequisitos de Instalación del Sistema</h2>
+          <span class="badge badge-primary">Guía DNP &amp; ISO/IEC 12207</span>
+        </div>
+        <p style="margin-bottom: 16px;">
+          Para garantizar la correcta ejecución, estabilidad transaccional y seguridad del ecosistema informático de la <strong>Pizzería Gourmet Bella Italia Popayán</strong>, la infraestructura tecnológica debe satisfacer los siguientes requerimientos mínimos y recomendados:
+        </p>
+
+        <div class="grid-2">
+          <!-- Hardware Specs -->
+          <div>
+            <h3 style="font-size:14px; margin-bottom:8px; color:var(--primary-dark);">A. Requisitos de Hardware</h3>
+            <table style="margin-bottom:16px;">
+              <thead>
+                <tr>
+                  <th>Recurso de Hardware</th>
+                  <th>Requisito Mínimo</th>
+                  <th>Requisito Recomendado (Producción)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Procesador (CPU)</strong></td>
+                  <td>2 Cores x86_64 / ARM64 (2.0 GHz)</td>
+                  <td>4 Cores x86_64 / Intel Xeon o AMD Epyc</td>
+                </tr>
+                <tr>
+                  <td><strong>Memoria RAM</strong></td>
+                  <td>4 GB DDR4</td>
+                  <td>8 GB a 16 GB DDR4/DDR5 con ECC</td>
+                </tr>
+                <tr>
+                  <td><strong>Almacenamiento</strong></td>
+                  <td>20 GB SSD SATA III</td>
+                  <td>50 GB NVMe PCIe 4.0 en RAID 1</td>
+                </tr>
+                <tr>
+                  <td><strong>Conectividad de Red</strong></td>
+                  <td>100 Mbps Ethernet / Wi-Fi</td>
+                  <td>1 Gbps Full-Duplex con IP fija pública</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Software Specs -->
+          <div>
+            <h3 style="font-size:14px; margin-bottom:8px; color:var(--primary-dark);">B. Requisitos de Software y Motores</h3>
+            <table style="margin-bottom:16px;">
+              <thead>
+                <tr>
+                  <th>Componente Software</th>
+                  <th>Versión Mínima</th>
+                  <th>Propósito Operativo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sistema Operativo</strong></td>
+                  <td>Linux Ubuntu 22.04 LTS / Debian 12 / Rocky 9</td>
+                  <td>Servidor host anfitrión de producción</td>
+                </tr>
+                <tr>
+                  <td><strong>Motor de Contenedores</strong></td>
+                  <td>Docker Engine v24.0+ &amp; Compose v2.20+</td>
+                  <td>Aislamiento total y Zero Host Pollution</td>
+                </tr>
+                <tr>
+                  <td><strong>Motor Base de Datos</strong></td>
+                  <td>MySQL Community Server 8.0.35+</td>
+                  <td>Motor InnoDB para transacciones ACID</td>
+                </tr>
+                <tr>
+                  <td><strong>Navegadores Soportados</strong></td>
+                  <td>Google Chrome 115+, Firefox 115+, Edge</td>
+                  <td>Compatibilidad HTML5/CSS3/ES6+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3 style="font-size:14px; margin-top:8px; margin-bottom:8px; color:var(--primary-dark);">C. Matriz de Puertos de Red y Variables de Entorno (.env)</h3>
+        <p style="margin-bottom:8px; font-size:12.5px;">El software utiliza la siguiente configuración estandarizada de puertos de red y credenciales parametrizadas:</p>
+        <pre># Archivo de Configuración de Entorno (.env.production)
+PUERTO_WEB_HTTP=8099
+PUERTO_MYSQL_DB=3314
+MYSQL_DATABASE=pizzeria_manual_tecnico_db
+MYSQL_USER=pizzeria_user
+MYSQL_PASSWORD=Pizzeria2026*Pass!
+JWT_SECRET_KEY=sena_ctpi_pizzeria_super_secret_jwt_key_2026!
+CORS_ALLOWED_ORIGINS=http://localhost:8099,https://pizzeriabellaitalia.com</pre>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 2: FRAMEWORKS Y ESTÁNDARES -->
+    <section id="tab-frameworks" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>2. Frameworks y Estándares de Construcción</h2>
+          <span class="badge badge-primary">Guía DNP &amp; Estándares Internacionales</span>
+        </div>
+        <p style="margin-bottom:16px;">
+          En cumplimiento con la <em>Guía para la elaboración de manual técnico y de operaciones de los sistemas de información</em> del Departamento Nacional de Planeación (DNP), el software fue estructurado siguiendo rigurosos estándares de la industria:
+        </p>
+
+        <div class="grid-3">
+          <div class="card" style="margin-bottom:0; background:#f8fafc;">
+            <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:6px;">Frontend &amp; UI</h3>
+            <ul style="font-size:12px; margin-left:16px;">
+              <li><strong>React 18:</strong> Biblioteca reactiva para vistas SPA dinámicas.</li>
+              <li><strong>Vite:</strong> Empacador y bundler de alta velocidad HMR.</li>
+              <li><strong>Tailwind CSS:</strong> Framework utilitario para diseño responsivo.</li>
+              <li><strong>HTML5 / CSS3:</strong> Semántica estándar W3C.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom:0; background:#f8fafc;">
+            <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:6px;">Backend &amp; Lógica</h3>
+            <ul style="font-size:12px; margin-left:16px;">
+              <li><strong>Go (Golang):</strong> Lenguaje compilado para microservicios de alto desempeño.</li>
+              <li><strong>Node.js Express:</strong> Gateway de enrutamiento y microservicio Auth.</li>
+              <li><strong>JWT (RFC 7519):</strong> Autenticación sin estado basada en claims de rol.</li>
+              <li><strong>Bcrypt:</strong> Hashing criptográfico irreversible de credenciales.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom:0; background:#f8fafc;">
+            <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:6px;">Persistencia &amp; DevOps</h3>
+            <ul style="font-size:12px; margin-left:16px;">
+              <li><strong>MySQL 8.0:</strong> Motor relacional con soporte nativo JSON.</li>
+              <li><strong>Docker Compose:</strong> Orquestación declarativa multicontenedor.</li>
+              <li><strong>Apache HTTPD:</strong> Servidor web perimetral con compresión gzip.</li>
+              <li><strong>Git / GitHub:</strong> Control de versiones distribuido.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="font-size:14px; margin-top:20px; margin-bottom:8px; color:var(--primary-dark);">Estándares Internacionales Aplicados</h3>
+        <table style="margin-bottom:0;">
+          <thead>
+            <tr>
+              <th>Código del Estándar</th>
+              <th>Denominación Oficial</th>
+              <th>Aplicación Concreta en Pizzería Bella Italia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IEEE 830 / ISO 29148</strong></td>
+              <td>Especificación de Requisitos de Software (SRS)</td>
+              <td>Definición formal de historias de usuario y casos de uso del restaurante.</td>
+            </tr>
+            <tr>
+              <td><strong>ISO/IEC/IEEE 12207:2017</strong></td>
+              <td>Ciclo de Vida del Software - Procesos de Ingeniería</td>
+              <td>Fase de implantación, documentación técnica, pruebas de humo y entrega.</td>
+            </tr>
+            <tr>
+              <td><strong>ISO/IEC 25010:2023</strong></td>
+              <td>Modelo de Calidad del Producto de Software (SQuaRE)</td>
+              <td>Evaluación de adecuación funcional, eficiencia de desempeño, seguridad y usabilidad.</td>
+            </tr>
+            <tr>
+              <td><strong>Ley 1581 de 2012</strong></td>
+              <td>Régimen General de Protección de Datos Personales (Colombia)</td>
+              <td>Cifrado de datos personales, hashes irreversibles y política de retención legal.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 3: DIAGRAMA DE CASOS DE USO -->
+    <section id="tab-casos-uso" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>3. Diagrama de Casos de Uso del Sistema (UML)</h2>
+          <span class="badge badge-primary">Modelado UML 2.5</span>
+        </div>
+        <p style="margin-bottom:12px;">
+          El modelo de casos de uso refleja la interacción de los cinco actores principales con los módulos funcionales del software:
+        </p>
+
+        <div class="diagram-container">
+          <img src="../diagramas/diagrama_casos_uso_sistema_pizzeria.png" alt="Diagrama de Casos de Uso UML">
+        </div>
+
+        <div class="grid-2" style="margin-top:16px;">
+          <div>
+            <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:8px;">Actores del Sistema</h3>
+            <ul style="font-size:12px; margin-left:16px;">
+              <li><strong>Cliente Comensal:</strong> Consulta la carta web, personaliza pizzas, realiza pedidos en línea y efectúa pagos.</li>
+              <li><strong>Administrador:</strong> Gestiona carta de productos, recetas, precios, inventarios y reportes de facturación.</li>
+              <li><strong>Cajero / Facturador:</strong> Recibe pedidos en salón, liquida pagos presenciales y emite facturas electrónicas DIAN.</li>
+              <li><strong>Jefe de Cocina:</strong> Monitorea la pantalla de comandas digitales (KDS), cronometra horneado y cambia estados.</li>
+              <li><strong>Domiciliario:</strong> Consulta ruta geolocalizada en Popayán y confirma entrega al comensal.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:8px;">Casos de Uso Primarios</h3>
+            <ul style="font-size:12px; margin-left:16px;">
+              <li><code>CU-01</code>: Explorar Menú y Precios en Tiempo Real</li>
+              <li><code>CU-02</code>: Agregar ítems al Carrito y Checkout</li>
+              <li><code>CU-03</code>: Procesar Comanda Digital en Pantalla de Cocina</li>
+              <li><code>CU-04</code>: Generar Factura Electrónica con CUFE y QR DIAN</li>
+              <li><code>CU-05</code>: Asignar y Monitorear Domicilio Geolocalizado</li>
+              <li><code>CU-06</code>: Arqueo Diario de Caja y Exportación de Ventas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 4: MODELO E-R Y DICCIONARIO DE DATOS -->
+    <section id="tab-er-diccionario" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>4. Modelo Entidad-Relación y Diccionario de Datos</h2>
+          <span class="badge badge-primary">Esquema Relacional MySQL 8.0</span>
+        </div>
+        <p style="margin-bottom:12px;">
+          A continuación se presenta el modelo Entidad-Relación formalizado para la base de datos relacional de la pizzería:
+        </p>
+
+        <div class="diagram-container">
+          <img src="../diagramas/modelo_entidad_relacion_pizzeria.png" alt="Modelo Entidad-Relación E-R">
+        </div>
+
+        <h3 style="font-size:15px; margin-top:20px; margin-bottom:8px; color:var(--primary-dark);">Diccionario de Datos Interactivo</h3>
+        <p style="margin-bottom:12px; font-size:12.5px;">Escriba en el buscador para filtrar campos, tipos de datos o descripciones técnicas de las tablas relacionales:</p>
+
+        <div class="filter-bar">
+          <input type="text" id="filtro-diccionario" class="filter-input" placeholder="Filtrar por tabla o campo (ej. tbl_pedidos, password_hash, cufe, DECIMAL)..." onkeyup="filtrarDiccionario()">
+        </div>
+
+        <div class="table-responsive">
+          <table id="tabla-diccionario">
+            <thead>
+              <tr>
+                <th>Tabla</th>
+                <th>Nombre Campo</th>
+                <th>Tipo Dato</th>
+                <th>Longitud</th>
+                <th>Nulo</th>
+                <th>Clave</th>
+                <th>Descripción Funcional y Restricción</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-diccionario">
+              <!-- Se inyecta dinámicamente mediante JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 5: DIAGRAMA DE COMPONENTES -->
+    <section id="tab-componentes" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>5. Diagrama de Componentes del Sistema (UML)</h2>
+          <span class="badge badge-primary">Arquitectura Modular Desacoplada</span>
+        </div>
+        <p style="margin-bottom:12px;">
+          Estructura de subsistemas, contratos de interfaces RESTful, capas de persistencia y protocolos de interconexión:
+        </p>
+
+        <div class="diagram-container">
+          <img src="../diagramas/diagrama_componentes_sistema_pizzeria.png" alt="Diagrama de Componentes UML">
+        </div>
+
+        <h3 style="font-size:14px; margin-top:16px; margin-bottom:8px; color:var(--primary-dark);">Catálogo de Componentes de Software</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre del Componente</th>
+                <th>Tecnología Principal</th>
+                <th>Puerto</th>
+                <th>Responsabilidad Arquitectónica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>COMP-UI-01</strong></td>
+                <td>Frontend Web &amp; Móvil SPA</td>
+                <td>React 18 / Vite / Tailwind</td>
+                <td>8099 (HTTP)</td>
+                <td>Renderizado de catálogo, carrito, despacho y panel administrativo.</td>
+              </tr>
+              <tr>
+                <td><strong>COMP-GW-02</strong></td>
+                <td>API Gateway &amp; Router</td>
+                <td>Node.js Express / Proxy</td>
+                <td>8085 / 8090</td>
+                <td>Enrutamiento de peticiones, validación CORS y balanceo.</td>
+              </tr>
+              <tr>
+                <td><strong>COMP-AUTH-03</strong></td>
+                <td>Microservicio de Autenticación</td>
+                <td>Go (Golang) / Bcrypt</td>
+                <td>8083</td>
+                <td>Emisión de tokens JWT con claims de roles y sesiones activas.</td>
+              </tr>
+              <tr>
+                <td><strong>COMP-ORD-05</strong></td>
+                <td>Microservicio de Pedidos y DIAN</td>
+                <td>Go (Golang) / Transaccional</td>
+                <td>8086</td>
+                <td>Procesamiento ACID de comandas, facturación electrónica y CUFE.</td>
+              </tr>
+              <tr>
+                <td><strong>COMP-DB-06</strong></td>
+                <td>Motor de Base de Datos Relacional</td>
+                <td>MySQL 8.0 (InnoDB)</td>
+                <td>3314</td>
+                <td>Persistencia de 8 tablas relacionales con soporte de rollback.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 6: SCRIPTS DE INSTALACIÓN -->
+    <section id="tab-scripts" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>6. Scripts y Procedimientos de Instalación Paso a Paso</h2>
+          <span class="badge badge-primary">Despliegue Automatizado</span>
+        </div>
+        <p style="margin-bottom:12px;">
+          Guía técnica para que administradores de sistemas y desarrolladores aprovisionen la plataforma desde cero:
+        </p>
+
+        <h3 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:4px;">Paso 1: Clonación del Repositorio e Instalación de Prerrequisitos</h3>
+        <pre># 1. Clonar el repositorio oficial de la evidencia
+git clone https://github.com/kyulianacampogutierrez-ux/Evidencias.git
+cd Evidencias/PET-050_GA10-220501097-AA10-EV01_Manual_Tecnico_Software
+
+# 2. Ejecutar validación de prerrequisitos de hardware y software
+chmod +x scripts_instalacion_despliegue/*.sh
+./scripts_instalacion_despliegue/instalar_prerrequisitos_sistema.sh</pre>
+
+        <h3 style="font-size:13.5px; color:var(--primary-dark); margin-top:16px; margin-bottom:4px;">Paso 2: Despliegue con Docker Compose (Zero Host Pollution)</h3>
+        <pre># 3. Levantar los contenedores de producción Staging en puertos 8099 y 3314
+cd docker_manual_tecnico
+docker compose up -d
+
+# 4. Verificar estado saludable de los servicios
+docker compose ps</pre>
+
+        <h3 style="font-size:13.5px; color:var(--primary-dark); margin-top:16px; margin-bottom:4px;">Paso 3: Ejecución de Healthchecks Automatizados</h3>
+        <pre># 5. Probar conectividad con Apache y base de datos MySQL
+cd ..
+./scripts_instalacion_despliegue/verificar_estado_componentes_healthcheck.sh</pre>
+
+        <div style="background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:4px; margin-top:16px;">
+          <strong style="color:#065f46;">Resultado Esperado:</strong>
+          <p style="color:#065f46; font-size:12.5px; margin-top:4px;">
+            El servidor web queda disponible en <code>http://localhost:8099/</code> y la base de datos MySQL 8.0 en el socket <code>localhost:3314</code> con todas las tablas y seeds inicializados correctamente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer>
+    <p>SENA Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca</p>
+    <p>Tecnología en Análisis y Desarrollo de Software (ADSO) | Ficha 3186681 | Aprendiz: Karen Yuliana Campo | 2026</p>
+  </footer>
+
+  <!-- SCRIPT DE INTERACTIVIDAD -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+
+      const btn = Array.from(document.querySelectorAll('.nav-tab')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (btn) btn.classList.add('active');
+    }
+
+    // Cargar Diccionario de Datos
+    fetch('diccionario_datos.json')
+      .then(res => res.json())
+      .then(data => {
+        window.diccionarioData = data;
+        renderDiccionario(data.tablas);
+      })
+      .catch(err => {
+        console.error('Error cargando diccionario de datos:', err);
+      });
+
+    function renderDiccionario(tablas) {
+      const tbody = document.getElementById('tbody-diccionario');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      tablas.forEach(t => {
+        t.campos.forEach(c => {
+          const tr = document.createElement('tr');
+          const claveBadge = c.clave === 'PK' ? '<span class="badge" style="background:#fee2e2; color:#b91c1c;">PK</span>' :
+                             c.clave === 'FK' ? '<span class="badge" style="background:#e0f2fe; color:#0369a1;">FK</span>' :
+                             c.clave.includes('UNIQUE') ? '<span class="badge" style="background:#fef3c7; color:#b45309;">UNIQUE</span>' : '-';
+          
+          tr.innerHTML = `
+            <td><strong>${t.nombre_tabla}</strong></td>
+            <td><code>${c.campo}</code></td>
+            <td><span style="color:#0284c7; font-weight:600;">${c.tipo}</span></td>
+            <td>${c.longitud || '-'}</td>
+            <td>${c.nulo ? 'SÍ' : 'NO'}</td>
+            <td>${claveBadge}</td>
+            <td>${c.descripcion}. <em>(${c.regla})</em></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+    }
+
+    function filtrarDiccionario() {
+      const query = document.getElementById('filtro-diccionario').value.toLowerCase();
+      if (!window.diccionarioData) return;
+
+      const tablasFiltradas = [];
+      window.diccionarioData.tablas.forEach(t => {
+        const camposMatch = t.campos.filter(c => 
+          t.nombre_tabla.toLowerCase().includes(query) ||
+          c.campo.toLowerCase().includes(query) ||
+          c.tipo.toLowerCase().includes(query) ||
+          c.descripcion.toLowerCase().includes(query)
+        );
+        if (camposMatch.length > 0) {
+          tablasFiltradas.push({ ...t, campos: camposMatch });
+        }
+      });
+      renderDiccionario(tablasFiltradas);
+    }
+  </script>
+</body>
+</html>

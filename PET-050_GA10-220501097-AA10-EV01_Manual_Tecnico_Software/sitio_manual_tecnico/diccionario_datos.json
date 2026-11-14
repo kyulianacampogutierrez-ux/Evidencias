@@ -1,0 +1,129 @@
+{
+  "sistema": "Pizzería Gourmet Bella Italia Popayán",
+  "motor_bd": "MySQL 8.0 Community Server (InnoDB Engine)",
+  "codificacion": "utf8mb4 / utf8mb4_unicode_ci",
+  "fecha_actualizacion": "2026-11-14",
+  "autor_tecnico": "Karen Yuliana Campo - Ficha 3186681 (SENA CTPI Cauca)",
+  "tablas": [
+    {
+      "nombre_tabla": "tbl_roles_permisos",
+      "descripcion": "Define la taxonomía de roles RBAC y el nivel de privilegios en el ecosistema.",
+      "total_campos": 5,
+      "campos": [
+        {"campo": "id_rol", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador único correlativo del rol", "regla": "AUTO_INCREMENT"},
+        {"campo": "nombre_rol", "tipo": "VARCHAR", "longitud": 50, "nulo": false, "clave": "UNIQUE", "descripcion": "Nombre del rol (Admin, Cajero, Cocina, Domicilio)", "regla": "Único en el sistema"},
+        {"campo": "descripcion", "tipo": "VARCHAR", "longitud": 255, "nulo": false, "clave": "NONE", "descripcion": "Resumen funcional de responsabilidades", "regla": "Obligatorio"},
+        {"campo": "nivel_acceso", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "NONE", "descripcion": "Jerarquía de permisos de 1 a 10", "regla": "Default 1"},
+        {"campo": "fecha_creacion", "tipo": "TIMESTAMP", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Marca de tiempo de inserción", "regla": "CURRENT_TIMESTAMP"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_usuarios",
+      "descripcion": "Gestión de cuentas de usuarios, credenciales hasheadas y datos de contacto.",
+      "total_campos": 9,
+      "campos": [
+        {"campo": "id_usuario", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador único de usuario", "regla": "AUTO_INCREMENT"},
+        {"campo": "id_rol", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK", "descripcion": "Referencia foránea al rol", "regla": "REFERENCES tbl_roles_permisos(id_rol)"},
+        {"campo": "nombre_completo", "tipo": "VARCHAR", "longitud": 120, "nulo": false, "clave": "NONE", "descripcion": "Nombre y apellidos completos", "regla": "Obligatorio"},
+        {"campo": "email", "tipo": "VARCHAR", "longitud": 100, "nulo": false, "clave": "UNIQUE", "descripcion": "Correo electrónico corporativo o personal", "regla": "Formato RFC 5322"},
+        {"campo": "telefono", "tipo": "VARCHAR", "longitud": 20, "nulo": false, "clave": "NONE", "descripcion": "Teléfono móvil para contacto de entrega", "regla": "10 dígitos numéricos"},
+        {"campo": "password_hash", "tipo": "VARCHAR", "longitud": 255, "nulo": false, "clave": "NONE", "descripcion": "Hash seguro bcrypt con factor de coste 12", "regla": "No reversible"},
+        {"campo": "estado", "tipo": "ENUM", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Estado operativo de la cuenta", "regla": "'ACTIVO','INACTIVO','BLOQUEADO'"},
+        {"campo": "ultimo_acceso", "tipo": "DATETIME", "longitud": 0, "nulo": true, "clave": "NONE", "descripcion": "Último inicio de sesión registrado", "regla": "Actualizable por auth"},
+        {"campo": "fecha_creacion", "tipo": "TIMESTAMP", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Fecha de alta en el sistema", "regla": "CURRENT_TIMESTAMP"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_categorias",
+      "descripcion": "Familias o categorías gastronómicas de la carta de la pizzería.",
+      "total_campos": 6,
+      "campos": [
+        {"campo": "id_categoria", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador único de categoría", "regla": "AUTO_INCREMENT"},
+        {"campo": "nombre_categoria", "tipo": "VARCHAR", "longitud": 60, "nulo": false, "clave": "UNIQUE", "descripcion": "Nombre de la categoría (Pizzas, Calzones, etc.)", "regla": "Único"},
+        {"campo": "descripcion", "tipo": "VARCHAR", "longitud": 255, "nulo": false, "clave": "NONE", "descripcion": "Descripción detallada para la carta web", "regla": "Obligatorio"},
+        {"campo": "icono_url", "tipo": "VARCHAR", "longitud": 255, "nulo": true, "clave": "NONE", "descripcion": "Ruta del icono gráfico SVG/PNG", "regla": "Opcional"},
+        {"campo": "orden_visualizacion", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "NONE", "descripcion": "Orden de prioridad en interfaz", "regla": "Default 0"},
+        {"campo": "activo", "tipo": "BOOLEAN", "longitud": 1, "nulo": false, "clave": "NONE", "descripcion": "Visibilidad pública", "regla": "Default TRUE"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_productos_menu",
+      "descripcion": "Catálogo de productos alimenticios, recetas, precios unitarios y tiempos.",
+      "total_campos": 10,
+      "campos": [
+        {"campo": "id_producto", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador único del producto", "regla": "AUTO_INCREMENT"},
+        {"campo": "id_categoria", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK", "descripcion": "Categoría a la que pertenece", "regla": "REFERENCES tbl_categorias(id_categoria)"},
+        {"campo": "sku", "tipo": "VARCHAR", "longitud": 30, "nulo": false, "clave": "UNIQUE", "descripcion": "Código de inventario único (ej. PIZ-MARG-01)", "regla": "Alfanumérico"},
+        {"campo": "nombre_producto", "tipo": "VARCHAR", "longitud": 100, "nulo": false, "clave": "NONE", "descripcion": "Nombre comercial del plato", "regla": "Obligatorio"},
+        {"campo": "descripcion", "tipo": "TEXT", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Ingredientes y notas para comensales", "regla": "Texto enriquecido"},
+        {"campo": "precio_unitario", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Valor en pesos colombianos (COP)", "regla": "Precision 12,2"},
+        {"campo": "tiempo_coccion_min", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "NONE", "descripcion": "Minutos estimados en horno de leña/gas", "regla": "Default 15 min"},
+        {"campo": "disponible", "tipo": "BOOLEAN", "longitud": 1, "nulo": false, "clave": "NONE", "descripcion": "Estado en cocina", "regla": "Default TRUE"},
+        {"campo": "stock_disponible", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "NONE", "descripcion": "Porciones restantes por turno", "regla": "Default 100"},
+        {"campo": "imagen_url", "tipo": "VARCHAR", "longitud": 255, "nulo": true, "clave": "NONE", "descripcion": "Fotografía HD del plato", "regla": "Opcional"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_pedidos",
+      "descripcion": "Cabecera de pedidos realizados por comensales presenciales o remotos.",
+      "total_campos": 11,
+      "campos": [
+        {"campo": "id_pedido", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador primario de la orden", "regla": "AUTO_INCREMENT"},
+        {"campo": "codigo_orden", "tipo": "VARCHAR", "longitud": 30, "nulo": false, "clave": "UNIQUE", "descripcion": "Código público de seguimiento (ORD-YYYYMM-XXX)", "regla": "Único"},
+        {"campo": "id_cliente", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK", "descripcion": "Cliente que genera el pedido", "regla": "REFERENCES tbl_usuarios(id_usuario)"},
+        {"campo": "canal_origen", "tipo": "ENUM", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Canal de captación", "regla": "'WEB','MOVIL','SALON','TELEFONO'"},
+        {"campo": "estado_pedido", "tipo": "ENUM", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Flujo de vida de la orden", "regla": "'RECIBIDO','EN_COCINA','EN_REPARTO','ENTREGADO','CANCELADO'"},
+        {"campo": "subtotal_cop", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Subtotal antes de tributos", "regla": "DECIMAL(12,2)"},
+        {"campo": "iva_cop", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Impuesto sobre las ventas (19%)", "regla": "DECIMAL(12,2)"},
+        {"campo": "total_cop", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Monto total liquidado en COP", "regla": "DECIMAL(12,2)"},
+        {"campo": "direccion_entrega", "tipo": "VARCHAR", "longitud": 200, "nulo": false, "clave": "NONE", "descripcion": "Dirección física en Popayán", "regla": "Obligatorio"},
+        {"campo": "coordenadas_gps", "tipo": "VARCHAR", "longitud": 50, "nulo": true, "clave": "NONE", "descripcion": "Latitud y longitud para mapa de ruta", "regla": "Formato lat,lng"},
+        {"campo": "fecha_pedido", "tipo": "TIMESTAMP", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Hora exacta de recepción", "regla": "CURRENT_TIMESTAMP"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_detalle_pedido",
+      "descripcion": "Líneas de detalle que componen cada orden de compra.",
+      "total_campos": 7,
+      "campos": [
+        {"campo": "id_detalle", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador de ítem de pedido", "regla": "AUTO_INCREMENT"},
+        {"campo": "id_pedido", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK", "descripcion": "Orden asociada", "regla": "REFERENCES tbl_pedidos(id_pedido) ON DELETE CASCADE"},
+        {"campo": "id_producto", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK", "descripcion": "Producto solicitado", "regla": "REFERENCES tbl_productos_menu(id_producto)"},
+        {"campo": "cantidad", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "NONE", "descripcion": "Unidades ordenadas", "regla": "Mínimo 1"},
+        {"campo": "precio_unitario", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Precio congelado al momento de compra", "regla": "DECIMAL(12,2)"},
+        {"campo": "subtotal_linea", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Total por producto (cantidad * precio)", "regla": "DECIMAL(12,2)"},
+        {"campo": "notas_chef", "tipo": "VARCHAR", "longitud": 150, "nulo": true, "clave": "NONE", "descripcion": "Instrucciones de cocina (sin cebolla, etc.)", "regla": "Opcional"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_facturas_dian",
+      "descripcion": "Registro fiscal de facturas electrónicas avaladas ante la DIAN.",
+      "total_campos": 8,
+      "campos": [
+        {"campo": "id_factura", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "PK", "descripcion": "Identificador único de factura fiscal", "regla": "AUTO_INCREMENT"},
+        {"campo": "id_pedido", "tipo": "INT", "longitud": 11, "nulo": false, "clave": "FK / UNIQUE", "descripcion": "Pedido facturado (relación 1 a 1)", "regla": "REFERENCES tbl_pedidos(id_pedido)"},
+        {"campo": "numero_factura", "tipo": "VARCHAR", "longitud": 40, "nulo": false, "clave": "UNIQUE", "descripcion": "Numeración consecutiva autorizada por DIAN", "regla": "Formato FE-POPY-XXXX"},
+        {"campo": "cufe", "tipo": "VARCHAR", "longitud": 100, "nulo": false, "clave": "UNIQUE", "descripcion": "Código Único de Factura Electrónica", "regla": "Hash criptográfico DIAN"},
+        {"campo": "qr_code_url", "tipo": "VARCHAR", "longitud": 255, "nulo": false, "clave": "NONE", "descripcion": "URL de validación gráfica fiscal", "regla": "Enlace DIAN"},
+        {"campo": "monto_total", "tipo": "DECIMAL", "longitud": 12, "nulo": false, "clave": "NONE", "descripcion": "Valor total facturado", "regla": "DECIMAL(12,2)"},
+        {"campo": "estado_dian", "tipo": "ENUM", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Dictamen de validación de la DIAN", "regla": "'ACEPTADA','RECHAZADA','CONTINGENCIA'"},
+        {"campo": "fecha_emision", "tipo": "TIMESTAMP", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Fecha y hora de transmisión fiscal", "regla": "CURRENT_TIMESTAMP"}
+      ]
+    },
+    {
+      "nombre_tabla": "tbl_auditoria_logs",
+      "descripcion": "Bitácora de seguridad forense y auditoría continua de transacciones.",
+      "total_campos": 8,
+      "campos": [
+        {"campo": "id_log", "tipo": "BIGINT", "longitud": 20, "nulo": false, "clave": "PK", "descripcion": "Consecutivo de evento de auditoría", "regla": "AUTO_INCREMENT"},
+        {"campo": "id_usuario", "tipo": "INT", "longitud": 11, "nulo": true, "clave": "FK", "descripcion": "Usuario que ejecutó la acción", "regla": "REFERENCES tbl_usuarios(id_usuario)"},
+        {"campo": "accion", "tipo": "VARCHAR", "longitud": 50, "nulo": false, "clave": "NONE", "descripcion": "Operación efectuada (INSERT, UPDATE, DELETE)", "regla": "Obligatorio"},
+        {"campo": "tabla_afectada", "tipo": "VARCHAR", "longitud": 50, "nulo": false, "clave": "NONE", "descripcion": "Entidad de base de datos impactada", "regla": "Nombre de tabla"},
+        {"campo": "id_registro_afectado", "tipo": "INT", "longitud": 11, "nulo": true, "clave": "NONE", "descripcion": "ID de registro modificado", "regla": "Opcional"},
+        {"campo": "ip_origen", "tipo": "VARCHAR", "longitud": 45, "nulo": false, "clave": "NONE", "descripcion": "Dirección IP (IPv4 o IPv6) del cliente", "regla": "Formato de red"},
+        {"campo": "fecha_evento", "tipo": "TIMESTAMP", "longitud": 0, "nulo": false, "clave": "NONE", "descripcion": "Marca de tiempo de auditoría", "regla": "CURRENT_TIMESTAMP"},
+        {"campo": "detalles_json", "tipo": "JSON", "longitud": 0, "nulo": true, "clave": "NONE", "descripcion": "Payload JSON con diferencias de datos antes/después", "regla": "JSON nativo"}
+      ]
+    }
+  ]
+}

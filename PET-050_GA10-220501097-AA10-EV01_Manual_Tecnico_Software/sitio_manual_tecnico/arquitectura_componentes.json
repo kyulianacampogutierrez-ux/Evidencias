@@ -1,0 +1,55 @@
+{
+  "sistema": "Pizzería Gourmet Bella Italia Popayán",
+  "version": "1.0.0-PROD",
+  "estandar_arquitectura": "Microservicios Desacoplados & API RESTful (ISO/IEC/IEEE 12207)",
+  "componentes": [
+    {
+      "id_componente": "COMP-UI-01",
+      "nombre": "Frontend Web & Móvil SPA",
+      "tecnologia": "React 18, Vite, Tailwind CSS",
+      "puerto": "80 / 8099 (Apache Reverse Proxy)",
+      "responsabilidad": "Renderizado de la interfaz para clientes, carrito de compras, seguimiento de despachos y panel de administración.",
+      "protocolos": "HTTP/2, HTTPS, WebSocket"
+    },
+    {
+      "id_componente": "COMP-GW-02",
+      "nombre": "API Gateway & Router Central",
+      "tecnologia": "Node.js Express / Traefik",
+      "puerto": "8085 / 8090",
+      "responsabilidad": "Enrutamiento perimetral, rate limiting, terminación SSL y validación de cabeceras CORS.",
+      "protocolos": "REST, JSON"
+    },
+    {
+      "id_componente": "COMP-AUTH-03",
+      "nombre": "Microservicio de Autenticación y RBAC",
+      "tecnologia": "Go (Golang), JWT, Bcrypt",
+      "puerto": "8083",
+      "responsabilidad": "Gestión de sesiones, renovación de tokens JWT con claims de rol y bloqueo de accesos sospechosos.",
+      "protocolos": "gRPC / REST"
+    },
+    {
+      "id_componente": "COMP-CAT-04",
+      "nombre": "Microservicio de Catálogo y Recetas",
+      "tecnologia": "Go REST API, Redis Cache",
+      "puerto": "8084",
+      "responsabilidad": "Consulta de pizzas, combos, ingredientes y control de disponibilidad de inventario.",
+      "protocolos": "REST, JSON"
+    },
+    {
+      "id_componente": "COMP-ORD-05",
+      "nombre": "Microservicio de Pedidos, Facturación y DIAN",
+      "tecnologia": "Go (Golang), Motor Transaccional ACID",
+      "puerto": "8086",
+      "responsabilidad": "Recepción de comandas, cálculo de IVA, generación de CUFE y comunicación con la DIAN.",
+      "protocolos": "REST, XML SOAP DIAN"
+    },
+    {
+      "id_componente": "COMP-DB-06",
+      "nombre": "Motor de Persistencia Relacional MySQL",
+      "tecnologia": "MySQL 8.0 Community Server (InnoDB)",
+      "puerto": "3306 / 3314",
+      "responsabilidad": "Almacenamiento persistente, integridad referencial FK, transacciones atómicas y respaldos 3-2-1.",
+      "protocolos": "MySQL Native Protocol"
+    }
+  ]
+}

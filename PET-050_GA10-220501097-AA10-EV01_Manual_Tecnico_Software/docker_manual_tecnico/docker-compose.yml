@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  sena-manual-tecnico-web:
+    image: httpd:alpine
+    container_name: sena-manual-tecnico-web
+    restart: unless-stopped
+    ports:
+      - "8099:80"
+    volumes:
+      - ../sitio_manual_tecnico:/usr/local/apache2/htdocs:ro
+    networks:
+      - sena_manual_tecnico_net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  sena-manual-tecnico-db:
+    image: mysql:8.0
+    container_name: sena-manual-tecnico-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: Sena2026*Secure!
+      MYSQL_DATABASE: pizzeria_manual_tecnico_db
+      MYSQL_USER: pizzeria_user
+      MYSQL_PASSWORD: Pizzeria2026*Pass!
+    ports:
+      - "3314:3306"
+    volumes:
+      - ./init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql:ro
+    networks:
+      - sena_manual_tecnico_net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pSena2026*Secure!"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+networks:
+  sena_manual_tecnico_net:
+    driver: bridge
