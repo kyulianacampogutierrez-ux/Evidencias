@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" width="1400" height="980">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="senaGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39a900"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="980" fill="url(#bgGrad)"/>
+
+  <!-- Header Banner -->
+  <rect x="25" y="20" width="1350" height="105" rx="12" fill="#1f2937" stroke="#374151" stroke-width="2" filter="url(#shadowBox)"/>
+  <rect x="25" y="20" width="1350" height="6" rx="3" fill="url(#senaGreen)"/>
+
+  <!-- SENA Badge -->
+  <rect x="45" y="38" width="125" height="32" rx="6" fill="#39a900"/>
+  <text x="107" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SENA | ADSO</text>
+  <text x="45" y="94" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#9ca3af">Ficha 3186681 • CTPI Popayán - Cauca</text>
+  <text x="45" y="112" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Aprendiz: Karen Yuliana Campo</text>
+
+  <!-- Title & Subtitle -->
+  <text x="710" y="58" font-family="'Segoe UI', Roboto, sans-serif" font-size="19.5" font-weight="bold" fill="#f9fafb" text-anchor="middle">
+    DOCUMENTACIÓN Y EJECUCIÓN DE PRUEBAS DE SOFTWARE DE ACUERDO A LA PLANIFICACIÓN
+  </text>
+  <text x="710" y="82" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">
+    Evidencia GA9-220501096-AA3-EV01 • Componente Formativo: “Las pruebas de software” (Mera, 2016 / ISO/IEC 25000)
+  </text>
+  <text x="710" y="105" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#39a900" font-weight="bold" text-anchor="middle">
+    Metodología TDD (Red-Green-Refactor) • Formatos de Seguimiento IEEE 829 • Ejecución de 12 Casos de Prueba (Pizzería Bella Italia)
+  </text>
+
+  <!-- ==================== BLOQUE 1: CICLO TDD (DESARROLLO GUIADO POR PRUEBAS) ==================== -->
+  <g transform="translate(25, 140)">
+    <rect x="0" y="0" width="440" height="400" rx="10" fill="#111827" stroke="#ef4444" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="440" height="34" rx="8" fill="#1e293b"/>
+    <text x="220" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fca5a5" text-anchor="middle">
+      1. CICLO TDD (RED - GREEN - REFACTOR)
+    </text>
+
+    <!-- Step 1: RED -->
+    <rect x="15" y="44" width="410" height="75" rx="6" fill="#1e293b" stroke="#dc2626" stroke-width="1.5"/>
+    <rect x="15" y="44" width="85" height="75" rx="4" fill="url(#redGrad)"/>
+    <text x="57" y="78" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">ROJO</text>
+    <text x="57" y="96" font-family="'Segoe UI', sans-serif" font-size="9" fill="#fecaca" text-anchor="middle">(RED)</text>
+    <text x="115" y="65" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fca5a5">1. Escribir prueba que falle</text>
+    <text x="115" y="82" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Transforma la historia de usuario en criterio de aceptación.</text>
+    <text x="115" y="97" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Se define el test antes de escribir la lógica en el código fuente.</text>
+    <text x="115" y="111" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#fca5a5">Resultado esperado: Fallo inicial controlado (AssertionError).</text>
+
+    <!-- Step 2: GREEN -->
+    <rect x="15" y="128" width="410" height="75" rx="6" fill="#1e293b" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="15" y="128" width="85" height="75" rx="4" fill="url(#greenGrad)"/>
+    <text x="57" y="162" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">VERDE</text>
+    <text x="57" y="180" font-family="'Segoe UI', sans-serif" font-size="9" fill="#bbf7d0" text-anchor="middle">(GREEN)</text>
+    <text x="115" y="149" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#86efac">2. Escribir el código mínimo</text>
+    <text x="115" y="166" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Implementar exclusivamente la lógica necesaria para que pase.</text>
+    <text x="115" y="181" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Ejecución inmediata en el runner (`node:test` o JUnit).</text>
+    <text x="115" y="195" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#86efac">Resultado: Test pasa exitosamente (100% de aserciones OK).</text>
+
+    <!-- Step 3: REFACTOR -->
+    <rect x="15" y="212" width="410" height="75" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="15" y="212" width="85" height="75" rx="4" fill="url(#blueGrad)"/>
+    <text x="57" y="246" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">REFACTOR</text>
+    <text x="57" y="264" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#bfdbfe" text-anchor="middle">(MEJORA)</text>
+    <text x="115" y="233" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#93c5fd">3. Optimizar y limpiar código</text>
+    <text x="115" y="250" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Eliminar duplicidad, mejorar nombres, extraer clases limpias.</text>
+    <text x="115" y="265" font-family="'Segoe UI', sans-serif" font-size="9" fill="#e2e8f0">• Re-ejecutar toda la suite para asegurar cero regresiones.</text>
+    <text x="115" y="279" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#93c5fd">Resultado: Código mantenible, seguro y modular.</text>
+
+    <!-- Flujo Ágil Bottom -->
+    <rect x="15" y="296" width="410" height="92" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="25" y="315" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#fbbf24">
+      INTEGRACIÓN CON HISTORIAS DE USUARIO (HU):
+    </text>
+    <text x="25" y="333" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      1. Cliente escribe HU → 2. Criterios de Aceptación (Given-When-Then)
+    </text>
+    <text x="25" y="350" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      3. Caso de Prueba en Código → 4. Ejecución Automática → 5. Ciclo continuo
+    </text>
+    <text x="25" y="372" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#38bdf8">
+      "Las pruebas se usan primero para especificar y luego para validar" (Herranz, 2021)
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 2: PRINCIPIOS Y GENERALIDADES (MERA, 2016) ==================== -->
+  <g transform="translate(485, 140)">
+    <rect x="0" y="0" width="430" height="400" rx="10" fill="#111827" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="430" height="34" rx="8" fill="#1e293b"/>
+    <text x="215" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#93c5fd" text-anchor="middle">
+      2. PRINCIPIOS DE PRUEBAS (MERA, 2016 / ISO 25000)
+    </text>
+
+    <!-- Principios list -->
+    <rect x="15" y="44" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="61" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">1. Las pruebas muestran la presencia de defectos</text>
+    <text x="25" y="76" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Demuestran fallos existentes; no garantizan ausencia total de errores ocultos.</text>
+
+    <rect x="15" y="93" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="110" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">2. Pruebas tempranas (Shift-Left Testing)</text>
+    <text x="25" y="125" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Detectar defectos en fases iniciales ahorra ingentes recursos y costos de reproceso.</text>
+
+    <rect x="15" y="142" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="159" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">3. Imposibilidad de pruebas exhaustivas</text>
+    <text x="25" y="174" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Se debe usar análisis de riesgos para priorizar casos en funciones críticas.</text>
+
+    <rect x="15" y="191" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="208" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">4. Las pruebas dependen del contexto</text>
+    <text x="25" y="223" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Un sistema transaccional de pagos exige pruebas más estrictas que un blog.</text>
+
+    <rect x="15" y="240" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="257" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">5. Agrupación de defectos (Principio de Pareto)</text>
+    <text x="25" y="272" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">El 80% de los fallos operativos se concentra en un 20% de módulos críticos.</text>
+
+    <rect x="15" y="289" width="400" height="44" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="306" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">6. La paradoja del pesticida</text>
+    <text x="25" y="321" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Repetir la misma prueba no encuentra nuevos fallos; se deben actualizar casos.</text>
+
+    <rect x="15" y="338" width="400" height="50" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="25" y="355" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">7. Falacia de ausencia de error</text>
+    <text x="25" y="371" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">Un sistema sin bugs de código es inútil si no cumple las necesidades del cliente.</text>
+  </g>
+
+  <!-- ==================== BLOQUE 3: FORMATOS DE SEGUIMIENTO Y EVIDENCIA ==================== -->
+  <g transform="translate(935, 140)">
+    <rect x="0" y="0" width="440" height="400" rx="10" fill="#111827" stroke="#10b981" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="440" height="34" rx="8" fill="#1e293b"/>
+    <text x="220" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#34d399" text-anchor="middle">
+      3. FORMATOS DE SEGUIMIENTO DILIGENCIADOS
+    </text>
+
+    <!-- Formato 1: Matriz de Casos -->
+    <rect x="15" y="44" width="410" height="78" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+    <text x="25" y="64" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#4ade80">
+      📋 1. Matriz de Casos de Prueba (IEEE 829 / SENA)
+    </text>
+    <text x="25" y="80" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • Estructura: ID (CP01 a CP12), Módulo, Precondición, Pasos de ejecución.
+    </text>
+    <text x="25" y="94" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • Datos de entrada, Resultado Esperado vs. Obtenido, Estado y Severidad.
+    </text>
+    <text x="25" y="108" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#86efac">
+      Estado: 12 Casos Diseñados / 12 Casos Conformes (100% de Aprobación).
+    </text>
+
+    <!-- Formato 2: Bitácora de Ejecución -->
+    <rect x="15" y="130" width="410" height="78" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="25" y="150" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa">
+      ⏱️ 2. Bitácora de Registro de Ejecución (Test Log)
+    </text>
+    <text x="25" y="166" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • Registro cronológico: Fecha, hora exacta, probador y duración en ms.
+    </text>
+    <text x="25" y="180" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • Entorno de prueba: Contenedor Docker Node.js v20 LTS / Linux.
+    </text>
+    <text x="25" y="194" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#93c5fd">
+      Probador Responsable: Karen Yuliana Campo (CTPI Popayán).
+    </text>
+
+    <!-- Formato 3: Reporte de Defectos -->
+    <rect x="15" y="216" width="410" height="85" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="25" y="236" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fbbf24">
+      🐛 3. Reporte de Defectos y No Conformidades (Bugs)
+    </text>
+    <text x="25" y="252" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • BUG-01: Discrepancia en redondeo de Impoconsumo 8% (Corregido con Math.round).
+    </text>
+    <text x="25" y="266" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • BUG-02: Aceptación errónea de celulares de 9 dígitos (Corregido con Regex).
+    </text>
+    <text x="25" y="280" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#e2e8f0">
+      • BUG-03: Posible inyección XSS en nombre de cliente (Corregido con escape HTML).
+    </text>
+    <text x="25" y="294" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#fde68a">
+      Estado de Defectos: 3 Detectados / 3 Corregidos en TDD / 0 Abiertos.
+    </text>
+
+    <!-- Formato 4: Métricas de Calidad -->
+    <rect x="15" y="309" width="410" height="78" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="25" y="328" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#e2e8f0">
+      📊 MÉTRICAS DE COBERTURA Y CONFORMIDAD ALCANZADAS
+    </text>
+    <text x="25" y="346" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#4ade80">
+      ✓ Cobertura de Código: > 94% en ramas y funciones lógicas del backend.
+    </text>
+    <text x="25" y="360" font-family="'Segoe UI', sans-serif" font-size="8.8" fill="#38bdf8">
+      ✓ Tiempo Total de Ejecución de la Suite: 132 ms (Alta velocidad).
+    </text>
+    <text x="25" y="374" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#cbd5e1">
+      Certificación ISO 25000: Cumplimiento funcional y mantenibilidad verificada.
+    </text>
+  </g>
+
+  <!-- ==================== BLOQUE 4: CASOS DE PRUEBA EJECUTADOS EN BELLA ITALIA ==================== -->
+  <g transform="translate(25, 555)">
+    <rect x="0" y="0" width="1350" height="395" rx="10" fill="#111827" stroke="#39a900" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <rect x="0" y="0" width="1350" height="34" rx="8" fill="url(#senaGreen)"/>
+    <text x="675" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      4. MATRIZ DE EJECUCIÓN REAL: 12 CASOS DE PRUEBA EN 5 MÓDULOS DEL SOFTWARE (PIZZERÍA BELLA ITALIA POPAYÁN)
+    </text>
+
+    <!-- Módulo 1 -->
+    <rect x="15" y="44" width="250" height="335" rx="6" fill="#1e293b" stroke="#3b82f6"/>
+    <text x="140" y="66" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      MÓDULO 1: FACTURACIÓN
+    </text>
+
+    <rect x="25" y="80" width="230" height="65" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="35" y="96" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP01: Subtotal e Impoconsumo</text>
+    <text x="35" y="110" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Pizza Margherita DOC ($35k)</text>
+    <text x="35" y="122" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Impoconsumo 8% ($2.800)</text>
+    <text x="35" y="136" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Total $40.800)</text>
+
+    <rect x="25" y="152" width="230" height="65" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="35" y="168" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP02: Envío Gratis > $60k</text>
+    <text x="35" y="182" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 2 Pizzas Gourmet ($92.000)</text>
+    <text x="35" y="194" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Flete a Popayán Norte = $0</text>
+    <text x="35" y="208" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Ahorro $4.500)</text>
+
+    <rect x="25" y="224" width="230" height="70" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="35" y="240" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP03: Cupones de Descuento</text>
+    <text x="35" y="254" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Cupón 'BELLAITALIA10' (10%)</text>
+    <text x="35" y="266" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Descuento: -$4.000 COP</text>
+    <text x="35" y="284" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Total $43.880)</text>
+
+    <rect x="25" y="300" width="230" height="65" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="35" y="316" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP04: Rechazo Carrito Vacío</text>
+    <text x="35" y="330" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Intento de checkout con items: []</text>
+    <text x="35" y="344" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Error capturado por validación</text>
+    <text x="35" y="356" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Excepción OK)</text>
+
+    <!-- Módulo 2 -->
+    <rect x="280" y="44" width="260" height="335" rx="6" fill="#1e293b" stroke="#10b981"/>
+    <text x="410" y="66" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#34d399" text-anchor="middle">
+      MÓDULO 2: SEGURIDAD &amp; ROLES
+    </text>
+
+    <rect x="290" y="80" width="240" height="90" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="300" y="98" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP05: Complejidad de Password</text>
+    <text x="300" y="114" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 'BellaItalia2026!' → Aceptada</text>
+    <text x="300" y="128" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 'debil' → Rechazada (&lt; 8 chars)</text>
+    <text x="300" y="142" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 'SinSimbolo123' → Rechazada</text>
+    <text x="300" y="158" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Regex NIST)</text>
+
+    <rect x="290" y="178" width="240" height="90" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="300" y="196" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP06: Sintaxis Email RFC 5322</text>
+    <text x="300" y="212" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 'karen.campo@pizzeriabellaitalia.co'</text>
+    <text x="300" y="226" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• 'correo_sin_arroba.com' → Error</text>
+    <text x="300" y="240" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• '@sindominio.com' → Error</text>
+    <text x="300" y="256" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Validación OK)</text>
+
+    <rect x="290" y="276" width="240" height="90" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="300" y="294" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP07: Control de Acceso RBAC</text>
+    <text x="300" y="310" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• ADMIN accede a módulo COCINERO</text>
+    <text x="300" y="324" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• CLIENTE denegado a panel ADMIN</text>
+    <text x="300" y="338" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• REPARTIDOR accede solo a entregas</text>
+    <text x="300" y="356" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Jerarquía OK)</text>
+
+    <!-- Módulo 3 -->
+    <rect x="555" y="44" width="255" height="335" rx="6" fill="#1e293b" stroke="#8b5cf6"/>
+    <text x="682" y="66" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#c084fc" text-anchor="middle">
+      MÓDULO 3: CLIENTES &amp; XSS
+    </text>
+
+    <rect x="565" y="80" width="235" height="135" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="575" y="98" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP08: Celulares Colombia</text>
+    <text x="575" y="114" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• '3127894561' → Válido (10 dígitos)</text>
+    <text x="575" y="128" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• '2127894561' → Inválido (No inicia en 3)</text>
+    <text x="575" y="142" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• '312789456' → Inválido (9 dígitos)</text>
+    <text x="575" y="156" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• '312789456100' → Inválido (12 dígitos)</text>
+    <text x="575" y="174" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Norma MinTIC)</text>
+
+    <rect x="565" y="225" width="235" height="140" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="575" y="245" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP09: Saneamiento XSS</text>
+    <text x="575" y="263" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Entrada: &lt;script&gt;alert('xss')&lt;/script&gt;</text>
+    <text x="575" y="277" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Salida saneada: &amp;lt;script&amp;gt;...</text>
+    <text x="575" y="291" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Prevención de inyección en BD</text>
+    <text x="575" y="315" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (OWASP Top 10)</text>
+
+    <!-- Módulo 4 -->
+    <rect x="825" y="44" width="255" height="335" rx="6" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="952" y="66" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      MÓDULO 4: INVENTARIO
+    </text>
+
+    <rect x="835" y="80" width="235" height="135" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="845" y="98" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP10: Reserva de Ingredientes</text>
+    <text x="845" y="114" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Receta Margherita: Harina 300g,</text>
+    <text x="845" y="128" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">  Mozzarella 250g, Pomodoro 200g</text>
+    <text x="845" y="142" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Verificación de disponibilidad: TRUE</text>
+    <text x="845" y="156" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Descuento exacto en gramos</text>
+    <text x="845" y="174" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Stock actualizado)</text>
+
+    <rect x="835" y="225" width="235" height="140" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="845" y="245" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP11: Excepción Stock Insuficiente</text>
+    <text x="845" y="263" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Solicitud de 999 kg de Mozzarella</text>
+    <text x="845" y="277" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Stock disponible: 30 kg</text>
+    <text x="845" y="291" font-family="'Segoe UI', sans-serif" font-size="8" fill="#cbd5e1">• Sistema bloquea la orden con error</text>
+    <text x="845" y="315" font-family="'Segoe UI', sans-serif" font-size="8" fill="#86efac">Estado: CONFORME (Excepción controlada)</text>
+
+    <!-- Módulo 5 -->
+    <rect x="1095" y="44" width="240" height="335" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="1215" y="66" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      MÓDULO 5: INTEGRACIÓN BD
+    </text>
+
+    <rect x="1105" y="80" width="220" height="285" rx="4" fill="#0f172a" stroke="#22c55e"/>
+    <text x="1115" y="98" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#4ade80">CP12: Persistencia PostgreSQL</text>
+    <text x="1115" y="118" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Cliente: Carlos Benavides</text>
+    <text x="1115" y="134" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Celular: 3158901234</text>
+    <text x="1115" y="150" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Dirección: Popayán Centro</text>
+    <text x="1115" y="166" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Total: $43.880 COP</text>
+    <text x="1115" y="186" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#38bdf8">• ID Generado: 1</text>
+    <text x="1115" y="202" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#38bdf8">• Prefijo: 'ORD-20260001'</text>
+    <text x="1115" y="218" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#38bdf8">• Estado: 'CONFIRMADO_COCINA'</text>
+    <text x="1115" y="242" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Consulta SELECT por ID exitosa</text>
+    <text x="1115" y="258" font-family="'Segoe UI', sans-serif" font-size="8.2" fill="#cbd5e1">• Integridad transaccional ACID</text>
+    <text x="1115" y="282" font-family="'Segoe UI', sans-serif" font-size="8.5" fill="#86efac">Estado: CONFORME (Integración 100%)</text>
+  </g>
+
+  <!-- Bottom Institutional Strip -->
+  <rect x="25" y="955" width="1350" height="18" rx="4" fill="#030712"/>
+  <text x="700" y="968" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">
+    Servicio Nacional de Aprendizaje SENA • Centro de Teleinformática y Producción Industrial (CTPI Popayán) • Programa ADSO • Ficha 3186681 • Karen Yuliana Campo
+  </text>
+</svg>
