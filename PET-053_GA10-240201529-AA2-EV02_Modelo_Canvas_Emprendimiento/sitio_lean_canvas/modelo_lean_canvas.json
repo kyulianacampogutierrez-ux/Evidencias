@@ -1,0 +1,128 @@
+{
+  "proyecto": "Pizzería Gourmet Bella Italia Popayán",
+  "aprendiz": "Karen Yuliana Campo",
+  "ficha": "3186681",
+  "programa": "Análisis y Desarrollo de Software (ADSO)",
+  "competencia": "240201529 - Cultura Emprendedora y Empresarial",
+  "resultado_aprendizaje": "240201529-02 - Caracterizar la idea de negocio según oportunidades de mercado",
+  "actividad_aprendizaje": "GA10-240201529-AA2 - Definir la idea de negocio a desarrollar en el emprendimiento",
+  "evidencia": "GA10-240201529-AA2-EV02 - Modelo Canvas del emprendimiento",
+  "instrumento": "IE-GA10-240201529-AA2-EV02 (Lista de Chequeo)",
+  "fecha": "Noviembre de 2026",
+  "version": "1.0.0",
+  "areas_estrategicas": {
+    "clientes": "Segmento de comensales locales y turistas gastronómicos de Popayán UNESCO, con canales directos y digitales.",
+    "oferta": "Pizzas de autor con fermentación natural de 48 horas e ingredientes autóctonos caucanos (Pipián y Silvia).",
+    "infraestructura": "Plataforma de software propia (Web, KDS, POS DIAN) y cocina con horno de leña a 400°C.",
+    "viabilidad_economica": "Estructura de costos optimizada (<32% materia prima) y flujos de ingresos directos con margen del 68%."
+  },
+  "bloques_lean_canvas": {
+    "1_problema": {
+      "nombre": "Problema",
+      "descripcion": "Principales dolores y necesidades insatisfechas identificadas en el mercado gastronómico de Popayán.",
+      "puntos_clave": [
+        "Falta de pizzerías artesanales con masa madre de fermentación lenta (48h); predominio de pizzas industriales congeladas de difícil digestión.",
+        "Inexistencia de opciones de pizza que incorporen ingredientes típicos caucanos de alta cocina (pipián payanés, quesos madurados de Silvia).",
+        "Plataformas de delivery comerciales cobran comisiones abusivas (25%-30%), generan demoras de despacho y no emiten facturación electrónica DIAN ágil."
+      ],
+      "alternativas_existentes": [
+        "Cadenas multinacionales de comida rápida (pizzas ultraprocesadas con masas precocidas).",
+        "Pizzerías de barrio informales sin carta interactiva, trazabilidad de pedidos ni opciones saludables.",
+        "Aplicaciones de domicilios de terceros con sobrecostos y sin garantías de temperatura al llegar."
+      ]
+    },
+    "2_segmento_clientes": {
+      "nombre": "Segmento de Clientes",
+      "descripcion": "Público objetivo y primeros adoptantes para quienes se crea valor.",
+      "puntos_clave": [
+        "Familias, profesionales, jóvenes y comensales gourmet (estratos 3, 4 y 5) en Popayán que valoran la comida saludable y de autor.",
+        "Turistas nacionales e internacionales atraídos por la designación de Popayán como Ciudad Creativa de la Gastronomía UNESCO.",
+        "Trabajadores y oficinas del Centro Histórico que requieren almuerzos o cenas rápidas de alta calidad con factura legal DIAN."
+      ],
+      "early_adopters": [
+        "Amantes de la gastronomía artesanal y la masa madre que buscan experiencias culinarias diferenciadas en Popayán.",
+        "Clientes digitales habituados a realizar pedidos por smartphone con pagos seguros en línea (Wompi, Bancolombia QR)."
+      ]
+    },
+    "3_propuesta_valor": {
+      "nombre": "Propuesta Única de Valor (UVP)",
+      "descripcion": "Mensaje claro, único y convincente que explica la diferenciación y valor del producto.",
+      "lema_principal": "El auténtico arte pizzero napolitano con el alma y sabor de la gastronomía caucana.",
+      "puntos_clave": [
+        "Pizzas artesanales con 48 horas de fermentación natural en horno de leña a 400°C, altamente digestivas y crocantes.",
+        "Línea de autor con productos de origen caucano: masa fina con pipián payanés tradicional, quesos campesinos de Silvia y trucha ahumada.",
+        "Experiencia tecnológica omnicanal: tienda web propia, pantalla de cocina KDS en vivo y facturación electrónica DIAN en 2 segundos."
+      ],
+      "concepto_alto_nivel": "La 'Pizzería de Autor Digital' que une la herencia italiana con la riqueza ancestral del Cauca."
+    },
+    "4_solucion": {
+      "nombre": "Solución",
+      "descripcion": "Top 3 de características del producto y servicio que resuelven los problemas del cliente.",
+      "puntos_clave": [
+        "Carta digital web interactiva con fotos HD, alérgenos detallados y personalización de ingredientes al gusto del comensal.",
+        "Horneado tradicional en leña cronometrado por pantalla táctil KDS (Kitchen Display System) para entrega en punto óptimo.",
+        "Canal directo de domicilios con empaque térmico ecológico que conserva la temperatura a 70°C y captura de firma digital."
+      ]
+    },
+    "5_canales": {
+      "nombre": "Canales",
+      "descripcion": "Vías de contacto, venta y distribución hacia los clientes.",
+      "puntos_clave": [
+        "Portal Web propio responsive (http://localhost:8101/) adaptado a computadores, tabletas y smartphones.",
+        "Punto físico boutique en el Centro Histórico de Popayán para consumo en salón y take-away.",
+        "Flota de domiciliarios propios con geolocalización de rutas en casco urbano de Popayán.",
+        "Estrategia de redes sociales (Instagram, TikTok) con videos del proceso de fermentación de masas y alianzas con campesinos de Silvia."
+      ]
+    },
+    "6_flujos_ingresos": {
+      "nombre": "Flujos de Ingresos",
+      "descripcion": "Modelos de monetización, precios y fuentes de ingresos del negocio.",
+      "puntos_clave": [
+        "Venta directa de pizzas clásicas (Margarita, Pepperoni, Cuatro Quesos): $32.000 a $38.000 COP.",
+        "Venta de especialidades gourmet caucanas (Pipián Gourmet, Silvia Artesanal, Pubenza Trucha): $42.000 a $48.000 COP.",
+        "Línea de calzones, focaccias, postres tradicionales italianos (Tiramisú) y bebidas artesanales: $8.000 a $16.000 COP.",
+        "Servicio corporativo de catering para eventos y paquetes de reuniones empresariales en Popayán."
+      ],
+      "metodos_pago": "Efectivo en salón, datáfono inalámbrico, transferencias QR Bancolombia y pasarela en línea Wompi/PSE."
+    },
+    "7_estructura_costos": {
+      "nombre": "Estructura de Costos",
+      "descripcion": "Costos fijos y variables fundamentales para operar el modelo de negocio.",
+      "costos_fijos_mensuales": [
+        "Arriendo de local comercial en Centro Histórico de Popayán: $2.500.000 COP",
+        "Nómina de personal base (Chef de cocina, ayudante, cajero/facturador): $4.200.000 COP",
+        "Servicios públicos (energía trifásica, agua, gas y fibra óptica 20 Mbps): $800.000 COP",
+        "Hosting en la nube Docker y mantenimiento del servidor web: $150.000 COP",
+        "Póliza de asesoría contable y tributaria externa: $350.000 COP"
+      ],
+      "costos_variables_unitarios": [
+        "Materia prima e ingredientes directos por pizza: 28% a 32% del valor de venta ($9.500 a $14.000 COP)",
+        "Empaque térmico biodegradable y sello de seguridad: $1.800 COP por unidad",
+        "Leña de roble certificada para horno artesanal: $400.000 COP mensuales",
+        "Comisión bancaria pasarela de pagos Wompi: 2.8% + $900 COP por transacción"
+      ]
+    },
+    "8_metricas_claves": {
+      "nombre": "Métricas Claves (KPIs)",
+      "descripcion": "Indicadores de rendimiento clave para evaluar la salud del emprendimiento.",
+      "puntos_clave": [
+        "Costo de Adquisición de Clientes (CAC): Menor a $6.000 COP mediante marketing de contenidos local.",
+        "Valor del Tiempo de Vida del Cliente (LTV): Estimado en $320.000 COP anuales por cliente recurrente.",
+        "Tasa de Retención y Recompra Mensual: Superior al 42% de comensales.",
+        "Tiempo de Ciclo en Cocina (KDS): Promedio de 14 minutos desde orden hasta salida del horno.",
+        "Margen de Contribución Promedio: 68% sobre el precio de venta al público.",
+        "Índice de Satisfacción Neta (NPS): Superior a 85 puntos en encuestas digitales post-entrega."
+      ]
+    },
+    "9_ventaja_injusta": {
+      "nombre": "Ventaja Injusta (Unfair Advantage)",
+      "descripcion": "Elementos diferenciadores que la competencia no puede copiar ni comprar fácilmente.",
+      "puntos_clave": [
+        "Software integral propio (E-Commerce, KDS, POS DIAN) desarrollado por la aprendiz ADSO Karen Campo, sin costos de licenciamiento ni regalías.",
+        "Recetas registradas de autor que fusionan masa madre de 48 horas con el auténtico pipián payanés y quesos artesanales de Silvia.",
+        "Alianzas comerciales exclusivas y comercio justo con asociaciones campesinas e indígenas del oriente caucano.",
+        "Apalancamiento de Popayán como Ciudad Creativa de la Gastronomía UNESCO y asesoría del Fondo Emprender SENA."
+      ]
+    }
+  }
+}

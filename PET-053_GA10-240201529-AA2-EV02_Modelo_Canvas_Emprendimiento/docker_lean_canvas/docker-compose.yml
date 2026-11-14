@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  sena-lean-canvas-web:
+    image: httpd:alpine
+    container_name: sena-lean-canvas-web
+    restart: unless-stopped
+    ports:
+      - "8101:80"
+    volumes:
+      - ../sitio_lean_canvas:/usr/local/apache2/htdocs:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - sena_lean_canvas_net
+
+networks:
+  sena_lean_canvas_net:
+    name: sena_lean_canvas_net
+    driver: bridge
