@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" style="background:#ffffff; font-family:'Segoe UI', Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00324D" />
+      <stop offset="50%" stop-color="#0F4C81" />
+      <stop offset="100%" stop-color="#39A900" />
+    </linearGradient>
+    <linearGradient id="devGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8F5E9" />
+      <stop offset="100%" stop-color="#C8E6C9" />
+    </linearGradient>
+    <linearGradient id="ciGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E1F5FE" />
+      <stop offset="100%" stop-color="#B3E5FC" />
+    </linearGradient>
+    <linearGradient id="stageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E1" />
+      <stop offset="100%" stop-color="#FFECB3" />
+    </linearGradient>
+    <linearGradient id="perfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5F5" />
+      <stop offset="100%" stop-color="#E1BEE7" />
+    </linearGradient>
+    <linearGradient id="mobGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBE9E7" />
+      <stop offset="100%" stop-color="#FFCCBC" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Banner Superior -->
+  <rect x="20" y="20" width="960" height="70" rx="8" fill="url(#headerGrad)" filter="url(#dropShadow)" />
+  <text x="500" y="48" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">ARQUITECTURA DE AMBIENTES DE PRUEBA DE SOFTWARE</text>
+  <text x="500" y="72" fill="#E0F2FE" font-size="13" text-anchor="middle">Pizzería Gourmet Bella Italia Popayán | Ficha 3186681 | Aprendiz: Karen Yuliana Campo | GA9-220501096-AA2-EV01</text>
+
+  <!-- Panel 1: DEV (Desarrollo Local) -->
+  <g transform="translate(40, 110)" filter="url(#dropShadow)">
+    <rect width="280" height="230" rx="8" fill="url(#devGrad)" stroke="#39A900" stroke-width="2" />
+    <rect width="280" height="34" rx="8" fill="#39A900" />
+    <text x="140" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">1. AMBIENTE DEV (Local)</text>
+    <text x="15" y="55" fill="#00324D" font-size="11" font-weight="bold">SO:</text> <text x="50" y="55" fill="#333333" font-size="11">Ubuntu 24.04 LTS / macOS</text>
+    <text x="15" y="75" fill="#00324D" font-size="11" font-weight="bold">Backend:</text> <text x="75" y="75" fill="#333333" font-size="11">Node.js 20 LTS / Go Fiber :8080</text>
+    <text x="15" y="95" fill="#00324D" font-size="11" font-weight="bold">Frontend:</text> <text x="75" y="95" fill="#333333" font-size="11">Vite React 18 HMR :5173</text>
+    <text x="15" y="115" fill="#00324D" font-size="11" font-weight="bold">BD:</text> <text x="45" y="115" fill="#333333" font-size="11">MongoDB 7.0 / MariaDB 10.5</text>
+    <text x="15" y="135" fill="#00324D" font-size="11" font-weight="bold">Herramienta:</text> <text x="95" y="135" fill="#333333" font-size="11">VS Code, Postman v2.1</text>
+    <text x="15" y="155" fill="#00324D" font-size="11" font-weight="bold">Alcance:</text> <text x="70" y="155" fill="#333333" font-size="11">Pruebas unitarias de función</text>
+    <rect x="15" y="175" width="250" height="42" rx="4" fill="#ffffff" stroke="#39A900" stroke-width="1" />
+    <text x="140" y="193" fill="#1B5E20" font-size="10" font-weight="bold" text-anchor="middle">Casos: CP-001, CP-002, CP-003, CP-004</text>
+    <text x="140" y="208" fill="#333333" font-size="9" text-anchor="middle">Liquidación de Impoconsumo, Delivery y Carrito</text>
+  </g>
+
+  <!-- Panel 2: CI / CD Docker -->
+  <g transform="translate(360, 110)" filter="url(#dropShadow)">
+    <rect width="280" height="230" rx="8" fill="url(#ciGrad)" stroke="#0288D1" stroke-width="2" />
+    <rect width="280" height="34" rx="8" fill="#0288D1" />
+    <text x="140" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">2. AMBIENTE CI/CD (Docker)</text>
+    <text x="15" y="55" fill="#00324D" font-size="11" font-weight="bold">SO:</text> <text x="50" y="55" fill="#333333" font-size="11">Alpine Linux 3.19 Container</text>
+    <text x="15" y="75" fill="#00324D" font-size="11" font-weight="bold">Runner:</text> <text x="70" y="75" fill="#333333" font-size="11">Node.js 20 Alpine / Go 1.22</text>
+    <text x="15" y="95" fill="#00324D" font-size="11" font-weight="bold">Aislamiento:</text> <text x="90" y="95" fill="#333333" font-size="11">Red docker puente bridge</text>
+    <text x="15" y="115" fill="#00324D" font-size="11" font-weight="bold">BD Efímera:</text> <text x="90" y="115" fill="#333333" font-size="11">In-Memory Mock / SQLite</text>
+    <text x="15" y="135" fill="#00324D" font-size="11" font-weight="bold">Herramienta:</text> <text x="95" y="135" fill="#333333" font-size="11">node:test, Assert, docker-test.sh</text>
+    <text x="15" y="155" fill="#00324D" font-size="11" font-weight="bold">Alcance:</text> <text x="70" y="155" fill="#333333" font-size="11">Validación sintáctica y contratos</text>
+    <rect x="15" y="175" width="250" height="42" rx="4" fill="#ffffff" stroke="#0288D1" stroke-width="1" />
+    <text x="140" y="193" fill="#01579B" font-size="10" font-weight="bold" text-anchor="middle">Casos: CP-005, CP-006, CP-008</text>
+    <text x="140" y="208" fill="#333333" font-size="9" text-anchor="middle">Password Robusto, Email RFC 5322 y Móvil</text>
+  </g>
+
+  <!-- Panel 3: STAGING / QA INTEGRADO -->
+  <g transform="translate(680, 110)" filter="url(#dropShadow)">
+    <rect width="280" height="230" rx="8" fill="url(#stageGrad)" stroke="#F57F17" stroke-width="2" />
+    <rect width="280" height="34" rx="8" fill="#F57F17" />
+    <text x="140" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">3. AMBIENTE STAGING (QA)</text>
+    <text x="15" y="55" fill="#00324D" font-size="11" font-weight="bold">SO:</text> <text x="50" y="55" fill="#333333" font-size="11">Ubuntu Server 24.04 LTS</text>
+    <text x="15" y="75" fill="#00324D" font-size="11" font-weight="bold">Servidor:</text> <text x="75" y="75" fill="#333333" font-size="11">Nginx 1.26 + Go Fiber Service</text>
+    <text x="15" y="95" fill="#00324D" font-size="11" font-weight="bold">BD Clúster:</text> <text x="85" y="95" fill="#333333" font-size="11">MongoDB 7.0 Replica Set (ACID)</text>
+    <text x="15" y="115" fill="#00324D" font-size="11" font-weight="bold">Caché:</text> <text x="65" y="115" fill="#333333" font-size="11">Redis 7.2 Standalone</text>
+    <text x="15" y="135" fill="#00324D" font-size="11" font-weight="bold">Herramienta:</text> <text x="95" y="135" fill="#333333" font-size="11">Newman CLI, OWASP ZAP</text>
+    <text x="15" y="155" fill="#00324D" font-size="11" font-weight="bold">Alcance:</text> <text x="70" y="155" fill="#333333" font-size="11">Seguridad RBAC, REST y KDS</text>
+    <rect x="15" y="175" width="250" height="42" rx="4" fill="#ffffff" stroke="#F57F17" stroke-width="1" />
+    <text x="140" y="193" fill="#E65100" font-size="10" font-weight="bold" text-anchor="middle">Casos: CP-007, CP-009, CP-010, CP-011, CP-012, CP-013</text>
+    <text x="140" y="208" fill="#333333" font-size="9" text-anchor="middle">RBAC, XSS/NoSQL, Stock KDS, JWT y Catálogo</text>
+  </g>
+
+  <!-- Panel 4: RENDIMIENTO / CARGA -->
+  <g transform="translate(140, 370)" filter="url(#dropShadow)">
+    <rect width="340" height="230" rx="8" fill="url(#perfGrad)" stroke="#7B1FA2" stroke-width="2" />
+    <rect width="340" height="34" rx="8" fill="#7B1FA2" />
+    <text x="170" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">4. AMBIENTE RENDIMIENTO Y CARGA (k6)</text>
+    <text x="15" y="55" fill="#00324D" font-size="11" font-weight="bold">Hardware:</text> <text x="80" y="55" fill="#333333" font-size="11">8 vCPU, 16 GB RAM, SSD NVMe</text>
+    <text x="15" y="75" fill="#00324D" font-size="11" font-weight="bold">Red:</text> <text x="50" y="75" fill="#333333" font-size="11">1 Gbps LAN con tc netem (jitter 5ms)</text>
+    <text x="15" y="95" fill="#00324D" font-size="11" font-weight="bold">Carga:</text> <text x="60" y="95" fill="#333333" font-size="11">50 Usuarios Virtuales (VU) concurrentes</text>
+    <text x="15" y="115" fill="#00324D" font-size="11" font-weight="bold">Herramienta:</text> <text x="95" y="115" fill="#333333" font-size="11">Grafana k6 v0.50, Apache JMeter</text>
+    <text x="15" y="135" fill="#00324D" font-size="11" font-weight="bold">Métricas:</text> <text x="75" y="135" fill="#333333" font-size="11">p(95) latencia &lt; 120ms, error &lt; 0.5%</text>
+    <rect x="15" y="155" width="310" height="60" rx="4" fill="#ffffff" stroke="#7B1FA2" stroke-width="1" />
+    <text x="170" y="175" fill="#4A148C" font-size="11" font-weight="bold" text-anchor="middle">Caso CP-014 (En Seguimiento - Medio)</text>
+    <text x="170" y="192" fill="#333333" font-size="10" text-anchor="middle">Resultado: p(95) = 138ms | Falla: 0.12%</text>
+    <text x="170" y="206" fill="#F57F17" font-size="9" font-weight="bold" text-anchor="middle">Plan: OPT-PERF-001 (Índice Compuesto MongoDB)</text>
+  </g>
+
+  <!-- Panel 5: MÓVIL ANDROID -->
+  <g transform="translate(520, 370)" filter="url(#dropShadow)">
+    <rect width="340" height="230" rx="8" fill="url(#mobGrad)" stroke="#D84315" stroke-width="2" />
+    <rect width="340" height="34" rx="8" fill="#D84315" />
+    <text x="170" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">5. AMBIENTE MÓVIL Y UI RESPONSIVE</text>
+    <text x="15" y="55" fill="#00324D" font-size="11" font-weight="bold">Dispositivo:</text> <text x="90" y="55" fill="#333333" font-size="11">Pixel 7 / Emulador Android 14 (API 34)</text>
+    <text x="15" y="75" fill="#00324D" font-size="11" font-weight="bold">Stack:</text> <text x="60" y="75" fill="#333333" font-size="11">React Native 0.74, Metro Bundler :8081</text>
+    <text x="15" y="95" fill="#00324D" font-size="11" font-weight="bold">Resolución:</text> <text x="90" y="95" fill="#333333" font-size="11">1080 x 2400 FHD+ (411 dpi)</text>
+    <text x="15" y="115" fill="#00324D" font-size="11" font-weight="bold">Herramienta:</text> <text x="95" y="115" fill="#333333" font-size="11">Appium v2.0, Android Studio Profiler</text>
+    <text x="15" y="135" fill="#00324D" font-size="11" font-weight="bold">Métricas:</text> <text x="75" y="135" fill="#333333" font-size="11">60 fps sostenidos, WCAG 2.1 AA contraste</text>
+    <rect x="15" y="155" width="310" height="60" rx="4" fill="#ffffff" stroke="#D84315" stroke-width="1" />
+    <text x="170" y="175" fill="#BF360C" font-size="11" font-weight="bold" text-anchor="middle">Caso CP-015 (En Seguimiento - Bajo)</text>
+    <text x="170" y="192" fill="#333333" font-size="10" text-anchor="middle">Resultado: 60 fps | Contraste Dark Mode 3.8:1</text>
+    <text x="170" y="206" fill="#F57F17" font-size="9" font-weight="bold" text-anchor="middle">Plan: UI-DARK-002 (Ajuste color badge #FFE082)</text>
+  </g>
+
+  <!-- Flechas de Flujo Inter-Ambientes -->
+  <path d="M 320 225 L 360 225" fill="none" stroke="#00324D" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 640 225 L 680 225" fill="none" stroke="#00324D" stroke-width="2" />
+  <path d="M 500 340 L 500 370" fill="none" stroke="#00324D" stroke-width="2" />
+
+  <!-- Footer con datos SENA -->
+  <text x="500" y="625" fill="#555555" font-size="11" text-anchor="middle">Servicio Nacional de Aprendizaje SENA | CTPI Popayán | Tecnología en Análisis y Desarrollo de Software (ADSO)</text>
+</svg>
