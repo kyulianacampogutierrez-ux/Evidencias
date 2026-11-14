@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Manual de Usuario | Pizzería Gourmet Bella Italia Popayán - GA10-AA11-EV01</title>
+  
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --secondary: #059669;
+      --secondary-light: #ecfdf5;
+      --warning: #d97706;
+      --dark: #0f172a;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-muted: #64748b;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      background-color: #f1f5f9;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    /* Header Bar */
+    header {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0f172a 100%);
+      color: #ffffff;
+      padding: 24px 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-title h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header-title p {
+      font-size: 13.5px;
+      color: #bae6fd;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
+    .badge-primary {
+      background: rgba(255,255,255,0.2);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .badge-success {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1300px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+
+    .nav-tab {
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: none;
+      background: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-tab:hover {
+      background: var(--gray-light);
+      color: var(--primary-dark);
+    }
+
+    .nav-tab.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Content Cards */
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-border);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .card-header {
+      border-bottom: 1px solid var(--gray-border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-header h2 {
+      font-size: 18px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* KPI Item */
+    .kpi-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+    }
+
+    .kpi-card h4 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .kpi-sub {
+      font-size: 11.5px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    /* Role Card */
+    .role-card {
+      background: var(--gray-light);
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .role-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+
+    .role-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    th, td {
+      border: 1px solid var(--gray-border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--gray-light);
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Diagram Containers */
+    .diagram-container {
+      text-align: center;
+      background: #0f172a;
+      padding: 20px;
+      border-radius: var(--radius);
+      margin: 16px 0;
+    }
+
+    .diagram-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* Tab Content Visibility */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Workflow Step */
+    .step-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      background: var(--primary);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .step-desc h4 {
+      font-size: 13.5px;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .step-desc p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid var(--gray-border);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header>
+    <div class="header-content">
+      <div class="header-title">
+        <h1>PORTAL DEL MANUAL DE USUARIO</h1>
+        <p>Sistema de Gestión Gastronómica y Comercio Electrónico "Pizzería Gourmet Bella Italia Popayán" | Guía 10 - AA11-EV01</p>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-primary">SENA CTPI Popayán (Ficha 3186681)</span>
+        <span class="badge badge-primary">Aprendiz: Karen Yuliana Campo</span>
+        <span class="badge badge-success">● Estado: Guía Oficial de Usuario</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="container">
+
+    <!-- RESUMEN OPERATIVO (KPIS) -->
+    <div class="grid-4">
+      <div class="kpi-card">
+        <h4>Roles de Usuario</h4>
+        <div class="kpi-value">5 Perfiles</div>
+        <div class="kpi-sub">✔ Comensal, Cajero, Cocina, Domicilio, Admin</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Flujos Operativos</h4>
+        <div class="kpi-value">Workflows 100%</div>
+        <div class="kpi-sub">✔ Pedido, Cocina KDS y Facturación DIAN</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Navegación e Interfaz</h4>
+        <div class="kpi-value">SPA Responsiva</div>
+        <div class="kpi-sub">✔ Web Móvil, Salón y Escritorio</div>
+      </div>
+      <div class="kpi-card">
+        <h4>Estándar de Manual</h4>
+        <div class="kpi-value">Guía DNP</div>
+        <div class="kpi-sub">✔ Departamento Nacional de Planeación</div>
+      </div>
+    </div>
+
+    <!-- NAVEGACIÓN POR PESTAÑAS DEL MANUAL DE USUARIO -->
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab active" onclick="switchTab('tab-roles')">1. Guía por Roles de Usuario</button>
+      <button class="nav-tab" onclick="switchTab('tab-menus')">2. Menús y Submenús</button>
+      <button class="nav-tab" onclick="switchTab('tab-ingreso')">3. Instrucciones de Ingreso y Acceso</button>
+      <button class="nav-tab" onclick="switchTab('tab-informacion')">4. Consulta e Ingreso de Datos</button>
+      <button class="nav-tab" onclick="switchTab('tab-flujos')">5. Flujos de Trabajo (Workflows)</button>
+      <button class="nav-tab" onclick="switchTab('tab-faq')">6. Preguntas Frecuentes y Soporte</button>
+    </nav>
+
+    <!-- PESTAÑA 1: GUÍA POR ROLES -->
+    <section id="tab-roles" class="tab-content active">
+      <div class="card">
+        <div class="card-header">
+          <h2>1. Guía de Uso de Funcionalidades por Rol</h2>
+          <span class="badge badge-primary">Guía DNP &amp; Control de Acceso RBAC</span>
+        </div>
+        <p style="margin-bottom:16px;">
+          El software opera bajo un modelo de <strong>Control de Acceso Basado en Roles (RBAC)</strong>, adaptando la interfaz según las responsabilidades operativas del usuario:
+        </p>
+
+        <div class="grid-3" id="roles-container">
+          <!-- Tarjeta 1: Comensal -->
+          <div class="role-card">
+            <div class="role-title">🍕 Cliente Comensal</div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Usuario externo que navega la carta, arma pedidos y realiza compras en línea o mesa.</p>
+            <strong style="font-size:11.5px; color:var(--dark);">Funciones Clave:</strong>
+            <ul style="font-size:11.5px; margin-left:14px; margin-top:4px;">
+              <li>Catálogo con fotos HD y alérgenos</li>
+              <li>Carrito con notas al chef</li>
+              <li>Checkout con geolocalización Popayán</li>
+              <li>Seguimiento de orden en tiempo real</li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta 2: Cajero -->
+          <div class="role-card">
+            <div class="role-title">💳 Cajero / Facturador</div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Operador de salón encargado de cobros presenciales y facturación electrónica DIAN.</p>
+            <strong style="font-size:11.5px; color:var(--dark);">Funciones Clave:</strong>
+            <ul style="font-size:11.5px; margin-left:14px; margin-top:4px;">
+              <li>Apertura y cierre Z de caja</li>
+              <li>Carga de comanda por mesa</li>
+              <li>Emisión fiscal con CUFE y QR</li>
+              <li>Gestión de pagos mixtos</li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta 3: Jefe Cocina -->
+          <div class="role-card">
+            <div class="role-title">👨‍🍳 Jefe de Cocina</div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Responsable de preparación de comandas en el horno de leña.</p>
+            <strong style="font-size:11.5px; color:var(--dark);">Funciones Clave:</strong>
+            <ul style="font-size:11.5px; margin-left:14px; margin-top:4px;">
+              <li>Monitor de comandas KDS en vivo</li>
+              <li>Cronómetro de tiempos de cocción</li>
+              <li>Alertas sonoras de nuevos pedidos</li>
+              <li>Cambio de estado a "Listo Despacho"</li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta 4: Domiciliario -->
+          <div class="role-card">
+            <div class="role-title">🛵 Domiciliario</div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Repartidor de entregas geolocalizadas en Popayán.</p>
+            <strong style="font-size:11.5px; color:var(--dark);">Funciones Clave:</strong>
+            <ul style="font-size:11.5px; margin-left:14px; margin-top:4px;">
+              <li>Recepción de pedidos empaquetados</li>
+              <li>Mapa de ruta en Popayán</li>
+              <li>Cobro contra entrega</li>
+              <li>Firma digital del cliente</li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta 5: Administrador -->
+          <div class="role-card">
+            <div class="role-title">⚙️ Administrador General</div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Supervisión gerencial de carta, precios, usuarios e inventario.</p>
+            <strong style="font-size:11.5px; color:var(--dark);">Funciones Clave:</strong>
+            <ul style="font-size:11.5px; margin-left:14px; margin-top:4px;">
+              <li>Gestión de empleados y roles</li>
+              <li>Actualización de precios y stock</li>
+              <li>Métricas de ventas y DIAN</li>
+              <li>Auditoría forense de logs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 2: MENÚS Y SUBMENÚS -->
+    <section id="tab-menus" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>2. Estructura de Componentes, Menús y Submenús</h2>
+          <span class="badge badge-primary">Arquitectura de Información</span>
+        </div>
+        <p style="margin-bottom:16px;">
+          Mapa general del árbol de navegación del sistema, describiendo de alto nivel y en particular cada pantalla:
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Menú Principal</th>
+                <th>Submenú / Vista</th>
+                <th>Roles Habilitados</th>
+                <th>Acción Operativa Permitida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><strong>1. Menú Carta Digital</strong></td>
+                <td>Pizzas Clásicas &amp; Gourmet</td>
+                <td>Todos (Público)</td>
+                <td>Exploración visual de platos, ingredientes y precios en COP.</td>
+              </tr>
+              <tr>
+                <td>Calzones &amp; Focaccias</td>
+                <td>Todos (Público)</td>
+                <td>Configuración de masa y rellenos especiales.</td>
+              </tr>
+              <tr>
+                <td>Bebidas &amp; Postres</td>
+                <td>Todos (Público)</td>
+                <td>Adición de bebidas italianas y postres tradicionales.</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>2. Menú Carrito &amp; Caja</strong></td>
+                <td>Checkout &amp; Despacho</td>
+                <td>Comensal / Cajero</td>
+                <td>Ingreso de dirección de entrega en Popayán y teléfono.</td>
+              </tr>
+              <tr>
+                <td>Terminal POS Salón</td>
+                <td>Cajero / Admin</td>
+                <td>Selección de mesas, liquidación y factura DIAN.</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>3. Menú Cocina KDS</strong></td>
+                <td>Comandas en Espera</td>
+                <td>Jefe Cocina / Admin</td>
+                <td>Cola de órdenes entrantes ordenadas por prioridad.</td>
+              </tr>
+              <tr>
+                <td>Historial de Turno</td>
+                <td>Jefe Cocina / Admin</td>
+                <td>Tiempos promedio de cocción y pedidos finalizados.</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>4. Menú Reparto</strong></td>
+                <td>Ruta de Domicilio</td>
+                <td>Domiciliario / Admin</td>
+                <td>Visualización de dirección de entrega en el mapa.</td>
+              </tr>
+              <tr>
+                <td>Confirmación de Pago</td>
+                <td>Domiciliario / Admin</td>
+                <td>Registro de cobro y firma de recibido.</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>5. Menú Administración</strong></td>
+                <td>Gestión de Usuarios</td>
+                <td>Administrador</td>
+                <td>Creación, edición y suspensión de credenciales RBAC.</td>
+              </tr>
+              <tr>
+                <td>Reportes &amp; Auditoría</td>
+                <td>Administrador</td>
+                <td>Exportación de balances DIAN y registro de logs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 3: INSTRUCCIONES DE INGRESO -->
+    <section id="tab-ingreso" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>3. Instrucciones de Ingreso y Control de Acceso</h2>
+          <span class="badge badge-primary">Seguridad y Autenticación JWT</span>
+        </div>
+        <p style="margin-bottom:16px;">
+          Guía paso a paso para iniciar sesión, autenticarse de manera segura y gestionar credenciales en la plataforma:
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-size:14px; color:var(--primary-dark); margin-bottom:8px;">A. Proceso de Inicio de Sesión (Login)</h3>
+            <ol style="font-size:12px; margin-left:18px; margin-bottom:12px;">
+              <li>Abra su navegador web y diríjase a <code>http://localhost:8100/</code>.</li>
+              <li>Haga clic en el botón <strong>"Iniciar Sesión"</strong> ubicado en la esquina superior derecha.</li>
+              <li>Ingrese su correo electrónico registrado (ej. <code>cajero@pizzeriabellaitalia.com</code>).</li>
+              <li>Digite su contraseña confidencial y pulse <strong>"Acceder al Sistema"</strong>.</li>
+              <li>El sistema validará el token JWT y lo redirigirá al panel asignado según su rol.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 style="font-size:14px; color:var(--primary-dark); margin-bottom:8px;">B. Políticas de Seguridad de Acceso</h3>
+            <ul style="font-size:12px; margin-left:18px;">
+              <li><strong>Cierre de Sesión Automático:</strong> La sesión expira tras 30 minutos de inactividad para prevenir accesos no autorizados.</li>
+              <li><strong>Bloqueo por Intentos Fallidos:</strong> Al tercer intento erróneo, la cuenta se bloquea preventivamente por 15 minutos.</li>
+              <li><strong>Recuperación de Contraseña:</strong> El usuario puede solicitar un enlace de restablecimiento seguro vía correo electrónico.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 4: CONSULTA E INGRESO DE INFORMACIÓN -->
+    <section id="tab-informacion" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>4. Instrucciones para Ingreso y Consulta de Información</h2>
+          <span class="badge badge-primary">Operaciones Diarias</span>
+        </div>
+        <p style="margin-bottom:16px;">
+          Mecanismos para buscar platos, registrar nuevos pedidos, consultar facturas y actualizar estados:
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-size:14px; color:var(--primary-dark); margin-bottom:8px;">A. Consulta y Búsqueda de Productos</h3>
+            <p style="font-size:12px; margin-bottom:8px;">Los usuarios comensales y cajeros pueden consultar el menú mediante tres métodos:</p>
+            <ul style="font-size:12px; margin-left:18px;">
+              <li><strong>Buscador en tiempo real:</strong> Digite el nombre de la pizza o ingrediente para filtrar al instante.</li>
+              <li><strong>Selector de categorías:</strong> Filtre por Tradicionales, Gourmet, Calzones o Bebidas.</li>
+              <li><strong>Filtro de alérgenos:</strong> Oculte platos que contengan gluten o lácteos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size:14px; color:var(--primary-dark); margin-bottom:8px;">B. Registro de Pedido y Checkout</h3>
+            <p style="font-size:12px; margin-bottom:8px;">Instrucciones para formalizar una compra:</p>
+            <ul style="font-size:12px; margin-left:18px;">
+              <li>Revise el resumen del carrito con desglose de subtotal e IVA del 19%.</li>
+              <li>Ingrese la dirección exacta en Popayán y referencias (ej. frente al parque Caldas).</li>
+              <li>Seleccione el método de pago deseado y haga clic en <strong>"Confirmar Pedido"</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 5: FLUJOS DE TRABAJO -->
+    <section id="tab-flujos" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>5. Flujos de Trabajo Operativos (Workflows)</h2>
+          <span class="badge badge-primary">Modelado de Procesos</span>
+        </div>
+        <p style="margin-bottom:12px;">
+          A continuación se presenta el diagrama general de flujos de trabajo de los roles del restaurante:
+        </p>
+
+        <div class="diagram-container">
+          <img src="../diagramas/diagrama_flujo_trabajo_usuario_pizzeria.png" alt="Diagrama de Flujos de Trabajo">
+        </div>
+
+        <h3 style="font-size:15px; margin-top:20px; margin-bottom:12px; color:var(--primary-dark);">Flujo Paso a Paso: Pedido Online a Despacho</h3>
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-desc">
+            <h4>Paso 1: Selección y Carrito por el Comensal</h4>
+            <p>El cliente comensal selecciona pizzas gourmet, especifica notas y completa el checkout web.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-desc">
+            <h4>Paso 2: Alerta y Preparación en Cocina KDS</h4>
+            <p>La orden entra a la pantalla de cocina. El chef pulsa iniciar preparación e ingresa la pizza al horno de leña.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-desc">
+            <h4>Paso 3: Facturación Electrónica DIAN</h4>
+            <p>Caja emite automáticamente la factura electrónica con CUFE y QR legal transmitido a la DIAN.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-desc">
+            <h4>Paso 4: Entrega y Confirmación por Domiciliario</h4>
+            <p>El domiciliario traslada el pedido empaquetado, cobra contra entrega y registra la firma digital del cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESTAÑA 6: PREGUNTAS FRECUENTES -->
+    <section id="tab-faq" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2>6. Preguntas Frecuentes y Soporte Técnico (FAQ)</h2>
+          <span class="badge badge-primary">Mesa de Ayuda</span>
+        </div>
+        
+        <div style="margin-bottom:16px;">
+          <h4 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:4px;">¿Qué hacer si el monitor de cocina KDS no emite sonido ante un nuevo pedido?</h4>
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+            Verifique que el navegador tenga activados los permisos de reproducción automática de audio para el dominio <code>localhost:8100</code> y compruebe la conexión WebSocket.
+          </p>
+
+          <h4 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:4px;">¿Cómo anular una factura emitida por error en caja?</h4>
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+            El cajero debe solicitar autorización al Administrador, quien emitirá una <strong>Nota Crédito Electrónica</strong> en el módulo DIAN vinculada al número de factura original.
+          </p>
+
+          <h4 style="font-size:13.5px; color:var(--primary-dark); margin-bottom:4px;">¿Cómo contactar al soporte técnico de la pizzería?</h4>
+          <p style="font-size:12px; color:var(--text-muted);">
+            Línea directa: <code>(602) 820-9900</code> | Correo: <code>soporte@pizzeriabellaitalia.com</code> | Horario: Lunes a Domingo 10:00 a 23:00 COT.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer>
+    <p>SENA Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca</p>
+    <p>Tecnología en Análisis y Desarrollo de Software (ADSO) | Ficha 3186681 | Aprendiz: Karen Yuliana Campo | 2026</p>
+  </footer>
+
+  <!-- SCRIPT DE INTERACTIVIDAD -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+
+      const btn = Array.from(document.querySelectorAll('.nav-tab')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (btn) btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

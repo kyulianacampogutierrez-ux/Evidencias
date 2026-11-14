@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850" style="background:#0f172a; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="gradComensal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="gradCocina" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="gradCaja" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="gradDomi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+
+    <!-- Filter for drop shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+
+  <!-- Title Header Bar -->
+  <rect x="30" y="25" width="1140" height="70" rx="10" fill="url(#gradHeader)" filter="url(#shadow)"/>
+  <text x="50" y="55" fill="#ffffff" font-size="20" font-weight="700">PIZZERÍA GOURMET BELLA ITALIA POPAYÁN - FLUJOS DE TRABAJO DE USUARIO (WORKFLOWS)</text>
+  <text x="50" y="78" fill="#bae6fd" font-size="12.5">Evidencia GA10-220501097-AA11-EV01 | Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | Guía DNP para Manuales de Usuario</text>
+
+  <!-- SWIMLANE 1: CLIENTE COMENSAL (Web / Móvil) -->
+  <g transform="translate(40, 115)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1120" height="150" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="190" height="150" rx="8" fill="url(#gradComensal)"/>
+    <text x="20" y="65" fill="#ffffff" font-size="16" font-weight="bold">1. CLIENTE</text>
+    <text x="20" y="85" fill="#ffffff" font-size="16" font-weight="bold">COMENSAL</text>
+    <text x="20" y="105" fill="#bae6fd" font-size="11">Canal Web / Móvil</text>
+
+    <!-- Step 1.1 -->
+    <rect x="210" y="40" width="160" height="70" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="220" y="65" fill="#e2e8f0" font-size="11" font-weight="bold">1. Ingreso a Carta</text>
+    <text x="220" y="82" fill="#94a3b8" font-size="10">Navega categorías</text>
+    <text x="220" y="96" fill="#94a3b8" font-size="10">y fotos de pizzas</text>
+
+    <!-- Arrow 1.1 -> 1.2 -->
+    <line x1="370" y1="75" x2="400" y2="75" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+    <!-- Step 1.2 -->
+    <rect x="405" y="40" width="160" height="70" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="415" y="65" fill="#e2e8f0" font-size="11" font-weight="bold">2. Carrito de Compra</text>
+    <text x="415" y="82" fill="#94a3b8" font-size="10">Personaliza receta</text>
+    <text x="415" y="96" fill="#94a3b8" font-size="10">y notas al chef</text>
+
+    <!-- Arrow 1.2 -> 1.3 -->
+    <line x1="565" y1="75" x2="595" y2="75" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+    <!-- Step 1.3 -->
+    <rect x="600" y="40" width="160" height="70" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="610" y="65" fill="#e2e8f0" font-size="11" font-weight="bold">3. Checkout &amp; Envío</text>
+    <text x="610" y="82" fill="#94a3b8" font-size="10">Digita dirección en</text>
+    <text x="610" y="96" fill="#94a3b8" font-size="10">Popayán y teléfono</text>
+
+    <!-- Arrow 1.3 -> 1.4 -->
+    <line x1="760" y1="75" x2="790" y2="75" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+    <!-- Step 1.4 -->
+    <rect x="795" y="40" width="160" height="70" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="805" y="65" fill="#e2e8f0" font-size="11" font-weight="bold">4. Pago Confirmado</text>
+    <text x="805" y="82" fill="#94a3b8" font-size="10">Pasarela / Efectivo</text>
+    <text x="805" y="96" fill="#38bdf8" font-size="10" font-weight="bold">ORD-202611-XXX</text>
+
+    <!-- Arrow 1.4 -> 1.5 -->
+    <line x1="955" y1="75" x2="985" y2="75" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+    <!-- Step 1.5 -->
+    <rect x="990" y="40" width="115" height="70" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="1000" y="65" fill="#34d399" font-size="11" font-weight="bold">5. Tracking</text>
+    <text x="1000" y="82" fill="#cbd5e1" font-size="10">Seguimiento</text>
+    <text x="1000" y="96" fill="#cbd5e1" font-size="10">en vivo KDS</text>
+  </g>
+
+  <!-- SWIMLANE 2: JEFE DE COCINA (KDS Horno de Leña) -->
+  <g transform="translate(40, 285)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1120" height="150" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="190" height="150" rx="8" fill="url(#gradCocina)"/>
+    <text x="20" y="65" fill="#ffffff" font-size="16" font-weight="bold">2. JEFE DE</text>
+    <text x="20" y="85" fill="#ffffff" font-size="16" font-weight="bold">COCINA</text>
+    <text x="20" y="105" fill="#fef3c7" font-size="11">Pantalla KDS Horno</text>
+
+    <!-- Connection down from Comensal Step 1.4 to Cocina Step 2.1 -->
+    <!-- Step 2.1 -->
+    <rect x="250" y="40" width="220" height="70" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="265" y="65" fill="#fef3c7" font-size="12" font-weight="bold">1. Comanda Entrante KDS</text>
+    <text x="265" y="82" fill="#cbd5e1" font-size="10">Alerta sonora y visual automática</text>
+    <text x="265" y="96" fill="#94a3b8" font-size="10">Estado: RECIBIDO</text>
+
+    <!-- Arrow 2.1 -> 2.2 -->
+    <line x1="470" y1="75" x2="520" y2="75" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-amber)"/>
+
+    <!-- Step 2.2 -->
+    <rect x="525" y="40" width="240" height="70" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="540" y="65" fill="#fef3c7" font-size="12" font-weight="bold">2. Horneado en Leña 400°C</text>
+    <text x="540" y="82" fill="#cbd5e1" font-size="10">Cronómetro activo: 12-16 min</text>
+    <text x="540" y="96" fill="#fbbf24" font-size="10">Estado: EN_PREPARACION</text>
+
+    <!-- Arrow 2.2 -> 2.3 -->
+    <line x1="765" y1="75" x2="815" y2="75" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-amber)"/>
+
+    <!-- Step 2.3 -->
+    <rect x="820" y="40" width="250" height="70" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="835" y="65" fill="#34d399" font-size="12" font-weight="bold">3. Notificación de Despacho</text>
+    <text x="835" y="82" fill="#cbd5e1" font-size="10">Pizza empacada en caja térmica</text>
+    <text x="835" y="96" fill="#34d399" font-size="10">Estado: LISTO_DESPACHO</text>
+  </g>
+
+  <!-- SWIMLANE 3: CAJERO / FACTURADOR (POS Salón & DIAN) -->
+  <g transform="translate(40, 455)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1120" height="150" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="0" y="0" width="190" height="150" rx="8" fill="url(#gradCaja)"/>
+    <text x="20" y="65" fill="#ffffff" font-size="16" font-weight="bold">3. CAJERO /</text>
+    <text x="20" y="85" fill="#ffffff" font-size="16" font-weight="bold">FACTURADOR</text>
+    <text x="20" y="105" fill="#d1fae5" font-size="11">Caja &amp; Módulo DIAN</text>
+
+    <!-- Step 3.1 -->
+    <rect x="250" y="40" width="220" height="70" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="265" y="65" fill="#d1fae5" font-size="12" font-weight="bold">1. Apertura de Turno</text>
+    <text x="265" y="82" fill="#cbd5e1" font-size="10">Registro de base inicial en caja</text>
+    <text x="265" y="96" fill="#94a3b8" font-size="10">Login con credenciales RBAC</text>
+
+    <!-- Arrow 3.1 -> 3.2 -->
+    <line x1="470" y1="75" x2="520" y2="75" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+    <!-- Step 3.2 -->
+    <rect x="525" y="40" width="240" height="70" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="540" y="65" fill="#d1fae5" font-size="12" font-weight="bold">2. Liquidación de Pagos</text>
+    <text x="540" y="82" fill="#cbd5e1" font-size="10">Efectivo, Tarjeta o Transferencia</text>
+    <text x="540" y="96" fill="#94a3b8" font-size="10">Cálculo automático de propina</text>
+
+    <!-- Arrow 3.2 -> 3.3 -->
+    <line x1="765" y1="75" x2="815" y2="75" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+    <!-- Step 3.3 -->
+    <rect x="820" y="40" width="250" height="70" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="835" y="65" fill="#34d399" font-size="12" font-weight="bold">3. Emisión Fiscal DIAN</text>
+    <text x="835" y="82" fill="#cbd5e1" font-size="10">Generación de CUFE y código QR</text>
+    <text x="835" y="96" fill="#38bdf8" font-size="10">Cierre Z y arqueo del turno</text>
+  </g>
+
+  <!-- SWIMLANE 4: DOMICILIARIO (Reparto Popayán) -->
+  <g transform="translate(40, 625)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1120" height="150" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="190" height="150" rx="8" fill="url(#gradDomi)"/>
+    <text x="20" y="65" fill="#ffffff" font-size="16" font-weight="bold">4. DOMICILIARIO</text>
+    <text x="20" y="95" fill="#ede9fe" font-size="11">App Móvil Popayán</text>
+
+    <!-- Step 4.1 -->
+    <rect x="250" y="40" width="220" height="70" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="265" y="65" fill="#ede9fe" font-size="12" font-weight="bold">1. Aceptación de Despacho</text>
+    <text x="265" y="82" fill="#cbd5e1" font-size="10">Escaneo de comanda térmica</text>
+    <text x="265" y="96" fill="#a78bfa" font-size="10">Estado: EN_CAMINO</text>
+
+    <!-- Arrow 4.1 -> 4.2 -->
+    <line x1="470" y1="75" x2="520" y2="75" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+    <!-- Step 4.2 -->
+    <rect x="525" y="40" width="240" height="70" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="540" y="65" fill="#ede9fe" font-size="12" font-weight="bold">2. Navegación Geolocalizada</text>
+    <text x="540" y="82" fill="#cbd5e1" font-size="10">Ruta optimizada en Popayán</text>
+    <text x="540" y="96" fill="#94a3b8" font-size="10">Llegada a destino del cliente</text>
+
+    <!-- Arrow 4.2 -> 4.3 -->
+    <line x1="765" y1="75" x2="815" y2="75" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+    <!-- Step 4.3 -->
+    <rect x="820" y="40" width="250" height="70" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="835" y="65" fill="#34d399" font-size="12" font-weight="bold">3. Entrega &amp; Firma Digital</text>
+    <text x="835" y="82" fill="#cbd5e1" font-size="10">Cobro contra entrega efectivo/POS</text>
+    <text x="835" y="96" fill="#34d399" font-size="10">Estado: ENTREGADO (Cierre ciclo)</text>
+  </g>
+
+  <!-- INTER-LANE CONNECTING DASHED ARROWS -->
+  <!-- Comensal checkout to Cocina KDS -->
+  <path d="M 875 185 L 875 230 L 360 230 L 360 325" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4" marker-end="url(#arrow-amber)"/>
+
+  <!-- Cocina listo to Domicilio -->
+  <path d="M 945 355 L 945 425 L 360 425 L 360 665" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-dasharray="4" marker-end="url(#arrow-purple)"/>
+</svg>

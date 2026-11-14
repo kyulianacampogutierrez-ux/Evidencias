@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual de Usuario del Software - GA10-220501097-AA11-EV01 | Karen Campo</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 1.1cm 1.3cm 1.1cm 1.3cm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      color: #1e293b;
+      line-height: 1.38;
+      font-size: 8.4pt;
+      background: #ffffff;
+    }
+    .header-bar {
+      background: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .header-title {
+      font-size: 14.5pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .header-sub {
+      font-size: 9.1pt;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+    .meta-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #059669;
+      border-radius: 6px;
+      padding: 9px 13px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px 14px;
+      font-size: 7.9pt;
+    }
+    .meta-item strong {
+      color: #047857;
+    }
+    h1, h2, h3, h4 {
+      color: #047857;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 11.8pt;
+      border-bottom: 2px solid #059669;
+      padding-bottom: 3px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    h2 {
+      font-size: 9.7pt;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #0f172a;
+    }
+    h3 {
+      font-size: 8.8pt;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      color: #047857;
+    }
+    p {
+      margin-bottom: 7px;
+      text-align: justify;
+    }
+    ul, ol {
+      margin-left: 18px;
+      margin-bottom: 8px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px 0;
+      font-size: 7.6pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 7px;
+      text-align: left;
+    }
+    th {
+      background-color: #047857;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 7pt;
+      font-weight: bold;
+    }
+    .badge-success {
+      background-color: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+    .badge-primary {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #7dd3fc;
+    }
+    .badge-warning {
+      background-color: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fcd34d;
+    }
+    .info-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #059669;
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .warning-card {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .step-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 11px;
+      margin-bottom: 8px;
+    }
+    .step-num {
+      display: inline-block;
+      background: #059669;
+      color: #ffffff;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 7.5pt;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    .img-container {
+      text-align: center;
+      margin: 9px 0 13px 0;
+      page-break-inside: avoid;
+    }
+    .img-container img {
+      max-width: 98%;
+      max-height: 250px;
+      height: auto;
+      border-radius: 5px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .caption {
+      font-size: 7.2pt;
+      color: #64748b;
+      margin-top: 4px;
+      font-style: italic;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    code {
+      background-color: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 7.6pt;
+      color: #0f766e;
+    }
+    pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 8px 10px;
+      border-radius: 5px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 7.2pt;
+      overflow-x: auto;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO INSTITUCIONAL -->
+  <div class="header-bar">
+    <div class="header-title">MANUAL DE USUARIO Y GUÍAS DE OPERACIÓN DEL SOFTWARE</div>
+    <div class="header-sub">Guía de Funcionalidades, Estructura de Menús, Ingreso, Consultas y Flujos Operativos</div>
+  </div>
+
+  <!-- METADATOS INSTITUCIONALES SENA -->
+  <div class="meta-box">
+    <div class="meta-item"><strong>Programa:</strong> Análisis y Desarrollo de Software (ADSO)</div>
+    <div class="meta-item"><strong>Ficha SENA:</strong> 3186681</div>
+    <div class="meta-item"><strong>Competencia:</strong> 220501097 - Implementar la solución de software (Modelos de referencia)</div>
+    <div class="meta-item"><strong>Fase de Proyecto:</strong> Fase 4 - Implantación (AP10)</div>
+    <div class="meta-item"><strong>Actividad de Aprendizaje:</strong> GA10-220501097-AA11 (Elaborar el manual de usuario)</div>
+    <div class="meta-item"><strong>Evidencia Oficial:</strong> GA10-220501097-AA11-EV01</div>
+    <div class="meta-item"><strong>Aprendiz:</strong> Karen Yuliana Campo</div>
+    <div class="meta-item"><strong>Instructor Técnico:</strong> Danilo</div>
+    <div class="meta-item"><strong>Centro de Formación:</strong> CTPI Popayán - Regional Cauca</div>
+    <div class="meta-item"><strong>Normativa Base:</strong> Guía DNP, ISO/IEC 25010:2023, Ley 1581 de 2012</div>
+  </div>
+
+  <div class="info-card">
+    <strong>Resumen Ejecutivo:</strong> El presente documento constituye el Manual de Usuario integral del sistema de comercio electrónico y gestión culinaria <em>Pizzería Gourmet Bella Italia Popayán</em>. Diseñado siguiendo con rigor las directrices metodológicas de la <em>Guía para la elaboración de manuales de usuario de los sistemas de información</em> del <strong>Departamento Nacional de Planeación (DNP)</strong> y los principios de usabilidad <strong>ISO/IEC 25010:2023</strong>, proporciona a todos los usuarios (comensales, cajeros, cocineros, domiciliarios y administradores) las pautas detalladas para acceder, navegar, interactuar y ejecutar transacciones en el aplicativo.
+  </div>
+
+  <!-- SECCIÓN 1: INTRODUCCIÓN -->
+  <h1>1. INTRODUCCIÓN</h1>
+  <p>
+    En el marco del ciclo de vida de desarrollo de software y su transición hacia ambientes de producción, la documentación orientada al usuario final es el pilar que garantiza la apropiación tecnológica, la reducción de errores operativos y la satisfacción en la experiencia de servicio. Un sistema de alta complejidad arquitectónica pierde su efectividad si los operadores y clientes carecen de una guía pedagógica, clara y visualmente enriquecida.
+  </p>
+  <p>
+    El Departamento Nacional de Planeación (DNP) de Colombia, a través de su guía técnica para manuales de usuario, establece que la documentación debe estructurarse desde la perspectiva del operador final, evitando jerga técnica abstracta e incorporando flujos de trabajo, rutas de navegación, tablas de perfiles, control de acceso y protocolos para la resolución de excepciones. El presente manual responde rigurosamente a dichos criterios, complementado con las directrices de calidad de uso de la norma internacional <strong>ISO/IEC 25010:2023</strong> y los deberes de protección de datos personales consagrados en la <strong>Ley Estatutaria 1581 de 2012</strong>.
+  </p>
+
+  <!-- SECCIÓN 2: DESCRIPCIÓN DEL SISTEMA -->
+  <h1>2. DESCRIPCIÓN DEL SISTEMA</h1>
+  <h2>2.1 Contexto Organizacional y Modelo de Negocio</h2>
+  <p>
+    <strong>Pizzería Gourmet Bella Italia Popayán</strong> es un establecimiento gastronómico líder en el Centro Histórico de Popayán, Cauca. Su propuesta de valor combina la tradición italiana de pizzas artesanales con fermentación lenta de 48 horas en horno de leña a 400°C con ingredientes autóctonos caucanos de alta cocina (pipián tradicional, quesos madurados de Silvia, trucha ahumada y café de altura).
+  </p>
+  <h2>2.2 Finalidad y Alcance del Software</h2>
+  <p>
+    La solución es una plataforma web integral omnicanal diseñada bajo una arquitectura modular de microservicios contenerizados en Docker. Articula cuatro subsistemas interconectados en tiempo real:
+  </p>
+  <ul>
+    <li><strong>Portal Web de Comercio Electrónico:</strong> Permite a los comensales explorar la carta interactiva, verificar alérgenos, personalizar recetas y ordenar en línea.</li>
+    <li><strong>Monitor de Pantalla de Cocina (KDS - Kitchen Display System):</strong> Sustituye comandas en papel por una interfaz reactiva que cronometra y prioriza órdenes en el horno de leña.</li>
+    <li><strong>Terminal de Punto de Venta (POS) y Facturación DIAN:</strong> Facilita al cajero el control de mesas de salón, cobros mixtos y generación de factura electrónica con CUFE y QR fiscal.</li>
+    <li><strong>Módulo Móvil de Logística y Domicilios:</strong> Permite a los motorizados geolocalizar clientes en Popayán, registrar entregas y capturar firmas digitales.</li>
+  </ul>
+
+  <!-- SECCIÓN 3: REQUERIMIENTOS DE ACCESO PARA USUARIOS -->
+  <h1>3. REQUERIMIENTOS DE ACCESO PARA USUARIOS</h1>
+  <p>Para asegurar una navegación fluida, los operadores y clientes deben cumplir con los siguientes requerimientos de entorno:</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Componente</th>
+        <th style="width: 35%;">Requisito Mínimo</th>
+        <th style="width: 40%;">Requisito Recomendado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dispositivos</strong></td>
+        <td>Smartphone Android 9+ / PC 4GB RAM</td>
+        <td>Tableta iPad/Android 10"+ o Monitor POS táctil Full HD</td>
+      </tr>
+      <tr>
+        <td><strong>Navegador Web</strong></td>
+        <td>Chrome 110+, Firefox 110+, Edge 110+</td>
+        <td>Google Chrome 120+ con aceleración de hardware</td>
+      </tr>
+      <tr>
+        <td><strong>Conectividad</strong></td>
+        <td>Banda ancha 5 Mbps (Clientes móviles)</td>
+        <td>Fibra óptica 20 Mbps simétrica (Caja y Cocina)</td>
+      </tr>
+      <tr>
+        <td><strong>Resolución Gráfica</strong></td>
+        <td>360 x 640 píxeles (Móviles)</td>
+        <td>1920 x 1080 píxeles Full HD (KDS Cocina)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 4: INSTRUCCIONES DE INGRESO Y CONTROL DE ACCESO -->
+  <h1>4. INSTRUCCIONES DE INGRESO Y CONTROL DE ACCESO</h1>
+  <p>
+    El acceso a la plataforma está protegido mediante autenticación criptográfica con tokens JSON Web Token (JWT - RFC 7519) y un modelo de <strong>Control de Acceso Basado en Roles (RBAC)</strong>. Las contraseñas se almacenan con cifrado unidireccional Bcrypt (coste 12).
+  </p>
+  <h2>4.1 Procedimiento de Ingreso (Inicio de Sesión)</h2>
+  <div class="step-card">
+    <span class="step-num">1</span> <strong>Acceso a la URL Oficial:</strong> Ingrese a <code>http://localhost:8100/</code> desde su navegador web.
+  </div>
+  <div class="step-card">
+    <span class="step-num">2</span> <strong>Selección de Login:</strong> Haga clic en el botón superior derecho <em>"Iniciar Sesión"</em>.
+  </div>
+  <div class="step-card">
+    <span class="step-num">3</span> <strong>Ingreso de Credenciales:</strong> Digite su correo electrónico registrado y contraseña confidencial.
+  </div>
+  <div class="step-card">
+    <span class="step-num">4</span> <strong>Autenticación y Redirección:</strong> Pulse <em>"Acceder al Sistema"</em>. El sistema validará su perfil y lo redirigirá a su área de trabajo.
+  </div>
+
+  <h2>4.2 Matriz de Roles y Credenciales de Demostración</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rol de Usuario</th>
+        <th>Correo Electrónico Demo</th>
+        <th>Contraseña Demo</th>
+        <th>Vista y Menú Inicial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cliente Comensal</strong></td>
+        <td><code>santiago.perez@gmail.com</code></td>
+        <td><code>ClaveComensal2026*</code></td>
+        <td>Carta Digital Web & Carrito</td>
+      </tr>
+      <tr>
+        <td><strong>Cajero / Facturador</strong></td>
+        <td><code>cajero@pizzeriabellaitalia.com</code></td>
+        <td><code>Cajero2026*Secure</code></td>
+        <td>Terminal POS & Facturación DIAN</td>
+      </tr>
+      <tr>
+        <td><strong>Jefe de Cocina</strong></td>
+        <td><code>cocina@pizzeriabellaitalia.com</code></td>
+        <td><code>Cocina2026*Chef</code></td>
+        <td>Monitor KDS Horno de Leña</td>
+      </tr>
+      <tr>
+        <td><strong>Domiciliario</strong></td>
+        <td><code>domicilios@pizzeriabellaitalia.com</code></td>
+        <td><code>Domicilio2026*Go</code></td>
+        <td>Despachos & Rutas Popayán</td>
+      </tr>
+      <tr>
+        <td><strong>Administrador</strong></td>
+        <td><code>admin@pizzeriabellaitalia.com</code></td>
+        <td><code>Admin2026*Pizzeria</code></td>
+        <td>Dashboard Gerencial & Auditoría</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 5: ESTRUCTURA Y NAVEGACIÓN DE COMPONENTES, MENÚS Y SUBMENÚS -->
+  <h1>5. ESTRUCTURA Y NAVEGACIÓN DE COMPONENTES, MENÚS Y SUBMENÚS</h1>
+  <p>
+    El sistema cuenta con una barra de navegación superior fija y un menú lateral adaptativo que se personaliza según el rol del usuario conectado:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Menú Principal</th>
+        <th style="width: 35%;">Submenús y Módulos</th>
+        <th style="width: 40%;">Funcionalidad Operativa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Carta Digital</strong></td>
+        <td>• Pizzas Clásicas<br>• Especialidades Gourmet<br>• Calzones y Focaccias<br>• Bebidas y Postres</td>
+        <td>Exploración visual del catálogo gastronómico, verificación de ingredientes, alérgenos y precios en COP.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Carrito y Caja</strong></td>
+        <td>• Resumen de Compra<br>• Desglose IVA 19%<br>• Checkout Domicilios<br>• POS Salón y Mesas</td>
+        <td>Armado de pedidos, liquidación de consumos, selección de pasarelas de pago o efectivo, y despacho.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Cocina KDS</strong></td>
+        <td>• Monitor de Comandas<br>• Cronómetro de Horno<br>• Alerta de Tiempos Límite</td>
+        <td>Visualización de tickets en cola, cambio de estados (Preparando / Listo) y control de horneado a 400°C.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Logística Reparto</strong></td>
+        <td>• Pedidos Asignados<br>• Mapa de Rutas Popayán<br>• Firma Digital Móvil</td>
+        <td>Trazabilidad de entrega en sectores de Popayán, confirmación de recibido y cierre del pedido.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Administración</strong></td>
+        <td>• Gestión de Platos y Precios<br>• Usuarios y Roles RBAC<br>• Facturación Electrónica DIAN</td>
+        <td>Mantenimiento de la carta, control de usuarios, métricas financieras y auditoría de eventos.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 6: GUÍA SOBRE CÓMO USAR LAS FUNCIONALIDADES DEL SISTEMA POR ROL -->
+  <h1>6. GUÍA SOBRE CÓMO USAR LAS FUNCIONALIDADES DEL SISTEMA POR ROL</h1>
+  <h2>6.1 Guía para el Cliente Comensal</h2>
+  <p>
+    El comensal dispone de una experiencia de compra intuitiva de 4 pasos: (1) Explora la carta interactiva, (2) Personaliza la pizza indicando términos de masa o exclusión de ingredientes, (3) Agrega los productos al carrito revisando el total con IVA, y (4) Completa el checkout registrando su dirección en Popayán y seleccionando pago en línea (Wompi) o contra entrega.
+  </p>
+  <h2>6.2 Guía para el Cajero / Facturador (POS Salón)</h2>
+  <p>
+    El cajero realiza la apertura de turno con base en efectivo, asigna comandas a mesas de salón, divide cuentas entre múltiples comensales, cobra mediante datáfono o efectivo, y genera la Factura Electrónica de Venta con transmisión directa a la DIAN, entregando el recibo con código QR al comensal.
+  </p>
+  <h2>6.3 Guía para el Jefe de Cocina (Monitor KDS)</h2>
+  <p>
+    El chef observa las comandas clasificadas por colores (Verde = Nueva, Amarillo = En Horno, Azul = Lista para Despachar). Al hacer clic en un ticket, activa el temporizador regresivo de 15 minutos adaptado a la cocción en leña. Al finalizar, presiona <em>"Listo para Despacho"</em> para alertar al camarero o repartidor.
+  </p>
+  <h2>6.4 Guía para el Domiciliario</h2>
+  <p>
+    El motorizado acepta órdenes preparadas, visualiza la dirección en el mapa del casco urbano de Popayán, entrega el paquete térmico, cobra contra entrega si aplica, y solicita la firma táctil del cliente en la aplicación.
+  </p>
+  <h2>6.5 Guía para el Administrador General</h2>
+  <p>
+    El administrador accede al dashboard de inteligencia de negocios: consulta ingresos del día, platos estrella, gestiona inventario de insumos (pipián, quesos de Silvia), otorga permisos a nuevos empleados y descarga reportes tributarios.
+  </p>
+
+  <!-- SECCIÓN 7: INSTRUCCIONES PARA INGRESO Y CONSULTA DE INFORMACIÓN -->
+  <h1>7. INSTRUCCIONES PARA INGRESO Y CONSULTA DE INFORMACIÓN</h1>
+  <h2>7.1 Métodos de Búsqueda y Filtrado en la Carta</h2>
+  <p>
+    La plataforma implementa un motor de búsqueda en tiempo real que filtra por texto libre (palabras clave como <em>"pipián"</em>, <em>"artesanal"</em> o <em>"vegetariana"</em>) en menos de 100 ms, además de filtros instantáneos por categorías gastronómicas.
+  </p>
+  <h2>7.2 Consulta de Facturación Electrónica DIAN</h2>
+  <p>
+    Para consultar comprobantes fiscales, ingrese a la pestaña <strong>Facturación DIAN</strong>. Digite el número consecutivo (ej. <code>FE-POPY-105</code>) o la cédula/NIT del adquiriente. El sistema muestra el estado de aprobación ante el servidor de la DIAN, el identificador único CUFE y permite la descarga del comprobante en PDF oficial.
+  </p>
+
+  <!-- SECCIÓN 8: FLUJOS DE TRABAJO OPERATIVOS (WORKFLOWS) -->
+  <h1>8. FLUJOS DE TRABAJO OPERATIVOS (WORKFLOWS)</h1>
+  <p>
+    A continuación se ilustra la interacción secuencial y coordinada entre los cuatro roles operativos del restaurante: Comensal, Cocina, Caja y Domicilios:
+  </p>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/diagramas/diagrama_flujo_trabajo_usuario_pizzeria.png" alt="Diagrama de Flujos de Trabajo de la Pizzería">
+    <div class="caption">Figura 1: Diagrama de Carriles de Flujo de Trabajo Operativo (Workflows) - Pizzería Bella Italia Popayán.</div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 18%;">Estado del Pedido</th>
+        <th style="width: 22%;">Actor Responsable</th>
+        <th style="width: 42%;">Acción Operativa y Regla de Negocio</th>
+        <th style="width: 18%;">Tiempo Objetivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-primary">RECIBIDO</span></td>
+        <td>Comensal / Cajero</td>
+        <td>Confirmación del carrito web o toma de orden en mesa. Notificación sonora automática al KDS.</td>
+        <td>Inmediato (&lt; 1 min)</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-warning">EN_PREPARACION</span></td>
+        <td>Jefe de Cocina</td>
+        <td>El chef pulsa "Iniciar". Estirado de masa fermentada 48h, montaje de ingredientes y horneado a 400°C.</td>
+        <td>12 a 15 min</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-success">LISTO_DESPACHO</span></td>
+        <td>Jefe de Cocina</td>
+        <td>Embalaje en caja térmica y alerta al camarero (salón) o motorizado (domicilio).</td>
+        <td>&lt; 2 min</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-primary">EN_CAMINO</span></td>
+        <td>Domiciliario</td>
+        <td>El repartidor acepta la orden y se desplaza hacia el domicilio en Popayán.</td>
+        <td>15 a 25 min</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-success">ENTREGADO</span></td>
+        <td>Domiciliario / Cliente</td>
+        <td>Entrega del producto, recepción de pago y captura de firma digital en pantalla. Fin del ciclo.</td>
+        <td>Cierre de ciclo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECCIÓN 9: PREGUNTAS FRECUENTES Y SOLUCIÓN DE PROBLEMAS (FAQ) -->
+  <h1>9. PREGUNTAS FRECUENTES Y SOLUCIÓN DE PROBLEMAS (FAQ)</h1>
+  <div class="warning-card">
+    <strong>Pregunta 1: ¿Qué hacer si el monitor KDS de cocina no emite el sonido de alerta ante nuevos pedidos?</strong><br>
+    <em>Causa y Solución:</em> Las políticas de seguridad de navegadores modernos requieren interacción del usuario para reproducir audio automático. Al encender la estación en la mañana, el chef debe hacer un clic en cualquier parte de la pantalla y verificar que los permisos del sitio permitan audio en <code>http://localhost:8100/</code>.
+  </div>
+  <div class="warning-card">
+    <strong>Pregunta 2: ¿Cómo emitir factura si el cliente no suministra número de identificación fiscal ni correo?</strong><br>
+    <em>Causa y Solución:</em> Siguiendo la Resolución DIAN 000165 de 2023, el cajero debe seleccionar la opción <em>"Consumidor Final"</em>; el sistema asignará automáticamente el NIT genérico <code>222222222222</code> y el correo fiscal de contingencia de la empresa.
+  </div>
+  <div class="warning-card">
+    <strong>Pregunta 3: ¿Qué procedimiento se sigue si se suspende temporalmente el suministro de gas o leña en cocina?</strong><br>
+    <em>Causa y Solución:</em> El Administrador ingresa al menú <em>Administración -> Catálogo</em> y pulsa el botón <em>"Pausar Pedidos Web"</em>. La carta digital notificará a los comensales sobre una pausa momentánea de 20 minutos por mantenimiento de horno.
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 10: EVIDENCIAS GRÁFICAS DE IMPLEMENTACIÓN Y EJECUCIÓN -->
+  <h1>10. EVIDENCIAS GRÁFICAS DE IMPLEMENTACIÓN Y EJECUCIÓN</h1>
+  <p>
+    A continuación se presentan las capturas de pantalla reales capturadas en la estación de trabajo Linux del aprendiz mediante la herramienta nativa <strong>Spectacle</strong> sobre el servidor gráfico <strong>KDE X11 (`DISPLAY=:0`)</strong>, ejecutando las instrucciones en la terminal <strong>Konsole</strong> y visualizando la plataforma en <strong>Google Chrome</strong> (usuario <code>danilo</code>, clave <code>choco</code>), minimizando oportunamente las ventanas de Visual Studio Code:
+  </p>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_01_simulacion_flujo_usuario_konsole.png" alt="Paso 1: Simulación del Flujo de Usuario en Konsole">
+    <div class="caption">Figura 2: Paso 1 - Simulación automatizada del flujo operativo end-to-end (comensal, cocina KDS, facturación DIAN y despacho) en terminal Konsole.</div>
+  </div>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_02_despliegue_ambiente_usuario_docker_konsole.png" alt="Paso 2: Despliegue Docker del Ambiente de Usuario">
+    <div class="caption">Figura 3: Paso 2 - Despliegue y verificación en Konsole del ambiente aislado Docker Compose en puertos 8100 (Web) y 3315 (MySQL 8.0).</div>
+  </div>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_03_verificacion_salud_portal_konsole.png" alt="Paso 3: Verificación de Salud del Portal Web">
+    <div class="caption">Figura 4: Paso 3 - Ejecución del script de validación de salud (HTTP 200, lectura de roles JSON y ping a base de datos) en Konsole.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_04_chrome_manual_usuario_portada_roles.png" alt="Paso 4: Portal del Manual de Usuario - Portada y Roles en Chrome">
+    <div class="caption">Figura 5: Paso 4 - Portal Web interactivo del Manual de Usuario en Google Chrome: portada oficial, catálogo de roles y requisitos de acceso.</div>
+  </div>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_05_chrome_manual_usuario_flujos_operativos.png" alt="Paso 5: Flujos de Trabajo Operativos en Chrome">
+    <div class="caption">Figura 6: Paso 5 - Visualización en Google Chrome del diagrama de flujos de trabajo por carriles y detalle de etapas de atención de pedidos.</div>
+  </div>
+
+  <div class="img-container">
+    <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-051_GA10-220501097-AA11-EV01_Manual_Usuario_Software/capturas/paso_06_chrome_manual_usuario_guias_paso_a_paso.png" alt="Paso 6: Guías Paso a Paso de Ingreso y Soporte en Chrome">
+    <div class="caption">Figura 7: Paso 6 - Interfaz interactiva de guías paso a paso para inicio de sesión, consulta de información y panel de preguntas frecuentes.</div>
+  </div>
+
+  <!-- SECCIÓN 11: CONCLUSIONES Y RECOMENDACIONES -->
+  <h1>11. CONCLUSIONES Y RECOMENDACIONES</h1>
+  <div class="info-card">
+    <ol>
+      <li><strong>Apropiación Metodológica de la Guía DNP:</strong> La estructuración de este manual bajo las pautas del Departamento Nacional de Planeación demuestra cómo una redacción orientada a tareas y roles acelera la curva de aprendizaje de los colaboradores operativos.</li>
+      <li><strong>Optimización de Tiempos de Servicio:</strong> Los workflows estandarizados garantizan que el ciclo completo de atención (desde el clic del comensal hasta la entrega al domiciliario) se consolide en un promedio inferior a 35 minutos.</li>
+      <li><strong>Garantía de Cumplimiento Normativo:</strong> Las directrices de control de acceso RBAC, autenticación JWT y manejo de contraseñas Bcrypt aseguran la debida custodia de la información según la Ley Estatutaria 1581 de 2012.</li>
+      <li><strong>Escalabilidad del Conocimiento Organizacional:</strong> Disponer de un portal web interactivo (puerto 8100) alojado junto a la plataforma garantiza que las capacitaciones de personal nuevo sean autónomas, repetibles y verificables.</li>
+    </ol>
+  </div>
+
+  <!-- SECCIÓN 12: REFERENCIAS BIBLIOGRÁFICAS -->
+  <h1>12. REFERENCIAS BIBLIOGRÁFICAS (NORMAS APA 7.ª EDICIÓN)</h1>
+  <ul style="font-size: 7.7pt; line-height: 1.45;">
+    <li>Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012: Por la cual se dictan disposiciones generales para la protección de datos personales</em>. Diario Oficial No. 48.587.</li>
+    <li>Departamento Nacional de Planeación (DNP). (2020). <em>Guía para la elaboración de manuales de usuario de los sistemas de información</em>. Dirección de Tecnologías de Información y las Comunicaciones, Bogotá D.C., Colombia.</li>
+    <li>Dirección de Impuestos y Aduanas Nacionales (DIAN). (2023). <em>Anexo Técnico de Factura Electrónica de Venta - Versión 1.9</em>. DIAN Colombia.</li>
+    <li>International Organization for Standardization. (2023). <em>Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model</em> (ISO/IEC Standard No. 25010:2023). Ginebra, Suiza: ISO.</li>
+    <li>Nielsen, J. (2020). <em>10 Usability Heuristics for User Interface Design</em>. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/</li>
+    <li>Servicio Nacional de Aprendizaje (SENA). (2024). <em>Componente formativo: Actividades de documentación y entrega de software en procesos de implantación</em>. Dirección de Formación Profesional, Colombia.</li>
+  </ul>
+
+</body>
+</html>

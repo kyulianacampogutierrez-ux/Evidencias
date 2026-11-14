@@ -1,0 +1,44 @@
+{
+  "sistema": "Pizzería Gourmet Bella Italia Popayán",
+  "flujos_de_trabajo": [
+    {
+      "id_flujo": "FLUJO-01",
+      "nombre": "Flujo de Compra Online Comensal (Pedido y Pago Web)",
+      "actor_principal": "Cliente Comensal",
+      "duracion_estimada": "3 a 5 minutos",
+      "pasos": [
+        {"paso": 1, "accion": "Ingreso a la plataforma web", "descripcion": "El comensal entra a http://localhost:8100/ desde su navegador web o smartphone."},
+        {"paso": 2, "accion": "Exploración de la carta gastronómica", "descripcion": "Navega entre categorías (Pizzas Clásicas, Gourmet Popayán, Bebidas) y consulta precios e ingredientes."},
+        {"paso": 3, "accion": "Configuración del plato y carrito", "descripcion": "Selecciona tamaño, masa artesanal, agrega notas al chef y presiona 'Añadir al Carrito'."},
+        {"paso": 4, "accion": "Checkout y datos de entrega", "descripcion": "Digita nombre, teléfono celular y dirección exacta en la ciudad de Popayán."},
+        {"paso": 5, "accion": "Liquidación y confirmación", "descripcion": "Selecciona pasarela de pagos Wompi/Bancolombia o Pago Contra Entrega y presiona 'Confirmar Pedido'."},
+        {"paso": 6, "accion": "Seguimiento en vivo", "descripcion": "Visualiza el código de orden generado (ORD-YYYYMM-XXX) y el estado en tiempo real."}
+      ]
+    },
+    {
+      "id_flujo": "FLUJO-02",
+      "nombre": "Flujo de Atención en Cocina Digital (KDS Horno de Leña)",
+      "actor_principal": "Jefe de Cocina",
+      "duracion_estimada": "12 a 18 minutos por orden",
+      "pasos": [
+        {"paso": 1, "accion": "Recepción de comanda digital", "descripcion": "La comanda aparece automáticamente en pantalla KDS con timbre sonoro y color verde."},
+        {"paso": 2, "accion": "Inicio de preparación", "descripcion": "El chef pulsa 'Iniciar Preparación'. El cronómetro inicia y el estado conmuta a 'EN_PREPARACION'."},
+        {"paso": 3, "accion": "Armado de masa y horneado", "descripcion": "Se prepara la receta según ingredientes y se ingresa la pizza al horno de leña a 400°C."},
+        {"paso": 4, "accion": "Notificación de despacho", "descripcion": "Al cumplir el tiempo de cocción, el chef presiona 'Listo para Despacho'. La comanda pasa a mesero o domiciliario."}
+      ]
+    },
+    {
+      "id_flujo": "FLUJO-03",
+      "nombre": "Flujo de Facturación Electrónica DIAN y Arqueo (Caja)",
+      "actor_principal": "Cajero / Facturador",
+      "duracion_estimada": "1 a 2 minutos por factura",
+      "pasos": [
+        {"paso": 1, "accion": "Apertura de turno de caja", "descripcion": "Ingreso con credenciales de cajero e informe de saldo inicial en gaveta."},
+        {"paso": 2, "accion": "Selección de orden o mesa", "descripcion": "Localiza el número de mesa o código de orden para liquidación."},
+        {"paso": 3, "accion": "Captura de datos tributarios", "descripcion": "Ingresa NIT/Cédula y nombre del cliente para facturación fiscal."},
+        {"paso": 4, "accion": "Emisión electrónica y CUFE", "descripcion": "Presiona 'Facturar DIAN'. El sistema genera el CUFE, QR e imprime ticket fiscal."},
+        {"paso": 5, "accion": "Arqueo Z al cierre", "descripcion": "Al finalizar turno genera balance consolidado de ventas por medio de pago."}
+      ]
+    }
+  ]
+}

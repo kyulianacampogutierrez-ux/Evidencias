@@ -1,0 +1,100 @@
+{
+  "sistema": "Pizzería Gourmet Bella Italia Popayán",
+  "version": "1.0.0",
+  "estandar_dnp": "Guía para la elaboración de manuales de usuario de los sistemas de información (DNP)",
+  "roles_usuarios": [
+    {
+      "id_rol": "ROL-01",
+      "nombre": "Cliente Comensal",
+      "descripcion": "Usuario final que explora la carta, arma pedidos y realiza compras online o en mesa.",
+      "credenciales_demo": "santiago.perez@gmail.com / ClaveComensal2026*",
+      "pantalla_inicio": "Inicio / Carta Digital Web",
+      "modulos_acceso": [
+        "Catálogo de Pizzas y Bebidas",
+        "Personalización de Ingredientes",
+        "Carrito de Compras y Checkout",
+        "Pasarela de Pagos (Wompi / Efectivo)",
+        "Seguimiento de Orden en Tiempo Real"
+      ],
+      "tareas_frecuentes": [
+        "Filtrar carta por categoría (Gourmet, Tradicional, Bebidas)",
+        "Agregar pizzas al carrito con notas al chef (ej. sin cebolla)",
+        "Ingresar dirección de despacho en Popayán y teléfono",
+        "Consultar el estado de preparación (En cocina -> En reparto)"
+      ]
+    },
+    {
+      "id_rol": "ROL-02",
+      "nombre": "Cajero / Facturador",
+      "descripcion": "Operador de salón encargado de cobros presenciales, emisión de facturas DIAN y cierre de caja.",
+      "credenciales_demo": "cajero@pizzeriabellaitalia.com / Cajero2026*Secure",
+      "pantalla_inicio": "Panel POS de Caja y Facturación",
+      "modulos_acceso": [
+        "Terminal Punto de Venta (POS Salón)",
+        "Facturación Electrónica DIAN (CUFE)",
+        "Gestión de Propinas y Métodos de Pago",
+        "Arqueo y Cierre Diario de Turno"
+      ],
+      "tareas_frecuentes": [
+        "Abrir turno de caja con base inicial en efectivo",
+        "Seleccionar mesa y cargar comanda de salón",
+        "Emitir factura electrónica con CUFE y QR",
+        "Generar reporte de cuadre Z al finalizar turno"
+      ]
+    },
+    {
+      "id_rol": "ROL-03",
+      "nombre": "Jefe de Cocina",
+      "descripcion": "Responsable de la preparación culinaria y control de tiempos en el horno de leña.",
+      "credenciales_demo": "cocina@pizzeriabellaitalia.com / Cocina2026*Chef",
+      "pantalla_inicio": "Pantalla de Comandas KDS (Kitchen Display System)",
+      "modulos_acceso": [
+        "Monitor KDS de Pedidos en Vivo",
+        "Cronómetro de Horno y Alertas Visuales",
+        "Gestión de Disponibilidad de Ingredientes",
+        "Histórico de Despachos del Turno"
+      ],
+      "tareas_frecuentes": [
+        "Aceptar orden entrante y cambiar estado a 'En Preparación'",
+        "Verificar ingredientes especiales o advertencias de alérgenos",
+        "Notificar orden lista para entrega a salón o domiciliario"
+      ]
+    },
+    {
+      "id_rol": "ROL-04",
+      "nombre": "Domiciliario",
+      "descripcion": "Repartidor encargado del transporte seguro de órdenes a direcciones de Popayán.",
+      "credenciales_demo": "domicilios@pizzeriabellaitalia.com / Domicilio2026*Go",
+      "pantalla_inicio": "Módulo Móvil de Entregas y Rutas",
+      "modulos_acceso": [
+        "Lista de Pedidos Asignados para Reparto",
+        "Mapa de Rutas y Geolocalización en Popayán",
+        "Confirmación de Cobro Contra Entrega",
+        "Firma Digital del Cliente en Pantalla"
+      ],
+      "tareas_frecuentes": [
+        "Tomar orden empaquetada y cambiar estado a 'En Camino'",
+        "Navegar hacia la dirección del cliente en Popayán",
+        "Cobrar pedido en efectivo/datáfono y registrar 'Entregado'"
+      ]
+    },
+    {
+      "id_rol": "ROL-05",
+      "nombre": "Administrador General",
+      "descripcion": "Gerente del restaurante con supervisión integral de ventas, inventario y seguridad.",
+      "credenciales_demo": "admin@pizzeriabellaitalia.com / Admin2026*Pizzeria",
+      "pantalla_inicio": "Dashboard Ejecutivo de KPIs y Auditoría",
+      "modulos_acceso": [
+        "Métricas Financieras y Ventas Consolidadas",
+        "Gestión de Usuarios y Roles RBAC",
+        "Catálogo de Platos, Recetas y Precios",
+        "Bitácora de Auditoría Forense y Logs"
+      ],
+      "tareas_frecuentes": [
+        "Dar de alta a nuevos empleados asignando roles",
+        "Actualizar precios de pizzas o crear promociones del día",
+        "Exportar reportes de facturación para la DIAN en Excel/PDF"
+      ]
+    }
+  ]
+}
