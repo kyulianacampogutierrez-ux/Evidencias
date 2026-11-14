@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 960" width="1400" height="960">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <linearGradient id="colombiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="sudafricaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="senaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39a900"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="960" fill="url(#bgGrad)"/>
+
+  <!-- Top Header Banner -->
+  <rect x="30" y="25" width="1340" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="30" y="25" width="1340" height="6" rx="3" fill="url(#senaGrad)"/>
+
+  <!-- SENA Badge -->
+  <rect x="50" y="42" width="130" height="32" rx="6" fill="#39a900"/>
+  <text x="115" y="63" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SENA | ADSO</text>
+  
+  <text x="50" y="100" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Ficha 3186681 • CTPI Popayán - Cauca</text>
+  <text x="50" y="118" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Aprendiz: Karen Yuliana Campo</text>
+
+  <!-- Title & Subtitle -->
+  <text x="700" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">
+    CUADRO COMPARATIVO: PROCESOS DE PAZ Y JUSTICIA TRANSICIONAL
+  </text>
+  <text x="700" y="92" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">
+    Evidencia GA9-240201526-AA4-EV01: Solución del Caso • Competencia 240201526 (Enrique Low Murtra - Cultura de Paz)
+  </text>
+  <text x="700" y="116" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#39a900" font-weight="bold" text-anchor="middle">
+    Caso 1: Colombia (Acuerdo de Paz 2016 - SIVJRNR) vs. Caso 2: Sudáfrica (Transición Democrática 1994 - TRC &amp; Ubuntu)
+  </text>
+
+  <!-- Main Comparison Columns Headers -->
+  <!-- Column Left: Colombia -->
+  <rect x="30" y="150" width="655" height="48" rx="8" fill="url(#colombiaGrad)" stroke="#3b82f6" stroke-width="2"/>
+  <text x="50" y="180" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#60a5fa">🇨🇴 COLOMBIA: Acuerdo de Paz (2016)</text>
+  <text x="665" y="180" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#93c5fd" text-anchor="end">Enfoque: Justicia Restaurativa y Centralidad de Víctimas</text>
+
+  <!-- Column Right: Sudáfrica -->
+  <rect x="715" y="150" width="655" height="48" rx="8" fill="url(#sudafricaGrad)" stroke="#10b981" stroke-width="2"/>
+  <text x="735" y="180" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#34d399">🇿🇦 SUDÁFRICA: Transición Democrática (1994)</text>
+  <text x="1350" y="180" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#a7f3d0" text-anchor="end">Enfoque: Filosofía Ubuntu y Verdad para la Reconciliación</text>
+
+  <!-- ==================== DIMENSIÓN 1: QUIÉNES INTERVINIERON ==================== -->
+  <g transform="translate(30, 210)">
+    <!-- Dimension Badge -->
+    <rect x="0" y="0" width="1340" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="670" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      1. ¿QUIÉNES INTERVINIERON? (Actores Directos, Mediadores y Acompañamiento Social)
+    </text>
+
+    <!-- Colombia Card -->
+    <rect x="0" y="32" width="655" height="105" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="15" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Actores Gubernamentales:</text>
+    <text x="160" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Gobierno de Colombia (Pdte. Juan Manuel Santos, equipo negociador).</text>
+    <text x="15" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Grupo Insurgente:</text>
+    <text x="125" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">FARC-EP (Secretariado General: Rodrigo Londoño "Timochenko", Iván Márquez).</text>
+    <text x="15" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Mediadores y Garantes:</text>
+    <text x="155" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Cuba y Noruega (garantes); Venezuela y Chile (acompañantes); Misión ONU.</text>
+    <text x="15" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Sociedad Civil:</text>
+    <text x="105" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Delegaciones directas de víctimas del conflicto, mesas de género y étnicas.</text>
+    <text x="15" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Organismos Creados:</text>
+    <text x="145" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">JEP (Jurisdicción Especial), CEV (Comisión Verdad) y UBPD (Búsqueda).</text>
+
+    <!-- Sudáfrica Card -->
+    <rect x="685" y="32" width="655" height="105" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="700" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Régimen Estatal Blanco:</text>
+    <text x="840" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Partido Nacional de Sudáfrica (Presidente Frederik Willem de Klerk).</text>
+    <text x="700" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Movimiento de Liberación:</text>
+    <text x="860" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Congreso Nacional Africano - ANC (Nelson Mandela, Cyril Ramaphosa).</text>
+    <text x="700" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Otros Actores Internos:</text>
+    <text x="835" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Partido Inkatha de la Libertad (IFP - Mangosuthu Buthelezi), sindicatos (COSATU).</text>
+    <text x="700" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Liderazgo Moral / Religioso:</text>
+    <text x="875" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Arzobispo Desmond Tutu, Consejo de Iglesias de Sudáfrica (SACC).</text>
+    <text x="700" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Comunidad Internacional:</text>
+    <text x="850" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">ONU, Commonwealth, movimiento global anti-Apartheid y boicots económicos.</text>
+  </g>
+
+  <!-- ==================== DIMENSIÓN 2: MANERA DE ACTUAR Y GESTIONAR ==================== -->
+  <g transform="translate(30, 360)">
+    <!-- Dimension Badge -->
+    <rect x="0" y="0" width="1340" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="670" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      2. ¿CUÁL FUE SU MANERA DE ACTUAR Y DE GESTIONAR EL CONFLICTO? (Negociación, Diálogo y Métodos)
+    </text>
+
+    <!-- Colombia Card -->
+    <rect x="0" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="15" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Agenda Estructurada de 6 Puntos:</text>
+    <text x="210" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Negociación en el exterior (La Habana) con principio "nada está acordado hasta que todo esté acordado".</text>
+    <text x="15" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• De la Guerra al Diálogo:</text>
+    <text x="155" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Transición de operaciones militares de alta intensidad a cese al fuego bilateral y desarme.</text>
+    <text x="15" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Centralidad de Víctimas:</text>
+    <text x="155" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">5 delegaciones de víctimas (60 personas) viajaron a debatir directamente con la mesa.</text>
+    <text x="15" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Ajuste Institucional (Plebiscite):</text>
+    <text x="205" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Tras el 'No' en plebiscito 2016, renegociación e incorporación de 500+ propuestas al texto final.</text>
+
+    <!-- Sudáfrica Card -->
+    <rect x="685" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="700" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Contactos Secretos Iniciales:</text>
+    <text x="870" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Diálogos entre el ministro Coetsee y Mandela en prisión (1985-1990) para crear confianza.</text>
+    <text x="700" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Mecanismo CODESA (1991-1993):</text>
+    <text x="895" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Convención para una Sudáfrica Democrática: negociación multipartidista de transición.</text>
+    <text x="700" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Renuncia a Venganza Colectiva:</text>
+    <text x="890" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Liderazgo pedagógico de Mandela para evitar la guerra civil interétnica e inter-racial.</text>
+    <text x="700" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Audiencias Públicas Televisadas:</text>
+    <text x="905" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">La TRC transmitió testimonios de víctimas y victimarios a toda la nación en vivo.</text>
+  </g>
+
+  <!-- ==================== DIMENSIÓN 3: INTENCIONES E INTERESES ==================== -->
+  <g transform="translate(30, 500)">
+    <!-- Dimension Badge -->
+    <rect x="0" y="0" width="1340" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="670" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      3. ¿CUÁLES ERAN SUS INTENCIONES E INTERESES? (Demandas Políticas, Seguridad y Garantías)
+    </text>
+
+    <!-- Colombia Card -->
+    <rect x="0" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="15" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Interés del Estado:</text>
+    <text x="125" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Terminar el conflicto armado de 50 años, atraer inversión, desmovilizar ~13.000 combatientes.</text>
+    <text x="15" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Interés de FARC-EP:</text>
+    <text x="140" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Participación política legal garantizada (curules), reforma rural integral y seguridad jurídica.</text>
+    <text x="15" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Interés de Víctimas:</text>
+    <text x="135" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Conocer la verdad del paradero de seres queridos, reparación integral y garantías de no repetición.</text>
+    <text x="15" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Interés Oposición Política:</text>
+    <text x="175" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Cárcel efectiva para comandantes guerrilleros y defensa del modelo económico tradicional.</text>
+
+    <!-- Sudáfrica Card -->
+    <rect x="685" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="700" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Interés del Partido Nacional:</text>
+    <text x="880" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Evitar el colapso económico total, preservar la propiedad privada blanca y amnistía judicial.</text>
+    <text x="700" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Interés del ANC (Mandela):</text>
+    <text x="865" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Fin absoluto de la segregación racial ("un hombre, un voto"), gobierno democrático de mayoría negra.</text>
+    <text x="700" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Interés de la Población Negra:</text>
+    <text x="885" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Dignidad humana, recuperación de derechos civiles, fin del confinamiento territorial (bantustanes).</text>
+    <text x="700" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Interés de las Fuerzas Armadas:</text>
+    <text x="895" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Inmunidad penal por crímenes de lesa humanidad cometidos durante la represión estatal.</text>
+  </g>
+
+  <!-- ==================== DIMENSIÓN 4: CONDICIONANTES Y CIRCUNSTANCIAS ==================== -->
+  <g transform="translate(30, 640)">
+    <!-- Dimension Badge -->
+    <rect x="0" y="0" width="1340" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="670" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      4. ¿CUÁLES ERAN LOS CONDICIONANTES O CIRCUNSTANCIAS POLÍTICAS, ECONÓMICAS, SOCIALES Y CULTURALES?
+    </text>
+
+    <!-- Colombia Card -->
+    <rect x="0" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="15" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Condicionante Económico:</text>
+    <text x="165" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Narcotráfico y economías ilegales que financiaban el conflicto y la tenencia concentrada de tierra.</text>
+    <text x="15" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Condicionante Político:</text>
+    <text x="145" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Extrema polarización social y partidista; desconfianza histórica tras el genocidio de la UP.</text>
+    <text x="15" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Condicionante Social:</text>
+    <text x="140" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">>9 millones de víctimas registradas (desplazamiento forzado, despojo masivo, secuestro).</text>
+    <text x="15" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Condicionante Regional:</text>
+    <text x="155" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Brecha profunda campo-ciudad (departamentos como el Cauca fuertemente marginados).</text>
+
+    <!-- Sudáfrica Card -->
+    <rect x="685" y="32" width="655" height="98" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="700" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Sanciones Internacionales:</text>
+    <text x="860" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Bloqueo comercial, financiero y deportivo que asfixió la economía del régimen segregacionista.</text>
+    <text x="700" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Fin de la Guerra Fría (1989):</text>
+    <text x="865" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Caída del Muro de Berlín eliminó el pretexto del "enemigo comunista" que usaba Pretoria.</text>
+    <text x="700" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Condicionante Demográfico:</text>
+    <text x="870" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Mayoría negra (75%) sometida violentamente por una minoría blanca (14%) insostenible a largo plazo.</text>
+    <text x="700" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Conciencia Moral Ubuntu:</text>
+    <text x="850" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Raigambre cultural basada en la compasión y la interdependencia comunitaria ("Umuntu ngumuntu").</text>
+  </g>
+
+  <!-- ==================== DIMENSIÓN 5: CÓMO SE RESOLVIÓ ==================== -->
+  <g transform="translate(30, 780)">
+    <!-- Dimension Badge -->
+    <rect x="0" y="0" width="1340" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="670" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+      5. ¿CÓMO SE RESOLVIÓ EL CONFLICTO? (Acuerdo Final, Justicia Transicional y Estado Actual)
+    </text>
+
+    <!-- Colombia Card -->
+    <rect x="0" y="32" width="655" height="118" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="15" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Acuerdo del Teatro Colón (2016):</text>
+    <text x="215" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Firma solemne y refrendación por el Congreso de la República de Colombia.</text>
+    <text x="15" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Desarme y Reincorporación:</text>
+    <text x="180" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Entrega de 8.994 armas a la Misión de Verificación ONU y reincorporación a la vida civil.</text>
+    <text x="15" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Sistema Integral SIVJRNR:</text>
+    <text x="175" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">JEP impone sanciones restaurativas (TOAR) a cambio de verdad exhaustiva; CEV entregó Informe Final.</text>
+    <text x="15" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Retos Persistentes en Territorio:</text>
+    <text x="195" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Asesinato de líderes sociales, disidencias, demoras en Reforma Rural y presencia estatal en el Cauca.</text>
+    <text x="15" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#93c5fd">• Lección Principal:</text>
+    <text x="120" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#38bdf8">La justicia transicional restaurativa es el estándar internacional más garantista con las víctimas.</text>
+
+    <!-- Sudáfrica Card -->
+    <rect x="685" y="32" width="655" height="118" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="700" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Constitución Provisional (1993):</text>
+    <text x="895" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Consagró el sufragio universal y un pacto de Gobierno de Unidad Nacional por 5 años.</text>
+    <text x="700" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Elecciones Democráticas (1994):</text>
+    <text x="890" y="70" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Nelson Mandela elegido presidente; transición pacífica sin represalias raciales masivas.</text>
+    <text x="700" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Comisión TRC (1995-2002):</text>
+    <text x="860" y="88" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Amnistía individual a perpetradores que confesaron públicamente crímenes con motivación política.</text>
+    <text x="700" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Retos Persistentes Post-Apartheid:</text>
+    <text x="910" y="106" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#e2e8f0">Desigualdad socioeconómica estructural no resuelta y escasa reparación material a las víctimas.</text>
+    <text x="700" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">• Lección Principal:</text>
+    <text x="805" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#34d399">El diálogo inclusivo y el valor ético de la verdad evitan la catástrofe social y civil.</text>
+  </g>
+
+  <!-- Bottom Strip Summary -->
+  <rect x="30" y="934" width="1340" height="20" rx="4" fill="#0f172a"/>
+  <text x="700" y="948" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">
+    Centro de Teleinformática y Producción Industrial (CTPI) • SENA Regional Cauca • Programa ADSO • Ficha 3186681 • Karen Yuliana Campo
+  </text>
+</svg>
