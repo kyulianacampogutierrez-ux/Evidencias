@@ -1,0 +1,69 @@
+================================================================================
+REPORTE TÉCNICO DE AUDITORÍA DE HARDWARE - EVIDENCIA GA10-220501097-AA2-EV01
+Plan de Validación de Características Mínimas de Hardware para Aplicación PHP
+Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | CTPI Popayán - Regional Cauca
+================================================================================
+Fecha de Auditoría: 2026-11-14T19:44:13.700Z
+Proyecto Formativo: Pizzería Gourmet Bella Italia Popayán
+Arquitectura: Aplicación Web PHP (250 usuarios no concurrentes, ~30 concurrentes pico)
+
+--------------------------------------------------------------------------------
+1. RESUMEN DE COMPONENTES DE HARDWARE DETECTADOS
+--------------------------------------------------------------------------------
+- Procesador (CPU): Intel(R) Core(TM) i7-8700T CPU @ 2.40GHz
+  * Núcleos lógicos detectados: 12
+  * Frecuencia de reloj base: 3800 MHz
+- Memoria RAM:
+  * Memoria Física Total: 19.40 GB
+  * Memoria Física Disponible: 8.99 GB
+- Almacenamiento Primario:
+  * Capacidad Total de Disco: 181.58 GB
+  * Espacio Disponible: 92.11 GB (Uso: 47%)
+- Plataforma y Kernel:
+  * Sistema Operativo: Linux 6.8.0-149-generic (linux)
+  * Arquitectura de Instrucciones: x64
+  * Nombre de Host (Node): 4ff23ea59545
+  * Tiempo de Actividad (Uptime): 28.20 horas
+
+--------------------------------------------------------------------------------
+2. MATRIZ DE COMPARACIÓN DE CRITERIOS (MÍNIMO VS RECOMENDADO VS ACTUAL)
+--------------------------------------------------------------------------------
+* NÚCLEOS DE PROCESADOR (VCPU):
+  - Requerimiento Mínimo: 2 núcleos
+  - Requerimiento Recomendado: 4 núcleos
+  - Valor Detectado en el Servidor: 12 núcleos
+  - Evaluación: [PASS - CUMPLE] | Cumple holgadamente el perfil recomendado
+
+* MEMORIA RAM TOTAL:
+  - Requerimiento Mínimo: 2 GB
+  - Requerimiento Recomendado: 4 GB
+  - Valor Detectado en el Servidor: 19.4 GB
+  - Evaluación: [PASS - CUMPLE] | Apto para PHP-FPM con 30 workers y buffer pool MySQL
+
+* ALMACENAMIENTO EN DISCO (SO + APP + BD):
+  - Requerimiento Mínimo: 20 GB
+  - Requerimiento Recomendado: 50 GB
+  - Valor Detectado en el Servidor: 181.58 GB
+  - Evaluación: [PASS - CUMPLE] | Espacio adecuado para logs, base de datos de usuarios y respaldos automáticos
+
+* ARQUITECTURA Y PLATAFORMA DE SISTEMA OPERATIVO:
+  - Requerimiento Mínimo: x86_64 / arm64 de 64 bits bits
+  - Requerimiento Recomendado: Linux Server LTS (Ubuntu / Debian / RHEL) bits
+  - Valor Detectado en el Servidor: Linux x64 (Kernel 6.8.0-149-generic) bits
+  - Evaluación: [PASS - CUMPLE] | Kernel moderno de 64 bits con soporte nativo de sockets epoll y contenedores
+
+* ADAPTADORES DE RED Y CONECTIVIDAD:
+  - Requerimiento Mínimo: 1 Interfaz IPv4 activa (Fast Ethernet 100 Mbps) NICs
+  - Requerimiento Recomendado: Gigabit Ethernet (1000 Mbps) con enlace simétrico NICs
+  - Valor Detectado en el Servidor: 1 interfaz(ces) activa(s) NICs
+  - Evaluación: [PASS - CUMPLE] | Capacidad de throughput suficiente para soportar 15 RPS pico (9.6 Mbps)
+
+--------------------------------------------------------------------------------
+3. DICTAMEN TÉCNICO DE VIABILIDAD Y VALIDACIÓN
+--------------------------------------------------------------------------------
+Veredicto Final: APROBADO_CUMPLE_REQUERIMIENTOS
+Conclusión: El entorno de infraestructura analizado cuenta con la capacidad de cómputo,
+memoria de trabajo y canal de almacenamiento suficientes para garantizar el despliegue
+estable de la aplicación web PHP con persistencia de datos (MySQL/PostgreSQL) y soportar
+holgadamente la demanda proyectada de 250 usuarios activos no concurrentes.
+================================================================================

@@ -1,0 +1,80 @@
+{
+  "fecha": "2026-11-14T19:44:13.700Z",
+  "aprendiz": "Karen Yuliana Campo",
+  "ficha": "3186681",
+  "centro": "CTPI Popayán - Regional Cauca",
+  "proyecto": "Pizzería Gourmet Bella Italia Popayán",
+  "evidencia": "GA10-220501097-AA2-EV01",
+  "casoEvaluado": {
+    "tecnologia": "Aplicación Web PHP 8.2 + Servidor Nginx + Base de Datos Relacional Persistente",
+    "volumenUsuarios": 250,
+    "concurrenciaPicoEstimada": 30,
+    "throughputRequeridoRPS": 15
+  },
+  "especificacionesHardware": {
+    "cpuModelo": "Intel(R) Core(TM) i7-8700T CPU @ 2.40GHz",
+    "cpuNucleos": 12,
+    "cpuVelocidadMHz": 3800,
+    "ramTotalGB": "19.40",
+    "ramLibreGB": "8.99",
+    "discoTotalGB": "181.58",
+    "discoDisponibleGB": "92.11",
+    "sistemaOperativo": "Linux 6.8.0-149-generic (linux)",
+    "arquitectura": "x64",
+    "hostname": "4ff23ea59545",
+    "uptimeHoras": "28.20"
+  },
+  "evaluacionCriterios": {
+    "cpuCores": {
+      "nombre": "Núcleos de Procesador (vCPU)",
+      "minimo": 2,
+      "recomendado": 4,
+      "actual": 12,
+      "unidad": "núcleos",
+      "cumple": true,
+      "cumpleRecomendado": true,
+      "observacion": "Cumple holgadamente el perfil recomendado"
+    },
+    "memoriaRAM": {
+      "nombre": "Memoria RAM Total",
+      "minimo": 2,
+      "recomendado": 4,
+      "actual": 19.4,
+      "unidad": "GB",
+      "cumple": true,
+      "cumpleRecomendado": true,
+      "observacion": "Apto para PHP-FPM con 30 workers y buffer pool MySQL"
+    },
+    "discoAlmacenamiento": {
+      "nombre": "Almacenamiento en Disco (SO + App + BD)",
+      "minimo": 20,
+      "recomendado": 50,
+      "actual": 181.58,
+      "unidad": "GB",
+      "cumple": true,
+      "cumpleRecomendado": true,
+      "observacion": "Espacio adecuado para logs, base de datos de usuarios y respaldos automáticos"
+    },
+    "arquitecturaSO": {
+      "nombre": "Arquitectura y Plataforma de Sistema Operativo",
+      "minimo": "x86_64 / arm64 de 64 bits",
+      "recomendado": "Linux Server LTS (Ubuntu / Debian / RHEL)",
+      "actual": "Linux x64 (Kernel 6.8.0-149-generic)",
+      "unidad": "bits",
+      "cumple": true,
+      "cumpleRecomendado": true,
+      "observacion": "Kernel moderno de 64 bits con soporte nativo de sockets epoll y contenedores"
+    },
+    "redConectividad": {
+      "nombre": "Adaptadores de Red y Conectividad",
+      "minimo": "1 Interfaz IPv4 activa (Fast Ethernet 100 Mbps)",
+      "recomendado": "Gigabit Ethernet (1000 Mbps) con enlace simétrico",
+      "actual": "1 interfaz(ces) activa(s)",
+      "unidad": "NICs",
+      "cumple": true,
+      "cumpleRecomendado": true,
+      "observacion": "Capacidad de throughput suficiente para soportar 15 RPS pico (9.6 Mbps)"
+    }
+  },
+  "veredictoFinal": "APROBADO_CUMPLE_REQUERIMIENTOS"
+}

@@ -1,0 +1,92 @@
+================================================================================
+AUDITORÍA TÉCNICA DE INFRAESTRUCTURA Y HARDWARE PARA DESPLIEGUE PHP
+Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | CTPI Popayán - Regional Cauca
+Fecha de Ejecución: sáb 14 nov 2026 14:44:08 -05
+================================================================================
+
+--------------------------------------------------------------------------------
+1. VERIFICACIÓN DE PROCESADOR (CPU): lscpu / nproc
+--------------------------------------------------------------------------------
+Total de núcleos (nproc): 12
+Architecture:                            x86_64
+CPU(s):                                  12
+Model name:                              Intel(R) Core(TM) i7-8700T CPU @ 2.40GHz
+Thread(s) per core:                      2
+Socket(s):                               1
+CPU max MHz:                             4000,0000
+CPU min MHz:                             800,0000
+NUMA node0 CPU(s):                       0-11
+
+--------------------------------------------------------------------------------
+2. VERIFICACIÓN DE MEMORIA RAM Y SWAP: free -h
+--------------------------------------------------------------------------------
+               total        used        free      shared  buff/cache   available
+Mem:            19Gi       8,3Gi       624Mi       1,7Gi        10Gi       9,0Gi
+Swap:           36Gi       7,0Mi        36Gi
+
+--------------------------------------------------------------------------------
+3. VERIFICACIÓN DE ALMACENAMIENTO Y SISTEMAS DE ARCHIVOS: df -h / lsblk
+--------------------------------------------------------------------------------
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/sdc1      ext4      182G   81G   93G  47% /
+efivarfs       efivarfs  256K   59K  193K  24% /sys/firmware/efi/efivars
+/dev/sdc3      vfat      2,0G  6,1M  2,0G   1% /boot/efi
+/dev/sdb2      fuseblk   448G  153G  295G  35% /media/danilo/F81EFBCA1EFB8044
+/dev/sda1      ntfs3     174G   58G  117G  34% /media/danilo/Adicional
+/dev/sda2      ntfs3     225G   64G  162G  29% /media/danilo/Datos windows 10
+/dev/sda3      ntfs3     534G  379G  156G  71% /media/danilo/Data
+
+NAME     SIZE FSTYPE   TYPE MOUNTPOINT
+loop0      4K squashfs loop /snap/bare/5
+loop1     74M squashfs loop /snap/core22/2163
+loop2     74M squashfs loop /snap/core22/2193
+loop3   66,8M squashfs loop /snap/core24/2124
+loop4  251,7M squashfs loop /snap/firefox/7766
+loop5  261,4M squashfs loop /snap/firefox/8969
+loop7  516,2M squashfs loop /snap/gnome-42-2204/226
+loop8  615,3M squashfs loop /snap/gnome-46-2404/168
+loop9   91,7M squashfs loop /snap/gtk-common-themes/1535
+loop10   402M squashfs loop /snap/mesa-2404/1839
+loop11  32,5M squashfs loop /snap/snapd/28332
+loop12  50,3M squashfs loop /snap/snapd/27738
+loop13 531,5M squashfs loop /snap/gnome-42-2204/263
+sda    931,5G          disk 
+├─sda1 173,8G ntfs     part /media/danilo/Adicional
+├─sda2 224,6G ntfs     part /media/danilo/Datos windows 10
+└─sda3 533,1G ntfs     part /media/danilo/Data
+sdb    447,1G          disk 
+├─sdb1    16M          part 
+└─sdb2 447,1G ntfs     part /media/danilo/F81EFBCA1EFB8044
+sdc    223,6G          disk 
+├─sdc1 185,5G ext4     part /
+├─sdc2    36G swap     part [SWAP]
+└─sdc3     2G vfat     part /boot/efi
+
+--------------------------------------------------------------------------------
+4. VERIFICACIÓN DE ADAPTADORES DE RED Y DIRECCIONAMIENTO IP: ip addr
+--------------------------------------------------------------------------------
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp1s0           UP             192.168.20.21/24 
+tailscale0       UNKNOWN        100.86.10.89/32 fd7a:115c:a1e0::c435:a5b/128 fe80::923f:65df:8181:8942/64 
+docker0          UP             172.17.0.1/16 fe80::e03e:97ff:feb5:8d66/64 
+br-565deef9b03d  UP             172.18.0.1/16 fe80::88eb:dcff:fe7e:95c8/64 
+veth06689d0@if2  UP             fe80::6473:4cff:fee4:dd97/64 
+vethc863923@if2  UP             fe80::6432:b6ff:feac:cfe7/64 
+vetha4880e6@if2  UP             fe80::c3:8aff:feb5:bd94/64 
+veth9535b9e@if2  UP             fe80::e492:36ff:fe4c:eb49/64 
+vethe3b5e48@if2  UP             fe80::3c08:62ff:fe1b:5caf/64 
+vethf632ae3@if2  UP             fe80::18d4:ddff:fe70:c649/64 
+
+--------------------------------------------------------------------------------
+5. VERIFICACIÓN DEL SISTEMA OPERATIVO Y KERNEL: uname -a / os-release
+--------------------------------------------------------------------------------
+Linux danilo-MS-7C39 6.8.0-149-generic #149~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Oct 28 20:58:45 UTC  x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+VERSION_ID="22.04"
+ID=ubuntu
+ID_LIKE=debian
+
+================================================================================
+DIAGNÓSTICO FINALIZADO CORRECTAMENTE. ARCHIVO CONSOLIDADO EN:
+/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-043_GA10-220501097-AA2-EV01_Plan_Validacion_Hardware_Software/scripts/../auditoria/diagnostico_comandos_linux.txt
+================================================================================
