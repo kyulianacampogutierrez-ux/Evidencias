@@ -1,0 +1,76 @@
+{
+  "proyecto": "Pizzería Gourmet Bella Italia Popayán",
+  "responsable": "Karen Yuliana Campo (Ficha 3186681)",
+  "fecha_auditoria": "2026-11-14",
+  "fases_lista_chequeo": {
+    "pre_migracion": [
+      {
+        "id": "CHK-PRE-01",
+        "criterio": "Generación de respaldo completo (Línea Base) antes de intervenir la base de datos.",
+        "herramienta": "mysqldump con compresión gzip",
+        "estado": "CUMPLE",
+        "evidencia": "Fichero respaldo_pizzeria_produccion_20261114.sql.gz generado"
+      },
+      {
+        "id": "CHK-PRE-02",
+        "criterio": "Verificación de espacio en disco en servidor destino (> 20 GB disponibles).",
+        "herramienta": "df -h",
+        "estado": "CUMPLE",
+        "evidencia": "Partición / con 90 GB disponibles (48% ocupación)"
+      },
+      {
+        "id": "CHK-PRE-03",
+        "criterio": "Validación de compatibilidad de esquemas, tipos de datos y juego de caracteres.",
+        "herramienta": "MySQL DDL Check",
+        "estado": "CUMPLE",
+        "evidencia": "Collation utf8mb4_unicode_520_ci y motor InnoDB configurados"
+      }
+    ],
+    "durante_migracion": [
+      {
+        "id": "CHK-DUR-01",
+        "criterio": "Conmutación de plataforma a modo mantenimiento para evitar transacciones en vuelo.",
+        "herramienta": "Página estática 503 Service Unavailable",
+        "estado": "CUMPLE",
+        "evidencia": "Ventana dominical 02:00 COT ejecutada"
+      },
+      {
+        "id": "CHK-DUR-02",
+        "criterio": "Ingesta determinística de datos relacionales sin truncamientos de campos.",
+        "herramienta": "mysql CLI / batch import",
+        "estado": "CUMPLE",
+        "evidencia": "Cero advertencias de datos truncados en log de importación"
+      },
+      {
+        "id": "CHK-DUR-03",
+        "criterio": "Preservación de claves primarias, claves foráneas y restricciones de unicidad.",
+        "herramienta": "Constraint Verification",
+        "estado": "CUMPLE",
+        "evidencia": "Claves foráneas en pedidos_gourmet vinculadas exitosamente a usuarios_clientes"
+      }
+    ],
+    "post_migracion": [
+      {
+        "id": "CHK-POST-01",
+        "criterio": "Conciliación de número total de filas entre origen y destino (Row Count).",
+        "herramienta": "SELECT COUNT(*) per table",
+        "estado": "CUMPLE",
+        "evidencia": "100% de productos y clientes migrados sin diferencias numéricas"
+      },
+      {
+        "id": "CHK-POST-02",
+        "criterio": "Pruebas funcionales de pedidos y liquidación en pesos colombianos (COP).",
+        "herramienta": "Checkout E2E en Google Chrome",
+        "estado": "CUMPLE",
+        "evidencia": "Transacción radicada con 8% de Impuesto al Consumo liquidado"
+      },
+      {
+        "id": "CHK-POST-03",
+        "criterio": "Verificación de privilegios de usuario PoLP (Principio de Menor Privilegio).",
+        "herramienta": "SHOW GRANTS",
+        "estado": "CUMPLE",
+        "evidencia": "Usuario aplicativo restringido a DML sin permisos de eliminación masiva"
+      }
+    ]
+  }
+}

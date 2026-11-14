@@ -1,0 +1,44 @@
+services:
+  sena-migracion-respaldo-web:
+    image: httpd:alpine
+    container_name: sena-migracion-respaldo-web
+    restart: unless-stopped
+    ports:
+      - "8098:80"
+    volumes:
+      - ./../sitio_migracion_respaldo:/usr/local/apache2/htdocs/
+    networks:
+      - sena_migracion_net
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  sena-migracion-respaldo-db:
+    image: mysql:8.0
+    container_name: sena-migracion-respaldo-db
+    restart: unless-stopped
+    ports:
+      - "3313:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: RootSecurePass2026*
+      MYSQL_DATABASE: pizzeria_migracion_db
+      MYSQL_USER: pizzeria_migracion_user
+      MYSQL_PASSWORD: MigracionPass2026!
+    volumes:
+      - mysql_migracion_data:/var/lib/mysql
+    networks:
+      - sena_migracion_net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pRootSecurePass2026*"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  sena_migracion_net:
+    driver: bridge
+
+volumes:
+  mysql_migracion_data:

@@ -1,0 +1,39 @@
+{
+  "politica_respaldo": "Estrategia 3-2-1 para Pizzería Gourmet Bella Italia Popayán",
+  "responsable": "Karen Yuliana Campo (DBA)",
+  "cumplimiento_normativo": "Ley 1581 de 2012 (Habeas Data) y Código de Comercio de Colombia",
+  "tiempo_retencion_anos": 5,
+  "pilares": {
+    "copias_totales": 3,
+    "medios_diferentes": 2,
+    "ubicaciones_fuera_sitio": 1
+  },
+  "detalle_copias": [
+    {
+      "nivel": "Copia 1 (Primaria)",
+      "medio": "Almacenamiento Local SSD NVMe",
+      "tipo": "Diario Diferencial + Semanal Completo",
+      "encriptacion": "AES-256 en reposo",
+      "proposito": "Recuperación operativa inmediata ante caídas lógicas"
+    },
+    {
+      "nivel": "Copia 2 (Secundaria)",
+      "medio": "Volumen Docker / Red Local Staging (NAS)",
+      "tipo": "Semanal Completo comprimido con gzip",
+      "encriptacion": "AES-256",
+      "proposito": "Pruebas de restauración y ambiente réplica"
+    },
+    {
+      "nivel": "Copia 3 (Offsite)",
+      "medio": "Almacenamiento Seguro en Frío (Nube Externa Cifrada)",
+      "tipo": "Mensual Consolidado",
+      "encriptacion": "Cifrado asimétrico con clave RSA-4096",
+      "proposito": "Resguardo ante desastres físicos y cumplimiento legal"
+    }
+  ],
+  "sla_recuperacion": {
+    "RTO_tiempo_objetivo_recuperacion": "Menor a 15 minutos",
+    "RPO_punto_objetivo_recuperacion": "Menor a 24 horas de datos",
+    "frecuencia_simulacro_drp": "Trimestral"
+  }
+}
