@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradientes de Cabecera -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00324D" />
+      <stop offset="45%" stop-color="#0F4C81" />
+      <stop offset="100%" stop-color="#39A900" />
+    </linearGradient>
+
+    <!-- Gradientes de los Tres Pilares -->
+    <radialGradient id="gradSocial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E1F5FE" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#81D4FA" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#29B6F6" stop-opacity="0.85" />
+    </radialGradient>
+    <radialGradient id="gradAmbiental" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8F5E9" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#A5D6A7" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#66BB6A" stop-opacity="0.85" />
+    </radialGradient>
+    <radialGradient id="gradEconomico" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E1" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#FFE082" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#FFCA28" stop-opacity="0.85" />
+    </radialGradient>
+
+    <!-- Filtros de sombra -->
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.12" />
+    </filter>
+    <filter id="shadowCenter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Fondo Decorativo -->
+  <rect x="0" y="0" width="1200" height="800" fill="#F8FAFC" />
+
+  <!-- Cabecera Institucional -->
+  <g transform="translate(30, 20)" filter="url(#shadowBox)">
+    <rect width="1140" height="80" rx="10" fill="url(#headerGrad)" />
+    <text x="570" y="32" fill="#FFFFFF" font-size="18" font-weight="800" text-anchor="middle" letter-spacing="1">MODELO TRIPLE BOTTOM LINE Y ESTRATEGIA DE SOSTENIBILIDAD</text>
+    <text x="570" y="55" fill="#E2E8F0" font-size="12" font-weight="600" text-anchor="middle">Uso Racional de Recursos Naturales, Huella de Carbono y Marcas Éticas | GA9-240201526-AA3-EV01</text>
+    <text x="570" y="72" fill="#C8E6C9" font-size="10.5" text-anchor="middle">Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | Componente: Entendiendo mi mundo | SENA CTPI Popayán</text>
+  </g>
+
+  <!-- Círculos del Triple Bottom Line (John Elkington) -->
+  <!-- Centro geométrico de intersección: (X=460, Y=450) -->
+  <g transform="translate(0, 0)">
+    <!-- 1. CÍRCULO SOCIAL (Arriba Izquierda: CX=370, CY=380, R=165) -->
+    <circle cx="370" cy="380" r="165" fill="url(#gradSocial)" stroke="#0288D1" stroke-width="2.5" />
+
+    <!-- 2. CÍRCULO AMBIENTAL (Arriba Derecha: CX=550, CY=380, R=165) -->
+    <circle cx="550" cy="380" r="165" fill="url(#gradAmbiental)" stroke="#2E7D32" stroke-width="2.5" />
+
+    <!-- 3. CÍRCULO ECONÓMICO (Abajo Centro: CX=460, CY=520, R=165) -->
+    <circle cx="460" cy="520" r="165" fill="url(#gradEconomico)" stroke="#F57F17" stroke-width="2.5" />
+
+    <!-- Textos de los 3 Pilares -->
+    <!-- Pilar Social -->
+    <text x="310" y="310" fill="#01579B" font-size="16" font-weight="900" text-anchor="middle">SOCIAL</text>
+    <text x="310" y="330" fill="#0277BD" font-size="11" font-weight="700" text-anchor="middle">(PEOPLE)</text>
+    <text x="310" y="350" fill="#333333" font-size="9" text-anchor="middle">• Equidad y Derechos Humanos</text>
+    <text x="310" y="365" fill="#333333" font-size="9" text-anchor="middle">• Condiciones Laborales Dignas</text>
+    <text x="310" y="380" fill="#333333" font-size="9" text-anchor="middle">• Cultura de Paz y No Violencia</text>
+    <text x="310" y="395" fill="#333333" font-size="9" text-anchor="middle">• Bienestar Comunitario (SROI)</text>
+
+    <!-- Pilar Ambiental -->
+    <text x="610" y="310" fill="#1B5E20" font-size="16" font-weight="900" text-anchor="middle">AMBIENTAL</text>
+    <text x="610" y="330" fill="#2E7D32" font-size="11" font-weight="700" text-anchor="middle">(PLANET)</text>
+    <text x="610" y="350" fill="#333333" font-size="9" text-anchor="middle">• Huella de Carbono Reducida</text>
+    <text x="610" y="365" fill="#333333" font-size="9" text-anchor="middle">• Uso Racional de Recursos</text>
+    <text x="610" y="380" fill="#333333" font-size="9" text-anchor="middle">• Economía Circular y Cero Plásticos</text>
+    <text x="610" y="395" fill="#333333" font-size="9" text-anchor="middle">• Protección de la Biodiversidad</text>
+
+    <!-- Pilar Económico -->
+    <text x="460" y="585" fill="#E65100" font-size="16" font-weight="900" text-anchor="middle">ECONÓMICO</text>
+    <text x="460" y="605" fill="#F57F17" font-size="11" font-weight="700" text-anchor="middle">(PROFIT)</text>
+    <text x="460" y="625" fill="#333333" font-size="9" text-anchor="middle">• Viabilidad Financiera y Rentabilidad Ética</text>
+    <text x="460" y="640" fill="#333333" font-size="9" text-anchor="middle">• Generación de Empleo Formal y Salarios Justos</text>
+    <text x="460" y="655" fill="#333333" font-size="9" text-anchor="middle">• Comercio Justo y Proveeduría Local</text>
+
+    <!-- Intersecciones -->
+    <!-- Social + Ambiental = VIVIBLE / SOPORTABLE -->
+    <rect x="420" y="330" width="80" height="24" rx="4" fill="#E0F2FE" stroke="#0288D1" stroke-width="1" />
+    <text x="460" y="346" fill="#01579B" font-size="9.5" font-weight="800" text-anchor="middle">VIVIBLE</text>
+
+    <!-- Social + Económico = EQUITATIVO -->
+    <rect x="330" y="480" width="90" height="24" rx="4" fill="#FFFDE7" stroke="#F57F17" stroke-width="1" />
+    <text x="375" y="496" fill="#E65100" font-size="9.5" font-weight="800" text-anchor="middle">EQUITATIVO</text>
+
+    <!-- Ambiental + Económico = VIABLE -->
+    <rect x="500" y="480" width="85" height="24" rx="4" fill="#F1F8E9" stroke="#2E7D32" stroke-width="1" />
+    <text x="542" y="496" fill="#1B5E20" font-size="9.5" font-weight="800" text-anchor="middle">VIABLE</text>
+
+    <!-- Centro Intersección Triple: SOSTENIBLE -->
+    <g transform="translate(460, 435)" filter="url(#shadowCenter)">
+      <circle cx="0" cy="0" r="48" fill="#39A900" stroke="#00324D" stroke-width="2.5" />
+      <text x="0" y="-8" fill="#FFFFFF" font-size="10" font-weight="900" text-anchor="middle">TRIPLE</text>
+      <text x="0" y="6" fill="#FFFFFF" font-size="9.5" font-weight="900" text-anchor="middle">BOTTOM LINE</text>
+      <text x="0" y="20" fill="#E8F5E9" font-size="8" font-weight="700" text-anchor="middle">SOSTENIBLE</text>
+    </g>
+  </g>
+
+  <!-- ==================== PANELES LATERALES ==================== -->
+
+  <!-- PANEL DERECHO 1: HUELLA DE CARBONO INDIVIDUAL -->
+  <g transform="translate(800, 120)" filter="url(#shadowBox)">
+    <rect width="370" height="195" rx="8" fill="#FFFFFF" stroke="#00324D" stroke-width="2" />
+    <rect width="370" height="28" rx="8" fill="#00324D" />
+    <text x="185" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">1. HUELLA DE CARBONO PERSONAL (CAEM / CAR)</text>
+    <text x="14" y="48" fill="#00324D" font-size="10" font-weight="bold">Diagnóstico Individual:</text>
+    <text x="14" y="66" fill="#333333" font-size="9">• <tspan font-weight="bold">Emisión Estimada:</tspan> 2.14 toneladas de CO₂e / año (Karen Campo).</text>
+    <text x="14" y="82" fill="#333333" font-size="9">• <tspan font-weight="bold">Mayores Focos:</tspan> Consumo eléctrico residencial y uso de equipos TI.</text>
+    <text x="14" y="98" fill="#333333" font-size="9">• <tspan font-weight="bold">Transporte Popayán:</tspan> Movilidad a pie / transporte colectivo urbano.</text>
+    <text x="14" y="118" fill="#00324D" font-size="10" font-weight="bold">Compromisos de Reducción Individual (-25%):</text>
+    <text x="14" y="136" fill="#15803D" font-size="8.8">✔ Apagado total de periféricos y regletas inteligentes (evitar modo stand-by).</text>
+    <text x="14" y="152" fill="#15803D" font-size="8.8">✔ Reducción del consumo de carne bovina e impulso a dietas vegetales.</text>
+    <text x="14" y="168" fill="#15803D" font-size="8.8">✔ Clasificación en la fuente: orgánicos, reciclables y residuos RAEE.</text>
+    <text x="14" y="184" fill="#15803D" font-size="8.8">✔ Reparación de dispositivos electrónicos antes de sustitución tecnológica.</text>
+  </g>
+
+  <!-- PANEL DERECHO 2: MARCA SOSTENIBLE EJEMPLAR (CREPES & WAFFLES) -->
+  <g transform="translate(800, 330)" filter="url(#shadowBox)">
+    <rect width="370" height="235" rx="8" fill="#FFFFFF" stroke="#39A900" stroke-width="2" />
+    <rect width="370" height="28" rx="8" fill="#39A900" />
+    <text x="185" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">2. MARCA ÉTICA EJEMPLAR: CREPES &amp; WAFFLES</text>
+    <text x="14" y="48" fill="#00324D" font-size="10" font-weight="bold">Propósito y Filosofía:</text>
+    <text x="135" y="48" fill="#333333" font-size="9">"Si llegas a un corazón, llegas a un cliente."</text>
+    <text x="14" y="68" fill="#0288D1" font-size="9.5" font-weight="bold">Dimensión Social (People):</text>
+    <text x="14" y="85" fill="#333333" font-size="8.8">• Más del 92% de la planta laboral son mujeres jefas de hogar.</text>
+    <text x="14" y="99" fill="#333333" font-size="8.8">• Programas de vivienda propia, medicina prepagada y becas educativas.</text>
+    <text x="14" y="117" fill="#2E7D32" font-size="9.5" font-weight="bold">Dimensión Ambiental (Planet):</text>
+    <text x="14" y="134" fill="#333333" font-size="8.8">• Cero plásticos de un solo uso en restaurantes y servicio a domicilio.</text>
+    <text x="14" y="148" fill="#333333" font-size="8.8">• Empaques 100% compostables a base de bagazo de caña de azúcar.</text>
+    <text x="14" y="162" fill="#333333" font-size="8.8">• Compra directa a comunidades campesinas en zonas de posconflicto.</text>
+    <text x="14" y="180" fill="#E65100" font-size="9.5" font-weight="bold">Dimensión Económica (Profit):</text>
+    <text x="14" y="197" fill="#333333" font-size="8.8">• Liderazgo sostenido en rentabilidad y ventas del sector gastronómico.</text>
+    <text x="14" y="211" fill="#333333" font-size="8.8">• Fidelización orgánica y valor de marca sin invertir en publicidad tradicional.</text>
+    <text x="14" y="227" fill="#1B5E20" font-size="8.5" font-weight="bold">Certificación: Empresa B Corp | Modelo Triple Bottom Line Genuino.</text>
+  </g>
+
+  <!-- PANEL DERECHO 3: TRANSFERENCIA A PIZZERÍA BELLA ITALIA POPAYÁN -->
+  <g transform="translate(800, 580)" filter="url(#shadowBox)">
+    <rect width="370" height="195" rx="8" fill="#FFFFFF" stroke="#F57F17" stroke-width="2" />
+    <rect width="370" height="28" rx="8" fill="#F57F17" />
+    <text x="185" y="19" fill="#FFFFFF" font-size="11.5" font-weight="bold" text-anchor="middle">3. TRANSFERENCIA: PIZZERÍA BELLA ITALIA POPAYÁN</text>
+    <text x="14" y="48" fill="#00324D" font-size="10" font-weight="bold">Estrategias de Uso Racional de Recursos en el Proyecto ADSO:</text>
+    <text x="14" y="66" fill="#333333" font-size="8.8">• <tspan font-weight="bold">Green Computing:</tspan> Algoritmos de software optimizados en Go / Node.js.</text>
+    <text x="14" y="80" fill="#333333" font-size="8.8">• <tspan font-weight="bold">Cadena Corta (Km 0):</tspan> Hortalizas y quesos de productores de Puracé y Silvia.</text>
+    <text x="14" y="94" fill="#333333" font-size="8.8">• <tspan font-weight="bold">Empaques Ecológicos:</tspan> Cajas de cartón kraft reciclado con sello FSC.</text>
+    <text x="14" y="108" fill="#333333" font-size="8.8">• <tspan font-weight="bold">Logística Eléctrica:</tspan> Despacho en bicicletas y motos eléctricas en Popayán.</text>
+    <text x="14" y="122" fill="#333333" font-size="8.8">• <tspan font-weight="bold">KDS Zero-Paper:</tspan> Pantallas táctiles en cocina para eliminar comandas de papel.</text>
+    <text x="14" y="142" fill="#00324D" font-size="9.5" font-weight="bold">Alineación con Objetivos de Desarrollo Sostenible (ODS):</text>
+    <text x="14" y="160" fill="#15803D" font-size="8.8">• ODS 8 (Trabajo Decente) | ODS 12 (Consumo y Producción Responsable)</text>
+    <text x="14" y="176" fill="#15803D" font-size="8.8">• ODS 13 (Acción por el Clima) | ODS 16 (Paz, Justicia e Instituciones Sólidas)</text>
+  </g>
+
+  <!-- LEYENDA INFERIOR IZQUIERDA -->
+  <g transform="translate(30, 705)" filter="url(#shadowBox)">
+    <rect width="740" height="70" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <text x="14" y="22" fill="#00324D" font-size="10" font-weight="bold">PRINCIPIO ÉTICO RECTOR (INFORME BRUNDTLAND &amp; COMPONENTE FORMATIVO):</text>
+    <text x="14" y="40" fill="#333333" font-size="9">"Satisfacer las necesidades de la generación presente sin comprometer la capacidad de las generaciones futuras para satisfacer sus propias necesidades."</text>
+    <text x="14" y="58" fill="#555555" font-size="8.5" font-style="italic">Sustentabilidad Ética y Cultura de Paz | Aprendiz Karen Yuliana Campo | Ficha 3186681 | Regional Cauca</text>
+  </g>
+</svg>
