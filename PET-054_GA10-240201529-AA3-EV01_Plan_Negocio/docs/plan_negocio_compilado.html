@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Plan de Negocio y Estados Financieros - GA10-240201529-AA3-EV01 | Karen Campo</title>
+  <style>
+    @page {{
+      size: letter;
+      margin: 1.1cm 1.3cm 1.1cm 1.3cm;
+      @bottom-right {{
+        content: counter(page);
+      }}
+    }}
+    * {{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }}
+    body {{
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      color: #1e293b;
+      line-height: 1.4;
+      font-size: 10pt;
+    }}
+    .page {{
+      page-break-after: always;
+      position: relative;
+    }}
+    .no-break {{
+      page-break-inside: avoid;
+    }}
+    .cover-page {{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 3px solid #047857;
+      padding: 2.2rem;
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%, #ffffff 100%);
+      page-break-after: always;
+    }}
+    .cover-header {{
+      text-align: center;
+      border-bottom: 2px solid #047857;
+      padding-bottom: 1.2rem;
+    }}
+    .cover-header h1 {{
+      font-size: 15pt;
+      color: #065f46;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }}
+    .cover-header h2 {{
+      font-size: 11pt;
+      color: #047857;
+      font-weight: 600;
+    }}
+    .cover-header h3 {{
+      font-size: 9.5pt;
+      color: #4b5563;
+      margin-top: 0.2rem;
+    }}
+    .cover-body {{
+      text-align: center;
+      padding: 1.5rem 0;
+    }}
+    .badge-evidence {{
+      display: inline-block;
+      background-color: #047857;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      font-size: 9.5pt;
+      margin-bottom: 1rem;
+    }}
+    .cover-title {{
+      font-size: 21pt;
+      color: #0f172a;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }}
+    .cover-subtitle {{
+      font-size: 12.5pt;
+      color: #047857;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }}
+    .cover-meta {{
+      display: inline-block;
+      text-align: left;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 1rem 1.4rem;
+      font-size: 9pt;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }}
+    .cover-meta tr td:first-child {{
+      font-weight: bold;
+      color: #334155;
+      padding-right: 1rem;
+      padding-bottom: 0.3rem;
+    }}
+    .cover-meta tr td:last-child {{
+      color: #0f172a;
+      padding-bottom: 0.3rem;
+    }}
+    .cover-footer {{
+      text-align: center;
+      border-top: 1px solid #cbd5e1;
+      padding-top: 1rem;
+      font-size: 8.5pt;
+      color: #64748b;
+    }}
+    
+    /* Content Styles */
+    h2.section-title {{
+      font-size: 13.5pt;
+      color: #065f46;
+      border-bottom: 2px solid #10b981;
+      padding-bottom: 0.3rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }}
+    h3.sub-title {{
+      font-size: 11pt;
+      color: #0f766e;
+      margin-top: 0.9rem;
+      margin-bottom: 0.4rem;
+    }}
+    p {{
+      margin-bottom: 0.6rem;
+      text-align: justify;
+    }}
+    ul, ol {{
+      margin-left: 1.4rem;
+      margin-bottom: 0.7rem;
+    }}
+    li {{
+      margin-bottom: 0.25rem;
+    }}
+    table.content-table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.6rem;
+      margin-bottom: 0.9rem;
+      font-size: 8.5pt;
+    }}
+    table.content-table th {{
+      background-color: #0f766e;
+      color: white;
+      padding: 6px 8px;
+      text-align: left;
+      border: 1px solid #0d9488;
+      font-weight: 600;
+    }}
+    table.content-table td {{
+      padding: 5px 8px;
+      border: 1px solid #cbd5e1;
+    }}
+    table.content-table tr:nth-child(even) {{
+      background-color: #f8fafc;
+    }}
+    table.content-table tfoot th {{
+      background-color: #1e293b;
+      color: white;
+      font-weight: bold;
+    }}
+    .highlight-box {{
+      background-color: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 0.8rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-top: 0.6rem;
+      margin-bottom: 0.8rem;
+      font-size: 9pt;
+    }}
+    .alert-box {{
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 0.8rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-top: 0.6rem;
+      margin-bottom: 0.8rem;
+      font-size: 9pt;
+    }}
+    .figure-box {{
+      text-align: center;
+      margin: 1rem 0;
+      page-break-inside: avoid;
+    }}
+    .figure-box img {{
+      max-width: 98%;
+      height: auto;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+    }}
+    .figure-caption {{
+      font-size: 8pt;
+      color: #64748b;
+      margin-top: 0.3rem;
+      font-style: italic;
+    }}
+    .kpi-grid {{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      margin: 0.8rem 0;
+    }}
+    .kpi-card-pdf {{
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #047857;
+      padding: 0.6rem 0.8rem;
+      border-radius: 4px;
+    }}
+    .kpi-card-pdf .title {{
+      font-size: 7.5pt;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+    }}
+    .kpi-card-pdf .value {{
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: #065f46;
+      margin-top: 0.1rem;
+    }}
+    .kpi-card-pdf .note {{
+      font-size: 7pt;
+      color: #94a3b8;
+    }}
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA FORMAL SENA -->
+  <div class="cover-page">
+    <div class="cover-header">
+      <h1>Servicio Nacional de Aprendizaje - SENA</h1>
+      <h2>Centro de Teleinformática y Producción Industrial (CTPI) - Regional Cauca</h2>
+      <h3>Programa de Formación: Tecnólogo en Análisis y Desarrollo de Software (ADSO) | Ficha 3186681</h3>
+    </div>
+
+    <div class="cover-body">
+      <div class="badge-evidence">EVIDENCIA: GA10-240201529-AA3-EV01</div>
+      <h1 class="cover-title">PLAN DE NEGOCIO Y ESTADOS FINANCIEROS PROYECTADOS</h1>
+      <h2 class="cover-subtitle">Pizzería Gourmet Bella Italia Popayán | Viabilidad Integral y Fondo Emprender</h2>
+
+      <table class="cover-meta" align="center">
+        <tr><td>Competencia:</td><td>240201529 - Gestionar procesos propios de la cultura emprendedora y empresarial</td></tr>
+        <tr><td>Actividad de Aprendizaje:</td><td>GA10-240201529-AA3: Establecer el modelo de negocio del emprendimiento a partir de las necesidades</td></tr>
+        <tr><td>Componente Formativo:</td><td>Fundamentos financieros para emprender</td></tr>
+        <tr><td>Instrumento de Evaluación:</td><td>Lista de Chequeo IE-GA10-240201529-AA3-EV01</td></tr>
+        <tr><td>Aprendiz:</td><td><strong>Karen Yuliana Campo</strong> (C.C. 1.061.789.012)</td></tr>
+        <tr><td>Inversión Total Inicial:</td><td><strong>$ 120.000.000 COP</strong> (Fondo Emprender $80M + Propio $30M + Banco $10M)</td></tr>
+        <tr><td>Empleos Directos Formales:</td><td><strong>4 Empleos CST</strong> (Compromiso de Condonación al 100%)</td></tr>
+        <tr><td>Punto de Equilibrio:</td><td><strong>19.7 pizzas/día</strong> ($ 283.846.416 COP anual)</td></tr>
+        <tr><td>Fecha de Emisión:</td><td>Noviembre de 2026</td></tr>
+      </table>
+    </div>
+
+    <div class="cover-footer">
+      Popayán, Cauca — Colombia | Convocatoria Nacional de Emprendimiento SENA
+    </div>
+  </div>
+
+  <!-- PÁGINA 2: INTRODUCCIÓN Y MODELO FINANCIERO FONDO EMPRENDER -->
+  <div class="page">
+    <h2 class="section-title">1. Resumen Ejecutivo y Marco Institucional SENA</h2>
+    <p>
+      El presente informe formal técnico y financiero consolida el <strong>Plan de Negocio y los Estados Financieros Proyectados</strong> para el establecimiento de la <strong>Pizzería Gourmet Bella Italia Popayán</strong>, formulado por la aprendiz tecnóloga ADSO <strong>Karen Yuliana Campo</strong>. El emprendimiento combina la elaboración de pizzas tradicionales en horno de leña refractario con insumos orgánicos de la región del Cauca y una infraestructura de software de punto de venta (POS) y comandas electrónicas.
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi-card-pdf" style="border-left-color: #10b981;">
+        <div class="title">Capital Total Inicial</div>
+        <div class="value">$ 120.000.000</div>
+        <div class="note">Fondo Emprender 66.7% ($80M)</div>
+      </div>
+      <div class="kpi-card-pdf" style="border-left-color: #3b82f6;">
+        <div class="title">Ventas Anuales Año 1</div>
+        <div class="value">$ 310.500.000</div>
+        <div class="note">6.760 pizzas + adicionales</div>
+      </div>
+      <div class="kpi-card-pdf" style="border-left-color: #8b5cf6;">
+        <div class="title">Margen Contribución</div>
+        <div class="value">$ 216.300.000</div>
+        <div class="note">69.66% Margen Bruto</div>
+      </div>
+      <div class="kpi-card-pdf" style="border-left-color: #f59e0b;">
+        <div class="title">Nómina Formal Anual</div>
+        <div class="value">$ 131.864.952</div>
+        <div class="note">4 colaboradores directos CST</div>
+      </div>
+      <div class="kpi-card-pdf" style="border-left-color: #ef4444;">
+        <div class="title">Punto de Equilibrio</div>
+        <div class="value">19.7 pizzas/día</div>
+        <div class="note">$ 283.846.416 COP anuales</div>
+      </div>
+      <div class="kpi-card-pdf" style="border-left-color: #059669;">
+        <div class="title">Utilidad Neta / ROI</div>
+        <div class="value">$ 14.767.238</div>
+        <div class="note">ROI: 12.31% | Payback: 2.8 años</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">2. Articulación con Fondo Emprender SENA</h2>
+    <p>
+      El proyecto se presenta a la convocatoria nacional del <strong>Fondo Emprender SENA</strong> solicitando <strong>$80.000.000 COP</strong> en calidad de capital semilla no reembolsable. La condonación del 100% del capital está garantizada por los siguientes compromisos verificables:
+    </p>
+    <ul>
+      <li><strong>Generación de 4 empleos formales directos:</strong> Maestro Pizzero ($1.9M básico), Auxiliar de Cocina ($1.423M), Domiciliario Express ($1.423M) y Administradora/ADSO Karen Campo ($2.2M).</li>
+      <li><strong>Ejecución del 100% del plan de inversiones:</strong> Adquisición de horno híbrido, amasadora espiral, mesa refrigerada y tecnología POS.</li>
+      <li><strong>Meta comercial:</strong> Alcanzar al menos el 80% de las ventas presupuestadas ($248.400.000 COP).</li>
+    </ul>
+
+    <h2 class="section-title">3. Paso 1: Presupuesto de Ventas, Servicios y Ventas al Por Mayor</h2>
+    <p>
+      La proyección de ventas para el primer año contempla la comercialización en salón, pedidos a domicilio express, venta mayorista institucional B2B y el servicio especializado de catering.
+    </p>
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Línea de Producto / Servicio</th>
+          <th style="text-align:center;">Unidades</th>
+          <th style="text-align:right;">PVP Unit.</th>
+          <th style="text-align:right;">Costo Var.</th>
+          <th style="text-align:right;">Margen Unit.</th>
+          <th style="text-align:center;">% Margen</th>
+          <th style="text-align:right;">Ventas Totales</th>
+          <th style="text-align:right;">Margen Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Pizza Tradicional Gourmet (35cm)</strong></td>
+          <td style="text-align:center;">3.200</td>
+          <td style="text-align:right;">$ 38.000</td>
+          <td style="text-align:right;">$ 11.400</td>
+          <td style="text-align:right;">$ 26.600</td>
+          <td style="text-align:center;">70.0%</td>
+          <td style="text-align:right;">$ 121.600.000</td>
+          <td style="text-align:right;">$ 85.120.000</td>
+        </tr>
+        <tr>
+          <td><strong>Pizza Especial / Trufada</strong></td>
+          <td style="text-align:center;">2.100</td>
+          <td style="text-align:right;">$ 48.000</td>
+          <td style="text-align:right;">$ 14.880</td>
+          <td style="text-align:right;">$ 33.120</td>
+          <td style="text-align:center;">69.0%</td>
+          <td style="text-align:right;">$ 100.800.000</td>
+          <td style="text-align:right;">$ 69.552.000</td>
+        </tr>
+        <tr>
+          <td><strong>Acompañamientos (Focaccias)</strong></td>
+          <td style="text-align:center;">1.800</td>
+          <td style="text-align:right;">$ 14.000</td>
+          <td style="text-align:right;">$ 4.200</td>
+          <td style="text-align:right;">$ 9.800</td>
+          <td style="text-align:center;">70.0%</td>
+          <td style="text-align:right;">$ 25.200.000</td>
+          <td style="text-align:right;">$ 17.640.000</td>
+        </tr>
+        <tr>
+          <td><strong>Bebidas Artesanales e Italianas</strong></td>
+          <td style="text-align:center;">3.500</td>
+          <td style="text-align:right;">$ 8.500</td>
+          <td style="text-align:right;">$ 2.550</td>
+          <td style="text-align:right;">$ 5.950</td>
+          <td style="text-align:center;">70.0%</td>
+          <td style="text-align:right;">$ 29.750.000</td>
+          <td style="text-align:right;">$ 20.825.000</td>
+        </tr>
+        <tr style="background-color:#eff6ff;">
+          <td><strong>Servicio Catering &amp; Horno Móvil</strong></td>
+          <td style="text-align:center;">18</td>
+          <td style="text-align:right;">$ 1.200.000</td>
+          <td style="text-align:right;">$ 440.000</td>
+          <td style="text-align:right;">$ 760.000</td>
+          <td style="text-align:center;">63.3%</td>
+          <td style="text-align:right;">$ 21.600.000</td>
+          <td style="text-align:right;">$ 13.680.000</td>
+        </tr>
+        <tr style="background-color:#fef3c7;">
+          <td><strong>Ventas Mayoristas B2B (Bases Precocidas)</strong></td>
+          <td style="text-align:center;">2.100</td>
+          <td style="text-align:right;">$ 5.500</td>
+          <td style="text-align:right;">$ 2.100</td>
+          <td style="text-align:right;">$ 3.400</td>
+          <td style="text-align:center;">61.8%</td>
+          <td style="text-align:right;">$ 11.550.000</td>
+          <td style="text-align:right;">$ 7.140.000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>TOTALES CONSOLIDADOS AÑO 1</th>
+          <th style="text-align:center;">12.718</th>
+          <th colspan="3">-</th>
+          <th style="text-align:center;">69.66%</th>
+          <th style="text-align:right;">$ 310.500.000</th>
+          <th style="text-align:right;">$ 216.300.000</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="highlight-box">
+      <strong>Análisis Guía 10 - ¿Cuál sería el valor de un servicio prestado?:</strong> Paquete base para eventos sociales de $1.200.000 COP para 30 comensales (15 pizzas familiares en vivo con horno móvil, 1 chef pizzero, 1 auxiliar, 3 horas). Costo variable de $440.000 COP, generando un margen de contribución de $760.000 COP (63.33%). 18 eventos anuales aportan $21.600.000 COP en ventas y $13.680.000 COP de margen neto.
+    </div>
+
+    <div class="alert-box">
+      <strong>Análisis Guía 10 - ¿Qué pasa si se vende al por mayor?:</strong> Comercialización de bases de pizza precocidas en horno de leña ultracongeladas al vacío para hoteles y cafés del Centro Histórico a $5.500 COP (descuento del 31.25% vs valor detal). Costo variable: $2.100 COP; margen: $3.400 COP (61.82%). Aprovecha la capacidad ociosa del horno en la mañana (9am-2pm) y genera $7.140.000 COP directos de margen sin costo adicional de meseros ni salón.
+    </div>
+  </div>
+
+  <!-- PÁGINA 3: PERSONAL, ACTIVOS Y CAPITAL INICIAL -->
+  <div class="page">
+    <h2 class="section-title">4. Paso 2: Presupuesto de Personal y Nómina Formal CST</h2>
+    <p>
+      Estructura de contratación a término indefinido bajo el Código Sustantivo del Trabajo colombiano para los 4 colaboradores exigidos por el Fondo Emprender SENA:
+    </p>
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th style="text-align:right;">Básico</th>
+          <th style="text-align:right;">Aux. Transp.</th>
+          <th style="text-align:right;">Cesantías</th>
+          <th style="text-align:right;">Prima</th>
+          <th style="text-align:right;">Vacaciones</th>
+          <th style="text-align:right;">Pensión (12%)</th>
+          <th style="text-align:right;">ARL / Caja</th>
+          <th style="text-align:right;">Costo Anual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Maestro Pizzero Chef</strong></td>
+          <td style="text-align:right;">$ 1.900.000</td>
+          <td style="text-align:right;">$ 162.000</td>
+          <td style="text-align:right;">$ 171.826</td>
+          <td style="text-align:right;">$ 171.826</td>
+          <td style="text-align:right;">$ 79.173</td>
+          <td style="text-align:right;">$ 228.000</td>
+          <td style="text-align:right;">$ 95.836</td>
+          <td style="text-align:right;"><strong>$ 36.706.392</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Auxiliar de Cocina</strong></td>
+          <td style="text-align:right;">$ 1.423.500</td>
+          <td style="text-align:right;">$ 162.000</td>
+          <td style="text-align:right;">$ 132.083</td>
+          <td style="text-align:right;">$ 132.083</td>
+          <td style="text-align:right;">$ 59.317</td>
+          <td style="text-align:right;">$ 170.820</td>
+          <td style="text-align:right;">$ 71.801</td>
+          <td style="text-align:right;"><strong>$ 28.368.324</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Domiciliario Repartidor</strong></td>
+          <td style="text-align:right;">$ 1.423.500</td>
+          <td style="text-align:right;">$ 162.000</td>
+          <td style="text-align:right;">$ 132.083</td>
+          <td style="text-align:right;">$ 132.083</td>
+          <td style="text-align:right;">$ 59.317</td>
+          <td style="text-align:right;">$ 170.820</td>
+          <td style="text-align:right;">$ 71.801</td>
+          <td style="text-align:right;"><strong>$ 28.368.324</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Administradora / Karen Campo</strong></td>
+          <td style="text-align:right;">$ 2.200.000</td>
+          <td style="text-align:right;">$ 0</td>
+          <td style="text-align:right;">$ 183.326</td>
+          <td style="text-align:right;">$ 183.326</td>
+          <td style="text-align:right;">$ 91.674</td>
+          <td style="text-align:right;">$ 264.000</td>
+          <td style="text-align:right;">$ 110.968</td>
+          <td style="text-align:right;"><strong>$ 38.421.912</strong></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>TOTALES NÓMINA (4 EMPLEOS)</th>
+          <th style="text-align:right;">$ 6.947.000</th>
+          <th style="text-align:right;">$ 486.000</th>
+          <th style="text-align:right;">$ 619.318</th>
+          <th style="text-align:right;">$ 619.318</th>
+          <th style="text-align:right;">$ 289.481</th>
+          <th style="text-align:right;">$ 833.640</th>
+          <th style="text-align:right;">$ 350.406</th>
+          <th style="text-align:right;"><strong>$ 131.864.952</strong></th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2 class="section-title">5. Paso 3: Estimación de Activos Fijos y Depreciación</h2>
+    <p>
+      Inversión en infraestructura operativa depreciada por el método de línea recta (NIC 16):
+    </p>
+    <ul>
+      <li><strong>Maquinaria y Equipo Industrial ($56.500.000 COP / 10 años):</strong> Horno napolitano híbrido ($24M), amasadora 25kg ($8.5M), mesa refrigerada inox ($9.2M), refrigerador vertical ($6.5M), rebanadora y campana ($8.3M). Deprec. Anual: $5.650.000 COP.</li>
+      <li><strong>Muebles y Enseres ($16.000.000 COP / 10 años):</strong> Mesas trattoria, sillas teca, vitrina y menaje. Deprec. Anual: $1.600.000 COP.</li>
+      <li><strong>Equipos de Cómputo y TI ($8.000.000 COP / 5 años):</strong> Servidor POS touch, tabletas comanderas e impresoras térmicas. Deprec. Anual: $1.600.000 COP.</li>
+      <li><strong>Flota de Transporte ($7.500.000 COP / 5 años):</strong> Moto 125cc con baúl térmico a 70°C. Deprec. Anual: $1.500.000 COP.</li>
+      <li><strong>Adecuaciones Locativas ($18.500.000 COP / 5 años):</strong> Ductos de chimenea con filtros de carbón, gas y enchapes sanitarios. Amortización: $3.700.000 COP.</li>
+    </ul>
+
+    <h2 class="section-title">6. Paso 4: Capital Inicial y Fuentes de Financiación</h2>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Fuente de Financiación</th>
+          <th style="text-align:right;">Monto Aportado</th>
+          <th style="text-align:center;">% Part.</th>
+          <th>Modalidad y Condiciones</th>
+          <th>Destinación en el Emprendimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Fondo Emprender SENA</strong></td>
+          <td style="text-align:right;"><strong>$ 80.000.000</strong></td>
+          <td style="text-align:center;">66.67%</td>
+          <td>Capital Semilla Condonable (0% interés)</td>
+          <td>Horno napolitano, maquinaria, computadores y adecuaciones</td>
+        </tr>
+        <tr>
+          <td><strong>Aporte Propio Karen Campo</strong></td>
+          <td style="text-align:right;"><strong>$ 30.000.000</strong></td>
+          <td style="text-align:center;">25.00%</td>
+          <td>Capital Propio Líquido / Ahorros</td>
+          <td>Mobiliario, menaje, moto express, constitución y licencias</td>
+        </tr>
+        <tr>
+          <td><strong>Microcrédito Banco Agrario</strong></td>
+          <td style="text-align:right;"><strong>$ 10.000.000</strong></td>
+          <td style="text-align:center;">8.33%</td>
+          <td>Plazo 24 meses, 1.2% MV ($497k/mes)</td>
+          <td>Capital de trabajo inicial y stock de materias primas</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>TOTAL CAPITAL DE INVERSIÓN</th>
+          <th style="text-align:right;">$ 120.000.000</th>
+          <th style="text-align:center;">100.0%</th>
+          <th colspan="2">Estructura Financiera 100% Calzada</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- PÁGINA 4: ESTADOS FINANCIEROS Y PUNTO DE EQUILIBRIO -->
+  <div class="page">
+    <h2 class="section-title">7. Paso 5: Estados Financieros Proyectados</h2>
+    
+    <h3 class="sub-title">7.1. Balance General Inicial de Apertura (Día 1)</h3>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>ACTIVOS</th>
+          <th style="text-align:right;">VALOR COP</th>
+          <th>PASIVOS Y PATRIMONIO</th>
+          <th style="text-align:right;">VALOR COP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color:#f1f5f9;"><td colspan="2"><strong>Activo Corriente</strong></td><td colspan="2"><strong>Pasivos</strong></td></tr>
+        <tr><td>• Efectivo y Bancos</td><td style="text-align:right;">$ 6.000.000</td><td>• Microcrédito Corto Plazo (Año 1)</td><td style="text-align:right;">$ 4.945.000</td></tr>
+        <tr><td>• Inventarios Iniciales</td><td style="text-align:right;">$ 7.500.000</td><td>• Microcrédito Largo Plazo (Año 2)</td><td style="text-align:right;">$ 5.055.000</td></tr>
+        <tr><td>• Gastos Anticipados (Pólizas)</td><td style="text-align:right;">$ 2.500.000</td><td><strong>Total Pasivos</strong></td><td style="text-align:right;"><strong>$ 10.000.000</strong></td></tr>
+        <tr style="background-color:#f1f5f9;"><td colspan="2"><strong>Activo No Corriente</strong></td><td colspan="2"><strong>Patrimonio Neto</strong></td></tr>
+        <tr><td>• Maquinaria y Equipos</td><td style="text-align:right;">$ 56.500.000</td><td>• Fondo Emprender SENA</td><td style="text-align:right;">$ 80.000.000</td></tr>
+        <tr><td>• Adecuaciones Locativas</td><td style="text-align:right;">$ 18.500.000</td><td>• Aporte Karen Yuliana Campo</td><td style="text-align:right;">$ 30.000.000</td></tr>
+        <tr><td>• Muebles y Enseres</td><td style="text-align:right;">$ 16.000.000</td><td>• Gastos Preoperativos Capitalizados</td><td style="text-align:right;">$ 6.000.000</td></tr>
+        <tr><td>• Equipos de Cómputo / TI</td><td style="text-align:right;">$ 8.000.000</td><td><strong>Total Patrimonio</strong></td><td style="text-align:right;"><strong>$ 116.000.000</strong></td></tr>
+        <tr><td>• Moto Domicilio 70°C</td><td style="text-align:right;">$ 7.500.000</td><td colspan="2" rowspan="2" style="background-color:#ecfdf5; text-align:center; vertical-align:middle;"><strong>Ecuación Contable:<br>Activo ($126M) = Pasivo ($10M) + Patr. ($116M)<br>Diferencia: $0 COP</strong></td></tr>
+        <tr><td>• Software POS / Intangibles</td><td style="text-align:right;">$ 3.500.000</td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>TOTAL ACTIVOS</th>
+          <th style="text-align:right;">$ 126.000.000</th>
+          <th>TOTAL PASIVO + PATRIMONIO</th>
+          <th style="text-align:right;">$ 126.000.000</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h3 class="sub-title">7.2. Estado de Resultados (P&amp;G Consolidado Año 1)</h3>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Rubro del Estado de Resultados</th>
+          <th style="text-align:right;">Monto Anual (COP)</th>
+          <th style="text-align:center;">% Sobre Ventas</th>
+          <th>Interpretación Operativa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color:#eff6ff;">
+          <td><strong>(+) Ingresos Operacionales (Ventas)</strong></td>
+          <td style="text-align:right;"><strong>$ 310.500.000</strong></td>
+          <td style="text-align:center;">100.00%</td>
+          <td>6.760 pizzas + acompañamientos + catering + mayorista</td>
+        </tr>
+        <tr>
+          <td>(-) Costo de Mercancía Vendida (CMV)</td>
+          <td style="text-align:right;">$ 94.200.000</td>
+          <td style="text-align:center;">30.34%</td>
+          <td>Harina, queso campesino caucano, pomodoro, empaques</td>
+        </tr>
+        <tr style="background-color:#ecfdf5;">
+          <td><strong>(=) UTILIDAD BRUTA OPERACIONAL</strong></td>
+          <td style="text-align:right;"><strong>$ 216.300.000</strong></td>
+          <td style="text-align:center;"><strong>69.66%</strong></td>
+          <td>Margen bruto para absorber la estructura fija empresarial</td>
+        </tr>
+        <tr>
+          <td>(-) Gastos de Personal (4 Empleos CST)</td>
+          <td style="text-align:right;">$ 131.864.952</td>
+          <td style="text-align:center;">42.47%</td>
+          <td>Básicos, auxilio transporte, cesantías, primas y pensión</td>
+        </tr>
+        <tr>
+          <td>(-) Arriendo Local Centro Histórico Popayán</td>
+          <td style="text-align:right;">$ 30.000.000</td>
+          <td style="text-align:center;">9.66%</td>
+          <td>Canon fijo mensual de $2.500.000 COP</td>
+        </tr>
+        <tr>
+          <td>(-) Servicios Públicos y Leña Certificada</td>
+          <td style="text-align:right;">$ 14.400.000</td>
+          <td style="text-align:center;">4.64%</td>
+          <td>Energía trifásica, agua, gas, leña eucalipto, internet</td>
+        </tr>
+        <tr>
+          <td>(-) Depreciación Activos Fijos</td>
+          <td style="text-align:right;">$ 10.350.000</td>
+          <td style="text-align:center;">3.33%</td>
+          <td>Línea recta sobre maquinaria, mobiliario y TI</td>
+        </tr>
+        <tr>
+          <td>(-) Publicidad Digital y Marketing</td>
+          <td style="text-align:right;">$ 3.600.000</td>
+          <td style="text-align:center;">1.16%</td>
+          <td>Campañas pauta Meta/Google Ads Popayán ($300k/mes)</td>
+        </tr>
+        <tr>
+          <td>(-) Asesoría Contable Externa y Software</td>
+          <td style="text-align:right;">$ 4.200.000</td>
+          <td style="text-align:center;">1.35%</td>
+          <td>Honorarios contador público y facturación DIAN ($350k/mes)</td>
+        </tr>
+        <tr>
+          <td>(-) Mantenimiento, Aseo y Fumigación</td>
+          <td style="text-align:right;">$ 2.400.000</td>
+          <td style="text-align:center;">0.77%</td>
+          <td>Protocolos higiénico-sanitarios Invima ($200k/mes)</td>
+        </tr>
+        <tr style="background-color:#e0e7ff;">
+          <td><strong>(=) UTILIDAD OPERACIONAL (EBIT)</strong></td>
+          <td style="text-align:right;"><strong>$ 19.485.048</strong></td>
+          <td style="text-align:center;"><strong>6.28%</strong></td>
+          <td><strong>EBITDA Anual: $ 29.835.048 COP (9.61%)</strong></td>
+        </tr>
+        <tr>
+          <td>(-) Gastos Financieros (Interés Banco Agrario)</td>
+          <td style="text-align:right;">$ 1.026.000</td>
+          <td style="text-align:center;">0.33%</td>
+          <td>Intereses decrecientes sobre crédito de $10M</td>
+        </tr>
+        <tr>
+          <td>(=) Utilidad Antes de Impuestos (UAI)</td>
+          <td style="text-align:right;">$ 18.459.048</td>
+          <td style="text-align:center;">5.95%</td>
+          <td>Base para tributación régimen simple</td>
+        </tr>
+        <tr>
+          <td>(-) Provisión Impuesto de Renta (20%)</td>
+          <td style="text-align:right;">$ 3.691.810</td>
+          <td style="text-align:center;">1.19%</td>
+          <td>Tarifa especial régimen simple microempresa</td>
+        </tr>
+        <tr style="background-color:#dcfce7; font-weight:bold;">
+          <td><strong>(=) UTILIDAD NETA DEL EJERCICIO</strong></td>
+          <td style="text-align:right;"><strong>$ 14.767.238</strong></td>
+          <td style="text-align:center;"><strong>4.76%</strong></td>
+          <td>Excedente neto disponible para reserva legal y reinversión</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">8. Indicadores Clave y Punto de Equilibrio</h2>
+    <div class="highlight-box">
+      <strong>Fórmula y Resultado del Punto de Equilibrio (Break-Even Point):</strong><br>
+      • <strong>Costos Fijos Totales:</strong> $ 197.840.952 COP | <strong>Margen de Contribución:</strong> 69.66%<br>
+      • <strong>Punto de Equilibrio en Ventas:</strong> $rac{\$197.840.952}{0.6966} = \mathbf{\$ 283.846.416	ext{ COP}}$<br>
+      • <strong>Punto de Equilibrio en Unidades:</strong> $\mathbf{7.096	ext{ pizzas/año}} = \mathbf{591	ext{ pizzas/mes}} = \mathbf{19.7	ext{ pizzas/día}}$<br>
+      • <strong>Capacidad Instalada del Horno:</strong> 45 pizzas/día. El punto de equilibrio representa solo el <strong>43.8% de la capacidad</strong>, con un margen de seguridad del <strong>8.58%</strong>.
+    </div>
+  </div>
+
+  <!-- PÁGINA 5: EVIDENCIAS DE CAPTURA KDE X11 Y DESPLIEGUE DOCKER -->
+  <div class="page">
+    <h2 class="section-title">9. Evidencias del Entorno Tecnológico KDE Plasma y Docker</h2>
+    <p>
+      A continuación se presentan las capturas reales obtenidas con <strong>Spectacle</strong> en la sesión nativa de KDE Plasma X11, evidenciando el despliegue contenerizado en el puerto <strong>8102</strong>, la interacción con LibreOffice Calc y el portal financiero web:
+    </p>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_01_despliegue_docker_plan_negocio_konsole.png" alt="Paso 1: Despliegue Docker">
+      <div class="figure-caption">Figura 1. Konsole: Despliegue de contenedor sena-plan-negocio-web (Puerto 8102) y archivos generados de la hoja de cálculo.</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_02_verificacion_salud_servicios_konsole.png" alt="Paso 2: Healthcheck y API JSON">
+      <div class="figure-caption">Figura 2. Konsole: Verificación de salud HTTP 200 y consulta JSON estructurada de indicadores financieros.</div>
+    </div>
+  </div>
+
+  <!-- PÁGINA 6: CAPTURAS LIBREOFFICE CALC Y CHROME -->
+  <div class="page">
+    <h2 class="section-title">10. Evidencias de la Hoja de Cálculo en LibreOffice Calc</h2>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_03_calc_hoja2_presupuesto_ventas.png" alt="Paso 3: Hoja de Ventas y Mayorista">
+      <div class="figure-caption">Figura 3. LibreOffice Calc: Hoja 02 - Presupuesto de Ventas, análisis de servicio de catering y ventas al por mayor B2B.</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_04_calc_hoja3_presupuesto_personal.png" alt="Paso 4: Hoja de Personal y Nómina">
+      <div class="figure-caption">Figura 4. LibreOffice Calc: Hoja 03 - Presupuesto de Personal formal (4 colaboradores directos con prestaciones CST).</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_05_calc_hoja6_balance_general_inicial.png" alt="Paso 5: Hoja de Balance y P&G">
+      <div class="figure-caption">Figura 5. LibreOffice Calc: Hoja 06 - Balance General Inicial con cuadre patrimonial perfecto ($126M Activos = $126M Pasivos + Patr.).</div>
+    </div>
+  </div>
+
+  <!-- PÁGINA 7: PORTAL WEB FINANCIERO Y CONCLUSIONES -->
+  <div class="page">
+    <h2 class="section-title">11. Portal Web Financiero y Conclusiones Finales</h2>
+
+    <div class="figure-box">
+      <img src="/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-054_GA10-240201529-AA3-EV01_Plan_Negocio/capturas/paso_06_chrome_portal_financiero_dashboard.png" alt="Paso 6: Portal Web Financiero">
+      <div class="figure-caption">Figura 6. Google Chrome: Portal Web Financiero Interactivo en http://localhost:8102/ con simulador de punto de equilibrio.</div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>Conclusiones del Plan Financiero:</strong>
+      <ol style="margin-left: 1.2rem; margin-top: 0.3rem;">
+        <li><strong>Autosostenibilidad Garantizada:</strong> Con un margen bruto del 69.66% y ventas de $310.5M COP, el proyecto absorbe con holgura los costos fijos y genera una utilidad neta de $14.767.238 COP en su primer año de operación.</li>
+        <li><strong>Cumplimiento de Criterios Fondo Emprender:</strong> La nómina de 4 puestos de trabajo formales cumple al 100% las metas contractuales del SENA para la condonación total de los $80.000.000 COP aportados.</li>
+        <li><strong>Bajo Umbral de Riesgo:</strong> Con solo vender 19.7 pizzas al día (menos de la mitad de la capacidad instalada), la pizzería alcanza su punto de equilibrio operativo.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">12. Referencias Bibliográficas (Normas APA 7ma Edición)</h2>
+    <p style="font-size: 8.5pt;">
+      • Congreso de la República de Colombia. (1950). <em>Código Sustantivo del Trabajo</em>. Diario Oficial No. 27.649.<br>
+      • Congreso de la República de Colombia. (2002). <em>Ley 789 de 2002: Normas para apoyar el empleo y creación de Fondo Emprender</em>. Diario Oficial No. 45.046.<br>
+      • Congreso de la República de Colombia. (2012). <em>Ley 1607 de 2012: Reforma tributaria y exoneración de aportes patronales</em>. Diario Oficial No. 48.655.<br>
+      • Fondo Emprender SENA. (2024). <em>Términos de referencia para convocatorias nacionales</em>. Servicio Nacional de Aprendizaje.<br>
+      • Gitman, L. J., &amp; Zutter, C. J. (2016). <em>Principios de administración financiera</em> (14.ª ed.). Pearson Educación.<br>
+      • Servicio Nacional de Aprendizaje - SENA. (2024). <em>Guía de Aprendizaje 10: Formulación del Plan de Negocio</em>.
+    </p>
+  </div>
+
+</body>
+</html>

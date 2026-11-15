@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Negocio y Estados Financieros | Pizzería Bella Italia</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --sena-green: #047857;
+            --sena-dark: #064E3B;
+            --sena-light: #ECFDF5;
+            --primary-blue: #1E40AF;
+            --accent-orange: #D97706;
+            --dark-slate: #0F172A;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+        }
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--sena-dark) 0%, var(--sena-green) 100%);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 2.5rem 1rem;
+            border-bottom: 4px solid #10B981;
+        }
+        .kpi-card {
+            border: none;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            border-left: 5px solid var(--sena-green);
+        }
+        .kpi-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        .nav-tabs .nav-link {
+            font-weight: 600;
+            color: #475569;
+            border-radius: 8px 8px 0 0;
+            padding: 0.75rem 1.25rem;
+        }
+        .nav-tabs .nav-link.active {
+            color: var(--sena-dark);
+            background-color: white;
+            border-color: #CBD5E1 #CBD5E1 white;
+            border-top: 3px solid var(--sena-green);
+        }
+        .tab-content {
+            background: white;
+            border: 1px solid #CBD5E1;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .badge-sena {
+            background-color: #10B981;
+            color: white;
+            font-weight: 600;
+        }
+        .table-custom th {
+            background-color: #0F766E;
+            color: white;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .sim-box {
+            background: #F1F5F9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #3B82F6;
+        }
+        .currency {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-pizza-slice text-warning fs-4"></i>
+                <span class="fw-bold tracking-tight">BELLA ITALIA POPAYÁN</span>
+                <span class="badge bg-light text-dark ms-2">Plan Financiero</span>
+            </a>
+            <div class="d-flex align-items-center text-white small gap-3">
+                <span><i class="fa-solid fa-user-graduate me-1"></i> Karen Yuliana Campo</span>
+                <span class="d-none d-md-inline">|</span>
+                <span class="d-none d-md-inline"><i class="fa-solid fa-code me-1"></i> ADSO Ficha 3186681</span>
+                <span class="badge bg-warning text-dark fw-bold">Guía 10 - AA3-EV01</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge badge-sena px-3 py-2 mb-2"><i class="fa-solid fa-award me-1"></i> FONDO EMPRENDER SENA | CONVOCATORIA NACIONAL</span>
+                    <h1 class="display-6 fw-bold mb-2">Plan de Negocio y Estados Financieros Proyectados</h1>
+                    <p class="lead text-light mb-2">
+                        Viabilidad técnica, económica y de mercado para el establecimiento de la <strong>Pizzería Gourmet Bella Italia Popayán</strong> con horno de leña napolitano, 4 empleos formales directos y transformación digital POS.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 text-white-50 small">
+                        <span><i class="fa-solid fa-location-dot text-danger"></i> Calle 4 # 7-45, Centro Histórico, Popayán</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-clock text-info"></i> Horizonte: 12 Meses</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-shield-halved text-success"></i> Ecuación Patrimonial 100% Cuadrada</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="downloads/GA10-240201529-AA3-EV01_Plan_Negocio.xlsx" class="btn btn-success btn-lg shadow-sm w-100 mb-2">
+                        <i class="fa-solid fa-file-excel me-2"></i> Descargar Excel (.xlsx)
+                    </a>
+                    <a href="downloads/GA10-240201529-AA3-EV01_Plan_Negocio.ods" class="btn btn-outline-light btn-sm w-100">
+                        <i class="fa-solid fa-file-invoice me-1"></i> Descargar Formato Abierto (.ods)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container my-4">
+
+        <!-- KPI Cards Row -->
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #10B981;">
+                    <div class="text-muted small fw-semibold">Capital Total</div>
+                    <div class="fs-5 fw-bold text-success">$120.0M</div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">$80M Fondo Emprender</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #3B82F6;">
+                    <div class="text-muted small fw-semibold">Ventas Año 1</div>
+                    <div class="fs-5 fw-bold text-primary">$310.5M</div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">6.760 pizzas + líneas</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #8B5CF6;">
+                    <div class="text-muted small fw-semibold">Margen Contrib.</div>
+                    <div class="fs-5 fw-bold text-purple" style="color:#6D28D9;">$216.3M</div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">69.66% Margen Bruto</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #F59E0B;">
+                    <div class="text-muted small fw-semibold">Nómina Formal</div>
+                    <div class="fs-5 fw-bold text-warning" style="color:#B45309;">$131.8M</div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">4 empleos directos</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #EF4444;">
+                    <div class="text-muted small fw-semibold">Break-Even</div>
+                    <div class="fs-5 fw-bold text-danger">19.7 <span class="fs-6">pizzas/día</span></div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">$283.8M anual</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 kpi-card h-100" style="border-left-color: #059669;">
+                    <div class="text-muted small fw-semibold">Utilidad Neta</div>
+                    <div class="fs-5 fw-bold text-success">$14.76M</div>
+                    <div class="text-xs text-muted" style="font-size:0.75rem;">ROI 12.3% | Payback 2.8a</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="planTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-resumen-btn" data-bs-toggle="tab" data-bs-target="#tab-resumen" type="button" role="tab">
+                    <i class="fa-solid fa-chart-pie me-1"></i> 1. Resumen Ejecutivo
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-ventas-btn" data-bs-toggle="tab" data-bs-target="#tab-ventas" type="button" role="tab">
+                    <i class="fa-solid fa-basket-shopping me-1"></i> 2. Ventas &amp; Servicios
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-personal-btn" data-bs-toggle="tab" data-bs-target="#tab-personal" type="button" role="tab">
+                    <i class="fa-solid fa-users me-1"></i> 3. Nómina &amp; Personal
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-activos-btn" data-bs-toggle="tab" data-bs-target="#tab-activos" type="button" role="tab">
+                    <i class="fa-solid fa-fire-burner me-1"></i> 4. Activos Fijos
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-capital-btn" data-bs-toggle="tab" data-bs-target="#tab-capital" type="button" role="tab">
+                    <i class="fa-solid fa-hand-holding-dollar me-1"></i> 5. Capital &amp; Financiación
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-estados-btn" data-bs-toggle="tab" data-bs-target="#tab-estados" type="button" role="tab">
+                    <i class="fa-solid fa-scale-balanced me-1"></i> 6. Estados Financieros
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-simulador-btn" data-bs-toggle="tab" data-bs-target="#tab-simulador" type="button" role="tab">
+                    <i class="fa-solid fa-sliders me-1"></i> 7. Simulador Break-Even
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="planTabsContent">
+
+            <!-- TAB 1: RESUMEN EJECUTIVO -->
+            <div class="tab-pane fade show active" id="tab-resumen" role="tabpanel">
+                <div class="row align-items-center mb-4">
+                    <div class="col-lg-8">
+                        <h4 class="fw-bold text-success mb-1">Estructura del Plan de Negocio y Viabilidad Financiera</h4>
+                        <p class="text-muted">
+                            La Pizzería Gourmet Bella Italia Popayán articula la tradición gastronómica italiana en horno de leña con una infraestructura tecnológica moderna desarrollada por la aprendiz ADSO <strong>Karen Yuliana Campo</strong>. El proyecto se postula al <strong>Fondo Emprender SENA</strong> por $80.000.000 COP condonables mediante la creación de 4 empleos formales en Popayán.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="p-3 bg-light rounded-3 border">
+                            <span class="text-muted small d-block">DICTAMEN FINANCIERO</span>
+                            <span class="badge bg-success fs-6 mt-1 py-2 px-3">
+                                <i class="fa-solid fa-check-double me-1"></i> PROYECTO 100% VIABLE
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-header bg-white fw-bold">
+                                <i class="fa-solid fa-chart-donut text-primary me-2"></i> Fuentes de Financiación ($120.000.000 COP)
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartFuentes" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-header bg-white fw-bold">
+                                <i class="fa-solid fa-coins text-warning me-2"></i> Estructura de Ingresos por Línea de Negocio
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartIngresos" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h5 class="fw-bold text-dark mb-3">Resumen de Parámetros Clave de Evaluación</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-custom align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Indicador</th>
+                                        <th>Valor Año 1</th>
+                                        <th>Meta / Criterio</th>
+                                        <th>Estado</th>
+                                        <th>Interpretación Técnica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">Ingresos Operacionales</td>
+                                        <td class="currency">$ 310.500.000 COP</td>
+                                        <td>> $280M COP</td>
+                                        <td><span class="badge bg-success">Superado</span></td>
+                                        <td>Venta de 6.760 pizzas + complementos + catering + mayorista</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Margen de Contribución</td>
+                                        <td class="currency">$ 216.300.000 COP (69.66%)</td>
+                                        <td>> 65.0%</td>
+                                        <td><span class="badge bg-success">Óptimo</span></td>
+                                        <td>Costo variable directo del 30.34% en insumos gourmet</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Punto de Equilibrio Operativo</td>
+                                        <td class="currency">$ 283.846.416 COP (19.7 pizzas/día)</td>
+                                        <td>< Capacidad diaria</td>
+                                        <td><span class="badge bg-success">Alcanzable</span></td>
+                                        <td>Capacidad instalada: 45 pizzas/día; el BEP requiere solo el 43.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Nómina Formal Completa</td>
+                                        <td class="currency">$ 131.864.952 COP</td>
+                                        <td>4 Empleos Directos</td>
+                                        <td><span class="badge bg-primary">Cumplido 100%</span></td>
+                                        <td>100% formalidad: cesantías, primas, pensiones, ARL, Comfacauca</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Utilidad Neta Año 1</td>
+                                        <td class="currency">$ 14.767.238 COP</td>
+                                        <td>> 0 (Superávit)</td>
+                                        <td><span class="badge bg-success">Positiva</span></td>
+                                        <td>Margen neto de 4.76% tras impuestos Régimen SIMPLE (20%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">ROI y Payback</td>
+                                        <td>ROI: 12.31% | Payback: 2.8 años</td>
+                                        <td>ROI > DTF (10%)</td>
+                                        <td><span class="badge bg-success">Rentable</span></td>
+                                        <td>Retorno superior a la tasa de libre riesgo en Colombia</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: VENTAS & SERVICIOS -->
+            <div class="tab-pane fade" id="tab-ventas" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Paso 1: Presupuesto de Ventas, Servicios y Por Mayor</h4>
+                    <span class="badge bg-info text-dark">Guía 10 Pág. 26</span>
+                </div>
+                <p class="text-muted">
+                    Proyección anualizada detallada por línea comercial, respondiendo a los requerimientos explícitos de la Guía de Aprendizaje sobre el valor de un servicio y el impacto financiero de vender al por mayor.
+                </p>
+
+                <div class="table-responsive mb-4">
+                    <table class="table table-bordered table-hover table-custom align-middle">
+                        <thead>
+                            <tr>
+                                <th>Línea / Producto</th>
+                                <th>Cant. Año 1</th>
+                                <th>Precio (PVP)</th>
+                                <th>Costo Var. Unit</th>
+                                <th>Margen Unit</th>
+                                <th>% Margen</th>
+                                <th>Ingreso Total</th>
+                                <th>Costo Total</th>
+                                <th>Margen Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Pizza Tradicional Gourmet (35cm)</strong></td>
+                                <td class="text-center">3.200</td>
+                                <td class="currency text-end">$38.000</td>
+                                <td class="currency text-end">$11.400</td>
+                                <td class="currency text-end text-success">$26.600</td>
+                                <td class="text-center">70.0%</td>
+                                <td class="currency text-end">$121.600.000</td>
+                                <td class="currency text-end">$36.480.000</td>
+                                <td class="currency text-end text-success">$85.120.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pizza Especial / Trufada</strong></td>
+                                <td class="text-center">2.100</td>
+                                <td class="currency text-end">$48.000</td>
+                                <td class="currency text-end">$14.880</td>
+                                <td class="currency text-end text-success">$33.120</td>
+                                <td class="text-center">69.0%</td>
+                                <td class="currency text-end">$100.800.000</td>
+                                <td class="currency text-end">$31.248.000</td>
+                                <td class="currency text-end text-success">$69.552.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Acompañamientos (Focaccias)</strong></td>
+                                <td class="text-center">1.800</td>
+                                <td class="currency text-end">$14.000</td>
+                                <td class="currency text-end">$4.200</td>
+                                <td class="currency text-end text-success">$9.800</td>
+                                <td class="text-center">70.0%</td>
+                                <td class="currency text-end">$25.200.000</td>
+                                <td class="currency text-end">$7.560.000</td>
+                                <td class="currency text-end text-success">$17.640.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bebidas Artesanales e Italianas</strong></td>
+                                <td class="text-center">3.500</td>
+                                <td class="currency text-end">$8.500</td>
+                                <td class="currency text-end">$2.550</td>
+                                <td class="currency text-end text-success">$5.950</td>
+                                <td class="text-center">70.0%</td>
+                                <td class="currency text-end">$29.750.000</td>
+                                <td class="currency text-end">$8.925.000</td>
+                                <td class="currency text-end text-success">$20.825.000</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td><strong>Servicio Catering &amp; Horno Móvil (Eventos)</strong></td>
+                                <td class="text-center">18</td>
+                                <td class="currency text-end">$1.200.000</td>
+                                <td class="currency text-end">$440.000</td>
+                                <td class="currency text-end text-primary">$760.000</td>
+                                <td class="text-center">63.3%</td>
+                                <td class="currency text-end">$21.600.000</td>
+                                <td class="currency text-end">$7.920.000</td>
+                                <td class="currency text-end text-primary">$13.680.000</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td><strong>Ventas Mayoristas B2B (Bases Precocidas)</strong></td>
+                                <td class="text-center">2.100</td>
+                                <td class="currency text-end">$5.500</td>
+                                <td class="currency text-end">$2.100</td>
+                                <td class="currency text-end text-warning" style="color:#B45309;">$3.400</td>
+                                <td class="text-center">61.8%</td>
+                                <td class="currency text-end">$11.550.000</td>
+                                <td class="currency text-end">$4.410.000</td>
+                                <td class="currency text-end text-warning" style="color:#B45309;">$7.140.000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-dark">
+                            <tr>
+                                <th>TOTAL CONSOLIDADO AÑO 1</th>
+                                <th class="text-center">12.718</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <th class="text-center">69.66%</th>
+                                <th class="currency text-end">$ 310.500.000</th>
+                                <th class="currency text-end">$ 94.200.000</th>
+                                <th class="currency text-end text-warning">$ 216.300.000</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Análisis Preguntas Clave Guía 10 -->
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded-3 border-start border-4 border-primary h-100">
+                            <h5 class="fw-bold text-primary"><i class="fa-solid fa-truck-ramp-box me-2"></i> ¿Cuál sería el valor de un servicio prestado?</h5>
+                            <p class="small text-muted mb-2">
+                                Se comercializa el <strong>Servicio de Catering y Estación de Pizza en Vivo</strong> para eventos corporativos y bodas en Popayán.
+                            </p>
+                            <ul class="small mb-0">
+                                <li><strong>Tarifa por Paquete (30 comensales):</strong> $1.200.000 COP.</li>
+                                <li><strong>Incluye:</strong> Horno portátil, 15 pizzas familiares gourmet, pizzero en vivo, auxiliar, 3 horas de atención y vajilla biodegradable.</li>
+                                <li><strong>Costos Variables:</strong> $440.000 COP ($380k insumos + $60k logística).</li>
+                                <li><strong>Margen de Contribución:</strong> $760.000 COP (63.33%) por evento.</li>
+                                <li><strong>Proyección:</strong> 18 servicios al año = $21.600.000 COP en ventas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded-3 border-start border-4 border-warning h-100">
+                            <h5 class="fw-bold text-warning" style="color:#B45309;"><i class="fa-solid fa-boxes-stacked me-2"></i> ¿Qué pasa si se vende al por mayor?</h5>
+                            <p class="small text-muted mb-2">
+                                Se atiende el canal B2B vendiendo <strong>Bases de Pizza Precocidas al Horno de Leña y Ultracongeladas</strong> a hoteles y cafeterías.
+                            </p>
+                            <ul class="small mb-0">
+                                <li><strong>Precio Mayorista:</strong> $5.500 COP (descuento del 31.25% vs PVP detal de $8.000).</li>
+                                <li><strong>Costo Variable Unitario:</strong> $2.100 COP (harina, levadura, oliva, empaque al vacío).</li>
+                                <li><strong>Margen de Contribución:</strong> $3.400 COP (61.82%).</li>
+                                <li><strong>Impacto Operativo:</strong> Aprovecha la capacidad ociosa del horno en la mañana (9:00 am - 2:00 pm), genera pedidos fijos semanales y aporta $7.14M de margen directo para absorción de nómina fija.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: PERSONAL & NÓMINA -->
+            <div class="tab-pane fade" id="tab-personal" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Paso 2: Presupuesto de Personal y Carga Prestacional</h4>
+                    <span class="badge bg-success">4 Empleos Directos Fondo Emprender</span>
+                </div>
+                <p class="text-muted">
+                    Estructura de contratación formal a término indefinido bajo la legislación laboral colombiana (CST). El sostenimiento de estos 4 puestos es el requisito primordial para la condonación de los $80.000.000 COP aportados por el SENA.
+                </p>
+
+                <div class="table-responsive mb-4">
+                    <table class="table table-bordered table-hover table-custom align-middle">
+                        <thead>
+                            <tr>
+                                <th>Cargo</th>
+                                <th>Básico</th>
+                                <th>Aux. Transp.</th>
+                                <th>Cesantías (8.33%)</th>
+                                <th>Prima (8.33%)</th>
+                                <th>Vacac. (4.17%)</th>
+                                <th>Pensión (12%)</th>
+                                <th>ARL (1.044%)</th>
+                                <th>Caja (4%)</th>
+                                <th>Costo Mes</th>
+                                <th>Costo Anual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Maestro Pizzero Chef</strong></td>
+                                <td class="currency text-end">$1.900.000</td>
+                                <td class="currency text-end">$162.000</td>
+                                <td class="currency text-end">$171.826</td>
+                                <td class="currency text-end">$171.826</td>
+                                <td class="currency text-end">$79.173</td>
+                                <td class="currency text-end">$228.000</td>
+                                <td class="currency text-end">$19.836</td>
+                                <td class="currency text-end">$76.000</td>
+                                <td class="currency text-end fw-bold">$3.058.866</td>
+                                <td class="currency text-end fw-bold">$36.706.392</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Auxiliar de Cocina</strong></td>
+                                <td class="currency text-end">$1.423.500</td>
+                                <td class="currency text-end">$162.000</td>
+                                <td class="currency text-end">$132.083</td>
+                                <td class="currency text-end">$132.083</td>
+                                <td class="currency text-end">$59.317</td>
+                                <td class="currency text-end">$170.820</td>
+                                <td class="currency text-end">$14.861</td>
+                                <td class="currency text-end">$56.940</td>
+                                <td class="currency text-end fw-bold">$2.364.027</td>
+                                <td class="currency text-end fw-bold">$28.368.324</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Domiciliario Repartidor</strong></td>
+                                <td class="currency text-end">$1.423.500</td>
+                                <td class="currency text-end">$162.000</td>
+                                <td class="currency text-end">$132.083</td>
+                                <td class="currency text-end">$132.083</td>
+                                <td class="currency text-end">$59.317</td>
+                                <td class="currency text-end">$170.820</td>
+                                <td class="currency text-end">$14.861</td>
+                                <td class="currency text-end">$56.940</td>
+                                <td class="currency text-end fw-bold">$2.364.027</td>
+                                <td class="currency text-end fw-bold">$28.368.324</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Administradora / ADSO (Karen Campo)</strong></td>
+                                <td class="currency text-end">$2.200.000</td>
+                                <td class="currency text-end">$0</td>
+                                <td class="currency text-end">$183.326</td>
+                                <td class="currency text-end">$183.326</td>
+                                <td class="currency text-end">$91.674</td>
+                                <td class="currency text-end">$264.000</td>
+                                <td class="currency text-end">$22.968</td>
+                                <td class="currency text-end">$88.000</td>
+                                <td class="currency text-end fw-bold">$3.201.826</td>
+                                <td class="currency text-end fw-bold">$38.421.912</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-dark">
+                            <tr>
+                                <th>TOTAL NÓMINA DIRECTA</th>
+                                <th class="currency text-end">$ 6.947.000</th>
+                                <th class="currency text-end">$ 486.000</th>
+                                <th class="currency text-end">$ 619.318</th>
+                                <th class="currency text-end">$ 619.318</th>
+                                <th class="currency text-end">$ 289.481</th>
+                                <th class="currency text-end">$ 833.640</th>
+                                <th class="currency text-end">$ 72.526</th>
+                                <th class="currency text-end">$ 277.880</th>
+                                <th class="currency text-end text-warning">$ 10.988.746</th>
+                                <th class="currency text-end text-warning">$ 131.864.952</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="alert alert-info d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-circle-info fs-3"></i>
+                    <div>
+                        <strong>Beneficio Tributario Ley 1607 / Art. 114-1 E.T.:</strong> La empresa está exonerada del pago de aportes parafiscales a SENA e ICBF y de la cotización patronal a Salud (8.5%) para los colaboradores que devenguen menos de 10 SMLMV, optimizando significativamente la liquidez operativa.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: ACTIVOS FIJOS -->
+            <div class="tab-pane fade" id="tab-activos" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Paso 3: Estimación de Activos Fijos y Depreciación</h4>
+                    <span class="badge bg-secondary">Método Línea Recta NIC 16</span>
+                </div>
+                <p class="text-muted">
+                    Maquinaria industrial especializada, tecnología para punto de venta (POS), mobiliario temático y vehículos de entrega.
+                </p>
+
+                <div class="table-responsive mb-4">
+                    <table class="table table-bordered table-hover table-custom align-middle">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Activo Fijo</th>
+                                <th>Cant.</th>
+                                <th>Valor Total</th>
+                                <th>Vida Útil</th>
+                                <th>Deprec. Anual</th>
+                                <th>Deprec. Mensual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maquinaria</td>
+                                <td>Horno Napolitano Refractario Híbrido (Leña/Gas)</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$24.000.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$2.400.000</td>
+                                <td class="currency text-end">$200.000</td>
+                            </tr>
+                            <tr>
+                                <td>Maquinaria</td>
+                                <td>Amasadora Espiral Industrial 25 Kg</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$8.500.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$850.000</td>
+                                <td class="currency text-end">$70.833</td>
+                            </tr>
+                            <tr>
+                                <td>Maquinaria</td>
+                                <td>Mesa Refrigerada Pizza 3 Puertas Acero Inoxidable</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$9.200.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$920.000</td>
+                                <td class="currency text-end">$76.667</td>
+                            </tr>
+                            <tr>
+                                <td>Maquinaria</td>
+                                <td>Refrigerador Vertical 2 Cuerpos + Rebanadora</td>
+                                <td class="text-center">2</td>
+                                <td class="currency text-end">$10.300.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$1.030.000</td>
+                                <td class="currency text-end">$85.833</td>
+                            </tr>
+                            <tr>
+                                <td>Maquinaria</td>
+                                <td>Campana Extractora y Sistema de Filtración</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$4.500.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$450.000</td>
+                                <td class="currency text-end">$37.500</td>
+                            </tr>
+                            <tr>
+                                <td>Tecnología / TI</td>
+                                <td>Servidor POS Touch All-in-One + Tabletas Comanderas</td>
+                                <td class="text-center">3</td>
+                                <td class="currency text-end">$6.000.000</td>
+                                <td class="text-center">5 años</td>
+                                <td class="currency text-end">$1.200.000</td>
+                                <td class="currency text-end">$100.000</td>
+                            </tr>
+                            <tr>
+                                <td>Tecnología / TI</td>
+                                <td>Impresoras Térmicas de Cocina + Red Gigabit WiFi</td>
+                                <td class="text-center">3</td>
+                                <td class="currency text-end">$2.000.000</td>
+                                <td class="text-center">5 años</td>
+                                <td class="currency text-end">$400.000</td>
+                                <td class="currency text-end">$33.333</td>
+                            </tr>
+                            <tr>
+                                <td>Muebles</td>
+                                <td>Juego de 8 Mesas y 32 Sillas Trattoria + Mostrador</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$10.500.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$1.050.000</td>
+                                <td class="currency text-end">$87.500</td>
+                            </tr>
+                            <tr>
+                                <td>Muebles</td>
+                                <td>Estanterías Inox + Menaje Gourmet Completo</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$5.500.000</td>
+                                <td class="text-center">10 años</td>
+                                <td class="currency text-end">$550.000</td>
+                                <td class="currency text-end">$45.833</td>
+                            </tr>
+                            <tr>
+                                <td>Transporte</td>
+                                <td>Motocicleta 125cc con Baúl Térmico a 70°C</td>
+                                <td class="text-center">1</td>
+                                <td class="currency text-end">$7.500.000</td>
+                                <td class="text-center">5 años</td>
+                                <td class="currency text-end">$1.500.000</td>
+                                <td class="currency text-end">$125.000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-dark">
+                            <tr>
+                                <th colspan="3">SUBTOTAL ACTIVOS DEPRECIABLES</th>
+                                <th class="currency text-end">$ 96.000.000</th>
+                                <th>-</th>
+                                <th class="currency text-end text-warning">$ 10.350.000</th>
+                                <th class="currency text-end text-warning">$ 862.500</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="p-3 bg-light rounded-3 border">
+                    <h6 class="fw-bold text-dark mb-1">Adecuaciones Locativas e Instalaciones Especiales:</h6>
+                    <p class="small text-muted mb-0">
+                        Se destinan <strong>$18.500.000 COP</strong> a ductos de chimenea con filtros de carbón activado, redes eléctricas trifásicas, conexión industrial de gas y enchapes sanitarios según normativa Invima. Estas adecuaciones se amortizan en el activo no corriente por el plazo del contrato de arrendamiento (5 años).
+                    </p>
+                </div>
+            </div>
+
+            <!-- TAB 5: CAPITAL & FINANCIACIÓN -->
+            <div class="tab-pane fade" id="tab-capital" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Paso 4: Capital Inicial y Fuentes de Financiación</h4>
+                    <span class="badge bg-primary">Inversión Total: $120.000.000 COP</span>
+                </div>
+                <p class="text-muted">
+                    Esquema tripartito de apalancamiento financiero compuesto por capital semilla institucional, recursos propios y microcrédito de bajo costo.
+                </p>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success shadow-sm">
+                            <div class="card-header bg-success text-white fw-bold">
+                                <i class="fa-solid fa-award me-1"></i> Fondo Emprender SENA
+                            </div>
+                            <div class="card-body">
+                                <h3 class="fw-bold text-success">$80.000.000 COP</h3>
+                                <p class="text-muted small"><strong>66.67% del Capital Inicial</strong></p>
+                                <p class="small">Recursos no reembolsables con compromiso de condonación mediante 4 empleos formales verificados y cumplimiento del 100% en ventas presupuestadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary shadow-sm">
+                            <div class="card-header bg-primary text-white fw-bold">
+                                <i class="fa-solid fa-user-tie me-1"></i> Aporte Propio Karen Campo
+                            </div>
+                            <div class="card-body">
+                                <h3 class="fw-bold text-primary">$30.000.000 COP</h3>
+                                <p class="text-muted small"><strong>25.00% del Capital Inicial</strong></p>
+                                <p class="small">Recursos líquidos de la emprendedora para muebles, enseres, menaje, gastos preoperativos, licencias y registro de marca mercantil.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-warning shadow-sm">
+                            <div class="card-header bg-warning text-dark fw-bold">
+                                <i class="fa-solid fa-building-columns me-1"></i> Microcrédito Bancario
+                            </div>
+                            <div class="card-body">
+                                <h3 class="fw-bold text-warning" style="color:#B45309;">$10.000.000 COP</h3>
+                                <p class="text-muted small"><strong>8.33% del Capital Inicial</strong></p>
+                                <p class="small">Línea Joven Emprendedor Banco Agrario / Bancóldex. Plazo 24 meses, cuota mensual fija de $497.000 COP (1.2% MV) para capital de trabajo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="fw-bold text-dark mb-3">Matriz de Destinación de los Fondos (Usos de Capital)</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-custom align-middle">
+                        <thead>
+                            <tr>
+                                <th>Concepto de Inversión</th>
+                                <th>Monto Requerido (COP)</th>
+                                <th>% Part.</th>
+                                <th>Fuente Principal</th>
+                                <th>Detalle Operativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maquinaria y Horno Napolitano</td>
+                                <td class="currency text-end">$ 56.500.000</td>
+                                <td class="text-center">47.08%</td>
+                                <td><span class="badge bg-success">Fondo Emprender</span></td>
+                                <td>Horno leña/gas, amasadora 25kg, mesa refrigerada, rebanadora</td>
+                            </tr>
+                            <tr>
+                                <td>Adecuaciones Locativas y Filtros</td>
+                                <td class="currency text-end">$ 18.500.000</td>
+                                <td class="text-center">15.42%</td>
+                                <td><span class="badge bg-success">Fondo Emprender</span></td>
+                                <td>Ductería de extracción, trampas de grasa, redes de gas</td>
+                            </tr>
+                            <tr>
+                                <td>Mobiliario y Menaje Trattoria</td>
+                                <td class="currency text-end">$ 16.000.000</td>
+                                <td class="text-center">13.33%</td>
+                                <td><span class="badge bg-primary">Aporte Propio</span></td>
+                                <td>Mesas, sillas, barra de servicio, menaje y palas de madera</td>
+                            </tr>
+                            <tr>
+                                <td>Servidores POS y Tecnología</td>
+                                <td class="currency text-end">$ 8.000.000</td>
+                                <td class="text-center">6.67%</td>
+                                <td><span class="badge bg-success">Fondo Emprender</span></td>
+                                <td>Servidor POS táctil, tabletas comandas, impresoras térmicas</td>
+                            </tr>
+                            <tr>
+                                <td>Motocicleta Domicilio Térmico</td>
+                                <td class="currency text-end">$ 7.500.000</td>
+                                <td class="text-center">6.25%</td>
+                                <td><span class="badge bg-primary">Aporte Propio</span></td>
+                                <td>Moto 125cc con baúl térmico calefaccionado a 70°C</td>
+                            </tr>
+                            <tr>
+                                <td>Gastos Preoperativos y Legalización</td>
+                                <td class="currency text-end">$ 6.000.000</td>
+                                <td class="text-center">5.00%</td>
+                                <td><span class="badge bg-primary">Aporte Propio</span></td>
+                                <td>Cámara de Comercio Popayán, Sayco, Bomberos, software</td>
+                            </tr>
+                            <tr>
+                                <td>Capital de Trabajo y Stock 3 Meses</td>
+                                <td class="currency text-end">$ 7.500.000</td>
+                                <td class="text-center">6.25%</td>
+                                <td><span class="badge bg-warning text-dark">Microcrédito</span></td>
+                                <td>Harina italiana, quesos caucanos y caja de maniobra</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-dark">
+                            <tr>
+                                <th>TOTAL INVERSIÓN INICIAL</th>
+                                <th class="currency text-end text-warning">$ 120.000.000</th>
+                                <th class="text-center">100.0%</th>
+                                <th colspan="2">Presupuesto Cerrado y Calzado</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 6: ESTADOS FINANCIEROS -->
+            <div class="tab-pane fade" id="tab-estados" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Paso 5: Estados Financieros Proyectados</h4>
+                    <span class="badge bg-dark">Balance | P&amp;G | Flujo de Caja</span>
+                </div>
+
+                <!-- Sub-acordeón para Estados Financieros -->
+                <div class="accordion" id="accordionFinanciero">
+                    <!-- Balance Inicial -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingBalance">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBalance">
+                                <i class="fa-solid fa-scale-unbalanced-flip text-success me-2"></i> Balance General Inicial de Apertura (Día 1)
+                            </button>
+                        </h2>
+                        <div id="collapseBalance" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-primary text-white fw-bold">TOTAL ACTIVOS: $ 126.000.000 COP</div>
+                                            <div class="card-body p-0">
+                                                <table class="table table-sm mb-0">
+                                                    <tr class="table-light"><th colspan="2">Activo Corriente: $ 16.000.000 COP</th></tr>
+                                                    <tr><td>• Efectivo y Bancos</td><td class="currency text-end">$6.000.000</td></tr>
+                                                    <tr><td>• Inventarios Iniciales</td><td class="currency text-end">$7.500.000</td></tr>
+                                                    <tr><td>• Gastos Anticipados (Pólizas)</td><td class="currency text-end">$2.500.000</td></tr>
+                                                    <tr class="table-light"><th colspan="2">Activo No Corriente: $ 110.000.000 COP</th></tr>
+                                                    <tr><td>• Maquinaria y Equipo</td><td class="currency text-end">$56.500.000</td></tr>
+                                                    <tr><td>• Adecuaciones Locativas</td><td class="currency text-end">$18.500.000</td></tr>
+                                                    <tr><td>• Muebles y Enseres</td><td class="currency text-end">$16.000.000</td></tr>
+                                                    <tr><td>• Equipos de Cómputo / TI</td><td class="currency text-end">$8.000.000</td></tr>
+                                                    <tr><td>• Moto Delivery 70°C</td><td class="currency text-end">$7.500.000</td></tr>
+                                                    <tr><td>• Software POS / Intangibles</td><td class="currency text-end">$3.500.000</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-dark text-white fw-bold">PASIVOS Y PATRIMONIO: $ 126.000.000 COP</div>
+                                            <div class="card-body p-0">
+                                                <table class="table table-sm mb-0">
+                                                    <tr class="table-light"><th colspan="2">Pasivos: $ 10.000.000 COP</th></tr>
+                                                    <tr><td>• Microcrédito Bancario Corto Plazo</td><td class="currency text-end">$4.945.000</td></tr>
+                                                    <tr><td>• Microcrédito Bancario Largo Plazo</td><td class="currency text-end">$5.055.000</td></tr>
+                                                    <tr class="table-light"><th colspan="2">Patrimonio Neto: $ 116.000.000 COP</th></tr>
+                                                    <tr><td>• Fondo Emprender SENA</td><td class="currency text-end">$80.000.000</td></tr>
+                                                    <tr><td>• Aporte Karen Campo</td><td class="currency text-end">$30.000.000</td></tr>
+                                                    <tr><td>• Gastos Preoperativos Capitalizados</td><td class="currency text-end">$6.000.000</td></tr>
+                                                    <tr class="table-success"><th class="text-success">Diferencia Contable</th><th class="currency text-end text-success">$ 0 COP (Cuadrado)</th></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estado de Resultados -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingPG">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePG">
+                                <i class="fa-solid fa-file-invoice-dollar text-primary me-2"></i> Estado de Resultados Proyectado a 12 Meses (P&amp;G Año 1)
+                            </button>
+                        </h2>
+                        <div id="collapsePG" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-sm align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Rubro Financiero</th>
+                                                <th>Monto Anual (COP)</th>
+                                                <th>% Sobre Ventas</th>
+                                                <th>Detalle Operativo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-primary fw-bold">
+                                                <td>(+) Ingresos Operacionales Totales</td>
+                                                <td class="currency text-end">$ 310.500.000</td>
+                                                <td class="text-center">100.0%</td>
+                                                <td>6.760 pizzas + adicionales + catering + mayorista</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Costo de Mercancía Vendida (CMV)</td>
+                                                <td class="currency text-end">$ 94.200.000</td>
+                                                <td class="text-center">30.34%</td>
+                                                <td>Harinas, quesos caucanos, pomodoro, empaques</td>
+                                            </tr>
+                                            <tr class="table-success fw-bold">
+                                                <td>(=) UTILIDAD BRUTA</td>
+                                                <td class="currency text-end text-success">$ 216.300.000</td>
+                                                <td class="text-center text-success">69.66%</td>
+                                                <td>Margen bruto disponible para carga fija</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Gastos de Personal (4 Empleos Formales)</td>
+                                                <td class="currency text-end">$ 131.864.952</td>
+                                                <td class="text-center">42.47%</td>
+                                                <td>Nómina básica, prestaciones de ley y seguridad social</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Arriendo Local Centro Histórico</td>
+                                                <td class="currency text-end">$ 30.000.000</td>
+                                                <td class="text-center">9.66%</td>
+                                                <td>$2.500.000 mensuales canon fijo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Servicios Públicos y Leña Certificada</td>
+                                                <td class="currency text-end">$ 14.400.000</td>
+                                                <td class="text-center">4.64%</td>
+                                                <td>Agua, luz trifásica, gas, leña eucalipto seco, internet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Depreciación Activos Fijos</td>
+                                                <td class="currency text-end">$ 10.350.000</td>
+                                                <td class="text-center">3.33%</td>
+                                                <td>Método línea recta a 5 y 10 años</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Publicidad Digital y Contabilidad</td>
+                                                <td class="currency text-end">$ 7.800.000</td>
+                                                <td class="text-center">2.51%</td>
+                                                <td>Pauta Meta/Google ($3.6M) + Contador DIAN ($4.2M)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Mantenimiento, Aseo y Fumigación</td>
+                                                <td class="currency text-end">$ 2.400.000</td>
+                                                <td class="text-center">0.77%</td>
+                                                <td>Protocolos higiénico-sanitarios Invima</td>
+                                            </tr>
+                                            <tr class="table-info fw-bold">
+                                                <td>(=) UTILIDAD OPERACIONAL (EBIT)</td>
+                                                <td class="currency text-end text-primary">$ 19.485.048</td>
+                                                <td class="text-center text-primary">6.28%</td>
+                                                <td>EBITDA: $29.835.048 COP (9.61%)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Gastos Financieros (Intereses Microcrédito)</td>
+                                                <td class="currency text-end">$ 1.026.000</td>
+                                                <td class="text-center">0.33%</td>
+                                                <td>Intereses sobre saldo crédito Banco Agrario</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(=) Utilidad Antes de Impuestos (UAI)</td>
+                                                <td class="currency text-end">$ 18.459.048</td>
+                                                <td class="text-center">5.95%</td>
+                                                <td>Base gravable Régimen Simple de Tributación</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(-) Impuesto de Renta Simple (20%)</td>
+                                                <td class="currency text-end">$ 3.691.810</td>
+                                                <td class="text-center">1.19%</td>
+                                                <td>Provisión tributaria microempresa</td>
+                                            </tr>
+                                            <tr class="table-success fw-bold fs-6">
+                                                <td>(=) UTILIDAD NETA DEL EJERCICIO</td>
+                                                <td class="currency text-end text-success">$ 14.767.238</td>
+                                                <td class="text-center text-success">4.76%</td>
+                                                <td>Excedente neto para reservas y reinversión</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flujo de Caja -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFlujo">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlujo">
+                                <i class="fa-solid fa-money-bill-trend-up text-warning me-2"></i> Flujo de Caja y Tesorería a 12 Meses
+                            </button>
+                        </h2>
+                        <div id="collapseFlujo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p class="small text-muted mb-3">
+                                    El flujo de caja mensual evidencia total liquidez sin baches de tesorería: el saldo de caja parte de $6.000.000 COP en el mes 1 y finaliza en <strong>$29.871.048 COP</strong> al mes 12.
+                                </p>
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <canvas id="chartFlujoCaja" height="120"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 7: SIMULADOR DE BREAK-EVEN -->
+            <div class="tab-pane fade" id="tab-simulador" role="tabpanel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-success mb-0">Simulador Interactivo de Punto de Equilibrio</h4>
+                    <span class="badge bg-primary">Herramienta en Vivo</span>
+                </div>
+                <p class="text-muted">
+                    Modifique los parámetros operativos para calcular en tiempo real el umbral mínimo de unidades y ventas que garantizan la absorción de los costos fijos.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="sim-box">
+                            <h6 class="fw-bold text-dark mb-3"><i class="fa-solid fa-sliders text-primary me-2"></i> Parámetros de Simulación</h6>
+                            
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">Costos Fijos Anuales (COP):</label>
+                                <input type="number" id="inputCostosFijos" class="form-control" value="197840952" step="500000">
+                                <div class="form-text small">Nómina ($131.8M) + Arriendo + Servicios + Depreciación</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">Precio Promedio Ponderado por Pizza (COP):</label>
+                                <input type="number" id="inputPrecioPromedio" class="form-control" value="40000" step="1000">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">Costo Variable Promedio por Pizza (COP):</label>
+                                <input type="number" id="inputCostoVariable" class="form-control" value="12134" step="500">
+                                <div class="form-text small">Materia prima directa (30.34% del precio)</div>
+                            </div>
+
+                            <button onclick="calcularSimulacion()" class="btn btn-primary w-100 fw-bold">
+                                <i class="fa-solid fa-arrows-rotate me-1"></i> Recalcular Punto de Equilibrio
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="p-4 bg-white rounded-3 border h-100">
+                            <h6 class="fw-bold text-success mb-3"><i class="fa-solid fa-bullseye text-danger me-2"></i> Resultados del Punto de Equilibrio</h6>
+
+                            <div class="row g-3 text-center mb-4">
+                                <div class="col-sm-4">
+                                    <div class="p-3 bg-light rounded-2 border">
+                                        <div class="small text-muted fw-bold">Punto Equilibrio (Pesos)</div>
+                                        <div id="resBEPPesos" class="fs-5 fw-bold text-primary">$ 283.846.416</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="p-3 bg-light rounded-2 border">
+                                        <div class="small text-muted fw-bold">Unidades al Año</div>
+                                        <div id="resBEPUnidades" class="fs-5 fw-bold text-danger">7.096 pizzas</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="p-3 bg-light rounded-2 border">
+                                        <div class="small text-muted fw-bold">Pizzas por Día</div>
+                                        <div id="resBEPDiario" class="fs-5 fw-bold text-success">19.7 unidades</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success small mb-0">
+                                <strong>Conclusión Operativa:</strong> Considerando 360 días hábiles de atención al público, Bella Italia solo necesita despachar <strong>20 pizzas diarias</strong> para cubrir el 100% de su nómina formal (4 colaboradores), arriendo en el Centro Histórico, insumos y obligaciones financieras. Con la venta proyectada de 35 pizzas/día, la pizzería opera en una sólida zona de rentabilidad con un margen de seguridad del <strong>8.58%</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-bold">Servicio Nacional de Aprendizaje - SENA | Regional Cauca</p>
+            <p class="small text-muted mb-2">Centro de Teleinformática y Producción Industrial (CTPI) • Tecnólogo ADSO • Ficha 3186681</p>
+            <p class="small text-light mb-0">Aprendiz: <strong>Karen Yuliana Campo</strong> • Evidencia: <code>GA10-240201529-AA3-EV01: Plan de negocio</code></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts de Gráficos y Simulador -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart Fuentes
+            const ctxFuentes = document.getElementById('chartFuentes');
+            if (ctxFuentes) {
+                new Chart(ctxFuentes, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Fondo Emprender SENA ($80M)', 'Aporte Karen Campo ($30M)', 'Microcrédito Bancario ($10M)'],
+                        datasets: [{
+                            data: [80, 30, 10],
+                            backgroundColor: ['#047857', '#1E40AF', '#D97706'],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+            }
+
+            // Chart Ingresos
+            const ctxIngresos = document.getElementById('chartIngresos');
+            if (ctxIngresos) {
+                new Chart(ctxIngresos, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Pizza Trad.', 'Pizza Espec.', 'Bebidas', 'Acompañ.', 'Catering', 'Mayorista'],
+                        datasets: [
+                            {
+                                label: 'Ingresos Totales (M$)',
+                                data: [121.6, 100.8, 29.75, 25.2, 21.6, 11.55],
+                                backgroundColor: '#10B981'
+                            },
+                            {
+                                label: 'Costo Insumos (M$)',
+                                data: [36.48, 31.25, 8.93, 7.56, 7.92, 4.41],
+                                backgroundColor: '#EF4444'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { position: 'bottom' } },
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+            }
+
+            // Chart Flujo Caja
+            const ctxFlujo = document.getElementById('chartFlujoCaja');
+            if (ctxFlujo) {
+                new Chart(ctxFlujo, {
+                    type: 'line',
+                    data: {
+                        labels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12'],
+                        datasets: [{
+                            label: 'Saldo Acumulado en Caja (COP)',
+                            data: [5980000, 6850000, 8100000, 9950000, 12300000, 16100000, 18400000, 20700000, 23000000, 25800000, 28100000, 29871048],
+                            borderColor: '#047857',
+                            backgroundColor: 'rgba(4, 120, 87, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { position: 'bottom' } }
+                    }
+                });
+            }
+        });
+
+        // Función del Simulador
+        function calcularSimulacion() {
+            const cf = parseFloat(document.getElementById('inputCostosFijos').value);
+            const p = parseFloat(document.getElementById('inputPrecioPromedio').value);
+            const cv = parseFloat(document.getElementById('inputCostoVariable').value);
+
+            const mcu = p - cv;
+            const pctMargen = mcu / p;
+            const bepPesos = cf / pctMargen;
+            const bepUnidades = cf / mcu;
+            const bepDiario = bepUnidades / 360;
+
+            document.getElementById('resBEPPesos').innerText = '$ ' + Math.round(bepPesos).toLocaleString('es-CO');
+            document.getElementById('resBEPUnidades').innerText = Math.round(bepUnidades).toLocaleString('es-CO') + ' pizzas';
+            document.getElementById('resBEPDiario').innerText = bepDiario.toFixed(1) + ' unidades';
+        }
+    </script>
+</body>
+</html>

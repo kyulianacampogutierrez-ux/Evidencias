@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Plan de Negocio y Estados Financieros - Pizzería Bella Italia Popayán</Title>
+  <Subject>Evidencia GA10-240201529-AA3-EV01</Subject>
+  <Author>Karen Yuliana Campo</Author>
+  <Company>SENA CTPI Popayán - Regional Cauca</Company>
+ </DocumentProperties>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#1E293B"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="TituloPrincipal">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="14" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#047857" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SubtituloVerde">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#065F46"/>
+   <Interior ss:Color="#D1FAE5" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#10B981"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="EncabezadoTabla">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#0F766E" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#042F2E"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#14B8A6"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="EncabezadoAzul">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#1E40AF" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#1E3A8A"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#3B82F6"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="FilaDatoTexto">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Color="#1E293B"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="FilaDatoCentro">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Color="#1E293B"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="FilaDatoMoneda">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Color="#1E293B"/>
+   <NumberFormat ss:Format="$#,##0"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="FilaDatoPorc">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="9" ss:Color="#1E293B"/>
+   <NumberFormat ss:Format="0.0%"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="FilaTotal">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Bold="1" ss:Color="#0F172A"/>
+   <Interior ss:Color="#F1F5F9" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="$#,##0"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#94A3B8"/>
+    <Border ss:Position="Bottom" ss:LineStyle="Double" ss:Weight="3" ss:Color="#0F172A"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="CardHeader">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#047857" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="CardValue">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="14" ss:Bold="1" ss:Color="#065F46"/>
+   <Interior ss:Color="#ECFDF5" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#10B981"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="01_Portada_Generalidades">
+  <Table ss:DefaultColumnWidth="100">
+   <Column ss:Width="30"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="320"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="160"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="TituloPrincipal"><Data ss:Type="String">SERVICIO NACIONAL DE APRENDIZAJE - SENA | REGIONAL CAUCA</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="SubtituloVerde"><Data ss:Type="String">CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - FICHA 3186681</Data></Cell>
+   </Row>
+   <Row ss:Height="15"/>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">PROGRAMA DE FORMACIÓN</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">COMPETENCIA</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">240201529 - Gestionar procesos propios de la cultura emprendedora y empresarial</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">ACTIVIDAD DE APRENDIZAJE</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">GA10-240201529-AA3: Establecer el modelo de negocio del emprendimiento a partir de las necesidades</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">EVIDENCIA DE APRENDIZAJE</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">GA10-240201529-AA3-EV01: Plan de negocio (Estados Financieros Proyectados)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">APRENDIZ</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Karen Yuliana Campo - C.C. 1.061.789.012</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">EMPRENDIMIENTO</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Pizzería Gourmet Bella Italia Popayán</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">UBICACIÓN DEL PROYECTO</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Calle 4 # 7-45, Centro Histórico, Popayán, Cauca</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">MODELO DE FINANCIACIÓN</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Fondo Emprender SENA ($80M) + Recursos Propios ($30M) + Microcrédito ($10M)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">FECHA DE PRESENTACIÓN</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Noviembre 2026</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="SubtituloVerde"><Data ss:Type="String">RESUMEN EJECUTIVO Y PARÁMETROS MACROECONÓMICOS DEL PROYECTO</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CONCEPTO / INDICADOR</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VALOR PROYECTADO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">PARTICIPACIÓN</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">OBSERVACIÓN TÉCNICA</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital Total Inicial Requerido</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 120.000.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">100.0%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Inversión en activos, adecuaciones y capital de trabajo</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Aporte Fondo Emprender SENA</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 80.000.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">66.7%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital no reembolsable condonable (4 empleos verificables)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Aporte Propio Karen Campo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 30.000.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">25.0%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ahorros y capital líquido familiar</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Microcrédito Bancario de Fomento</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 10.000.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">8.3%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Banco Agrario / Línea Joven Emprendedor 24 meses</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ventas Proyectadas Año 1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 310.500.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">6.760 pizzas + acompañamientos + catering + mayorista</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Costo Total de Ventas (CMV)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 94.200.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">30.3%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Materia prima gourmet, harinas italianas y quesos caucanos</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Margen de Contribución Total</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 216.300.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">69.7%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Margen bruto operativo para absorción de costos fijos</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Gastos de Personal Anual (4 Empleos)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 131.864.952 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">42.5%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">100% formalidad laboral: cesantías, primas, pensión, ARL</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Utilidad Neta Proyectada Año 1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 14.767.238 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">4.8%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Utilidad neta después de impuestos régimen SIMPLE (20%)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Punto de Equilibrio en Ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 283.846.416 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">91.4%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ventas mínimas para no incurrir en pérdidas operacionales</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Punto de Equilibrio en Unidades</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">7.096 Unidades/año</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">591 unidades/mes = 19.7 unidades diarias</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Retorno sobre la Inversión (ROI)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">12.31% anual</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Rentabilidad sobre capital total invertido</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Periodo de Recuperación (Payback)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">2.8 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Retorno neto mediante flujo de caja libre</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="02_Presupuesto_Ventas">
+  <Table ss:DefaultColumnWidth="90">
+   <Column ss:Width="30"/>
+   <Column ss:Width="220"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="130"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 1: PRESUPUESTO DE VENTAS, SERVICIOS Y VENTAS AL POR MAYOR (AÑO 1)</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Proyección de ingresos, costeo de materias primas, servicios de catering y ventas al por mayor B2B</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">LÍNEA DE PRODUCTO / SERVICIO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">UNIDADES AÑO 1</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">PRECIO UNITARIO (PVP)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">COSTO VAR. UNITARIO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MARGEN CONTRIB. UNIT.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">% MARGEN</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">INGRESOS TOTALES</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">COSTO VARIABLE TOTAL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MARGEN TOTAL</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Pizza Tradicional Gourmet (35cm)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">3200</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">38000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">11400</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">26600</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">121600000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">36480000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">85120000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Pizza Especial Gourmet / Trufada</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">2100</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">48000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">14880</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">33120</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.69</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">100800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">31248000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">69552000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Acompañamientos (Focaccias / Dips)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1800</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">14000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4200</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">9800</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">25200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">7560000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">17640000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Bebidas Artesanales e Italianas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">3500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2550</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">5950</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">29750000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">8925000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">20825000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Servicio Catering &amp; Horno Móvil (Eventos)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">440000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">760000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.6333</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">21600000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">7920000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">13680000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ventas Mayoristas B2B (Bases Precocidas)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">2100</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">5500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2100</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">3400</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc" ss:Formula="=RC[-1]/RC[-3]"><Data ss:Type="Number">0.6182</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-5]*RC[-4]"><Data ss:Type="Number">11550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-6]*RC[-4]"><Data ss:Type="Number">4410000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]-RC[-1]"><Data ss:Type="Number">7140000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL CONSOLIDADO AÑO 1</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-6]C:R[-1]C)"><Data ss:Type="Number">12718</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=RC[3]/RC[1]"><Data ss:Type="Number">0.6891</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-6]C:R[-1]C)"><Data ss:Type="Number">310500000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-6]C:R[-1]C)"><Data ss:Type="Number">96543000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-6]C:R[-1]C)"><Data ss:Type="Number">213957000</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="SubtituloVerde"><Data ss:Type="String">ANÁLISIS ESPECÍFICO EXIGIDO POR GUÍA DE APRENDIZAJE 10 (PÁG. 26)</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">PREGUNTA 1: ¿Cuál sería el valor de un servicio prestado?</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">En Bella Italia, el servicio no es solo venta en mostrador sino el 'Servicio de Estación Móvil y Catering para Eventos Sociales y Empresariales'. Cada servicio se cotiza en un paquete base de $1.200.000 COP para 30 comensales (15 pizzas familiares gourmet horneadas al instante con horno portátil refractario a gas/leña). Costo de materia prima e insumos: $380.000 COP + Transporte y logística: $60.000 COP = Costo variable total $440.000 COP. Margen de contribución: $760.000 COP (63.3%). Proyección: 18 eventos/año generando $21.600.000 COP de facturación de alto margen.</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">PREGUNTA 2: ¿Qué pasa si se vende al por mayor?</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Bella Italia implementa una línea mayorista B2B de bases de pizza precocidas en horno de leña ultracongeladas al vacío para hoteles, cafés y restaurantes aliados de Popayán. Mientras una pizza terminada al detal tiene un PVP de $38.000, la base precocida mayorista se vende a $5.500 COP por unidad en paquetes de 50 unidades (descuento del 31.25% sobre valor base al público). Costo variable unitario: $2.100 COP (harina de fuerza, levadura, agua filtrada, aceite oliva virgen y termoencogible). Margen unitario: $3.400 COP (61.8%).</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">IMPACTO FINANCIERO DE LA VENTA MAYORISTA</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">A) Maximiza la capacidad ociosa del horno y amasadora en horas de la mañana (9:00 am - 2:00 pm). B) Genera flujo de caja predecible y pedidos institucionales semanales. C) No requiere personal de servicio a la mesa ni vajilla. D) Aunque el margen porcentual es menor (61.8% vs 70.0%), aporta $7.140.000 COP directos de margen de contribución para absorber los costos fijos de nómina y arriendo.</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">ESTRUCTURA DE COSTOS FIJOS VS VARIABLES</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Costos Variables: Materia prima directa (harina, queso mozzarella caucano, salsa pomodoro, embutidos, albahaca), empaques ecológicos biodegradables kraft, comisiones de pasarela POS digital Wompi (2.89%). Total: $94.200.000 COP anuales. Costos Fijos: Arriendo de sede ($30M), Nómina formal ($131.86M), Servicios públicos y leña certificada ($14.4M), Depreciaciones ($10.35M), Pauta digital ($3.6M) y Asesoría contable ($4.2M). Total Costos Fijos: $197.840.952 COP.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="03_Presupuesto_Personal">
+  <Table ss:DefaultColumnWidth="95">
+   <Column ss:Width="30"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="60"/>
+   <Column ss:Width="95"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="70"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="120"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="12" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 2: PRESUPUESTO DE PERSONAL Y LIQUIDACIÓN PRESTACIONAL DE LEY (AÑO 1)</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="12" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Estructura de nómina formal para 4 colaboradores directos (Fondo Emprender SENA / Código Sustantivo del Trabajo)</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CARGO / ROL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CANT.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">SUELDO BÁSICO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">AUX. TRANSP.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CESANTÍAS (8.33%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">INT. CES. (1%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">PRIMA (8.33%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VACAC. (4.17%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">PENSIÓN (12%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">ARL (1.044%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CAJA COMP. (4%)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">COSTO MENSUAL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">COSTO ANUAL TOTAL</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maestro Pizzero Chef</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1900000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">162000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">171826</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1718</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">171826</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">79173</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">228000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">19836</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">76000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-9]:RC[-1])"><Data ss:Type="Number">2810379</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]*12"><Data ss:Type="Number">33724548</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Auxiliar Cocina y Ensamble</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1423500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">162000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">132120</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1321</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">132120</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">59317</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">170820</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">14861</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">56940</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-9]:RC[-1])"><Data ss:Type="Number">2152999</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]*12"><Data ss:Type="Number">25835988</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Domiciliario Repartidor</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1423500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">162000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">132120</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1321</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">132120</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">59317</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">170820</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">14861</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">56940</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-9]:RC[-1])"><Data ss:Type="Number">2152999</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]*12"><Data ss:Type="Number">25835988</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Administradora / Líder ADSO</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">183326</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1833</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">183326</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">91674</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">264000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">22968</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">88000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-9]:RC[-1])"><Data ss:Type="Number">3035127</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]*12"><Data ss:Type="Number">36421524</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTALES NÓMINA (4 EMPLEOS)</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">6947000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">486000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">619392</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">6193</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">619392</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">289481</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">833640</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">72526</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">277880</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">10151504</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">121818048</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="12" ss:StyleID="SubtituloVerde"><Data ss:Type="String">GASTOS ADICIONALES DE PERSONAL Y CUMPLIMIENTO CON FONDO EMPRENDER SENA</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">Dotaciones y Ropa de Trabajo (Art. 230 CST)</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 2.400.000 COP / año</Data></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">3 entregas al año para los 3 cargos operativos (filipinas ignífugas, delantales de cuero, cofias y calzado antideslizante dieléctrico).</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">Exoneración de Aportes a Salud (Ley 1607 / Art. 114-1 E.T.)</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoCentro"><Data ss:Type="String">0% aporte empleador</Data></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Las microempresas están exoneradas del 8.5% de salud sobre trabajadores que devenguen menos de 10 SMLMV.</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">Compromiso de Condonación Fondo Emprender SENA</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoCentro"><Data ss:Type="String">4 Empleos Directos Verificados</Data></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">La generación de estos 4 empleos formales en Popayán es el indicador principal para que los $80.000.000 COP sean condonados 100% por el SENA.</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">Presupuesto Anual Total de Nómina y Bienestar</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 131.864.952 COP</Data></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Consolida nómina básica ($83.3M), auxilio transporte ($5.8M), prestaciones ($26.4M), parafiscales ($14.0M) y dotaciones ($2.4M).</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="04_Activos_Fijos_Depreciacion">
+  <Table ss:DefaultColumnWidth="95">
+   <Column ss:Width="30"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="220"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="110"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 3: ESTIMACIÓN DE ACTIVOS FIJOS Y PLAN DE DEPRECIACIÓN ANUAL</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="8" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Cuantificación de infraestructura operativa, tecnología y depreciación por línea recta (NIC 16)</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CATEGORÍA</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">DESCRIPCIÓN DEL ACTIVO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CANT.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VALOR UNITARIO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VALOR TOTAL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VIDA ÚTIL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">% DEPREC.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">DEPREC. ANUAL</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">DEPREC. MENSUAL</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Horno Napolitano Refractario de Leña/Gas Híbrido</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">24000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">24000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">2400000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">200000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Amasadora Espiral Industrial 25 Kg Dos Velocidades</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">8500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">850000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">70833</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Mesa Refrigerada Pizza 3 Puertas con Vitrina GN</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">9200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">9200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">920000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">76667</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Refrigerador Vertical Acero Inox 2 Cuerpos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">6500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">650000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">54167</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Rebanadora de Jamones y Laminadora de Masa</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">3800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">3800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">380000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">31667</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Campana Extractora y Sistema de Filtración Humos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">4500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">450000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">37500</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cómputo y TI</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Servidor Local POS Touch All-in-One + Cajón Dinero</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">4200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">840000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">70000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cómputo y TI</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Tabletas Android Rugerizadas Comanderas Meseros</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">900000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">360000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">30000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cómputo y TI</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Impresoras Térmicas Red Comandas Cocina y Factura</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">600000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">240000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">20000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cómputo y TI</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Router MikroTik Balanceador Dual-WAN + WiFi Clientes</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">160000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">13333</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles y Enseres</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Juego de 8 Mesas y 32 Sillas Madera Estilo Trattoria</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">8000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">800000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">66667</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles y Enseres</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Barra de Despacho y Vitrina Mostrador Clientes</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">250000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">20833</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles y Enseres</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Estanterías Acero Inox para Fermentación y Almacén</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">2000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">16667</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles y Enseres</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Menaje Completo (Platos pizza, cubiertos, palas leña)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">3500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">3500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">10 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">29167</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Transporte y Logística</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Motocicleta 125cc con Baúl Térmico Calefactado 70°C</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-2]*RC[-1]"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-3]*RC[-1]"><Data ss:Type="Number">1500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=RC[-1]/12"><Data ss:Type="Number">125000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="FilaTotal"><Data ss:Type="String">SUBTOTAL ACTIVOS DEPRECIABLES</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-15]C:R[-1]C)"><Data ss:Type="Number">88000000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-15]C:R[-1]C)"><Data ss:Type="Number">10350000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-15]C:R[-1]C)"><Data ss:Type="Number">862501</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Adecuaciones Locativas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ductería chimenea, redes trifásicas, gas y enchapes sanitarios</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">18500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">18500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">Amort. 5 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.20</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">3700000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">308333</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL INVERSIÓN EN PLANTA Y EQUIPO + ADECUACIONES</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">106500000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">-</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">14050000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">1170834</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="05_Capital_Financiacion">
+  <Table ss:DefaultColumnWidth="100">
+   <Column ss:Width="30"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="260"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 4: CAPITAL INICIAL Y FUENTES DE FINANCIACIÓN (FONDO EMPRENDER)</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Estructura financiera de arranque: $120.000.000 COP distribuidos en capital semilla, propio y bancario</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">FUENTE DE FINANCIACIÓN</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MONTO APORTADO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">% PART.</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CONDICIONES / PLAZO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">DESTINACIÓN EN EL PROYECTO</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Fondo Emprender SENA</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">80000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.6667</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital semilla condonable (4 empleos)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria, hornos, equipos de cocina, TI y adecuaciones locativas</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Aporte Propio Karen Campo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">30000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Patrimonio propio / ahorros</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles, menaje, gastos preoperativos, registro mercantil y licencias</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Microcrédito Banco Agrario</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.0833</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">24 meses, tasa 1.2% MV ($497k/mes)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Fondo de contingencia y capital de trabajo operativo inicial</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL CAPITAL DE INVERSIÓN</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-3]C:R[-1]C)"><Data ss:Type="Number">120000000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-3]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">100.0% Financiado</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Presupuesto Cerrado y Equilibrado</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="SubtituloVerde"><Data ss:Type="String">DISTRIBUCIÓN Y DESTINACIÓN DEL CAPITAL INICIAL (USO DE RECURSOS)</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo de Producción</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">56500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.4708</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Horno napolitano, amasadora, refrigeradores, laminadora</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Adecuaciones Locativas y Filtros Chimenea</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">18500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1542</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Extracción de humos, acometidas de gas y sanitarias</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles, Enseres y Menaje de Trattoria</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">16000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.1333</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Mesas, sillas teca, vitrina de atención, barra y menaje</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Tecnología, POS y Red Gigabit</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.0667</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Servidor POS touch, tabletas comanderas, impresoras de cocina</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Motocicleta 125cc con Baúl Térmico</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.0625</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Flota de entrega rápida para domicilios directos a 70°C</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Gastos Preoperativos y Formalización Legal</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6000000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.05</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cámara de Comercio Popayán, RUES, Bomberos, Sayco, Invima</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital de Trabajo y Stock Inicial 3 Meses</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoPorc"><Data ss:Type="Number">0.0625</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Harina de fuerza, mozzarella caucano, pomodoro y caja de seguridad</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL USOS DE CAPITAL</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">120000000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="FilaTotal"><Data ss:Type="String">Balance de Inversión 100% Calzado</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="06_Balance_General_Inicial">
+  <Table ss:DefaultColumnWidth="110">
+   <Column ss:Width="30"/>
+   <Column ss:Width="240"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="40"/>
+   <Column ss:Width="240"/>
+   <Column ss:Width="130"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="TituloPrincipal"><Data ss:Type="String">BALANCE GENERAL DE APERTURA (DÍA 1 DE OPERACIÓN)</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Pizzería Gourmet Bella Italia Popayán | NIT 901.876.543-1 | Karen Yuliana Campo</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoAzul"><Data ss:Type="String">ACTIVOS</Data></Cell>
+    <Cell ss:StyleID="EncabezadoAzul"><Data ss:Type="String">VALOR COP</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">PASIVOS Y PATRIMONIO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VALOR COP</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="SubtituloVerde"><Data ss:Type="String">ACTIVO CORRIENTE</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="SubtituloVerde"><Data ss:Type="String">PASIVO CORRIENTE</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"/>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Efectivo y Equivalentes de Efectivo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Obligaciones Bancarias (Porción Corto Plazo)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4945000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Inventarios Iniciales de Materias Primas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Otras Cuentas por Pagar de Apertura</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Gastos Pagados por Anticipado (Seguros/Pólizas)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Total Pasivo Corriente</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">4945000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">Total Activo Corriente</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">16000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="SubtituloVerde"><Data ss:Type="String">PASIVO NO CORRIENTE</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"/>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="SubtituloVerde"><Data ss:Type="String">ACTIVO NO CORRIENTE</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Obligaciones Bancarias a Largo Plazo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">5055000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Maquinaria y Equipo de Cocina Industrial</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">56500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">Total Pasivo No Corriente</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">5055000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Adecuaciones Locativas e Instalaciones</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">18500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL PASIVOS DE APERTURA</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">10000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Muebles, Enseres y Menaje de Restaurante</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">16000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Equipos de Cómputo, POS y Redes</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="SubtituloVerde"><Data ss:Type="String">PATRIMONIO DE APERTURA</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"/>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Flota y Equipo de Transporte (Motocicleta)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital Semilla Fondo Emprender SENA</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">80000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Activos Intangibles (Software POS y Licencias)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">3500000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Capital Propio Emprendedora Karen Campo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">30000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">Total Activo No Corriente</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">110000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Aportes de Capital Preoperativo</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="String">TOTAL PATRIMONIO DE APERTURA</Data></Cell>
+    <Cell ss:StyleID="FilaTotal"><Data ss:Type="Number">116000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="CardHeader"><Data ss:Type="String">TOTAL ACTIVOS DE APERTURA</Data></Cell>
+    <Cell ss:StyleID="CardValue"><Data ss:Type="Number">126000000</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="CardHeader"><Data ss:Type="String">TOTAL PASIVO + PATRIMONIO</Data></Cell>
+    <Cell ss:StyleID="CardValue"><Data ss:Type="Number">126000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="4" ss:StyleID="SubtituloVerde"><Data ss:Type="String">VERIFICACIÓN DE LA ECUACIÓN PATRIMONIAL FUNDAMENTAL</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">ECUACIÓN CONTABLE</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:MergeAcross="1" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">ESTADO DE CUADRE</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="1" ss:StyleID="FilaDatoCentro"><Data ss:Type="String">ACTIVO ($126M) = PASIVO ($10M) + PATRIMONIO ($116M)</Data></Cell>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:MergeAcross="1" ss:StyleID="CardValue"><Data ss:Type="String">CUADRE PERFECTO: DIFERENCIA $0 COP</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="07_Estado_Resultados_12M">
+  <Table ss:DefaultColumnWidth="85">
+   <Column ss:Width="30"/>
+   <Column ss:Width="230"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="110"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="13" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 5: ESTADO DE RESULTADOS PROYECTADO A 12 MESES (P&amp;G AÑO 1)</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="13" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Evolución mensual de ventas, costos variables, gastos operacionales, EBITDA y utilidad neta</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">RUBRO / CONCEPTO FINANCIERO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 1</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 2</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 3</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 4</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 5</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 6</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 7</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 8</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 9</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 10</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 11</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 12</Data></Cell>
+    <Cell ss:StyleID="EncabezadoAzul"><Data ss:Type="String">TOTAL AÑO 1</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(+) Ingresos Operacionales (Ventas)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">20182500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">21735000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">23287500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">24840000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">29497500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">27945000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">29497500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">27945000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">310500000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Costo de Mercancía Vendida (CMV)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6123000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6594000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7065000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7536000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8949000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8478000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8949000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8478000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">94200000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="SubtituloVerde"><Data ss:Type="String">(=) UTILIDAD BRUTA</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">14059500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">15141000</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">16222500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">17304000</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">18385500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">20548500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">18385500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">18385500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">18385500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">19467000</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">20548500</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">19467000</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">216300000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Gastos de Personal (Nómina 4 empleados)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">131864952</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Arriendo Local Centro Histórico</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">30000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Servicios Públicos y Leña Certificada</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">1200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">14400000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Publicidad Digital y Marketing Local</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">300000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">3600000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Depreciación de Activos Fijos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">862500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">10350000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Asesoría Contable y Software Tributario</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">4200000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Mantenimiento, Aseo y Fumigación</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">2400000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaTotal"><Data ss:Type="String">(=) TOTAL GASTOS OPERACIONALES</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">16401246</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(R[-7]C:R[-1]C)"><Data ss:Type="Number">196814952</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">(=) UTILIDAD OPERACIONAL (EBIT)</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-9]C-R[-1]C"><Data ss:Type="Number">19485048</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Gastos Financieros (Interés Microcrédito)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">115000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">110000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">105000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">95000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">90000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">85000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">80000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">75000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">65000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">56000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">50000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">1026000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="SubtituloVerde"><Data ss:Type="String">(=) UTILIDAD ANTES DE IMPUESTOS (UAI)</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">18459048</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Provisión Impuestos Régimen SIMPLE (20%)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=IF(R[-1]C>0,ROUND(R[-1]C*0.20,0),0)"/>
+    <Cell ss:StyleID="FilaDatoMoneda" ss:Formula="=ROUND(R[-1]C*0.20,0)"><Data ss:Type="Number">3691810</Data></Cell>
+   </Row>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="CardHeader"><Data ss:Type="String">(=) UTILIDAD NETA DEL EJERCICIO</Data></Cell>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">14767238</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="08_Flujo_Caja_12M">
+  <Table ss:DefaultColumnWidth="90">
+   <Column ss:Width="30"/>
+   <Column ss:Width="230"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="110"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="13" ss:StyleID="TituloPrincipal"><Data ss:Type="String">PASO 5: FLUJO DE CAJA Y TESORERÍA PROYECTADA A 12 MESES</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="13" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Monitoreo de liquidez, recaudo en efectivo/tarjetas y saldo acumulado sin déficit de tesorería</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">CONCEPTO DE TESORERÍA</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 1</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 2</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 3</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 4</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 5</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 6</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 7</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 8</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 9</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 10</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 11</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">MES 12</Data></Cell>
+    <Cell ss:StyleID="EncabezadoAzul"><Data ss:Type="String">TOTAL AÑO 1</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="SubtituloVerde"><Data ss:Type="String">SALDO INICIAL DE EFECTIVO</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde"><Data ss:Type="Number">6000000</Data></Cell>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde" ss:Formula="=R[7]C[-1]"/>
+    <Cell ss:StyleID="SubtituloVerde"><Data ss:Type="Number">6000000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(+) Recaudo Ventas de Contado y Tarjeta/POS</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">20182500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">21735000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">23287500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">24840000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">29497500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">26392500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">27945000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">29497500</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">27945000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">310500000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Pago Materias Primas e Insumos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6123000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">6594000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7065000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">7536000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8949000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8007000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8478000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8949000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">8478000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">94200000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Pago Nómina y Seguridad Social</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">10988746</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">131864952</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Arriendo, Servicios, Pauta y Contabilidad</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">4550000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">54600000</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">(-) Cuota Microcrédito Bancario</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaDatoMoneda"><Data ss:Type="Number">497000</Data></Cell>
+    <Cell ss:StyleID="FilaTotal" ss:Formula="=SUM(RC[-12]:RC[-1])"><Data ss:Type="Number">5964000</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">(=) FLUJO NETO DEL PERIODO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"/>
+    <Cell ss:StyleID="EncabezadoTabla" ss:Formula="=R[-4]C-SUM(R[-3]C:R[-1]C)"><Data ss:Type="Number">23871048</Data></Cell>
+   </Row>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="CardHeader"><Data ss:Type="String">(=) SALDO FINAL DE CAJA ACUMULADO</Data></Cell>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=R[-6]C+R[-1]C"/>
+    <Cell ss:StyleID="CardValue" ss:Formula="=RC[-1]"><Data ss:Type="Number">29871048</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="09_Indicadores_Equilibrio">
+  <Table ss:DefaultColumnWidth="110">
+   <Column ss:Width="30"/>
+   <Column ss:Width="220"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="260"/>
+   <Row ss:Height="25">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="TituloPrincipal"><Data ss:Type="String">DASHBOARD DE INDICADORES FINANCIEROS Y PUNTO DE EQUILIBRIO</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="SubtituloVerde"><Data ss:Type="String">Evaluación de rentabilidad, umbral de equilibrio, ROI, payback y viabilidad Fondo Emprender</Data></Cell>
+   </Row>
+   <Row ss:Height="10"/>
+   <Row ss:Height="24">
+    <Cell ss:Index="2" ss:StyleID="EncabezadoTabla"><Data ss:Type="String">INDICADOR FINANCIERO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">VALOR CALCULADO</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">BENCHMARK / META</Data></Cell>
+    <Cell ss:StyleID="EncabezadoTabla"><Data ss:Type="String">INTERPRETACIÓN DE RESULTADOS</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ventas Totales Proyectadas Año 1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 310.500.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; $280M COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Ingresos comerciales suficientes para absorber la operación</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Costos Variables Totales (CMV)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 94.200.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&lt; 35% ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">30.34% de los ingresos, excelente eficiencia en costeo de materias primas</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Margen de Contribución Total</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 216.300.000 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; 65% ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">69.66% de margen bruto para responder por la carga fija empresarial</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Costos Fijos Operacionales Totales</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 197.840.952 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">Control estricto</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Incluye nómina formal ($131.86M), arriendo, servicios, depreciaciones e intereses</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Punto de Equilibrio en Pesos (Break-Even)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 283.846.416 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&lt; Ventas Totales</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Monto mínimo en pesos requerido para no perder dinero en el ejercicio</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Punto de Equilibrio en Unidades (Anual)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">7.096 Unidades</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&lt; Unidades totales</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Equivale a 591 unidades promedio al mes</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Punto de Equilibrio en Unidades (Diario)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">19.7 Unidades / día</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&lt; 35 pizzas/día</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Con solo 20 pizzas vendidas al día el restaurante cubre el 100% de costos y nómina</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Margen de Seguridad de Ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">8.58%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; 5%</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Las ventas proyectadas superan el punto de equilibrio en $26.653.584 COP</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Utilidad Operacional (EBIT)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 19.485.048 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; 5% ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Margen operacional del 6.28% en año de puesta en marcha</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">EBITDA Año 1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 29.835.048 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; 9% ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Flujo operativo bruto del 9.61% antes de depreciaciones y financiamiento</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Utilidad Neta Año 1</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">$ 14.767.238 COP</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; 4% ventas</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Rentabilidad final limpia para reserva legal y reinversión tecnológica</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Retorno sobre la Inversión (ROI)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">12.31% anual</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&gt; Tasa DTF (10%)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Rentabilidad superior al costo de oportunidad del mercado de capitales</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Período de Recuperación (Payback)</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">2.8 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">&lt; 4 años</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Recuperación completa del capital mediante flujo de caja operativo</Data></Cell>
+   </Row>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Generación de Empleo Directo Formal</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">4 Empleos Directos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoCentro"><Data ss:Type="String">Meta: 4 Empleos</Data></Cell>
+    <Cell ss:StyleID="FilaDatoTexto"><Data ss:Type="String">Cumplimiento al 100% de la meta para condonación total de $80M Fondo Emprender</Data></Cell>
+   </Row>
+   <Row ss:Height="20"/>
+   <Row ss:Height="22">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="SubtituloVerde"><Data ss:Type="String">SÍNTESIS DE VIABILIDAD PARA COMITÉ DE EVALUACIÓN FONDO EMPRENDER SENA</Data></Cell>
+   </Row>
+   <Row ss:Height="35">
+    <Cell ss:Index="2" ss:MergeAcross="3" ss:StyleID="CardValue"><Data ss:Type="String">PROYECTO FINANCIERAMENTE VIABLE, SOSTENIBLE Y APTO PARA CONDONACIÓN DEL 100%</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  sena-plan-negocio-web:
+    image: httpd:alpine
+    container_name: sena-plan-negocio-web
+    restart: always
+    ports:
+      - "8102:80"
+    volumes:
+      - ../sitio_plan_negocio:/usr/local/apache2/htdocs:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:80/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - sena_plan_negocio_net
+
+networks:
+  sena_plan_negocio_net:
+    driver: bridge

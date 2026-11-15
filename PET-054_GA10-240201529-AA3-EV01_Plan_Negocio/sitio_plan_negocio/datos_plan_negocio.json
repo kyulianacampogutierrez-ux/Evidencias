@@ -1,0 +1,198 @@
+{
+  "proyecto": {
+    "nombre": "Pizzería Gourmet Bella Italia Popayán",
+    "aprendiz": "Karen Yuliana Campo",
+    "ficha": "3186681",
+    "programa": "Tecnólogo en Análisis y Desarrollo de Software (ADSO)",
+    "centro": "Centro de Teleinformática y Producción Industrial (CTPI)",
+    "regional": "Regional Cauca",
+    "competencia": "240201529 - Gestionar procesos propios de la cultura emprendedora y empresarial",
+    "actividad": "GA10-240201529-AA3 - Establecer el modelo de negocio del emprendimiento a partir de las necesidades identificadas",
+    "evidencia": "GA10-240201529-AA3-EV01 - Plan de negocio",
+    "ubicacion": "Calle 4 # 7-45, Centro Histórico de Popayán, Cauca"
+  },
+  "capital_inicial": {
+    "total_requerido": 120000000,
+    "fuentes": [
+      {
+        "fuente": "Fondo Emprender SENA",
+        "monto": 80000000,
+        "porcentaje": 66.67,
+        "tipo": "Capital Semilla No Reembolsable (Condonable)",
+        "condicion": "Generación y verificación de 4 empleos directos formales"
+      },
+      {
+        "fuente": "Aporte Propio Karen Campo",
+        "monto": 30000000,
+        "porcentaje": 25.00,
+        "tipo": "Capital Propio Líquido",
+        "condicion": "Ahorros y capital familiar invertido en la empresa"
+      },
+      {
+        "fuente": "Microcrédito Banco Agrario (Joven Emprendedor)",
+        "monto": 10000000,
+        "porcentaje": 8.33,
+        "tipo": "Crédito Bancario de Fomento",
+        "condicion": "Plazo 24 meses, Tasa 1.2% MV, Cuota mensual $497.000 COP"
+      }
+    ],
+    "usos": [
+      {"concepto": "Maquinaria y Equipo Industrial", "monto": 56500000, "porcentaje": 47.08},
+      {"concepto": "Adecuaciones Locativas y Filtros", "monto": 18500000, "porcentaje": 15.42},
+      {"concepto": "Muebles, Enseres y Menaje", "monto": 16000000, "porcentaje": 13.33},
+      {"concepto": "Tecnología, POS y Red Gigabit", "monto": 8000000, "porcentaje": 6.67},
+      {"concepto": "Motocicleta 125cc con Baúl Térmico 70°C", "monto": 7500000, "porcentaje": 6.25},
+      {"concepto": "Gastos Preoperativos y Formalización", "monto": 6000000, "porcentaje": 5.00},
+      {"concepto": "Capital de Trabajo y Stock 3 Meses", "monto": 7500000, "porcentaje": 6.25}
+    ]
+  },
+  "presupuesto_ventas": {
+    "total_anual": 310500000,
+    "costo_variable_total": 94200000,
+    "margen_contribucion_total": 216300000,
+    "porcentaje_margen_contribucion": 69.66,
+    "lineas": [
+      {
+        "nombre": "Pizza Tradicional Gourmet (35cm)",
+        "unidades": 3200,
+        "precio_unitario": 38000,
+        "costo_unitario": 11400,
+        "margen_unitario": 26600,
+        "pct_margen": 70.0,
+        "ingresos": 121600000
+      },
+      {
+        "nombre": "Pizza Especial Gourmet / Trufada",
+        "unidades": 2100,
+        "precio_unitario": 48000,
+        "costo_unitario": 14880,
+        "margen_unitario": 33120,
+        "pct_margen": 69.0,
+        "ingresos": 100800000
+      },
+      {
+        "nombre": "Acompañamientos (Focaccias / Dips)",
+        "unidades": 1800,
+        "precio_unitario": 14000,
+        "costo_unitario": 4200,
+        "margen_unitario": 9800,
+        "pct_margen": 70.0,
+        "ingresos": 25200000
+      },
+      {
+        "nombre": "Bebidas Artesanales e Italianas",
+        "unidades": 3500,
+        "precio_unitario": 8500,
+        "costo_unitario": 2550,
+        "margen_unitario": 5950,
+        "pct_margen": 70.0,
+        "ingresos": 29750000
+      },
+      {
+        "nombre": "Servicio Catering & Horno Móvil (Eventos)",
+        "unidades": 18,
+        "precio_unitario": 1200000,
+        "costo_unitario": 440000,
+        "margen_unitario": 760000,
+        "pct_margen": 63.33,
+        "ingresos": 21600000
+      },
+      {
+        "nombre": "Ventas Mayoristas B2B (Bases Precocidas)",
+        "unidades": 2100,
+        "precio_unitario": 5500,
+        "costo_unitario": 2100,
+        "margen_unitario": 3400,
+        "pct_margen": 61.82,
+        "ingresos": 11550000
+      }
+    ],
+    "analisis_servicio": {
+      "pregunta": "¿Cuál sería el valor de un servicio prestado?",
+      "servicio": "Servicio de Catering & Horno Móvil para Eventos Sociales y Corporativos",
+      "precio_paquete": 1200000,
+      "costo_variable": 440000,
+      "margen_contribucion": 760000,
+      "descripcion": "Paquete base para 30 comensales que incluye estación móvil de pizza gourmet en vivo con horno napolitano transportable, 1 maestro pizzero, 1 asistente, 15 pizzas familiares a elección y vajilla biodegradable."
+    },
+    "analisis_mayorista": {
+      "pregunta": "¿Qué pasa si se vende al por mayor?",
+      "producto": "Bases de pizza precocidas en horno de leña ultracongeladas al vacío",
+      "precio_unitario_mayorista": 5500,
+      "precio_unitario_detal": 8000,
+      "descuento_volumen": "31.25%",
+      "costo_unitario": 2100,
+      "margen_unitario": 3400,
+      "pct_margen": 61.82,
+      "unidades_proyectadas": 2100,
+      "impacto": "Optimiza la capacidad del horno en horas diurnas (9am-2pm), genera compras institucionales recurrentes con cafés y hoteles del Centro Histórico, y aporta $7.14M de margen de contribución para absorber nómina."
+    }
+  },
+  "presupuesto_personal": {
+    "total_colaboradores": 4,
+    "gasto_anual_total": 131864952,
+    "cargos": [
+      {
+        "cargo": "Maestro Pizzero Chef",
+        "basico": 1900000,
+        "aux_transporte": 162000,
+        "costo_mensual": 3058866,
+        "costo_anual": 36706392
+      },
+      {
+        "cargo": "Auxiliar de Cocina y Ensamble",
+        "basico": 1423500,
+        "aux_transporte": 162000,
+        "costo_mensual": 2364027,
+        "costo_anual": 28368324
+      },
+      {
+        "cargo": "Domiciliario Repartidor Express",
+        "basico": 1423500,
+        "aux_transporte": 162000,
+        "costo_mensual": 2364027,
+        "costo_anual": 28368324
+      },
+      {
+        "cargo": "Administradora / Líder ADSO (Karen Campo)",
+        "basico": 2200000,
+        "aux_transporte": 0,
+        "costo_mensual": 3201826,
+        "costo_anual": 38421912
+      }
+    ]
+  },
+  "activos_fijos": {
+    "inversion_activos_depreciables": 96000000,
+    "depreciacion_anual": 10350000,
+    "depreciacion_mensual": 862500,
+    "adecuaciones_locativas": 18500000
+  },
+  "estado_resultados": {
+    "ventas_brutas": 310500000,
+    "costo_ventas": 94200000,
+    "utilidad_bruta": 216300000,
+    "margen_bruto": 69.66,
+    "gastos_operacionales": 196814952,
+    "utilidad_operacional_ebit": 19485048,
+    "margen_ebit": 6.28,
+    "ebitda": 29835048,
+    "margen_ebitda": 9.61,
+    "gastos_financieros": 1026000,
+    "utilidad_antes_impuestos": 18459048,
+    "impuestos_renta_simple": 3691810,
+    "utilidad_neta": 14767238,
+    "margen_neto": 4.76
+  },
+  "indicadores_clave": {
+    "punto_equilibrio_pesos": 283846416,
+    "punto_equilibrio_unidades_ano": 7096,
+    "punto_equilibrio_unidades_mes": 591,
+    "punto_equilibrio_unidades_dia": 19.7,
+    "margen_seguridad_pesos": 26653584,
+    "margen_seguridad_porcentaje": 8.58,
+    "roi_anual": 12.31,
+    "payback_anos": 2.8,
+    "cumplimiento_fondo_emprender": "100% (4 empleos formales generados)"
+  }
+}
