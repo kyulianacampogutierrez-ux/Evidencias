@@ -1,0 +1,99 @@
+{
+  "informacion_general": {
+    "evidencia_codigo": "GA10-240201529-AA2-EV01",
+    "evidencia_titulo": "Pitch idea de negocio",
+    "programa_formacion": "Tecnólogo en Análisis y Desarrollo de Software (ADSO)",
+    "ficha": "3186681",
+    "aprendiz": "Karen Yuliana Campo",
+    "regional": "Regional Cauca - Centro de Teleinformática y Producción Industrial (CTPI)",
+    "instructor": "Instructor de Emprendimiento SENA",
+    "fecha": "Noviembre 2026",
+    "duracion_video_segundos": 54,
+    "limite_maximo_guia_segundos": 59,
+    "formato_video": "MP4 (H.264 / AAC, 1080x1920 Vertical 9:16)"
+  },
+  "emprendimiento": {
+    "nombre_comercial": "Pizzería Gourmet Bella Italia",
+    "razon_social": "Pizzería Gourmet Bella Italia Popayán S.A.S.",
+    "nit_proyectado": "901.845.210-4",
+    "actividad_ciiu": "5611 - Expendio a la mesa de comidas preparadas",
+    "domicilio": "Calle 4ta No. 3-45, Centro Histórico, Popayán, Cauca",
+    "contacto_whatsapp": "+57 312 890 4521",
+    "eslogan": "Pasión italiana con corazón caucano",
+    "segmento_mercado": "Población de 18 a 55 años, familias, estudiantes universitarios y turistas en Popayán que buscan alimentación artesanal saludable, rápida y de alta calidad gastronómica."
+  },
+  "validacion_homonimia": {
+    "entidad": "Cámara de Comercio de Popayán / Red RUES Confecámaras",
+    "sistema_consulta": "SINTRAMITES - Plataforma Virtual de Trámites Empresariales",
+    "criterio_busqueda": "Pizzería Gourmet Bella Italia Popayán",
+    "estado_consulta": "Aprobado / No Concurrencia de Nombres Idénticos o Similares",
+    "disponibilidad_marca": "Disponible para registro mercantil y reserva de nombre comercial",
+    "fecha_certificacion": "15 de Noviembre de 2026",
+    "radicado_control": "RUES-CCPOP-2026-84920"
+  },
+  "estructura_pitch": [
+    {
+      "paso": 1,
+      "nombre": "Identificación del Problema",
+      "tiempo_inicio": "00:00",
+      "tiempo_fin": "00:08",
+      "duracion": "8 segundos",
+      "mensaje_clave": "¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?",
+      "dolor_mercado": "Pizzas comerciales con harinas refinadas sin fermentar, demoras excesivas de más de 60 minutos y pérdida térmica en el transporte."
+    },
+    {
+      "paso": 2,
+      "nombre": "Propuesta de Solución Gourmet",
+      "tiempo_inicio": "00:08",
+      "tiempo_fin": "00:20",
+      "duracion": "12 segundos",
+      "mensaje_clave": "¡Llegó Bella Italia Popayán! La auténtica pizza artesanal napolitana con masa madre de 48 horas de fermentación y horneada a 450°C en 90 segundos.",
+      "solucion_tecnica": "Masa viva con 48h de maduración biológica, digestión liviana y cocción instantánea en horno de leña refractario."
+    },
+    {
+      "paso": 3,
+      "nombre": "Tradición Italiana + Corazón Caucano",
+      "tiempo_inicio": "00:20",
+      "tiempo_fin": "00:32",
+      "duracion": "12 segundos",
+      "mensaje_clave": "Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera.",
+      "impacto_social": "Comercio justo con pequeños productores de Silvia, Timbío y Cajibío, reduciendo la huella de carbono y garantizando frescura extrema."
+    },
+    {
+      "paso": 4,
+      "nombre": "Innovación Tecnológica SENA ADSO",
+      "tiempo_inicio": "00:32",
+      "tiempo_fin": "00:43",
+      "duracion": "11 segundos",
+      "mensaje_clave": "Con nuestra aplicación web desarrollada en ADSO pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a nuestros baúles térmicos.",
+      "innovacion_adso": "Plataforma web reactiva, trazabilidad de cocina en tiempo real y logística térmica especializada para Popayán."
+    },
+    {
+      "paso": 5,
+      "nombre": "Llamado a la Acción (Call to Action)",
+      "tiempo_inicio": "00:43",
+      "tiempo_fin": "00:54",
+      "duracion": "11 segundos",
+      "mensaje_clave": "Visítanos en la Calle Cuarta del Centro Histórico o pide al WhatsApp oficial. ¡Bella Italia Popayán: Pasión italiana con corazón caucano! ¡Haz tu pedido ya!",
+      "canales_contacto": "Sede física Centro Histórico Popayán, línea WhatsApp 312 890 4521 y plataforma web oficial."
+    }
+  ],
+  "diferenciadores_competitivos": [
+    {
+      "pilar": "Masa Madre 48h",
+      "descripcion": "Descomposición enzimática de gluten, logrando un índice glucémico bajo y cero pesadez estomacal."
+    },
+    {
+      "pilar": "Horno Napolitano a 450°C",
+      "descripcion": "Horneado relámpago en 90 segundos que sella aromas e impide que los ingredientes se sequen."
+    },
+    {
+      "pilar": "Cadena de Valor Caucana",
+      "descripcion": "Quesos hilados frescos de Silvia y vegetales orgánicos certificados libres de pesticidas."
+    },
+    {
+      "pilar": "Logística Térmica ADSO",
+      "descripcion": "Control de temperatura a >70°C y tiempos de entrega auditados por telemetría web."
+    }
+  ]
+}

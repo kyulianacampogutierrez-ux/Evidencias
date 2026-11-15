@@ -1,0 +1,17 @@
+SISTEMA NACIONAL DE APRENDIZAJE (SENA)
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+
+EVIDENCIA: GA10-240201529-AA2-EV01 - Pitch idea de negocio
+APRENDIZ: Karen Yuliana Campo
+FECHA: Noviembre de 2026
+
+ENLACES OFICIALES DEL PROYECTO:
+1. Repositorio GitHub de la Evidencia:
+   https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-055_GA10-240201529-AA2-EV01_Pitch_Idea_Negocio
+
+2. Portal Web Interactivo y Reproductor TikTok (Docker Puerto 8103):
+   http://localhost:8103/
+
+3. Video Elevator Pitch TikTok (MP4 1080x1920, 54 segundos):
+   https://github.com/kyulianacampogutierrez-ux/Evidencias/blob/main/PET-055_GA10-240201529-AA2-EV01_Pitch_Idea_Negocio/video/GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.mp4

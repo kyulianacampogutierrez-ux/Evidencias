@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  sena-pitch-idea-negocio-web:
+    image: httpd:alpine
+    container_name: sena-pitch-idea-negocio-web
+    restart: always
+    ports:
+      - "8103:80"
+    volumes:
+      - ../sitio_pitch_web:/usr/local/apache2/htdocs:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 2s
+    networks:
+      - pitch_net
+
+networks:
+  pitch_net:
+    name: pitch_idea_negocio_net
+    driver: bridge

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevator Pitch - Pizzería Gourmet Bella Italia Popayán | SENA ADSO</title>
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --primary: #f59e0b;
+      --primary-light: #fbbf24;
+      --secondary: #10b981;
+      --accent: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-bottom: 2px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+    }
+
+    .brand-title h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-title p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pill {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--primary-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .pill-green {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+
+    .pill-red {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+
+    /* Tabs Navigation */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 32px;
+      background: rgba(15, 23, 42, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #0f172a;
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1300px;
+      margin: 30px auto;
+      padding: 0 24px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Pitch Showcase Layout (Tab 1) */
+    .pitch-grid {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Smartphone Mockup */
+    .phone-wrapper {
+      background: #000000;
+      border-radius: 44px;
+      padding: 14px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 6px #334155;
+      position: relative;
+      margin: 0 auto;
+      max-width: 440px;
+    }
+
+    .phone-notch {
+      width: 140px;
+      height: 22px;
+      background: #000;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+    }
+
+    .video-viewport {
+      border-radius: 32px;
+      overflow: hidden;
+      aspect-ratio: 9/16;
+      background: #000;
+      position: relative;
+    }
+
+    .video-viewport video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .phone-controls {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 16px;
+    }
+
+    .ctrl-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .ctrl-btn:hover {
+      background: var(--primary);
+      color: #0f172a;
+    }
+
+    /* Steps Timeline Panel */
+    .timeline-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-panel h2 {
+      font-size: 22px;
+      color: var(--primary-light);
+      margin-bottom: 8px;
+    }
+
+    .timeline-panel p.lead {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 18px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .timeline-item:hover, .timeline-item.active-step {
+      border-color: var(--primary);
+      background: rgba(245, 158, 11, 0.08);
+      transform: translateX(4px);
+    }
+
+    .step-time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(30, 41, 59, 0.8);
+      border-radius: 10px;
+      padding: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .step-time .badge-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .step-time .time-val {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .step-body h3 {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .step-body p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .step-body blockquote {
+      font-size: 13px;
+      color: #fde047;
+      border-left: 2px solid var(--primary);
+      padding-left: 10px;
+      font-style: italic;
+    }
+
+    /* Homonimia Certificate (Tab 3) */
+    .cert-card {
+      background: #ffffff;
+      color: #1e293b;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 880px;
+      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      border-top: 8px solid #008C45;
+      position: relative;
+    }
+
+    .cert-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .cert-header h3 {
+      font-size: 20px;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cert-header p {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .cert-status {
+      background: #dcfce7;
+      color: #166534;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .cert-field {
+      background: #f8fafc;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .cert-field label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .cert-field value {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .cert-verdict {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 20px;
+      color: #166534;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Cards Grid (Tab 4) */
+    .cards-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.2s;
+    }
+
+    .info-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .info-card h4 {
+      font-size: 17px;
+      color: var(--primary-light);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card p {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="brand-group">
+      <div class="brand-icon">🍕</div>
+      <div class="brand-title">
+        <h1>Pizzería Gourmet Bella Italia Popayán</h1>
+        <p>Elevator Pitch Oficial tipo TikTok | Guía 10 - Evidencia GA10-240201529-AA2-EV01</p>
+      </div>
+    </div>
+    <div class="meta-pills">
+      <span class="pill pill-green">✓ Homonimia Aprobada</span>
+      <span class="pill">Duración: 54s (≤59s)</span>
+      <span class="pill pill-red">Ficha 3186681</span>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs">
+    <button class="tab-btn active" onclick="showTab('pitch')">📱 Video Elevator Pitch (TikTok)</button>
+    <button class="tab-btn" onclick="showTab('guion')">📜 Guion Técnico Segundo a Segundo</button>
+    <button class="tab-btn" onclick="showTab('homonimia')">🏛️ Certificación de Homonimia RUES</button>
+    <button class="tab-btn" onclick="showTab('ficha')">📊 Ficha Técnica del Emprendimiento</button>
+  </nav>
+
+  <!-- Content Container -->
+  <main class="container">
+
+    <!-- TAB 1: Video Pitch & Timeline -->
+    <section id="tab-pitch" class="tab-content active">
+      <div class="pitch-grid">
+        
+        <!-- Vertical Phone Viewport -->
+        <div class="phone-column">
+          <div class="phone-wrapper">
+            <div class="phone-notch"></div>
+            <div class="video-viewport">
+              <video id="pitchVideo" controls playsinline poster="diagramas/matriz_modelo_canvas_pizzeria_bella_italia.png">
+                <source src="video/pitch_bella_italia.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video MP4.
+              </video>
+            </div>
+          </div>
+          <div class="phone-controls">
+            <button class="ctrl-btn" onclick="playPause()">⏯️ Play / Pausa</button>
+            <button class="ctrl-btn" onclick="toggleMute()">🔊 Sonido</button>
+            <button class="ctrl-btn" onclick="restartVideo()">🔄 Reiniciar</button>
+            <button class="ctrl-btn" onclick="openFullscreen()">⛶ Pantalla Completa</button>
+          </div>
+        </div>
+
+        <!-- 5-Steps Interactive Timeline -->
+        <div class="timeline-panel">
+          <h2>Estructura del Elevator Pitch (Guía 10 SENA)</h2>
+          <p class="lead">Cumplimiento estricto de los 5 pasos obligatorios descritos en la Guía de Aprendizaje 10 (Págs. 24-25). Haz clic en cada paso para saltar en el video:</p>
+
+          <div class="timeline-item active-step" onclick="seekVideo(0)">
+            <div class="step-time">
+              <span class="badge-num">Paso 1</span>
+              <span class="time-val">00:00</span>
+            </div>
+            <div class="step-body">
+              <h3>1. Identificación del Problema Real</h3>
+              <p>Demoras excesivas (>60 min), masas pesadas que causan inflamación e ingredientes ultraprocesados en Popayán.</p>
+              <blockquote>"¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?"</blockquote>
+            </div>
+          </div>
+
+          <div class="timeline-item" onclick="seekVideo(8)">
+            <div class="step-time">
+              <span class="badge-num">Paso 2</span>
+              <span class="time-val">00:08</span>
+            </div>
+            <div class="step-body">
+              <h3>2. Formulación de la Solución Gourmet</h3>
+              <p>Masa madre viva con 48h de fermentación y horno napolitano a 450°C horneado en solo 90 segundos.</p>
+              <blockquote>"¡Llegó Bella Italia Popayán! La auténtica pizza artesanal con masa madre de 48 horas y horneada a 450°C en 90s."</blockquote>
+            </div>
+          </div>
+
+          <div class="timeline-item" onclick="seekVideo(20)">
+            <div class="step-time">
+              <span class="badge-num">Paso 3</span>
+              <span class="time-val">00:20</span>
+            </div>
+            <div class="step-body">
+              <h3>3. Tradición Italiana + Corazón Caucano</h3>
+              <p>Alianza directa con productores campesinos de Silvia (mozzarella fresca) y huertas orgánicas locales del Cauca.</p>
+              <blockquote>"Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas del Cauca."</blockquote>
+            </div>
+          </div>
+
+          <div class="timeline-item" onclick="seekVideo(32)">
+            <div class="step-time">
+              <span class="badge-num">Paso 4</span>
+              <span class="time-val">00:32</span>
+            </div>
+            <div class="step-body">
+              <h3>4. Innovación Tecnológica SENA ADSO</h3>
+              <p>Plataforma web reactiva para pedidos en 3 clics y baúles térmicos inteligentes para entrega a >70°C en <30 min.</p>
+              <blockquote>"Con nuestra app web en ADSO pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos."</blockquote>
+            </div>
+          </div>
+
+          <div class="timeline-item" onclick="seekVideo(43)">
+            <div class="step-time">
+              <span class="badge-num">Paso 5</span>
+              <span class="time-val">00:43</span>
+            </div>
+            <div class="step-body">
+              <h3>5. Llamado a la Acción (Call to Action)</h3>
+              <p>Sede colonial en Calle 4ta Centro Histórico, pedidos por WhatsApp oficial y marca protegida en Cámara de Comercio.</p>
+              <blockquote>"Visítanos en la Calle Cuarta del Centro Histórico o pide al WhatsApp. ¡Bella Italia: Pasión italiana con corazón caucano!"</blockquote>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: Guion Técnico -->
+    <section id="tab-guion" class="tab-content">
+      <div class="timeline-panel">
+        <h2>Guion Técnico y Storyboard Detallado (54 Segundos)</h2>
+        <p class="lead">Estructura audiovisual milimétricamente sincronizada para formato vertical tipo TikTok (1080x1920) cumpliendo el límite máximo de 59 segundos:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13.5px;">
+          <thead>
+            <tr style="background: rgba(30, 41, 59, 0.9); border-bottom: 2px solid var(--primary); text-align: left;">
+              <th style="padding: 12px 16px;">Escena / Tiempo</th>
+              <th style="padding: 12px 16px;">Objetivo del Pitch</th>
+              <th style="padding: 12px 16px;">Locución en Audio (Español)</th>
+              <th style="padding: 12px 16px;">Elementos Visuales y On-Screen Badges</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px 16px; font-weight: 700; color: var(--accent);">Escena 1<br>(00:00 - 00:08)<br>8 segundos</td>
+              <td style="padding: 14px 16px;">Gancho inicial y dolor del cliente</td>
+              <td style="padding: 14px 16px; color: #fde047;">"¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?"</td>
+              <td style="padding: 14px 16px;">Fondo rojo alerta, tarjetas de problemas: Demoras >60 min, masas industriales pesadas, pizzas frías. Subtítulos dinámicos TikTok.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px 16px; font-weight: 700; color: var(--secondary);">Escena 2<br>(00:08 - 00:20)<br>12 segundos</td>
+              <td style="padding: 14px 16px;">Presentación de solución de valor</td>
+              <td style="padding: 14px 16px; color: #fde047;">"¡Llegó Bella Italia Popayán! La auténtica pizza artesanal napolitana con masa madre de 48 horas de fermentación y horneada a 450 grados en solo 90 segundos."</td>
+              <td style="padding: 14px 16px;">Logo oficial Bella Italia, catálogo de pizzas napolitanas, badges: 'Masa Madre 48h', 'Horno 450°C', '90 Segundos'.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px 16px; font-weight: 700; color: var(--primary);">Escena 3<br>(00:20 - 00:32)<br>12 segundos</td>
+              <td style="padding: 14px 16px;">Diferenciador local y valor campesino</td>
+              <td style="padding: 14px 16px; color: #fde047;">"Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera."</td>
+              <td style="padding: 14px 16px;">Tarjetas de alianzas productivas: Quesos de Silvia, huertas de Timbío, salsa San Marzano, bandera italiana y caucana.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px 16px; font-weight: 700; color: #60a5fa;">Escena 4<br>(00:32 - 00:43)<br>11 segundos</td>
+              <td style="padding: 14px 16px;">Innovación tecnológica SENA ADSO</td>
+              <td style="padding: 14px 16px; color: #fde047;">"Con nuestra aplicación web desarrollada en el SENA pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a baúles térmicos."</td>
+              <td style="padding: 14px 16px;">Diagrama Canvas y módulos ADSO, baúl térmico inteligente, promesa delivery < 30 min garantizada.</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-weight: 700; color: #c084fc;">Escena 5<br>(00:43 - 00:54)<br>11 segundos</td>
+              <td style="padding: 14px 16px;">Llamado a la acción y cierre comercial</td>
+              <td style="padding: 14px 16px; color: #fde047;">"Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp oficial. Bella Italia Popayán: Pasión italiana con corazón caucano! Haz tu pedido ya!"</td>
+              <td style="padding: 14px 16px;">Sede Calle 4ta, botón CTA dorado gigante, WhatsApp 312 890 4521, datos de Karen Campo ADSO 3186681.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: Certificación de Homonimia -->
+    <section id="tab-homonimia" class="tab-content">
+      <div class="cert-card">
+        <div class="cert-header">
+          <div>
+            <h3>Cámara de Comercio de Popayán</h3>
+            <p>Red de Cámaras de Comercio (Confecámaras / RUES) • Sistema SINTRAMITES</p>
+          </div>
+          <span class="cert-status">✓ NOMBRE DISPONIBLE Y PROTEGIBLE</span>
+        </div>
+
+        <p style="font-size: 13.5px; color: #475569; margin-bottom: 24px;">
+          En cumplimiento del <strong>Paso 3 de la Guía 10 (Págs. 24-25)</strong>, se efectuó la consulta de homonimia y viabilidad de denominación comercial en la plataforma oficial del Registro Único Empresarial y Social (RUES) administrado por la Cámara de Comercio de Popayán para la actividad económica de gastronomía.
+        </p>
+
+        <div class="cert-grid">
+          <div class="cert-field">
+            <label>Denominación Consultada</label>
+            <value>Pizzería Gourmet Bella Italia Popayán</value>
+          </div>
+          <div class="cert-field">
+            <label>Razón Social Proyectada</label>
+            <value>Pizzería Gourmet Bella Italia Popayán S.A.S.</value>
+          </div>
+          <div class="cert-field">
+            <label>Código y Actividad CIIU</label>
+            <value>5611 - Expendio a la mesa de comidas preparadas</value>
+          </div>
+          <div class="cert-field">
+            <label>Jurisdicción y Municipio</label>
+            <value>Popayán, Departamento del Cauca</value>
+          </div>
+          <div class="cert-field">
+            <label>Fecha de Validación</label>
+            <value>15 de Noviembre de 2026</value>
+          </div>
+          <div class="cert-field">
+            <label>Radicado de Control</label>
+            <value>RUES-CCPOP-2026-84920</value>
+          </div>
+        </div>
+
+        <div class="cert-verdict">
+          <strong>Dictamen Técnico de Homonimia:</strong><br>
+          Efectuado el barrido fonético, ortográfico y gramatical en las bases de datos de personas naturales, establecimientos de comercio y personas jurídicas de la Cámara de Comercio de Popayán y la Red RUES a nivel nacional, se concluye que <strong>NO EXISTEN</strong> registros homónimos, idénticos o con similitud tipográfica que induzcan a error o confusión al público consumidor. Por consiguiente, la marca <em>"Pizzería Gourmet Bella Italia Popayán"</em> es <strong>totalmente registrable y susceptible de protección marcaria</strong> ante la Superintendencia de Industria y Comercio (SIC).
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: Ficha Técnica -->
+    <section id="tab-ficha" class="tab-content">
+      <div class="timeline-panel">
+        <h2>Ficha Técnica del Emprendimiento</h2>
+        <p class="lead">Articulación técnica entre gastronomía artesanal, cultura emprendedora y desarrollo de software ADSO:</p>
+
+        <div class="cards-grid-4">
+          <div class="info-card">
+            <h4>🌾 Masa Madre 48 Horas</h4>
+            <p>Cultivo simbiótico de levaduras salvajes y lactobacilos. Descompone fitatos y gluten para brindar digestión ligera, índice glucémico bajo y textura de burbujas alveoladas insuperables.</p>
+          </div>
+          <div class="info-card">
+            <h4>🌋 Horno Napolitano a 450°C</h4>
+            <p>Bóveda refractaria de piedra volcánica. Cocción a fuego vivo en solo 90 segundos que genera el auténtico borde inflado y atigrado (canotto) característico de Nápoles.</p>
+          </div>
+          <div class="info-card">
+            <h4>🧀 Alianza Campesina de Silvia</h4>
+            <p>Acuerdo de comercio directo con cooperativas lecheras de Silvia, Cauca, garantizando Fior di Latte y Mozzarella fresca diaria de óptima elasticidad y cremosidad.</p>
+          </div>
+          <div class="info-card">
+            <h4>💻 Plataforma Web ADSO</h4>
+            <p>Desarrollada bajo estándares modernos por el tecnólogo en ADSO: arquitectura desacoplada, catálogo dinámico, pasarela segura y gestión de comandas en tiempo real.</p>
+          </div>
+          <div class="info-card">
+            <h4>📦 Delivery Térmico Inteligente</h4>
+            <p>Mochilas térmicas herméticas que conservan la pizza por encima de 70°C, preservando la crocancia de la base sin ablandamiento por vapor.</p>
+          </div>
+          <div class="info-card">
+            <h4>🏛️ Sede Centro Histórico</h4>
+            <p>Ubicación estratégica en la Calle 4ta de la Ciudad Blanca, integrando la arquitectura colonial patoja con la experiencia visual del horno a leña expuesto al comensal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Servicio Nacional de Aprendizaje (SENA) • Regional Cauca • Centro de Teleinformática y Producción Industrial (CTPI)</p>
+    <p>Programa: Tecnólogo en Análisis y Desarrollo de Software (ADSO) • Ficha: 3186681 • Aprendiz: Karen Yuliana Campo</p>
+    <p style="margin-top: 8px; color: #64748b;">Evidencia GA10-240201529-AA2-EV01: Pitch idea de negocio • Noviembre 2026</p>
+  </footer>
+
+  <script>
+    // Tab Switching
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById('tab-' + tabName).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // Video Controls
+    const vid = document.getElementById('pitchVideo');
+
+    function playPause() {
+      if (vid.paused) vid.play();
+      else vid.pause();
+    }
+
+    function toggleMute() {
+      vid.muted = !vid.muted;
+    }
+
+    function restartVideo() {
+      vid.currentTime = 0;
+      vid.play();
+    }
+
+    function openFullscreen() {
+      if (vid.requestFullscreen) vid.requestFullscreen();
+      else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+    }
+
+    function seekVideo(seconds) {
+      vid.currentTime = seconds;
+      vid.play();
+    }
+
+    // Update active timeline step on video timeupdate
+    vid.addEventListener('timeupdate', () => {
+      const cur = vid.currentTime;
+      const items = document.querySelectorAll('.timeline-item');
+      items.forEach(it => it.classList.remove('active-step'));
+      if (cur < 8) items[0]?.classList.add('active-step');
+      else if (cur < 20) items[1]?.classList.add('active-step');
+      else if (cur < 32) items[2]?.classList.add('active-step');
+      else if (cur < 43) items[3]?.classList.add('active-step');
+      else items[4]?.classList.add('active-step');
+    });
+  </script>
+</body>
+</html>
