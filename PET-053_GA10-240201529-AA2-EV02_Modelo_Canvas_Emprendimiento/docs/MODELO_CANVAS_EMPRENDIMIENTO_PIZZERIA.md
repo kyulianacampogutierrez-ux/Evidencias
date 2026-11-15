@@ -1,4 +1,4 @@
-# MODELO LEAN CANVAS DEL EMPRENDIMIENTO
+# MODELO CANVAS DEL EMPRENDIMIENTO
 ## DEFINIR LA IDEA DE NEGOCIO A DESARROLLAR EN EL EMPRENDIMIENTO SEGÚN LAS OPORTUNIDADES DE MERCADO
 ### PROYECTO PRODUCTIVO: "PIZZERÍA GOURMET BELLA ITALIA POPAYÁN"
 
@@ -24,17 +24,17 @@
 
 ---
 
-## 1. INTRODUCCIÓN Y MARCO TEÓRICO DEL MODELO LEAN CANVAS
+## 1. INTRODUCCIÓN Y MARCO TEÓRICO DEL MODELO CANVAS
 
-En el desarrollo de proyectos de emprendimiento tecnológico y de base productiva, la estructuración temprana de un modelo de negocio ágil es indispensable para minimizar el riesgo de fracaso comercial y acelerar la validación de hipótesis en el mercado real. La metodología **Lean Canvas**, formulada originalmente por Ash Maurya (2012) como una adaptación dinámica del *Business Model Canvas* de Alexander Osterwalder (2010), está concebida específicamente para emprendedores en etapas tempranas que operan bajo condiciones de alta incertidumbre.
+El diseño y estructuración de un modelo de negocio sólido representa el cimiento estratégico para cualquier iniciativa de emprendimiento moderno. En el marco de la formación del Servicio Nacional de Aprendizaje (SENA) y las directrices de la **Guía de Aprendizaje 10 (Actividad 3.2.2)**, el **Modelo Canvas**, conceptualizado originalmente por Alexander Osterwalder e Yves Pigneur (2010), junto con las adaptaciones ágiles de **Lean Canvas** de Ash Maurya (2012) bajo la filosofía *Lean Startup* de Eric Ries (2011), constituyen herramientas de gestión estratégica y visual que permiten describir, diseñar, retar y pivotar la lógica mediante la cual una organización crea, entrega y captura valor.
 
-A diferencia del lienzo tradicional enfocado en corporaciones consolidadas, el **Lean Canvas** reemplaza bloques de gestión tradicional (como aliados clave o actividades clave) por componentes neurálgicos de innovación ágil (*Lean Startup* de Eric Ries): el **Problema**, la **Solución**, las **Métricas Claves** y la **Ventaja Injusta**. Según los lineamientos curriculares de la **Guía de Aprendizaje 10 (Sección 3.2.2)** del SENA, esta matriz se articula de manera simplificada en **cuatro (4) áreas estratégicas**:
-1. **Clientes** (Segmentos objetivos, primeros adoptantes y canales de contacto).
-2. **Oferta** (Problema validado, solución diferencial y propuesta única de valor).
-3. **Infraestructura** (Métricas de control y ventaja injusta tecnológica/operativa).
-4. **Viabilidad Económica** (Estructura de costos fijos/variables y flujos de ingresos).
+El Modelo Canvas organiza de forma holística los componentes esenciales de una empresa dividiéndolos en **cuatro (4) áreas estratégicas directivas**:
+1. **Infraestructura:** El engranaje operativo y técnico (*¿Cómo lo hacemos?*): Socios clave, Actividades clave, Recursos clave y Ventaja injusta.
+2. **Oferta:** El núcleo de valor (*¿Qué ofrecemos?*): Solución al problema identificado y Propuesta única de valor.
+3. **Clientes:** La relación con el mercado y la audiencia (*¿A quién se lo ofrecemos?*): Relaciones con clientes, Canales y Segmento de clientes.
+4. **Viabilidad Económica:** La sostenibilidad financiera (*¿Cuánto nos cuesta y cuánto ganamos?*): Estructura de costos, Flujos de ingresos y Métricas claves.
 
-El presente documento formaliza la construcción analítica, gráfica y cuantitativa del modelo Lean Canvas para el emprendimiento gastronómico y tecnológico **Pizzería Gourmet Bella Italia Popayán**, liderado por la aprendiz **Karen Yuliana Campo**.
+Estas cuatro áreas se desglosan en **nueve (9) bloques constructivos interconectados**. El presente documento formaliza el Modelo Canvas desarrollado para el emprendimiento gastronómico y tecnológico **Pizzería Gourmet Bella Italia Popayán**, liderado por la aprendiz **Karen Yuliana Campo**.
 
 ---
 
@@ -42,187 +42,218 @@ El presente documento formaliza la construcción analítica, gráfica y cuantita
 
 ### 2.1 Identificación del Emprendimiento
 * **Razón Comercial:** Pizzería Gourmet Bella Italia Popayán.
-* **Naturaleza del Negocio:** Empresa de gastronomía artesanal de alta gama (pizzas napolitanas en horno de leña a 400°C) fusionada con ingredientes autóctonos del departamento del Cauca y apalancada en una plataforma integral de software de comercio electrónico, pantalla de cocina KDS (*Kitchen Display System*) y facturación electrónica DIAN.
-* **Sede Operativa:** Centro Histórico de Popayán, departamento del Cauca (Ciudad Creativa de la Gastronomía UNESCO).
+* **Naturaleza del Negocio:** Restaurante de alta cocina artesanal especializado en pizzas napolitanas en horno de leña tradicional a 400°C, fusionadas con ingredientes autóctonos del departamento del Cauca (pipián payanés y quesos campesinos de Silvia), apalancado en un ecosistema de software propietario para comercio electrónico, pantalla de cocina KDS (*Kitchen Display System*) y facturación electrónica DIAN.
+* **Sede Operativa:** Centro Histórico de Popayán, departamento del Cauca (Ciudad Creativa de la Gastronomía por la UNESCO).
 
 ### 2.2 Diagnóstico de Mercado y Oportunidad
-Popayán cuenta con un reconocimiento culinario internacional único en Colombia; no obstante, el mercado local de pizzas se encuentra polarizado entre franquicias multinacionales de comida rápida (pizzas ultraprocesadas de masa industrial con aditivos químicos) y pizzerías tradicionales de barrio sin estándares de trazabilidad, ni canales digitales propios. 
+Popayán posee un prestigio gastronómico reconocido internacionalmente. Sin embargo, el mercado local de pizzas exhibe una brecha crítica: por un lado, franquicias multinacionales que comercializan pizzas ultraprocesadas con masas industriales de digestión pesada y aditivos químicos; por el otro, establecimientos informales sin protocolos de trazabilidad, ni canales digitales propios, obligados a depender de aplicaciones comerciales de delivery que retienen entre el 25% y el 30% del valor del pedido.
 
-Existe una demanda insatisfecha por parte de comensales locales (familias, profesionales y jóvenes universitarios de estratos 3, 4 y 5) y turistas exigentes que buscan alimentos saludables, altamente digestivos (fermentación lenta de 48 horas) e identitarios (pipián payanés y quesos campesinos de Silvia), combinados con la comodidad de realizar pedidos en línea sin pagar sobrecostos abusivos a plataformas comerciales de domicilios.
+Existe una creciente demanda por parte de familias, jóvenes profesionales, académicos y turistas nacionales e internacionales por alimentos saludables, altamente digestivos (fermentación lenta de masa madre viva durante 48 horas) e identitarios de la región caucana, combinados con la comodidad de solicitar pedidos directos vía web sin pagar sobrecostos y con facturación electrónica legal inmediata.
 
 ---
 
 ## 3. ANÁLISIS DE LAS CUATRO (4) ÁREAS ESTRATÉGICAS
 
-De acuerdo con las directrices de la Guía 10, el modelo de negocio se descompone en cuatro áreas directivas:
+Siguiendo las pautas pedagógicas del SENA, el emprendimiento se estructura en cuatro áreas directivas interdependientes:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    LAS CUATRO (4) ÁREAS DEL MODELO LEAN CANVAS              │
+│                    LAS CUATRO (4) ÁREAS DEL MODELO CANVAS                   │
 ├──────────────────────┬──────────────────────┬───────────────────────────────┤
-│ 1. ÁREA DE CLIENTES  │ 2. ÁREA DE OFERTA    │ 3. ÁREA DE INFRAESTRUCTURA    │
-│ • Segmento Objetivo  │ • Problema Validado  │ • Métricas Claves (KPIs)      │
-│ • Early Adopters     │ • Solución Innovadora│ • Ventaja Injusta Tecnológica │
-│ • Canales Directos   │ • Propuesta de Valor │                               │
+│ 1. INFRAESTRUCTURA   │ 2. OFERTA            │ 3. CLIENTES                   │
+│ • Socios Clave       │ • Problema Validado  │ • Relaciones con Clientes     │
+│ • Actividades Clave  │ • Solución           │ • Canales Directos y Web      │
+│ • Recursos Clave     │ • Propuesta Única    │ • Segmento de Clientes        │
+│ • Ventaja Injusta    │   de Valor (UVP)     │ • Early Adopters              │
 ├──────────────────────┴──────────────────────┴───────────────────────────────┤
-│ 4. ÁREA DE VIABILIDAD ECONÓMICA                                             │
-│ • Estructura de Costos Fijos y Variables                                    │
-│ • Flujos de Ingresos y Punto de Equilibrio Operativo                        │
+│ 4. VIABILIDAD ECONÓMICA                                                     │
+│ • Estructura de Costos Fijos y Variables Unitarios                          │
+│ • Flujos de Ingresos y Métricas Claves                                      │
+│ • Simulación del Punto de Equilibrio Operativo                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 3.1 Área de Clientes
-Define quiénes experimentan el problema y cómo se establecerá el canal de distribución. Enfocado en el consumidor payanés sensible al sabor artesanal, con canales de contacto directo (portal web propio y salón boutique) para evitar la pérdida de margen por comisiones de intermediarios.
+### 3.1 Área de Infraestructura
+Asegura la capacidad operativa, el suministro de materias primas orgánicas y el desarrollo tecnológico. Se fundamenta en la alianza con productores campesinos de Silvia (Cauca) para el suministro de quesos frescos madurados y en la plataforma de software construida por la aprendiz Karen Campo en su formación de ADSO, lo que representa una **ventaja injusta** tecnológica que elimina costos de licenciamiento de terceros.
 
 ### 3.2 Área de Oferta
-Conforma el núcleo de valor: sustituir la comida rápida convencional por pizzas artesanales fermentadas naturalmente durante 48 horas, integrando el patrimonio culinario caucano (pipián y Silvia) en un formato moderno y de alta cocina.
+Representa el corazón del modelo de negocio: dar **solución** integral a los tres grandes problemas del mercado (pesadez digestiva, falta de identidad caucana y abusos de apps comerciales) mediante una **propuesta única de valor**: pizzas napolitanas fermentadas 48 horas con masa madre viva y combinadas con pipián payanés tradicional, horneadas a 400°C en leña de roble.
 
-### 3.3 Área de Infraestructura
-Apalancada en la formación de la aprendiz en ADSO: software propietario contenerizado en Docker que garantiza trazabilidad total, tiempos de horneado cronometrados en 14 minutos y cumplimiento tributario DIAN en tiempo real.
+### 3.3 Área de Clientes
+Articula la relación y los canales de comunicación hacia los consumidores del **segmento de clientes** en Popayán y los turistas gastronómicos. Se prioriza el canal web directo (`http://localhost:8101/`) y el restaurante boutique en el Centro Histórico, ofreciendo un trato experiencial y programas de fidelización (*Bella Italia Club*).
 
 ### 3.4 Área de Viabilidad Económica
-Estructura financiera rigurosa con costos de materia prima acotados al 30% del precio final, arrojando un margen de contribución del 67.9% que garantiza el punto de equilibrio vendiendo solo 10 pizzas diarias.
+Garantiza la sostenibilidad financiera del emprendimiento mediante el monitoreo de **métricas claves** (CAC, LTV, retención y tiempo KDS). Con una **estructura de costos** fijos mensuales de $8.000.000 COP y un costo variable unitario de $12.200 COP por pizza, y diversos **flujos de ingresos**, el modelo logra un margen de contribución del 67.9% ($25.800 COP por pizza), requiriendo un **punto de equilibrio** de apenas 310 pizzas al mes (10.3 pizzas al día).
 
 ---
 
-## 4. DESARROLLO DETALLADO DE LOS NUEVE (9) BLOQUES DEL LEAN CANVAS
+## 4. DESARROLLO DETALLADO DE LOS NUEVE (9) BLOQUES DEL MODELO CANVAS
 
-A continuación se detalla cada uno de los 9 bloques metodológicos del modelo:
+A continuación se detalla exhaustivamente cada uno de los bloques del lienzo:
 
-### 4.1 Bloque 1: Problema
-Los tres principales problemas identificados en la investigación de mercado son:
-1. **Masas pesadas, ultraprocesadas y de difícil digestión:** El 78% de los consumidores encuestados manifiesta sensación de pesadez estomacal tras ingerir pizzas industriales que utilizan levaduras químicas aceleradas.
-2. **Falta de identidad culinaria caucana en comida casual:** A pesar de ser Popayán una Ciudad Creativa UNESCO, las pizzerías locales replican menús foráneos estandarizados sin aprovechar la riqueza de ingredientes ancestrales como el pipián payanés o los quesos madurados de Silvia.
-3. **Altas comisiones y mal servicio en plataformas de delivery:** Las apps comerciales de domicilios cobran tarifas del 25% al 30% a los restaurantes, encareciendo el producto al cliente, retrasando los despachos y entregando alimentos fríos.
-* **Alternativas Existentes:** Cadenas de comida rápida masiva (Domino's, Little Caesars), pizzerías de barrio informales y apps de intermediación de domicilios.
+### 4.1 Bloque 1: Socios Clave y Problema Validado [Área: Infraestructura & Oferta]
+* **Problema Identificado:** Masas industriales pesadas de digestión lenta; ausencia de identidad gastronómica caucana en comida casual; y altas comisiones (25%-30%) en aplicaciones comerciales de domicilio sin garantía térmica.
+* **Socios Clave Estratégicos:**
+  - *Asociación Campesina de Silvia (Cauca):* Proveeduría directa de quesos madurados artesanales y lácteos orgánicos de altura.
+  - *Productores Tradicionales de Popayán:* Abastecimiento de papa criolla, maní tostado y achiote para el pipián payanés.
+  - *Molino Harinero Certificado:* Harina de fuerza tipo 00 (W 300+) para fermentación prolongada de 48 horas.
+  - *SENA CTPI & Fondo Emprender:* Mentoría técnica, validación de modelo y apalancamiento en capital semilla.
+  - *Pasarela de Pagos Wompi / Redebanc:* Procesamiento transaccional de pagos PSE, QR Bancolombia y tarjetas.
+  - *Corporación Gastronómica de Popayán (UNESCO):* Respaldo institucional y visibilidad en agendas turísticas.
 
-### 4.2 Bloque 2: Segmento de Clientes
-* **Segmento Principal:** Familias, jóvenes profesionales, académicos y comensales de estratos 3, 4 y 5 de Popayán que buscan alimentación saludable y experiencias gastronómicas de autor.
-* **Turistas Gastronómicos:** Visitantes nacionales y extranjeros que arriban a Popayán durante Semana Santa, el Congreso Gastronómico y fines de semana buscando probar platos auténticos.
-* **Oficinas y Sector Institucional:** Empleados gubernamentales, entidades bancarias y notarías del Centro Histórico que requieren pedidos ejecutivos rápidos con factura legal DIAN.
-* **Primeros Adoptantes (Early Adopters):** Jóvenes de 20 a 35 años aficionados a la masa madre artesanal y comensales digitales que priorizan compras por smartphone con medios de pago QR/PSE.
+### 4.2 Bloque 2: Actividades Clave y Solución [Área: Infraestructura & Oferta]
+* **Solución Integral Desarrollada:**
+  - Amasado con masa madre viva y fermentación lenta en frío durante 48 horas continuas.
+  - Cocción napolitana en horno tradicional a 400°C en leña de roble en 90 segundos por unidad.
+  - Creación de recetas de autor integrando pipián payanés y quesos campesinos de Silvia.
+  - Plataforma de software propia de comercio electrónico con monitor KDS de cocina y facturación DIAN en 2 segundos.
+* **Actividades Clave Operativas:**
+  - Control riguroso de temperaturas y maduración biológica de masas.
+  - Elaboración artesanal diaria del pipián según receta ancestral caucana.
+  - Despacho exprés en flota propia con mochilas térmicas a 70°C en menos de 35 minutos.
+  - Control de calidad higiénico-sanitario bajo normas BPM.
 
-### 4.3 Bloque 3: Propuesta Única de Valor (UVP)
-* **Lema Rector:** *"El auténtico arte pizzero napolitano con el alma y sabor de la gastronomía caucana."*
-* **Propuesta Convincente:** Pizzas artesanales de alta digestibilidad con 48 horas de fermentación natural en horno de leña a 400°C, fusionadas con ingredientes autóctonos de Silvia y Popayán, pedidas directamente desde una aplicación web propia con seguimiento en tiempo real y facturación DIAN en 2 segundos.
-* **Concepto de Alto Nivel:** La *"Pizzería de Autor Digital"* que celebra la gastronomía patrimonial de Popayán.
+### 4.3 Bloque 3: Recursos Clave y Ventaja Injusta [Área: Infraestructura]
+* **Recursos Clave:**
+  - *Físicos:* Local comercial en el Centro Histórico de Popayán, horno de leña abovedado refractario, amasadora espiral profesional, mesones de granito y cajas térmicas para delivery.
+  - *Intelectuales:* Recetas de autor patentadas (*Pizza Pipián Gourmet*, *Pizza Silvia Campesina*), cepa de masa madre viva (*lievito madre* de 5 años) y registro de marca comercial.
+  - *Tecnológicos:* Ecosistema de software contenerizado en Docker (Karen Campo - ADSO), API facturación electrónica DIAN.
+  - *Humanos:* Maestro pizzero profesional (*Pizzaiolo*), ayudantes de cocina capacitados, repartidor y líder ADSO.
+* **Ventaja Injusta (Unfair Advantage):**
+  - Propiedad intelectual del software integral ADSO, sin costos de licenciamiento de terceros.
+  - Fórmulas de masa registradas con ingredientes de denominación de origen caucano.
+  - Alianzas directas con campesinos de Silvia que blindan la frescura y el costo de materia prima.
+  - Apoyo institucional del SENA CTPI y Fondo Emprender en Popayán, Ciudad Gastronómica UNESCO.
 
-### 4.4 Bloque 4: Solución
-Las tres características clave del producto/servicio son:
-1. **Masa Madre Viva de 48 Horas:** Fermentación prolongada que degrada los azúcares complejos del gluten, logrando una masa ligera, crujiente por fuera y aireada por dentro, cocida en 90 segundos a 400°C.
-2. **Línea de Autor Caucana:** Recetas patentadas como la *Pizza Pipián Gourmet* (base de papa criolla, maní tostado, achiote y hogao payanés) y la *Pizza Silvia Campesina* (quesos madurados de altura y vegetales orgánicos).
-3. **Plataforma Web & KDS Integrada:** Aplicación propia que permite al comensal personalizar ingredientes y al chef controlar el cronómetro de horneado en un monitor de cocina táctil.
+### 4.4 Bloque 4: Propuesta Única de Valor (UVP) [Área: Oferta]
+* **Lema Central:** *"El auténtico arte pizzero napolitano con el alma y sabor de la gastronomía caucana."*
+* **Alta Digestibilidad y Salud:** Masa madre natural fermentada 48 horas que degrada los azúcares complejos del gluten, evitando la pesadez y la acidez estomacal.
+* **Identidad y Fusión Caucana:** Exclusiva combinación de pizza napolitana tradicional con ingredientes autóctonos del Cauca (pipián payanés y quesos de Silvia).
+* **Cocción Tradicional en Leña a 400°C:** Sabor ahumado inconfundible y horneado en tan solo 90 segundos.
+* **Canal Web Propio sin Sobrecostos:** Compra directa sin pagar la comisión del 30% habitual en apps de delivery comercial.
+* **Facturación Electrónica DIAN Instantánea:** Cumplimiento tributario riguroso con código QR y CUFE emitido en 2 segundos.
+* **Garantía Térmica:** Entrega de la pizza a más de 70°C en empaque biodegradable prémium.
 
-### 4.5 Bloque 5: Canales
-* **Canal Web Propio (Direct-to-Consumer):** Portal oficial (`http://localhost:8101/`) responsive con catálogo dinámico, selección de alérgenos y pasarela de pago directa.
-* **Salón Boutique Presencial:** Local acogedor en el Centro Histórico de Popayán donde los comensales observan el fuego vivo del horno de leña.
-* **Flota Propia de Reparto:** Domiciliarios capacitados equipados con cajas térmicas que mantienen la pizza a 70°C y terminales para firma digital.
-* **Redes Sociales & Storytelling:** Campañas en Instagram y TikTok exhibiendo el amasado artesanal y visitas a granjas campesinas de Silvia.
+### 4.5 Bloque 5: Relaciones con Clientes y Métricas Claves [Área: Clientes & Viabilidad]
+* **Relaciones con Clientes:**
+  - *Atención Experiencial en Salón:* Servicio personalizado en ambiente colonial donde el cliente visualiza el horno de leña en vivo.
+  - *Autoservicio Digital Fluido:* Catálogo web interactivo con fotos HD, alérgenos y notificaciones automáticas por WhatsApp.
+  - *Club de Fidelización "Bella Italia Club":* Puntos por compra directa, degustaciones de recetas de autor y cortesía de cumpleaños.
+  - *Servicio Posventa y Escucha Activa:* Encuestas NPS en línea y garantía de reposición inmediata ante cualquier queja.
+* **Métricas Claves (KPIs):**
+  - Costo de Adquisición de Clientes (CAC): < $6.000 COP mediante marketing local orgánico.
+  - Valor del Tiempo de Vida del Cliente (LTV): $320.000 COP anuales.
+  - Tasa de Retención Mensual: > 42% de recompra recurrente.
+  - Tiempo de Horno KDS: Promedio de 14 minutos desde orden hasta despacho.
+  - Margen de Contribución Bruto: 67.9% promedio sobre ventas.
 
-### 4.6 Bloque 6: Flujos de Ingresos
-* **Línea de Pizzas Tradicionales:** $32.000 a $38.000 COP por unidad.
-* **Línea de Especialidades Caucana Gourmet:** $42.000 a $48.000 COP por unidad.
-* **Calzones, Focaccias y Postres Artesanales:** $8.000 a $16.000 COP por unidad.
-* **Bebidas Artesanales & Café Especial de Silvia:** $5.000 a $9.000 COP por unidad.
-* **Catering Empresarial:** Paquetes para eventos corporativos en Popayán.
-* **Medios de Pago:** Efectivo, datáfono inalámbrico, transferencias QR Bancolombia y pasarela en línea Wompi/PSE.
+### 4.6 Bloque 6: Canales (Channels) [Área: Clientes]
+* **Portal Web Oficial Directo (E-Commerce):** Sitio web responsive (`http://localhost:8101/`) con pasarela de pagos integrada Wompi/PSE y pedidos en 3 clics.
+* **Restaurante Salón Boutique:** Punto de venta físico y experiencia sensorial en el Centro Histórico de Popayán.
+* **Flota Propia de Reparto:** Domiciliarios vinculados con dotación térmica y datáfono inalámbrico para cobro en puerta.
+* **Redes Sociales y Pauta Local:** Contenido audiovisual en Instagram y TikTok destacando la fermentación artesanal y visitas a granjas en Silvia.
+* **Canal Corporativo B2B:** Convenios de catering para almuerzos y eventos en oficinas bancarias, juzgados y entidades gubernamentales del centro.
 
-### 4.7 Bloque 7: Estructura de Costos
+### 4.7 Bloque 7: Segmento de Clientes (Customer Segments) [Área: Clientes]
+* **Familias y Comensales Urbanos:** Residentes de estratos 3, 4 y 5 de Popayán que buscan opciones gastronómicas artesanales, saludables y agradables para compartir.
+* **Profesionales y Académicos:** Personas entre 24 y 45 años del sector bancario, universitario y de salud que disponen de poco tiempo y demandan pedidos rápidos y nutritivos.
+* **Turistas Gastronómicos:** Visitantes nacionales e internacionales motivados por el reconocimiento de Popayán como Ciudad Creativa UNESCO.
+* **Primeros Adoptantes (Early Adopters):** Jóvenes de 20 a 35 años aficionados a la masa madre (*foodies* digitales) que compran vía smartphone y pagan con billeteras virtuales (Nequi, Daviplata, QR Bancolombia).
+* **Sector Corporativo:** Instituciones del centro que requieren servicio de alimentación gourmet con soporte de factura electrónica DIAN.
+
+### 4.8 Bloque 8: Estructura de Costos (Cost Structure) [Área: Viabilidad Económica]
 * **Costos Fijos Mensuales ($8.000.000 COP):**
-  - Arriendo local Centro Histórico de Popayán: $2.500.000 COP.
-  - Nómina base (Chef, Ayudante, Cajero/Facturador): $4.200.000 COP.
-  - Servicios públicos (Energía, gas, fibra óptica): $800.000 COP.
-  - Hosting en la nube y mantenimiento de servidores: $150.000 COP.
-  - Asesoría contable y tributaria DIAN: $350.000 COP.
-* **Costos Variables por Pizza (~$12.200 COP):**
-  - Materia prima e insumos directos (harina de fuerza, mozzarella, pipián): $10.000 COP (~30% del precio).
-  - Empaque térmico biodegradable y sello de seguridad: $1.800 COP.
-  - Comisión de pasarela de pago digital Wompi (2.8% + $900 COP): ~$400 COP.
+  - Arriendo de local en el Centro Histórico: $2.500.000 COP.
+  - Nómina operativa base (Maestro pizzero, auxiliar de cocina, cajero): $4.200.000 COP.
+  - Servicios públicos industriales (energía, gas, acueducto, fibra óptica): $800.000 COP.
+  - Infraestructura tecnológica en la nube y hosting Docker: $150.000 COP.
+  - Asesoría contable y firma digital de facturación DIAN: $350.000 COP.
+* **Costos Variables Unitarios (~$12.200 COP por pizza):**
+  - Materias primas directas (harina 00, queso Silvia, pipián, tomate San Marzano): $10.000 COP (26.3% del PVP).
+  - Empaque térmico biodegradable y precinto de seguridad: $1.800 COP.
+  - Comisión transaccional de pasarela Wompi / Redebanc: ~$400 COP.
+* **Costos de Suministro Operativo:**
   - Leña certificada de roble: $400.000 COP mensuales.
+  - Presupuesto de marketing digital local: $300.000 COP mensuales.
 
-### 4.8 Bloque 8: Métricas Claves (KPIs)
-* **CAC (Costo de Adquisición de Clientes):** &lt; $6.000 COP mediante marketing local orgánico.
-* **LTV (Valor de Vida del Cliente):** $320.000 COP anuales (estimando 8 recompras por cliente).
-* **Tasa de Retención Mensual:** &gt; 42% de comensales que repiten pedido en el mes.
-* **Tiempo Promedio KDS de Cocina:** 14 minutos desde confirmación hasta empaque.
-* **Margen de Contribución Bruto:** 67.9% promedio sobre ventas.
-* **Índice de Satisfacción (NPS):** &gt; 85% de satisfacción en encuestas digitales.
-
-### 4.9 Bloque 9: Ventaja Injusta (Unfair Advantage)
-* **Propiedad Intelectual de Software ADSO:** Ecosistema completo de software programado por Karen Campo, adaptado a microservicios Docker, sin costo de licenciamiento de terceros.
-* **Recetas Propias Registradas:** Formulación única de masa madre combinada con pipián payanés y quesos de Silvia.
-* **Comercio Justo con Productores de Silvia:** Acuerdos directos de proveeduría que blindan el suministro y ofrecen precios preferenciales.
-* **Apalancamiento de Popayán UNESCO y Fondo Emprender:** Apoyo institucional del SENA CTPI Popayán para escalar el modelo productivo.
+### 4.9 Bloque 9: Flujos de Ingresos (Revenue Streams) [Área: Viabilidad Económica]
+* **Línea de Pizzas Tradicionales Napolitanas:** $32.000 a $38.000 COP por unidad (Margarita, Pepperoni, Cuatro Quesos).
+* **Línea Prémium de Pizzas de Autor Caucanas:** $42.000 a $48.000 COP por unidad (Pizza Pipián Gourmet, Pizza Silvia Campesina).
+* **Acompañamientos y Repostería Artesanal:** $8.000 a $16.000 COP (Focaccias al romero, calzones rellenos, paninis, tiramisú artesanal).
+* **Bebidas Artesanales y Café Especial:** $5.000 a $9.000 COP (Cervezas artesanales del Cauca, sodas naturales, café especial de Silvia).
+* **Catering Empresarial e Institucional B2B:** Menús corporativos desde $25.000 a $35.000 COP por asistente.
+* **Modalidades de Recaudo:** Efectivo en caja, datáfono inalámbrico en salón y domicilio, transferencias directas QR Bancolombia/Nequi y pasarela web Wompi/PSE.
 
 ---
 
-## 5. MATRIZ LEAN CANVAS GRÁFICA OFICIAL
+## 5. MATRIZ MODELO CANVAS GRÁFICA OFICIAL
 
-A continuación se presenta la representación visual estandarizada de los 9 bloques del Lean Canvas de la empresa:
+A continuación se presenta la representación gráfica formal normalizada del **Modelo Canvas** para la empresa, estructurada con base en la distribución de Alexander Osterwalder (cinco columnas superiores con sus respectivas subdivisiones y dos columnas inferiores de viabilidad financiera):
 
-![Matriz Lean Canvas Pizzería Bella Italia](../diagramas/matriz_lean_canvas_pizzeria_bella_italia.png)
+![Matriz Modelo Canvas Pizzería Bella Italia](../diagramas/matriz_lean_canvas_pizzeria_bella_italia.png)
+
+> **Nota Metodológica:** El diseño visual adopta la cuadrícula estándar de referencia (*modelo_canvas.png*): columna izquierda para *Socios clave*, columna central izquierda dividida en *Actividades clave* (arriba) y *Recursos clave* (abajo), columna central para la *Propuesta única de valor*, columna central derecha dividida en *Relaciones con clientes* (arriba) y *Canales* (abajo), columna derecha para *Segmento de clientes*, y fila inferior dividida equitativamente entre *Estructura de costos* y *Flujos de ingresos*. Cada bloque incorpora su ícono identificativo y la etiqueta del área estratégica correspondiente.
 
 ---
 
 ## 6. MODELO FINANCIERO Y PUNTO DE EQUILIBRIO
 
-Para garantizar la viabilidad económica exigida por la Guía 10, se calculó el punto de equilibrio mensual mediante la fórmula clásica de finanzas empresariales:
+Para garantizar la viabilidad económica exigida por la Guía 10 del SENA, se aplicó la fórmula financiera clásica de punto de equilibrio operativo:
 
-$$\text{Punto de Equilibrio (Unidades)} = \frac{\text{Costos Fijos Totales}}{\text{Precio de Venta} - \text{Costo Variable Unitario}} = \frac{\text{Costos Fijos}}{\text{Margen de Contribución Unitario}}$$
+$$\text{Punto de Equilibrio (Unidades)} = \frac{\text{Costos Fijos Totales}}{\text{Precio de Venta} - \text{Costo Variable Unitario}} = \frac{\text{Costos Fijos Totales}}{\text{Margen de Contribución Unitario}}$$
 
-Sustituyendo con los parámetros operativos de Bella Italia Popayán:
-* **Precio de Venta Promedio ($P$):** $38.000 COP
+Sustituyendo con los valores financieros de Bella Italia Popayán:
+* **Precio de Venta Promedio Ponderado ($P$):** $38.000 COP
 * **Costo Variable Unitario ($CV$):** $12.200 COP
-* **Margen de Contribución Unitario ($MC$):** $\$38.000 - \$12.200 = \$25.800\text{ COP}$ ($67.9\%$ sobre el precio)
+* **Margen de Contribución Unitario ($MC$):** $\$38.000 - \$12.200 = \$25.800\text{ COP}$ ($67.9\%$ del precio de venta)
 * **Costos Fijos Mensuales ($CF$):** $8.000.000 COP
 
 $$\text{Punto de Equilibrio} = \frac{\$8.000.000}{\$25.800} \approx 310.07 \longrightarrow \mathbf{310\text{ pizzas al mes}}$$
 
-### Proyección de Metas Diarias y Utilidad
+### Metas Diarias y Proyección de Rentabilidad
 * **Meta Diaria de Equilibrio (30 días):** $\frac{310}{30} \approx \mathbf{10.3\text{ pizzas al día}}$.
 * **Escenario de Ventas Proyectado (Mes 6):** $650\text{ pizzas al mes}$ ($\approx 21.6$ pizzas/día).
-* **Ingresos Brutos Proyectados:** $650 \times \$38.000 = \$24.700.000\text{ COP}$.
+* **Ingresos Brutos Mensuales Proyectados:** $650 \times \$38.000 = \$24.700.000\text{ COP}$.
 * **Costos Variables Totales:** $650 \times \$12.200 = \$7.930.000\text{ COP}$.
 * **Margen de Contribución Total:** $\$24.700.000 - \$7.930.000 = \$16.770.000\text{ COP}$.
-* **Utilidad Operativa Neta:** $\$16.770.000 - \$8.000.000 = \mathbf{\$8.770.000\text{ COP mensuales}}$.
-
-El modelo demuestra una sólida viabilidad financiera, permitiendo cubrir la totalidad de costos fijos y salarios con tan solo 10 pizzas diarias y generando una rentabilidad neta superior al 35% a partir de 22 pizzas al día.
+* **Utilidad Operativa Neta:** $\$16.770.000 - \$8.000.000 = \mathbf{\$8.770.000\text{ COP mensuales}}$ (**35.5% de rentabilidad neta**).
 
 ---
 
 ## 7. ARQUITECTURA DEL PORTAL WEB INTERACTIVO EN DOCKER
 
-Para brindar una experiencia interactiva de inspección del modelo de negocio, se implementó el portal web interactivo en contenedores Docker:
-* **Contenedor Apache HTTPD:** `sena-lean-canvas-web` mapeado al puerto del host **`8101`** (`http://localhost:8101/`).
-* **Red Aislada:** `sena_lean_canvas_net` (Zero Host Pollution).
-* **Funcionalidades del Portal:**
-  1. Tablero visual interactivo de los 9 bloques Lean Canvas con tarjetas desplegables.
-  2. Módulo explicativo de las 4 áreas estratégicas (Clientes, Oferta, Infraestructura y Viabilidad).
-  3. Simulador financiero reactivo en JavaScript para recalcular el punto de equilibrio en tiempo real.
-  4. Panel de métricas claves y validación de hipótesis de Early Adopters.
-  5. Repositorio de descargas de documentos oficiales (PDF, DOCX, diagramas y ZIP).
+Para permitir la interacción directa con el modelo de negocio y facilitar su evaluación técnica, se desplegó un portal web en contenedores Docker:
+* **Servicio Apache HTTPD:** Contenedor `sena-lean-canvas-web` expuesto en el puerto host **`8101`** (`http://localhost:8101/`).
+* **Aislamiento de Red:** Red virtual bridge `sena_lean_canvas_net` (principio de *Zero Host Pollution*).
+* **Módulos Disponibles en el Portal:**
+  1. *Matriz Gráfica Oficial:* Visualizador en alta definición del Modelo Canvas con enlaces de descarga SVG y PNG.
+  2. *Cuadrícula Interactiva:* Los 9 bloques de Osterwalder organizados con tarjetas desplegables y etiquetas de área.
+  3. *Las 4 Áreas Estratégicas:* Análisis contextual de Infraestructura, Oferta, Clientes y Viabilidad Económica.
+  4. *Simulador Financiero Reactivo:* Calculadora en tiempo real para simular variaciones de precios, costos y volumen de ventas.
+  5. *Panel de KPIs y Early Adopters:* Matriz de indicadores clave de rendimiento (CAC, LTV, retención, KDS).
+  6. *Centro de Descargas Oficiales:* Acceso directo a documentos PDF, DOCX, esquemas vectoriales y paquete ZIP.
 
 ---
 
 ## 8. EVIDENCIAS GRÁFICAS DE IMPLEMENTACIÓN EN ENTORNO KDE X11
 
-Todas las capturas de pantalla reales fueron registradas en la estación de trabajo Linux del aprendiz mediante la herramienta nativa **Spectacle** sobre el servidor gráfico **KDE Plasma X11 (`DISPLAY=:0`)**, minimizando cualquier ventana de Visual Studio Code y ejecutando los comandos en la terminal nativa **Konsole** y en el navegador **Google Chrome**:
+Todas las capturas de pantalla reales fueron registradas en el sistema Linux del aprendiz mediante la utilidad nativa **Spectacle** sobre el servidor gráfico **KDE Plasma X11 (`DISPLAY=:0`)**, minimizando cualquier ventana de Visual Studio Code y ejecutando las acciones a través de la terminal **Konsole** y el navegador **Google Chrome**:
 
-1. **Paso 1: Despliegue de Contenedores Docker en Konsole:** Verificación de ejecución del servicio `sena-lean-canvas-web` en puerto 8101.
-2. **Paso 2: Verificación de Salud de la Plataforma en Konsole:** Validación de respuesta HTTP 200 y lectura del archivo de datos JSON.
-3. **Paso 3: Portal Web Lean Canvas - Portada y Tablero en Chrome:** Visualización general de la cuadrícula de 9 bloques en `http://localhost:8101/`.
-4. **Paso 4: Bloques de Problema, Solución y Propuesta de Valor en Chrome:** Inspección interactiva de los dolores de mercado y la propuesta gastronómica caucana.
-5. **Paso 5: Bloques de Canales, Segmento de Clientes y Ventaja Injusta en Chrome:** Visualización de los canales directos y la ventaja técnica ADSO.
-6. **Paso 6: Simulador Financiero, Costos, Ingresos y Métricas en Chrome:** Prueba del simulador en vivo calculando el punto de equilibrio de 310 pizzas.
+1. **Paso 1: Despliegue de Contenedores Docker en Konsole:** Inspección de estado saludable de `sena-lean-canvas-web` en puerto 8101 y estructura del directorio.
+2. **Paso 2: Verificación de Salud de Servicios y API JSON en Konsole:** Respuesta HTTP 200 OK y parseo de los bloques del modelo en formato JSON.
+3. **Paso 3: Portal Web y Diagrama Oficial Modelo Canvas en Chrome:** Visualización del diagrama normalizado cargado en el portal (`http://localhost:8101/#tab-diagrama`).
+4. **Paso 4: Cuadrícula Interactiva de los 9 Bloques en Chrome:** Navegación en el tablero estructurado de los 9 componentes del modelo de negocio.
+5. **Paso 5: Pestaña de las 4 Áreas Estratégicas en Chrome:** Explicación detallada de Infraestructura, Oferta, Clientes y Viabilidad Económica.
+6. **Paso 6: Simulador Financiero y Punto de Equilibrio en Chrome:** Demostración del cálculo reactivo de rentabilidad y equilibrio operativo en vivo.
 
 ---
 
 ## 9. CONCLUSIONES Y FACTIBILIDAD DEL EMPRENDIMIENTO
 
-1. **Alineación con la Metodología Lean Startup:** El modelo Lean Canvas permitió sintetizar de forma ágil y visual los elementos críticos del negocio, orientando la propuesta de valor hacia problemas reales y medibles del consumidor payanés.
-2. **Sinergia entre Tecnología y Tradición:** La combinación de desarrollo de software propio (ADSO) con la cocina tradicional en horno de leña crea una ventaja injusta contundente, eliminando las comisiones abusivas del delivery comercial.
-3. **Solvencia Financiera Comprobada:** Con un margen de contribución del 67.9% y un punto de equilibrio de tan solo 10.3 pizzas diarias, el proyecto presenta un perfil de bajo riesgo operativo y alta rentabilidad.
-4. **Impacto Socioeconómico en el Cauca:** La alianza directa con campesinos de Silvia promueve la economía circular y la formalización laboral de jóvenes de Popayán, cumpliendo con la misión social del SENA.
+1. **Estructura Empresarial Coherente:** El Modelo Canvas permitió sintetizar de forma clara y visual la interacción de los 9 bloques del negocio, integrando las 4 áreas directivas exigidas por la Guía 10 del SENA.
+2. **Ventaja Competitiva Tecnológica:** La plataforma de software propietaria desarrollada en ADSO elimina comisiones abusivas de intermediarios, asegurando agilidad de pedidos, trazabilidad en cocina (KDS) y facturación legal DIAN.
+3. **Sólida Viabilidad Financiera:** Con un margen de contribución del 67.9% y un punto de equilibrio de apenas 10.3 pizzas al día, el restaurante opera bajo un perfil de muy bajo riesgo comercial y alta rentabilidad neta (35.5%).
+4. **Compromiso con el Desarrollo Regional:** La proveeduría directa con campesinos de Silvia promueve la economía circular del departamento del Cauca y consolida la gastronomía patrimonial de Popayán ante el mundo.
 
 ---
 

@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modelo Lean Canvas - Pizzería Gourmet Bella Italia Popayán | Karen Campo - Ficha 3186681</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <title>Modelo Canvas del Emprendimiento - Pizzería Gourmet Bella Italia Popayán</title>
   <style>
     :root {
       --primary: #047857;
@@ -12,16 +11,16 @@
       --primary-light: #10b981;
       --accent: #d97706;
       --accent-dark: #b45309;
-      --danger: #dc2626;
       --info: #0284c7;
+      --danger: #dc2626;
       --bg: #f8fafc;
-      --card-bg: #ffffff;
+      --surface: #ffffff;
+      --border: #cbd5e1;
       --text: #0f172a;
       --text-muted: #64748b;
-      --border: #e2e8f0;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     }
 
     * {
@@ -31,41 +30,37 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.5;
-      padding-bottom: 50px;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     /* HEADER */
     .header-banner {
-      background: linear-gradient(135deg, var(--primary) 0%, #065f46 50%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, #047857 0%, #065f46 60%, #064e3b 100%);
       color: #ffffff;
-      padding: 30px 24px;
-      box-shadow: var(--shadow-md);
-      border-bottom: 4px solid var(--accent);
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
+      padding: 30px 0 40px 0;
+      border-bottom: 4px solid var(--primary-light);
     }
 
     .badge-sena {
       display: inline-block;
       background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      color: #ffffff;
+      backdrop-filter: blur(4px);
       padding: 4px 12px;
       border-radius: 9999px;
       font-size: 0.8rem;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
     .header-title {
@@ -158,18 +153,18 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* LEAN CANVAS GRID (9 BLOQUES) */
-    .lean-canvas-board {
+    /* MODELO CANVAS GRID (5 COLUMNAS SUPERIORES + 2 COLUMNAS INFERIORES) */
+    .canvas-board {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: auto auto;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: auto auto auto;
       gap: 14px;
       margin-bottom: 25px;
     }
 
     .canvas-block {
       background: #ffffff;
-      border: 1px solid var(--border);
+      border: 1px solid #1e293b;
       border-radius: 10px;
       padding: 16px;
       box-shadow: var(--shadow-sm);
@@ -181,8 +176,19 @@
     .canvas-block:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      border-color: var(--primary-light);
+      border-color: #0284c7;
     }
+
+    /* POSICIONAMIENTO OSTERWALDER */
+    .b-socios { grid-column: 1 / 3; grid-row: 1 / 3; }
+    .b-actividades { grid-column: 3 / 5; grid-row: 1; }
+    .b-recursos { grid-column: 3 / 5; grid-row: 2; }
+    .b-propuesta { grid-column: 5 / 7; grid-row: 1 / 3; background: #f0fdf4; }
+    .b-relaciones { grid-column: 7 / 9; grid-row: 1; }
+    .b-canales { grid-column: 7 / 9; grid-row: 2; }
+    .b-segmentos { grid-column: 9 / 11; grid-row: 1 / 3; }
+    .b-costos { grid-column: 1 / 6; grid-row: 3; }
+    .b-ingresos { grid-column: 6 / 11; grid-row: 3; }
 
     .block-header {
       display: flex;
@@ -193,45 +199,34 @@
       border-bottom: 2px solid #f1f5f9;
     }
 
-    .block-num {
-      background: var(--primary);
-      color: #ffffff;
-      width: 22px;
-      height: 22px;
-      line-height: 22px;
-      text-align: center;
-      border-radius: 50%;
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
     .block-title {
-      font-size: 0.95rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: #0f172a;
       flex-grow: 1;
-      margin-left: 8px;
     }
 
     .block-badge {
-      font-size: 0.7rem;
-      padding: 2px 6px;
+      font-size: 0.68rem;
+      padding: 2px 7px;
       border-radius: 4px;
-      font-weight: 600;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .badge-area-clientes { background: #e0f2fe; color: #0369a1; }
     .badge-area-oferta { background: #dcfce7; color: #15803d; }
-    .badge-area-infra { background: #fef3c7; color: #b45309; }
+    .badge-area-infra { background: #f1f5f9; color: #475569; }
     .badge-area-viabilidad { background: #fee2e2; color: #b91c1c; }
 
     .canvas-list {
       list-style: none;
-      font-size: 0.84rem;
+      font-size: 0.83rem;
       color: #334155;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
       flex-grow: 1;
     }
 
@@ -245,7 +240,7 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: var(--primary);
+      color: var(--info);
       font-weight: bold;
     }
 
@@ -259,19 +254,25 @@
       margin-bottom: 4px;
     }
 
-    /* ASIGNACIÓN DE GRID */
-    .b-problema { grid-column: 1; grid-row: 1; }
-    .b-solucion { grid-column: 2; grid-row: 1; }
-    .b-propuesta { grid-column: 3; grid-row: 1; border-color: var(--primary); }
-    .b-ventaja { grid-column: 4; grid-row: 1; }
-    .b-segmento { grid-column: 5; grid-row: 1; }
+    /* DIAGRAMA VIEWER */
+    .diagram-container {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
 
-    .b-costos { grid-column: 1 / span 2; grid-row: 2; }
-    .b-metricas { grid-column: 3; grid-row: 2; }
-    .b-canales { grid-column: 4; grid-row: 2; }
-    .b-ingresos { grid-column: 5; grid-row: 2; }
+    .diagram-container img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #1e293b;
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+    }
 
-    /* CARDS 4 ÁREAS */
+    /* 4 ÁREAS ESTRATÉGICAS */
     .areas-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -328,7 +329,7 @@
       padding: 10px 14px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: monospace;
       font-size: 0.95rem;
     }
 
@@ -351,7 +352,7 @@
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--primary);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: monospace;
     }
 
     .kpi-card .lbl {
@@ -362,25 +363,20 @@
       margin-top: 4px;
     }
 
-    /* FOOTER */
     footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
       text-align: center;
       font-size: 0.85rem;
       color: var(--text-muted);
       margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 1024px) {
-      .lean-canvas-board {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-      }
-      .b-problema, .b-solucion, .b-propuesta, .b-ventaja, .b-segmento,
-      .b-costos, .b-metricas, .b-canales, .b-ingresos {
-        grid-column: auto;
-        grid-row: auto;
+    @media (max-width: 1100px) {
+      .canvas-board {
+        display: flex;
+        flex-direction: column;
       }
     }
   </style>
@@ -391,9 +387,9 @@
   <header class="header-banner">
     <div class="container">
       <span class="badge-sena">SENA CTPI Popayán - ADSO Ficha 3186681</span>
-      <h1 class="header-title">MODELO LEAN CANVAS DEL EMPRENDIMIENTO</h1>
+      <h1 class="header-title">MODELO CANVAS DEL EMPRENDIMIENTO</h1>
       <p class="header-subtitle">
-        Pizzería Gourmet Bella Italia Popayán | Plataforma Omnicanal y Cocina Artesanal en Horno de Leña
+        Pizzería Gourmet Bella Italia Popayán | Estructura Empresarial de 9 Bloques y 4 Áreas Estratégicas
       </p>
     </div>
   </header>
@@ -422,15 +418,18 @@
         IE-GA10-240201529-AA2-EV02
       </div>
       <div class="meta-item">
-        <strong>Instructor</strong>
+        <strong>Instructor Técnico</strong>
         Danilo
       </div>
     </section>
 
     <!-- NAVEGACIÓN POR PESTAÑAS -->
     <nav class="nav-tabs">
-      <button class="tab-button active" onclick="switchTab('tab-canvas')">
-        📋 Matriz Lean Canvas (9 Bloques)
+      <button class="tab-button active" onclick="switchTab('tab-diagrama')">
+        🖼️ Matriz Modelo Canvas Oficial
+      </button>
+      <button class="tab-button" onclick="switchTab('tab-canvas')">
+        📋 Cuadrícula Interactiva (9 Bloques)
       </button>
       <button class="tab-button" onclick="switchTab('tab-areas')">
         🏛️ Las 4 Áreas Estratégicas
@@ -446,237 +445,249 @@
       </button>
     </nav>
 
-    <!-- PESTAÑA 1: LEAN CANVAS BOARD -->
-    <div id="tab-canvas" class="tab-content active">
-      <div class="lean-canvas-board">
+    <!-- PESTAÑA 1: DIAGRAMA OFICIAL MODELO CANVAS -->
+    <div id="tab-diagrama" class="tab-content active">
+      <div class="diagram-container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; flex-wrap:wrap; gap:10px;">
+          <div style="text-align:left;">
+            <h3 style="font-size:1.3rem; font-weight:800; color:#0f172a;">MATRIZ MODELO CANVAS GRÁFICA OFICIAL</h3>
+            <p style="font-size:0.88rem; color:#64748b;">Representación normalizada según la metodología de Alexander Osterwalder y Guía 10 SENA.</p>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <a href="diagramas/matriz_lean_canvas_pizzeria_bella_italia.png" target="_blank" style="background:var(--primary); color:#ffffff; padding:8px 16px; border-radius:6px; font-weight:700; text-decoration:none; font-size:0.85rem;">🔍 Ver en Pantalla Completa (HD)</a>
+            <a href="diagramas/matriz_lean_canvas_pizzeria_bella_italia.svg" target="_blank" style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:8px 16px; border-radius:6px; font-weight:700; text-decoration:none; font-size:0.85rem;">Vectorial SVG</a>
+          </div>
+        </div>
+        <img src="diagramas/matriz_lean_canvas_pizzeria_bella_italia.png" alt="Matriz Modelo Canvas Pizzería Gourmet Bella Italia Popayán">
+      </div>
+    </div>
 
-        <!-- 1. PROBLEMA -->
-        <article class="canvas-block b-problema">
+    <!-- PESTAÑA 2: CUADRÍCULA INTERACTIVA 9 BLOQUES MODELO CANVAS -->
+    <div id="tab-canvas" class="tab-content">
+      <div class="canvas-board">
+
+        <!-- 1. SOCIOS CLAVE -->
+        <article class="canvas-block b-socios">
           <div class="block-header">
-            <span class="block-num">1</span>
-            <span class="block-title">Problema</span>
-            <span class="block-badge badge-area-clientes">Clientes</span>
+            <span class="block-title">Socios clave</span>
+            <span class="block-badge badge-area-infra">Infraestructura</span>
           </div>
           <ul class="canvas-list">
-            <li><strong>Masa pesada e industrial:</strong> Falta de pizzas con fermentación natural lenta de 48h en Popayán; predominio de harinas refinadas con aditivos que provocan pesadez.</li>
-            <li><strong>Desconexión con el Cauca:</strong> Inexistencia de recetas gourmet que incorporen pipián payanés y quesos madurados de Silvia.</li>
-            <li><strong>Altas comisiones de delivery:</strong> Apps comerciales cobran 25%-30% y demoran los pedidos sin asegurar temperatura.</li>
-          </ul>
-          <div class="sub-section-title">Alternativas Actuales:</div>
-          <ul class="canvas-list" style="font-size:0.8rem; color:#64748b;">
-            <li>Franquicias multinacionales de comida rápida ultraprocesada.</li>
-            <li>Pizzerías informales de barrio sin carta web ni factura legal.</li>
+            <li><strong>Asociación Campesina de Silvia:</strong> Proveedores directos de quesos madurados y lácteos frescos de altura.</li>
+            <li><strong>Productores de Pipián de Popayán:</strong> Suministro de maní tostado, achiote ancestral y papa criolla caucana.</li>
+            <li><strong>Molino Harinero Certificado:</strong> Harina de fuerza tipo 00 (W 300+) para fermentación lenta de 48 horas.</li>
+            <li><strong>SENA CTPI - Fondo Emprender:</strong> Asesoría técnica empresarial, mentoría y capital semilla de apoyo.</li>
+            <li><strong>Pasarela Wompi / Redebanc:</strong> Infraestructura transaccional segura para pagos PSE, QR y tarjetas.</li>
+            <li><strong>Corporación Gastronómica Popayán:</strong> Integración al circuito turístico de Ciudad Creativa UNESCO.</li>
           </ul>
         </article>
 
-        <!-- 4. SOLUCIÓN -->
-        <article class="canvas-block b-solucion">
+        <!-- 2. ACTIVIDADES CLAVE -->
+        <article class="canvas-block b-actividades">
           <div class="block-header">
-            <span class="block-num">4</span>
-            <span class="block-title">Solución</span>
-            <span class="block-badge badge-area-oferta">Oferta</span>
+            <span class="block-title">Actividades clave</span>
+            <span class="block-badge badge-area-infra">Infraestructura</span>
           </div>
           <ul class="canvas-list">
-            <li><strong>Fermentación de 48h en Leña:</strong> Masas napolitanas livianas, digestivas y horneadas a 400°C en leña de roble.</li>
-            <li><strong>Identidad Caucana de Autor:</strong> Línea exclusiva con pipián payanés tradicional y quesos campesinos de Silvia.</li>
-            <li><strong>Plataforma Digital Directa:</strong> Portal web propio sin sobrecostos de intermediarios, monitor KDS en cocina y facturación DIAN en 2 segundos.</li>
+            <li><strong>Amasado y Fermentación 48h:</strong> Maduración lenta de masa madre viva.</li>
+            <li><strong>Horneado Napolitano a 400°C:</strong> Cocción en leña de roble en 90 segundos.</li>
+            <li><strong>Cocina de Pipián Caucano:</strong> Elaboración diaria con receta tradicional.</li>
+            <li><strong>Mantenimiento de Software Propio:</strong> Control de pedidos web, KDS y facturación DIAN.</li>
+            <li><strong>Reparto Térmico Exprés (&lt;35 min):</strong> Despacho con flota propia en bolsas a 70°C.</li>
           </ul>
         </article>
 
-        <!-- 3. PROPUESTA ÚNICA DE VALOR -->
-        <article class="canvas-block b-propuesta" style="background:#f0fdf4;">
+        <!-- 3. RECURSOS CLAVE -->
+        <article class="canvas-block b-recursos">
           <div class="block-header">
-            <span class="block-num">3</span>
-            <span class="block-title" style="color:var(--primary-dark);">Propuesta Única de Valor</span>
+            <span class="block-title">Recursos clave</span>
+            <span class="block-badge badge-area-infra">Infraestructura</span>
+          </div>
+          <ul class="canvas-list">
+            <li><strong>Físicos:</strong> Horno de leña napolitano, amasadora espiral, mesas de granito y local en Centro Popayán.</li>
+            <li><strong>Intelectuales:</strong> Cepa de masa madre viva (5 años), recetas patentadas Pizza Pipián y Silvia.</li>
+            <li><strong>Tecnológicos:</strong> Ecosistema web y KDS en Docker (Karen Campo - ADSO), API facturación DIAN.</li>
+            <li><strong>Humanos:</strong> Maestro pizzero certificado, ayudantes de cocina, repartidor y líder ADSO.</li>
+          </ul>
+        </article>
+
+        <!-- 4. PROPUESTA DE VALOR -->
+        <article class="canvas-block b-propuesta">
+          <div class="block-header">
+            <span class="block-title" style="color:var(--primary-dark);">Propuesta de valor</span>
             <span class="block-badge badge-area-oferta">Oferta</span>
           </div>
-          <div style="background:#ffffff; border-left:4px solid var(--primary); padding:10px; border-radius:6px; margin-bottom:10px; font-weight:700; color:var(--primary-dark); font-size:0.88rem;">
+          <div style="background:#ffffff; border-left:4px solid var(--primary); padding:10px; border-radius:6px; margin-bottom:10px; font-weight:700; color:var(--primary-dark); font-size:0.86rem;">
             "El auténtico arte pizzero napolitano con el alma y sabor de la gastronomía caucana."
           </div>
           <ul class="canvas-list">
-            <li>Pizzas crocantes y digestivas con 48h de fermentación en horno de leña a 400°C.</li>
-            <li>Ingredientes de comercio justo adquiridos directamente a productores de Silvia, Cauca.</li>
-            <li>Experiencia digital fluida con seguimiento en tiempo real y comprobante fiscal DIAN inmediato.</li>
-          </ul>
-          <div class="sub-section-title">Concepto de Alto Nivel:</div>
-          <p style="font-size:0.8rem; font-weight:600; color:#065f46;">
-            La 'Pizzería de Autor Digital' que honra a Popayán como Ciudad Gastronómica UNESCO.
-          </p>
-        </article>
-
-        <!-- 9. VENTAJA INJUSTA -->
-        <article class="canvas-block b-ventaja">
-          <div class="block-header">
-            <span class="block-num">9</span>
-            <span class="block-title">Ventaja Injusta</span>
-            <span class="block-badge badge-area-infra">Infraestructura</span>
-          </div>
-          <ul class="canvas-list">
-            <li><strong>Software Propietario ADSO:</strong> Ecosistema web, KDS y POS DIAN desarrollado por Karen Campo, sin pagar alquiler de software ni regalías.</li>
-            <li><strong>Recetas Exclusivas Registradas:</strong> Fusión validada de masa napolitana con pipián payanés ancestral.</li>
-            <li><strong>Alianzas de Origen en Silvia:</strong> Proveeduría directa con campesinos locales que blinda la frescura y el costo.</li>
-            <li><strong>Ubicación Patrimonial:</strong> Local en Centro Histórico de Popayán UNESCO y soporte del Fondo Emprender SENA.</li>
+            <li><strong>Alta Digestibilidad:</strong> Masa fermentada 48 horas con levaduras naturales, sin pesadez estomacal.</li>
+            <li><strong>Identidad y Fusión Caucana:</strong> Fusión de pizza tradicional con pipián payanés y quesos de Silvia.</li>
+            <li><strong>Horno a 400°C:</strong> Horneado en 90s con corteza crocante y centro suave.</li>
+            <li><strong>Web Propia Sin Sobrecostos:</strong> Pedidos directos sin comisiones abusivas del 30% de terceros.</li>
+            <li><strong>Facturación DIAN Inmediata:</strong> Comprobante electrónico legal con QR en 2 segundos.</li>
           </ul>
         </article>
 
-        <!-- 2. SEGMENTO DE CLIENTES -->
-        <article class="canvas-block b-segmento">
+        <!-- 5. RELACIONES CON CLIENTES -->
+        <article class="canvas-block b-relaciones">
           <div class="block-header">
-            <span class="block-num">2</span>
-            <span class="block-title">Segmento de Clientes</span>
+            <span class="block-title">Relaciones con clientes</span>
             <span class="block-badge badge-area-clientes">Clientes</span>
           </div>
           <ul class="canvas-list">
-            <li>Familias, jóvenes y profesionales de estratos 3, 4 y 5 de Popayán que buscan alimentación artesanal y gourmet.</li>
-            <li>Turistas nacionales e internacionales atraídos por el patrimonio gastronómico de Popayán.</li>
-            <li>Comensales de oficina en el Centro Histórico que requieren almuerzos o cenas de calidad con entrega rápida.</li>
-          </ul>
-          <div class="sub-section-title">Primeros Adoptantes (Early Adopters):</div>
-          <ul class="canvas-list" style="font-size:0.8rem; color:#0369a1;">
-            <li>Amantes de la masa madre artesanal y productos caucanos de alta cocina.</li>
-            <li>Usuarios habituados a realizar pedidos y pagos en línea por smartphone.</li>
+            <li><strong>Atención Experiencial en Salón:</strong> Ambiente acogedor y visualización en vivo del horno.</li>
+            <li><strong>Autoservicio Digital Intuitivo:</strong> Catálogo web fluido con personalización de adiciones.</li>
+            <li><strong>Club "Bella Italia Club":</strong> Puntos por compra y pizza gratis en cumpleaños.</li>
+            <li><strong>Servicio Posventa:</strong> Encuestas NPS digitales y respuesta ágil por WhatsApp.</li>
           </ul>
         </article>
 
-        <!-- 7. ESTRUCTURA DE COSTOS -->
-        <article class="canvas-block b-costos">
-          <div class="block-header">
-            <span class="block-num">7</span>
-            <span class="block-title">Estructura de Costos</span>
-            <span class="block-badge badge-area-viabilidad">Viabilidad Económica</span>
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-            <div>
-              <div class="sub-section-title" style="margin-top:0;">Costos Fijos Mensuales:</div>
-              <ul class="canvas-list" style="font-size:0.8rem;">
-                <li>Arriendo Local Centro Popayán: $2.500.000 COP</li>
-                <li>Nómina Base (Chef, Cocinero, Cajero): $4.200.000 COP</li>
-                <li>Servicios Públicos & Fibra Óptica: $800.000 COP</li>
-                <li>Hosting Docker y Mantenimiento Web: $150.000 COP</li>
-                <li>Póliza Asesoría Contable/Tributaria: $350.000 COP</li>
-                <li><strong>Total Costos Fijos: $8.000.000 COP/mes</strong></li>
-              </ul>
-            </div>
-            <div>
-              <div class="sub-section-title" style="margin-top:0;">Costos Variables Directos:</div>
-              <ul class="canvas-list" style="font-size:0.8rem;">
-                <li>Materia Prima por pizza: 28% - 32% (~$12.000 COP)</li>
-                <li>Caja térmica ecológica y sello: $1.800 COP</li>
-                <li>Leña de roble certificada: $400.000 COP/mes</li>
-                <li>Comisión pasarela Wompi: 2.8% + $900 COP</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 8. MÉTRICAS CLAVES -->
-        <article class="canvas-block b-metricas">
-          <div class="block-header">
-            <span class="block-num">8</span>
-            <span class="block-title">Métricas Claves</span>
-            <span class="block-badge badge-area-infra">Infraestructura</span>
-          </div>
-          <ul class="canvas-list">
-            <li><strong>CAC (Costo Adquisición):</strong> &lt; $6.000 COP.</li>
-            <li><strong>LTV (Valor Vida Cliente):</strong> $320.000 COP/año.</li>
-            <li><strong>Tasa de Retención:</strong> &gt; 42% recompra mensual.</li>
-            <li><strong>Tiempo KDS:</strong> Promedio de 14 min en horno.</li>
-            <li><strong>Margen Bruto:</strong> 68% sobre ventas.</li>
-          </ul>
-        </article>
-
-        <!-- 5. CANALES -->
+        <!-- 6. CANALES -->
         <article class="canvas-block b-canales">
           <div class="block-header">
-            <span class="block-num">5</span>
             <span class="block-title">Canales</span>
             <span class="block-badge badge-area-clientes">Clientes</span>
           </div>
           <ul class="canvas-list">
-            <li><strong>Portal Web Propio:</strong> Tienda online responsiva con catálogo, carrito y checkout sin intermediarios.</li>
-            <li><strong>Restaurante Salón:</strong> Experiencia presencial en el Centro Histórico de Popayán.</li>
-            <li><strong>Reparto Propio:</strong> Domiciliarios con mapa digital y pago contra entrega.</li>
-            <li><strong>Redes Sociales:</strong> Instagram y TikTok con contenido de fermentación de masa madre e ingredientes de Silvia.</li>
+            <li><strong>Portal Web Propio:</strong> E-commerce responsive oficial sin comisiones de intermediarios.</li>
+            <li><strong>Salón Boutique Presencial:</strong> Punto físico colonial en el Centro Histórico de Popayán.</li>
+            <li><strong>Flota Propia de Domicilios:</strong> Reparto térmico controlado a 70°C con datáfono móvil.</li>
+            <li><strong>Redes Sociales:</strong> Campañas en Instagram y TikTok con cultura gastronómica del Cauca.</li>
           </ul>
         </article>
 
-        <!-- 6. FLUJOS DE INGRESOS -->
-        <article class="canvas-block b-ingresos">
+        <!-- 7. SEGMENTOS DE CLIENTES -->
+        <article class="canvas-block b-segmentos">
           <div class="block-header">
-            <span class="block-num">6</span>
-            <span class="block-title">Flujos de Ingresos</span>
-            <span class="block-badge badge-area-viabilidad">Viabilidad Económica</span>
+            <span class="block-title">Segmentos de clientes</span>
+            <span class="block-badge badge-area-clientes">Clientes</span>
           </div>
           <ul class="canvas-list">
-            <li><strong>Pizzas Clásicas:</strong> $32.000 a $38.000 COP.</li>
-            <li><strong>Especialidades Caucana Gourmet:</strong> $42.000 a $48.000 COP.</li>
-            <li><strong>Calzones, Focaccias & Postres:</strong> $8.000 a $16.000 COP.</li>
-            <li><strong>Bebidas Artesanales & Café:</strong> $5.000 a $9.000 COP.</li>
-            <li><strong>Catering Empresarial:</strong> Paquetes corporativos en Popayán.</li>
+            <li><strong>Familias y Hogares Urbanos:</strong> Habitantes de estratos 3, 4 y 5 de Popayán que buscan cenas saludables.</li>
+            <li><strong>Profesionales y Académicos:</strong> Adultos de 24 a 45 años con poco tiempo que valoran la rapidez digital.</li>
+            <li><strong>Turistas Gastronómicos:</strong> Visitantes que llegan a Popayán (Ciudad Creativa UNESCO) buscando cocina de autor.</li>
+            <li><strong>Early Adopters:</strong> Jóvenes aficionados a la masa madre y compradores móviles que pagan con QR/PSE.</li>
+            <li><strong>Sector Corporativo:</strong> Oficinas y bancos del centro que requieren pedidos ejecutivos con factura DIAN.</li>
           </ul>
-          <div class="sub-section-title">Medios de Pago:</div>
-          <p style="font-size:0.78rem; color:#475569;">
-            Efectivo, Datáfono inalámbrico, Bancolombia QR y pasarela en línea Wompi/PSE.
-          </p>
+        </article>
+
+        <!-- 8. ESTRUCTURA DE COSTOS -->
+        <article class="canvas-block b-costos">
+          <div class="block-header">
+            <span class="block-title">Estructura de costos</span>
+            <span class="block-badge badge-area-viabilidad">Viabilidad Económica</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div>
+              <div class="sub-section-title" style="margin-top:0; color:#991b1b;">Costos Fijos Mensuales ($8.000.000 COP):</div>
+              <ul class="canvas-list" style="font-size:0.8rem;">
+                <li>Arriendo Local Centro Popayán: $2.500.000 COP</li>
+                <li>Nómina Operativa Base (3 colaboradores): $4.200.000 COP</li>
+                <li>Servicios Públicos e Internet Fibra: $800.000 COP</li>
+                <li>Servidores Nube Docker y TI: $150.000 COP</li>
+                <li>Asesoría Contable y Facturación DIAN: $350.000 COP</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sub-section-title" style="margin-top:0; color:#991b1b;">Costos Variables Unitarios (~$12.200 COP):</div>
+              <ul class="canvas-list" style="font-size:0.8rem;">
+                <li>Materia Prima por pizza: $10.000 COP (~26.3% del PVP)</li>
+                <li>Empaque térmico biodegradable: $1.800 COP</li>
+                <li>Comisión pasarela transaccional Wompi: ~$400 COP</li>
+                <li>Leña certificada de roble: $400.000 COP / mes</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. FUENTES DE INGRESOS -->
+        <article class="canvas-block b-ingresos">
+          <div class="block-header">
+            <span class="block-title">Fuentes de ingresos</span>
+            <span class="block-badge badge-area-viabilidad">Viabilidad Económica</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div>
+              <div class="sub-section-title" style="margin-top:0; color:#15803d;">Líneas de Venta Directa (Salón & Web):</div>
+              <ul class="canvas-list" style="font-size:0.8rem;">
+                <li>Pizzas Tradicionales Napolitanas: $32.000 a $38.000 COP</li>
+                <li>Pizzas Gourmet de Autor Caucanas: $42.000 a $48.000 COP</li>
+                <li>Focaccias, Calzones y Repostería: $8.000 a $16.000 COP</li>
+                <li>Bebidas Artesanales & Café Especial: $5.000 a $9.000 COP</li>
+                <li>Catering y Paquetes Corporativos B2B: $25.000 a $35.000 COP</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sub-section-title" style="margin-top:0; color:#15803d;">Medios de Pago y Proyección:</div>
+              <p style="font-size:0.8rem; color:#334155; margin-bottom:8px;">
+                Efectivo en salón, datáfono inalámbrico en mesa, transferencias QR Bancolombia/Nequi y pasarela en línea Wompi/PSE.
+              </p>
+              <div style="background:#f0fdf4; border:1px solid #86efac; border-radius:6px; padding:8px; font-size:0.8rem;">
+                <strong>Margen de Contribución:</strong> $25.800 COP (67.9%)<br>
+                <strong>Punto de Equilibrio:</strong> 310 pizzas/mes (10.3 al día)
+              </div>
+            </div>
+          </div>
         </article>
 
       </div>
     </div>
 
-    <!-- PESTAÑA 2: 4 ÁREAS ESTRATÉGICAS -->
+    <!-- PESTAÑA 3: 4 ÁREAS ESTRATÉGICAS -->
     <div id="tab-areas" class="tab-content">
       <div class="areas-grid">
         <div class="area-card" style="border-top:4px solid var(--info);">
           <h3 style="color:var(--info);">👥 1. Área de Clientes</h3>
           <p style="font-size:0.9rem; color:#334155; margin-bottom:12px;">
-            Articula los bloques de <strong>Segmento de Clientes</strong>, <strong>Canales</strong> y <strong>Relación con el Consumidor</strong>.
+            Articula los bloques de <strong>Segmentos de Clientes</strong>, <strong>Canales</strong> y <strong>Relaciones con Clientes</strong>.
           </p>
           <ul style="font-size:0.85rem; color:#475569; margin-left:18px;">
-            <li>Enfoque en comensales gourmet de Popayán y turistas gastronómicos UNESCO.</li>
-            <li>Canal de contacto directo mediante portal web propio sin comisiones de intermediarios.</li>
-            <li>Early adopters identificados: apasionados por masas saludables y consumidores tecnológicos.</li>
+            <li>Enfoque en comensales locales de Popayán y turistas atraídos por la Ciudad Gastronómica UNESCO.</li>
+            <li>Canal de contacto directo mediante portal web propio sin comisiones abusivas de terceros.</li>
+            <li>Early adopters identificados: apasionados por la masa madre y compradores nativos digitales.</li>
           </ul>
         </div>
 
         <div class="area-card" style="border-top:4px solid var(--primary);">
           <h3 style="color:var(--primary);">🍕 2. Área de Oferta</h3>
           <p style="font-size:0.9rem; color:#334155; margin-bottom:12px;">
-            Articula los bloques de <strong>Propuesta Única de Valor</strong> y <strong>Solución</strong>.
+            Articula el bloque central de <strong>Propuesta de Valor</strong>.
           </p>
           <ul style="font-size:0.85rem; color:#475569; margin-left:18px;">
             <li>Pizzas de autor con fermentación natural de 48 horas en horno de leña a 400°C.</li>
             <li>Integración pionera de ingredientes ancestrales caucanos (pipián payanés y quesos de Silvia).</li>
-            <li>Carta digital interactiva con personalización al gramo y catálogo de alérgenos.</li>
+            <li>Carta digital interactiva con personalización al gramo y facturación electrónica DIAN inmediata.</li>
           </ul>
         </div>
 
         <div class="area-card" style="border-top:4px solid var(--accent);">
           <h3 style="color:var(--accent);">⚙️ 3. Área de Infraestructura</h3>
           <p style="font-size:0.9rem; color:#334155; margin-bottom:12px;">
-            Articula los bloques de <strong>Ventaja Injusta</strong> y <strong>Métricas Claves</strong>.
+            Articula los bloques de <strong>Socios Clave</strong>, <strong>Actividades Clave</strong> y <strong>Recursos Clave</strong>.
           </p>
           <ul style="font-size:0.85rem; color:#475569; margin-left:18px;">
             <li>Plataforma de software propietaria contenerizada en Docker (Web, KDS, POS DIAN).</li>
-            <li>Cocina industrial con horno de leña refractario y pantalla táctil de pedidos.</li>
-            <li>Monitoreo de tiempos de horneado (14 minutos) y retención del 42% mensual.</li>
+            <li>Cocina industrial con horno de leña refractario y amasadora espiral profesional.</li>
+            <li>Alianzas directas con productores campesinos de Silvia y Popayán.</li>
           </ul>
         </div>
 
         <div class="area-card" style="border-top:4px solid var(--danger);">
           <h3 style="color:var(--danger);">💰 4. Área de Viabilidad Económica</h3>
           <p style="font-size:0.9rem; color:#334155; margin-bottom:12px;">
-            Articula los bloques de <strong>Estructura de Costos</strong> y <strong>Flujos de Ingresos</strong>.
+            Articula los bloques de <strong>Estructura de Costos</strong> y <strong>Fuentes de Ingresos</strong>.
           </p>
           <ul style="font-size:0.85rem; color:#475569; margin-left:18px;">
             <li>Estructura de costos fijos controlada ($8.000.000 COP/mes).</li>
-            <li>Materia prima que no supera el 32% del precio final, arrojando un margen bruto del 68%.</li>
-            <li>Punto de equilibrio alcanzable con 310 pizzas al mes (~10 pizzas diarias).</li>
+            <li>Materia prima acotada al 26.3% del precio de venta, logrando un margen de contribución del 67.9%.</li>
+            <li>Punto de equilibrio alcanzable con 310 pizzas al mes (~10.3 pizzas diarias).</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- PESTAÑA 3: SIMULADOR FINANCIERO -->
+    <!-- PESTAÑA 4: SIMULADOR FINANCIERO -->
     <div id="tab-simulador" class="tab-content">
       <div class="calc-container">
         <h3 style="margin-bottom:15px; color:var(--primary-dark);">Simulador de Punto de Equilibrio y Rentabilidad Mensual</h3>
@@ -728,7 +739,7 @@
       </div>
     </div>
 
-    <!-- PESTAÑA 4: KPIS & EARLY ADOPTERS -->
+    <!-- PESTAÑA 5: KPIS & EARLY ADOPTERS -->
     <div id="tab-kpis" class="tab-content">
       <div class="calc-container">
         <h3 style="margin-bottom:15px; color:var(--primary-dark);">Estrategia de Validación con Early Adopters y Métricas Claves</h3>
@@ -775,27 +786,27 @@
       </div>
     </div>
 
-    <!-- PESTAÑA 5: DESCARGAS Y REPOSITORIO -->
+    <!-- PESTAÑA 6: DESCARGAS Y REPOSITORIO -->
     <div id="tab-descargas" class="tab-content">
       <div class="calc-container">
         <h3 style="margin-bottom:15px; color:var(--primary-dark);">Entregables Oficiales de la Evidencia GA10-240201529-AA2-EV02</h3>
         <p style="font-size:0.88rem; color:#475569; margin-bottom:20px;">
-          Todos los artefactos institucionales compilados y listos para calificación en la plataforma Zajuna:
+          Documentos maestros compilados y artefactos técnicos para la plataforma SENA Zajuna:
         </p>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
           <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:16px;">
-            <h4 style="color:var(--primary); font-size:0.95rem;">📄 Documento PDF Oficial</h4>
-            <p style="font-size:0.8rem; color:#64748b; margin:6px 0 12px 0;">Informe técnico completo con análisis de 4 áreas y 9 bloques.</p>
-            <span style="font-size:0.78rem; font-weight:700; color:#047857;">GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf</span>
+            <h4 style="color:var(--danger); font-size:0.95rem;">📄 Documento Oficial en PDF</h4>
+            <p style="font-size:0.8rem; color:#64748b; margin:6px 0 12px 0;">Informe maestro con portada SENA, 4 áreas, 9 bloques, simulación y APA 7.</p>
+            <span style="font-size:0.78rem; font-weight:700; color:var(--danger);">GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf</span>
           </div>
           <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:16px;">
-            <h4 style="color:#0369a1; font-size:0.95rem;">📝 Documento Word Editable</h4>
-            <p style="font-size:0.8rem; color:#64748b; margin:6px 0 12px 0;">Versión editable en Microsoft Word 2007 XML (DOCX).</p>
+            <h4 style="color:#0369a1; font-size:0.95rem;">📝 Documento Editable en DOCX</h4>
+            <p style="font-size:0.8rem; color:#64748b; margin:6px 0 12px 0;">Versión editable procesable en Word o LibreOffice con estilos.</p>
             <span style="font-size:0.78rem; font-weight:700; color:#0369a1;">GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx</span>
           </div>
           <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:16px;">
-            <h4 style="color:var(--accent-dark); font-size:0.95rem;">🖼️ Diagrama Lean Canvas</h4>
+            <h4 style="color:var(--accent-dark); font-size:0.95rem;">🖼️ Diagrama Modelo Canvas</h4>
             <p style="font-size:0.8rem; color:#64748b; margin:6px 0 12px 0;">Matriz gráfica vectorial en SVG y rasterizada en PNG (HD).</p>
             <span style="font-size:0.78rem; font-weight:700; color:var(--accent-dark);">matriz_lean_canvas_pizzeria_bella_italia.png</span>
           </div>
@@ -825,6 +836,27 @@
 
   <script>
     function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+      const targetContent = document.getElementById(tabId);
+      if (targetContent) targetContent.classList.add('active');
+      const targetBtn = Array.from(document.querySelectorAll('.tab-button')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId));
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash) {
+        switchTab(window.location.hash.replace('#', ''));
+      }
+    });
+
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash) {
+        switchTab(window.location.hash.replace('#', ''));
+      }
+    });
+
+    function legacySwitchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');

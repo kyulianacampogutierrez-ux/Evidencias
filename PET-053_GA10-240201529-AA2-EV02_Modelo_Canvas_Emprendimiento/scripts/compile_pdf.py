@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ==============================================================================
-# COMPILADOR DE MODELO LEAN CANVAS Y EMPACADOR DE EVIDENCIA GA10-240201529-AA2-EV02
+# COMPILADOR DE MODELO CANVAS Y EMPACADOR DE EVIDENCIA GA10-240201529-AA2-EV02
 # Evidencia: GA10-240201529-AA2-EV02 - Modelo Canvas del emprendimiento
 # Competencia: 240201529 - Gestionar procesos de la cultura emprendedora
 # Actividad: GA10-240201529-AA2 - Definir la idea de negocio a desarrollar en el emprendimiento
@@ -40,7 +40,7 @@ html_content = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Modelo Lean Canvas - GA10-240201529-AA2-EV02 | Karen Campo</title>
+  <title>Modelo Canvas - GA10-240201529-AA2-EV02 | Karen Campo</title>
   <style>
     @page {{
       size: letter;
@@ -236,7 +236,7 @@ html_content = f"""<!DOCTYPE html>
 
   <!-- ENCABEZADO INSTITUCIONAL -->
   <div class="header-bar">
-    <div class="header-title">MODELO LEAN CANVAS DEL EMPRENDIMIENTO</div>
+    <div class="header-title">MODELO CANVAS DEL EMPRENDIMIENTO</div>
     <div class="header-sub">Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado</div>
   </div>
 
@@ -248,153 +248,156 @@ html_content = f"""<!DOCTYPE html>
     <div class="meta-item"><strong>Fase del Proyecto:</strong> Fase 4 - Implantación (AP10)</div>
     <div class="meta-item"><strong>Actividad de Aprendizaje:</strong> GA10-240201529-AA2 - Definir la idea de negocio</div>
     <div class="meta-item"><strong>Evidencia Oficial:</strong> GA10-240201529-AA2-EV02 - Modelo Canvas del emprendimiento</div>
-    <div class="meta-item"><strong>Instrumento de Evaluación:</strong> IE-GA10-240201529-AA2-EV02 (Lista de Chequeo)</div>
-    <div class="meta-item"><strong>Componente Formativo:</strong> Entendiendo la empresa / Ser emprendedor</div>
+    <div class="meta-item"><strong>Instrumento de Evaluación:</strong> Lista de Chequeo IE-GA10-240201529-AA2-EV02</div>
     <div class="meta-item"><strong>Aprendiz:</strong> Karen Yuliana Campo</div>
     <div class="meta-item"><strong>Instructor Técnico:</strong> Danilo</div>
-    <div class="meta-item"><strong>Centro de Formación:</strong> CTPI Popayán - Regional Cauca</div>
-    <div class="meta-item"><strong>Proyecto Productivo:</strong> Pizzería Gourmet Bella Italia Popayán</div>
+    <div class="meta-item"><strong>Centro y Regional:</strong> CTPI Popayán - Regional Cauca (Noviembre 2026)</div>
   </div>
 
+  <!-- SECCIÓN 1: INTRODUCCIÓN Y MARCO TEÓRICO -->
+  <h1>1. INTRODUCCIÓN Y MARCO TEÓRICO DEL MODELO CANVAS</h1>
+  <p>
+    El diseño de un modelo de negocio innovador es fundamental para estructurar emprendimientos tecnológicos y de producción industrial. Conforme a las orientaciones curriculares de la <strong>Guía de Aprendizaje 10 (Actividad 3.2.2)</strong>, el <strong>Modelo Canvas</strong>, creado por Alexander Osterwalder e Yves Pigneur (2010), permite a los emprendedores visualizar y validar de forma estructurada cómo una empresa crea, entrega y captura valor.
+  </p>
+  <p>
+    El modelo sintetiza la lógica del negocio en <strong>cuatro (4) áreas estratégicas</strong> directivas: <strong>Infraestructura</strong>, <strong>Oferta</strong>, <strong>Clientes</strong> y <strong>Viabilidad Económica</strong>, las cuales se desagregan en <strong>nueve (9) bloques constructivos</strong> interconectados. El presente informe formaliza el Modelo Canvas desarrollado para el proyecto productivo <strong>Pizzería Gourmet Bella Italia Popayán</strong>, liderado por la aprendiz <strong>Karen Yuliana Campo</strong>.
+  </p>
+
+  <!-- SECCIÓN 2: CARACTERIZACIÓN DEL EMPRENDIMIENTO -->
+  <h1>2. CONTEXTO Y CARACTERIZACIÓN DE LA IDEA DE NEGOCIO</h1>
+  <p>
+    <strong>Pizzería Gourmet Bella Italia Popayán</strong> es un modelo gastronómico de alta gama que fusiona la técnica milenaria napolitana de cocción en horno de leña a 400°C con ingredientes identitarios del departamento del Cauca (pipián payanés y quesos campesinos de Silvia). Todo esto se apalanca en una plataforma de software propia de comercio electrónico, comanda digital de cocina KDS y facturación electrónica DIAN desarrollada durante la formación en ADSO.
+  </p>
   <div class="info-card">
-    <strong>Resumen Ejecutivo:</strong> La presente evidencia consolida la estructuración del modelo de negocio ágil <strong>Lean Canvas</strong> para la iniciativa empresarial y tecnológica <strong>Pizzería Gourmet Bella Italia Popayán</strong>. De acuerdo con las pautas de la <strong>Guía 10 (Sección 3.2.2)</strong> y la metodología de Ash Maurya (2012), se analizaron las cuatro (4) áreas estratégicas (Clientes, Oferta, Infraestructura y Viabilidad Económica) y se desarrollaron a profundidad los nueve (9) bloques constitutivos, complementados con un portal web interactivo desplegado en Docker en el puerto <code>8101</code>, análisis financiero de punto de equilibrio (310 pizzas/mes) y validación de hipótesis con <em>Early Adopters</em>.
+    <strong>Oportunidad de Mercado en Popayán:</strong> Capitalizar el reconocimiento de Popayán como <em>Ciudad Creativa de la Gastronomía UNESCO</em>, satisfaciendo la demanda de consumidores que exigen alimentos saludables, digestivos (48h de fermentación en masa madre viva) y pedidos directos en línea sin comisiones abusivas de plataformas de intermediación de delivery.
   </div>
 
-  <!-- SECCIÓN 1: INTRODUCCIÓN Y MARCO METODOLÓGICO -->
-  <h1>1. INTRODUCCIÓN Y MARCO METODOLÓGICO DEL LEAN CANVAS</h1>
-  <p>
-    El éxito de una empresa en etapas tempranas no depende de planes de negocio burocráticos y extensos, sino de la capacidad para formular hipótesis claras, probarlas con clientes reales y pivotar rápidamente. El **Lean Canvas** es la herramienta estándar del movimiento *Lean Startup* para modelar negocios en un lienzo visual de una sola página.
-  </p>
-  <p>
-    En el contexto del Servicio Nacional de Aprendizaje (SENA) y la formación ADSO, el Lean Canvas permite que la aprendiz **Karen Yuliana Campo** vincule el rigor técnico del desarrollo de software (arquitectura web, pantalla de cocina KDS y facturación electrónica DIAN) con las dinámicas comerciales del sector gastronómico de Popayán (reconocida internacionalmente como Ciudad Creativa de la Gastronomía por la UNESCO).
-  </p>
-
-  <!-- SECCIÓN 2: CONTEXTO DE LA IDEA DE NEGOCIO -->
-  <h1>2. CONTEXTO Y DESCRIPCIÓN DE LA IDEA DE NEGOCIO</h1>
-  <p>
-    <strong>Pizzería Gourmet Bella Italia Popayán</strong> es un modelo de negocio híbrido que combina la alta cocina artesanal con una infraestructura tecnológica propia:
-  </p>
-  <ul>
-    <li><strong>Propuesta Gastronómica:</strong> Masas con fermentación natural lenta de 48 horas en leña de roble a 400°C, fusionadas con ingredientes autóctonos caucanos de alta cocina: pipián payanés tradicional, quesos madurados de Silvia y trucha ahumada.</li>
-    <li><strong>Infraestructura Digital:</strong> Portal de comercio electrónico propio que elimina las comisiones abusivas del 25%-30% de plataformas de delivery comerciales, conectado en tiempo real a una pantalla de cocina KDS y facturación electrónica DIAN con código CUFE y QR.</li>
-  </ul>
-
-  <!-- SECCIÓN 3: LAS CUATRO ÁREAS ESTRATÉGICAS -->
+  <!-- SECCIÓN 3: LAS 4 ÁREAS ESTRATÉGICAS -->
   <h1>3. ANÁLISIS DE LAS CUATRO (4) ÁREAS ESTRATÉGICAS</h1>
   <table>
     <thead>
       <tr>
-        <th style="width: 25%;">Área Estratégica</th>
-        <th style="width: 35%;">Bloques Constitutivos</th>
-        <th style="width: 40%;">Aporte Estratégico al Emprendimiento</th>
+        <th style="width:25%;">Área Estratégica</th>
+        <th style="width:35%;">Bloques Constructivos</th>
+        <th style="width:40%;">Estrategia Bella Italia Popayán</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>1. Área de Clientes</strong></td>
-        <td>• Segmento de Clientes<br>• Canales Directos<br>• Early Adopters</td>
-        <td>Focalización en comensales locales (estratos 3-5) y turistas gastronómicos UNESCO, conectando por canal web propio sin intermediarios.</td>
+        <td><strong>1. Infraestructura</strong></td>
+        <td>Socios clave, Actividades clave, Recursos clave</td>
+        <td>Alianza directa con campesinos de Silvia, horno de leña a 400°C y plataforma de software contenerizada en Docker (ADSO).</td>
       </tr>
       <tr>
-        <td><strong>2. Área de Oferta</strong></td>
-        <td>• Problema Validado<br>• Solución Innovadora<br>• Propuesta Única de Valor</td>
-        <td>Sustitución de masas industriales por pizzas digestivas de 48h con sabor caucano auténtico y personalización interactiva.</td>
+        <td><strong>2. Oferta</strong></td>
+        <td>Propuesta de valor</td>
+        <td>Pizzas de autor napolitanas fermentadas 48 horas con masa madre viva, combinadas con pipián payanés y quesos madurados.</td>
       </tr>
       <tr>
-        <td><strong>3. Área de Infraestructura</strong></td>
-        <td>• Ventaja Injusta<br>• Métricas Claves (KPIs)</td>
-        <td>Apalancamiento de software propietario ADSO (cero costo de licencias), hornos de leña y control de tiempos de cocción (14 min).</td>
+        <td><strong>3. Clientes</strong></td>
+        <td>Relaciones con clientes, Canales, Segmentos de clientes</td>
+        <td>Venta directa vía portal web propio (localhost:8101) y salón boutique, club de fidelización y enfoque en familias y turistas UNESCO.</td>
       </tr>
       <tr>
         <td><strong>4. Viabilidad Económica</strong></td>
-        <td>• Estructura de Costos<br>• Flujos de Ingresos</td>
-        <td>Margen bruto del 67.9% con costos de materia prima menores al 32% y punto de equilibrio alcanzable con solo 10.3 pizzas/día.</td>
+        <td>Estructura de costos, Fuentes de ingresos</td>
+        <td>Costos fijos de $8.000.000 COP, margen de contribución del 67.9% y punto de equilibrio en 310 pizzas/mes (10.3 al día).</td>
       </tr>
     </tbody>
   </table>
 
-  <!-- SECCIÓN 4: LOS NUEVE BLOQUES DEL LEAN CANVAS -->
-  <h1>4. DESARROLLO DETALLADO DE LOS NUEVE (9) BLOQUES DEL LEAN CANVAS</h1>
-  <h2>4.1 Bloque 1: Problema</h2>
+  <!-- SECCIÓN 4: LOS 9 BLOQUES DEL MODELO CANVAS -->
+  <h1>4. DESARROLLO DETALLADO DE LOS NUEVE (9) BLOQUES DEL MODELO CANVAS</h1>
+
+  <h2>4.1 Bloque 1: Socios Clave (Infraestructura)</h2>
   <ul>
-    <li><strong>Masas Pesadas e Industriales:</strong> Falta de pizzas con fermentación natural lenta de 48 horas en Popayán; predominio de harinas refinadas con químicos que causan pesadez digestiva.</li>
-    <li><strong>Falta de Identidad Caucana:</strong> Inexistencia de cartas de pizzas casuales que incorporen pipián payanés o quesos de Silvia.</li>
-    <li><strong>Altas Comisiones de Delivery:</strong> Apps comerciales cobran 25%-30% y generan demoras sin emitir factura electrónica formal.</li>
-    <li><em>Alternativas Existentes:</em> Cadenas multinacionales de pizza rápida congelada y pizzerías informales de barrio.</li>
+    <li><strong>Asociación Campesina de Silvia (Cauca):</strong> Suministro directo de quesos madurados artesanales y lácteos frescos.</li>
+    <li><strong>Productores de Pipián de Popayán:</strong> Proveeduría de maní tostado, achiote ancestral y papa criolla para el pipián.</li>
+    <li><strong>Molino Harinero Certificado:</strong> Harina de fuerza tipo 00 (W 300+) para fermentación prolongada de 48 horas.</li>
+    <li><strong>SENA CTPI & Fondo Emprender:</strong> Mentoría técnica, validación de modelo y apalancamiento en capital semilla.</li>
+    <li><strong>Pasarela de Pagos Wompi / Redebanc:</strong> Transacciones seguras con QR Bancolombia, PSE y tarjetas sin fricción.</li>
+    <li><strong>Corporación Gastronómica de Popayán (UNESCO):</strong> Integración con circuitos turísticos y festivales culturales.</li>
   </ul>
 
-  <h2>4.2 Bloque 2: Segmento de Clientes</h2>
+  <h2>4.2 Bloque 2: Actividades Clave (Infraestructura)</h2>
   <ul>
-    <li>Familias, jóvenes y profesionales de estratos 3, 4 y 5 de Popayán que buscan alimentación saludable y de autor.</li>
-    <li>Turistas atraídos por el patrimonio gastronómico de Popayán UNESCO.</li>
-    <li>Empleados de oficinas del Centro Histórico que requieren despachos ejecutivos con factura formal DIAN.</li>
-    <li><em>Early Adopters:</em> Comensales apasionados por la masa madre y usuarios digitales que ordenan por smartphone.</li>
+    <li>Amasado artesanal y fermentación biológica lenta de 48 horas en frío.</li>
+    <li>Cocción napolitana en horno de leña de roble a 400°C en tan solo 90 segundos.</li>
+    <li>Elaboración diaria de pipián patrimonial caucano y porcionado de quesos madurados.</li>
+    <li>Mantenimiento y soporte continuo de la plataforma web, KDS y API de facturación DIAN.</li>
+    <li>Despacho logístico térmico propio en mochilas herméticas a 70°C en menos de 35 minutos.</li>
+    <li>Control higiénico-sanitario y trazabilidad de insumos bajo estándares de BPM.</li>
   </ul>
 
-  <h2>4.3 Bloque 3: Propuesta Única de Valor (UVP)</h2>
+  <h2>4.3 Bloque 3: Recursos Clave (Infraestructura)</h2>
+  <ul>
+    <li><strong>Físicos:</strong> Local comercial en el Centro Histórico de Popayán, horno de leña abovedado, amasadora espiral y mesas de granito.</li>
+    <li><strong>Intelectuales:</strong> Cepa de masa madre viva de 5 años, fórmulas exclusivas registradas (Pizza Pipián, Pizza Silvia).</li>
+    <li><strong>Tecnológicos:</strong> Ecosistema web y KDS en microservicios Docker (Karen Campo - ADSO), API facturación electrónica DIAN.</li>
+    <li><strong>Humanos:</strong> Maestro pizzero certificado (*Pizzaiolo*), ayudantes de cocina, despachador propio y líder ADSO.</li>
+    <li><strong>Financieros:</strong> Capital de trabajo propio y crédito semilla institucional.</li>
+  </ul>
+
+  <h2>4.4 Bloque 4: Propuesta de Valor (Oferta)</h2>
   <div class="info-card">
     <strong>Lema Principal:</strong> <em>"El auténtico arte pizzero napolitano con el alma y sabor de la gastronomía caucana."</em><br>
-    Pizzas artesanales altamente digestivas con 48h de fermentación en horno de leña a 400°C e ingredientes autóctonos de Silvia y Popayán, gestionadas por plataforma web propia con facturación DIAN en 2 segundos.
+    Pizzas artesanales altamente digestivas con 48h de fermentación natural en horno de leña a 400°C, fusionadas con pipián payanés y quesos campesinos de Silvia, comercializadas por canal web propio sin sobrecostos de intermediarios y con facturación electrónica legal DIAN en 2 segundos.
   </div>
 
-  <h2>4.4 Bloque 4: Solución</h2>
+  <h2>4.5 Bloque 5: Relaciones con Clientes (Clientes)</h2>
   <ul>
-    <li>Masa de fermentación de 48h horneada en leña a 400°C en solo 90 segundos.</li>
-    <li>Línea de autor con productos de origen: Pipián Gourmet y Silvia Campesina.</li>
-    <li>Ecosistema digital propio (E-Commerce, KDS en cocina y facturación DIAN) sin intermediarios.</li>
+    <li><strong>Atención Experiencial en Salón:</strong> Servicio cálido y observación en vivo del horno de leña encendido.</li>
+    <li><strong>Autoservicio Digital Intuitivo:</strong> Catálogo web interactivo con fotos HD, alérgenos y confirmación por WhatsApp.</li>
+    <li><strong>Club "Bella Italia Club":</strong> Acumulación de puntos, degustaciones de recetas de autor y cortesía de cumpleaños.</li>
+    <li><strong>Atención Posventa y Escucha Activa:</strong> Encuestas de satisfacción NPS y garantía de reposición inmediata.</li>
   </ul>
 
-  <h2>4.5 Bloque 5: Canales</h2>
+  <h2>4.6 Bloque 6: Canales (Clientes)</h2>
   <ul>
-    <li>Portal Web Oficial responsivo (<code>http://localhost:8101/</code>).</li>
+    <li>Portal Web Oficial responsivo e-commerce (<code>http://localhost:8101/</code>).</li>
     <li>Restaurante boutique con salón en el Centro Histórico de Popayán.</li>
-    <li>Flota propia de domicilios con empaque térmico ecológico a 70°C.</li>
-    <li>Redes sociales (Instagram, TikTok) con storytelling del proceso de leña.</li>
+    <li>Flota propia de domicilios con empaque térmico ecológico a 70°C y datáfono móvil.</li>
+    <li>Redes sociales (Instagram, TikTok) con storytelling de la cocina artesanal y origen campesino.</li>
+    <li>Canal B2B institucional para catering corporativo en oficinas y entidades bancarias.</li>
   </ul>
 
-  <h2>4.6 Bloque 6: Flujos de Ingresos</h2>
+  <h2>4.7 Bloque 7: Segmentos de Clientes (Clientes)</h2>
   <ul>
-    <li>Pizzas Clásicas: $32.000 a $38.000 COP por unidad.</li>
-    <li>Especialidades Caucana Gourmet: $42.000 a $48.000 COP por unidad.</li>
-    <li>Calzones, Focaccias y Postres: $8.000 a $16.000 COP por unidad.</li>
-    <li>Bebidas Artesanales & Café de Silvia: $5.000 a $9.000 COP por unidad.</li>
-    <li>Medios de Pago: Wompi (PSE, Tarjetas), Bancolombia QR, Datáfono y Efectivo.</li>
+    <li>Familias y comensales urbanos de estratos 3, 4 y 5 que buscan cenas saludables y de calidad.</li>
+    <li>Jóvenes profesionales, docentes y médicos que valoran la rapidez de entrega y pedidos web.</li>
+    <li>Turistas atraídos por la designación de Popayán como Ciudad Creativa UNESCO.</li>
+    <li><em>Early Adopters:</em> Foodies aficionados a la masa madre artesanal y compradores nativos digitales.</li>
+    <li>Empresas e instituciones del centro que requieren pedidos ejecutivos con factura legal DIAN.</li>
   </ul>
 
-  <h2>4.7 Bloque 7: Estructura de Costos</h2>
+  <h2>4.8 Bloque 8: Estructura de Costos (Viabilidad Económica)</h2>
   <ul>
-    <li><strong>Costos Fijos Mensuales ($8.000.000 COP):</strong> Arriendo local Centro ($2.500.000), Nómina base 3 personas ($4.200.000), Servicios y fibra óptica ($800.000), Hosting y DIAN ($500.000).</li>
-    <li><strong>Costos Variables Unitarios (~$12.200 COP):</strong> Materia prima (~30%), empaque ecológico ($1.800), leña de roble y pasarela digital.</li>
+    <li><strong>Costos Fijos Mensuales ($8.000.000 COP):</strong> Arriendo local Centro ($2.500.000), Nómina 3 personas ($4.200.000), Servicios e internet fibra ($800.000), Hosting Docker y DIAN ($500.000).</li>
+    <li><strong>Costos Variables Unitarios (~$12.200 COP):</strong> Materia prima (~$10.000 COP / 26.3%), empaque térmico biodegradable ($1.800 COP), comisión pasarela Wompi ($400 COP).</li>
+    <li><strong>Suministro Operativo:</strong> Leña de roble certificada ($400.000 COP/mes) y pauta publicitaria ($300.000 COP/mes).</li>
   </ul>
 
-  <h2>4.8 Bloque 8: Métricas Claves (KPIs)</h2>
+  <h2>4.9 Bloque 9: Fuentes de Ingresos (Viabilidad Económica)</h2>
   <ul>
-    <li>Costo de Adquisición de Clientes (CAC): &lt; $6.000 COP.</li>
-    <li>Valor del Tiempo de Vida del Cliente (LTV): $320.000 COP anuales.</li>
-    <li>Tasa de Retención Mensual: &gt; 42% de recompra recurrente.</li>
-    <li>Tiempo Promedio KDS: 14 minutos en horno de leña.</li>
-    <li>Margen de Contribución Bruto: 67.9% sobre ventas.</li>
+    <li>Pizzas Tradicionales Napolitanas: $32.000 a $38.000 COP por unidad.</li>
+    <li>Pizzas Gourmet de Autor Caucanas: $42.000 a $48.000 COP por unidad.</li>
+    <li>Focaccias, Calzones y Repostería Artesanal: $8.000 a $16.000 COP por unidad.</li>
+    <li>Bebidas Artesanales & Café Especial de Silvia: $5.000 a $9.000 COP por unidad.</li>
+    <li>Catering Empresarial: Paquetes corporativos desde $25.000 a $35.000 COP por persona.</li>
+    <li>Medios de Pago: Efectivo, datáfono inalámbrico, transferencias QR Bancolombia/Nequi y Wompi/PSE.</li>
   </ul>
 
-  <h2>4.9 Bloque 9: Ventaja Injusta</h2>
-  <ul>
-    <li>Software propietario ADSO (E-Commerce, KDS, POS) programado por Karen Campo sin pagos de licencias a terceros.</li>
-    <li>Recetas registradas de masa madre 48h con pipián payanés.</li>
-    <li>Alianzas directas de comercio justo con productores campesinos de Silvia.</li>
-    <li>Sello de Popayán UNESCO y asesoría del Fondo Emprender SENA.</li>
-  </ul>
-
-  <!-- SECCIÓN 5: MATRIZ GRÁFICA DEL LEAN CANVAS -->
-  <h1>5. MATRIZ LEAN CANVAS GRÁFICA OFICIAL</h1>
+  <!-- SECCIÓN 5: MATRIZ GRÁFICA DEL MODELO CANVAS -->
+  <h1>5. MATRIZ MODELO CANVAS GRÁFICA OFICIAL</h1>
   <div class="img-container">
-    <img src="{diag_canvas}" alt="Matriz Lean Canvas de la Pizzería">
-    <div class="caption">Figura 1: Matriz Lean Canvas Oficial de 9 Bloques - Pizzería Gourmet Bella Italia Popayán.</div>
+    <img src="{diag_canvas}" alt="Matriz Modelo Canvas de la Pizzería">
+    <div class="caption">Figura 1: Matriz Modelo Canvas Oficial de 9 Bloques según metodología de Alexander Osterwalder - Pizzería Gourmet Bella Italia Popayán.</div>
   </div>
 
   <!-- SECCIÓN 6: SIMULACIÓN FINANCIERA -->
   <h1>6. SIMULACIÓN FINANCIERA Y PUNTO DE EQUILIBRIO</h1>
   <p>
-    El punto de equilibrio se determinó mediante la relación entre los costos fijos mensuales y el margen de contribución unitario:
+    El punto de equilibrio se determinó mediante la relación matemática entre los costos fijos mensuales y el margen de contribución unitario:
   </p>
   <table>
     <thead>
@@ -413,22 +416,22 @@ html_content = f"""<!DOCTYPE html>
       <tr>
         <td>Costo Variable Unitario (CV)</td>
         <td>$12.200 COP</td>
-        <td>Materia prima directa (30%) + empaque + leña.</td>
+        <td>Materia prima directa (26.3%) + empaque + pasarela.</td>
       </tr>
       <tr>
         <td>Margen de Contribución (MC)</td>
         <td>$25.800 COP (67.9%)</td>
-        <td>Recurso neto por pizza para absorber fijos.</td>
+        <td>Recurso neto por pizza para absorber costos fijos.</td>
       </tr>
       <tr>
         <td>Costos Fijos Mensuales (CF)</td>
         <td>$8.000.000 COP</td>
-        <td>Nómina, arriendo Centro, servicios y hosting.</td>
+        <td>Nómina base, arriendo local Centro, servicios y hosting.</td>
       </tr>
       <tr style="background:#ecfdf5; font-weight:bold;">
         <td>PUNTO DE EQUILIBRIO MENSUAL</td>
         <td>310 pizzas / mes</td>
-        <td>Solo 10.3 pizzas al día para cubrir la operación.</td>
+        <td>Solo 10.3 pizzas al día para cubrir la totalidad de costos.</td>
       </tr>
       <tr style="background:#f0f9ff; font-weight:bold;">
         <td>UTILIDAD NETA (650 pizzas/mes)</td>
@@ -448,54 +451,53 @@ html_content = f"""<!DOCTYPE html>
 
   <div class="img-container">
     <img src="{cap1_path}" alt="Paso 1: Despliegue Docker en Konsole">
-    <div class="caption">Figura 2: Paso 1 - Despliegue de los contenedores Docker en puerto 8101 verificado en Konsole.</div>
+    <div class="caption">Paso 1: Despliegue y verificación de salud de contenedores Docker en Konsole (puerto 8101).</div>
   </div>
 
   <div class="img-container">
-    <img src="{cap2_path}" alt="Paso 2: Healthcheck y JSON en Konsole">
-    <div class="caption">Figura 3: Paso 2 - Verificación de respuesta HTTP 200 y parsing del modelo Lean Canvas JSON en Konsole.</div>
+    <img src="{cap2_path}" alt="Paso 2: Verificación de Salud en Konsole">
+    <div class="caption">Paso 2: Verificación de endpoint HTTP 200 y validación de bloques en archivo JSON de datos.</div>
   </div>
 
   <div class="img-container">
-    <img src="{cap3_path}" alt="Paso 3: Portal Web Lean Canvas en Chrome">
-    <div class="caption">Figura 4: Paso 3 - Visualización del Portal Web interactivo en Google Chrome mostrando la cuadrícula de 9 bloques.</div>
+    <img src="{cap3_path}" alt="Paso 3: Matriz Gráfica Modelo Canvas en Chrome">
+    <div class="caption">Paso 3: Navegación en Google Chrome visualizando la Matriz Modelo Canvas Oficial en el portal web.</div>
   </div>
 
   <div class="page-break"></div>
 
   <div class="img-container">
-    <img src="{cap4_path}" alt="Paso 4: Bloques de Problema y Solución en Chrome">
-    <div class="caption">Figura 5: Paso 4 - Inspección interactiva de los bloques de Problema, Solución y Propuesta de Valor en Google Chrome.</div>
+    <img src="{cap4_path}" alt="Paso 4: Cuadrícula de 9 Bloques en Chrome">
+    <div class="caption">Paso 4: Cuadrícula interactiva de 9 bloques del Modelo Canvas en el portal web (localhost:8101).</div>
   </div>
 
   <div class="img-container">
     <img src="{cap5_path}" alt="Paso 5: Las 4 Áreas Estratégicas en Chrome">
-    <div class="caption">Figura 6: Paso 5 - Pestaña interactiva de las cuatro áreas estratégicas (Clientes, Oferta, Infraestructura y Viabilidad).</div>
+    <div class="caption">Paso 5: Detalle de las 4 Áreas Estratégicas (Infraestructura, Oferta, Clientes y Viabilidad Económica).</div>
   </div>
 
   <div class="img-container">
     <img src="{cap6_path}" alt="Paso 6: Simulador Financiero en Chrome">
-    <div class="caption">Figura 7: Paso 6 - Simulador reactivo de costos, márgenes y punto de equilibrio en Google Chrome.</div>
+    <div class="caption">Paso 6: Simulador reactivo de punto de equilibrio y utilidad neta en Google Chrome.</div>
   </div>
 
-  <!-- SECCIÓN 8: CONCLUSIONES Y REFERENCIAS -->
-  <h1>8. CONCLUSIONES Y VIABILIDAD DEL MODELO</h1>
-  <div class="info-card">
-    <ol>
-      <li><strong>Apropiación Metodológica Ágil:</strong> El Lean Canvas demostró ser la herramienta idónea para sintetizar los aspectos críticos del negocio y contrastar las hipótesis antes de incurrir en costos operativos mayores.</li>
-      <li><strong>Ventaja Competitiva Tecnológica:</strong> Contar con software full-stack propio programado por la aprendiz ADSO suprime las tarifas de intermediación, devolviendo el 30% del margen al negocio.</li>
-      <li><strong>Solvencia Económica Demostrada:</strong> La necesidad de solo 10 pizzas diarias para alcanzar el punto de equilibrio confiere una gran resiliencia al emprendimiento.</li>
-      <li><strong>Identidad y Pertinencia Caucana:</strong> La articulación de masa madre con productos de Silvia y la distinción UNESCO de Popayán crea un posicionamiento imposible de replicar por cadenas multinacionales.</li>
-    </ol>
-  </div>
+  <!-- SECCIÓN 8: CONCLUSIONES -->
+  <h1>8. CONCLUSIONES Y FACTIBILIDAD</h1>
+  <ul>
+    <li><strong>Alineación con la Metodología Canvas:</strong> La matriz de 9 bloques permitió estructurar de forma integral y coherente todos los factores críticos del negocio, cumpliendo a cabalidad con la Guía 10 del SENA.</li>
+    <li><strong>Sinergia Tecnológica ADSO:</strong> El desarrollo del software propio elimina intermediarios comerciales, optimiza el flujo en cocina mediante KDS y automatiza la facturación legal DIAN.</li>
+    <li><strong>Factibilidad Financiera Comprobada:</strong> Con un margen bruto del 67.9% y un punto de equilibrio de solo 10.3 pizzas al día, el modelo presenta un excelente blindaje financiero ante riesgos de mercado.</li>
+    <li><strong>Impacto Social y Regional:</strong> Se articula la economía campesina del municipio de Silvia con la identidad cultural de Popayán, promoviendo el desarrollo productivo del Cauca.</li>
+  </ul>
 
+  <!-- SECCIÓN 9: REFERENCIAS -->
   <h1>9. REFERENCIAS BIBLIOGRÁFICAS (NORMAS APA 7.ª EDICIÓN)</h1>
-  <ul style="font-size: 7.7pt; line-height: 1.45;">
+  <ul>
     <li>Aulet, B. (2017). <em>Disciplined Entrepreneurship: 24 Steps to a Successful Startup</em>. John Wiley & Sons, Inc., Hoboken, New Jersey.</li>
     <li>Maurya, A. (2012). <em>Running Lean: Iterate from Plan A to a Plan That Works</em>. O'Reilly Media.</li>
     <li>Osterwalder, A., & Pigneur, Y. (2010). <em>Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers</em>. John Wiley & Sons.</li>
     <li>Ries, E. (2011). <em>The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses</em>. Crown Business.</li>
-    <li>Servicio Nacional de Aprendizaje (SENA). (2024). <em>Componente formativo: Entendiendo la empresa</em>. Dirección de Formación Profesional, Colombia.</li>
+    <li>Servicio Nacional de Aprendizaje (SENA). (2024). <em>Componente formativo: Entendiendo la empresa</em>. Dirección de Formación Profesional, Sistema Nacional de Formación para el Trabajo, Colombia.</li>
     <li>UNESCO. (2005). <em>Popayán, Ciudad Creativa de la Gastronomía</em>. Red de Ciudades Creativas de la UNESCO.</li>
   </ul>
 
@@ -503,30 +505,33 @@ html_content = f"""<!DOCTYPE html>
 </html>
 """
 
-# Guardar HTML para conversión
 html_path = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.html')
+pdf_path = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf')
+docx_path = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx')
+
 with open(html_path, 'w', encoding='utf-8') as f:
     f.write(html_content)
-print(f"[OK] HTML generado exitosamente en: {html_path}")
 
-# Compilar PDF mediante Google Chrome Headless
-pdf_path = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf')
+print(f"[OK] Archivo HTML maestro generado en: {html_path}")
+
+# Compilación a PDF con Google Chrome Headless
 chrome_cmd = [
     'google-chrome',
     '--headless',
     '--disable-gpu',
-    '--no-sandbox',
+    '--run-all-compositor-stages-before-draw',
     '--print-to-pdf-no-header',
     f'--print-to-pdf={pdf_path}',
-    html_path
+    f'file://{html_path}'
 ]
-print("[INFO] Ejecutando compilación a PDF vía Google Chrome...")
-subprocess.run(chrome_cmd, check=True)
-print(f"[OK] PDF compilado ({os.path.getsize(pdf_path)/1024:.1f} KB): {pdf_path}")
 
-# Compilar DOCX editable mediante LibreOffice soffice
-print("[INFO] Generando versión editable DOCX vía LibreOffice soffice...")
-soffice_cmd = [
+print("[INFO] Compilando documento oficial en PDF con Google Chrome...")
+subprocess.run(chrome_cmd, check=True)
+print(f"[OK] PDF oficial compilado con éxito: {pdf_path} ({os.path.getsize(pdf_path)} bytes)")
+
+# Generar versión editable DOCX con LibreOffice Writer
+print("[INFO] Generando versión editable DOCX con LibreOffice...")
+docx_cmd = [
     'soffice',
     '--headless',
     '--convert-to',
@@ -535,86 +540,27 @@ soffice_cmd = [
     '--outdir',
     DOCS_DIR
 ]
-subprocess.run(soffice_cmd, check=True)
-docx_auto = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx')
-print(f"[OK] DOCX generado ({os.path.getsize(docx_auto)/1024:.1f} KB): {docx_auto}")
+subprocess.run(docx_cmd, check=True)
+print(f"[OK] DOCX generado con éxito: {docx_path} ({os.path.getsize(docx_path)} bytes)")
 
-# Copiar a ENTREGA_DIR y ARTIFACT_DIR
-dst_pdf = os.path.join(ENTREGA_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf')
-dst_docx = os.path.join(ENTREGA_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx')
-shutil.copy2(pdf_path, dst_pdf)
-shutil.copy2(docx_auto, dst_docx)
+# Copiar a carpeta de entrega Zajuna y artefactos del Brain
+print("[INFO] Distribuyendo entregables a carpeta ENTREGA_ZAJUNA y Brain...")
+shutil.copyfile(pdf_path, os.path.join(ENTREGA_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf'))
+shutil.copyfile(docx_path, os.path.join(ENTREGA_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx'))
+shutil.copyfile(pdf_path, os.path.join(ARTIFACT_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf'))
+shutil.copyfile(docx_path, os.path.join(ARTIFACT_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx'))
 
-art_pdf = os.path.join(ARTIFACT_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf')
-art_docx = os.path.join(ARTIFACT_DIR, 'GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx')
-shutil.copy2(pdf_path, art_pdf)
-shutil.copy2(docx_auto, art_docx)
-
-# Copiar sitio_lean_canvas, diagramas y capturas a ENTREGA_DIR
-for sub in ['sitio_lean_canvas', 'diagramas', 'capturas']:
-    src_sub = os.path.join(BASE_DIR, sub)
-    dst_sub = os.path.join(ENTREGA_DIR, sub)
-    if os.path.exists(dst_sub):
-        shutil.rmtree(dst_sub)
-    shutil.copytree(src_sub, dst_sub)
-    print(f"[OK] Carpeta {sub} copiada a entrega Zajuna")
-
-# Copiar diagramas y capturas a ARTIFACT_DIR
-shutil.copy2(diag_canvas, os.path.join(ARTIFACT_DIR, 'matriz_lean_canvas_pizzeria_bella_italia.png'))
-for cap in os.listdir(CAPTURAS_DIR):
-    if cap.endswith('.png'):
-        shutil.copy2(os.path.join(CAPTURAS_DIR, cap), os.path.join(ARTIFACT_DIR, cap))
-print(f"[OK] Diagramas y capturas copiados a artefactos: {ARTIFACT_DIR}")
-
-# Generar archivo de enlaces institucional
-repo_txt_path = os.path.join(ENTREGA_DIR, 'enlace_repositorio.txt')
-with open(repo_txt_path, 'w', encoding='utf-8') as f:
-    f.write("""ENLACE DEL REPOSITORIO GITHUB - EVIDENCIA GA10-240201529-AA2-EV02
-Competencia: 240201529 - Gestionar procesos propios de la cultura emprendedora y empresarial de acuerdo con el perfil personal y los requerimientos de los contextos productivo y social
-Actividad de Aprendizaje: GA10-240201529-AA2 - Definir la idea de negocio a desarrollar en el emprendimiento, según las oportunidades de mercado
-Evidencia: GA10-240201529-AA2-EV02 - Modelo Canvas del emprendimiento
-Resultado de Aprendizaje: 240201529-02 - Caracterizar la idea de negocio teniendo en cuenta las oportunidades y necesidades del sector productivo y social
-Componente Formativo: "Entendiendo la empresa" / "Ser emprendedor"
-Instrumento de Evaluación: Lista de Chequeo IE-GA10-240201529-AA2-EV02
-Metodología: Lean Canvas (Ash Maurya) / Lean Startup (Eric Ries)
-Aprendiz: Karen Yuliana Campo - Ficha 3186681
-Centro de Teleinformática y Producción Industrial (CTPI Popayán) - Regional Cauca
-Proyecto de Emprendimiento: Pizzería Gourmet Bella Italia Popayán
-
---------------------------------------------------------------------------------
-1. ENLACE DEL REPOSITORIO GITHUB DEL PROYECTO:
-https://github.com/kyulianacampogutierrez-ux/Evidencias
-
-2. DIRECTORIO DE LA EVIDENCIA EN EL REPOSITORIO:
-https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-053_GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento
-
-3. DESPLIEGUE LOCAL EN CONTENEDOR DOCKER (PUERTO 8101):
-- Portal Web Interactivo del Lean Canvas: http://localhost:8101/
-- Especificación de Datos JSON: http://localhost:8101/modelo_lean_canvas.json
-- Red Aislada de Contenedores: sena_lean_canvas_net (Zero Host Pollution)
-
-4. ARCHIVOS ENTREGABLES OFICIALES EN EL PAQUETE:
-- Documento Principal en PDF: GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.pdf
-- Documento Editable en Word: GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento.docx
-- Diagrama Oficial Lean Canvas: matriz_lean_canvas_pizzeria_bella_italia.png / .svg
-- Documento Técnico Completo en Markdown: MODELO_CANVAS_EMPRENDIMIENTO_PIZZERIA.md
-- Carpeta de Capturas Reales (KDE X11 con Spectacle, Konsole y Chrome): capturas/ (6 imágenes PNG)
-- Sitio Web Interactivo del Lean Canvas: sitio_lean_canvas/ (index.html, modelo_lean_canvas.json)
-- Orquestación en Contenedores: docker_lean_canvas/docker-compose.yml
-- Scripts de Automatización: scripts/ (capturar_pantallas_kde.sh, compile_pdf.py)
---------------------------------------------------------------------------------
-""")
-print(f"[OK] enlace_repositorio.txt generado en: {repo_txt_path}")
-
-# Empacar ZIP de entrega institucional
-zip_name = 'KARENCAMPO_AA2_EV02_GUIA10.zip'
-zip_path = os.path.join(ENTREGA_DIR, zip_name)
-with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
-    for root, dirs, files in os.walk(BASE_DIR):
+# Empaquetar ZIP Institucional
+zip_path = os.path.join(ENTREGA_DIR, 'KARENCAMPO_AA2_EV02_GUIA10.zip')
+print(f"[INFO] Creando paquete ZIP institucional en: {zip_path}...")
+with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+    for root, dirs, files in os.walk(ENTREGA_DIR):
         for file in files:
-            full_path = os.path.join(root, file)
-            rel_path = os.path.relpath(full_path, BASE_DIR)
-            z.write(full_path, arcname=os.path.join('PET-053_GA10-AA2-EV02', rel_path))
-    z.write(repo_txt_path, arcname='enlace_repositorio.txt')
-print(f"[OK] Paquete ZIP generado exitosamente ({os.path.getsize(zip_path)/1024:.1f} KB): {zip_path}")
-print("=== COMPILACIÓN FINALIZADA CON ÉXITO ===")
+            if file == 'KARENCAMPO_AA2_EV02_GUIA10.zip':
+                continue
+            abs_f = os.path.join(root, file)
+            rel_f = os.path.relpath(abs_f, ENTREGA_DIR)
+            zipf.write(abs_f, rel_f)
+
+print(f"[OK] Paquete ZIP generado con éxito ({os.path.getsize(zip_path)} bytes)")
+print("=== COMPILACIÓN FINALIZADA SATISFACTORIAMENTE ===")

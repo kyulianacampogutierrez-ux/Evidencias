@@ -1,0 +1,549 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1280" width="1800" height="1280" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Filtros de sombra y efectos -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0284c7" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- FONDO BLANCO PURO -->
+  <rect width="1800" height="1280" fill="#ffffff"/>
+
+  <!-- ENCABEZADO SUPERIOR DEL CANVAS -->
+  <g transform="translate(0, 0)">
+    <!-- Título Principal Estilo Modelo Canvas de Osterwalder -->
+    <text x="900" y="58" font-size="44" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="-0.5">Modelo Canvas</text>
+    <text x="900" y="88" font-size="16" font-weight="700" fill="#0284c7" text-anchor="middle" letter-spacing="0.5">PIZZERÍA GOURMET BELLA ITALIA POPAYÁN</text>
+    <text x="900" y="110" font-size="13" font-weight="500" fill="#64748b" text-anchor="middle">Evidencia GA10-240201529-AA2-EV02 | Aprendiz: Karen Yuliana Campo - Ficha: 3186681 | ADSO - CTPI SENA Regional Cauca</text>
+    
+    <!-- Línea sutil decorativa -->
+    <line x1="100" y1="125" x2="1700" y2="125" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- ESTRUCTURA CUADRÍCULA MODELO CANVAS (LÍNEAS EXTERIORES E INTERIORES)-->
+  <!-- Marco general: x=50, y=140, ancho=1700, alto=1090                  -->
+  <!-- Fila Superior: alto=730 (y=140 a 870)                              -->
+  <!-- Fila Inferior: alto=360 (y=870 a 1230)                             -->
+  <!-- 5 Columnas Superiores: 1700 / 5 = 340 px c/u                        -->
+  <!--   Col 1: x=50   a 390 (Socios clave)                                -->
+  <!--   Col 2: x=390  a 730 (Actividades clave / Recursos clave)          -->
+  <!--   Col 3: x=730  a 1070 (Propuesta de valor)                         -->
+  <!--   Col 4: x=1070 a 1410 (Relaciones con clientes / Canales)          -->
+  <!--   Col 5: x=1410 a 1750 (Segmentos de clientes)                      -->
+  <!-- 2 Columnas Inferiores: 1700 / 2 = 850 px c/u                       -->
+  <!--   Col Inf 1: x=50  a 900  (Estructura de costos)                    -->
+  <!--   Col Inf 2: x=900 a 1750 (Fuentes de ingresos)                     -->
+  <!-- =================================================================== -->
+
+  <!-- Rectángulo Contenedor Exterior -->
+  <rect x="50" y="140" width="1700" height="1090" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Líneas Divisorias Verticales Principales (Fila Superior) -->
+  <line x1="390" y1="140" x2="390" y2="870" stroke="#1e293b" stroke-width="2"/>
+  <line x1="730" y1="140" x2="730" y2="870" stroke="#1e293b" stroke-width="2"/>
+  <line x1="1070" y1="140" x2="1070" y2="870" stroke="#1e293b" stroke-width="2"/>
+  <line x1="1410" y1="140" x2="1410" y2="870" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Línea Divisoria Horizontal Media (Separa Fila Superior e Inferior) -->
+  <line x1="50" y1="870" x2="1750" y2="870" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Sub-divisiones Horizontales Internas (Columna 2 y Columna 4) -->
+  <!-- Separa Actividades Clave de Recursos Clave (y = 505) -->
+  <line x1="390" y1="505" x2="730" y2="505" stroke="#1e293b" stroke-width="2"/>
+  <!-- Separa Relaciones Clientes de Canales (y = 505) -->
+  <line x1="1070" y1="505" x2="1410" y2="505" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Línea Divisoria Vertical Inferior (Separa Costos de Ingresos a x=900) -->
+  <line x1="900" y1="870" x2="900" y2="1230" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 1: SOCIOS CLAVE (X=50, Y=140, ANCHO=340, ALTO=730)           -->
+  <!-- =================================================================== -->
+  <g transform="translate(50, 140)">
+    <!-- Cabecera -->
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Socios clave</text>
+    
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="48" width="125" height="20" rx="4" fill="#f1f5f9"/>
+    <text x="82" y="62" font-size="10.5" font-weight="700" fill="#475569" text-anchor="middle">INFRAESTRUCTURA</text>
+
+    <!-- Ícono Socios Clave (Handshake / Red de Cooperación) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <circle cx="26" cy="12" r="7"/>
+      <circle cx="10" cy="24" r="5"/>
+      <circle cx="42" cy="24" r="5"/>
+      <path d="M10 29c-5 3-7 8-7 15h20"/>
+      <path d="M42 29c5 3 7 8 7 15H29"/>
+      <path d="M18 44c0-7 3-12 8-12s8 5 8 12"/>
+      <path d="M22 24l3 3 6-6" stroke="#0284c7" stroke-width="2.5"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 92)" font-size="12" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Asociación Campesina de Silvia:</text>
+      <text y="18" fill="#475569">Proveedores directos de quesos</text>
+      <text y="34" fill="#475569">madurados y lácteos frescos de altura.</text>
+
+      <text y="66" font-weight="700" fill="#0f172a">• Productores de Pipián de Popayán:</text>
+      <text y="84" fill="#475569">Suministro de maní tostado, achiote</text>
+      <text y="100" fill="#475569">ancestral y papa criolla caucana.</text>
+
+      <text y="132" font-weight="700" fill="#0f172a">• Molino Harinero Certificado:</text>
+      <text y="150" fill="#475569">Harina de fuerza tipo 00 (W 300+)</text>
+      <text y="166" fill="#475569">para fermentación lenta de 48 horas.</text>
+
+      <text y="198" font-weight="700" fill="#0f172a">• SENA CTPI - Fondo Emprender:</text>
+      <text y="216" fill="#475569">Asesoría técnica empresarial,</text>
+      <text y="232" fill="#475569">mentoría y capital semilla de apoyo.</text>
+
+      <text y="264" font-weight="700" fill="#0f172a">• Pasarela Wompi / Redebanc:</text>
+      <text y="282" fill="#475569">Infraestructura transaccional segura</text>
+      <text y="298" fill="#475569">para pagos PSE, QR y tarjetas.</text>
+
+      <text y="330" font-weight="700" fill="#0f172a">• Corporación Gastronómica Popayán:</text>
+      <text y="348" fill="#475569">Integración al circuito turístico</text>
+      <text y="364" fill="#475569">de Ciudad Creativa UNESCO.</text>
+
+      <text y="396" font-weight="700" fill="#0f172a">• Proveedores de Leña Certificada:</text>
+      <text y="414" fill="#475569">Suministro ecológico de leña de roble</text>
+      <text y="430" fill="#475569">para horneado tradicional a 400°C.</text>
+
+      <!-- Recuadro Destacado -->
+      <rect x="0" y="470" width="304" height="135" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="14" y="495" font-size="12" font-weight="800" fill="#0369a1">OBJETIVO DE ALIANZAS:</text>
+      <text x="14" y="516" font-size="11.5" fill="#334155">✓ Blindar la calidad artesanal nativa.</text>
+      <text x="14" y="536" font-size="11.5" fill="#334155">✓ Reducir costos de intermediación.</text>
+      <text x="14" y="556" font-size="11.5" fill="#334155">✓ Impulsar la economía campesina.</text>
+      <text x="14" y="576" font-size="11.5" fill="#334155">✓ Cero licenciamiento en software.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 2: ACTIVIDADES CLAVE (X=390, Y=140, ANCHO=340, ALTO=365)     -->
+  <!-- =================================================================== -->
+  <g transform="translate(390, 140)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Actividades</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">clave</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="125" height="20" rx="4" fill="#f1f5f9"/>
+    <text x="82" y="84" font-size="10.5" font-weight="700" fill="#475569" text-anchor="middle">INFRAESTRUCTURA</text>
+
+    <!-- Ícono Actividades Clave (Portapapeles con Checklist y Lápiz) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <rect x="6" y="8" width="38" height="48" rx="4"/>
+      <path d="M16 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"/>
+      <line x1="14" y1="20" x2="26" y2="20"/>
+      <line x1="14" y1="30" x2="34" y2="30"/>
+      <line x1="14" y1="40" x2="30" y2="40"/>
+      <path d="M38 18l6-6 4 4-6 6h-4v-4z" fill="#e0f2fe" stroke="#0284c7"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 108)" font-size="11.5" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Amasado y Fermentación 48h:</text>
+      <text y="16" fill="#475569">Maduración lenta de masa madre natural.</text>
+
+      <text y="38" font-weight="700" fill="#0f172a">• Horneado Napolitano a 400°C:</text>
+      <text y="54" fill="#475569">Cocción en leña de roble en 90 segundos.</text>
+
+      <text y="76" font-weight="700" fill="#0f172a">• Cocina de Pipián de Autor Caucano:</text>
+      <text y="92" fill="#475569">Elaboración diaria con receta tradicional.</text>
+
+      <text y="114" font-weight="700" fill="#0f172a">• Mantenimiento de Software Propio:</text>
+      <text y="130" fill="#475569">Control de pedidos web, KDS y facturación DIAN.</text>
+
+      <text y="152" font-weight="700" fill="#0f172a">• Reparto Térmico Exprés (&lt;35 min):</text>
+      <text y="168" fill="#475569">Despacho con flota propia en bolsas a 70°C.</text>
+
+      <text y="190" font-weight="700" fill="#0f172a">• Control de Calidad e Higiene BPM:</text>
+      <text y="206" fill="#475569">Trazabilidad sanitaria de ingredientes.</text>
+
+      <text y="228" font-weight="700" fill="#0f172a">• Marketing Digital y Storytelling:</text>
+      <text y="244" fill="#475569">Pauta en Popayán y fidelización de clientes.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 3: RECURSOS CLAVE (X=390, Y=505, ANCHO=340, ALTO=365)        -->
+  <!-- =================================================================== -->
+  <g transform="translate(390, 505)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Recursos</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">clave</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="125" height="20" rx="4" fill="#f1f5f9"/>
+    <text x="82" y="84" font-size="10.5" font-weight="700" fill="#475569" text-anchor="middle">INFRAESTRUCTURA</text>
+
+    <!-- Ícono Recursos Clave (Mano sosteniendo engranaje y valor) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <circle cx="22" cy="18" r="8"/>
+      <path d="M22 13v10M17 18h10"/>
+      <circle cx="38" cy="14" r="5"/>
+      <path d="M10 40c4-4 10-6 16-6s12 4 18 4"/>
+      <path d="M6 34c2-2 6-3 10-3"/>
+      <path d="M38 28c0 4-4 7-8 7"/>
+      <circle cx="22" cy="18" r="3" fill="#0284c7"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 108)" font-size="11.5" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Físicos e Instalaciones:</text>
+      <text y="16" fill="#475569">Horno de leña tradicional napolitano,</text>
+      <text y="32" fill="#475569">amasadora espiral, mesas de granito y salón.</text>
+
+      <text y="56" font-weight="700" fill="#0f172a">• Intelectuales y Recetas Propias:</text>
+      <text y="72" fill="#475569">Cepa de masa madre viva (5 años),</text>
+      <text y="88" fill="#475569">fórmulas exclusivas de Pizza Pipián y Silvia.</text>
+
+      <text y="112" font-weight="700" fill="#0f172a">• Tecnológicos (ADSO Karen Campo):</text>
+      <text y="128" fill="#475569">Portal web e-commerce contenerizado Docker,</text>
+      <text y="144" fill="#475569">KDS en tiempo real y facturación DIAN.</text>
+
+      <text y="168" font-weight="700" fill="#0f172a">• Humanos y Talento Operativo:</text>
+      <text y="184" fill="#475569">Pizzaiolo profesional certificado,</text>
+      <text y="200" fill="#475569">ayudante de cocina, repartidor y líder ADSO.</text>
+
+      <text y="224" font-weight="700" fill="#0f172a">• Financieros:</text>
+      <text y="240" fill="#475569">Capital de trabajo propio y crédito semilla.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 4: PROPUESTA DE VALOR (X=730, Y=140, ANCHO=340, ALTO=730)    -->
+  <!-- =================================================================== -->
+  <g transform="translate(730, 140)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Propuesta</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">de valor</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="85" height="20" rx="4" fill="#dcfce7"/>
+    <text x="62" y="84" font-size="10.5" font-weight="700" fill="#15803d" text-anchor="middle">OFERTA</text>
+
+    <!-- Ícono Propuesta de Valor (Diamante / Joya de Valor) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <polygon points="12,18 26,6 40,6 54,18 33,48" stroke="#0284c7" stroke-width="2.5" fill="#f0f9ff"/>
+      <line x1="12" y1="18" x2="54" y2="18"/>
+      <line x1="26" y1="6" x2="24" y2="18"/>
+      <line x1="40" y1="6" x2="42" y2="18"/>
+      <line x1="24" y1="18" x2="33" y2="48"/>
+      <line x1="42" y1="18" x2="33" y2="48"/>
+    </g>
+
+    <!-- Contenedor Resaltado Propuesta Central -->
+    <rect x="15" y="100" width="310" height="96" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="26" y="122" font-size="11" font-weight="800" fill="#166534">LEMA PRINCIPAL:</text>
+    <text x="26" y="142" font-size="12" font-weight="700" fill="#0f172a">"El auténtico arte pizzero napolitano</text>
+    <text x="26" y="160" font-size="12" font-weight="700" fill="#0f172a">con el alma y sabor de la</text>
+    <text x="26" y="178" font-size="12" font-weight="700" fill="#0f172a">gastronomía caucana."</text>
+
+    <!-- Pilares de Valor Detallados -->
+    <g transform="translate(18, 215)" font-size="12" fill="#334155">
+      <text y="0" font-weight="700" fill="#047857">1. Alta Digestibilidad y Bienestar:</text>
+      <text y="18" fill="#475569">Masa madre viva fermentada 48 horas.</text>
+      <text y="34" fill="#475569">Degrada azúcares del gluten, evitando</text>
+      <text y="50" fill="#475569">pesadez y acidez estomacal.</text>
+
+      <text y="82" font-weight="700" fill="#047857">2. Identidad y Fusión Caucana:</text>
+      <text y="100" fill="#475569">Pizzas de autor con pipián payanés,</text>
+      <text y="116" fill="#475569">quesos madurados de Silvia y hierbas</text>
+      <text y="132" fill="#475569">orgánicas de origen campesino.</text>
+
+      <text y="164" font-weight="700" fill="#047857">3. Horno Tradicional a 400°C:</text>
+      <text y="182" fill="#475569">Cocción en leña de roble en 90 segundos,</text>
+      <text y="198" fill="#475569">borde alveolado crujiente y centro suave.</text>
+
+      <text y="230" font-weight="700" fill="#047857">4. Experiencia Digital Directa:</text>
+      <text y="248" fill="#475569">Pedidos en web propia sin comisiones</text>
+      <text y="264" fill="#475569">del 30% de apps comerciales.</text>
+
+      <text y="296" font-weight="700" fill="#047857">5. Cumplimiento Tributario DIAN:</text>
+      <text y="314" fill="#475569">Factura electrónica legal al instante</text>
+      <text y="330" fill="#475569">con código QR y CUFE oficial.</text>
+
+      <text y="362" font-weight="700" fill="#047857">6. Garantía de Entrega Térmica:</text>
+      <text y="380" fill="#475569">Pizza caliente a 70°C en &lt;35 minutos</text>
+      <text y="396" fill="#475569">en empaque biodegradable prémium.</text>
+
+      <!-- Recuadro Concepto Alto Nivel -->
+      <rect x="0" y="425" width="304" height="75" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="14" y="448" font-size="11" font-weight="800" fill="#0284c7">CONCEPTO DE ALTO NIVEL:</text>
+      <text x="14" y="468" font-size="12" font-weight="600" fill="#1e293b">"La pizzería de autor digital que</text>
+      <text x="14" y="486" font-size="12" font-weight="600" fill="#1e293b">celebra el patrimonio de Popayán."</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 5: RELACIONES CON CLIENTES (X=1070, Y=140, ANCHO=340, ALTO=365) -->
+  <!-- =================================================================== -->
+  <g transform="translate(1070, 140)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Relaciones</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">con clientes</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="95" height="20" rx="4" fill="#e0f2fe"/>
+    <text x="67" y="84" font-size="10.5" font-weight="700" fill="#0369a1" text-anchor="middle">CLIENTES</text>
+
+    <!-- Ícono Relaciones Clientes (Globos de diálogo con corazón) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <path d="M8 26c0-9 8-16 18-16s18 7 18 16c0 5-2 9-6 12l2 8-8-4c-2 1-4 1-6 1-10 0-18-7-18-17z"/>
+      <path d="M26 21c-2-3-6-2-6 1 0 3 6 7 6 7s6-4 6-7c0-3-4-4-6-1z" fill="#38bdf8" stroke="#0284c7"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 108)" font-size="11.5" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Atención Experiencial en Salón:</text>
+      <text y="16" fill="#475569">Ambiente acogedor, cocina a la vista</text>
+      <text y="32" fill="#475569">y visualización del fuego en leña.</text>
+
+      <text y="56" font-weight="700" fill="#0f172a">• Autoservicio Digital Intuitivo:</text>
+      <text y="72" fill="#475569">Plataforma web con personalización,</text>
+      <text y="88" fill="#475569">alertas por WhatsApp y sin fricción.</text>
+
+      <text y="112" font-weight="700" fill="#0f172a">• Programa de Fidelización "Bella Italia Club":</text>
+      <text y="128" fill="#475569">Puntos por compra, pizza gratis en</text>
+      <text y="144" fill="#475569">cumpleaños y degustaciones de autor.</text>
+
+      <text y="168" font-weight="700" fill="#0f172a">• Servicio Posventa y Escucha Activa:</text>
+      <text y="184" fill="#475569">Encuesta rápida NPS digital y</text>
+      <text y="200" fill="#475569">garantía de reposición ante quejas.</text>
+
+      <text y="224" font-weight="700" fill="#0f172a">• Co-creación y Talleres:</text>
+      <text y="240" fill="#475569">Talleres de masa madre para la comunidad.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 6: CANALES (X=1070, Y=505, ANCHO=340, ALTO=365)               -->
+  <!-- =================================================================== -->
+  <g transform="translate(1070, 505)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Canales</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="48" width="95" height="20" rx="4" fill="#e0f2fe"/>
+    <text x="67" y="62" font-size="10.5" font-weight="700" fill="#0369a1" text-anchor="middle">CLIENTES</text>
+
+    <!-- Ícono Canales (Red de nodos interconectados y distribución) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <circle cx="26" cy="26" r="8"/>
+      <circle cx="10" cy="12" r="5"/>
+      <circle cx="42" cy="12" r="5"/>
+      <circle cx="10" cy="40" r="5"/>
+      <circle cx="42" cy="40" r="5"/>
+      <line x1="14" y1="15" x2="20" y2="21"/>
+      <line x1="38" y1="15" x2="32" y2="21"/>
+      <line x1="14" y1="37" x2="20" y2="31"/>
+      <line x1="38" y1="37" x2="32" y2="31"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 88)" font-size="11.5" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Canal Web Directo (E-Commerce Propio):</text>
+      <text y="16" fill="#475569">Portal oficial responsive (localhost:8101)</text>
+      <text y="32" fill="#475569">con pedidos en línea y pagos seguros.</text>
+
+      <text y="56" font-weight="700" fill="#0f172a">• Salón Boutique Presencial:</text>
+      <text y="72" fill="#475569">Punto físico en el Centro Histórico</text>
+      <text y="88" fill="#475569">de Popayán con horno a la vista.</text>
+
+      <text y="112" font-weight="700" fill="#0f172a">• Flota Propia de Domicilios:</text>
+      <text y="128" fill="#475569">Mochilas térmicas herméticas a 70°C,</text>
+      <text y="144" fill="#475569">conductores capacitados y datáfono móvil.</text>
+
+      <text y="168" font-weight="700" fill="#0f172a">• Redes Sociales y Storytelling:</text>
+      <text y="184" fill="#475569">Campañas geolocalizadas en Instagram</text>
+      <text y="200" fill="#475569">y TikTok con recetas y cultura caucana.</text>
+
+      <text y="224" font-weight="700" fill="#0f172a">• Canal B2B y Eventos Corporativos:</text>
+      <text y="240" fill="#475569">Ventas a oficinas bancarias y notarías.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 7: SEGMENTOS DE CLIENTES (X=1410, Y=140, ANCHO=340, ALTO=730) -->
+  <!-- =================================================================== -->
+  <g transform="translate(1410, 140)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Segmentos</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">de clientes</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="95" height="20" rx="4" fill="#e0f2fe"/>
+    <text x="67" y="84" font-size="10.5" font-weight="700" fill="#0369a1" text-anchor="middle">CLIENTES</text>
+
+    <!-- Ícono Segmentos de Clientes (Silueta de usuario con gráfico demográfico) -->
+    <g transform="translate(265, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <circle cx="20" cy="16" r="8"/>
+      <path d="M8 42c0-8 6-14 14-14s14 6 14 14"/>
+      <circle cx="38" cy="20" r="10" stroke="#0284c7"/>
+      <path d="M38 20l7-7" stroke="#0284c7"/>
+      <path d="M38 20v-10" stroke="#0284c7"/>
+      <path d="M38 20h10" stroke="#0284c7"/>
+    </g>
+
+    <!-- Contenido Detallado -->
+    <g transform="translate(18, 108)" font-size="12" fill="#334155">
+      <text y="0" font-weight="700" fill="#0f172a">• Familias y Comensales Urbanos:</text>
+      <text y="18" fill="#475569">Hogares de estratos 3, 4 y 5 de Popayán</text>
+      <text y="34" fill="#475569">que buscan cenas de fin de semana,</text>
+      <text y="50" fill="#475569">reuniones y alimentación saludable.</text>
+
+      <text y="82" font-weight="700" fill="#0f172a">• Profesionales y Académicos:</text>
+      <text y="100" fill="#475569">Adultos de 24 a 45 años de Unicauca,</text>
+      <text y="116" fill="#475569">empresas y sector salud que valoran</text>
+      <text y="132" fill="#475569">rapidez y comodidad digital.</text>
+
+      <text y="164" font-weight="700" fill="#0f172a">• Turistas Gastronómicos:</text>
+      <text y="182" fill="#475569">Visitantes que llegan por Semana Santa,</text>
+      <text y="198" fill="#475569">Congreso Gastronómico y fines de semana</text>
+      <text y="214" fill="#475569">buscando sabores auténticos caucanos.</text>
+
+      <text y="246" font-weight="700" fill="#0f172a">• Primeros Adoptantes (Early Adopters):</text>
+      <text y="264" fill="#475569">Jóvenes de 20 a 35 años aficionados</text>
+      <text y="280" fill="#475569">a la masa madre, foodies digitales y</text>
+      <text y="296" fill="#475569">compradores habituales por smartphone.</text>
+
+      <text y="328" font-weight="700" fill="#0f172a">• Sector Corporativo e Institucional:</text>
+      <text y="346" fill="#475569">Entidades bancarias, juzgados y oficinas</text>
+      <text y="362" fill="#475569">del Centro de Popayán que requieren</text>
+      <text y="378" fill="#475569">almuerzos ejecutivos con factura DIAN.</text>
+
+      <!-- Recuadro Perfil del Comprador -->
+      <rect x="0" y="420" width="304" height="185" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="14" y="445" font-size="12" font-weight="800" fill="#0284c7">PERFIL DEL CLIENTE IDEAL:</text>
+      <text x="14" y="468" font-size="11.5" fill="#334155">• Valora la gastronomía artesanal.</text>
+      <text x="14" y="488" font-size="11.5" fill="#334155">• Busca digestibilidad (no pesadez).</text>
+      <text x="14" y="508" font-size="11.5" fill="#334155">• Orgulloso de los sabores del Cauca.</text>
+      <text x="14" y="528" font-size="11.5" fill="#334155">• Prefiere pedir directo sin recargos.</text>
+      <text x="14" y="548" font-size="11.5" fill="#334155">• Paga con QR Bancolombia o PSE.</text>
+      <text x="14" y="568" font-size="11.5" fill="#334155">• Ticket promedio: $38.000 COP.</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 8: ESTRUCTURA DE COSTOS (X=50, Y=870, ANCHO=850, ALTO=360)   -->
+  <!-- =================================================================== -->
+  <g transform="translate(50, 870)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Estructura de</text>
+    <text x="20" y="60" font-size="22" font-weight="800" fill="#0f172a">costos</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="70" width="165" height="20" rx="4" fill="#fee2e2"/>
+    <text x="102" y="84" font-size="10.5" font-weight="700" fill="#b91c1c" text-anchor="middle">VIABILIDAD ECONÓMICA</text>
+
+    <!-- Ícono Estructura de Costos (Factura con gráfico financiero) -->
+    <g transform="translate(775, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <rect x="6" y="6" width="38" height="48" rx="3"/>
+      <path d="M12 16h26M12 24h18M12 32h12"/>
+      <polyline points="20,44 26,38 32,41 38,34" stroke="#0284c7" stroke-width="2"/>
+      <circle cx="38" cy="34" r="2" fill="#0284c7"/>
+    </g>
+
+    <!-- Columnas Internas de Costos (2 columnas de datos) -->
+    <!-- Columna Izquierda: Costos Fijos -->
+    <g transform="translate(20, 108)" font-size="12" fill="#334155">
+      <text y="0" font-size="13" font-weight="800" fill="#991b1b">COSTOS FIJOS MENSUALES ($8.000.000 COP):</text>
+      <text y="24" font-weight="700" fill="#0f172a">• Arriendo Local Centro Histórico:</text>
+      <text y="40" fill="#64748b">$2.500.000 COP / mes (Salón y cocina).</text>
+
+      <text y="64" font-weight="700" fill="#0f172a">• Nómina Base Operativa (3 empleados):</text>
+      <text y="80" fill="#64748b">$4.200.000 COP / mes (Pizzero, auxiliar, caja).</text>
+
+      <text y="104" font-weight="700" fill="#0f172a">• Servicios Públicos e Internet:</text>
+      <text y="120" fill="#64748b">$800.000 COP / mes (Energía, gas, fibra óptica).</text>
+
+      <text y="144" font-weight="700" fill="#0f172a">• Servidores Nube e Infraestructura TI:</text>
+      <text y="160" fill="#64748b">$150.000 COP / mes (Docker hosting, backups).</text>
+
+      <text y="184" font-weight="700" fill="#0f172a">• Asesoría Contable y Facturación DIAN:</text>
+      <text y="200" fill="#64748b">$350.000 COP / mes (Firma digital y contador).</text>
+    </g>
+
+    <!-- Columna Derecha: Costos Variables e Indicadores -->
+    <g transform="translate(430, 108)" font-size="12" fill="#334155">
+      <text y="0" font-size="13" font-weight="800" fill="#991b1b">COSTOS VARIABLES UNITARIOS (~$12.200 COP):</text>
+      <text y="24" font-weight="700" fill="#0f172a">• Materia Prima e Insumos Directos:</text>
+      <text y="40" fill="#64748b">$10.000 COP / pizza (Harina 00, queso Silvia, pipián).</text>
+
+      <text y="64" font-weight="700" fill="#0f172a">• Empaque Térmico Biodegradable:</text>
+      <text y="80" fill="#64748b">$1.800 COP / unidad (Caja ecológica y precinto).</text>
+
+      <text y="104" font-weight="700" fill="#0f172a">• Pasarela Transaccional Wompi/Redebanc:</text>
+      <text y="120" fill="#64748b">~$400 COP / transacción digital (2.8% + $900 COP).</text>
+
+      <!-- Recuadro de Resumen Financiero -->
+      <rect x="0" y="140" width="390" height="90" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+      <text x="14" y="164" font-size="11.5" font-weight="800" fill="#991b1b">PUNTO DE EQUILIBRIO FINANCIERO:</text>
+      <text x="14" y="184" font-size="12" font-weight="700" fill="#0f172a">PE = $8.000.000 / ($38.000 - $12.200) = 310 pizzas/mes</text>
+      <text x="14" y="204" font-size="12" font-weight="800" fill="#047857">Meta Diaria de Equilibrio: 10.3 pizzas al día (Mínimo riesgo)</text>
+    </g>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- BLOQUE 9: FUENTES DE INGRESOS (X=900, Y=870, ANCHO=850, ALTO=360)   -->
+  <!-- =================================================================== -->
+  <g transform="translate(900, 870)">
+    <text x="20" y="38" font-size="22" font-weight="800" fill="#0f172a">Fuentes de ingresos</text>
+
+    <!-- Tag Área Estratégica -->
+    <rect x="20" y="48" width="165" height="20" rx="4" fill="#dcfce7"/>
+    <text x="102" y="62" font-size="10.5" font-weight="700" fill="#15803d" text-anchor="middle">VIABILIDAD ECONÓMICA</text>
+
+    <!-- Ícono Fuentes de Ingresos (Bolsa de Dinero con Signo de Moneda) -->
+    <g transform="translate(775, 18)" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <path d="M16 16c2-4 6-8 14-8s12 4 14 8c-3 3-5 5-5 7 0 10 5 13 5 21 0 7-7 12-14 12s-14-5-14-12c0-8 5-11 5-21 0-2-2-4-5-7z" fill="#f0fdf4" stroke="#0284c7" stroke-width="2"/>
+      <path d="M22 14c4 2 12 2 16 0"/>
+      <path d="M30 25v16"/>
+      <path d="M26 29c0-3 3-4 5-4s5 1 5 3-2 3-5 3-5 1-5 4 3 4 5 4 5-1 5-4" stroke="#047857" stroke-width="2.5"/>
+    </g>
+
+    <!-- Columnas Internas de Ingresos (2 columnas) -->
+    <!-- Columna Izquierda: Líneas de Productos y Precios -->
+    <g transform="translate(20, 88)" font-size="12" fill="#334155">
+      <text y="0" font-size="13" font-weight="800" fill="#15803d">LÍNEAS DE VENTA DIRECTA (SALÓN &amp; WEB):</text>
+      
+      <text y="24" font-weight="700" fill="#0f172a">• Pizzas Tradicionales Napolitanas:</text>
+      <text y="40" fill="#64748b">$32.000 a $38.000 COP (Margarita, Pepperoni, 4 Quesos).</text>
+
+      <text y="64" font-weight="700" fill="#0f172a">• Pizzas de Autor Gourmet Caucanas:</text>
+      <text y="80" fill="#64748b">$42.000 a $48.000 COP (Pizza Pipián, Silvia Campesina).</text>
+
+      <text y="104" font-weight="700" fill="#0f172a">• Acompañamientos y Repostería:</text>
+      <text y="120" fill="#64748b">$8.000 a $16.000 COP (Focaccias, paninis, tiramisú).</text>
+
+      <text y="144" font-weight="700" fill="#0f172a">• Bebidas Artesanales y Café de Origen:</text>
+      <text y="160" fill="#64748b">$5.000 a $9.000 COP (Cerveza caucana, sodas de fruta).</text>
+
+      <text y="184" font-weight="700" fill="#0f172a">• Catering Institucional y Eventos B2B:</text>
+      <text y="200" fill="#64748b">Paquetes para empresas ($25.000 a $35.000 COP / persona).</text>
+    </g>
+
+    <!-- Columna Derecha: Canales de Cobro y Rentabilidad -->
+    <g transform="translate(430, 88)" font-size="12" fill="#334155">
+      <text y="0" font-size="13" font-weight="800" fill="#15803d">MÉTODOS DE COBRO Y PROYECCIÓN:</text>
+
+      <text y="24" font-weight="700" fill="#0f172a">• Medios de Pago Habilitados:</text>
+      <text y="40" fill="#64748b">Efectivo en caja, datáfono inalámbrico en mesa,</text>
+      <text y="56" fill="#64748b">código QR Bancolombia/Nequi y pasarela web PSE/Wompi.</text>
+
+      <text y="80" font-weight="700" fill="#0f172a">• Margen de Contribución Unitario:</text>
+      <text y="96" fill="#64748b">$25.800 COP por pizza (67.9% de margen bruto).</text>
+
+      <!-- Recuadro Proyección Mes 6 -->
+      <rect x="0" y="125" width="390" height="110" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="14" y="148" font-size="11.5" font-weight="800" fill="#166534">PROYECCIÓN DE VENTAS (ESCENARIO 650 PIZZAS/MES):</text>
+      <text x="14" y="168" font-size="11.5" fill="#334155">• Ingresos Brutos Totales: $24.700.000 COP / mes.</text>
+      <text x="14" y="188" font-size="11.5" fill="#334155">• Costos Variables Totales: $7.930.000 COP / mes.</text>
+      <text x="14" y="208" font-size="12" font-weight="800" fill="#15803d">• UTILIDAD NETA MENSUAL: $8.770.000 COP (Rentabilidad 35.5%)</text>
+    </g>
+  </g>
+
+  <!-- PIE DE PÁGINA INSTITUCIONAL -->
+  <g transform="translate(50, 1245)">
+    <text x="0" y="18" font-size="12" font-weight="600" fill="#64748b">Matriz Modelo Canvas oficial según metodología de Alexander Osterwalder y Guía 10 SENA (Clientes, Oferta, Infraestructura, Viabilidad Económica)</text>
+    <text x="1700" y="18" font-size="12" font-weight="700" fill="#0284c7" text-anchor="end">SENA CTPI • Regional Cauca • 2026</text>
+  </g>
+</svg>
