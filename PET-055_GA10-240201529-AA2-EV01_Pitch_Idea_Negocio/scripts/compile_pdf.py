@@ -679,6 +679,15 @@ def main():
         z.write(pdf_output_path, 'GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.pdf')
         z.write(docx_output_path, 'GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.docx')
         z.write(video_mp4_path, 'GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.mp4')
+        guion_pdf = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV01_Guion_Tecnico_Pitch.pdf')
+        guion_docx = os.path.join(DOCS_DIR, 'GA10-240201529-AA2-EV01_Guion_Tecnico_Pitch.docx')
+        guion_md = os.path.join(DOCS_DIR, 'GUION_TECNICO_PITCH_TIKTOK.md')
+        if os.path.exists(guion_pdf):
+            z.write(guion_pdf, 'GA10-240201529-AA2-EV01_Guion_Tecnico_Pitch.pdf')
+        if os.path.exists(guion_docx):
+            z.write(guion_docx, 'GA10-240201529-AA2-EV01_Guion_Tecnico_Pitch.docx')
+        if os.path.exists(guion_md):
+            z.write(guion_md, 'GUION_TECNICO_PITCH_TIKTOK.md')
         if os.path.exists(enlace_path):
             z.write(enlace_path, 'enlace_repositorio.txt')
         for cap in os.listdir(CAPTURAS_DIR):

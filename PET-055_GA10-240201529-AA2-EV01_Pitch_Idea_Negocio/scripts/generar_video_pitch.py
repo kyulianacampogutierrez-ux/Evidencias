@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Generador del Video Elevator Pitch Tipo TikTok (9:16 Vertical HD 1080x1920)
+Versión Creativa, Dinámica y de Alto Contraste (Sin saturación de texto)
 Evidencia: GA10-240201529-AA2-EV01 - Pitch idea de negocio
 Aprendiz: Karen Yuliana Campo - SENA ADSO Ficha 3186681
 Duración: 54 segundos (Límite máximo de guía: 59 segundos)
@@ -34,36 +35,34 @@ MASTER_AUDIO_WAV = os.path.join(TMP_DIR, "master_audio.wav")
 FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
 
-# Load Fonts
-f_brand_tag = ImageFont.truetype(FONT_BOLD, 26)
-f_badge = ImageFont.truetype(FONT_BOLD, 26)
-f_hud = ImageFont.truetype(FONT_BOLD, 24)
-f_scene_badge = ImageFont.truetype(FONT_BOLD, 30)
-f_headline = ImageFont.truetype(FONT_BOLD, 52)
-f_card_title = ImageFont.truetype(FONT_BOLD, 34)
-f_card_desc = ImageFont.truetype(FONT_REG, 26)
-f_pill = ImageFont.truetype(FONT_BOLD, 24)
-f_action_count = ImageFont.truetype(FONT_BOLD, 22)
+# Load Fonts with Extra Large Sizes for Mobile Readability
+f_hud = ImageFont.truetype(FONT_BOLD, 26)
+f_cat = ImageFont.truetype(FONT_BOLD, 30)
+f_head = ImageFont.truetype(FONT_BOLD, 68)
+f_head_large = ImageFont.truetype(FONT_BOLD, 74)
+f_badge_title = ImageFont.truetype(FONT_BOLD, 38)
+f_badge_sub = ImageFont.truetype(FONT_BOLD, 26)
+f_sub_box = ImageFont.truetype(FONT_BOLD, 38)
+f_cta = ImageFont.truetype(FONT_BOLD, 50)
+f_pill = ImageFont.truetype(FONT_BOLD, 26)
 f_tiktok_user = ImageFont.truetype(FONT_BOLD, 32)
 f_tiktok_caption = ImageFont.truetype(FONT_REG, 24)
-f_subtitle_box = ImageFont.truetype(FONT_BOLD, 32)
+f_action_count = ImageFont.truetype(FONT_BOLD, 22)
+f_badge = ImageFont.truetype(FONT_BOLD, 26)
 
 # Source assets
 LOGO_PATH = "/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-028_GA8-220501096-AA2-EV02_Modulos_Moviles_APK/codigo_fuente/app_react_native/android/app/src/main/res/drawable-xxxhdpi/splashscreen_logo.png"
 CATALOG_PATH = "/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-018_GA7-220501096-AA3-EV02_Modulos_Probados_Historias_Usuario/capturas_pruebas/02_hu02_pizzas_catalogo_filtros.png"
-CANVAS_IMG_PATH = "/home/danilo/Escritorio/Karen/SENA/CDE/Evidencias/PET-053_GA10-240201529-AA2-EV02_Modelo_Canvas_Emprendimiento/diagramas/matriz_modelo_canvas_pizzeria_bella_italia.png"
 
 resample_filter = getattr(getattr(Image, 'Resampling', Image), 'LANCZOS', Image.ANTIALIAS)
-
-logo_img = Image.open(LOGO_PATH).convert("RGBA").resize((220, 220), resample_filter) if os.path.exists(LOGO_PATH) else None
-catalog_img = Image.open(CATALOG_PATH).convert("RGBA").resize((700, 360), resample_filter) if os.path.exists(CATALOG_PATH) else None
-canvas_thumb = Image.open(CANVAS_IMG_PATH).convert("RGBA").resize((680, 440), resample_filter) if os.path.exists(CANVAS_IMG_PATH) else None
+logo_img = Image.open(LOGO_PATH).convert("RGBA").resize((260, 260), resample_filter) if os.path.exists(LOGO_PATH) else None
+catalog_img = Image.open(CATALOG_PATH).convert("RGBA").resize((740, 360), resample_filter) if os.path.exists(CATALOG_PATH) else None
 
 # Helper to draw rounded rectangle
 def draw_rounded_card(draw, box, radius, fill, outline=None, width=1):
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
-# 1. Synthesize Audio
+# 1. Synthesize Audio (Uses cached if exists)
 def build_audio():
     if os.path.exists(MASTER_AUDIO_WAV) and os.path.getsize(MASTER_AUDIO_WAV) > 1000000:
         print(f"--- [PITCH] 1. Usando pista de audio existente en {MASTER_AUDIO_WAV} ---")
@@ -100,7 +99,6 @@ def build_audio():
             if idx < TOTAL_AUDIO_SAMPLES:
                 speech_mask[idx] = 1.0
 
-    # Smooth ducking mask
     smooth_mask = [0.0] * TOTAL_AUDIO_SAMPLES
     curr = 0.0
     for i in range(TOTAL_AUDIO_SAMPLES):
@@ -200,223 +198,236 @@ def build_audio():
 
     print(f"Banda sonora master guardada: {MASTER_AUDIO_WAV}")
 
-# 2. Render Single Frame
+# 2. Render Single Frame (Creative, High-Contrast, Big Typography)
 def render_frame(frame_idx):
     t = frame_idx / FPS
     
-    # Background: dark slate gradient with soft warmth
-    im = Image.new("RGBA", (W, H), (15, 23, 42, 255))
+    # Base background: Deep night slate
+    im = Image.new("RGBA", (W, H), (10, 15, 29, 255))
     draw = ImageDraw.Draw(im)
 
-    # Ambient radial glows
-    glow_color = (245, 158, 11, 20) if t < 20.0 else ((16, 185, 129, 20) if t < 32.0 else (59, 130, 246, 20))
-    draw.ellipse([-200, 200, 600, 1000], fill=glow_color)
-    draw.ellipse([600, 800, 1400, 1600], fill=glow_color)
+    # Ambient glowing aura based on scene
+    if t < 8.0:
+        aura_col = (239, 68, 68, 30) # Crimson
+    elif t < 20.0:
+        aura_col = (245, 158, 11, 35) # Gold
+    elif t < 32.0:
+        aura_col = (16, 185, 129, 30) # Emerald
+    elif t < 43.0:
+        aura_col = (59, 130, 246, 35) # Electric Blue
+    else:
+        aura_col = (245, 158, 11, 40) # Bright Gold
 
-    # 1. Top HUD (TikTok Bar)
-    # Progress Bar at Y=0..8
+    draw.ellipse([-200, 150, 700, 1050], fill=aura_col)
+    draw.ellipse([500, 750, 1400, 1650], fill=aura_col)
+
+    # Dynamic floating golden embers (heat of pizza oven)
+    for p in range(12):
+        ember_x = int((p * 97 + math.sin(t * 2.0 + p) * 45) % (W - 100)) + 50
+        ember_y = int((H - ((t * 70 + p * 150) % H)))
+        ember_rad = int(3 + (p % 4))
+        draw.ellipse([ember_x - ember_rad, ember_y - ember_rad, ember_x + ember_rad, ember_y + ember_rad], fill=(255, 200, 50, 140))
+
+    # 1. Top HUD Bar (Progress & Institution)
     prog_w = int((frame_idx / TOTAL_FRAMES) * W)
-    draw.rectangle([0, 0, W, 8], fill=(51, 65, 85, 255))
-    draw.rectangle([0, 0, prog_w, 8], fill=(245, 158, 11, 255))
+    draw.rectangle([0, 0, W, 10], fill=(30, 41, 59, 255))
+    draw.rectangle([0, 0, prog_w, 10], fill=(245, 158, 11, 255))
 
-    # Top Badges (Y: 25..85)
-    draw_rounded_card(draw, [50, 30, 480, 85], 25, (30, 41, 59, 220), (245, 158, 11, 200), 2)
+    # Top Badges (Y: 30..85)
+    draw_rounded_card(draw, [50, 30, 480, 85], 25, (15, 23, 42, 230), (245, 158, 11, 220), 2)
     draw.text((70, 42), "SENA | ADSO - FICHA 3186681", font=f_hud, fill=(241, 245, 249))
 
-    # Timer Badge
+    # Live Timer Badge
     time_str = f"{int(t):02d}:{int((t % 1)*10):01d} / 54s"
-    draw_rounded_card(draw, [840, 30, 1030, 85], 25, (220, 38, 38, 220), (254, 202, 202, 180), 2)
-    draw.ellipse([860, 50, 875, 65], fill=(255, 255, 255))
+    draw_rounded_card(draw, [840, 30, 1030, 85], 25, (220, 38, 38, 230), (254, 202, 202, 200), 2)
+    draw.ellipse([860, 50, 876, 66], fill=(255, 255, 255))
     draw.text((885, 42), time_str, font=f_hud, fill=(255, 255, 255))
 
     # Italian flag ribbon strip
-    draw.rectangle([50, 105, 170, 113], fill=(0, 140, 69, 255))
-    draw.rectangle([170, 105, 290, 113], fill=(244, 245, 240, 255))
-    draw.rectangle([290, 105, 410, 113], fill=(205, 33, 42, 255))
+    draw.rectangle([50, 102, 170, 110], fill=(0, 140, 69, 255))
+    draw.rectangle([170, 102, 290, 110], fill=(244, 245, 240, 255))
+    draw.rectangle([290, 102, 410, 110], fill=(205, 33, 42, 255))
 
-    # Determine Active Scene
+    # SCENE CONTENT (Cards bound at X: 50..880 to avoid overlapping TikTok sidebar)
     if t < 8.0:
-        # ESCENA 1: EL PROBLEMA (0s - 8s)
-        draw_rounded_card(draw, [50, 140, 480, 200], 18, (239, 68, 68, 40), (239, 68, 68, 255), 2)
-        draw.text((70, 152), "PASO 1: EL PROBLEMA REAL", font=f_scene_badge, fill=(248, 113, 113))
+        # ESCENA 1: EL PROBLEMA REAL EN POPAYÁN
+        draw_rounded_card(draw, [50, 125, 470, 185], 25, (239, 68, 68, 60), (239, 68, 68), 3)
+        draw.text((75, 137), "🚨 PASO 1 • EL PROBLEMA", font=f_cat, fill=(255, 255, 255))
 
-        draw.text((50, 225), "¿PIZZAS FRÍAS Y MASAS", font=f_headline, fill=(255, 255, 255))
-        draw.text((50, 285), "INDIGESTAS EN POPAYÁN?", font=f_headline, fill=(239, 68, 68))
+        draw.text((50, 205), "¿PIZZAS FRÍAS Y", font=f_head_large, fill=(255, 255, 255))
+        draw.text((50, 285), "MASAS PESADAS?", font=f_head_large, fill=(239, 68, 68))
 
-        # Problem Cards
-        cards = [
-            ("DEMORAS EXCESIVAS (>60 MIN)", "Pedidos de delivery que tardan más de 60 minutos\ny llegan completamente fríos al cliente.", (239, 68, 68)),
-            ("MASAS INDUSTRIALES PESADAS", "Harinas refinadas y levaduras químicas rápidas\nque causan acidez, inflamación y pesadez.", (245, 158, 11)),
-            ("INGREDIENTES ULTRAPROCESADOS", "Salsas artificiales y quesos análogos sin sabor\nauténtico ni trazabilidad sanitaria.", (234, 179, 8))
+        # 3 Big Power Badges
+        p_badges = [
+            ("⏱️  DEMORAS DE 60+ MIN", "Llegan frías y arruinan tu cena", (239, 68, 68)),
+            ("🤢  MASA ULTRA PESADA", "Levadura química sin fermentar", (245, 158, 11)),
+            ("🥶  PIZZAS GRASOSAS", "Ingredientes de baja calidad", (59, 130, 246))
         ]
         y_pos = 380
-        for title, desc, col in cards:
-            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 160], 20, (30, 41, 59, 230), col, 2)
-            draw.text((80, y_pos + 25), title, font=f_card_title, fill=col)
-            draw.text((80, y_pos + 75), desc, font=f_card_desc, fill=(226, 232, 240))
-            y_pos += 185
+        for title, sub, col in p_badges:
+            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 135], 22, (20, 28, 45, 245), col, 3)
+            draw.text((75, y_pos + 22), title, font=f_badge_title, fill=col)
+            draw.text((75, y_pos + 78), sub, font=f_badge_sub, fill=(241, 245, 249))
+            y_pos += 160
 
-        # Graphic Box: Problem Alert Banner
-        draw_rounded_card(draw, [50, 950, 880, 1260], 25, (15, 23, 42, 240), (239, 68, 68, 180), 2)
-        draw.text((80, 980), "EVALUACIÓN DEL MERCADO GASTRONÓMICO", font=f_pill, fill=(248, 113, 113))
-        draw.text((80, 1030), "• Más del 72% de clientes en Popayán reportan insatisfacción\n  con el tiempo de entrega y temperatura.", font=f_card_desc, fill=(255, 255, 255))
-        draw.text((80, 1110), "• Cero opciones de pizza artesanal con fermentación lenta\n  en los sectores residenciales y universitarios.", font=f_card_desc, fill=(255, 255, 255))
-        draw.text((80, 1190), "• Urgencia de una solución gourmet rápida y saludable.", font=f_card_desc, fill=(253, 224, 71))
+        # Central Visual Graphic: Alert Banner
+        draw_rounded_card(draw, [50, 890, 880, 1320], 25, (15, 23, 42, 240), (239, 68, 68, 200), 3)
+        draw.text((80, 925), "EVALUACIÓN DEL MERCADO EN POPAYÁN", font=f_pill, fill=(248, 113, 113))
+        draw.text((80, 990), "💥 72% de clientes insatisfechos con los tiempos.", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((80, 1070), "❌ Masas comerciales causan acidez y pesadez.", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((80, 1150), "⚡ ¡Popayán merece una auténtica pizza gourmet!", font=f_badge_title, fill=(253, 224, 71))
+        draw.text((80, 1235), "CERO FERMENTACIÓN BIOLÓGICA EN LA CIUDAD", font=f_pill, fill=(148, 163, 184))
 
-        subtitle_text = "¿Cansado de pedir pizza en Popayán y que llegue fría,\ngrasosa o con una masa pesada que no te deja dormir?"
+        subtitle_text = "¿Cansado de pedir pizza en Popayán y que llegue\nfría, grasosa o con una masa pesada que no te deja dormir?"
 
     elif t < 20.0:
-        # ESCENA 2: LA SOLUCIÓN - BELLA ITALIA (8s - 20s)
-        draw_rounded_card(draw, [50, 140, 510, 200], 18, (16, 185, 129, 40), (16, 185, 129, 255), 2)
-        draw.text((70, 152), "PASO 2: SOLUCIÓN GOURMET", font=f_scene_badge, fill=(52, 211, 153))
+        # ESCENA 2: LA SOLUCIÓN GOURMET - BELLA ITALIA
+        draw_rounded_card(draw, [50, 125, 490, 185], 25, (16, 185, 129, 60), (16, 185, 129), 3)
+        draw.text((75, 137), "🔥 PASO 2 • SOLUCIÓN GOURMET", font=f_cat, fill=(52, 211, 153))
 
-        draw.text((50, 225), "¡LLEGÓ PIZZERÍA GOURMET", font=f_headline, fill=(255, 255, 255))
-        draw.text((50, 285), "BELLA ITALIA POPAYÁN!", font=f_headline, fill=(245, 158, 11))
+        draw.text((50, 205), "¡LLEGÓ BELLA ITALIA!", font=f_head_large, fill=(255, 255, 255))
+        draw.text((50, 285), "PIZZA ARTESANAL", font=f_head_large, fill=(245, 158, 11))
 
-        # Logo stamp
-        if logo_img:
-            im.paste(logo_img, (670, 140), logo_img)
-
-        # 3 Value Propositions
-        solutions = [
-            ("MASA MADRE 48H FERMENTACIÓN", "Fermentación biológica lenta: alvéolos aireados,\ncorteza crocante y digestión 100% ultraligera.", (245, 158, 11)),
-            ("HORNO NAPOLITANO A 450°C", "Piedra volcánica refractaria: horneado perfecto\nen solo 90 segundos a fuego vivo.", (239, 68, 68)),
-            ("ESTILO NAPOLITANO CONTEMPORÁNEO", "Tradición de Nápoles adaptada a los estándares\nmás exigentes del consumidor moderno.", (16, 185, 129))
+        # 3 Big Value Badges
+        s_badges = [
+            ("🌾  MASA MADRE 48 HORAS", "Fermentación biológica ultraligera", (245, 158, 11)),
+            ("🌋  HORNO A 450 GRADOS", "Piedra volcánica a fuego vivo", (239, 68, 68)),
+            ("⚡  LISTA EN 90 SEGUNDOS", "Corteza crocante y alvéolos aireados", (16, 185, 129))
         ]
         y_pos = 380
-        for title, desc, col in solutions:
-            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 160], 20, (30, 41, 59, 230), col, 2)
-            draw.text((80, y_pos + 25), title, font=f_card_title, fill=col)
-            draw.text((80, y_pos + 75), desc, font=f_card_desc, fill=(226, 232, 240))
-            y_pos += 185
+        for title, sub, col in s_badges:
+            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 135], 22, (20, 28, 45, 245), col, 3)
+            draw.text((75, y_pos + 22), title, font=f_badge_title, fill=col)
+            draw.text((75, y_pos + 78), sub, font=f_badge_sub, fill=(241, 245, 249))
+            y_pos += 160
 
-        # Badges Row
-        draw_rounded_card(draw, [50, 950, 310, 1020], 15, (245, 158, 11, 40), (245, 158, 11), 2)
-        draw.text((75, 968), "Masa Madre 48h", font=f_pill, fill=(255, 255, 255))
-
-        draw_rounded_card(draw, [330, 950, 590, 1020], 15, (239, 68, 68, 40), (239, 68, 68), 2)
-        draw.text((360, 968), "Horno a 450°C", font=f_pill, fill=(255, 255, 255))
-
-        draw_rounded_card(draw, [610, 950, 880, 1020], 15, (16, 185, 129, 40), (16, 185, 129), 2)
-        draw.text((645, 968), "90 Segundos", font=f_pill, fill=(255, 255, 255))
-
-        # Graphic preview
-        if catalog_img:
-            im.paste(catalog_img, (90, 1050), catalog_img)
+        # Central Visual Graphic: Logo + Badges
+        draw_rounded_card(draw, [50, 890, 880, 1320], 25, (15, 23, 42, 240), (245, 158, 11, 200), 3)
+        if logo_img:
+            im.paste(logo_img, (80, 930), logo_img)
+        draw.text((360, 950), "AUTÉNTICO ESTILO", font=f_head, fill=(255, 255, 255))
+        draw.text((360, 1025), "NAPOLITANO", font=f_head, fill=(245, 158, 11))
+        draw.text((360, 1115), "• 100% Sin levadura química", font=f_badge_title, fill=(52, 211, 153))
+        draw.text((360, 1175), "• Sourdough de fermentación lenta", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((360, 1235), "• Borde inflado napolitano (canotto)", font=f_badge_title, fill=(253, 224, 71))
 
         subtitle_text = "¡Llegó Bella Italia Popayán! La auténtica pizza artesanal con\nmasa madre de 48h de fermentación y horneada a 450°C en 90s."
 
     elif t < 32.0:
-        # ESCENA 3: VALOR DIFERENCIAL Y LOCAL (20s - 32s)
-        draw_rounded_card(draw, [50, 140, 520, 200], 18, (245, 158, 11, 40), (245, 158, 11, 255), 2)
-        draw.text((70, 152), "PASO 3: TRADICIÓN + CAUCA", font=f_scene_badge, fill=(251, 191, 36))
+        # ESCENA 3: TRADICIÓN ITALIANA + CORAZÓN CAUCANO
+        draw_rounded_card(draw, [50, 125, 510, 185], 25, (245, 158, 11, 60), (245, 158, 11), 3)
+        draw.text((75, 137), "🌿 PASO 3 • TRADICIÓN + CAUCA", font=f_cat, fill=(251, 191, 36))
 
-        draw.text((50, 225), "TRADICIÓN ITALIANA CON", font=f_headline, fill=(255, 255, 255))
-        draw.text((50, 285), "EL CORAZÓN CAUCANO", font=f_headline, fill=(16, 185, 129))
+        draw.text((50, 205), "TRADICIÓN ITALIANA CON", font=f_head, fill=(255, 255, 255))
+        draw.text((50, 285), "CORAZÓN CAUCANO", font=f_head, fill=(16, 185, 129))
 
-        diff_cards = [
-            ("QUESOS ARTESANALES DE SILVIA", "Alianza con productores lecheros de Silvia (Cauca):\nMozzarella fior di latte fresco de alta pureza.", (16, 185, 129)),
-            ("HUERTAS ORGÁNICAS LOCALES", "Albahaca fresca y hortalizas cosechadas por\nfamilias campesinas de Timbío y Popayán.", (245, 158, 11)),
-            ("POMODORO SAN MARZANO", "Salsa de tomate natural sin conservantes, con acidez\nbalanceada y aceite de oliva extra virgen.", (239, 68, 68))
+        d_badges = [
+            ("🧀  QUESOS DE SILVIA, CAUCA", "Fior di latte fresco de productores locales", (16, 185, 129)),
+            ("🍅  HUERTAS DEL CAUCA", "Albahaca y pomodoro orgánico campesino", (245, 158, 11)),
+            ("💚  COMERCIO JUSTO LOCAL", "Compra directa sin intermediarios", (52, 211, 153))
         ]
         y_pos = 380
-        for title, desc, col in diff_cards:
-            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 160], 20, (30, 41, 59, 230), col, 2)
-            draw.text((80, y_pos + 25), title, font=f_card_title, fill=col)
-            draw.text((80, y_pos + 75), desc, font=f_card_desc, fill=(226, 232, 240))
-            y_pos += 185
+        for title, sub, col in d_badges:
+            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 135], 22, (20, 28, 45, 245), col, 3)
+            draw.text((75, y_pos + 22), title, font=f_badge_title, fill=col)
+            draw.text((75, y_pos + 78), sub, font=f_badge_sub, fill=(241, 245, 249))
+            y_pos += 160
 
-        # Impact highlight card
-        draw_rounded_card(draw, [50, 950, 880, 1260], 25, (15, 23, 42, 240), (16, 185, 129, 180), 2)
-        draw.text((80, 980), "IMPACTO SOCIAL Y SOSTENIBILIDAD REGIONAL", font=f_pill, fill=(52, 211, 153))
-        draw.text((80, 1030), "• Compra directa al campo caucano a precio justo (Fair Trade).", font=f_card_desc, fill=(255, 255, 255))
-        draw.text((80, 1100), "• Empaques 100% biodegradables de caña de azúcar.", font=f_card_desc, fill=(255, 255, 255))
-        draw.text((80, 1170), "• Sabor inigualable con identidad gastronómica caucana.", font=f_card_desc, fill=(253, 224, 71))
+        # Central Visual Graphic: Regional Banner
+        draw_rounded_card(draw, [50, 890, 880, 1320], 25, (15, 23, 42, 240), (16, 185, 129, 200), 3)
+        draw.text((80, 925), "ALIANZA SOCIAL CAMPESINA Y SOSTENIBILIDAD", font=f_pill, fill=(52, 211, 153))
+        draw.text((80, 990), "✨ 100% Digestión ultraligera garantizada.", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((80, 1070), "🌱 Empaques ecológicos de caña de azúcar.", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((80, 1150), "❤️ Sabor único con identidad gastronómica caucana.", font=f_badge_title, fill=(253, 224, 71))
+        draw.text((80, 1235), "SILVIA • TIMBÍO • CAJIBÍO • POPAYÁN", font=f_pill, fill=(148, 163, 184))
 
         subtitle_text = "Unimos técnica italiana con insumos de nuestra tierra: quesos\ncampesinos de Silvia y hortalizas orgánicas del Cauca."
 
     elif t < 43.0:
-        # ESCENA 4: INNOVACIÓN TECNOLÓGICA SENA ADSO (32s - 43s)
-        draw_rounded_card(draw, [50, 140, 520, 200], 18, (59, 130, 246, 40), (59, 130, 246, 255), 2)
-        draw.text((70, 152), "PASO 4: TECNOLOGÍA ADSO", font=f_scene_badge, fill=(96, 165, 250))
+        # ESCENA 4: INNOVACIÓN TECNOLÓGICA SENA ADSO
+        draw_rounded_card(draw, [50, 125, 510, 185], 25, (59, 130, 246, 60), (59, 130, 246), 3)
+        draw.text((75, 137), "🚀 PASO 4 • TECNOLOGÍA ADSO", font=f_cat, fill=(96, 165, 250))
 
-        draw.text((50, 225), "PLATAFORMA WEB ADSO +", font=f_headline, fill=(255, 255, 255))
-        draw.text((50, 285), "LOGÍSTICA INTELIGENTE", font=f_headline, fill=(59, 130, 246))
+        draw.text((50, 205), "WEB APP SENA ADSO +", font=f_head, fill=(255, 255, 255))
+        draw.text((50, 285), "DELIVERY TÉRMICO", font=f_head, fill=(59, 130, 246))
 
-        tech_cards = [
-            ("APP WEB REACTIVA SENA ADSO", "Ecosistema de pedidos en tiempo real con catálogo,\ncarrito y tracking interactivo en 3 simples clics.", (59, 130, 246)),
-            ("BAÚLES TÉRMICOS INTELIGENTES", "Mochilas térmicas con aislamiento cerámico:\nla pizza llega a tu mesa a más de 70°C.", (245, 158, 11)),
-            ("PROMESA DELIVERY < 30 MIN", "Ruta de despacho optimizada en Popayán con\ngarantía de entrega puntual o postre gratis.", (16, 185, 129))
+        t_badges = [
+            ("📱  PIDE EN 3 CLICS", "Plataforma web con tracking en tiempo real", (59, 130, 246)),
+            ("🌡️  BAÚL TÉRMICO > 70°C", "Llega caliente y crocante a tu mesa", (245, 158, 11)),
+            ("⏱️  ENTREGA EN < 30 MIN", "Garantía de puntualidad o postre gratis", (16, 185, 129))
         ]
         y_pos = 380
-        for title, desc, col in tech_cards:
-            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 160], 20, (30, 41, 59, 230), col, 2)
-            draw.text((80, y_pos + 25), title, font=f_card_title, fill=col)
-            draw.text((80, y_pos + 75), desc, font=f_card_desc, fill=(226, 232, 240))
-            y_pos += 185
+        for title, sub, col in t_badges:
+            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 135], 22, (20, 28, 45, 245), col, 3)
+            draw.text((75, y_pos + 22), title, font=f_badge_title, fill=col)
+            draw.text((75, y_pos + 78), sub, font=f_badge_sub, fill=(241, 245, 249))
+            y_pos += 160
 
-        # Visual thumb
-        if canvas_thumb:
-            im.paste(canvas_thumb, (100, 950), canvas_thumb)
+        # Central Visual Graphic: Catalog Image
+        draw_rounded_card(draw, [50, 890, 880, 1320], 25, (15, 23, 42, 240), (59, 130, 246, 200), 3)
+        if catalog_img:
+            im.paste(catalog_img, (95, 930), catalog_img)
+        draw.text((100, 1260), "⚡ SOFTWARE DESARROLLADO POR APRENDIZ SENA ADSO", font=f_pill, fill=(96, 165, 250))
 
-        subtitle_text = "Con nuestra app web desarrollada en ADSO pides en segundos y\nrecibes tu pizza a más de 70°C en menos de 30 minutos."
+        subtitle_text = "Con nuestra app web en ADSO pides en segundos y recibes\ntu pizza a más de 70°C en menos de 30 minutos."
 
     else:
-        # ESCENA 5: CALL TO ACTION (CTA) (43s - 54s)
-        draw_rounded_card(draw, [50, 140, 500, 200], 18, (245, 158, 11, 40), (245, 158, 11, 255), 2)
-        draw.text((70, 152), "PASO 5: LLAMADO A LA ACCIÓN", font=f_scene_badge, fill=(251, 191, 36))
+        # ESCENA 5: CALL TO ACTION (CTA)
+        draw_rounded_card(draw, [50, 125, 520, 185], 25, (245, 158, 11, 60), (245, 158, 11), 3)
+        draw.text((75, 137), "📍 PASO 5 • LLAMADO A LA ACCIÓN", font=f_cat, fill=(251, 191, 36))
 
-        draw.text((50, 225), "¡VIVE LA EXPERIENCIA", font=f_headline, fill=(255, 255, 255))
-        draw.text((50, 285), "BELLA ITALIA HOY!", font=f_headline, fill=(245, 158, 11))
+        draw.text((50, 205), "¡VIVE LA EXPERIENCIA", font=f_head_large, fill=(255, 255, 255))
+        draw.text((50, 285), "BELLA ITALIA HOY!", font=f_head_large, fill=(245, 158, 11))
 
-        contact_cards = [
-            ("SEDE CENTRO HISTÓRICO POPAYÁN", "Calle 4ta No. 3-45 - Ambiente colonial italiano acogedor,\nhorno a la vista y servicio impecable.", (245, 158, 11)),
-            ("CANAL WHATSAPP OFICIAL", "Línea directa de pedidos: (+57) 312 890 4521\nRespuesta inmediata por bot y equipo de atención.", (16, 185, 129)),
-            ("CERTIFICACIÓN HOMONIMIA RUES", "Nombre registrado: Pizzería Gourmet Bella Italia Popayán SAS\nCámara de Comercio de Popayán - CIIU 5611.", (59, 130, 246)),
-            ("APRENDIZ LÍDER DE PROYECTO", "Karen Yuliana Campo - SENA Regional Cauca CTPI\nTecnólogo en Análisis y Desarrollo de Software.", (168, 85, 247))
+        c_badges = [
+            ("🏛️  SEDE CENTRO HISTÓRICO", "Calle 4ta No. 3-45 • Popayán, Cauca", (245, 158, 11)),
+            ("📲  WHATSAPP OFICIAL", "(+57) 312 890 4521 • Pedidos al instante", (16, 185, 129)),
+            ("📋  MARCA REGISTRADA RUES", "Cámara de Comercio Popayán • CIIU 5611", (59, 130, 246))
         ]
-        y_pos = 360
-        for title, desc, col in contact_cards:
-            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 140], 18, (30, 41, 59, 230), col, 2)
-            draw.text((80, y_pos + 20), title, font=f_card_title, fill=col)
-            draw.text((80, y_pos + 65), desc, font=f_card_desc, fill=(226, 232, 240))
-            y_pos += 155
+        y_pos = 380
+        for title, sub, col in c_badges:
+            draw_rounded_card(draw, [50, y_pos, 880, y_pos + 135], 22, (20, 28, 45, 245), col, 3)
+            draw.text((75, y_pos + 22), title, font=f_badge_title, fill=col)
+            draw.text((75, y_pos + 78), sub, font=f_badge_sub, fill=(241, 245, 249))
+            y_pos += 160
 
-        # Big CTA Button
-        draw_rounded_card(draw, [50, 990, 880, 1100], 25, (245, 158, 11), (255, 255, 255), 3)
-        draw.text((160, 1025), "¡HAZ TU PEDIDO YA Y DISFRUTA!", font=f_headline, fill=(15, 23, 42))
+        # Giant Golden CTA Button
+        draw_rounded_card(draw, [50, 890, 880, 1030], 28, (245, 158, 11), (255, 255, 255), 4)
+        draw.text((120, 935), "🍕 ¡HAZ TU PEDIDO YA! 🍕", font=f_cta, fill=(15, 23, 42))
 
-        # Brand claim
-        draw.text((150, 1140), "«Pasión italiana con corazón caucano»", font=f_scene_badge, fill=(255, 255, 255))
-        draw.text((220, 1190), "Popayán, Cauca • Ficha SENA 3186681", font=f_pill, fill=(148, 163, 184))
+        # Brand Signature Card
+        draw_rounded_card(draw, [50, 1060, 880, 1320], 25, (15, 23, 42, 240), (245, 158, 11, 200), 2)
+        draw.text((80, 1090), "«Pasión italiana con corazón caucano»", font=f_badge_title, fill=(255, 255, 255))
+        draw.text((80, 1160), "👩‍💻 Desarrollado por: Karen Yuliana Campo", font=f_badge_title, fill=(253, 224, 71))
+        draw.text((80, 1225), "Tecnólogo en Análisis y Desarrollo de Software • Ficha 3186681", font=f_badge_sub, fill=(148, 163, 184))
 
-        subtitle_text = "Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp.\n¡Bella Italia: Pasión italiana con corazón caucano! ¡Pide ya!"
+        subtitle_text = "Visítanos en el Centro Histórico de Popayán o pide al WhatsApp.\n¡Bella Italia: Pasión italiana con corazón caucano! ¡Pide ya!"
 
     # 2. TikTok Right Sidebar Actions (Y: 650..1250, X: 920..1040)
     # Profile avatar
     draw.ellipse([930, 650, 1030, 750], fill=(245, 158, 11))
-    draw.text((955, 680), "KC", font=f_headline, fill=(15, 23, 42))
+    draw.text((955, 680), "KC", font=f_head, fill=(15, 23, 42))
     draw.ellipse([965, 735, 995, 765], fill=(239, 68, 68))
     draw.text((973, 738), "+", font=f_badge, fill=(255, 255, 255))
 
     # Likes
     draw.ellipse([945, 790, 1015, 860], fill=(30, 41, 59, 220))
-    draw.text((965, 805), "❤️", font=f_scene_badge, fill=(239, 68, 68))
+    draw.text((965, 805), "❤️", font=f_cat, fill=(239, 68, 68))
     draw.text((950, 870), "24.5K", font=f_action_count, fill=(255, 255, 255))
 
     # Comments
     draw.ellipse([945, 915, 1015, 985], fill=(30, 41, 59, 220))
-    draw.text((965, 930), "💬", font=f_scene_badge, fill=(255, 255, 255))
+    draw.text((965, 930), "💬", font=f_cat, fill=(255, 255, 255))
     draw.text((955, 995), "1,890", font=f_action_count, fill=(255, 255, 255))
 
     # Bookmarks
     draw.ellipse([945, 1040, 1015, 1110], fill=(30, 41, 59, 220))
-    draw.text((965, 1055), "⭐", font=f_scene_badge, fill=(245, 158, 11))
+    draw.text((965, 1055), "⭐", font=f_cat, fill=(245, 158, 11))
     draw.text((955, 1120), "5,410", font=f_action_count, fill=(255, 255, 255))
 
     # Share
     draw.ellipse([945, 1165, 1015, 1235], fill=(30, 41, 59, 220))
-    draw.text((965, 1180), "↗️", font=f_scene_badge, fill=(255, 255, 255))
+    draw.text((965, 1180), "↗️", font=f_cat, fill=(255, 255, 255))
     draw.text((962, 1245), "920", font=f_action_count, fill=(255, 255, 255))
 
     # Spinning Vinyl Icon
@@ -424,9 +435,9 @@ def render_frame(frame_idx):
     draw.ellipse([940, 1300, 1020, 1380], fill=(15, 23, 42), outline=(245, 158, 11), width=4)
     draw.ellipse([965, 1325, 995, 1355], fill=(239, 68, 68))
 
-    # 3. Subtitles Overlay (Y: 1420..1580)
-    draw_rounded_card(draw, [50, 1420, 1030, 1570], 25, (0, 0, 0, 210), (245, 158, 11, 230), 2)
-    draw.text((80, 1445), subtitle_text, font=f_subtitle_box, fill=(255, 255, 255))
+    # 3. High-Contrast TikTok Subtitles Overlay (Y: 1390..1570)
+    draw_rounded_card(draw, [50, 1390, 1030, 1570], 25, (0, 0, 0, 235), (245, 158, 11, 240), 3)
+    draw.text((80, 1425), subtitle_text, font=f_sub_box, fill=(253, 224, 71))
 
     # 4. TikTok Bottom Bar (User info, caption, sound) (Y: 1590..1870)
     draw.text((50, 1600), "@karen_campo_adso", font=f_tiktok_user, fill=(255, 255, 255))
@@ -441,7 +452,7 @@ def render_frame(frame_idx):
     draw.text((70, 1742), "🎵 Bella Italia Popayán - Audio Oficial Original (54s)", font=f_hud, fill=(245, 158, 11))
 
     # Footer platform icons
-    draw.rectangle([0, 1890, W, 1920], fill=(15, 23, 42, 255))
+    draw.rectangle([0, 1890, W, 1920], fill=(10, 15, 29, 255))
 
     return im.convert("RGB")
 
@@ -451,9 +462,7 @@ def main():
 
     print("--- [PITCH] 2. Renderizando y codificando video MP4 vertical (1080x1920, 30fps, 54s)... ---")
     
-    # We pipe RGB24 frames directly into docker sena-ffmpeg:alpine
-    # Output to TMP_DIR then move to FINAL_MP4
-    temp_mp4 = os.path.join(TMP_DIR, "output_pitch.mp4")
+    temp_mp4 = os.path.join(TMP_DIR, "output_pitch_creative.mp4")
     
     cmd = [
         "docker", "run", "--rm", "-i",
@@ -475,16 +484,13 @@ def main():
         "-c:a", "aac",
         "-b:a", "192k",
         "-shortest",
-        "/data/output_pitch.mp4"
+        "/data/output_pitch_creative.mp4"
     ]
 
     print("Ejecutando pipeline FFmpeg...")
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    # Pre-render 5 unique scene frames and interpolate or render direct
-    # Notice: across each scene, only timer, progress bar, vinyl rotation and subtitles change!
-    # Rendering 1620 frames at 0.04s per frame takes ~60 seconds.
-    print(f"Generando {TOTAL_FRAMES} frames...")
+    print(f"Generando {TOTAL_FRAMES} frames de alta legibilidad...")
     for f in range(TOTAL_FRAMES):
         frame_im = render_frame(f)
         proc.stdin.write(frame_im.tobytes())
@@ -502,7 +508,7 @@ def main():
 
     print(f"Video MP4 generado exitosamente en {temp_mp4}!")
     
-    # Move to final location
+    # Replace final video
     subprocess.run(["cp", temp_mp4, FINAL_MP4], check=True)
     
     # Copy to Zajuna delivery folders
@@ -512,10 +518,14 @@ def main():
     subprocess.run(["cp", FINAL_MP4, zajuna_video_dir], check=True)
     subprocess.run(["cp", FINAL_MP4, zajuna_dir], check=True)
 
-    # Copy also to sitio_pitch_web so the Apache server can stream it!
+    # Copy also to sitio_pitch_web so Apache streams the updated video
     sitio_video_dir = os.path.join(BASE_DIR, "sitio_pitch_web", "video")
     os.makedirs(sitio_video_dir, exist_ok=True)
     subprocess.run(["cp", FINAL_MP4, os.path.join(sitio_video_dir, "pitch_bella_italia.mp4")], check=True)
+
+    # Copy to brain artifact directory as well
+    brain_dir = "/home/danilo/.gemini/antigravity/brain/abb27f79-dee2-489b-8c72-e5eac1b56603"
+    subprocess.run(["cp", FINAL_MP4, brain_dir], check=True)
 
     # Check file stats
     size_mb = os.path.getsize(FINAL_MP4) / (1024 * 1024)
@@ -523,7 +533,7 @@ def main():
     print(f"Ruta: {FINAL_MP4}")
     print(f"Tamaño: {size_mb:.2f} MB")
     print(f"Duración: {TOTAL_DURATION} s (<= 59 s requeridos)")
-    print("Video listo para entrega y reproducción.")
+    print("Video renovado listo para entrega y reproducción.")
 
 if __name__ == "__main__":
     main()
