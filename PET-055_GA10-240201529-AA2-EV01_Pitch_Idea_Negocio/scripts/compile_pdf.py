@@ -488,11 +488,12 @@ html_content = f"""<!DOCTYPE html>
 
     <h2 class="section-title">6. ARQUITECTURA TECNOLÓGICA Y DESPLIEGUE DOCKER (PUERTO 8103)</h2>
     <p>
-      Para la reproducción del video y visualización interactiva de la documentación técnica se desplegó un servicio web contenerizado bajo <strong>Docker Compose</strong> con imagen base <code>httpd:alpine</code> en el puerto <strong>8103:80</strong>. El portal cuenta con reproductor HTML5 vertical estilo smartphone, salto sincronizado por pasos, visor de homonimia y dataset estructurado JSON (<code>datos_pitch.json</code>).
+      Para la producción y renderizado del video se utilizó el motor NLE headless <strong>FilmCraft CLI</strong> (v0.20.1) aplicando el preset oficial <code>"TikTok 1080×1920"</code> (H.264 VBR 10 Mbps, normalización LUFS -14 dB) e integrando los estándares de retención del pack de habilidades <code>iart-ai/tiktok-video-skills</code> (safe zone 900x1400, subtítulos dinámicos estilo karaoke con resaltado por palabra activa y corte dinámico). Para su reproducción y visualización interactiva se desplegó un servicio web contenerizado bajo <strong>Docker Compose</strong> con imagen base <code>httpd:alpine</code> en el puerto <strong>8103:80</strong>. El portal cuenta con reproductor HTML5 vertical estilo smartphone, salto sincronizado por pasos, visor de homonimia y dataset estructurado JSON (<code>datos_pitch.json</code>).
     </p>
 
     <div class="callout-amber">
-      <strong>Parámetros de Red y Despliegue Docker:</strong><br>
+      <strong>Parámetros de Producción y Despliegue Docker:</strong><br>
+      • Motor NLE: <code>FilmCraft CLI v0.20.1</code> | Preset: <code>TikTok 1080×1920</code> | Skills: <code>iart-ai/tiktok-video-skills</code><br>
       • Contenedor: <code>sena-pitch-idea-negocio-web</code> | Red: <code>pitch_idea_negocio_net</code><br>
       • URL Local: <code>http://localhost:8103/</code> | Video: <code>http://localhost:8103/video/pitch_bella_italia.mp4</code><br>
       • Healthcheck: Wget spider a <code>http://127.0.0.1/</code> con intervalo de 10s y estado 100% saludable.

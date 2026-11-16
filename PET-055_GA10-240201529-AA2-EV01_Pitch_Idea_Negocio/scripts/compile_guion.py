@@ -319,7 +319,11 @@ html_content = """<!DOCTYPE html>
         </tr>
         <tr>
           <td><strong>Códecs de Salida</strong></td>
-          <td>Video: H.264 / AVC (4500 kbps) | Audio: AAC Estéreo (44.1 kHz, 192 kbps)</td>
+          <td>Video: H.264 / AVC (VBR 1 pass 10 Mbps) | Audio: AAC Estéreo (44.1 kHz, 192 kbps, -14 LUFS)</td>
+        </tr>
+        <tr>
+          <td><strong>Motor de Ensamble NLE</strong></td>
+          <td><strong>FilmCraft CLI</strong> (v0.20.1) con preset de exportación nativo <em>"TikTok 1080×1920"</em> y directrices del pack <code>iart-ai/tiktok-video-skills</code> (safe zone 900x1400, active word pop-in karaoke y patrón de interrupción cada 2.5s)</td>
         </tr>
         <tr>
           <td><strong>Diseño Sonoro</strong></td>
