@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "project_name": "ExposicionSSTyMedioAmbiente_SENA",
+  "author": "Karen Yuliana Campo",
+  "ficha": "3186681",
+  "total_duration_sec": 472.08000000000004,
+  "resolution": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "audio_tracks": [
+    {
+      "name": "Narration_KarenCampo_TTS_Master",
+      "file": "full_voice.wav",
+      "volume": 1.0
+    },
+    {
+      "name": "Ambient_BGM_Ducking",
+      "file": "bg_loop_32s.wav",
+      "volume": 0.25
+    }
+  ],
+  "timeline_blocks": [
+    {
+      "block": 1,
+      "title": "Video Expositivo: Oportunidades de Mejora en Medio Ambiente y SST",
+      "slide": "slide_01.png",
+      "duration_sec": 49.74
+    },
+    {
+      "block": 2,
+      "title": "Mejora 01: Separaci\u00f3n de Residuos en la Fuente",
+      "slide": "slide_02.png",
+      "duration_sec": 39.95
+    },
+    {
+      "block": 3,
+      "title": "Mejora 02: Trampa de Grasas y Manejo de ACU",
+      "slide": "slide_03.png",
+      "duration_sec": 39.13
+    },
+    {
+      "block": 4,
+      "title": "Mejora 03: Eficiencia Energ\u00e9tica y Sensores PIR",
+      "slide": "slide_04.png",
+      "duration_sec": 37.36
+    },
+    {
+      "block": 5,
+      "title": "Mejora 04: Gesti\u00f3n Integral de Residuos RAEE",
+      "slide": "slide_05.png",
+      "duration_sec": 37.16
+    },
+    {
+      "block": 6,
+      "title": "Mejora 05: Ahorro Eficiente de Agua con Aireadores",
+      "slide": "slide_06.png",
+      "duration_sec": 37.0
+    },
+    {
+      "block": 7,
+      "title": "Mejora 06: Ergonom\u00eda del Puesto de Trabajo ADSO",
+      "slide": "slide_07.png",
+      "duration_sec": 40.88
+    },
+    {
+      "block": 8,
+      "title": "Mejora 07: Seguridad en Escaleras y Pisos Antideslizantes",
+      "slide": "slide_08.png",
+      "duration_sec": 38.05
+    },
+    {
+      "block": 9,
+      "title": "Mejora 08: Extintores Especializados Clase K y CO2",
+      "slide": "slide_09.png",
+      "duration_sec": 38.75
+    },
+    {
+      "block": 10,
+      "title": "Mejora 09: Metodolog\u00eda 5S y Canalizaci\u00f3n RETIE",
+      "slide": "slide_10.png",
+      "duration_sec": 35.2
+    },
+    {
+      "block": 11,
+      "title": "Mejora 10: Programa de Pausas Activas e Higiene Postural",
+      "slide": "slide_11.png",
+      "duration_sec": 40.33
+    },
+    {
+      "block": 12,
+      "title": "Articulaci\u00f3n PHVA, ODS y Cierre Institucional",
+      "slide": "slide_12.png",
+      "duration_sec": 38.53
+    }
+  ]
+}

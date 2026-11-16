@@ -1,0 +1,40 @@
+# ==============================================================================
+# SERVICIO NACIONAL DE APRENDIZAJE - SENA
+# EVIDENCIA: GA8-220601501-AA4-EV01: Video expositivo sobre oportunidades de mejora en el medio ambiente y SST
+# PROGRAMA: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+# APRENDIZ: KAREN YULIANA CAMPO | CTPI POPAYÁN - REGIONAL CAUCA
+# ==============================================================================
+
+Estimado Instructor / Evaluador Técnico:
+
+A continuación se relacionan los enlaces oficiales y recursos de acceso a los artefactos desarrollados para la evidencia GA8-220601501-AA4-EV01:
+
+1. REPOSITORIO GIT OFICIAL DEL PROYECTO:
+   https://github.com/danilocampo2024/Evidencias.git
+   Rama: main
+   Directorio de la Evidencia:
+   PET-057_GA8-220601501-AA4-EV01_Video_Exposicion_Mejora_Medio_Ambiente_SST
+
+2. SERVICIO WEB INTERACTIVO EN CONTENEDOR DOCKER (PUERTO 8105):
+   http://localhost:8105/
+   - Reproductor de Video Expositivo HTML5 con índice por bloques
+   - Catálogo responsive de las 10 Oportunidades de Mejora con Fotografías Reales
+   - Visor del Guion Técnico Individual estructurado
+   - Dashboard de Ciclo PHVA y articulación con los ODS (3, 6, 7, 8 y 12)
+   - Inspector del Dataset JSON oficial (/datos_mejora_sst_ambiental.json)
+
+3. ARTEFACTOS ENTREGABLES DISPONIBLES EN EL PAQUETE:
+   - GA8-220601501-AA4-EV01_Guion_Video_Exposicion_Mejora_Medio_Ambiente_SST.pdf (Guion Técnico Individual en PDF)
+   - GA8-220601501-AA4-EV01_Guion_Video_Exposicion_Mejora_Medio_Ambiente_SST.docx (Guion Técnico Individual en DOCX)
+   - GUION_TECNICO_VIDEO_EXPOSICION_MEJORA_MEDIO_AMBIENTE_SST.md (Guion en formato Markdown)
+   - GA8-220601501-AA4-EV01_Video_Exposicion_Mejora_Medio_Ambiente_SST.pdf (Informe Técnico Formal en PDF)
+   - GA8-220601501-AA4-EV01_Video_Exposicion_Mejora_Medio_Ambiente_SST.docx (Informe Técnico Formal en DOCX)
+   - GA8-220601501-AA4-EV01_Video_Exposicion_Mejora_Medio_Ambiente_SST.mp4 (Video Expositivo Maestro Full HD 1080p)
+   - ExposicionSSTyMedioAmbiente.fcproj (Proyecto de montaje FilmCraft CLI)
+   - 10 Fotografías reales de oportunidades de mejora (/imagenes_reales/)
+   - 6 Capturas de pantalla reales en KDE Plasma X11 (/capturas/)
+
+Cordialmente,
+Karen Yuliana Campo
+Aprendiz ADSO - Ficha 3186681
+CTPI Popayán - Regional Cauca

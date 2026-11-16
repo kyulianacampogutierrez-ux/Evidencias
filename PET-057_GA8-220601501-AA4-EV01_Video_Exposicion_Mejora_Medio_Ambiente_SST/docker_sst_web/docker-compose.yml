@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  sena-sst-ambiental-web:
+    image: httpd:alpine
+    container_name: sena-sst-ambiental-web
+    ports:
+      - "8105:80"
+    volumes:
+      - ../sitio_sst_web:/usr/local/apache2/htdocs
+    restart: unless-stopped

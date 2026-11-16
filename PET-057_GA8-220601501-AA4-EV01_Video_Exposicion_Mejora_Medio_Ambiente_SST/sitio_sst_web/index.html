@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Web SST y Medio Ambiente | Evidencia GA8-220601501-AA4-EV01 | Karen Campo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sena-green: #39A900;
+      --sena-dark-green: #008C45;
+      --sst-blue: #0284c7;
+      --sst-dark-blue: #0369a1;
+      --bg-dark: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #09121d 0%, #112233 100%);
+      border-bottom: 2px solid var(--sena-dark-green);
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .sena-pill {
+      background: var(--sena-dark-green);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .header-text h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .header-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .nav-btn {
+      background: #1e293b;
+      border: 1px solid var(--border-color);
+      color: #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.active, .nav-btn:hover {
+      background: var(--sena-dark-green);
+      color: white;
+      border-color: var(--sena-green);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    /* Video Hero Section */
+    .hero-video-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 1024px) {
+      .hero-video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      background: #000;
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-info {
+      padding: 20px;
+    }
+    .video-info h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #38bdf8;
+    }
+    .video-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .meta-title {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--sena-green);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .info-list li {
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 8px;
+    }
+    .info-list li span.label {
+      color: var(--text-muted);
+    }
+    .info-list li span.val {
+      font-weight: 600;
+      color: #f1f5f9;
+      text-align: right;
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      border-top: 3px solid var(--sena-dark-green);
+    }
+    .kpi-card.blue {
+      border-top-color: var(--sst-blue);
+    }
+    .kpi-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .kpi-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Tabs Content */
+    .tab-section {
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+    }
+
+    /* Oportunidades Grid */
+    .section-header {
+      margin-bottom: 24px;
+      border-left: 4px solid var(--sena-dark-green);
+      padding-left: 14px;
+    }
+    .section-header h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .section-header p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .mejora-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .mejora-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+    }
+    .mejora-thumb {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background: #000;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .mejora-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .badge-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-amb {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    .badge-sst {
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+    .badge-phva {
+      background: rgba(250, 204, 21, 0.15);
+      color: #fde047;
+      border: 1px solid rgba(250, 204, 21, 0.3);
+    }
+    .mejora-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .mejora-norm {
+      font-size: 12px;
+      color: #fbbf24;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 12px;
+    }
+    .mejora-desc {
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+    .mejora-meta-box {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    /* Tabla Guion */
+    .script-table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow-x: auto;
+      padding: 16px;
+      margin-bottom: 36px;
+    }
+    table.guion-web-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    table.guion-web-table th {
+      background: #09121d;
+      color: #38bdf8;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid var(--border-color);
+    }
+    table.guion-web-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+    }
+    table.guion-web-table tr:hover {
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* JSON Inspector */
+    .json-box {
+      background: #090e17;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      overflow-x: auto;
+      max-height: 600px;
+    }
+
+    footer {
+      background: #09121d;
+      border-top: 1px solid var(--border-color);
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-badge">
+        <span class="sena-pill">SENA CTPI</span>
+        <div class="header-text">
+          <h1>SST & Gestión Ambiental • Ficha 3186681</h1>
+          <p>Evidencia: GA8-220601501-AA4-EV01 | Aprendiz: Karen Yuliana Campo</p>
+        </div>
+      </div>
+      <div class="nav-tabs">
+        <button class="nav-btn active" onclick="switchTab('tab-video')">Reproductor & Video</button>
+        <button class="nav-btn" onclick="switchTab('tab-mejoras')">10 Oportunidades Reales</button>
+        <button class="nav-btn" onclick="switchTab('tab-guion')">Guion Técnico</button>
+        <button class="nav-btn" onclick="switchTab('tab-phva')">Ciclo PHVA & ODS</button>
+        <button class="nav-btn" onclick="switchTab('tab-json')">Dataset JSON</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- KPI STRIP -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-val">10</div>
+        <div class="kpi-label">Oportunidades de Mejora</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-val">5 + 5</div>
+        <div class="kpi-label">Ambiental & SST</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-val">PHVA</div>
+        <div class="kpi-label">Metodología SG-SST</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-val">100%</div>
+        <div class="kpi-label">Imágenes Reales Contextuales</div>
+      </div>
+    </div>
+
+    <!-- TAB 1: REPRODUCTOR & VIDEO -->
+    <section id="tab-video" class="tab-section active">
+      <div class="hero-video-grid">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="imagenes_reales/06_ergonomia_puesto_trabajo_pantalla_silla.png" preload="metadata">
+              <source src="video/video_exposicion_sst.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video HTML5.
+            </video>
+          </div>
+          <div class="video-info">
+            <h2>Video Expositivo: Oportunidades de Mejora en Medio Ambiente y SST</h2>
+            <p>Producción audiovisual técnica de la evidencia GA8-220601501-AA4-EV01. Presenta las 10 mejoras aplicadas al contexto de desarrollo de software ADSO y al sector gastronómico de Popayán, con imágenes reales, fundamentación legal y ciclo PHVA.</p>
+          </div>
+        </div>
+
+        <div class="meta-card">
+          <div>
+            <div class="meta-title">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              Ficha Técnica del Video
+            </div>
+            <ul class="info-list">
+              <li><span class="label">Aprendiz Expositora:</span> <span class="val">Karen Yuliana Campo</span></li>
+              <li><span class="label">Ficha de Caracterización:</span> <span class="val">3186681</span></li>
+              <li><span class="label">Programa de Formación:</span> <span class="val">Tecnólogo en ADSO</span></li>
+              <li><span class="label">Centro & Regional:</span> <span class="val">CTPI Popayán — Regional Cauca</span></li>
+              <li><span class="label">Resolución de Video:</span> <span class="val">1920 × 1080 (Full HD 1080p)</span></li>
+              <li><span class="label">Audio & Ducking:</span> <span class="val">Voz principal + Música ambiental -20dB</span></li>
+              <li><span class="label">Casos Productivos:</span> <span class="val">ADSO Software & Pizzería Bella Italia</span></li>
+            </ul>
+          </div>
+          <div style="margin-top: 20px; padding: 12px; background: rgba(0, 140, 69, 0.15); border: 1px solid var(--sena-dark-green); border-radius: 8px; font-size: 12px; color: #a7f3d0;">
+            ✓ Cumplimiento estricto del instrumento de evaluación IE-GA8-220601501-AA4-EV01.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: 10 MEJORAS REALES -->
+    <section id="tab-mejoras" class="tab-section">
+      <div class="section-header">
+        <h2>Catálogo de las 10 Oportunidades de Mejora con Imágenes Reales</h2>
+        <p>5 iniciativas de Gestión Ambiental y 5 de Seguridad y Salud en el Trabajo aplicadas a nuestro contexto productivo.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Renderizado dinámicamente mediante JS desde JSON -->
+      </div>
+    </section>
+
+    <!-- TAB 3: GUION TÉCNICO -->
+    <section id="tab-guion" class="tab-section">
+      <div class="section-header">
+        <h2>Guion Técnico y Pedagógico a Dos Columnas</h2>
+        <p>Estructura de preproducción, producción y postproducción con marcas de tiempo y locución de Karen Yuliana Campo.</p>
+      </div>
+
+      <div class="script-table-container">
+        <table class="guion-web-table">
+          <thead>
+            <tr>
+              <th style="width: 15%;">Bloque / Tiempo</th>
+              <th style="width: 40%;">Video (Recursos Visuales & Fotos Reales)</th>
+              <th style="width: 45%;">Audio (Locución de Karen Yuliana Campo)</th>
+            </tr>
+          </thead>
+          <tbody id="guion-table-body">
+            <!-- Cargado dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: CICLO PHVA & ODS -->
+    <section id="tab-phva" class="tab-section">
+      <div class="section-header">
+        <h2>Articulación del Ciclo PHVA y Objetivos de Desarrollo Sostenible (ODS)</h2>
+        <p>Marco de mejora continua bajo el Decreto 1072 de 2015 y estándares internacionales ISO 14001 / ISO 45001.</p>
+      </div>
+
+      <div class="hero-video-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="meta-card">
+          <div class="meta-title">Ciclo PHVA en Gestión Ambiental y SST</div>
+          <ul class="info-list">
+            <li><span class="label">1. PLANEAR:</span> <span class="val">Matriz GTC 45, diagnóstico de consumos y matriz de aspectos ambientales.</span></li>
+            <li><span class="label">2. HACER:</span> <span class="val">Estaciones ecológicas (Res. 2184), ergonomía, extintores especializados y 5S.</span></li>
+            <li><span class="label">3. VERIFICAR:</span> <span class="val">Control de caudal hídrico, medición de kWh, inspección de extintores y descansos.</span></li>
+            <li><span class="label">4. ACTUAR:</span> <span class="val">Estandarización de protocolos, correctivos inmediatos y cierre de brechas SG-SST.</span></li>
+          </ul>
+        </div>
+
+        <div class="meta-card">
+          <div class="meta-title">Impacto en Objetivos de Desarrollo Sostenible (ODS)</div>
+          <ul class="info-list">
+            <li><span class="label">ODS 3 (Salud y Bienestar):</span> <span class="val">Prevención de DME, ergonomía antropométrica y pausas activas.</span></li>
+            <li><span class="label">ODS 6 (Agua Limpia y Saneamiento):</span> <span class="val">Trampas de grasas para ACU y aireadores ahorradores de caudal.</span></li>
+            <li><span class="label">ODS 7 (Energía Asequible y No Contaminante):</span> <span class="val">Iluminación LED y directivas de suspensión en puestos ADSO.</span></li>
+            <li><span class="label">ODS 8 (Trabajo Decente y Crecimiento Económico):</span> <span class="val">Espacios de trabajo seguros bajo RETIE y Res. 2400/1979.</span></li>
+            <li><span class="label">ODS 12 (Producción y Consumo Responsables):</span> <span class="val">Código unificado de colores y gestión integral de RAEE.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: DATASET JSON -->
+    <section id="tab-json" class="tab-section">
+      <div class="section-header">
+        <h2>Dataset JSON Estructurado de la Evidencia</h2>
+        <p>Datos interoperables cargados directamente desde <code>datos_mejora_sst_ambiental.json</code>.</p>
+      </div>
+      <pre class="json-box" id="json-viewer">Cargando datos JSON...</pre>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Servicio Nacional de Aprendizaje (SENA) • Centro de Teleinformática y Producción Industrial (CTPI Popayán) — Regional Cauca</p>
+    <p style="margin-top: 4px; font-weight: 600; color: #e2e8f0;">Tecnólogo en Análisis y Desarrollo de Software (ADSO) • Ficha: 3186681 • Karen Yuliana Campo</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // Cargar datos JSON
+    fetch('datos_mejora_sst_ambiental.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('json-viewer').textContent = JSON.stringify(data, null, 2);
+
+        // Renderizar Galería
+        const gallery = document.getElementById('gallery-container');
+        gallery.innerHTML = '';
+        data.oportunidades_mejora.forEach(om => {
+          const isAmb = om.pilar.includes('Ambiental');
+          const badgeClass = isAmb ? 'badge-amb' : 'badge-sst';
+          const card = document.createElement('div');
+          card.className = 'mejora-card';
+          card.innerHTML = `
+            <img src="${om.imagen_real}" alt="${om.titulo}" class="mejora-thumb" loading="lazy">
+            <div class="mejora-content">
+              <div>
+                <div class="badge-row">
+                  <span class="badge-tag ${badgeClass}">● ${om.pilar}</span>
+                  <span class="badge-tag badge-phva">Fase: ${om.fase_phva}</span>
+                  <span class="badge-tag" style="background: rgba(255,255,255,0.1); color: #e2e8f0;">${om.id}</span>
+                </div>
+                <h3 class="mejora-title">${om.titulo}</h3>
+                <div class="mejora-norm">Norma: ${om.normativa}</div>
+                <p class="mejora-desc">${isAmb ? om.impacto_ambiental : om.impacto_sst}</p>
+              </div>
+              <div class="mejora-meta-box">
+                <strong>Meta / Indicador:</strong> ${om.indicador_meta}
+              </div>
+            </div>
+          `;
+          gallery.appendChild(card);
+        });
+
+        // Renderizar tabla del guion
+        const guionBody = document.getElementById('guion-table-body');
+        const scriptBlocks = [
+          { bloque: "Bloque 01 (00:00 - 00:45)", video: "Pantalla 01: Apertura y Presentación Institucional. Logotipo SENA CTPI, Ficha 3186681, Aprendiz Karen Yuliana Campo.", audio: "Cordial saludo. Mi nombre es Karen Yuliana Campo, aprendiz del programa Tecnólogo en Análisis y Desarrollo de Software con ficha 3186681 del SENA CTPI Popayán. En esta oportunidad presento la evidencia GA8-220601501-AA4-EV01 sobre diez oportunidades de mejora en medio ambiente y SST..." },
+          { bloque: "Bloque 02 (00:45 - 01:30)", video: "Pantalla 02: Oportunidad Ambiental 01. Foto Real: Batería de canecas (Blanco, Verde, Negro). Res. 2184/2019.", audio: "Nuestra primera oportunidad de mejora es la separación estricta en la fuente mediante el código unificado de colores de la Resolución 2184 de 2019: blanco para aprovechables, verde para orgánicos y negro para ordinarios..." },
+          { bloque: "Bloque 03 (01:30 - 02:15)", video: "Pantalla 03: Oportunidad Ambiental 02. Foto Real: Trampa de grasas inox y bidones de ACU rotulados. Res. 316/2018.", audio: "La segunda oportunidad es el manejo de trampas de grasas y recolección certificada de Aceites de Cocina Usados (ACU), regulado por la Resolución 316 de 2018, evitando que un litro contamine hasta mil litros de agua..." },
+          { bloque: "Bloque 04 (02:15 - 03:00)", video: "Pantalla 04: Oportunidad Ambiental 03. Foto Real: Luminarias LED y sensores de movimiento PIR. Ley 1715/2014.", audio: "La tercera oportunidad ambiental es la eficiencia energética con luminarias LED y políticas de suspensión automática de monitores en las estaciones ADSO..." },
+          { bloque: "Bloque 05 (03:00 - 03:45)", video: "Pantalla 05: Oportunidad Ambiental 04. Foto Real: Contenedor especializado para RAEE y periféricos. Ley 1672/2013.", audio: "Implementamos la gestión integral de Residuos de Aparatos Eléctricos y Electrónicos (RAEE), canalizando tarjetas y componentes obsoletos con gestores certificados..." },
+          { bloque: "Bloque 06 (03:45 - 04:30)", video: "Pantalla 06: Oportunidad Ambiental 05. Foto Real: Griferías con aireadores economizadores. Ley 373/1997.", audio: "Uso eficiente y ahorro de agua potable mediante difusores aireadores que reducen el caudal de 12 a 4.5 litros por minuto sin perder confort..." },
+          { bloque: "Bloque 07 (04:30 - 05:15)", video: "Pantalla 07: Oportunidad SST 06. Foto Real: Puesto ergonómico con monitor horizontal, silla y descansapiés. GTC 45.", audio: "Pasamos a SST con la adecuación antropométrica del puesto de trabajo para programadores, regulando monitor a nivel de ojos, silla con soporte lumbar y ángulos de 90 grados..." },
+          { bloque: "Bloque 08 (05:15 - 06:00)", video: "Pantalla 08: Oportunidad SST 07. Foto Real: Escaleras con cintas fotoluminiscentes y pisos rugosos. Res. 2400/1979.", audio: "Adecuación locativa de escaleras y pisos antideslizantes para eliminar el principal factor de riesgo en caídas a nivel o desnivel..." },
+          { bloque: "Bloque 09 (06:00 - 06:45)", video: "Pantalla 09: Oportunidad SST 08. Foto Real: Extintores especializados Clase K (cocinas) y CO2 (servidores). NTC 2885.", audio: "Dotación técnica de extintores Clase K de acetato de potasio para grasas y agentes limpios para racks de servidores que no dañan componentes electrónicos..." },
+          { bloque: "Bloque 10 (06:45 - 07:30)", video: "Pantalla 10: Oportunidad SST 09. Foto Real: Canalización de cables RETIE y metodología 5S.", audio: "Combinamos la metodología 5S con la canalización segura de cableado eléctrico bajo el reglamento RETIE, previniendo cortocircuitos y tropiezos..." },
+          { bloque: "Bloque 11 (07:30 - 08:15)", video: "Pantalla 11: Oportunidad SST 10. Foto Real: Ejercicios de pausas activas guiadas y descanso visual 20-20-20. Ley 2191.", audio: "Programa sistemático de pausas activas a las 10:00 am y 3:30 pm para reactivación neuromuscular y prevención del estrés laboral..." },
+          { bloque: "Bloque 12 (08:15 - 09:00)", video: "Pantalla 12: Cierre Institucional. Ciclo PHVA, ODS y agradecimientos comunitarios.", audio: "En conclusión, implementar estas diez oportunidades bajo el ciclo PHVA protege vidas y preserva nuestro entorno. Agradezco a los instructores del SENA CTPI Popayán. ¡Muchas gracias!" }
+        ];
+
+        guionBody.innerHTML = '';
+        scriptBlocks.forEach(sb => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><strong>${sb.bloque}</strong></td>
+            <td>${sb.video}</td>
+            <td style="color: #cbd5e1;">${sb.audio}</td>
+          `;
+          guionBody.appendChild(tr);
+        });
+      })
+      .catch(err => console.error('Error cargando JSON:', err));
+  </script>
+</body>
+</html>

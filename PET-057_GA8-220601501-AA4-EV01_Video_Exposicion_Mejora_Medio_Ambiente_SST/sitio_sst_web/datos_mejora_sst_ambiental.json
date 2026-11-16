@@ -1,0 +1,177 @@
+{
+  "informacion_general": {
+    "evidencia_codigo": "GA8-220601501-AA4-EV01",
+    "nombre_evidencia": "Video expositivo sobre oportunidades de mejora en el medio ambiente y SST",
+    "competencia": "220601501 - Aplicar prácticas de protección ambiental, seguridad y salud en el trabajo",
+    "actividad_aprendizaje": "GA8-220601501-AA4 - Proponer acciones de mejora para el manejo ambiental y el control de la SST",
+    "instrumento_evaluacion": "IE-GA8-220601501-AA4-EV01",
+    "ficha": "3186681",
+    "programa": "Tecnólogo en Análisis y Desarrollo de Software (ADSO)",
+    "centro_formacion": "Centro de Teleinformática y Producción Industrial (CTPI)",
+    "regional": "Cauca - Popayán",
+    "aprendiz": "Karen Yuliana Campo",
+    "fecha": "Noviembre 2026",
+    "contexto_estudio_caso": [
+      "Entorno de Desarrollo de Software ADSO (Tecnológico / Cómputo intensivo)",
+      "Pizzería Gourmet Bella Italia Popayán (Operativo / Gastronómico / Servicios)"
+    ]
+  },
+  "ciclo_phva": {
+    "planear": "Diagnóstico inicial, identificación de aspectos/impactos ambientales y matriz de peligros SST (GTC 45).",
+    "hacer": "Implementación de estaciones ecológicas, trampas de grasas, ergonomía, extintores y pausas activas.",
+    "verificar": "Auditorías periódicas, control de caudal de agua, mediciones de consumo kWh e indicadores de accidentalidad.",
+    "actuar": "Acciones correctivas, planes de mejora continua y actualización de procedimientos operativos estándar."
+  },
+  "oportunidades_mejora": [
+    {
+      "id": "OM-AMB-01",
+      "pilar": "Gestión Ambiental",
+      "titulo": "Separación de residuos sólidos en la fuente con código unificado de colores",
+      "normativa": "Resolución 2184 de 2019 (Ministerio de Ambiente y Desarrollo Sostenible)",
+      "impacto_ambiental": "Disminución de disposición final en relleno sanitario de Popayán y aumento de reciclaje.",
+      "acciones_clave": [
+        "Instalación de batería de 3 canecas: Blanco (aprovechables), Verde (orgánicos), Negro (no aprovechables).",
+        "Capacitación semestral a colaboradores y aprendices en segregación de papel archivo y botellas PET.",
+        "Convenio con asociación local de recicladores de Popayán para entrega directa."
+      ],
+      "imagen_real": "imagenes_reales/01_separacion_fuente_codigo_colores_res2184.png",
+      "fase_phva": "Hacer",
+      "indicador_meta": "Aprovechamiento > 65% de residuos generados"
+    },
+    {
+      "id": "OM-AMB-02",
+      "pilar": "Gestión Ambiental",
+      "titulo": "Instalación de trampa de grasas y recolección certificada de Aceites de Cocina Usados (ACU)",
+      "normativa": "Resolución 316 de 2018 (MinAmbiente)",
+      "impacto_ambiental": "Protección de fuentes hídricas (1 L de aceite contamina 1.000 L de agua) y prevención de taponamientos en alcantarillado.",
+      "acciones_clave": [
+        "Instalación de trampa de retención de grasas en acero inoxidable en la línea de fregado de la pizzería.",
+        "Almacenamiento exclusivo de ACU en bidones plásticos herméticos debidamente rotulados.",
+        "Entrega mensual a gestor ambiental certificado para transformación en biodiesel."
+      ],
+      "imagen_real": "imagenes_reales/02_trampa_grasas_recoleccion_acu_res316.png",
+      "fase_phva": "Hacer",
+      "indicador_meta": "100% de ACU entregado a gestor autorizado sin vertimientos a red pública"
+    },
+    {
+      "id": "OM-AMB-03",
+      "pilar": "Gestión Ambiental",
+      "titulo": "Eficiencia energética mediante luminarias LED, sensores PIR y directivas de suspensión",
+      "normativa": "Ley 1715 de 2014 & Ley 2099 de 2021",
+      "impacto_ambiental": "Reducción del consumo de kilovatios-hora (kWh) y disminución de emisiones indirectas de CO2.",
+      "acciones_clave": [
+        "Sustitución de tubos fluorescentes por paneles LED de 18W y alto flujo lumínico.",
+        "Instalación de sensores de presencia infrarrojos pasivos (PIR) en zonas comunes y pasillos.",
+        "Configuración de perfiles de energía en estaciones ADSO (apagado de pantallas tras 10 min de inactividad)."
+      ],
+      "imagen_real": "imagenes_reales/03_eficiencia_energetica_luminarias_led_sensores.png",
+      "fase_phva": "Hacer / Verificar",
+      "indicador_meta": "Reducción del 25% en consumo energético mensual"
+    },
+    {
+      "id": "OM-AMB-04",
+      "pilar": "Gestión Ambiental",
+      "titulo": "Gestión integral de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)",
+      "normativa": "Ley 1672 de 2013 (Política Nacional de Gestión Integral de RAEE)",
+      "impacto_ambiental": "Evitar la contaminación por metales pesados (plomo, cadmio, mercurio) y fomento de minería urbana.",
+      "acciones_clave": [
+        "Contenedor señalizado para descarte seguro de tarjetas madre, fuentes, cables y periféricos.",
+        "Mantenimiento correctivo para extender ciclo de vida útil del hardware de desarrollo.",
+        "Participación en jornadas posconsumo promovidas por MinAmbiente y SENA Regional Cauca."
+      ],
+      "imagen_real": "imagenes_reales/04_gestion_raee_residuos_electronicos_ley1672.png",
+      "fase_phva": "Hacer",
+      "indicador_meta": "Cero kilogramos de RAEE enviados a basura convencional"
+    },
+    {
+      "id": "OM-AMB-05",
+      "pilar": "Gestión Ambiental",
+      "titulo": "Uso eficiente y ahorro del agua mediante griferías con aireadores y monitoreo de fugas",
+      "normativa": "Ley 373 de 1997 (Programa para el Uso Eficiente y Ahorro del Agua)",
+      "impacto_ambiental": "Conservación del recurso hídrico superficial de la cuenca del río Molino en Popayán.",
+      "acciones_clave": [
+        "Instalación de aireadores reductores de caudal (4.5 L/min) en lavamanos y zonas de aseo.",
+        "Inspección periódica mediante hidrómetro para detección preventiva de fugas nocturnas.",
+        "Campaña de concientización visual sobre cierre de llaves durante el enjabonado."
+      ],
+      "imagen_real": "imagenes_reales/05_ahorro_agua_aireadores_griferias_ley373.png",
+      "fase_phva": "Verificar / Actuar",
+      "indicador_meta": "Reducción de consumo de agua potable de 12 m3 a 8 m3/mes"
+    },
+    {
+      "id": "OM-SST-06",
+      "pilar": "Seguridad y Salud en el Trabajo",
+      "titulo": "Adecuación ergonómica y antropométrica del puesto de trabajo ADSO",
+      "normativa": "Guía Técnica Colombiana GTC 45 & Decreto 1072 de 2015",
+      "impacto_sst": "Prevención de desórdenes músculo-esqueléticos (DME), síndrome del túnel carpiano y fatiga visual.",
+      "acciones_clave": [
+        "Ajuste de monitores a la altura horizontal de los ojos (distancia de 50 a 60 cm).",
+        "Dotación de sillas ergonómicas con apoyo lumbar, regulación neumática y descansabrazos 3D.",
+        "Uso de descansapiés con inclinación ajustable para asegurar ángulo de 90° en rodillas y codos."
+      ],
+      "imagen_real": "imagenes_reales/06_ergonomia_puesto_trabajo_pantalla_silla.png",
+      "fase_phva": "Planear / Hacer",
+      "indicador_meta": "100% de puestos de desarrollo con evaluación ergonómica favorable"
+    },
+    {
+      "id": "OM-SST-07",
+      "pilar": "Seguridad y Salud en el Trabajo",
+      "titulo": "Adecuación locativa de escaleras, pisos antideslizantes y señalética de advertencia",
+      "normativa": "Resolución 2400 de 1979 (Estatuto de Seguridad Industrial)",
+      "impacto_sst": "Eliminación de incidentes por resbalones, tropiezos y caídas a nivel o desnivel.",
+      "acciones_clave": [
+        "Instalación de cintas antideslizantes fotoluminiscentes de carborundo en cada peldaño.",
+        "Mantenimiento de pasamanos dobles a 90 cm de altura continua en escaleras de acceso.",
+        "Aplicación de tratamiento químico rugoso y secado permanente en pisos de cocina y servicio."
+      ],
+      "imagen_real": "imagenes_reales/07_adecuacion_locativa_pisos_antideslizantes_escaleras.png",
+      "fase_phva": "Hacer",
+      "indicador_meta": "Tasa cero de caídas o resbalones en jornada laboral"
+    },
+    {
+      "id": "OM-SST-08",
+      "pilar": "Seguridad y Salud en el Trabajo",
+      "titulo": "Dotación técnica de extintores especializados Clase K (cocinas) y CO2/Solkaflam (servidores)",
+      "normativa": "Norma Técnica Colombiana NTC 2885 / NFPA 10",
+      "impacto_sst": "Capacidad de respuesta rápida ante amagos de incendio sin poner en riesgo al personal ni dañar equipos.",
+      "acciones_clave": [
+        "Ubicación de extintor de acetato de potasio Clase K junto al área de cocción y freidoras.",
+        "Disposición de extintor de CO2 / agente limpio en rack de telecomunicaciones y servidores.",
+        "Inspección mensual de manómetros, tarjetas de recarga y entrenamiento práctico de brigada."
+      ],
+      "imagen_real": "imagenes_reales/08_seguridad_incendios_extintores_clase_k_abc.png",
+      "fase_phva": "Verificar",
+      "indicador_meta": "100% de extintores vigentes y personal entrenado en conato de incendio"
+    },
+    {
+      "id": "OM-SST-09",
+      "pilar": "Seguridad y Salud en el Trabajo",
+      "titulo": "Implementación de metodología 5S y canalización de cableado bajo reglamento RETIE",
+      "normativa": "Reglamento Técnico de Instalaciones Eléctricas (RETIE) & Metodología 5S",
+      "impacto_sst": "Prevención de riesgos eléctricos, contactos indirectos, sobrecargas y despeje de pasillos de evacuación.",
+      "acciones_clave": [
+        "Canalización de cables de red eléctrica y datos en canaletas de PVC autoextinguible ranuradas.",
+        "Organización vertical en bastidores con cinchos de velcro y rotulado técnico de puertos.",
+        "Aplicación de los 5 pasos: Seiri (Clasificar), Seiton (Ordenar), Seiso (Limpiar), Seiketsu (Estandarizar), Shitsuke (Disciplina)."
+      ],
+      "imagen_real": "imagenes_reales/09_orden_limpieza_metodologia_5s_cableado_retie.png",
+      "fase_phva": "Hacer / Estandarizar",
+      "indicador_meta": "Índice 5S superior a 90 puntos en auditoría mensual"
+    },
+    {
+      "id": "OM-SST-10",
+      "pilar": "Seguridad y Salud en el Trabajo",
+      "titulo": "Programa sistemático de pausas activas, higiene postural y desconexión laboral",
+      "normativa": "Ley 2191 de 2022 (Desconexión Laboral) & Decreto 1072 de 2015",
+      "impacto_sst": "Mitigación del estrés laboral, descanso de la fatiga visual (regla 20-20-20) y reactivación neuromuscular.",
+      "acciones_clave": [
+        "Programación de dos descansos activos diarios obligatorios de 10 minutos (10:00 am y 3:30 pm).",
+        "Ejercicios guiados de estiramiento de columna cervical, miembros superiores, muñecas y ojos.",
+        "Uso de software local con alerta emergente de bloqueo preventivo de pantalla para incentivar la pausa."
+      ],
+      "imagen_real": "imagenes_reales/10_programa_pausas_activas_higiene_postural.png",
+      "fase_phva": "Hacer / Verificar",
+      "indicador_meta": "Participación del 100% del equipo en pausas activas diarias"
+    }
+  ]
+}
