@@ -1,0 +1,37 @@
+# ==============================================================================
+# SERVICIO NACIONAL DE APRENDIZAJE - SENA
+# EVIDENCIA: GA8-220501096-AA2-EV04: Video exposición sobre machine learning
+# PROGRAMA: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+# APRENDIZ: KAREN YULIANA CAMPO | CTPI POPAYÁN - REGIONAL CAUCA
+# ==============================================================================
+
+Estimado Instructor / Evaluador Técnico:
+
+A continuación se relacionan los enlaces oficiales y recursos de acceso a los artefactos desarrollados para la evidencia GA8-220501096-AA2-EV04:
+
+1. REPOSITORIO GIT OFICIAL DEL PROYECTO:
+   https://github.com/danilocampo2024/Evidencias.git
+   Rama: main
+   Directorio de la Evidencia:
+   PET-056_GA8-220501096-AA2-EV04_Video_Exposicion_Machine_Learning
+
+2. SERVICIO WEB INTERACTIVO EN CONTENEDOR DOCKER (PUERTO 8104):
+   http://localhost:8104/
+   - Reproductor de Video Expositivo HTML5 con índice por bloques
+   - Visor de 10 Diapositivas Interactivas en Alta Definición
+   - Visor del Guion Técnico Individual estructurado
+   - Inspector del Dataset JSON oficial de los 8 núcleos temáticos (/datos_exposicion_ml.json)
+
+3. ARTEFACTOS ENTREGABLES DISPONIBLES EN EL PAQUETE:
+   - GA8-220501096-AA2-EV04_Guion_Video_Exposicion_Machine_Learning.pdf (Guion Técnico Individual en PDF)
+   - GA8-220501096-AA2-EV04_Guion_Video_Exposicion_Machine_Learning.docx (Guion Técnico Individual en DOCX)
+   - GUION_TECNICO_VIDEO_EXPOSICION_MACHINE_LEARNING.md (Guion en formato Markdown)
+   - GA8-220501096-AA2-EV04_Video_Exposicion_Machine_Learning.pdf (Informe Técnico Formal en PDF)
+   - GA8-220501096-AA2-EV04_Video_Exposicion_Machine_Learning.docx (Informe Técnico Formal en DOCX)
+   - GA8-220501096-AA2-EV04_Video_Exposicion_Machine_Learning.mp4 (Video Expositivo Maestro Full HD 1080p)
+   - ExposicionMachineLearning.fcproj (Proyecto de montaje FilmCraft CLI)
+
+Cordialmente,
+Karen Yuliana Campo
+Aprendiz ADSO - Ficha 3186681
+CTPI Popayán - Regional Cauca

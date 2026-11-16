@@ -1,0 +1,15 @@
+services:
+  sena-machine-learning-web:
+    image: httpd:alpine
+    container_name: sena-machine-learning-web
+    restart: unless-stopped
+    ports:
+      - "8104:80"
+    volumes:
+      - ../sitio_ml_web:/usr/local/apache2/htdocs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:80/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

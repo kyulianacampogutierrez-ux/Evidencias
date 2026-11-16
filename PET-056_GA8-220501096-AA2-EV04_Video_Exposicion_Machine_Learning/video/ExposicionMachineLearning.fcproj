@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "project_name": "ExposicionMachineLearning_SENA",
+  "author": "Karen Yuliana Campo",
+  "ficha": "3186681",
+  "resolution": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "audio_tracks": [
+    {
+      "name": "Narration_KarenCampo",
+      "file": "mixed_master_audio.wav",
+      "volume": 1.0
+    },
+    {
+      "name": "Ambient_BGM",
+      "file": "background_music.wav",
+      "volume": 0.25
+    }
+  ],
+  "timeline_blocks": [
+    {
+      "block": 1,
+      "title": "Video Exposici\u00f3n: Machine Learning",
+      "slide": "slide_01.png",
+      "duration_sec": 36.02
+    },
+    {
+      "block": 2,
+      "title": "\u00bfEn qu\u00e9 consiste el Machine Learning?",
+      "slide": "slide_02.png",
+      "duration_sec": 40.15
+    },
+    {
+      "block": 3,
+      "title": "Objetivos de la Tecnolog\u00eda Machine Learning",
+      "slide": "slide_03.png",
+      "duration_sec": 28.04
+    },
+    {
+      "block": 4,
+      "title": "Antecedentes Hist\u00f3ricos y Evoluci\u00f3n de la IA",
+      "slide": "slide_04.png",
+      "duration_sec": 45.94
+    },
+    {
+      "block": 5,
+      "title": "\u00bfEn qu\u00e9 consiste la Inteligencia Artificial?",
+      "slide": "slide_05.png",
+      "duration_sec": 35.67
+    },
+    {
+      "block": 6,
+      "title": "Modelo IA Orientado a la Programaci\u00f3n",
+      "slide": "slide_06.png",
+      "duration_sec": 30.85
+    },
+    {
+      "block": 7,
+      "title": "Modelo IA: Conexiones Neuronales",
+      "slide": "slide_07.png",
+      "duration_sec": 34.16
+    },
+    {
+      "block": 8,
+      "title": "Ejemplos Comerciales y Caso Aplicado",
+      "slide": "slide_08.png",
+      "duration_sec": 32.85
+    },
+    {
+      "block": 9,
+      "title": "Consecuencias Sociales, \u00c9ticas y Filos\u00f3ficas",
+      "slide": "slide_09.png",
+      "duration_sec": 33.54
+    },
+    {
+      "block": 10,
+      "title": "Conclusiones y Cierre Institucional",
+      "slide": "slide_10.png",
+      "duration_sec": 31.3
+    }
+  ]
+}

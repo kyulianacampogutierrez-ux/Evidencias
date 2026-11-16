@@ -1,0 +1,452 @@
+{
+  "metadatos_evidencia": {
+    "codigo": "GA8-220501096-AA2-EV04",
+    "nombre": "Video exposición sobre machine learning",
+    "guia": "Guía de Aprendizaje No. 8",
+    "programa": "Tecnología en Análisis y Desarrollo de Software (ADSO)",
+    "ficha": "3186681",
+    "aprendiz": "Karen Yuliana Campo",
+    "centro": "Centro de Teleinformática y Producción Industrial (CTPI)",
+    "regional": "Regional Cauca",
+    "entidad": "Servicio Nacional de Aprendizaje - SENA",
+    "año": 2026,
+    "competencia": "220501096 - Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo",
+    "actividad_aprendizaje": "GA8-220501096-AA2 - Incorporar tecnologías emergentes y disruptivas, de acuerdo con el diseño establecido",
+    "instrumento_evaluacion": "IE-GA8-220501096-AA2-EV04"
+  },
+  "fases_produccion_video": {
+    "fase_1_preproduccion": {
+      "nombre": "Preproducción Audiovisual",
+      "descripcion": "Estructuración pedagógica del guion técnico, storyboard por bloques, investigación documental rigurosa de los 8 núcleos temáticos y preparación de recursos gráficos Full HD.",
+      "artefactos": [
+        "Guion técnico individual de exposición (10 bloques temáticos)",
+        "Storyboard gráfico de diapositivas interactivas",
+        "Diseño de diapositivas 1080p con paleta institucional SENA y Dark Tech",
+        "Pistas de audio y efectos de sonido con modulación ducking"
+      ]
+    },
+    "fase_2_produccion": {
+      "nombre": "Producción Audiovisual",
+      "descripcion": "Grabación de audio de locución con dicción clara y captura de diapositivas temáticas sincronizadas utilizando herramientas de screencast (OBS Studio / FilmCraft pipeline).",
+      "herramientas_utilizadas": [
+        "OBS Studio / Screencast Automation",
+        "FFmpeg 6.x Multimedia Encoder",
+        "Python PIL / Cairo Graphics Render",
+        "FilmCraft CLI Pipeline"
+      ]
+    },
+    "fase_3_postproduccion": {
+      "nombre": "Postproducción y Renderizado",
+      "descripcion": "Montaje en pista no lineal, sincronización de voz en off, ecualización y mezcla con música ambiental de fondo (ducking dinámico -14 dB), transiciones limpias y exportación en MP4 H.264/AAC 1080p.",
+      "parametros_tecnicos": {
+        "resolucion": "1920x1080 (Full HD)",
+        "relacion_aspecto": "16:9 widescreen",
+        "codec_video": "H.264 (AVC1)",
+        "codec_audio": "AAC 48kHz Stereo",
+        "formato_contenedor": "MP4"
+      }
+    }
+  },
+  "nucleos_tematicos_obligatorios": [
+    {
+      "id": 1,
+      "titulo": "¿En qué consiste el Machine Learning?",
+      "subtitulo": "Paradigma de aprendizaje computacional a partir de datos",
+      "conceptos_clave": [
+        "Definición de Tom Mitchell (1997): Tarea T, Experiencia E, Desempeño P",
+        "Supervisado (Regresión y Clasificación con etiquetas)",
+        "No Supervisado (Clustering k-means, PCA, Reducción dimensional)",
+        "Por Refuerzo (Agente, Entorno, Recompensa, Políticas Q-Learning)",
+        "Ciclo de vida MLOps: Ingesta, Feature Engineering, Entrenamiento, Validación y Despliegue"
+      ],
+      "ejemplo_aplicado": "Detección de patrones de churn y recomendación de combos en Bella Italia Popayán."
+    },
+    {
+      "id": 2,
+      "titulo": "Objetivos de la Tecnología Machine Learning",
+      "subtitulo": "Capacidades analíticas y operativas que busca alcanzar",
+      "conceptos_clave": [
+        "Generalización: Evitar sobreajuste (overfitting) y subajuste (underfitting)",
+        "Automatización cognitiva de decisiones complejas",
+        "Optimización en espacios continuos y discretos de alta dimensionalidad",
+        "Extracción de patrones latentes en Big Data multimodal"
+      ],
+      "metrica_impacto": "Reducción del 94% en tiempo de detección de anomalías y optimización continua."
+    },
+    {
+      "id": 3,
+      "titulo": "Antecedentes Históricos y Evolución",
+      "subtitulo": "Línea de tiempo desde las bases teóricas hasta la era de los LLMs",
+      "hitos_historicos": [
+        {
+          "año": "1950",
+          "autor": "Alan Turing",
+          "hito": "Test de Turing y artículo 'Computing Machinery and Intelligence'"
+        },
+        {
+          "año": "1956",
+          "autor": "John McCarthy et al.",
+          "hito": "Conferencia de Dartmouth: Acuñación formal del término Inteligencia Artificial"
+        },
+        {
+          "año": "1958",
+          "autor": "Frank Rosenblatt",
+          "hito": "El Perceptrón simple: Primera neurona artificial implementada en hardware"
+        },
+        {
+          "año": "1959",
+          "autor": "Arthur Samuel",
+          "hito": "Definición de Aprendizaje Automático con programa jugador de damas"
+        },
+        {
+          "año": "1970s-1980s",
+          "autor": "Comunidad Científica",
+          "hito": "Primer y Segundo Invierno de la IA por limitaciones de hardware y sobreexpectativas"
+        },
+        {
+          "año": "1986",
+          "autor": "Rumelhart, Hinton & Williams",
+          "hito": "Algoritmo de Retropropagación (Backpropagation) para redes multicapa"
+        },
+        {
+          "año": "2012",
+          "autor": "Krizhevsky, Sutskever & Hinton",
+          "hito": "AlexNet: Revolución del Deep Learning acelerado por GPUs en ImageNet"
+        },
+        {
+          "año": "2017",
+          "autor": "Vaswani et al. (Google)",
+          "hito": "Arquitectura Transformer ('Attention Is All You Need') y explosión de LLMs"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "¿En qué consiste la Inteligencia Artificial?",
+      "subtitulo": "Taxonomía disciplinar, niveles evolutivos y dimensiones conceptuales",
+      "conceptos_clave": [
+        "Definición canónica: Sistemas capaces de percibir, razonar, aprender y actuar racionalmente",
+        "IA Estrecha o Específica (ANI - Artificial Narrow Intelligence): Estado actual (ChatGPT, AlphaFold)",
+        "IA General (AGI - Artificial General Intelligence): Nivel hipotético equivalente al razonamiento humano transversal",
+        "Superinteligencia Artificial (ASI - Artificial Superintelligence): Capacidad cognitiva superior a toda la humanidad",
+        "Relación jerárquica: IA ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative AI"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Modelo de IA Orientado a la Programación",
+      "subtitulo": "Enfoque simbólico, deductivo y basado en reglas formales",
+      "conceptos_clave": [
+        "IA Simbólica clásica (GOFAI - Good Old-Fashioned AI)",
+        "Sistemas Expertos de los 70s y 80s (MYCIN, DENDRAL, Prolog, Lisp)",
+        "Arquitectura: Base de conocimiento + Motor de inferencia (Modus Ponens)",
+        "Ventajas: 100% determinista, auditable, explicable y sin necesidad de grandes volúmenes de datos",
+        "Limitaciones y fragilidad: Incapacidad para manejar ambigüedad, ruido sensorial o datos no estructurados"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Modelo de IA Orientado a Conexiones Neuronales",
+      "subtitulo": "Enfoque conexionista, inductivo y bioinspirado (Deep Learning)",
+      "conceptos_clave": [
+        "Unidad fundamental: Neurona artificial o Perceptrón (Sumatoria ponderada + sesgo + función de activación)",
+        "Funciones de activación no lineales: Sigmoide, Tanh, ReLU, GELU, Softmax",
+        "Arquitecturas modernas: CNNs (visión), RNN/LSTM (secuencias temporales), Transformers (mecanismos de autoatención)",
+        "Optimización matemática: Gradiente Descendente Estocástico (SGD), Adam Optimizer y Retropropagación del error",
+        "Ventajas: Capacidad de aprender representaciones jerárquicas abstractas directamente de datos crudos"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Ejemplos de Productos Comerciales y Caso de Aplicación",
+      "subtitulo": "Soluciones de vanguardia y caso real de desarrollo de software",
+      "ejemplos_industria": [
+        {
+          "producto": "Tesla Autopilot / FSD",
+          "tipo": "Visión por computador y Deep Learning de control",
+          "impacto": "Navegación autónoma en tiempo real con millones de cámaras"
+        },
+        {
+          "producto": "ChatGPT / Claude / Gemini",
+          "tipo": "Modelos Masivos de Lenguaje (LLMs)",
+          "impacto": "Asistencia conversacional, generación de código y síntesis cognitiva"
+        },
+        {
+          "producto": "Netflix / Spotify Recommenders",
+          "tipo": "Filtrado colaborativo y embeddings neuronales",
+          "impacto": "Hiperpersonalización de catálogos y retención de usuarios"
+        }
+      ],
+      "caso_aplicado_pizzeria": {
+        "sistema": "Pizzería Gourmet Bella Italia Popayán",
+        "modulo_ml": "Motor predictivo de demanda de inventario y clasificación de clientes",
+        "tecnologias": "Python Scikit-Learn, Random Forest Regressor y Docker HTTPD API",
+        "resultado": "Reducción del 28% en desperdicios de masa artesanal y quesos importados"
+      }
+    },
+    {
+      "id": 8,
+      "titulo": "Consecuencias Sociales, Éticas y Filosóficas",
+      "subtitulo": "Desafíos críticos para el desarrollador de software moderno",
+      "ejes_criticos": [
+        {
+          "eje": "Sesgos Algorítmicos y Discriminación",
+          "detalle": "Perpetuación de prejuicios históricos presentes en los datasets de entrenamiento (ej. contratación, scoring crediticio, justicia penal)."
+        },
+        {
+          "eje": "Privacidad y Soberanía de Datos",
+          "detalle": "Riesgos de vigilancia masiva, scraping no consentido y cumplimiento de leyes de protección (GDPR, Ley 1581 de 2012 en Colombia)."
+        },
+        {
+          "eje": "Impacto Laboral y Reconfiguración del Empleo",
+          "detalle": "Automatización de labores cognitivas y necesidad de reconversión técnica hacia el desarrollo ético de software."
+        },
+        {
+          "eje": "Opacidad ('Caja Negra') y Explicabilidad (XAI)",
+          "detalle": "Técnicas como SHAP y LIME para desmitificar las decisiones de modelos profundos en sectores sensibles."
+        },
+        {
+          "eje": "Principio Human-in-the-Loop",
+          "detalle": "Imperativo ético de mantener la supervisión humana en decisiones críticas automatizadas."
+        }
+      ]
+    }
+  ],
+  "guion_bloques_video": [
+    {
+      "bloque": 1,
+      "titulo": "Apertura Institucional y Portada",
+      "tiempo": "0:00 - 0:30",
+      "fase": "Preproducción"
+    },
+    {
+      "bloque": 2,
+      "titulo": "¿En qué consiste el Machine Learning?",
+      "tiempo": "0:30 - 1:15",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 3,
+      "titulo": "Objetivos de la Tecnología ML",
+      "tiempo": "1:15 - 1:55",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 4,
+      "titulo": "Antecedentes Históricos y Evolución",
+      "tiempo": "1:55 - 2:45",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 5,
+      "titulo": "¿En qué consiste la Inteligencia Artificial?",
+      "tiempo": "2:45 - 3:30",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 6,
+      "titulo": "Modelo IA Orientado a la Programación (Simbólico)",
+      "tiempo": "3:30 - 4:15",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 7,
+      "titulo": "Modelo IA Orientado a Conexiones Neuronales (Conexionista)",
+      "tiempo": "4:15 - 5:05",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 8,
+      "titulo": "Ejemplos Comerciales y Caso Bella Italia",
+      "tiempo": "5:05 - 5:50",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 9,
+      "titulo": "Consecuencias Sociales, Éticas y Filosóficas",
+      "tiempo": "5:50 - 6:40",
+      "fase": "Producción"
+    },
+    {
+      "bloque": 10,
+      "titulo": "Conclusiones y Cierre Institucional",
+      "tiempo": "6:40 - 7:15",
+      "fase": "Postproducción"
+    }
+  ],
+  "informacion_general": {
+    "evidencia_codigo": "GA8-220501096-AA2-EV04",
+    "evidencia_nombre": "Video exposición sobre machine learning",
+    "ficha": "3186681",
+    "aprendiz": "Karen Yuliana Campo",
+    "centro": "Centro de Teleinformática y Producción Industrial (CTPI)",
+    "regional": "Regional Cauca - Popayán",
+    "programa": "Tecnología en Análisis y Desarrollo de Software (ADSO)",
+    "año": 2026
+  },
+  "secciones_exposicion": [
+    {
+      "id": 1,
+      "titulo": "¿En qué consiste el Machine Learning?",
+      "subtitulo": "Paradigma de aprendizaje computacional a partir de datos",
+      "conceptos_clave": [
+        "Definición de Tom Mitchell (1997): Tarea T, Experiencia E, Desempeño P",
+        "Supervisado (Regresión y Clasificación con etiquetas)",
+        "No Supervisado (Clustering k-means, PCA, Reducción dimensional)",
+        "Por Refuerzo (Agente, Entorno, Recompensa, Políticas Q-Learning)",
+        "Ciclo de vida MLOps: Ingesta, Feature Engineering, Entrenamiento, Validación y Despliegue"
+      ],
+      "ejemplo_aplicado": "Detección de patrones de churn y recomendación de combos en Bella Italia Popayán."
+    },
+    {
+      "id": 2,
+      "titulo": "Objetivos de la Tecnología Machine Learning",
+      "subtitulo": "Capacidades analíticas y operativas que busca alcanzar",
+      "conceptos_clave": [
+        "Generalización: Evitar sobreajuste (overfitting) y subajuste (underfitting)",
+        "Automatización cognitiva de decisiones complejas",
+        "Optimización en espacios continuos y discretos de alta dimensionalidad",
+        "Extracción de patrones latentes en Big Data multimodal"
+      ],
+      "metrica_impacto": "Reducción del 94% en tiempo de detección de anomalías y optimización continua."
+    },
+    {
+      "id": 3,
+      "titulo": "Antecedentes Históricos y Evolución",
+      "subtitulo": "Línea de tiempo desde las bases teóricas hasta la era de los LLMs",
+      "hitos_historicos": [
+        {
+          "año": "1950",
+          "autor": "Alan Turing",
+          "hito": "Test de Turing y artículo 'Computing Machinery and Intelligence'"
+        },
+        {
+          "año": "1956",
+          "autor": "John McCarthy et al.",
+          "hito": "Conferencia de Dartmouth: Acuñación formal del término Inteligencia Artificial"
+        },
+        {
+          "año": "1958",
+          "autor": "Frank Rosenblatt",
+          "hito": "El Perceptrón simple: Primera neurona artificial implementada en hardware"
+        },
+        {
+          "año": "1959",
+          "autor": "Arthur Samuel",
+          "hito": "Definición de Aprendizaje Automático con programa jugador de damas"
+        },
+        {
+          "año": "1970s-1980s",
+          "autor": "Comunidad Científica",
+          "hito": "Primer y Segundo Invierno de la IA por limitaciones de hardware y sobreexpectativas"
+        },
+        {
+          "año": "1986",
+          "autor": "Rumelhart, Hinton & Williams",
+          "hito": "Algoritmo de Retropropagación (Backpropagation) para redes multicapa"
+        },
+        {
+          "año": "2012",
+          "autor": "Krizhevsky, Sutskever & Hinton",
+          "hito": "AlexNet: Revolución del Deep Learning acelerado por GPUs en ImageNet"
+        },
+        {
+          "año": "2017",
+          "autor": "Vaswani et al. (Google)",
+          "hito": "Arquitectura Transformer ('Attention Is All You Need') y explosión de LLMs"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "¿En qué consiste la Inteligencia Artificial?",
+      "subtitulo": "Taxonomía disciplinar, niveles evolutivos y dimensiones conceptuales",
+      "conceptos_clave": [
+        "Definición canónica: Sistemas capaces de percibir, razonar, aprender y actuar racionalmente",
+        "IA Estrecha o Específica (ANI - Artificial Narrow Intelligence): Estado actual (ChatGPT, AlphaFold)",
+        "IA General (AGI - Artificial General Intelligence): Nivel hipotético equivalente al razonamiento humano transversal",
+        "Superinteligencia Artificial (ASI - Artificial Superintelligence): Capacidad cognitiva superior a toda la humanidad",
+        "Relación jerárquica: IA ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative AI"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Modelo de IA Orientado a la Programación",
+      "subtitulo": "Enfoque simbólico, deductivo y basado en reglas formales",
+      "conceptos_clave": [
+        "IA Simbólica clásica (GOFAI - Good Old-Fashioned AI)",
+        "Sistemas Expertos de los 70s y 80s (MYCIN, DENDRAL, Prolog, Lisp)",
+        "Arquitectura: Base de conocimiento + Motor de inferencia (Modus Ponens)",
+        "Ventajas: 100% determinista, auditable, explicable y sin necesidad de grandes volúmenes de datos",
+        "Limitaciones y fragilidad: Incapacidad para manejar ambigüedad, ruido sensorial o datos no estructurados"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Modelo de IA Orientado a Conexiones Neuronales",
+      "subtitulo": "Enfoque conexionista, inductivo y bioinspirado (Deep Learning)",
+      "conceptos_clave": [
+        "Unidad fundamental: Neurona artificial o Perceptrón (Sumatoria ponderada + sesgo + función de activación)",
+        "Funciones de activación no lineales: Sigmoide, Tanh, ReLU, GELU, Softmax",
+        "Arquitecturas modernas: CNNs (visión), RNN/LSTM (secuencias temporales), Transformers (mecanismos de autoatención)",
+        "Optimización matemática: Gradiente Descendente Estocástico (SGD), Adam Optimizer y Retropropagación del error",
+        "Ventajas: Capacidad de aprender representaciones jerárquicas abstractas directamente de datos crudos"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Ejemplos de Productos Comerciales y Caso de Aplicación",
+      "subtitulo": "Soluciones de vanguardia y caso real de desarrollo de software",
+      "ejemplos_industria": [
+        {
+          "producto": "Tesla Autopilot / FSD",
+          "tipo": "Visión por computador y Deep Learning de control",
+          "impacto": "Navegación autónoma en tiempo real con millones de cámaras"
+        },
+        {
+          "producto": "ChatGPT / Claude / Gemini",
+          "tipo": "Modelos Masivos de Lenguaje (LLMs)",
+          "impacto": "Asistencia conversacional, generación de código y síntesis cognitiva"
+        },
+        {
+          "producto": "Netflix / Spotify Recommenders",
+          "tipo": "Filtrado colaborativo y embeddings neuronales",
+          "impacto": "Hiperpersonalización de catálogos y retención de usuarios"
+        }
+      ],
+      "caso_aplicado_pizzeria": {
+        "sistema": "Pizzería Gourmet Bella Italia Popayán",
+        "modulo_ml": "Motor predictivo de demanda de inventario y clasificación de clientes",
+        "tecnologias": "Python Scikit-Learn, Random Forest Regressor y Docker HTTPD API",
+        "resultado": "Reducción del 28% en desperdicios de masa artesanal y quesos importados"
+      }
+    },
+    {
+      "id": 8,
+      "titulo": "Consecuencias Sociales, Éticas y Filosóficas",
+      "subtitulo": "Desafíos críticos para el desarrollador de software moderno",
+      "ejes_criticos": [
+        {
+          "eje": "Sesgos Algorítmicos y Discriminación",
+          "detalle": "Perpetuación de prejuicios históricos presentes en los datasets de entrenamiento (ej. contratación, scoring crediticio, justicia penal)."
+        },
+        {
+          "eje": "Privacidad y Soberanía de Datos",
+          "detalle": "Riesgos de vigilancia masiva, scraping no consentido y cumplimiento de leyes de protección (GDPR, Ley 1581 de 2012 en Colombia)."
+        },
+        {
+          "eje": "Impacto Laboral y Reconfiguración del Empleo",
+          "detalle": "Automatización de labores cognitivas y necesidad de reconversión técnica hacia el desarrollo ético de software."
+        },
+        {
+          "eje": "Opacidad ('Caja Negra') y Explicabilidad (XAI)",
+          "detalle": "Técnicas como SHAP y LIME para desmitificar las decisiones de modelos profundos en sectores sensibles."
+        },
+        {
+          "eje": "Principio Human-in-the-Loop",
+          "detalle": "Imperativo ético de mantener la supervisión humana en decisiones críticas automatizadas."
+        }
+      ]
+    }
+  ]
+}
