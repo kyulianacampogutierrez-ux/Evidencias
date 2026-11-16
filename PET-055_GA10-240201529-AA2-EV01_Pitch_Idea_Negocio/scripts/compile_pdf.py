@@ -285,9 +285,9 @@ html_content = f"""<!DOCTYPE html>
 
       <div class="cover-center">
         <span class="badge-pill">EVIDENCIA FORMAL • GUÍA DE APRENDIZAJE 10 (PÁGS. 24-25)</span>
-        <h1 class="cover-title">PITCH DE IDEA DE NEGOCIO<br>(ELEVATOR PITCH TIKTOK 54s)</h1>
+        <h1 class="cover-title">PITCH DE IDEA DE NEGOCIO<br>(ELEVATOR PITCH TIKTOK 52s)</h1>
         <p class="cover-desc">
-          Informe técnico integral y memoria audiovisual del Elevator Pitch para el emprendimiento de base gastronómica y tecnológica <strong>Pizzería Gourmet Bella Italia Popayán</strong>, estructurado bajo el formato vertical 9:16 de 54 segundos de duración, con validación formal de homonimia en Cámara de Comercio (RUES / SINTRAMITES) y arquitectura web ADSO.
+          Informe técnico integral y memoria audiovisual del Elevator Pitch para el emprendimiento de base gastronómica y tecnológica <strong>Pizzería Gourmet Bella Italia Popayán</strong>, estructurado bajo el formato vertical 9:16 de 51.82 segundos de duración, con validación formal de homonimia en Cámara de Comercio (RUES / SINTRAMITES) y arquitectura web ADSO.
         </p>
 
         <div class="meta-box">
@@ -313,10 +313,10 @@ html_content = f"""<!DOCTYPE html>
           <div class="meta-value">Karen Yuliana Campo</div>
 
           <div class="meta-label">Duración Video:</div>
-          <div class="meta-value">54 segundos (Límite máximo permitido: 59 segundos)</div>
+          <div class="meta-value">51.82 segundos (Límite máximo permitido: 59 segundos)</div>
 
           <div class="meta-label">Formato Video:</div>
-          <div class="meta-value">MP4 Vertical HD (1080x1920, H.264 / AAC Estéreo 192k)</div>
+          <div class="meta-value">MP4 Vertical HD (1080x1920, H.264 / AAC Estéreo 320k)</div>
         </div>
       </div>
 
@@ -336,7 +336,7 @@ html_content = f"""<!DOCTYPE html>
 
     <h2 class="section-title">RESUMEN EJECUTIVO</h2>
     <p>
-      El presente informe formal documenta el diseño, validación jurídica, estructura comunicativa y producción audiovisual del <strong>Elevator Pitch</strong> de la idea de negocio <strong>Pizzería Gourmet Bella Italia Popayán</strong>. Dando estricto cumplimiento a las especificaciones consignadas en la Guía de Aprendizaje 10 (páginas 24 y 25), el producto central corresponde a una pieza audiovisual vertical tipo <strong>TikTok / Reels (1080x1920)</strong> con una duración cronometrada de <strong>54 segundos</strong>, garantizando que no supere el umbral máximo de 59 segundos fijado por el SENA.
+      El presente informe formal documenta el diseño, validación jurídica, estructura comunicativa y producción audiovisual del <strong>Elevator Pitch</strong> de la idea de negocio <strong>Pizzería Gourmet Bella Italia Popayán</strong>. Dando estricto cumplimiento a las especificaciones consignadas en la Guía de Aprendizaje 10 (páginas 24 y 25), el producto central corresponde a una pieza audiovisual vertical tipo <strong>TikTok / Reels (1080x1920)</strong> con una duración cronometrada de <strong>51.82 segundos</strong>, garantizando que no supere el umbral máximo de 59 segundos fijado por el SENA.
     </p>
     <p>
       El pitch articula los cinco pasos cardinales del modelo de comunicación emprendedora: 1) Identificación del problema real de mercado en Popayán; 2) Propuesta de solución gourmet basada en masa madre viva y horneado en 90 segundos; 3) Tradición italiana fusionada con el corazón caucano a través de alianzas campesinas; 4) Innovación tecnológica soportada en la web app ADSO y logística de calor térmico; y 5) Llamado a la acción claro con canales físicos y digitales.
@@ -438,7 +438,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="header-meta">Karen Yuliana Campo | Noviembre 2026</div>
     </div>
 
-    <h2 class="section-title">5. GUION TÉCNICO Y STORYBOARD SEGUNDO A SEGUNDO (54 SEGUNDOS)</h2>
+    <h2 class="section-title">5. GUION TÉCNICO Y STORYBOARD SEGUNDO A SEGUNDO (52 SEGUNDOS)</h2>
     <p>
       Estructura milimétrica del discurso en formato TikTok (1080x1920) adaptada para retención en redes sociales:
     </p>
@@ -454,31 +454,31 @@ html_content = f"""<!DOCTYPE html>
       </thead>
       <tbody>
         <tr>
-          <td><strong>00:00 - 00:08</strong><br>(8 segundos)</td>
+          <td><strong>00:00 - 00:07.5</strong><br>(7.5 segundos)</td>
           <td><strong>Paso 1:</strong><br>El Problema Real</td>
           <td>"¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?"</td>
           <td>Fondo rojo alerta, tarjetas de problemas: Demoras >60 min, masas industriales pesadas, pizzas frías. Subtítulos dinámicos TikTok.</td>
         </tr>
         <tr>
-          <td><strong>00:08 - 00:20</strong><br>(12 segundos)</td>
+          <td><strong>00:07.5 - 00:18.5</strong><br>(11.0 segundos)</td>
           <td><strong>Paso 2:</strong><br>Solución Gourmet</td>
           <td>"¡Llegó Bella Italia Popayán! La auténtica pizza artesanal con masa madre de 48 horas de fermentación y horneada a 450 grados en solo 90 segundos."</td>
           <td>Logo oficial Bella Italia, catálogo de pizzas napolitanas, badges: 'Masa Madre 48h', 'Horno 450°C', '90 Segundos'.</td>
         </tr>
         <tr>
-          <td><strong>00:20 - 00:32</strong><br>(12 segundos)</td>
+          <td><strong>00:18.5 - 00:29.0</strong><br>(10.5 segundos)</td>
           <td><strong>Paso 3:</strong><br>Tradición + Cauca</td>
           <td>"Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera."</td>
           <td>Tarjetas de alianzas productivas: Quesos de Silvia, huertas de Timbío, salsa San Marzano, bandera italiana y caucana.</td>
         </tr>
         <tr>
-          <td><strong>00:32 - 00:43</strong><br>(11 segundos)</td>
+          <td><strong>00:29.0 - 00:39.5</strong><br>(10.5 segundos)</td>
           <td><strong>Paso 4:</strong><br>Tecnología ADSO</td>
           <td>"Con nuestra aplicación web desarrollada en el SENA pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a baúles térmicos."</td>
           <td>Diagrama Canvas y módulos ADSO, baúl térmico inteligente, promesa delivery < 30 min garantizada.</td>
         </tr>
         <tr>
-          <td><strong>00:43 - 00:54</strong><br>(11 segundos)</td>
+          <td><strong>00:39.5 - 00:51.8</strong><br>(12.3 segundos)</td>
           <td><strong>Paso 5:</strong><br>Call to Action (CTA)</td>
           <td>"Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp oficial. Bella Italia Popayán: Pasión italiana con corazón caucano! Haz tu pedido ya!"</td>
           <td>Sede Calle 4ta, botón CTA dorado gigante, WhatsApp 312 890 4521, datos de Karen Campo ADSO 3186681.</td>
@@ -512,7 +512,7 @@ html_content = f"""<!DOCTYPE html>
         <h4>Figura 1: Despliegue de Servicios Docker y Archivos del Pitch</h4>
         <img class="fig-img" src="{cap1_path}" alt="Despliegue Docker">
         <div class="fig-caption">
-          <strong>Figura 1.</strong> Terminal Konsole en KDE Plasma evidenciando el estado 'Up' del contenedor <code>sena-pitch-idea-negocio-web</code> en el puerto 8103, el archivo de video MP4 vertical (54s) y el árbol de directorios de la evidencia.
+          <strong>Figura 1.</strong> Terminal Konsole en KDE Plasma evidenciando el estado 'Up' del contenedor <code>sena-pitch-idea-negocio-web</code> en el puerto 8103, el archivo de video MP4 vertical (52s) y el árbol de directorios de la evidencia.
         </div>
       </div>
 
@@ -564,7 +564,7 @@ html_content = f"""<!DOCTYPE html>
         <h4>Figura 5: Guion Técnico y Storyboard Segundo a Segundo</h4>
         <img class="fig-img" src="{cap5_path}" alt="Guion Técnico">
         <div class="fig-caption">
-          <strong>Figura 5.</strong> Pestaña interactiva del portal con la matriz detallada del guion audiovisual segundo a segundo para el formato TikTok de 54 segundos, sincronizando locución, gráficos y propósitos comunicativos.
+          <strong>Figura 5.</strong> Pestaña interactiva del portal con la matriz detallada del guion audiovisual segundo a segundo para el formato TikTok de 52 segundos, sincronizando locución, gráficos y propósitos comunicativos.
         </div>
       </div>
 
@@ -587,7 +587,7 @@ html_content = f"""<!DOCTYPE html>
 
     <h2 class="section-title">7. CONCLUSIONES</h2>
     <p>
-      1. El formato audiovisual vertical tipo <strong>TikTok / Reels</strong> demuestra ser un instrumento pedagógico y comercial idóneo para sintetizar en <strong>54 segundos</strong> la propuesta de valor de un emprendimiento, cumpliendo rigurosamente el límite reglamentario de 59 segundos fijado por la Guía 10 del SENA.
+      1. El formato audiovisual vertical tipo <strong>TikTok / Reels</strong> demuestra ser un instrumento pedagógico y comercial idóneo para sintetizar en <strong>51.82 segundos</strong> la propuesta de valor de un emprendimiento, cumpliendo rigurosamente el límite reglamentario de 59 segundos fijado por la Guía 10 del SENA.
     </p>
     <p>
       2. La convergencia entre arte gastronómico tradicional (masa madre 48h, horno 450°C) e innovación tecnológica (plataforma web reactiva ADSO y logística térmica a >70°C) posiciona a <strong>Pizzería Gourmet Bella Italia Popayán</strong> como un modelo FoodTech de alta diferenciación y competitividad en el mercado de la Ciudad Blanca.

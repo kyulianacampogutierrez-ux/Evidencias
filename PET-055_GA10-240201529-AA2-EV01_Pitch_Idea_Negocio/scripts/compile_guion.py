@@ -2,7 +2,7 @@
 # ==============================================================================
 # COMPILADOR DE GUION TÉCNICO FORMAL SEPARADO (PDF / DOCX)
 # Evidencia: GA10-240201529-AA2-EV01 - Pitch idea de negocio
-# Documento: Guion Técnico y Storyboard TikTok (54s)
+# Documento: Guion Técnico y Storyboard TikTok (52s)
 # Aprendiz: Karen Yuliana Campo | Ficha: 3186681 | CTPI Popayán
 # ==============================================================================
 
@@ -243,7 +243,7 @@ html_content = """<!DOCTYPE html>
 
       <div class="cover-center">
         <span class="badge-pill">DOCUMENTO TÉCNICO SEPARADO • GUÍA DE APRENDIZAJE 10</span>
-        <h1 class="cover-title">GUION TÉCNICO Y STORYBOARD<br>ELEVATOR PITCH TIKTOK (54s)</h1>
+        <h1 class="cover-title">GUION TÉCNICO Y STORYBOARD<br>ELEVATOR PITCH TIKTOK (52s)</h1>
         <p class="cover-desc">
           Partitura audiovisual, guion literario y desglose técnico segundo a segundo para el Elevator Pitch vertical (9:16) del emprendimiento <strong>Pizzería Gourmet Bella Italia Popayán</strong>, cumpliendo con la regla de brevedad ($\le 59$ segundos), diseño dinámico de alto impacto y cero saturación de texto.
         </p>
@@ -271,7 +271,7 @@ html_content = """<!DOCTYPE html>
           <div class="meta-value">Karen Yuliana Campo</div>
 
           <div class="meta-label">Duración:</div>
-          <div class="meta-value">54.00 segundos exactos (Límite: 59 segundos)</div>
+          <div class="meta-value">51.82 segundos exactos (Límite: 59 segundos)</div>
 
           <div class="meta-label">Formato:</div>
           <div class="meta-value">Vertical 9:16 (1080x1920 Full HD, H.264 / AAC 192k)</div>
@@ -311,15 +311,15 @@ html_content = """<!DOCTYPE html>
         </tr>
         <tr>
           <td><strong>Resolución</strong></td>
-          <td>1080 x 1920 píxeles (Full HD Vertical) a 30 FPS (1620 fotogramas generados)</td>
+          <td>1080 x 1920 píxeles (Full HD Vertical) a 30 FPS (1554 fotogramas generados)</td>
         </tr>
         <tr>
           <td><strong>Duración Exacta</strong></td>
-          <td><strong>54.00 segundos</strong> (Cumple estrictamente la regla de $\le 59$ segundos de Guía 10)</td>
+          <td><strong>51.82 segundos</strong> (Cumple estrictamente la regla de $\le 59$ segundos de Guía 10)</td>
         </tr>
         <tr>
           <td><strong>Códecs de Salida</strong></td>
-          <td>Video: H.264 / AVC (VBR 1 pass 10 Mbps) | Audio: AAC Estéreo (44.1 kHz, 192 kbps, -14 LUFS)</td>
+          <td>Video: H.264 / AVC (VBR 1 pass 10 Mbps) | Audio: AAC Estéreo (48.0 kHz, 320 kbps, -14 LUFS)</td>
         </tr>
         <tr>
           <td><strong>Motor de Ensamble NLE</strong></td>
@@ -327,7 +327,7 @@ html_content = """<!DOCTYPE html>
         </tr>
         <tr>
           <td><strong>Diseño Sonoro</strong></td>
-          <td>Locución profesional en español + beat electrónico a 120 BPM con ducking automático</td>
+          <td>Locución oficial en vivo grabada por Karen Yuliana Campo + banda sonora lo-fi rítmica suave (120 BPM) con <em>audio ducking</em> dinámico (-18 dB durante voz para máxima inteligibilidad)</td>
         </tr>
         <tr>
           <td><strong>Enfoque Visual</strong></td>
@@ -342,27 +342,27 @@ html_content = """<!DOCTYPE html>
     </p>
 
     <blockquote>
-      <strong>[00:00 - 00:08] Escena 1 (Problema / Hook):</strong><br>
+      <strong>[00:00 - 00:07.5] Escena 1 (Problema / Hook):</strong><br>
       "¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?"
     </blockquote>
 
     <blockquote>
-      <strong>[00:08 - 00:20] Escena 2 (Solución Gourmet):</strong><br>
+      <strong>[00:07.5 - 00:18.5] Escena 2 (Solución Gourmet):</strong><br>
       "¡Llegó Bella Italia Popayán! La auténtica pizza artesanal con masa madre de 48 horas de fermentación y horneada a 450 grados en solo 90 segundos."
     </blockquote>
 
     <blockquote>
-      <strong>[00:20 - 00:32] Escena 3 (Tradición + Corazón Caucano):</strong><br>
+      <strong>[00:18.5 - 00:29.0] Escena 3 (Tradición + Corazón Caucano):</strong><br>
       "Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera."
     </blockquote>
 
     <blockquote>
-      <strong>[00:32 - 00:43] Escena 4 (Innovación Tecnológica ADSO):</strong><br>
+      <strong>[00:29.0 - 00:39.5] Escena 4 (Innovación Tecnológica ADSO):</strong><br>
       "Con nuestra aplicación web desarrollada en el SENA pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a baúles térmicos."
     </blockquote>
 
     <blockquote>
-      <strong>[00:43 - 00:54] Escena 5 (Llamado a la Acción / CTA):</strong><br>
+      <strong>[00:39.5 - 00:51.8] Escena 5 (Llamado a la Acción / CTA):</strong><br>
       "Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp oficial. ¡Bella Italia Popayán: Pasión italiana con corazón caucano! ¡Haz tu pedido ya!"
     </blockquote>
   </div>
@@ -376,7 +376,7 @@ html_content = """<!DOCTYPE html>
 
     <h2 class="section-title">3. GUION TÉCNICO DETALLADO POR ESCENAS</h2>
 
-    <h3 class="sub-title">ESCENA 1: EL PROBLEMA REAL EN POPAYÁN (00:00 - 00:08 • 8 SEGUNDOS)</h3>
+    <h3 class="sub-title">ESCENA 1: EL PROBLEMA REAL EN POPAYÁN (00:00 - 00:07.5 • 7.5 SEGUNDOS)</h3>
     <table>
       <tr>
         <th style="width: 25%;">Parámetro</th>
@@ -412,7 +412,7 @@ html_content = """<!DOCTYPE html>
       </tr>
     </table>
 
-    <h3 class="sub-title">ESCENA 2: LA SOLUCIÓN GOURMET BELLA ITALIA (00:08 - 00:20 • 12 SEGUNDOS)</h3>
+    <h3 class="sub-title">ESCENA 2: LA SOLUCIÓN GOURMET BELLA ITALIA (00:07.5 - 00:18.5 • 11 SEGUNDOS)</h3>
     <table>
       <tr>
         <th style="width: 25%;">Parámetro</th>
@@ -460,7 +460,7 @@ html_content = """<!DOCTYPE html>
       <div class="header-meta">GA10-240201529-AA2-EV01 • Ficha 3186681</div>
     </div>
 
-    <h3 class="sub-title">ESCENA 3: TRADICIÓN ITALIANA + CORAZÓN CAUCANO (00:20 - 00:32 • 12 SEGUNDOS)</h3>
+    <h3 class="sub-title">ESCENA 3: TRADICIÓN ITALIANA + CORAZÓN CAUCANO (00:18.5 - 00:29.0 • 10.5 SEGUNDOS)</h3>
     <table>
       <tr>
         <th style="width: 25%;">Parámetro</th>
@@ -492,7 +492,7 @@ html_content = """<!DOCTYPE html>
       </tr>
     </table>
 
-    <h3 class="sub-title">ESCENA 4: INNOVACIÓN TECNOLÓGICA SENA ADSO (00:32 - 00:43 • 11 SEGUNDOS)</h3>
+    <h3 class="sub-title">ESCENA 4: INNOVACIÓN TECNOLÓGICA SENA ADSO (00:29.0 - 00:39.5 • 10.5 SEGUNDOS)</h3>
     <table>
       <tr>
         <th style="width: 25%;">Parámetro</th>
@@ -524,7 +524,7 @@ html_content = """<!DOCTYPE html>
       </tr>
     </table>
 
-    <h3 class="sub-title">ESCENA 5: CALL TO ACTION (CTA) Y CIERRE (00:43 - 00:54 • 11 SEGUNDOS)</h3>
+    <h3 class="sub-title">ESCENA 5: CALL TO ACTION (CTA) Y CIERRE (00:39.5 - 00:51.8 • 12.3 SEGUNDOS)</h3>
     <table>
       <tr>
         <th style="width: 25%;">Parámetro</th>

@@ -25,8 +25,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1080, 1920
 FPS = 30
-TOTAL_DURATION = 54.0
-TOTAL_FRAMES = int(FPS * TOTAL_DURATION) # 1620 frames
+TOTAL_DURATION = 51.82
+TOTAL_FRAMES = int(FPS * TOTAL_DURATION) # 1554 frames
 SAMPLE_RATE = 44100
 TOTAL_AUDIO_SAMPLES = int(SAMPLE_RATE * TOTAL_DURATION)
 
@@ -37,6 +37,8 @@ TMP_DIR = "/tmp/pitch_build"
 os.makedirs(VIDEO_DIR, exist_ok=True)
 os.makedirs(TMP_DIR, exist_ok=True)
 
+USER_AUDIO_MP4 = "/home/danilo/Escritorio/Karen/SENA/CDE/base_conocimiento/audio_tiktok.mp4"
+USER_VOICE_WAV = os.path.join(TMP_DIR, "user_voice_44k.wav")
 FINAL_MP4 = os.path.join(VIDEO_DIR, "GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.mp4")
 MASTER_AUDIO_WAV = os.path.join(TMP_DIR, "master_audio.wav")
 VISUAL_STREAM_MP4 = os.path.join(TMP_DIR, "visual_stream.mp4")
@@ -68,172 +70,180 @@ def draw_rounded_card(draw, box, radius, fill, outline=None, width=1):
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
 
-# 1. Synthesize Audio
+# 1. Synthesize & Mix Audio with User's Voice Track
 def build_audio():
-    if os.path.exists(MASTER_AUDIO_WAV) and os.path.getsize(MASTER_AUDIO_WAV) > 1000000:
-        print(f"--- [PITCH] 1. Usando pista de audio existente en {MASTER_AUDIO_WAV} ---")
-        return
-    print("--- [PITCH] 1. Sintetizando locución en español y banda sonora musical... ---")
-    clips_def = [
-        (0.6, "sc1", "Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?", 155),
-        (8.2, "sc2", "Llegó Bella Italia Popayán! La auténtica pizza artesanal con masa madre de 48 horas de fermentación y horneada a 450 grados en solo 90 segundos.", 155),
-        (20.3, "sc3", "Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera.", 155),
-        (32.3, "sc4", "Con nuestra aplicación web desarrollada en el SENA pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a baúles térmicos.", 155),
-        (43.3, "sc5", "Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp oficial. Bella Italia Popayán: Pasión italiana con corazón caucano! Haz tu pedido ya!", 155)
-    ]
+    print("--- [PITCH] 1. Procesando locución oficial de Karen Campo y mezclando banda sonora... ---")
+    if not os.path.exists(USER_VOICE_WAV) or os.path.getsize(USER_VOICE_WAV) < 100000:
+        print("Extrayendo pista de voz de Karen Campo desde audio_tiktok.mp4...")
+        cmd_extract = [
+            "docker", "run", "--rm",
+            "-v", "/home/danilo/Escritorio/Karen/SENA/CDE/base_conocimiento:/data",
+            "-v", f"{TMP_DIR}:/tmp_dir",
+            "sena-ffmpeg:alpine",
+            "-y", "-i", "/data/audio_tiktok.mp4",
+            "-ar", "44100", "-ac", "2",
+            "/tmp_dir/user_voice_44k.wav"
+        ]
+        subprocess.run(cmd_extract, check=True)
 
-    voice_data = []
-    speech_mask = [0.0] * TOTAL_AUDIO_SAMPLES
+    with wave.open(USER_VOICE_WAV, 'rb') as w:
+        n_fr = w.getnframes()
+        sr = w.getframerate()
+        ch = w.getnchannels()
+        raw = w.readframes(n_fr)
+        data = struct.unpack(f"<{n_fr * ch}h", raw)
 
-    for start_time, cid, text, speed in clips_def:
-        wpath = os.path.join(TMP_DIR, f"{cid}.wav")
-        subprocess.run(["espeak-ng", "-v", "es", "-s", str(speed), "-p", "52", "-w", wpath, text], check=True)
-        with wave.open(wpath, 'rb') as w:
-            n_ch = w.getnchannels()
-            n_fr = w.getnframes()
-            raw = w.readframes(n_fr)
-            samples = []
-            fmt = f"<{n_fr * n_ch}h"
-            raw_shorts = struct.unpack(fmt, raw)
-            for idx in range(0, len(raw_shorts), n_ch):
-                samples.append(raw_shorts[idx] / 32768.0)
-        
-        start_sample = int(start_time * SAMPLE_RATE)
-        voice_data.append((start_sample, samples))
-        for si in range(len(samples)):
-            idx = start_sample + si
-            if idx < TOTAL_AUDIO_SAMPLES:
-                speech_mask[idx] = 1.0
+    voice_samples = [data[i] / 32768.0 for i in range(0, len(data), ch)]
+    total_samples = len(voice_samples)
 
-    smooth_mask = [0.0] * TOTAL_AUDIO_SAMPLES
+    # Peak normalize Karen's voice to 0.88 for crisp headroom & high intelligibility
+    max_v = max(abs(x) for x in voice_samples)
+    gain_v = 0.88 / max(max_v, 0.001)
+    norm_voice = [x * gain_v for x in voice_samples]
+
+    # Voice activity detection (50ms moving RMS window)
+    win_sz = int(sr * 0.05)
+    speech_mask = [0.0] * total_samples
+    win_energy = sum(norm_voice[k] * norm_voice[k] for k in range(min(win_sz, total_samples)))
+    for i in range(total_samples):
+        if i >= win_sz:
+            win_energy += norm_voice[i]*norm_voice[i] - norm_voice[i - win_sz]*norm_voice[i - win_sz]
+        rms = math.sqrt(max(0.0, win_energy / win_sz))
+        if rms > 0.025:
+            speech_mask[i] = 1.0
+
+    # Smooth ducking envelope: fast attack (20ms), gentle release (350ms)
+    smooth_duck = [0.0] * total_samples
     curr = 0.0
-    for i in range(TOTAL_AUDIO_SAMPLES):
-        target = speech_mask[i]
-        if target > curr:
-            curr = min(1.0, curr + 1.0 / (0.05 * SAMPLE_RATE))
+    alpha_att = 1.0 / (0.02 * sr)
+    alpha_rel = 1.0 / (0.35 * sr)
+    for i in range(total_samples):
+        tgt = speech_mask[i]
+        if tgt > curr:
+            curr = min(1.0, curr + alpha_att)
         else:
-            curr = max(0.0, curr - 1.0 / (0.2 * SAMPLE_RATE))
-        smooth_mask[i] = curr
+            curr = max(0.0, curr - alpha_rel)
+        smooth_duck[i] = curr
 
+    # Subtle Italian Gourmet Lo-Fi / Chillout Progression at 120 BPM
+    # Am -> F -> C -> G
     chords = [
-        ([110.0, 130.81, 164.81, 220.0], 55.0), # Am
-        ([87.31, 110.0, 130.81, 174.61], 43.65), # F
-        ([130.81, 164.81, 196.0, 261.63], 65.41), # C
-        ([98.0, 123.47, 146.83, 196.0], 49.0) # G
+        ([110.0, 130.81, 164.81, 220.0], 55.0),    # Am
+        ([87.31, 110.0, 130.81, 174.61], 43.65),   # F
+        ([130.81, 164.81, 196.0, 261.63], 65.41),  # C
+        ([98.0, 123.47, 146.83, 196.0], 49.0)      # G
     ]
-
-    master_l = [0.0] * TOTAL_AUDIO_SAMPLES
-    master_r = [0.0] * TOTAL_AUDIO_SAMPLES
 
     bpm = 120.0
     beat_len = 60.0 / bpm
     bar_len = beat_len * 4
 
-    for i in range(TOTAL_AUDIO_SAMPLES):
-        t = i / SAMPLE_RATE
+    master_l = [0.0] * total_samples
+    master_r = [0.0] * total_samples
+
+    for i in range(total_samples):
+        t = i / sr
         bar_num = int(t / bar_len)
         chord_notes, bass_freq = chords[bar_num % 4]
-        
         pos_in_bar = (t % bar_len) / bar_len
         beat_idx = int(pos_in_bar * 4)
-        
+
         kick = 0.0
         if beat_idx in [0, 2]:
-            dt_kick = t % beat_len
-            if dt_kick < 0.15:
-                kick_freq = 140.0 * math.exp(-35.0 * dt_kick) + 45.0
-                kick = math.sin(2 * math.pi * kick_freq * dt_kick) * math.exp(-18.0 * dt_kick) * 0.45
-                
+            dt_k = t % beat_len
+            if dt_k < 0.12:
+                k_freq = 120.0 * math.exp(-40.0 * dt_k) + 42.0
+                kick = math.sin(2 * math.pi * k_freq * dt_k) * math.exp(-22.0 * dt_k) * 0.35
+
         snare = 0.0
         if beat_idx in [1, 3]:
-            dt_snare = t % beat_len
-            if dt_snare < 0.2:
+            dt_s = t % beat_len
+            if dt_s < 0.15:
                 noise = ((math.sin(i * 12.9898) * 43758.5453) % 1.0 - 0.5) * 2.0
-                tone = math.sin(2 * math.pi * 180.0 * dt_snare) * 0.3
-                snare = (noise * 0.7 + tone * 0.3) * math.exp(-22.0 * dt_snare) * 0.3
-                
-        hh_dt = t % (beat_len / 2.0)
+                tone = math.sin(2 * math.pi * 175.0 * dt_s) * 0.25
+                snare = (noise * 0.6 + tone * 0.4) * math.exp(-25.0 * dt_s) * 0.25
+
+        dt_hh = t % (beat_len / 2.0)
         hihat = 0.0
-        if hh_dt < 0.05:
+        if dt_hh < 0.04:
             noise = ((math.sin(i * 37.1234) * 21953.1) % 1.0 - 0.5) * 2.0
-            hihat = noise * math.exp(-80.0 * hh_dt) * 0.12
-            
-        bass_dt = t % (beat_len / 2.0)
-        bass = math.sin(2 * math.pi * bass_freq * t) * math.exp(-4.0 * bass_dt) * 0.25
-        bass += math.sin(2 * math.pi * (bass_freq * 2) * t) * 0.08
-        
+            hihat = noise * math.exp(-90.0 * dt_hh) * 0.08
+
+        dt_b = t % (beat_len / 2.0)
+        bass = math.sin(2 * math.pi * bass_freq * t) * math.exp(-3.5 * dt_b) * 0.22
+        bass += math.sin(2 * math.pi * bass_freq * 2.0 * t) * 0.06
+
         chord_val = 0.0
         for note in chord_notes:
-            chord_val += math.sin(2 * math.pi * note * t) * 0.05
-        chord_val *= (0.7 + 0.3 * math.sin(2 * math.pi * 2.0 * t))
-        
+            chord_val += math.sin(2 * math.pi * note * t) * 0.04
+            chord_val += math.sin(2 * math.pi * (note * 2.0) * t) * 0.015
+        chord_val *= (0.75 + 0.25 * math.sin(2 * math.pi * 2.5 * t))
+
         arp_sub = int((t % beat_len) / (beat_len / 4.0))
         arp_note = chord_notes[arp_sub % len(chord_notes)] * 2.0
-        arp_dt = t % (beat_len / 4.0)
-        arp = math.sin(2 * math.pi * arp_note * t) * math.exp(-25.0 * arp_dt) * 0.08
-        
-        music_mix_l = (kick + snare * 0.9 + hihat * 0.7 + bass + chord_val * 0.9 + arp * 0.7) * 0.4
-        music_mix_r = (kick + snare * 0.9 + hihat * 1.1 + bass + chord_val * 1.1 + arp * 1.0) * 0.4
-        
-        duck = 1.0 - (smooth_mask[i] * 0.75)
-        fade = 1.0
-        if t > (TOTAL_DURATION - 2.0):
-            fade = max(0.0, (TOTAL_DURATION - t) / 2.0)
-            
-        master_l[i] = music_mix_l * duck * fade
-        master_r[i] = music_mix_r * duck * fade
+        dt_arp = t % (beat_len / 4.0)
+        arp = math.sin(2 * math.pi * arp_note * t) * math.exp(-28.0 * dt_arp) * 0.06
 
-    for start_sample, samples in voice_data:
-        for si, sval in enumerate(samples):
-            idx = start_sample + si
-            if idx < TOTAL_AUDIO_SAMPLES:
-                v = sval * 1.25
-                master_l[idx] += v
-                master_r[idx] += v
+        music_l = (kick + snare * 0.85 + hihat * 0.7 + bass + chord_val * 0.9 + arp * 0.6) * 0.28
+        music_r = (kick + snare * 0.85 + hihat * 1.1 + bass + chord_val * 1.1 + arp * 0.9) * 0.28
+
+        # Dynamic ducking (music drops by 80% when Karen speaks, leaving her voice 100% prominent)
+        duck_factor = 1.0 - (smooth_duck[i] * 0.80)
+        fade_in = min(1.0, t / 0.3)
+        fade_out = 1.0
+        if t > (TOTAL_DURATION - 2.0):
+            fade_out = max(0.0, (TOTAL_DURATION - t) / 2.0)
+
+        bgm_l = music_l * duck_factor * fade_in * fade_out
+        bgm_r = music_r * duck_factor * fade_in * fade_out
+
+        v = norm_voice[i]
+        master_l[i] = v + bgm_l
+        master_r[i] = v + bgm_r
 
     with wave.open(MASTER_AUDIO_WAV, 'w') as w:
         w.setnchannels(2)
         w.setsampwidth(2)
-        w.setframerate(SAMPLE_RATE)
+        w.setframerate(sr)
         out_bytes = bytearray()
-        for i in range(TOTAL_AUDIO_SAMPLES):
-            sl = int(max(-32767, min(32767, master_l[i] * 28000)))
-            sr = int(max(-32767, min(32767, master_r[i] * 28000)))
-            out_bytes.extend(struct.pack('<hh', sl, sr))
+        for i in range(total_samples):
+            sl = int(max(-32767, min(32767, master_l[i] * 32000)))
+            sr_val = int(max(-32767, min(32767, master_r[i] * 32000)))
+            out_bytes.extend(struct.pack('<hh', sl, sr_val))
         w.writeframes(out_bytes)
 
     print(f"Banda sonora master guardada: {MASTER_AUDIO_WAV}")
 
 
-# 2. Dynamic Caption Resolver (caption-animation skill: 2-4 words per beat)
+# 2. Dynamic Caption Resolver (matched precisely to Karen's spoken cadence)
 def get_caption(t):
-    if t < 2.8:
+    if t < 2.5:
         return ("¿Cansado de pedir ", "PIZZA EN POPAYÁN", "?")
-    elif t < 5.4:
+    elif t < 5.0:
         return ("...y que llegue ", "FRÍA O GRASOSA", "?")
-    elif t < 8.0:
+    elif t < 7.5:
         return ("¿O con una ", "MASA SÚPER PESADA", "?")
-    elif t < 11.5:
+    elif t < 11.0:
         return ("¡Llegó ", "BELLA ITALIA POPAYÁN", "!")
-    elif t < 15.5:
+    elif t < 15.0:
         return ("Masa madre con ", "48H DE FERMENTACIÓN", "")
-    elif t < 20.0:
+    elif t < 18.5:
         return ("¡Horneada a 450°C en ", "SOLO 90 SEGUNDOS", "!")
-    elif t < 24.0:
+    elif t < 22.0:
         return ("Quesos frescos de ", "SILVIA, CAUCA", "")
-    elif t < 28.0:
+    elif t < 25.5:
         return ("Hortalizas orgánicas ", "DE NUESTRA TIERRA", "")
-    elif t < 32.0:
+    elif t < 29.0:
         return ("¡Textura crocante y ", "DIGESTIÓN LIGERA", "!")
-    elif t < 36.0:
+    elif t < 32.5:
         return ("Web App desarrollada en ", "SENA ADSO", "")
-    elif t < 39.5:
+    elif t < 36.0:
         return ("Pide en segundos con ", "TRACKING EN VIVO", "")
-    elif t < 43.0:
+    elif t < 39.5:
         return ("Llega a más de 70°C en ", "< 30 MINUTOS", "")
-    elif t < 46.8:
+    elif t < 43.5:
         return ("Visítanos en el ", "CENTRO HISTÓRICO", "")
-    elif t < 50.4:
+    elif t < 47.5:
         return ("¡Pide ahora al ", "WHATSAPP OFICIAL", "!")
     else:
         return ("¡Pasión italiana con ", "CORAZÓN CAUCANO", "!")
@@ -276,7 +286,7 @@ def render_frame(frame_idx):
     draw_rounded_card(draw, [100, 24, 520, 74], 16, (22, 27, 34), (48, 54, 61), 1)
     draw.text((125, 36), "SENA | ADSO - FICHA 3186681", font=f_hud, fill=(226, 232, 240))
 
-    time_str = f"{int(t):02d}:{int((t % 1)*10):01d} / 54s"
+    time_str = f"{int(t):02d}:{int((t % 1)*10):01d} / 52s"
     draw_rounded_card(draw, [760, 24, 980, 74], 16, (22, 27, 34), (245, 158, 11), 1)
     draw.ellipse([780, 43, 792, 55], fill=(239, 68, 68))
     draw.text((805, 36), time_str, font=f_hud, fill=(248, 250, 252))
@@ -284,7 +294,7 @@ def render_frame(frame_idx):
     BOX_L = 100
     BOX_R = 980
 
-    if t < 8.0:
+    if t < 7.5:
         # SCENE 1: EL PROBLEMA
         draw_rounded_card(draw, [BOX_L, 125, BOX_L + 340, 181], 16, (38, 20, 20), (220, 38, 38), 1)
         draw.text((BOX_L + 25, 139), "PASO 1 • EL PROBLEMA", font=f_tag, fill=(254, 202, 202))
@@ -311,7 +321,7 @@ def render_frame(frame_idx):
         draw.text((BOX_L + 35, 930), "72% de clientes en Popayán", font=f_subhead, fill=(248, 113, 113))
         draw.text((BOX_L + 35, 985), "insatisfechos con los tiempos y calidad de las pizzerías actuales.", font=f_card_sub, fill=(226, 232, 240))
 
-    elif t < 20.0:
+    elif t < 18.5:
         # SCENE 2: LA SOLUCIÓN
         draw_rounded_card(draw, [BOX_L, 125, BOX_L + 370, 181], 16, (38, 30, 15), (245, 158, 11), 1)
         draw.text((BOX_L + 25, 139), "PASO 2 • SOLUCIÓN GOURMET", font=f_tag, fill=(253, 224, 71))
@@ -339,7 +349,7 @@ def render_frame(frame_idx):
             draw.text((xc + (chip_w - cw)/2, 922), ch, font=f_chip, fill=(253, 224, 71))
             xc += chip_w + 15
 
-    elif t < 32.0:
+    elif t < 29.0:
         # SCENE 3: CORAZÓN CAUCANO
         draw_rounded_card(draw, [BOX_L, 125, BOX_L + 370, 181], 16, (15, 35, 25), (16, 185, 129), 1)
         draw.text((BOX_L + 25, 139), "PASO 3 • IDENTIDAD CAUCANA", font=f_tag, fill=(167, 243, 208))
@@ -367,7 +377,7 @@ def render_frame(frame_idx):
         bw = draw.textlength(banner_txt, font=f_chip_sm)
         draw.text((BOX_L + (BOX_R - BOX_L - bw)/2, 928), banner_txt, font=f_chip_sm, fill=(167, 243, 208))
 
-    elif t < 43.0:
+    elif t < 39.5:
         # SCENE 4: TECNOLOGÍA ADSO
         draw_rounded_card(draw, [BOX_L, 125, BOX_L + 360, 181], 16, (20, 30, 48), (59, 130, 246), 1)
         draw.text((BOX_L + 25, 139), "PASO 4 • INNOVACIÓN ADSO", font=f_tag, fill=(191, 219, 254))

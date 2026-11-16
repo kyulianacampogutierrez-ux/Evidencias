@@ -8,7 +8,7 @@
     "regional": "Regional Cauca - Centro de Teleinformática y Producción Industrial (CTPI)",
     "instructor": "Instructor de Emprendimiento SENA",
     "fecha": "Noviembre 2026",
-    "duracion_video_segundos": 54,
+    "duracion_video_segundos": 51.82,
     "limite_maximo_guia_segundos": 59,
     "formato_video": "MP4 (H.264 / AAC, 1080x1920 Vertical 9:16)"
   },
@@ -36,44 +36,44 @@
       "paso": 1,
       "nombre": "Identificación del Problema",
       "tiempo_inicio": "00:00",
-      "tiempo_fin": "00:08",
-      "duracion": "8 segundos",
+      "tiempo_fin": "00:07.5",
+      "duracion": "7.5 segundos",
       "mensaje_clave": "¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?",
       "dolor_mercado": "Pizzas comerciales con harinas refinadas sin fermentar, demoras excesivas de más de 60 minutos y pérdida térmica en el transporte."
     },
     {
       "paso": 2,
       "nombre": "Propuesta de Solución Gourmet",
-      "tiempo_inicio": "00:08",
-      "tiempo_fin": "00:20",
-      "duracion": "12 segundos",
+      "tiempo_inicio": "00:07.5",
+      "tiempo_fin": "00:18.5",
+      "duracion": "11.0 segundos",
       "mensaje_clave": "¡Llegó Bella Italia Popayán! La auténtica pizza artesanal napolitana con masa madre de 48 horas de fermentación y horneada a 450°C en 90 segundos.",
       "solucion_tecnica": "Masa viva con 48h de maduración biológica, digestión liviana y cocción instantánea en horno de leña refractario."
     },
     {
       "paso": 3,
       "nombre": "Tradición Italiana + Corazón Caucano",
-      "tiempo_inicio": "00:20",
-      "tiempo_fin": "00:32",
-      "duracion": "12 segundos",
+      "tiempo_inicio": "00:18.5",
+      "tiempo_fin": "00:29.0",
+      "duracion": "10.5 segundos",
       "mensaje_clave": "Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera.",
       "impacto_social": "Comercio justo con pequeños productores de Silvia, Timbío y Cajibío, reduciendo la huella de carbono y garantizando frescura extrema."
     },
     {
       "paso": 4,
       "nombre": "Innovación Tecnológica SENA ADSO",
-      "tiempo_inicio": "00:32",
-      "tiempo_fin": "00:43",
-      "duracion": "11 segundos",
+      "tiempo_inicio": "00:29.0",
+      "tiempo_fin": "00:39.5",
+      "duracion": "10.5 segundos",
       "mensaje_clave": "Con nuestra aplicación web desarrollada en ADSO pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a nuestros baúles térmicos.",
       "innovacion_adso": "Plataforma web reactiva, trazabilidad de cocina en tiempo real y logística térmica especializada para Popayán."
     },
     {
       "paso": 5,
       "nombre": "Llamado a la Acción (Call to Action)",
-      "tiempo_inicio": "00:43",
-      "tiempo_fin": "00:54",
-      "duracion": "11 segundos",
+      "tiempo_inicio": "00:39.5",
+      "tiempo_fin": "00:51.8",
+      "duracion": "12.3 segundos",
       "mensaje_clave": "Visítanos en la Calle Cuarta del Centro Histórico o pide al WhatsApp oficial. ¡Bella Italia Popayán: Pasión italiana con corazón caucano! ¡Haz tu pedido ya!",
       "canales_contacto": "Sede física Centro Histórico Popayán, línea WhatsApp 312 890 4521 y plataforma web oficial."
     }

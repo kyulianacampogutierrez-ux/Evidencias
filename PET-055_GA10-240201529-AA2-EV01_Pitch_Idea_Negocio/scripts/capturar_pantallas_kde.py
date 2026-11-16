@@ -111,7 +111,7 @@ def main():
     echo '========================================================================'
     docker compose ps
     echo ''
-    echo '--- VIDEO ELEVATOR PITCH GENERADO (54s / MP4 1080x1920) ---'
+    echo '--- VIDEO ELEVATOR PITCH GENERADO (52s / MP4 1080x1920) ---'
     ls -lh ../video/GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.mp4
     echo ''
     echo '--- ESTRUCTURA DE ARCHIVOS DE LA EVIDENCIA ---'

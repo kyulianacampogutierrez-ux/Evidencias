@@ -1,4 +1,4 @@
-# GUION TÉCNICO Y STORYBOARD AUDIOVISUAL: ELEVATOR PITCH TIKTOK (54 SEGUNDOS)
+# GUION TÉCNICO Y STORYBOARD AUDIOVISUAL: ELEVATOR PITCH TIKTOK (52 SEGUNDOS)
 
 **Programa de Formación:** Tecnólogo en Análisis y Desarrollo de Software (ADSO)  
 **Ficha de Caracterización:** 3186681  
@@ -21,11 +21,11 @@
 | **Título de la Pieza** | Elevator Pitch Oficial: Pizzería Gourmet Bella Italia Popayán |
 | **Formato de Salida** | Video Vertical 9:16 (Optimizado para TikTok, Instagram Reels y Shorts) |
 | **Resolución** | 1080 x 1920 píxeles (Full HD Vertical) |
-| **Duración Exacta** | **54.00 segundos** (Restricción normativa Guía 10: $\le 59$ segundos) |
-| **Velocidad de Cuadros** | 30 fotogramas por segundo (FPS) — Total: 1620 frames |
+| **Duración Exacta** | **51.82 segundos** (Restricción normativa Guía 10: $\le 59$ segundos) |
+| **Velocidad de Cuadros** | 30 fotogramas por segundo (FPS) — Total: 1554 frames |
 | **Códec de Video** | H.264 / MPEG-4 AVC (`yuv420p`, perfil High, 4500 kbps) |
-| **Códec de Audio** | AAC Estéreo (44.1 kHz, 192 kbps) con masterización y compresión dinámica |
-| **Diseño Sonoro** | Locución profesional en español + pista musical electrónica rítmica (120 BPM) con *audio ducking* (-12 dB durante voz) |
+| **Códec de Audio** | AAC Estéreo (48.0 kHz, 320 kbps) con masterización y compresión dinámica |
+| **Diseño Sonoro** | Locución oficial grabada en vivo por Karen Yuliana Campo + pista musical lo-fi rítmica (120 BPM) con *audio ducking* dinámico (-18 dB durante voz) |
 | **Estilo Visual** | Minimalismo de alto impacto: tipografía gigante, frases cortas contundentes, badges con alto contraste, cero saturación de texto y animación cinética |
 
 ---
@@ -34,27 +34,27 @@
 
 > *(Música electrónica optimista entra a 120 BPM con ritmo marcado. Sonido de reloj acelerado).*  
 >  
-> **[00:00 - 00:08]**  
+> **[00:00 - 00:07.5]**  
 > **Locutora (Voz enérgica y empática):**  
 > *"¿Cansado de pedir pizza en Popayán y que llegue fría, grasosa o con una masa pesada que no te deja dormir?"*  
 >  
-> **[00:08 - 00:20]**  
+> **[00:07.5 - 00:18.5]**  
 > **Locutora (Tono entusiasta y revelador):**  
 > *"¡Llegó Bella Italia Popayán! La auténtica pizza artesanal con masa madre de 48 horas de fermentación y horneada a 450 grados en solo 90 segundos."*  
 >  
-> **[00:20 - 00:32]**  
+> **[00:18.5 - 00:29.0]**  
 > **Locutora (Tono cálido y de arraigo regional):**  
 > *"Unimos técnica italiana con insumos de nuestra tierra: quesos campesinos de Silvia y hortalizas orgánicas del Cauca para una textura crocante y digestión ligera."*  
 >  
-> **[00:32 - 00:43]**  
+> **[00:29.0 - 00:39.5]**  
 > **Locutora (Tono innovador y tecnológico):**  
 > *"Con nuestra aplicación web desarrollada en el SENA pides en segundos y recibes tu pizza a más de 70 grados en menos de 30 minutos gracias a baúles térmicos."*  
 >  
-> **[00:43 - 00:54]**  
+> **[00:39.5 - 00:51.8]**  
 > **Locutora (Llamado a la acción decidido y cercano):**  
 > *"Visítanos en el Centro Histórico de Popayán o pide a nuestro WhatsApp oficial. ¡Bella Italia Popayán: Pasión italiana con corazón caucano! ¡Haz tu pedido ya!"*  
 >  
-> *(La música remata enérgicamente con acorde final y fade out suave en el segundo 54).*
+> *(La música remata enérgicamente con acorde final y fade out suave en el segundo 52).*
 
 ---
 
@@ -64,16 +64,16 @@ El video se divide en 5 bloques estratégicos que responden punto por punto a lo
 
 ```mermaid
 flowchart TD
-    E1["ESCENA 1 (00:00 - 00:08)\nEl Problema en Popayán\nGancho Emocional"] --> E2["ESCENA 2 (00:08 - 00:20)\nSolución Bella Italia\nPropuesta de Valor"]
-    E2 --> E3["ESCENA 3 (00:20 - 00:32)\nTradición + Corazón Caucano\nAlianza Campesina"]
-    E3 --> E4["ESCENA 4 (00:32 - 00:43)\nInnovación Tecnológica ADSO\nWeb App + Delivery Térmico"]
-    E4 --> E5["ESCENA 5 (00:43 - 00:54)\nCall to Action (CTA)\nCierre y Conversión"]
+    E1["ESCENA 1 (00:00 - 00:07.5)\nEl Problema en Popayán\nGancho Emocional"] --> E2["ESCENA 2 (00:07.5 - 00:18.5)\nSolución Bella Italia\nPropuesta de Valor"]
+    E2 --> E3["ESCENA 3 (00:18.5 - 00:29.0)\nTradición + Corazón Caucano\nAlianza Campesina"]
+    E3 --> E4["ESCENA 4 (00:29.0 - 00:39.5)\nInnovación Tecnológica ADSO\nWeb App + Delivery Térmico"]
+    E4 --> E5["ESCENA 5 (00:39.5 - 00:51.8)\nCall to Action (CTA)\nCierre y Conversión"]
 ```
 
 ---
 
 ### ESCENA 1: EL PROBLEMA REAL EN POPAYÁN (GANCHO)
-* **Tiempo:** 00:00 a 00:08 (Duración: 8.0 segundos | Frames: 0 a 240)
+* **Tiempo:** 00:00 a 00:07.5 (Duración: 7.5 segundos | Frames: 0 a 225)
 * **Paso Guía 10:** Paso 1 — Identificación del Problema de Mercado.
 * **Objetivo:** Atrapar la atención del usuario en los primeros 3 segundos (*Thumb-stopping hook*), generando identificación inmediata con la frustración gastronómica común en Popayán.
 
@@ -89,7 +89,7 @@ flowchart TD
 ---
 
 ### ESCENA 2: LA SOLUCIÓN GOURMET BELLA ITALIA
-* **Tiempo:** 00:08 a 00:20 (Duración: 12.0 segundos | Frames: 240 a 600)
+* **Tiempo:** 00:07.5 a 00:18.5 (Duración: 11.0 segundos | Frames: 225 a 555)
 * **Paso Guía 10:** Paso 2 — Formulación de la Solución Diferenciada.
 * **Objetivo:** Presentar el nombre comercial y el diferencial gastronómico insuperable (masa madre 48h y horneado en 90 segundos).
 
@@ -106,7 +106,7 @@ flowchart TD
 ---
 
 ### ESCENA 3: TRADICIÓN ITALIANA + CORAZÓN CAUCANO
-* **Tiempo:** 00:20 a 00:32 (Duración: 12.0 segundos | Frames: 600 a 960)
+* **Tiempo:** 00:18.5 a 00:29.0 (Duración: 10.5 segundos | Frames: 555 a 870)
 * **Paso Guía 10:** Paso 3 — Alianza Productiva y Sostenibilidad Regional.
 * **Objetivo:** Conectar el producto con la identidad local del Cauca, comercio justo y valor campesino.
 
@@ -122,7 +122,7 @@ flowchart TD
 ---
 
 ### ESCENA 4: INNOVACIÓN TECNOLÓGICA SENA ADSO
-* **Tiempo:** 00:32 a 00:43 (Duración: 11.0 segundos | Frames: 960 a 1290)
+* **Tiempo:** 00:29.0 a 00:39.5 (Duración: 10.5 segundos | Frames: 870 a 1185)
 * **Paso Guía 10:** Paso 4 — Ventaja Tecnológica y Plataforma Digital.
 * **Objetivo:** Demostrar cómo el perfil de desarrollo de software (ADSO) soluciona los problemas de entrega y frío mediante plataforma web y baúles térmicos.
 
@@ -139,7 +139,7 @@ flowchart TD
 ---
 
 ### ESCENA 5: LLAMADO A LA ACCIÓN (CALL TO ACTION)
-* **Tiempo:** 00:43 a 00:54 (Duración: 11.0 segundos | Frames: 1290 a 1620)
+* **Tiempo:** 00:39.5 a 00:51.8 (Duración: 12.3 segundos | Frames: 1185 a 1554)
 * **Paso Guía 10:** Paso 5 — Cierre Comercial, Contacto y Validación de Homonimia.
 * **Objetivo:** Movilizar a la conversión inmediata (pedido por WhatsApp o visita a la sede física) y presentar el respaldo formal del SENA y Cámara de Comercio.
 

@@ -13,5 +13,5 @@ ENLACES OFICIALES DEL PROYECTO:
 2. Portal Web Interactivo y Reproductor TikTok (Docker Puerto 8103):
    http://localhost:8103/
 
-3. Video Elevator Pitch TikTok (MP4 1080x1920, 54 segundos):
+3. Video Elevator Pitch TikTok (MP4 1080x1920, 52 segundos):
    https://github.com/kyulianacampogutierrez-ux/Evidencias/blob/main/PET-055_GA10-240201529-AA2-EV01_Pitch_Idea_Negocio/video/GA10-240201529-AA2-EV01_Pitch_Idea_Negocio.mp4
