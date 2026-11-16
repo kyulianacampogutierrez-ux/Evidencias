@@ -3,6 +3,12 @@
 # GENERADOR MAESTRO DE VIDEO EXPOSITIVO EN MEDIO AMBIENTE Y SST (FULL HD 1080P)
 # Evidencia: GA8-220601501-AA4-EV01 - Karen Yuliana Campo | Ficha: 3186681
 # SENA Centro de Teleinformática y Producción Industrial (CTPI Popayán)
+#
+# Incorpora:
+# - Audio oficial de Karen Yuliana Campo: audio_sst.mp4 (08:11.97 min / 491.97s)
+# - Filtrado y ecualización de voz para máxima inteligibilidad
+# - Banda sonora ambiental con ducking profundo (BGM -23 dB atenuado a -37 dB bajo voz)
+# - 12 Diapositivas Full HD sincronizadas con las 10 fotografías reales
 # ==============================================================================
 
 import os
@@ -12,15 +18,13 @@ import struct
 import math
 import subprocess
 import shutil
-import urllib.request
-import urllib.parse
-import re
 import json
+import re
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1920, 1080
 FPS = 30
-SAMPLE_RATE = 44100
+SAMPLE_RATE = 48000
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
@@ -31,6 +35,7 @@ DELIVERY_DIR = "/home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA8-220601501-
 DELIVERY_VIDEO_DIR = os.path.join(DELIVERY_DIR, "video")
 BRAIN_DIR = "/home/danilo/.gemini/antigravity/brain/abb27f79-dee2-489b-8c72-e5eac1b56603"
 BUILD_DIR = "/tmp/video_sst_build"
+USER_AUDIO_MP4 = "/home/danilo/Escritorio/Karen/SENA/CDE/base_conocimiento/audio_sst.mp4"
 
 os.makedirs(VIDEO_DIR, exist_ok=True)
 os.makedirs(SITIO_VIDEO_DIR, exist_ok=True)
@@ -60,6 +65,7 @@ BLOQUES = [
     {
         "id": 1,
         "fase": "FASE 1: PREPRODUCCIÓN • APERTURA",
+        "duracion": 40.0,
         "titulo": "Video Expositivo: Oportunidades de Mejora en Medio Ambiente y SST",
         "subtitulo": "Estudio de Casos en Desarrollo de Software ADSO y Sector Productivo de Popayán",
         "caption": "Apertura institucional • Karen Yuliana Campo • Ficha 3186681 • SENA CTPI Popayán",
@@ -79,12 +85,12 @@ BLOQUES = [
             ("Instrumento", "IE-GA8-220601501-AA4-EV01 (Rúbrica de evaluación)"),
             ("Enfoque Metodológico", "Ciclo PHVA (Planear, Hacer, Verificar, Actuar)"),
             ("Alcance", "10 Oportunidades Reales: 5 Ambientales + 5 SST")
-        ],
-        "locucion": "Cordial saludo. Mi nombre es Karen Yuliana Campo, aprendiz del programa Tecnólogo en Análisis y Desarrollo de Software con ficha 3186681 del SENA CTPI Popayán, Regional Cauca. En esta oportunidad presento la evidencia GA8-220601501-AA4-EV01, un video expositivo donde abordamos diez oportunidades concretas de mejora en gestión ambiental y en seguridad y salud en el trabajo, fundamentadas en el ciclo PHVA y en la normatividad legal vigente en Colombia."
+        ]
     },
     {
         "id": 2,
         "fase": "FASE 2: GESTIÓN AMBIENTAL • MEJORA 01",
+        "duracion": 41.0,
         "titulo": "Mejora 01: Separación de Residuos en la Fuente",
         "subtitulo": "Resolución 2184 de 2019 — Código Unificado de Colores",
         "caption": "Estaciones ecológicas de 3 contenedores: Blanco (Aprovechables), Verde (Orgánicos), Negro (No aprovechables)",
@@ -98,12 +104,12 @@ BLOQUES = [
             "Contenedor Negro: residuos no aprovechables, papel higiénico y servilletas usadas.",
             "Alianza con asociaciones de recicladores de oficio de Popayán para entrega directa."
         ],
-        "meta": "Aprovechamiento superior al 65% de residuos generados y reducción en relleno sanitario.",
-        "locucion": "Iniciamos con el bloque de Gestión Ambiental. Nuestra primera oportunidad de mejora es la separación estricta de residuos en la fuente mediante el código unificado de colores de la Resolución 2184 de 2019. Implementamos estaciones ecológicas de tres canecas: blanco para aprovechables secos, verde para orgánicos biodegradables y negro para no aprovechables, reduciendo la disposición final en rellenos sanitarios y fomentando la economía circular."
+        "meta": "Aprovechamiento superior al 65% de residuos generados y reducción en relleno sanitario."
     },
     {
         "id": 3,
         "fase": "FASE 2: GESTIÓN AMBIENTAL • MEJORA 02",
+        "duracion": 41.0,
         "titulo": "Mejora 02: Trampa de Grasas y Manejo de ACU",
         "subtitulo": "Resolución 316 de 2018 — Aceites de Cocina Usados",
         "caption": "Protección de redes hidrosanitarias: 1 litro de aceite contamina hasta 1.000 litros de agua potable",
@@ -117,12 +123,12 @@ BLOQUES = [
             "Recolección de aceites de cocina usados en bidones plásticos herméticos rotulados.",
             "Entrega certificada a empresas gestoras para transformación en biodiesel."
         ],
-        "meta": "100% de aceites usados entregados a gestor autorizado con cero vertimiento a alcantarillado.",
-        "locucion": "Nuestra segunda oportunidad ambiental corresponde al manejo de trampas de grasas y recolección certificada de Aceites de Cocina Usados, regulado por la Resolución 316 de 2018. Un solo litro de aceite vertido al sifón contamina hasta mil litros de agua potable. La mejora consiste en instalar trampas de grasas con mantenimiento periódico y almacenar los aceites en bidones para su entrega a gestores certificados que los convierten en biocombustibles."
+        "meta": "100% de aceites usados entregados a gestor autorizado con cero vertimiento a alcantarillado."
     },
     {
         "id": 4,
         "fase": "FASE 2: GESTIÓN AMBIENTAL • MEJORA 03",
+        "duracion": 41.0,
         "titulo": "Mejora 03: Eficiencia Energética y Sensores PIR",
         "subtitulo": "Leyes 1715 de 2014 & 2099 de 2021 — Transición Energética",
         "caption": "Reducción del consumo de kilovatios-hora mediante luminarias LED y automatización domótica",
@@ -136,12 +142,12 @@ BLOQUES = [
             "Directivas de ahorro energético en estaciones ADSO (suspensión tras 10 min de inactividad).",
             "Mantenimiento semestral de cableado y fuentes conmutadas para optimizar factor de potencia."
         ],
-        "meta": "Disminución del 25% en consumo mensual de electricidad y reducción de huella de carbono.",
-        "locucion": "La tercera oportunidad ambiental es la eficiencia energética mediante luminarias LED y automatización de consumo eléctrico, bajo las Leyes 1715 de 2014 y 2099 de 2021. Sustituimos lámparas convencionales por paneles LED de bajo consumo, integrando sensores de movimiento infrarrojos en zonas comunes y directivas de suspensión automática de pantallas en las estaciones de cómputo tras diez minutos de inactividad."
+        "meta": "Disminución del 25% en consumo mensual de electricidad y reducción de huella de carbono."
     },
     {
         "id": 5,
         "fase": "FASE 2: GESTIÓN AMBIENTAL • MEJORA 04",
+        "duracion": 41.0,
         "titulo": "Mejora 04: Gestión Integral de Residuos RAEE",
         "subtitulo": "Ley 1672 de 2013 — Residuos de Aparatos Eléctricos y Electrónicos",
         "caption": "Erradicación de descarte de hardware en basura común • Economía circular y recuperación de metales",
@@ -155,12 +161,12 @@ BLOQUES = [
             "Entrega de componentes descartados a programas posconsumo avalados por MinAmbiente.",
             "Neutralización de sustancias peligrosas como plomo, cadmio y retardantes de llama bromados."
         ],
-        "meta": "Cero kilogramos de componentes informáticos enviados a basura convencional.",
-        "locucion": "Como cuarta oportunidad ambiental en el entorno tecnológico, implementamos la gestión integral de Residuos de Aparatos Eléctricos y Electrónicos, enmarcada en la Ley 1672 de 2013. Erradicamos el descarte de tarjetas, periféricos y cables en la basura común, canalizándolos mediante programas posconsumo y gestores autorizados para la recuperación de componentes y la neutralización de sustancias químicas peligrosas."
+        "meta": "Cero kilogramos de componentes informáticos enviados a basura convencional."
     },
     {
         "id": 6,
         "fase": "FASE 2: GESTIÓN AMBIENTAL • MEJORA 05",
+        "duracion": 41.0,
         "titulo": "Mejora 05: Ahorro Eficiente de Agua con Aireadores",
         "subtitulo": "Ley 373 de 1997 — Uso Eficiente y Ahorro del Agua Potable",
         "caption": "Reducción de caudal de 12 a 4.5 L/min mediante inyección de microburbujas sin pérdida de confort",
@@ -174,12 +180,12 @@ BLOQUES = [
             "Instalación de válvulas de cierre temporizado en servicios sanitarios compartidos.",
             "Campaña visual de uso responsable del agua para colaboradores y visitantes."
         ],
-        "meta": "Ahorro de hasta un 40% en volumen mensual de agua potable consumida.",
-        "locucion": "Completando el bloque ambiental, la quinta oportunidad es el uso eficiente y ahorro del agua potable mediante tecnologías economizadoras, conforme a la Ley 373 de 1997. Instalamos aireadores en todas las griferías, lo que disminuye el caudal de doce a cuatro coma cinco litros por minuto mediante inyección de microburbujas de aire, complementado con auditorías para detección de fugas invisibles."
+        "meta": "Ahorro de hasta un 40% en volumen mensual de agua potable consumida."
     },
     {
         "id": 7,
         "fase": "FASE 2: SEGURIDAD Y SALUD • MEJORA 06",
+        "duracion": 41.0,
         "titulo": "Mejora 06: Ergonomía del Puesto de Trabajo ADSO",
         "subtitulo": "Guía GTC 45 & Decreto 1072 de 2015 — Prevención Biomecánica",
         "caption": "Alineación postural: ángulo de 90° en codos y rodillas, monitor a la altura horizontal de los ojos",
@@ -193,12 +199,12 @@ BLOQUES = [
             "Incorporación de reposapiés con inclinación ajustable para mejorar retorno venoso.",
             "Uso de almohadillas de gel para teclado y mouse para prevenir síndrome del túnel carpiano."
         ],
-        "meta": "100% de puestos evaluados con nivel de riesgo ergonómico aceptable según GTC 45.",
-        "locucion": "Pasamos al componente de Seguridad y Salud en el Trabajo. La sexta oportunidad es la adecuación ergonómica y antropométrica del puesto de cómputo para desarrolladores de software, bajo la Guía GTC 45 y Decreto 1072 de 2015. Al pasar jornadas prolongadas frente a pantallas, es vital ajustar monitores a la altura de los ojos, emplear sillas con soporte lumbar regulable y descansapiés que garanticen un ángulo de 90 grados en codos y rodillas."
+        "meta": "100% de puestos evaluados con nivel de riesgo ergonómico aceptable según GTC 45."
     },
     {
         "id": 8,
         "fase": "FASE 2: SEGURIDAD Y SALUD • MEJORA 07",
+        "duracion": 41.0,
         "titulo": "Mejora 07: Seguridad en Escaleras y Pisos Antideslizantes",
         "subtitulo": "Resolución 2400 de 1979 — Seguridad Locativa y Caídas",
         "caption": "Cintas de carborundo fotoluminiscente en peldaños y baldosas de alto coeficiente de fricción",
@@ -212,12 +218,12 @@ BLOQUES = [
             "Tratamiento rugoso y señalización con conos amarillos durante jornadas de aseo húmedo.",
             "Despeje total de obstáculos en vías de tránsito y salidas de emergencia."
         ],
-        "meta": "Cero incidentes o accidentes por caídas a mismo o diferente nivel en la vigencia anual.",
-        "locucion": "La séptima oportunidad en SST corresponde a la adecuación locativa de escaleras y superficies antideslizantes, bajo la Resolución 2400 de 1979. Tanto en escaleras de acceso como en cocinas y pasillos de tránsito frecuente, instalamos cintas antideslizantes fotoluminiscentes en las huellas de los peldaños, pasamanos dobles y pisos de alto coeficiente de fricción para prevenir caídas a nivel o desnivel."
+        "meta": "Cero incidentes o accidentes por caídas a mismo o diferente nivel en la vigencia anual."
     },
     {
         "id": 9,
         "fase": "FASE 2: SEGURIDAD Y SALUD • MEJORA 08",
+        "duracion": 41.0,
         "titulo": "Mejora 08: Extintores Especializados Clase K y CO2",
         "subtitulo": "Norma Técnica NTC 2885 / NFPA 10 — Protección Contra Incendios",
         "caption": "Agentes limpios para servidores informáticos y acetato de potasio para aceites en cocinas",
@@ -231,12 +237,12 @@ BLOQUES = [
             "Inspección mensual de manómetros, precintos de seguridad y señalización NTC 1461.",
             "Entrenamiento teórico-práctico a brigadistas en uso de extintores y evacuación."
         ],
-        "meta": "100% de extintores inspeccionados, vigentes y personal capacitado en control de conatos.",
-        "locucion": "Como octava oportunidad, abordamos la dotación técnica de extintores especializados Clase K y agentes limpios CO2/Solkaflam, según la Norma Técnica NTC 2885. En cocinas se requieren extintores Clase K que sofocan fuegos de grasas por saponificación. Simultáneamente, en salas de servidores disponemos de extintores de agente limpio que no conducen electricidad ni dejan residuos que dañen los circuitos."
+        "meta": "100% de extintores inspeccionados, vigentes y personal capacitado en control de conatos."
     },
     {
         "id": 10,
         "fase": "FASE 2: SEGURIDAD Y SALUD • MEJORA 09",
+        "duracion": 41.0,
         "titulo": "Mejora 09: Metodología 5S y Canalización RETIE",
         "subtitulo": "Reglamento RETIE & Metodología 5S — Orden y Seguridad Eléctrica",
         "caption": "Canaletas ranuradas ignífugas, organización de cableado estructurado y despeje perimetral",
@@ -250,12 +256,12 @@ BLOQUES = [
             "Aplicación de las 5S: Seiri (Clasificar), Seiton (Ordenar), Seiso (Limpiar), Seiketsu (Estandarizar) y Shitsuke (Disciplina).",
             "Auditorías mensuales de orden y aseo en puestos de cómputo y áreas productivas."
         ],
-        "meta": "Índice de cumplimiento 5S superior al 90% y cero eventos por riesgo eléctrico.",
-        "locucion": "La novena oportunidad combina la metodología japonesa de las 5S con la canalización segura de cableado eléctrico y de telecomunicaciones bajo el reglamento RETIE. El desorden de cables sueltos en el piso representa un doble peligro: caídas para el personal y riesgo de sobrecalentamiento eléctrico. Mediante canaletas ignífugas y una disciplina estricta de orden logramos un entorno de trabajo limpio y seguro."
+        "meta": "Índice de cumplimiento 5S superior al 90% y cero eventos por riesgo eléctrico."
     },
     {
         "id": 11,
         "fase": "FASE 2: SEGURIDAD Y SALUD • MEJORA 10",
+        "duracion": 41.0,
         "titulo": "Mejora 10: Programa de Pausas Activas e Higiene Postural",
         "subtitulo": "Ley 2191 de 2022 & Decreto 1072 de 2015 — Desconexión Laboral",
         "caption": "Dos descansos activos diarios (10:00 am y 3:30 pm) • Descanso visual 20-20-20 y estiramientos",
@@ -269,12 +275,12 @@ BLOQUES = [
             "Técnica 20-20-20: cada 20 minutos mirar a 20 pies (6 metros) de distancia durante 20 segundos.",
             "Software de notificación emergente para recordar la desconexión activa en puestos ADSO."
         ],
-        "meta": "Participación del 100% de aprendices y colaboradores con reducción medible del estrés laboral.",
-        "locucion": "Nuestra décima oportunidad de mejora en SST es el programa sistemático de pausas activas, higiene postural y desconexión laboral, conforme a la Ley 2191 de 2022. Establecemos dos descansos activos diarios obligatorios de diez minutos, a las diez de la mañana y a las tres y media de la tarde, con estiramientos de tren superior y descanso ocular con la técnica 20-20-20 para combatir la fatiga neuromuscular."
+        "meta": "Participación del 100% de aprendices y colaboradores con reducción medible del estrés laboral."
     },
     {
         "id": 12,
         "fase": "FASE 3: POSTPRODUCCIÓN • CONCLUSIONES",
+        "duracion": 41.97,
         "titulo": "Articulación PHVA, ODS y Cierre Institucional",
         "subtitulo": "Integración de la Sostenibilidad y la Protección Humana en el ADSO",
         "caption": "SENA Regional Cauca • CTPI Popayán • Karen Yuliana Campo • Tecnóloga en ADSO",
@@ -293,12 +299,11 @@ BLOQUES = [
             ("ODS 7 (Energía Asequible)", "Iluminación LED y políticas de suspensión de monitores"),
             ("ODS 8 (Trabajo Decente)", "Ambientes seguros bajo norma RETIE y Res. 2400/1979"),
             ("ODS 12 (Consumo Responsable)", "Separación en la fuente (Res. 2184) y gestión de RAEE")
-        ],
-        "locucion": "En conclusión, implementar estas diez oportunidades de mejora en medio ambiente y SST bajo el ciclo PHVA no solo asegura el cumplimiento de la normatividad colombiana, sino que salva vidas, previene enfermedades laborales y preserva los recursos naturales. Agradezco a los instructores del SENA y a mis compañeros del CTPI Popayán por fortalecer nuestras competencias integrales como tecnólogos en software. ¡Muchas gracias!"
+        ]
     }
 ]
 
-# 1. Función para renderizar diapositivas
+# 1. Renderizado de diapositivas Full HD
 def render_slide(bloque, index, total):
     im = Image.new("RGB", (W, H), (15, 23, 42))
     draw = ImageDraw.Draw(im)
@@ -329,7 +334,6 @@ def render_slide(bloque, index, total):
     draw.text((60, 185), bloque["subtitulo"], fill=(203, 213, 225), font=f_sub)
 
     if bloque["tipo"] in ("portada", "cierre"):
-        # Diseño a dos tarjetas anchas
         w_card = (W - 120 - 40) // 2
         cards_y = 245
         h_card = 690
@@ -358,40 +362,33 @@ def render_slide(bloque, index, total):
             cy += 75
 
     else:
-        # Diseño con Foto Real a la Izquierda y Tarjeta Técnica a la Derecha
+        # Foto Real a la Izquierda y Tarjeta Técnica a la Derecha
         img_x = 60
         img_y = 245
         img_w = 880
         img_h = 690
 
-        # Cargar foto real
         img_path = os.path.join(IMG_REALES_DIR, bloque["imagen"])
         if os.path.exists(img_path):
             real_img = Image.open(img_path).convert("RGB")
-            # Redimensionar y ajustar
             real_img = real_img.resize((img_w, img_h), Image.LANCZOS)
             im.paste(real_img, (img_x, img_y))
-            # Borde decorativo
             draw.rectangle([img_x, img_y, img_x + img_w, img_y + img_h], outline=(bloque["cat_color"][0], bloque["cat_color"][1], bloque["cat_color"][2]), width=3)
         else:
             draw.rounded_rectangle([img_x, img_y, img_x + img_w, img_y + img_h], radius=16, fill=(30, 41, 59))
 
-        # Tarjeta Técnica a la Derecha
         card_x = img_x + img_w + 35
         card_w = W - card_x - 60
         card_y = 245
         card_h = 690
 
         draw.rounded_rectangle([card_x, card_y, card_x + card_w, card_y + card_h], radius=16, fill=(30, 41, 59), outline=(51, 65, 85), width=2)
-        # Cabecera de tarjeta
         draw.rectangle([card_x, card_y, card_x + card_w, card_y + 60], fill=(15, 23, 42))
-        draw.text((card_x + 25, card_y + 17), f"Acciones Operativas y Alcance", fill=(56, 189, 248), font=f_card_head)
+        draw.text((card_x + 25, card_y + 17), "Acciones Operativas y Alcance", fill=(56, 189, 248), font=f_card_head)
 
-        # Acciones
         ay = card_y + 80
         for act in bloque["acciones"]:
             draw.text((card_x + 25, ay), "✔", fill=bloque["cat_color"], font=f_body_bold)
-            # Partir texto largo
             words = act.split()
             line1, line2 = "", ""
             for w in words:
@@ -405,7 +402,6 @@ def render_slide(bloque, index, total):
                 draw.text((card_x + 55, ay), line2.strip(), fill=(203, 213, 225), font=f_body)
             ay += 46
 
-        # Cuadro de meta / indicador
         meta_y = card_y + card_h - 140
         draw.rounded_rectangle([card_x + 20, meta_y, card_x + card_w - 20, meta_y + 115], radius=10, fill=(15, 23, 42), outline=(bloque["cat_color"][0], bloque["cat_color"][1], bloque["cat_color"][2]), width=2)
         draw.text((card_x + 35, meta_y + 14), "INDICADOR DE GESTIÓN & META:", fill=(250, 204, 21), font=f_body_bold)
@@ -418,107 +414,12 @@ def render_slide(bloque, index, total):
 
     return im
 
-def chunk_text(text, max_len=80):
-    words = text.split()
-    chunks = []
-    curr = ''
-    for w in words:
-        if len(curr + ' ' + w) <= max_len:
-            curr = (curr + ' ' + w).strip()
-        else:
-            if curr:
-                chunks.append(curr)
-            curr = w
-    if curr:
-        chunks.append(curr)
-    return chunks
-
-# 2. Sintetizar locución con Google TTS por bloque
-def sintetizar_audio_bloques():
-    print("Sintetizando locución de Karen Yuliana Campo para los 12 bloques...")
-    bloque_wavs = []
-    bloque_durations = []
-
-    for b in BLOQUES:
-        b_id = b["id"]
-        text = b["locucion"]
-        print(f"Sintetizando bloque {b_id:02d} ({len(text)} caracteres)...")
-
-        chunks = chunk_text(text, max_len=80)
-        chunk_mp3s = []
-        for idx, s_clean in enumerate(chunks):
-            chunk_file = os.path.join(BUILD_DIR, f"tts_b{b_id:02d}_c{idx:02d}.mp3")
-            url = f"https://translate.google.com/translate_tts?ie=UTF-8&q={urllib.parse.quote(s_clean)}&tl=es&client=tw-ob"
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req) as resp:
-                with open(chunk_file, "wb") as f_out:
-                    f_out.write(resp.read())
-            chunk_mp3s.append(chunk_file)
-
-        # Concatenar oraciones del bloque
-        concat_list = os.path.join(BUILD_DIR, f"concat_b{b_id:02d}.txt")
-        with open(concat_list, "w") as f_c:
-            for c in chunk_mp3s:
-                f_c.write(f"file '{c}'\n")
-
-        block_wav = os.path.join(BUILD_DIR, f"voice_b{b_id:02d}.wav")
-        cmd_cat = [
-            "docker", "run", "--rm",
-            "-v", f"{BUILD_DIR}:{BUILD_DIR}",
-            "sena-ffmpeg:alpine",
-            "-y", "-f", "concat", "-safe", "0", "-i", concat_list,
-            "-ar", "44100", "-ac", "2",
-            block_wav
-        ]
-        subprocess.run(cmd_cat, check=True)
-
-        # Obtener duración exacta
-        cmd_dur = [
-            "docker", "run", "--rm",
-            "-v", f"{BUILD_DIR}:{BUILD_DIR}",
-            "sena-ffmpeg:alpine",
-            "-i", block_wav
-        ]
-        res = subprocess.run(cmd_dur, stderr=subprocess.PIPE, text=True)
-        # Buscar Duration: 00:00:23.45
-        m = re.search(r'Duration:\s*(\d+):(\d+):(\d+\.\d+)', res.stderr)
-        if m:
-            dur = int(m.group(1))*3600 + int(m.group(2))*60 + float(m.group(3))
-        else:
-            dur = 25.0
-        # Añadir 1.5s de respiro visual tras finalizar locución
-        slide_dur = dur + 1.5
-        bloque_wavs.append(block_wav)
-        bloque_durations.append(slide_dur)
-        print(f" [OK] Bloque {b_id:02d} locución generada: {dur:.2f}s (duración slide: {slide_dur:.2f}s)")
-
-    # Concatenar todos los bloques de voz en una pista maestra
-    full_voice_concat = os.path.join(BUILD_DIR, "full_voice_concat.txt")
-    with open(full_voice_concat, "w") as f_f:
-        for bw in bloque_wavs:
-            f_f.write(f"file '{bw}'\n")
-
-    full_voice_wav = os.path.join(BUILD_DIR, "full_voice.wav")
-    cmd_full = [
-        "docker", "run", "--rm",
-        "-v", f"{BUILD_DIR}:{BUILD_DIR}",
-        "sena-ffmpeg:alpine",
-        "-y", "-f", "concat", "-safe", "0", "-i", full_voice_concat,
-        "-ar", "44100", "-ac", "2",
-        full_voice_wav
-    ]
-    subprocess.run(cmd_full, check=True)
-
-    total_dur = sum(bloque_durations)
-    print(f"[OK] Pista vocal completa generada. Duración total: {total_dur:.2f}s")
-    return full_voice_wav, bloque_durations, total_dur
-
-# 3. Generar loop musical ambiental con ducking
-def generar_musica_y_mezclar(voice_wav, total_duration):
-    print("Sintetizando banda sonora ambiental y aplicando ducking dinámico...")
-    loop_wav = os.path.join(BUILD_DIR, "bg_loop_32s.wav")
-
-    # Sintetizar loop de 32 segundos en Python
+# 2. Procesamiento y Mezcla con Ducking Dinámico
+def procesar_audio_con_ducking():
+    print(f"Extrayendo y procesando audio oficial de Karen Campo desde: {USER_AUDIO_MP4}...")
+    
+    # 2.1 Sintetizar loop musical ambiental suave (32 segundos)
+    loop_wav = os.path.join(BUILD_DIR, "bg_loop_ambient_32s.wav")
     loop_duration = 32.0
     num_samples = int(loop_duration * SAMPLE_RATE)
     chords = [
@@ -535,62 +436,93 @@ def generar_musica_y_mezclar(voice_wav, total_duration):
         chord_idx = min(int(t / chord_len), len(chords) - 1)
         freqs, bass_freq = chords[chord_idx]
         local_t = t - chord_idx * chord_len
-        env = min(1.0, local_t / 0.4) * max(0.05, 1.0 - (local_t / chord_len) * 0.45)
-        # Melodía de acordes
-        val = sum(math.sin(2.0 * math.pi * f * t) for f in freqs) * (0.04 * env)
-        # Bajo
-        val += math.sin(2.0 * math.pi * bass_freq * t) * (0.06 * env)
+        env = min(1.0, local_t / 0.5) * max(0.05, 1.0 - (local_t / chord_len) * 0.40)
+        # Melodía de acordes suave y cálida
+        val = sum(math.sin(2.0 * math.pi * f * t) for f in freqs) * (0.025 * env)
+        # Bajo sutil
+        val += math.sin(2.0 * math.pi * bass_freq * t) * (0.035 * env)
         samples.append(val)
 
-    # Exportar loop WAV
     with wave.open(loop_wav, "wb") as wf:
         wf.setnchannels(2)
         wf.setsampwidth(2)
         wf.setframerate(SAMPLE_RATE)
         raw_bytes = bytearray()
         for s in samples:
-            clamped = max(-0.95, min(0.95, s))
+            clamped = max(-0.90, min(0.90, s))
             val_int = int(clamped * 32767.0)
             raw_bytes.extend(struct.pack("<hh", val_int, val_int))
         wf.writeframes(raw_bytes)
 
-    # Mezclar voz + música con sidechain compression en FFmpeg
+    # 2.2 Obtener duración exacta de audio_sst.mp4
+    cmd_dur = [
+        "docker", "run", "--rm",
+        "-v", f"{os.path.dirname(USER_AUDIO_MP4)}:/data",
+        "sena-ffmpeg:alpine",
+        "-i", f"/data/{os.path.basename(USER_AUDIO_MP4)}"
+    ]
+    res = subprocess.run(cmd_dur, stderr=subprocess.PIPE, text=True)
+    m = re.search(r'Duration:\s*(\d+):(\d+):(\d+\.\d+)', res.stderr)
+    if m:
+        total_duration = int(m.group(1))*3600 + int(m.group(2))*60 + float(m.group(3))
+    else:
+        total_duration = 491.97
+    print(f"[OK] Duración detectada de audio_sst.mp4: {total_duration:.2f} segundos")
+
+    # 2.3 Mezclar con mejora vocal y ducking profundo (-23 dB baseline, atenuado a -37 dB bajo voz)
     mixed_wav = os.path.join(BUILD_DIR, "mixed_master_audio.wav")
+    
+    # Filtros:
+    # 1. Pista de voz: filtro pasa-altos (80Hz) + realce vocal de presencia (3kHz) + normalización a -16 LUFS
+    # 2. BGM: loop continuo, atenuado a volumen 0.07 (-23 dB)
+    # 3. Compresión sidechain: ratio 14:1, umbral 0.04, ataque 15ms, relajación 450ms (ducking ultra limpio)
     filter_complex = (
+        "[0:a]highpass=f=80,equalizer=f=3000:t=q:w=1:g=2.5,loudnorm=I=-16:TP=-1.5:LRA=11[voice];"
         f"[1:a]aloop=loop=-1:size={int(loop_duration * SAMPLE_RATE)}[bg];"
-        f"[bg]volume=0.25[bg_attenuated];"
-        f"[bg_attenuated][0:a]sidechaincompress=threshold=0.08:ratio=8:attack=20:release=350[ducked_bg];"
-        f"[0:a][ducked_bg]amix=inputs=2:duration=first:dropout_transition=2[out]"
+        "[bg]volume=0.07[bg_low];"
+        "[bg_low][voice]sidechaincompress=threshold=0.04:ratio=14:attack=15:release=450[ducked_bg];"
+        "[voice][ducked_bg]amix=inputs=2:duration=first:dropout_transition=2[out]"
     )
 
     cmd_mix = [
         "docker", "run", "--rm",
+        "-v", f"{os.path.dirname(USER_AUDIO_MP4)}:/data",
         "-v", f"{BUILD_DIR}:{BUILD_DIR}",
         "sena-ffmpeg:alpine",
         "-y",
-        "-i", voice_wav,
+        "-i", f"/data/{os.path.basename(USER_AUDIO_MP4)}",
         "-i", loop_wav,
         "-filter_complex", filter_complex,
         "-map", "[out]",
         "-t", str(total_duration),
-        "-ar", "44100", "-ac", "2",
+        "-ar", str(SAMPLE_RATE), "-ac", "2",
         mixed_wav
     ]
+    print("Ejecutando mezcla de audio con ducking dinámico y protección vocal...")
     subprocess.run(cmd_mix, check=True)
-    print(f"[OK] Mezcla final de audio generada: {mixed_wav}")
-    return mixed_wav
+    print(f"[OK] Mezcla maestra de audio generada: {mixed_wav}")
+    return mixed_wav, total_duration
 
 def main():
-    print("=== INICIANDO PRODUCCIÓN DEL VIDEO EXPOSITIVO DE MEDIO AMBIENTE Y SST ===")
+    print("=== INICIANDO PRODUCCIÓN DEL VIDEO EXPOSITIVO CON AUDIO REAL: audio_sst.mp4 ===")
     print("=== Evidencia: GA8-220601501-AA4-EV01 | Aprendiz: Karen Yuliana Campo ===")
 
-    # 1. Sintetizar locución y obtener duraciones de cada diapositiva
-    voice_wav, bloque_durations, total_duration = sintetizar_audio_bloques()
+    # 1. Procesar audio real con ducking
+    mixed_audio_wav, total_duration = procesar_audio_con_ducking()
 
-    # 2. Generar música ambiental y mezcla final ducked
-    mixed_audio_wav = generar_musica_y_mezclar(voice_wav, total_duration)
+    # 2. Ajustar duraciones de bloques para sincronizar exactamente con total_duration
+    num_middle_slides = 10
+    slide_01_dur = 40.0
+    rem = total_duration - slide_01_dur
+    mid_dur = 41.0
+    slide_12_dur = rem - (num_middle_slides * mid_dur)
+    if slide_12_dur < 20.0:
+        mid_dur = rem / (num_middle_slides + 1)
+        slide_12_dur = mid_dur
 
-    # 3. Renderizar las 12 diapositivas Full HD (incorporando fotos reales)
+    duraciones = [slide_01_dur] + [mid_dur] * num_middle_slides + [slide_12_dur]
+
+    # 3. Renderizar las 12 diapositivas Full HD
     slide_files = []
     print("Renderizando 12 diapositivas Full HD (1920x1080)...")
     for i, bloque in enumerate(BLOQUES):
@@ -598,14 +530,14 @@ def main():
         slide_path = os.path.join(BUILD_DIR, f"slide_{i+1:02d}.png")
         im.save(slide_path, "PNG")
         slide_files.append(slide_path)
-        print(f" [OK] Diapositiva {i+1:02d} generada: {bloque['titulo']} ({bloque_durations[i]:.2f}s)")
+        print(f" [OK] Diapositiva {i+1:02d} generada: {bloque['titulo']} ({duraciones[i]:.2f}s)")
 
     # 4. Crear archivo concat de FFmpeg con las duraciones exactas
     concat_txt = os.path.join(BUILD_DIR, "concat.txt")
     with open(concat_txt, "w") as cf:
-        for s_path, dur in zip(slide_files, bloque_durations):
+        for s_path, dur in zip(slide_files, duraciones):
             cf.write(f"file '{s_path}'\n")
-            cf.write(f"duration {dur}\n")
+            cf.write(f"duration {dur:.3f}\n")
         cf.write(f"file '{slide_files[-1]}'\n")
 
     # 5. Renderizar video MP4 con FFmpeg Docker
@@ -647,29 +579,30 @@ def main():
     print(f" [OK] Copiado a entrega Zajuna raíz: {target_delivery_root_mp4}")
     print(f" [OK] Copiado a artefactos: {target_brain_mp4}")
 
-    # 7. Generar proyecto FilmCraft complementario (.fcproj)
+    # 7. Registrar proyecto FilmCraft (.fcproj)
     fcproj_path = os.path.join(VIDEO_DIR, "ExposicionSSTyMedioAmbiente.fcproj")
     fcproj_data = {
         "version": "1.0",
         "project_name": "ExposicionSSTyMedioAmbiente_SENA",
         "author": "Karen Yuliana Campo",
         "ficha": "3186681",
+        "audio_source": "audio_sst.mp4",
         "total_duration_sec": total_duration,
         "resolution": {"width": 1920, "height": 1080, "fps": 30},
         "audio_tracks": [
-            {"name": "Narration_KarenCampo_TTS_Master", "file": "full_voice.wav", "volume": 1.0},
-            {"name": "Ambient_BGM_Ducking", "file": "bg_loop_32s.wav", "volume": 0.25}
+            {"name": "Narration_KarenCampo_Original", "file": "mixed_master_audio.wav", "volume": 1.0, "processing": "highpass 80Hz + EQ 3kHz + loudnorm -16 LUFS"},
+            {"name": "Ambient_BGM_Deep_Ducking", "file": "bg_loop_ambient_32s.wav", "baseline_volume": 0.07, "ducked_volume": 0.02, "ratio": 14}
         ],
         "timeline_blocks": [
-            {"block": b["id"], "title": b["titulo"], "slide": f"slide_{b['id']:02d}.png", "duration_sec": d}
-            for b, d in zip(BLOQUES, bloque_durations)
+            {"block": b["id"], "title": b["titulo"], "slide": f"slide_{b['id']:02d}.png", "duration_sec": round(d, 3)}
+            for b, d in zip(BLOQUES, duraciones)
         ]
     }
     with open(fcproj_path, "w") as fcp:
         json.dump(fcproj_data, fcp, indent=2)
     print(f" [OK] Proyecto FilmCraft registrado en: {fcproj_path}")
 
-    print("=== PRODUCCIÓN Y DISTRIBUCIÓN DEL VIDEO FINALIZADA CON ÉXITO ===")
+    print("=== PRODUCCIÓN Y DISTRIBUCIÓN DEL VIDEO CON AUDIO REAL FINALIZADA CON ÉXITO ===")
 
 if __name__ == "__main__":
     main()
