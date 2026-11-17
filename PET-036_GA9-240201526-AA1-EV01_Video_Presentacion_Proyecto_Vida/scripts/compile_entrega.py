@@ -41,6 +41,7 @@ ARCHIVOS DE GUION TÉCNICO Y LITERARIO:
 - Word DOCX: GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.docx
 - Markdown: GUION_TECNICO_VIDEO_PRESENTACION_PROYECTO_VIDA.md
 - Guía y Cuestionario: GUIA_PREGUNTAS_FOTOS_PROYECTO_VIDA.md
+- Video Full HD 1080p: GA9-240201526-AA1-EV01_Video_Presentacion_Proyecto_Vida.mp4 (31.9 MB, 05:26 min)
 
 FOTOGRAFÍAS REALES INCORPORADAS:
 - Foto 1 (Retrato de Karen): imagenes/01_foto_karen_yuliana_campo_retrato.jpg
