@@ -1,0 +1,39 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+================================================================================
+EVIDENCIA: GA10-220501097-AA13-EV01: Documentación plan de capacitación y acta de
+entrega del proyecto de software.
+COMPETENCIA: 220501097 - Implementar la solución de software de acuerdo con los
+requisitos de operación y modelos de referencia
+FASE DEL PROYECTO: Fase 4 - Implantación (AP10)
+APRENDIZ: Karen Yuliana Campo
+================================================================================
+
+ENLACE AL REPOSITORIO OFICIAL GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-059_GA10-220501097-AA13-EV01_Documentacion_Plan_Capacitacion_Acta_Entrega
+
+CARPETA LOCAL DE ARTEFACTOS Y ENTREGA ZAJUNA:
+file:///home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA10-220501097-AA13-EV01/
+
+DOCUMENTOS DEL MODELO DE ACTAS FORMALES:
+- PDF Formal Maquetado: GA10-220501097-AA13-EV01_Documentacion_Plan_Capacitacion_Acta_Entrega.pdf
+- Documento Word Editable: GA10-220501097-AA13-EV01_Documentacion_Plan_Capacitacion_Acta_Entrega.docx
+- Documentación Técnica en Markdown: DOCUMENTACION_PLAN_CAPACITACION_ACTA_ENTREGA.md
+
+CARACTERIZACIÓN DE LAS ACTAS CONSTRUIDAS:
+1. Acta de Satisfacción de Capacitación (ACT-CAP-2026-001):
+   - Fecha, hora, lugar y facilitadora: Karen Yuliana Campo.
+   - Registro de 5 participantes operativos (Caja, Cocina y Gerencia).
+   - Objetivos y desglose de 4 módulos formativos de 45 minutos.
+   - Evaluación post-test (100% aciertos) y encuesta de satisfacción (4.9/5.0).
+   - Firmas de conformidad del cliente y usuarios líderes.
+
+2. Acta Final de Entrega y Cierre de Software (ACT-ENT-2026-001):
+   - Datos del cliente receptor: Giuseppe Rossi (Pizzería Gourmet Bella Italia Popayán).
+   - Descripción exhaustiva de módulos de software y entregables técnicos (Código, Docker, BD).
+   - Acuerdo de Niveles de Servicio (SLA) con matriz de severidades (Crítica, Mayor, Menor).
+   - Términos de garantía legal de 6 meses y canales de soporte post-implantación.
+   - Declaración de entrega a satisfacción y firmas de cierre formal.
+================================================================================
