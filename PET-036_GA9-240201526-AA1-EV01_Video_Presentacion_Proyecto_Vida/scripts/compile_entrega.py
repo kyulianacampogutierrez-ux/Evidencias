@@ -12,6 +12,7 @@ import zipfile
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
 DOCS_DIR = os.path.join(BASE_DIR, 'docs')
+IMG_DIR = os.path.join(BASE_DIR, 'imagenes')
 ENTREGA_DIR = '/home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA9-240201526-AA1-EV01'
 ARTIFACT_DIR = '/home/danilo/.gemini/antigravity/brain/abb27f79-dee2-489b-8c72-e5eac1b56603'
 
@@ -40,6 +41,11 @@ ARCHIVOS DE GUION TÉCNICO Y LITERARIO:
 - Word DOCX: GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.docx
 - Markdown: GUION_TECNICO_VIDEO_PRESENTACION_PROYECTO_VIDA.md
 - Guía y Cuestionario: GUIA_PREGUNTAS_FOTOS_PROYECTO_VIDA.md
+
+FOTOGRAFÍAS REALES INCORPORADAS:
+- Foto 1 (Retrato de Karen): imagenes/01_foto_karen_yuliana_campo_retrato.jpg
+- Foto 2 (Mamá y hermano): imagenes/02_foto_familia_mama_hermano_karen.jpg
+- Foto 3 (Pareja y mascotas): imagenes/03_foto_pareja_mascotas_karen.jpg
 ================================================================================
 """
 
@@ -60,7 +66,10 @@ files_to_zip = [
     ('docs/GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.docx', 'GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.docx'),
     ('docs/GUION_TECNICO_VIDEO_PRESENTACION_PROYECTO_VIDA.md', 'GUION_TECNICO_VIDEO_PRESENTACION_PROYECTO_VIDA.md'),
     ('docs/GUIA_PREGUNTAS_FOTOS_PROYECTO_VIDA.md', 'GUIA_PREGUNTAS_FOTOS_PROYECTO_VIDA.md'),
-    ('enlace_repositorio.txt', 'enlace_repositorio.txt')
+    ('enlace_repositorio.txt', 'enlace_repositorio.txt'),
+    ('imagenes/01_foto_karen_yuliana_campo_retrato.jpg', 'imagenes/01_foto_karen_yuliana_campo_retrato.jpg'),
+    ('imagenes/02_foto_familia_mama_hermano_karen.jpg', 'imagenes/02_foto_familia_mama_hermano_karen.jpg'),
+    ('imagenes/03_foto_pareja_mascotas_karen.jpg', 'imagenes/03_foto_pareja_mascotas_karen.jpg'),
 ]
 
 with zipfile.ZipFile(zip_local, 'w', zipfile.ZIP_DEFLATED) as z:
