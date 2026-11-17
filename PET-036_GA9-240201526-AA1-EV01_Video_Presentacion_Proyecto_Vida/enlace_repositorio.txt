@@ -1,0 +1,23 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+================================================================================
+EVIDENCIA: GA9-240201526-AA1-EV01: Presentación del proyecto de vida
+COMPETENCIA: 240201526 - Promover la interacción idónea consigo mismo, con los demás
+y con la naturaleza en los contextos laboral y social (Ética y Cultura de Paz)
+APRENDIZ: Karen Yuliana Campo
+================================================================================
+
+ENLACE AL REPOSITORIO OFICIAL GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-036_GA9-240201526-AA1-EV01_Video_Presentacion_Proyecto_Vida
+
+CARPETA LOCAL DE ARTEFACTOS Y GUION TÉCNICO:
+file:///home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA9-240201526-AA1-EV01/
+
+ARCHIVOS DE GUION TÉCNICO Y LITERARIO:
+- PDF: GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.pdf
+- Word DOCX: GA9-240201526-AA1-EV01_Guion_Video_Presentacion_Proyecto_Vida.docx
+- Markdown: GUION_TECNICO_VIDEO_PRESENTACION_PROYECTO_VIDA.md
+- Guía y Cuestionario: GUIA_PREGUNTAS_FOTOS_PROYECTO_VIDA.md
+================================================================================
