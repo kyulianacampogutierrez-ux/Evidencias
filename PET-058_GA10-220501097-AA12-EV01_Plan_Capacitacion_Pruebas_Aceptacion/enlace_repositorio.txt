@@ -18,6 +18,7 @@ CARPETA LOCAL DE ARTEFACTOS Y ENTREGA ZAJUNA:
 file:///home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA10-220501097-AA12-EV01/
 
 DOCUMENTOS DEL PLAN DE CAPACITACIÓN Y PRUEBAS UAT:
+- Video Tutorial Oficial MP4 (1080p Full HD): GA10-220501097-AA12-EV01_Video_Tutorial_Plan_Capacitacion.mp4 (Sincronizado con voz real de Karen Yuliana Campo e interacción con roles operativos y gerenciales)
 - PDF Formal Maquetado: GA10-220501097-AA12-EV01_Plan_Capacitacion_Pruebas_Aceptacion_Guion.pdf
 - Documento Word Editable: GA10-220501097-AA12-EV01_Plan_Capacitacion_Pruebas_Aceptacion_Guion.docx
 - Guion Técnico y Libreto en Markdown: GUION_TECNICO_PLAN_CAPACITACION_PRUEBAS_ACEPTACION.md
