@@ -1,0 +1,30 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3186681
+================================================================================
+EVIDENCIA: GA10-220501097-AA12-EV01: Elabora plan de capacitación y realización de
+pruebas de aceptación del cliente.
+COMPETENCIA: 220501097 - Implementar la solución de software de acuerdo con los
+requisitos de operación y modelos de referencia
+FASE DEL PROYECTO: Fase 4 - Implantación (AP10)
+APRENDIZ: Karen Yuliana Campo
+================================================================================
+
+ENLACE AL REPOSITORIO OFICIAL GITHUB:
+https://github.com/kyulianacampogutierrez-ux/Evidencias/tree/main/PET-058_GA10-220501097-AA12-EV01_Plan_Capacitacion_Pruebas_Aceptacion
+
+CARPETA LOCAL DE ARTEFACTOS Y ENTREGA ZAJUNA:
+file:///home/danilo/Escritorio/Karen/SENA/ENTREGA_ZAJUNA_GA10-220501097-AA12-EV01/
+
+DOCUMENTOS DEL PLAN DE CAPACITACIÓN Y PRUEBAS UAT:
+- PDF Formal Maquetado: GA10-220501097-AA12-EV01_Plan_Capacitacion_Pruebas_Aceptacion_Guion.pdf
+- Documento Word Editable: GA10-220501097-AA12-EV01_Plan_Capacitacion_Pruebas_Aceptacion_Guion.docx
+- Guion Técnico y Libreto en Markdown: GUION_TECNICO_PLAN_CAPACITACION_PRUEBAS_ACEPTACION.md
+
+CARACTERIZACIÓN DE LA SESIÓN:
+- Duración de la capacitación: 45 Minutos cronometrados en 4 bloques.
+- Rol Objetivo: Personal Operativo de Caja (POS) y Jefes de Cocina (KDS).
+- Casos de Prueba de Aceptación (UAT): 5 Casos formalmente evaluados y aprobados (100% de éxito).
+- Acta Formal de Aceptación: Incluida con firmas de representante legal, usuarios líderes y desarrolladora.
+================================================================================
