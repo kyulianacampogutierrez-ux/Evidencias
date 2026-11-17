@@ -45,8 +45,9 @@ ITEMS = [
         "norm": "Resolución 2184 de 2019 (MinAmbiente)",
         "category": "GESTIÓN AMBIENTAL",
         "cat_color": (34, 197, 94), # Verde
-        "desc": "Batería de estaciones ecológicas unificadas: Blanco (Aprovechables), Verde (Orgánicos) y Negro (No aprovechables).",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Fancy-recycling-bins-Warsaw-Ursynowska-50-1.jpg"
+        "desc": "Estación de reciclaje según código de colores: Blanco (Aprovechables), Verde (Orgánicos) y Negro (No aprovechables).",
+        "local_path": "/home/danilo/.gemini/antigravity/brain/abb27f79-dee2-489b-8c72-e5eac1b56603/estacion_reciclaje_resolucion_2184_1794873623263.jpg",
+        "url": None
     },
     {
         "filename": "02_trampa_grasas_recoleccion_acu_res316.png",
@@ -135,7 +136,22 @@ def download_or_generate_image(item):
     target_w, target_h = 1280, 800
     base_img = None
 
-    if item.get("url"):
+    if item.get("local_path") and os.path.exists(item["local_path"]):
+        try:
+            print(f"Cargando imagen local para: {item['filename']} desde {item['local_path']}...")
+            img = Image.open(item["local_path"]).convert("RGB")
+            iw, ih = img.size
+            scale = max(target_w / iw, target_h / ih)
+            nw, nh = int(iw * scale), int(ih * scale)
+            img = img.resize((nw, nh), Image.LANCZOS)
+            left = (nw - target_w) // 2
+            top = (nh - target_h) // 2
+            base_img = img.crop((left, top, left + target_w, top + target_h))
+            print(f"[OK] Imagen local cargada y adaptada: {base_img.size}")
+        except Exception as e:
+            print(f"[WARN] Error cargando imagen local {item['local_path']}: {e}")
+
+    if base_img is None and item.get("url"):
         try:
             print(f"Descargando foto real para: {item['filename']}...")
             req = urllib.request.Request(item["url"], headers={"User-Agent": "SenaRealPhotoDownloader/1.0 (karen.campo@sena.edu.co)"})
